@@ -17,7 +17,9 @@ if( source == null ){
 } else {
   logger.info(`Applying ${op} on source '${passedSourceId}'...`);
 
-  source.update().then(() => {
+  let fcn = op === 'update' ? source.update : source.clear;
+
+  fcn().then(() => {
     logger.info(`Successfully applied ${op} on source '${passedSourceId}'`);
   }).catch(err => {
     logger.error(`Failed to apply ${op} on source '${passedSourceId}'`);

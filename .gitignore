@@ -1,2 +1,4 @@
 node_modules
 out.log
+input
+.DS_Store
