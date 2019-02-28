@@ -69,7 +69,7 @@ const updateFromFile = function(){
 
     xml.on('end', function() {
       let recreateIndex = () => db.recreateIndex( UNIPROT_INDEX );
-      let fillIndex = () => db.insertEntries( UNIPROT_INDEX, entries );
+      let fillIndex = () => db.insertEntries( UNIPROT_INDEX, entries, true );
 
       recreateIndex( UNIPROT_INDEX )
         .then( fillIndex )
@@ -88,8 +88,7 @@ const clear = function(){
 };
 
 const search = function(searchString){
-  return db.search( UNIPROT_INDEX, searchString )
-    .then( results => results.hits.hits );
+  return db.search( UNIPROT_INDEX, searchString );
 };
 
 module.exports = { update, clear, search };

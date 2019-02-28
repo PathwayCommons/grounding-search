@@ -85,12 +85,15 @@ let db = {
     let client = this.connect();
     let deleteIndex = () => this.deleteIndex( index );
     let createIndex = () => this.createIndex( index );
+    let indexExists = () => this.exists( index );
 
-    return client.indices.exists( { index } )
+    return indexExists()
       .then( exists => exists ? deleteIndex() : Promise.resolve() )
       .then( createIndex );
   },
-  insertEntries: function( index, entries ){
+  // 'refresh' parameter should be used carefully. Refreshing after every insert would decrease the performance.
+  // See: https://www.elastic.co/guide/en/elasticsearch/guide/current/near-real-time.html#refresh-api
+  insertEntries: function( index, entries, refresh = false ){
     let client = this.connect();
     let body = [];
 
@@ -99,14 +102,23 @@ let db = {
       body.push( entry );
     } );
 
-    return client.bulk( { body } );
+    return client.bulk( { body, refresh } );
   },
-  search: function( index, searchkey ){
+  search: function( index, searchkey, from = 0, size = 50 ){
     let client = this.connect();
-    let searchParam = {};
+    let searchParam = { from, size };
     _.set( searchParam, [ 'query', 'match', META_SEARCH_FIELD ], searchkey );
 
-    return client.search( { index, type: TYPE, body: searchParam } );
+    return client.search( { index, type: TYPE, body: searchParam } )
+      .then( res => res.hits.hits.map( entry => entry._source ) );
+  },
+  exists: function( index ) {
+    let client = this.connect();
+    return client.indices.exists( { index } );
+  },
+  count: function( index ) {
+    let client = this.connect();
+    return client.count( { index } ).then( res => res.count );
   }
 };
 
