@@ -1,6 +1,3 @@
-// example file from docs
-// https://benchmarkjs.com/docs
-
 /* eslint-disable no-console */
 const Benchmark = require('benchmark');
 const suite = new Benchmark.Suite();
