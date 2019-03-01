@@ -1,0 +1,3 @@
+This is the directory where the input files will be downloaded.
+
+You could manually copy the files here if you want to test.

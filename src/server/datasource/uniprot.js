@@ -4,8 +4,11 @@ const _ = require('lodash');
 const { UNIPROT_INDEX, INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } = require('../config');
 const db = require('../db');
 const fetchFile = require('./fetch-file');
+const path = require('path');
+const download = require('./download');
 
-const FILE_PATH = INPUT_PATH + '/' + UNIPROT_FILE_NAME;
+// const FILE_PATH = INPUT_PATH + '/' + UNIPROT_FILE_NAME; // TODO change all lines like this like the below
+const FILE_PATH = path.join(INPUT_PATH, + UNIPROT_FILE_NAME);
 const TYPE = 'entry';
 const ENTRY_NS = 'protein';
 const ENTRY_TYPE = 'uniprot';
@@ -78,9 +81,15 @@ const updateFromFile = function(){
   } );
 };
 
-const update = function() {
+// TODO delete
+const updateOld = function() {
   return fetchFile( { fileName: UNIPROT_FILE_NAME, url: UNIPROT_URL, zipType: ZIP_TYPE } )
     .then( updateFromFile );
+};
+
+// TODO test new download impl
+const update = function(){
+  return download(UNIPROT_URL, UNIPROT_FILE_NAME).then(updateFromFile);
 };
 
 const clear = function(){

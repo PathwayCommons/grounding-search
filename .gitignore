@@ -1,4 +1,5 @@
 node_modules
 out.log
-/input
+/input/*
+!/input/datasource-inputs-go-here.txt
 .DS_Store
