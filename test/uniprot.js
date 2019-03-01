@@ -16,7 +16,7 @@ const loadTestData = () => uniprot.update();
 const clearTestData = () => uniprot.clear();
 const indexExists = () => db.exists( UNIPROT_INDEX );
 const getEntryCount = () => db.count( UNIPROT_INDEX );
-const searchGene = geneName => db.search( UNIPROT_INDEX, geneName );
+const searchGene = geneName => uniprot.search( geneName );
 
 const getXmlEntries = () => {
   let path = INPUT_PATH + '/' + UNIPROT_FILE_NAME;
@@ -28,12 +28,22 @@ const getXmlEntries = () => {
 };
 
 describe('Load Data', function(){
+  after( clearTestData );
+
   it('load test data', function( done ){
     loadTestData().should.be.fulfilled
       .then( () => indexExists().should.eventually.be.equal( true, 'index is created to load data' ) )
       .then( () => getEntryCount().should.eventually.equal( getXmlEntries().length, 'all entries are saved to database' ) )
-      .then( clearTestData )
-      .then( () => indexExists().should.eventually.be.equal( false, 'index is deleted' ) )
+      .then( () => done(), error => done(error) );
+  });
+});
+
+describe('Clear Data', function(){
+  before( loadTestData );
+
+  it('clear test data', function( done ){
+    clearTestData()
+      .then( () => indexExists().should.eventually.be.equal( false, 'index is cleared' ) )
       .then( () => done(), error => done(error) );
   });
 });
