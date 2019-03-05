@@ -11,4 +11,8 @@ const search = function(searchString){
   return Promise.all(sources.map(sourceSearch)).then(_.concat);
 };
 
+const get = function(namespace, id){
+  // TODO
+};
+
 module.exports = { search };

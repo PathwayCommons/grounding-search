@@ -100,4 +100,8 @@ const search = function(searchString){
   return db.search( UNIPROT_INDEX, searchString );
 };
 
-module.exports = { update, clear, search };
+const get = function(id){
+  // TODO
+};
+
+module.exports = { update, clear, search, get };
