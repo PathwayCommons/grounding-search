@@ -17,14 +17,14 @@
     "lint": "run-s lint:*",
     "watch": "nodemon src/server/index.js",
     "test": "mocha",
-    "text:sample-data": "cross-env INPUT_PATH=test/input/ UNIPROT_INDEX=uniprot-test mocha",
+    "test:sample": "cross-env INPUT_PATH=test/input/ UNIPROT_INDEX=uniprot-test mocha",
     "benchmark": "run-s benchmark:*",
     "benchmark:uniprot": "node benchmark/uniprot",
     "update": "run-p update:*",
     "update:uniprot": "node src/server/datasource/cli update uniprot",
     "clear": "run-p clear:*",
     "clear:uniprot": "node src/server/datasource/cli clear uniprot",
-    "ci": "run-s test lint"
+    "ci": "run-s test:sample lint"
   },
   "dependencies": {
     "benchmark": "^2.1.4",

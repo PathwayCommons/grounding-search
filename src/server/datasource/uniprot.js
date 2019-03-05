@@ -3,16 +3,12 @@ const XmlStream = require('xml-stream');
 const _ = require('lodash');
 const { UNIPROT_INDEX, INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } = require('../config');
 const db = require('../db');
-const fetchFile = require('./fetch-file');
 const path = require('path');
 const download = require('./download');
 
-// const FILE_PATH = INPUT_PATH + '/' + UNIPROT_FILE_NAME; // TODO change all lines like this like the below
-const FILE_PATH = path.join(INPUT_PATH, + UNIPROT_FILE_NAME);
-const TYPE = 'entry';
+const FILE_PATH = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
 const ENTRY_NS = 'protein';
 const ENTRY_TYPE = 'uniprot';
-const ZIP_TYPE = 'gz';
 
 const pushIfNonNil = ( arr, val ) => {
   if( val ){
@@ -50,13 +46,13 @@ const processEntry = function(entry) {
 };
 
 const updateFromFile = function(){
-  return new Promise( ( resolve, reject ) => {
+  return new Promise( resolve => {
     let stream = fs.createReadStream(FILE_PATH);
     let xml = new XmlStream(stream);
     let entries = [];
 
     let toCollectList = [ 'gene > name', 'alternativeName', 'submittedName',
-                          'accession', 'fullName', 'shortName' ];
+      'accession', 'fullName', 'shortName' ];
 
     toCollectList.forEach( toCollect => {
       xml.collect( toCollect );
@@ -81,13 +77,6 @@ const updateFromFile = function(){
   } );
 };
 
-// TODO delete
-const updateOld = function() {
-  return fetchFile( { fileName: UNIPROT_FILE_NAME, url: UNIPROT_URL, zipType: ZIP_TYPE } )
-    .then( updateFromFile );
-};
-
-// TODO test new download impl
 const update = function(forceIfFileExists){
   return download(UNIPROT_URL, UNIPROT_FILE_NAME, forceIfFileExists).then(updateFromFile);
 };
@@ -101,7 +90,7 @@ const search = function(searchString){
 };
 
 const get = function(id){
-  // TODO
+  return db.get( UNIPROT_INDEX, id );
 };
 
 module.exports = { update, clear, search, get };

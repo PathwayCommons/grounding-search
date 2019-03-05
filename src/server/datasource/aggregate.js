@@ -11,8 +11,9 @@ const search = function(searchString){
   return Promise.all(sources.map(sourceSearch)).then(_.concat);
 };
 
+// eslint-disable-next-line
 const get = function(namespace, id){
   // TODO
 };
 
-module.exports = { search };
+module.exports = { search, get };

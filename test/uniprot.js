@@ -1,8 +1,9 @@
 const chai = require('chai')
   , expect = chai.expect
   , should = chai.should();
-const chaiAsPromised = require("chai-as-promised");
+const chaiAsPromised = require('chai-as-promised');
 const xmljs = require('xml-js');
+const path = require('path');
 const fs = require('fs');
 const _ = require('lodash');
 const uniprot = require('../src/server/datasource/uniprot');
@@ -18,15 +19,23 @@ const clearTestData = () => uniprot.clear();
 const indexExists = () => db.exists( UNIPROT_INDEX );
 const getEntryCount = () => db.count( UNIPROT_INDEX );
 const searchGene = geneName => uniprot.search( geneName );
+const getGene = id => uniprot.get( id );
 
 const getXmlEntries = () => {
-  let path = INPUT_PATH + '/' + UNIPROT_FILE_NAME;
-  let xml = fs.readFileSync( path );
+  let filePath = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
+  let xml = fs.readFileSync( filePath );
   let json = xmljs.xml2js(xml, {compact: true});
   let entries = _.get( json, ['uniprot', 'entry'] );
 
   return entries;
 };
+
+const getEntryId = entry => {
+  let id = _.get( entry, [ 'accession', 0, '_text' ] );
+  return id;
+};
+
+const xmlEntries = getXmlEntries();
 
 describe('Load Data', function(){
   after( clearTestData );
@@ -34,7 +43,7 @@ describe('Load Data', function(){
   it('load test data', function( done ){
     loadTestData().should.be.fulfilled
       .then( () => indexExists().should.eventually.be.equal( true, 'index is created to load data' ) )
-      .then( () => getEntryCount().should.eventually.equal( getXmlEntries().length, 'all entries are saved to database' ) )
+      .then( () => getEntryCount().should.eventually.equal( xmlEntries.length, 'all entries are saved to database' ) )
       .then( () => done(), error => done(error) );
   });
 });
@@ -49,10 +58,10 @@ describe('Clear Data', function(){
   });
 });
 
-describe('Search', function(){
-  beforeEach(loadTestData);
+describe('Search and Get', function(){
+  before(loadTestData);
 
-  afterEach(clearTestData);
+  after(clearTestData);
 
   it('search genes', function( done ){
     let promiseTP53 = searchGene('tp53');
@@ -69,6 +78,18 @@ describe('Search', function(){
         expect(resTP53, 'search is case insensitive').to.deep.equal(resTP53uc);
         expect(resTP, 'search results for tp supersets tp53').to.deep.include.members(resTP53);
         expect(resMD, 'search results for md supersets mdm2').to.deep.include.members(resMDM2);
+      } )
+      .then( () => done(), error => done(error) );
+  });
+
+  it('get gene by id', function( done ){
+    let firstEntry = xmlEntries[ 0 ];
+    let id = getEntryId( firstEntry );
+
+    getGene(id).should.be.fulfilled.
+      then( res => {
+        expect(res.length, 'Get query returns one gene').to.be.equal(1);
+        expect( res[0].id, 'Get query returns the expected gene' ).to.be.equal(id);
       } )
       .then( () => done(), error => done(error) );
   });

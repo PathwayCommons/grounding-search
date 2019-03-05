@@ -3,8 +3,11 @@ const elasticsearch = require('elasticsearch');
 
 const TYPE = 'entry';
 const META_SEARCH_FIELD = 'meta_search';
+const ID_FIELD = 'id';
 const MIN_GRAM = 1;
 const MAX_GRAM = 45;
+
+const processResult = res => res.hits.hits.map( entry => entry._source );
 
 let db = {
   connect: function(){
@@ -45,6 +48,19 @@ let db = {
           },
           'match_pattern': 'regex',
           'match': searchableMatchStr,
+          'unmatch': ID_FIELD,
+          'match_mapping_type': 'string'
+        }
+      },
+      {
+        'template_get': {
+          'mapping': {
+            'type': 'text',
+            'index': 'true',
+            'copy_to': META_SEARCH_FIELD
+          },
+          'match_pattern': 'regex',
+          'match': ID_FIELD,
           'match_mapping_type': 'string'
         }
       }
@@ -82,7 +98,7 @@ let db = {
     return client.indices.delete( { index } );
   },
   recreateIndex: function( index ){
-    let client = this.connect();
+    this.connect();
     let deleteIndex = () => this.deleteIndex( index );
     let createIndex = () => this.createIndex( index );
     let indexExists = () => this.exists( index );
@@ -110,7 +126,15 @@ let db = {
     _.set( searchParam, [ 'query', 'match', META_SEARCH_FIELD ], searchkey );
 
     return client.search( { index, type: TYPE, body: searchParam } )
-      .then( res => res.hits.hits.map( entry => entry._source ) );
+      .then( processResult );
+  },
+  get: function( index, id ){
+    let client = this.connect();
+    let getParam = { size: 1 };
+    _.set( getParam, [ 'query', 'match', ID_FIELD ], id );
+
+    return client.search( { index, type: TYPE, body: getParam } )
+      .then( processResult );
   },
   exists: function( index ) {
     let client = this.connect();
