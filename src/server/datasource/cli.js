@@ -18,8 +18,9 @@ if( source == null ){
   logger.info(`Applying ${op} on source '${passedSourceId}'...`);
 
   let fcn = op === 'update' ? source.update : source.clear;
+  let forceDownload = true;
 
-  fcn().then(() => {
+  fcn(forceDownload).then(() => {
     logger.info(`Successfully applied ${op} on source '${passedSourceId}'`);
   }).catch(err => {
     logger.error(`Failed to apply ${op} on source '${passedSourceId}'`);

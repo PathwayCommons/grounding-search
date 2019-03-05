@@ -88,8 +88,8 @@ const updateOld = function() {
 };
 
 // TODO test new download impl
-const update = function(){
-  return download(UNIPROT_URL, UNIPROT_FILE_NAME).then(updateFromFile);
+const update = function(forceIfFileExists){
+  return download(UNIPROT_URL, UNIPROT_FILE_NAME, forceIfFileExists).then(updateFromFile);
 };
 
 const clear = function(){

@@ -55,8 +55,12 @@ const ftpDownload = (url, outFileName) => {
   });
 };
 
-const dl = (url, outFileName) => {
+const dl = (url, outFileName, forceIfFileExists = false) => {
   const parsedUrl = new URL(url);
+
+  if( !forceIfFileExists && fs.existsSync(path.join(INPUT_PATH, outFileName)) ){
+    return Promise.resolve();
+  }
 
   logger.info(`Downloading ${url} to ${outFileName}`);
 

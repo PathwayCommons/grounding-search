@@ -9,17 +9,10 @@ let defaults = {
   UNIPROT_URL: 'ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz'
 };
 
-let testDefaults = {
-  UNIPROT_INDEX: 'uniprot-test',
-  INPUT_PATH: 'test/input'
-};
-
-let testVars = process.env.NODE_ENV == 'test' ? testDefaults : {};
-
 let envVars = _.pick( process.env, Object.keys( defaults ) );
 
 
-let conf = Object.assign( {}, defaults, testVars, envVars );
+let conf = Object.assign( {}, defaults, envVars );
 
 Object.freeze( conf );
 

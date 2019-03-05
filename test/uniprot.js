@@ -12,7 +12,8 @@ const { UNIPROT_INDEX, UNIPROT_FILE_NAME, INPUT_PATH } = require('../src/server/
 // register chai plugin for promises
 chai.use( chaiAsPromised );
 
-const loadTestData = () => uniprot.update();
+const forceDownload = false;
+const loadTestData = () => uniprot.update(forceDownload);
 const clearTestData = () => uniprot.clear();
 const indexExists = () => db.exists( UNIPROT_INDEX );
 const getEntryCount = () => db.count( UNIPROT_INDEX );
