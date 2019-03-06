@@ -39,8 +39,11 @@ const xmlEntries = getXmlEntries();
 
 describe('Load Data', function(){
   after( clearTestData );
-
   it('load test data', function( done ){
+    // loading test data may need a higher timeout
+    // depending on the platform
+    this.timeout(6000);
+
     loadTestData().should.be.fulfilled
       .then( () => indexExists().should.eventually.be.equal( true, 'index is created to load data' ) )
       .then( () => getEntryCount().should.eventually.equal( xmlEntries.length, 'all entries are saved to database' ) )
