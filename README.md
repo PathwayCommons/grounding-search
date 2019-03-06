@@ -1,5 +1,6 @@
 # grounding-search
 
+[![Build Status](https://travis-ci.org/PathwayCommons/grounding-search.svg?branch=master)](https://travis-ci.org/PathwayCommons/grounding-search)
 
 ## Required software
 
