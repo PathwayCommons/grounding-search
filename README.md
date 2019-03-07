@@ -1,6 +1,6 @@
 # grounding-search
 
-[![Build Status](https://travis-ci.org/PathwayCommons/grounding-search.svg?branch=master)](https://travis-ci.org/PathwayCommons/grounding-search)
+[![Build Status](https://travis-ci.org/PathwayCommons/grounding-search.svg?branch=master)](https://travis-ci.org/PathwayCommons/grounding-search) [![Greenkeeper badge](https://badges.greenkeeper.io/PathwayCommons/grounding-search.svg)](https://greenkeeper.io/)
 
 ## Required software
 
