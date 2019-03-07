@@ -85,8 +85,8 @@ const clear = function(){
   return db.deleteIndex( UNIPROT_INDEX );
 };
 
-const search = function(searchString){
-  return db.search( UNIPROT_INDEX, searchString );
+const search = function(searchString, from, size){
+  return db.search( UNIPROT_INDEX, searchString, from, size );
 };
 
 const get = function(id){

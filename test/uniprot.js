@@ -14,12 +14,15 @@ const { UNIPROT_INDEX, UNIPROT_FILE_NAME, INPUT_PATH } = require('../src/server/
 chai.use( chaiAsPromised );
 
 const forceDownload = false;
+const maxSearchSize = 10000;
 const loadTestData = () => uniprot.update(forceDownload);
 const clearTestData = () => uniprot.clear();
 const indexExists = () => db.exists( UNIPROT_INDEX );
 const getEntryCount = () => db.count( UNIPROT_INDEX );
-const searchGene = geneName => uniprot.search( geneName );
+const searchGene = geneName => uniprot.search( geneName, 0, maxSearchSize );
 const getGene = id => uniprot.get( id );
+const buildIndex = process.env.TESTS_BUILD_INDEX === 'true'
+  || process.env.TESTS_BUILD_INDEX === 'TRUE';
 
 const getXmlEntries = () => {
   let filePath = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
@@ -35,10 +38,19 @@ const getEntryId = entry => {
   return id;
 };
 
-const xmlEntries = getXmlEntries();
+const xmlEntries = buildIndex ? getXmlEntries() : null;
 
 describe('Load Data', function(){
-  after( clearTestData );
+  before( function() {
+    if ( !buildIndex ) {
+      this.skip();
+    }
+  } );
+
+  if ( buildIndex ) {
+    after( clearTestData );
+  }
+
   it('load test data', function( done ){
     // loading test data may need a higher timeout
     // depending on the platform
@@ -52,7 +64,14 @@ describe('Load Data', function(){
 });
 
 describe('Clear Data', function(){
-  before( loadTestData );
+  before( function() {
+    if ( buildIndex ) {
+      return loadTestData();
+    }
+    else {
+      this.skip();
+    }
+  } );
 
   it('clear test data', function( done ){
     clearTestData()
@@ -62,9 +81,10 @@ describe('Clear Data', function(){
 });
 
 describe('Search and Get', function(){
-  before(loadTestData);
-
-  after(clearTestData);
+  if ( buildIndex ) {
+    before(loadTestData);
+    after(clearTestData);
+  }
 
   it('search genes', function( done ){
     let promiseTP53 = searchGene('tp53');
@@ -86,8 +106,7 @@ describe('Search and Get', function(){
   });
 
   it('get gene by id', function( done ){
-    let firstEntry = xmlEntries[ 0 ];
-    let id = getEntryId( firstEntry );
+    let id = xmlEntries ? getEntryId( xmlEntries[ 0 ] ) : 'Q7LG56';
 
     getGene(id).should.be.fulfilled.
       then( res => {
