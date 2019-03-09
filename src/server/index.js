@@ -10,9 +10,12 @@ const config = require('./config');
 const logger = require('./logger');
 const stream = require('stream');
 const fs = require('fs');
+const swagger = require('./swagger');
 
 const app = express();
 const server = http.createServer(app);
+
+let port = normalizePort(config.PORT);
 
 // view engine setup
 app.set('views', path.join(__dirname, '../', 'views'));
@@ -28,6 +31,7 @@ app.engine('html', function (filePath, options, callback){
 
 app.set('view engine', 'html');
 
+app.use('/api/docs', swagger(port));
 app.use(favicon(path.join(__dirname, '../..', 'public', 'icon.png')));
 app.use(morgan('dev', {
   stream: new stream.Writable({
@@ -60,8 +64,6 @@ app.use(function(err, req, res) {
   res.text(err.message);
 });
 
-
-let port = normalizePort(config.PORT);
 
 app.set('port', port);
 
