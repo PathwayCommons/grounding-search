@@ -27,8 +27,8 @@ module.exports = function( port ) {
     apis: ['./src/server/routes/index.js']
   };
 
-  const swaggerSpec = swaggerJSDoc(options)
-  router.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
+  const swaggerSpec = swaggerJSDoc(options);
+  router.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
   return router;
 };
