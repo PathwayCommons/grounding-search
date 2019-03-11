@@ -2,6 +2,7 @@ const fs = require('fs');
 const XmlStream = require('xml-stream');
 const _ = require('lodash');
 const { UNIPROT_INDEX, INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } = require('../config');
+const { SUPPORTED_ORGANISMS } = require('./organisms');
 const db = require('../db');
 const path = require('path');
 const download = require('./download');
@@ -9,9 +10,6 @@ const download = require('./download');
 const FILE_PATH = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
 const ENTRY_NS = 'protein';
 const ENTRY_TYPE = 'uniprot';
-
-const SUPPORTED_ORGANISMS = new Set(['9606', '10090', '4932', '7227',
-  '83333', '6239', '3702', '10116', '7955']);
 
 const pushIfNonNil = ( arr, val ) => {
   if( val ){
