@@ -10,6 +10,9 @@ const FILE_PATH = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
 const ENTRY_NS = 'protein';
 const ENTRY_TYPE = 'uniprot';
 
+const SUPPORTED_ORGANISMS = new Set(['9606', '10090', '4932', '7227',
+  '83333', '6239', '3702', '10116', '7955']);
+
 const pushIfNonNil = ( arr, val ) => {
   if( val ){
     arr.push( val );
@@ -59,8 +62,8 @@ const updateFromFile = function(){
     } );
 
     xml.on('endElement: entry', function(rawEntry) {
-      // consider only the human organism
-      if (rawEntry.organism.dbReference.$.id == '9606'){
+      // consider only the supported organisms
+      if ( SUPPORTED_ORGANISMS.has( rawEntry.organism.dbReference.$.id ) ){
         let entry = processEntry( rawEntry );
         entries.push( entry );
       }
