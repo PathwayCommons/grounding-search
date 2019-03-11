@@ -2,7 +2,7 @@ const fs = require('fs');
 const XmlStream = require('xml-stream');
 const _ = require('lodash');
 const { UNIPROT_INDEX, INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } = require('../config');
-const { SUPPORTED_ORGANISMS } = require('./organisms');
+const { isSupportedOrganism } = require('./organisms');
 const db = require('../db');
 const path = require('path');
 const download = require('./download');
@@ -61,7 +61,7 @@ const updateFromFile = function(){
 
     xml.on('endElement: entry', function(rawEntry) {
       // consider only the supported organisms
-      if ( SUPPORTED_ORGANISMS.has( rawEntry.organism.dbReference.$.id ) ){
+      if ( isSupportedOrganism( rawEntry.organism.dbReference.$.id ) ){
         let entry = processEntry( rawEntry );
         entries.push( entry );
       }
