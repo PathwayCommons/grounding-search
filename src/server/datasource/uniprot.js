@@ -7,6 +7,7 @@ const db = require('../db');
 const path = require('path');
 const download = require('./download');
 const logger = require('../logger');
+const Future = require('fibers/future');
 
 const FILE_PATH = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
 const ENTRY_NS = 'protein';
@@ -23,7 +24,7 @@ const getShortOrFullName = n => getShortName( n ) || getFullName( n );
 const getShortName = n => _.get(n, ['shortName', 0, '$text']) || _.get(n, ['shortName', 0]);
 const getFullName = n => _.get(n, ['fullName', 0, '$text']) || _.get(n, ['fullName', 0]);
 
-const processEntry = function(entry) {
+const processEntry = entry => {
   let namespace = ENTRY_NS;
   let type = ENTRY_TYPE;
   let id = _.get( entry, [ 'accession', 0 ] );
@@ -46,6 +47,14 @@ const processEntry = function(entry) {
   name = proteinNames[0] || name;
 
   return { namespace, type, id, organism, name, geneNames, proteinNames };
+};
+
+const processChunk = chunk => {
+  let task = Future.wrap(function(chunk, next){ // code in this block runs in its own thread
+    next( chunk.map(processEntry) );
+  });
+
+  return task(chunk).promise();
 };
 
 const updateFromFile = function(){
@@ -71,7 +80,7 @@ const updateFromFile = function(){
       let chunk = entries;
       entries = [];
 
-      process = process.then(() => insertChunk(chunk));
+      process = process.then(() => processChunk(chunk)).then(insertChunk);
 
       return process;
     };
@@ -88,11 +97,7 @@ const updateFromFile = function(){
 
       // consider only the supported organisms
       if ( isSupportedOrganism( orgId ) ){
-        let entry = processEntry( rawEntry );
-
-        enqueueEntry(entry);
-
-        // entries.push( entry );
+        enqueueEntry(rawEntry);
       }
     });
 
@@ -104,10 +109,8 @@ const updateFromFile = function(){
       logger.info('Updating index with processed Uniprot data');
 
       let recreateIndex = () => db.recreateIndex( UNIPROT_INDEX );
-      // let fillIndex = () => db.insertEntries( UNIPROT_INDEX, entries, true );
 
       recreateIndex( UNIPROT_INDEX )
-        // .then( fillIndex )
         .then( () => process ) // wait for last chunk
         .then( () => logger.info('Finished updating Uniprot data') )
         .then( resolve );
