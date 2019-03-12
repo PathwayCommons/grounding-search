@@ -1,7 +1,7 @@
 // cli for updating/clearing a datasource
 
 const process = require('process');
-const logger = console;
+const logger = require('../logger');
 const uniprot = require('./uniprot');
 const sources = { uniprot };
 const op = process.argv[2];

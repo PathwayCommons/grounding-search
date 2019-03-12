@@ -6,6 +6,7 @@ const { isSupportedOrganism } = require('./organisms');
 const db = require('../db');
 const path = require('path');
 const download = require('./download');
+const logger = require('../logger');
 
 const FILE_PATH = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
 const ENTRY_NS = 'protein';
@@ -67,12 +68,17 @@ const updateFromFile = function(){
       }
     });
 
+    logger.info(`Processing Uniprot data from ${FILE_PATH}`);
+
     xml.on('end', function() {
+      logger.info('Updating index with processed Uniprot data');
+
       let recreateIndex = () => db.recreateIndex( UNIPROT_INDEX );
       let fillIndex = () => db.insertEntries( UNIPROT_INDEX, entries, true );
 
       recreateIndex( UNIPROT_INDEX )
         .then( fillIndex )
+        .then( () => logger.info('Finished updating Uniprot data') )
         .then( resolve );
     });
   } );
