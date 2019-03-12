@@ -84,8 +84,10 @@ const updateFromFile = function(){
     } );
 
     xml.on('endElement: entry', function(rawEntry) {
+      const orgId = _.get(rawEntry, ['organism', 'dbReference', '$', 'id']);
+
       // consider only the supported organisms
-      if ( isSupportedOrganism( rawEntry.organism.dbReference.$.id ) ){
+      if ( isSupportedOrganism( orgId ) ){
         let entry = processEntry( rawEntry );
 
         enqueueEntry(entry);
