@@ -11,6 +11,7 @@ const logger = require('../logger');
 const FILE_PATH = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
 const ENTRY_NS = 'protein';
 const ENTRY_TYPE = 'uniprot';
+const ENTRIES_CHUNK_SIZE = 100;
 
 const pushIfNonNil = ( arr, val ) => {
   if( val ){
@@ -52,6 +53,28 @@ const updateFromFile = function(){
     let stream = fs.createReadStream(FILE_PATH);
     let xml = new XmlStream(stream);
     let entries = [];
+    let process = Promise.resolve();
+
+    const insertChunk = chunk => db.insertEntries( UNIPROT_INDEX, chunk, true );
+
+    const enqueueEntry = entry => {
+      entries.push(entry);
+
+      if( entries.length >= ENTRIES_CHUNK_SIZE ){
+        return dequeueEntries();
+      } else {
+        return Promise.resolve();
+      }
+    };
+
+    const dequeueEntries = () => {
+      let chunk = entries;
+      entries = [];
+
+      process = process.then(() => insertChunk(chunk));
+
+      return process;
+    };
 
     let toCollectList = [ 'gene > name', 'alternativeName', 'submittedName',
       'accession', 'fullName', 'shortName' ];
@@ -64,20 +87,26 @@ const updateFromFile = function(){
       // consider only the supported organisms
       if ( isSupportedOrganism( rawEntry.organism.dbReference.$.id ) ){
         let entry = processEntry( rawEntry );
-        entries.push( entry );
+
+        enqueueEntry(entry);
+
+        // entries.push( entry );
       }
     });
 
     logger.info(`Processing Uniprot data from ${FILE_PATH}`);
 
     xml.on('end', function() {
+      dequeueEntries(); // last chunk might not be full
+
       logger.info('Updating index with processed Uniprot data');
 
       let recreateIndex = () => db.recreateIndex( UNIPROT_INDEX );
-      let fillIndex = () => db.insertEntries( UNIPROT_INDEX, entries, true );
+      // let fillIndex = () => db.insertEntries( UNIPROT_INDEX, entries, true );
 
       recreateIndex( UNIPROT_INDEX )
-        .then( fillIndex )
+        // .then( fillIndex )
+        .then( () => process ) // wait for last chunk
         .then( () => logger.info('Finished updating Uniprot data') )
         .then( resolve );
     });
