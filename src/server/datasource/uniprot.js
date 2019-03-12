@@ -51,7 +51,9 @@ const processEntry = entry => {
 
 const processChunk = chunk => {
   let task = Future.wrap(function(chunk, next){ // code in this block runs in its own thread
-    next( chunk.map(processEntry) );
+    let processedEntries = chunk.map(processEntry);
+
+    next( processedEntries );
   });
 
   return task(chunk).promise();
