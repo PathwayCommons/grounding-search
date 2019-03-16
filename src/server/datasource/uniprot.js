@@ -68,8 +68,8 @@ const updateFromFile = function(){
       let entry;
 
       // alternative and submitted name objects for current protein,
-      // they are suppose to have at least one of shortName or fullName
-      // these variables are maintained because only one of shortName or fullName
+      // possible properties of these objects are SHORT_NAME and FULL_NAME tag names,
+      // these variables are maintained because only one of SHORT_NAME or FULL_NAME
       // will be pushed to proteinNames when the related tag is closed
       let alternativeProtName = {};
       let submittedProtName = {};
@@ -92,7 +92,7 @@ const updateFromFile = function(){
       };
 
       const setId = id => {
-        if ( !entry.id ) {
+        if ( _.isNil( entry.id ) ) {
           entry.id = id;
         }
       };
@@ -130,8 +130,12 @@ const updateFromFile = function(){
 
       const onclosetag = node => {
         let tag = node.name;
-        let selectAndPush = obj => pushToProtNames( obj[XML_TAGS.SHORT_NAME]
-          || obj[XML_TAGS.FULL_NAME] );
+        let selectAndPush = obj => {
+          let name = obj[XML_TAGS.SHORT_NAME] || obj[XML_TAGS.FULL_NAME];
+          if ( !_.isNil( name ) ){
+            pushToProtNames( name );
+          }
+        };
 
         if ( tag == XML_TAGS.ALTERNATIVE_NAME ) {
           selectAndPush( alternativeProtName );
@@ -174,7 +178,7 @@ const updateFromFile = function(){
         }
         else if ( prev2 == XML_TAGS.PROTEIN && isFullOrShortNameTag( last ) ) {
           if ( prev1 == XML_TAGS.RECOMMENDED_NAME ) {
-            // for recommendedName both of 'fullName' and 'shortName' must be pushed
+            // for RECOMMENDED_NAME both of FULL_NAME and SHORT_NAME must be pushed
             // so no need for checking last tag name here
             pushToProtNames( text );
           }
