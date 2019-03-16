@@ -22,6 +22,20 @@ let db = {
 
     return client;
   },
+  refreshIndex: function( index ){
+    let client = this.connect();
+    return client.indices.refresh( { index } );
+  },
+  disableAutoRefresh: function( index ){
+    let client = this.connect();
+    let body = { refresh_interval: '-1' };
+    return client.indices.putSettings( { index, body } );
+  },
+  enableAutoRefresh: function( index ){
+    let client = this.connect();
+    let body = { refresh_interval: null };
+    return client.indices.putSettings( { index, body } );
+  },
   createIndex: function( index ){
     let client = this.connect();
     let searchableFieldProps = { type: 'text', analyzer: 'ngram_analyzer', 'search_analyzer': 'standard' };

@@ -33,16 +33,14 @@
     "download": "^7.1.0",
     "elasticsearch": "^15.4.1",
     "express": "^4.13.4",
-    "fibers": "^3.1.1",
     "ftp": "^0.3.10",
     "lodash": "^4.17.11",
     "morgan": "^1.7.0",
-    "node-cmd": "^3.0.0",
+    "saxes": "^3.1.9",
     "serve-favicon": "^2.3.0",
     "swagger-jsdoc": "^3.2.7",
     "swagger-ui-express": "^4.0.2",
-    "winston": "^2.3.1",
-    "xml-stream": "^0.4.5"
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
