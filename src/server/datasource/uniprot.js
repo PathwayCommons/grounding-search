@@ -1,6 +1,6 @@
 const XmlParser = require('../parser/xml-parser');
 const _ = require('lodash');
-const { UNIPROT_INDEX, INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } = require('../config');
+const { INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } = require('../config');
 const { isSupportedOrganism } = require('./organisms');
 const db = require('../db');
 const path = require('path');
@@ -8,8 +8,8 @@ const download = require('./download');
 const logger = require('../logger');
 
 const FILE_PATH = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
-const ENTRY_NS = 'protein';
-const ENTRY_TYPE = 'uniprot';
+const ENTRY_NS = 'uniprot';
+const ENTRY_TYPE = 'protein';
 const ENTRIES_CHUNK_SIZE = 100;
 
 const XML_TAGS = Object.freeze({
@@ -33,7 +33,7 @@ const updateFromFile = function(){
     let entries = [];
     let process = Promise.resolve();
 
-    const insertChunk = chunk => db.insertEntries( UNIPROT_INDEX, chunk, false );
+    const insertChunk = chunk => db.insertEntries( chunk, false );
 
     const enqueueEntry = entry => {
       entries.push(entry);
@@ -196,8 +196,8 @@ const updateFromFile = function(){
 
         logger.info('Updating index with processed Uniprot data');
 
-        const enableAutoRefresh = () => db.enableAutoRefresh( UNIPROT_INDEX );
-        const manualRefresh = () => db.refreshIndex( UNIPROT_INDEX );
+        const enableAutoRefresh = () => db.enableAutoRefresh();
+        const manualRefresh = () => db.refreshIndex();
 
         process
           .then( () => logger.info('Finished updating Uniprot data') )
@@ -209,10 +209,12 @@ const updateFromFile = function(){
       XmlParser( FILE_PATH, { onopentag, onclosetag, ontext, onend } );
     };
 
-    const recreateIndex = () => db.recreateIndex( UNIPROT_INDEX );
-    const disableAutoRefresh = () => db.disableAutoRefresh( UNIPROT_INDEX );
-
-    recreateIndex( UNIPROT_INDEX )
+    const guaranteeIndex = () => db.guaranteeIndex();
+    const disableAutoRefresh = () => db.disableAutoRefresh();
+    const clearNamespace = () => db.clearNamespace(ENTRY_NS);
+    
+    guaranteeIndex()
+      .then( clearNamespace )
       .then( disableAutoRefresh )
       .then( parseXml );
 
@@ -226,15 +228,16 @@ const update = function(forceIfFileExists){
 };
 
 const clear = function(){
-  return db.deleteIndex( UNIPROT_INDEX );
+  const refreshIndex = () => db.refreshIndex();
+  return db.clearNamespace(ENTRY_NS).then( refreshIndex );
 };
 
 const search = function(searchString, from, size){
-  return db.search( UNIPROT_INDEX, searchString, from, size );
+  return db.search( searchString, ENTRY_NS, from, size );
 };
 
 const get = function(id){
-  return db.get( UNIPROT_INDEX, id );
+  return db.get( id, ENTRY_NS );
 };
 
 module.exports = { update, clear, search, get };

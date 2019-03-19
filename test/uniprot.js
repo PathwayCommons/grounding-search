@@ -8,17 +8,20 @@ const fs = require('fs');
 const _ = require('lodash');
 const uniprot = require('../src/server/datasource/uniprot');
 const db = require('../src/server/db');
-const { UNIPROT_INDEX, UNIPROT_FILE_NAME, INPUT_PATH } = require('../src/server/config');
+const { UNIPROT_FILE_NAME, INPUT_PATH } = require('../src/server/config');
+
+const NS = 'uniprot';
 
 // register chai plugin for promises
 chai.use( chaiAsPromised );
 
 const forceDownload = false;
 const maxSearchSize = 10000;
-const loadTestData = () => uniprot.update(forceDownload);
+const updateTestData = () => uniprot.update(forceDownload);
 const clearTestData = () => uniprot.clear();
-const indexExists = () => db.exists( UNIPROT_INDEX );
-const getEntryCount = () => db.count( UNIPROT_INDEX );
+const removeTestIndex = () => db.deleteIndex();
+const indexExists = () => db.exists();
+const getEntryCount = () => db.count( NS );
 const searchGene = geneName => uniprot.search( geneName, 0, maxSearchSize );
 const getGene = id => uniprot.get( id );
 const buildIndex = process.env.TESTS_BUILD_INDEX === 'true'
@@ -40,7 +43,7 @@ const getEntryId = entry => {
 
 const xmlEntries = buildIndex ? getXmlEntries() : null;
 
-describe('Load Data', function(){
+describe('Update Data', function(){
   before( function() {
     if ( !buildIndex ) {
       this.skip();
@@ -48,15 +51,15 @@ describe('Load Data', function(){
   } );
 
   if ( buildIndex ) {
-    after( clearTestData );
+    after( removeTestIndex );
   }
 
-  it('load test data', function( done ){
+  it('update test data', function( done ){
     // loading test data may need a higher timeout
     // depending on the platform
     this.timeout(6000);
 
-    loadTestData().should.be.fulfilled
+    updateTestData().should.be.fulfilled
       .then( () => indexExists().should.eventually.be.equal( true, 'index is created to load data' ) )
       .then( () => getEntryCount().should.eventually.equal( xmlEntries.length, 'all entries are saved to database' ) )
       .then( () => done(), error => done(error) );
@@ -66,7 +69,7 @@ describe('Load Data', function(){
 describe('Clear Data', function(){
   before( function() {
     if ( buildIndex ) {
-      return loadTestData();
+      return updateTestData();
     }
     else {
       this.skip();
@@ -75,15 +78,15 @@ describe('Clear Data', function(){
 
   it('clear test data', function( done ){
     clearTestData()
-      .then( () => indexExists().should.eventually.be.equal( false, 'index is cleared' ) )
+      .then( () => getEntryCount().should.eventually.equal( 0, 'all uniprot entries are cleared from database' ) )
       .then( () => done(), error => done(error) );
   });
 });
 
 describe('Search and Get', function(){
   if ( buildIndex ) {
-    before(loadTestData);
-    after(clearTestData);
+    before(updateTestData);
+    after(removeTestIndex);
   }
 
   it('search genes', function( done ){

@@ -3,7 +3,7 @@ const _ = require('lodash');
 
 let defaults = {
   PORT: 3000,
-  UNIPROT_INDEX: 'uniprot',
+  INDEX: 'groundingsearch',
   UNIPROT_FILE_NAME: 'uniprot.xml',
   INPUT_PATH: 'input',
   UNIPROT_URL: 'ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz'

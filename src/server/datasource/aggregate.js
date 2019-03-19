@@ -1,19 +1,14 @@
-const uniprot = require('./uniprot');
-const sources = [uniprot];
-const _ = require('lodash');
+const db = require('../db');
 
 const search = function(searchString){
-  const sourceSearch = source => source.search(searchString);
-
-  // for now, just concat the results together --- no sorting...
+  // for now no sorting...
 
   // something more sophisticated could be done later
-  return Promise.all(sources.map(sourceSearch)).then(_.concat);
+  return db.search(searchString);
 };
 
-// eslint-disable-next-line
 const get = function(namespace, id){
-  // TODO
+  return db.get(id, namespace);
 };
 
 module.exports = { search, get };
