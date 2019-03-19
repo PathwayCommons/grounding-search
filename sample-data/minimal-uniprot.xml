@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<uniprot xmlns="http://uniprot.org/uniprot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://uniprot.org/uniprot http://www.uniprot.org/support/docs/uniprot.xsd">
+<entry dataset="Swiss-Prot" created="2006-03-21" modified="2019-02-13" version="161">
+  <accession>Q7LG56</accession>
+  <accession>B4E2N4</accession>
+  <accession>Q17R22</accession>
+  <accession>Q75PQ6</accession>
+  <accession>Q75PQ7</accession>
+  <accession>Q75PY8</accession>
+  <accession>Q75PY9</accession>
+  <accession>Q86YE3</accession>
+  <accession>Q9NPD6</accession>
+  <accession>Q9NTD8</accession>
+  <accession>Q9NUW3</accession>
+  <name>RIR2B_HUMAN</name>
+  <protein>
+    <recommendedName>
+      <fullName>Ribonucleoside-diphosphate reductase subunit M2 B</fullName>
+      <ecNumber>1.17.4.1</ecNumber>
+    </recommendedName>
+    <alternativeName>
+      <fullName>TP53-inducible ribonucleotide reductase M2 B</fullName>
+    </alternativeName>
+    <alternativeName>
+      <fullName>p53-inducible ribonucleotide reductase small subunit 2-like protein</fullName>
+      <shortName>p53R2</shortName>
+    </alternativeName>
+  </protein>
+  <gene>
+    <name type="primary">RRM2B</name>
+    <name type="synonym">P53R2</name>
+  </gene>
+  <organism>
+    <name type="scientific">Homo sapiens</name>
+    <name type="common">Human</name>
+    <dbReference type="NCBI Taxonomy" id="9606" />
+  </organism>
+</entry>
+</uniprot>

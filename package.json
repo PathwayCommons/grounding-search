@@ -11,8 +11,8 @@
   },
   "homepage": "https://github.com/PathwayCommons/grounding-search",
   "scripts": {
-    "start": "forever ./src/server",
-    "stop": "forever stop ./src/server",
+    "start": "node ./src/server",
+    "inspect": "node --inspect-brk ./src/server",
     "lint:js": "eslint ./src",
     "lint": "run-s lint:*",
     "watch": "nodemon src/server/index.js",
@@ -33,6 +33,7 @@
     "download": "^7.1.0",
     "elasticsearch": "^15.4.1",
     "express": "^4.13.4",
+    "fibers": "^3.1.1",
     "ftp": "^0.3.10",
     "lodash": "^4.17.11",
     "morgan": "^1.7.0",

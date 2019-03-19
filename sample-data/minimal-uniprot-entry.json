@@ -1,0 +1,189 @@
+{
+  "name": "entry",
+  "attributes": {
+    "dataset": "Swiss-Prot",
+    "created": "2006-03-21",
+    "modified": "2019-02-13",
+    "version": "161"
+  },
+  "children": [
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "Q7LG56"
+    },
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "B4E2N4"
+    },
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "Q17R22"
+    },
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "Q75PQ6"
+    },
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "Q75PQ7"
+    },
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "Q75PY8"
+    },
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "Q75PY9"
+    },
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "Q86YE3"
+    },
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "Q9NPD6"
+    },
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "Q9NTD8"
+    },
+    {
+      "name": "accession",
+      "attributes": {},
+      "children": [],
+      "text": "Q9NUW3"
+    },
+    {
+      "name": "name",
+      "attributes": {},
+      "children": [],
+      "text": "RIR2B_HUMAN"
+    },
+    {
+      "name": "protein",
+      "attributes": {},
+      "children": [
+        {
+          "name": "recommendedName",
+          "attributes": {},
+          "children": [
+            {
+              "name": "fullName",
+              "attributes": {},
+              "children": [],
+              "text": "Ribonucleoside-diphosphate reductase subunit M2 B"
+            },
+            {
+              "name": "ecNumber",
+              "attributes": {},
+              "children": [],
+              "text": "1.17.4.1"
+            }
+          ]
+        },
+        {
+          "name": "alternativeName",
+          "attributes": {},
+          "children": [
+            {
+              "name": "fullName",
+              "attributes": {},
+              "children": [],
+              "text": "TP53-inducible ribonucleotide reductase M2 B"
+            }
+          ]
+        },
+        {
+          "name": "alternativeName",
+          "attributes": {},
+          "children": [
+            {
+              "name": "fullName",
+              "attributes": {},
+              "children": [],
+              "text": "p53-inducible ribonucleotide reductase small subunit 2-like protein"
+            },
+            {
+              "name": "shortName",
+              "attributes": {},
+              "children": [],
+              "text": "p53R2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gene",
+      "attributes": {},
+      "children": [
+        {
+          "name": "name",
+          "attributes": {
+            "type": "primary"
+          },
+          "children": [],
+          "text": "RRM2B"
+        },
+        {
+          "name": "name",
+          "attributes": {
+            "type": "synonym"
+          },
+          "children": [],
+          "text": "P53R2"
+        }
+      ]
+    },
+    {
+      "name": "organism",
+      "attributes": {},
+      "children": [
+        {
+          "name": "name",
+          "attributes": {
+            "type": "scientific"
+          },
+          "children": [],
+          "text": "Homo sapiens"
+        },
+        {
+          "name": "name",
+          "attributes": {
+            "type": "common"
+          },
+          "children": [],
+          "text": "Human"
+        },
+        {
+          "name": "dbReference",
+          "attributes": {
+            "type": "NCBI Taxonomy",
+            "id": "9606"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}
