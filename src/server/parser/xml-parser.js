@@ -1,16 +1,64 @@
 let saxes = require('saxes');
 let fs = require('fs');
+let _ = require('lodash');
 
-function XmlParser(filePath, events) {
+function XmlParser(filePath, rootTagName, omitList = [], events) {
   let parser = new saxes.SaxesParser();
 
-  const listenToEvent = ( name, callback ) => {
-    parser[name] = callback;
+  let tagStack = [];
+  let getTopTag = () => tagStack[tagStack.length - 1];
+  let { onData, onEnd } = events;
+  let omitSet = new Set( omitList );
+
+  const shouldStoreNode = node => {
+    return !omitSet.has(node.name);
   };
 
-  for ( let eventName in events ) {
-    listenToEvent( eventName, events[ eventName ] );
-  }
+  parser.onopentag = node => {
+    let parent = getTopTag();
+    let hasParent = parent != null;
+    let { attributes, name } = node;
+
+    if( shouldStoreNode(node) ){
+      let parsedNode = {
+        name,
+        attributes,
+        children: []
+      };
+
+      if( hasParent ){
+        parent.children.push(parsedNode);
+      }
+
+      tagStack.push(parsedNode);
+    }
+  };
+
+  parser.ontext = text => {
+    let topTag = getTopTag();
+
+    if( topTag == null ){ // omit if unstored
+      return;
+    }
+
+    topTag.text = text;
+  };
+
+  parser.onclosetag = () => {
+    let topTag = getTopTag();
+
+    if( topTag == null ){ // omit if unstored
+      return;
+    }
+
+    if( topTag.name === rootTagName ){
+      onData(topTag);
+    }
+
+    tagStack.pop();
+  };
+
+  parser.onend = onEnd || _.noop;
 
   let stream = fs.createReadStream(filePath);
 

@@ -13,24 +13,6 @@ const ENTRY_NS = 'uniprot';
 const ENTRY_TYPE = 'protein';
 const ENTRIES_CHUNK_SIZE = 100;
 
-const XML_TAGS = Object.freeze({
-  UNIPROT: 'uniprot',
-  ENTRY: 'entry',
-  PROTEIN: 'protein',
-  DB_REFERENCE: 'dbReference',
-  ORGANISM: 'organism',
-  ACCESSION: 'accession',
-  NAME: 'name',
-  GENE: 'gene',
-  ALTERNATIVE_NAME: 'alternativeName',
-  SUBMITTED_NAME: 'submittedName',
-  RECOMMENDED_NAME: 'recommendedName',
-  FULL_NAME: 'fullName',
-  SHORT_NAME: 'shortName'
-});
-
-const UNSTORED_XML_TAGS = [XML_TAGS.UNIPROT];
-
 const pushIfNonNil = ( arr, val ) => {
   if( val ){
     arr.push( val );
@@ -38,21 +20,41 @@ const pushIfNonNil = ( arr, val ) => {
 };
 
 const getShortOrFullName = n => getShortName( n ) || getFullName( n );
-const getShortName = n => _.get(n, ['shortName', 0, '$text']) || _.get(n, ['shortName', 0]);
-const getFullName = n => _.get(n, ['fullName', 0, '$text']) || _.get(n, ['fullName', 0]);
+
+const getShortName = n => {
+  let obj = n && _.find( n.children, [ 'name', 'shortName' ] );
+  return getText( obj );
+};
+
+const getFullName = n => {
+  let obj = n && _.find( n.children, [ 'name', 'fullName' ] );
+  return getText( obj );
+};
+
+const getOrganism = entry => {
+  let organism = _.find( entry.children, [ 'name', 'organism' ] );
+  let dbReference = organism && _.find( organism.children, ['name', 'dbReference'] );
+  return getAttributes( dbReference ).id;
+};
+
+const getAttributes = n => n && n.attributes;
+
+const getText = n => n && n.text;
 
 const processEntry = entry => {
   let namespace = ENTRY_NS;
   let type = ENTRY_TYPE;
-  let id = _.get( entry, [ 'accession', 0 ] );
-  let name = _.get( entry, 'name' );
-  let organism = _.get( entry, [ 'organism', 'dbReference', '$', 'id' ] );
-  let geneNames = _.get( entry, [ 'gene', 'name' ], [] ).map( res => res['$text'] );
-  let recProtName = _.get( entry, [ 'protein', 'recommendedName' ] );
+  let id = getText( _.find( entry.children, [ 'name', 'accession' ] ) );
+  let name = getText( _.find( entry.children, [ 'name', 'name' ] ) );
+  let organism = getOrganism( entry );
+  let gene = _.find( entry.children, [ 'name', 'gene' ] );
+  let geneNames = gene && _.filter( gene.children, [ 'name', 'name' ] ).map( res => res['text'] );
+  let protein = _.find( entry.children, [ 'name', 'protein' ] );
+  let recProtName = protein && _.find( protein.children, [ 'name', 'recommendedName' ] );
   let recFullProteinName = getFullName( recProtName );
   let recShortProteinName = getShortName( recProtName );
-  let altProteinNames = _.get( entry, [ 'protein', 'alternativeName' ], [] ).map( getShortOrFullName );
-  let subProteinNames = _.get( entry, [ 'protein', 'submittedName' ], [] ).map( getShortOrFullName );
+  let altProteinNames = protein && _.filter( protein.children, ['name', 'alternativeName'] ).map( getShortOrFullName );
+  let subProteinNames = protein && _.filter( protein.children, ['name', 'submittedName'] ).map( getShortOrFullName );
 
   let proteinNames = [];
   pushIfNonNil( proteinNames, recShortProteinName );
@@ -82,16 +84,9 @@ const updateFromFile = function(){
     let entries = [];
     let process = Promise.resolve();
 
-    // TODO
-    // const insertChunk = chunk => db.insertEntries( chunk, false );
-
-    const insertChunk = chunk => {
-      console.log('insertChunk', chunk);
-    };
+    const insertChunk = chunk => db.insertEntries( chunk, false );
 
     const enqueueEntry = entry => {
-      console.log('enqueue', entry);
-
       entries.push(entry);
 
       if( entries.length >= ENTRIES_CHUNK_SIZE ){
@@ -111,90 +106,34 @@ const updateFromFile = function(){
     };
 
     const consumeEntry = entry => {
-      const orgId = null;
+      const orgId = getOrganism( entry );
 
-      // require('fs').writeFileSync('entry.json', JSON.stringify(entry, null, 2));
-
-      // TODO
       // consider only the supported organisms
-      // if ( isSupportedOrganism( orgId ) ){
+      if ( isSupportedOrganism( orgId ) ){
         enqueueEntry(entry);
-      // }
+      }
     };
 
-    const shouldStoreNode = node => {
-      return !UNSTORED_XML_TAGS.some(tag => tag === node.name);
+    const onEnd = () => {
+      dequeueEntries(); // last chunk might not be full
+
+      logger.info('Updating index with processed Uniprot data');
+
+      const enableAutoRefresh = () => db.enableAutoRefresh();
+      const manualRefresh = () => db.refreshIndex();
+
+      process
+        .then( () => logger.info('Finished updating Uniprot data') )
+        .then( enableAutoRefresh )
+        .then( manualRefresh )
+        .then( resolve );
     };
 
     const parseXml = () => {
-      let tagStack = [];
-      let top = () => tagStack[tagStack.length - 1];
-
-      const onopentag = node => {
-        let parent = top();
-        let hasParent = parent != null;
-        let { attributes, name } = node;
-
-        let parsedNode = {
-          name,
-          attributes,
-          children: []
-        };
-
-        if( shouldStoreNode(parsedNode) ){
-          if( hasParent ){
-            parent.children.push(parsedNode);
-          }
-
-          tagStack.push(parsedNode);
-        }
-      };
-
-      const ontext = text => {
-        let topTag = top();
-
-        if( topTag == null ){ // omit if unstored
-          return;
-        }
-
-        // omit if text is full of white spaces
-        if ( /^\s*$/.test(text) ) {
-          return;
-        }
-
-        topTag.text = text;
-      };
-
-      const onclosetag = node => {
-        let topTag = top();
-
-        if( topTag == null ){ // omit if unstored
-          return;
-        }
-
-        if( topTag.name === XML_TAGS.ENTRY ){
-          consumeEntry(topTag);
-        }
-
-        tagStack.pop();
-      };
-
-      const onend = () => {
-        dequeueEntries(); // last chunk might not be full
-
-        logger.info('Updating index with processed Uniprot data');
-
-        const enableAutoRefresh = () => db.enableAutoRefresh();
-        const manualRefresh = () => db.refreshIndex();
-
-        process
-          .then( () => logger.info('Finished updating Uniprot data') )
-          .then( enableAutoRefresh )
-          .then( manualRefresh )
-          .then( resolve );
-      };
-
-      XmlParser( FILE_PATH, { onopentag, onclosetag, ontext, onend } );
+      let onData = consumeEntry;
+      let rootTag = 'entry';
+      let omitList = ['uniprot' ,'lineage', 'reference', 'evidence'];
+      XmlParser( FILE_PATH, rootTag, omitList, { onEnd, onData } );
     };
 
     const guaranteeIndex = () => db.guaranteeIndex();
