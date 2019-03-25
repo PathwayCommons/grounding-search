@@ -173,6 +173,10 @@ let db = {
       body.push( entry );
     } );
 
+    if( body.length === 0 ){
+      throw new Error('Can not insert empty entries list into DB');
+    }
+
     return client.bulk( { body, refresh } );
   },
   search: function( searchkey, namespace, from = 0, size = 50 ){
