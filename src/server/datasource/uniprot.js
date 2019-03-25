@@ -5,13 +5,11 @@ const { isSupportedOrganism } = require('./organisms');
 const db = require('../db');
 const path = require('path');
 const download = require('./download');
-const logger = require('../logger');
-const Future = require('fibers/future');
+const { updateEntriesFromFile } = require('./processing');
 
 const FILE_PATH = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
 const ENTRY_NS = 'uniprot';
 const ENTRY_TYPE = 'protein';
-const ENTRIES_CHUNK_SIZE = 100;
 
 const pushIfNonNil = ( arr, val ) => {
   if( val ){
@@ -70,87 +68,20 @@ const processEntry = entry => {
   return { namespace, type, id, organism, name, geneNames, proteinNames, synonyms };
 };
 
-const processChunk = chunk => {
-  let task = Future.wrap(function(chunk, next){ // code in this block runs in its own thread
-    let processedEntries = chunk.map(processEntry);
-    let err = null;
+const includeEntry = entry => {
+  const orgId = getOrganism(entry);
 
-    next( err, processedEntries );
-  });
-
-  return task(chunk).promise();
+  return isSupportedOrganism(orgId);
 };
 
-const updateFromFile = function(){
-  return new Promise( resolve => {
-    let entries = [];
-    let process = Promise.resolve();
+const parseXml = (filePath, onData, onEnd) => {
+  let rootTag = 'entry';
+  let omitList = ['uniprot' ,'lineage', 'reference', 'evidence'];
 
-    const insertChunk = chunk => db.insertEntries( chunk, false );
-
-    const enqueueEntry = entry => {
-      entries.push(entry);
-
-      if( entries.length >= ENTRIES_CHUNK_SIZE ){
-        return dequeueEntries();
-      } else {
-        return Promise.resolve();
-      }
-    };
-
-    const dequeueEntries = () => {
-      let chunk = entries;
-      entries = [];
-
-      process = process.then(() => processChunk(chunk)).then(insertChunk);
-
-      return process;
-    };
-
-    const consumeEntry = entry => {
-      const orgId = getOrganism( entry );
-
-      // consider only the supported organisms
-      if ( isSupportedOrganism( orgId ) ){
-        enqueueEntry(entry);
-      }
-    };
-
-    const onEnd = () => {
-      dequeueEntries(); // last chunk might not be full
-
-      logger.info('Updating index with processed Uniprot data');
-
-      const enableAutoRefresh = () => db.enableAutoRefresh();
-      const manualRefresh = () => db.refreshIndex();
-
-      process
-        .then( () => logger.info('Finished updating Uniprot data') )
-        .then( enableAutoRefresh )
-        .then( manualRefresh )
-        .then( resolve );
-    };
-
-    const parseXml = () => {
-      let onData = consumeEntry;
-      let rootTag = 'entry';
-      let omitList = ['uniprot' ,'lineage', 'reference', 'evidence'];
-      XmlParser( FILE_PATH, rootTag, omitList, { onEnd, onData } );
-    };
-
-    const guaranteeIndex = () => db.guaranteeIndex();
-    const disableAutoRefresh = () => db.disableAutoRefresh();
-    const clearNamespace = () => db.clearNamespace(ENTRY_NS);
-
-    guaranteeIndex()
-      .then( clearNamespace )
-      .then( disableAutoRefresh )
-      .then( parseXml );
-
-    logger.info(`Processing Uniprot data from ${FILE_PATH}`);
-
-  } );
+  XmlParser( filePath, rootTag, omitList, { onEnd, onData } );
 };
+
+const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseXml, processEntry, includeEntry);
 
 const update = function(forceIfFileExists){
   return download(UNIPROT_URL, UNIPROT_FILE_NAME, forceIfFileExists).then(updateFromFile);
