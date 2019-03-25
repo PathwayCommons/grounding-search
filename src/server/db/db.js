@@ -55,7 +55,7 @@ let db = {
     let client = this.connect();
 
     let searchableFieldProps = { type: 'text', analyzer: 'ngram_analyzer', 'search_analyzer': 'standard' };
-    let searchableFields = ['id', 'name', 'geneNames', 'proteinNames'];
+    let searchableFields = ['id', 'name', 'synonyms'];
     let searchableMatchStr = searchableFields.join('|');
     let mappings = {};
     let dynamicTemplates = [
