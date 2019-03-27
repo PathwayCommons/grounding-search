@@ -1,11 +1,11 @@
 const BenchmarkDatasource = require('./datasource');
 
 const operation = 'search';
-const datasource = 'uniprot';
+const datasource = 'chebi';
 
 let list = [
-  { operation, geneName: 'tp53' },
-  { operation, geneName: 'mdm2' }
+  { operation, geneName: 'iron' },
+  { operation, geneName: 'enoyl' }
 ];
 
 BenchmarkDatasource( datasource, list );

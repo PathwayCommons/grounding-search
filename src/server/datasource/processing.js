@@ -54,23 +54,19 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
 
       logger.info(`Updating index with processed ${ns} data`);
 
-      const enableAutoRefresh = () => db.enableAutoRefresh();
       const manualRefresh = () => db.refreshIndex();
 
       process
         .then( () => logger.info(`Finished updating ${ns} data`) )
-        .then( enableAutoRefresh )
         .then( manualRefresh )
         .then( resolve );
     };
 
     const guaranteeIndex = () => db.guaranteeIndex();
-    const disableAutoRefresh = () => db.disableAutoRefresh();
     const clearNamespace = () => db.clearNamespace(ns);
 
     guaranteeIndex()
       .then( clearNamespace )
-      .then( disableAutoRefresh )
       .then( () => parse(filePath, onData, onEnd) );
 
     logger.info(`Processing ${ns} data from ${filePath}`);

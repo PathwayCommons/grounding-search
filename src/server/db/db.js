@@ -108,6 +108,7 @@ let db = {
     ];
 
     let settings = {
+      'refresh_interval': '-1',
       'analysis': {
         'filter': {
           'ngram_filter': {

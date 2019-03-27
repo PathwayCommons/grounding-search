@@ -20,8 +20,10 @@
     "test:sample": "cross-env TESTS_BUILD_INDEX=true INPUT_PATH=test/input/ INDEX=graundingsearch-test mocha",
     "benchmark": "run-s benchmark:*",
     "benchmark:uniprot": "node benchmark/uniprot",
+    "benchmark:chebi": "node benchmark/chebi",
     "update": "run-p update:*",
     "update:uniprot": "node src/server/datasource/cli update uniprot",
+    "update:chebi": "node src/server/datasource/cli update chebi",
     "clear": "run-p clear:*",
     "clear:uniprot": "node src/server/datasource/cli clear uniprot",
     "ci": "run-s test:sample lint"
