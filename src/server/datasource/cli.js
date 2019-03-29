@@ -3,7 +3,8 @@
 const process = require('process');
 const logger = require('../logger');
 const uniprot = require('./uniprot');
-const sources = { uniprot };
+const chebi = require('./chebi');
+const sources = { uniprot, chebi };
 const op = process.argv[2];
 const passedSourceId = process.argv[3];
 const source = sources[passedSourceId];
