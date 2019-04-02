@@ -4,7 +4,8 @@ const fs = require('fs');
 const _ = require('lodash');
 
 const DatasourceTest = require('./datasource');
-const uniprot = require('../src/server/datasource/uniprot');
+const { uniprot } = require('./util/datasource');
+const { buildIndex } = require('./util/param');
 const { UNIPROT_FILE_NAME, INPUT_PATH } = require('../src/server/config');
 
 const getXmlEntries = () => {
@@ -21,8 +22,6 @@ const getEntryId = entry => {
   return id;
 };
 
-const buildIndex = process.env.TESTS_BUILD_INDEX === 'true'
-  || process.env.TESTS_BUILD_INDEX === 'TRUE';
 const namespace = 'uniprot';
 const xmlEntries = buildIndex ? getXmlEntries() : [];
 const sampleGeneId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'Q7LG56';

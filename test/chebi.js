@@ -4,7 +4,8 @@ const fs = require('fs');
 const _ = require('lodash');
 
 const DatasourceTest = require('./datasource');
-const chebi = require('../src/server/datasource/chebi');
+const { chebi } = require('./util/datasource');
+const { buildIndex } = require('./util/param');
 const { CHEBI_FILE_NAME, INPUT_PATH } = require('../src/server/config');
 
 const RDF = 'rdf:RDF';
@@ -25,8 +26,6 @@ const getEntryId = entry => {
   return id;
 };
 
-const buildIndex = process.env.TESTS_BUILD_INDEX === 'true'
-  || process.env.TESTS_BUILD_INDEX === 'TRUE';
 const namespace = 'chebi';
 const xmlEntries = buildIndex ? getXmlEntries() : [];
 const sampleGeneId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'CHEBI:53438';

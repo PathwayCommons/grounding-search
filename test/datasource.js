@@ -1,21 +1,13 @@
-const chai = require('chai')
-  , expect = chai.expect
-  , should = chai.should();
-const chaiAsPromised = require('chai-as-promised');
+const { expect, should } = require('./util/chai');
 const xmljs = require('xml-js');
-const path = require('path');
 const fs = require('fs');
 const _ = require('lodash');
 const db = require('../src/server/db');
-
-// register chai plugin for promises
-chai.use( chaiAsPromised );
+const { forceDownload, maxSearchSize } = require('./util/param');
 
 function DatasourceTest( opts ) {
   const { sampleGeneNames, sampleGeneId, datasource, namespace, entryCount, buildIndex } = opts;
 
-  const forceDownload = false;
-  const maxSearchSize = 10000;
   const updateTestData = () => datasource.update(forceDownload);
   const clearTestData = () => datasource.clear();
   const removeTestIndex = () => db.deleteIndex();
