@@ -21,6 +21,10 @@ const aggregateGet = geneId => aggregate.get( null, geneId );
 const removeTestIndex = () => db.deleteIndex();
 
 describe('Search and Get Aggregate', function(){
+  // loading test data may need a higher timeout
+  // depending on the platform
+  this.timeout(6000);
+  
   if ( buildIndex ) {
     before(updateTestData);
     after(removeTestIndex);
