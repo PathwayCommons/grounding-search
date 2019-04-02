@@ -10,16 +10,16 @@ const updateTestData = () => {
   return guaranteeIndex().then( updateEach );
 };
 
-const searchEntity = entityName => aggregate.search( entityName );
-const getEntity = entityId => aggregate.get( null, entityId );
+const searchEnt = name => aggregate.search( name );
+const getEnt = (ns, id) => aggregate.get( ns, id );
 const removeTestIndex = () => db.deleteIndex();
 const getFirstId = e => _.get( e, [ 0, 'id' ] );
-const getEntityId = e => _.get( e, 'id' );
 
+// name (search string) : grounding object { namespace, id }
 const SEARCH_OBJECT = Object.freeze({
   // Yang et al. Molecular Cell, Volume 53, Issue 1, 9 January 2014, Pages 88-100
   'hypoxia': null,
-  'HIF-1 alpha': null,
+  'HIF-1 alpha': { namespace: 'uniprot', id: 'Q16665' }, // example grounding
   'P456': null,
   'vhl': null,
   // Jin et al. Molecular Cell, Volume 69, Issue 1, 4 January 2018, Pages 87-99
@@ -83,8 +83,8 @@ const SEARCH_OBJECT = Object.freeze({
   'Twist': null
 });
 
-const ID_LIST = Object.values( SEARCH_OBJECT );
-const ENTITY_LIST = Object.keys( SEARCH_OBJECT );
+const GROUNDING_LIST = Object.values( SEARCH_OBJECT );
+const GENE_LIST = Object.keys( SEARCH_OBJECT );
 
 describe('Search and Get Aggregate', function(){
   if ( buildIndex ) {
@@ -92,24 +92,30 @@ describe('Search and Get Aggregate', function(){
     after(removeTestIndex);
   }
 
-  it('search entities aggregate', function( done ){
-    let promises = ENTITY_LIST.map( searchEntity );
-    Promise.all( promises )
-      .should.be.fulfilled
-      .then( results => {
-        expect( results.map( getFirstId ), 'search queries brings the expected best matches' ).to.deep.equal( ID_LIST );
-      } )
-      .then( () => done(), error => done(error) );
-  });
+  GENE_LIST.forEach( (name, i) => {
+    const expectedGrounding = GROUNDING_LIST[i] || {}; // could be null b/c we haven't specified groundings yet...
+    const { id, namespace } = expectedGrounding;
 
-  it('get entity by id aggregate', function( done ){
-    let promises = ID_LIST.map( getEntity );
+    it(`search ${name}`, function(){
+      return ( searchEnt(name)
+        .then( results => {
+          let firstResult = results[0];
 
-    Promise.all( promises )
-      .should.be.fulfilled
-      .then( results => {
-        expect( results.map( getEntityId ), 'get queries brings the expected entities' ).to.deep.equal( ID_LIST );
-      } )
-      .then( () => done(), error => done(error) );
-  });
-});
+          expect(firstResult.namespace, 'namespace').to.equal(namespace);
+          expect(firstResult.id, 'id').to.equal(id);
+        } )
+      );
+    });
+
+    it(`get ${name}`, function(){
+      return ( getEnt(id, namespace)
+        .then( result => {
+          expect(result.namespace, 'namespace').to.equal(namespace);
+          expect(result.id, 'id').to.equal(id);
+        } )
+      );
+    });
+
+  }); // for each
+
+}); // describe
