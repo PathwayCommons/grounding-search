@@ -24,10 +24,10 @@ const getEntryId = entry => {
 
 const namespace = 'uniprot';
 const xmlEntries = buildIndex ? getXmlEntries() : [];
-const sampleGeneId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'Q7LG56';
+const sampleEntityId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'Q7LG56';
 const entryCount = xmlEntries.length;
-const sampleGeneNames = [ 'tp53', 'mdm2' ];
+const sampleEntityNames = [ 'tp53', 'mdm2' ];
 const datasource = uniprot;
 
-let opts = { namespace, sampleGeneNames, sampleGeneId, entryCount, datasource, buildIndex };
+let opts = { namespace, sampleEntityNames, sampleEntityId, entryCount, datasource, buildIndex };
 DatasourceTest( opts );

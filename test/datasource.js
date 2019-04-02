@@ -6,15 +6,16 @@ const db = require('../src/server/db');
 const { forceDownload, maxSearchSize } = require('./util/param');
 
 function DatasourceTest( opts ) {
-  const { sampleGeneNames, sampleGeneId, datasource, namespace, entryCount, buildIndex } = opts;
+  const { sampleEntityNames, sampleEntityId, datasource, namespace, entryCount, buildIndex } = opts;
 
   const updateTestData = () => datasource.update(forceDownload);
   const clearTestData = () => datasource.clear();
   const removeTestIndex = () => db.deleteIndex();
   const indexExists = () => db.exists();
   const getEntryCount = () => db.count( namespace );
-  const searchGene = geneName => datasource.search( geneName, 0, maxSearchSize );
-  const getGene = id => datasource.get( id );
+  const searchEntity = entityName => datasource.search( entityName, 0, maxSearchSize );
+  const getEntity = id => datasource.get( id );
+  const getEntityId = e => _.get( e, 'id' );
 
 
   describe(`Update Data ${namespace}`, function(){
@@ -63,43 +64,43 @@ function DatasourceTest( opts ) {
       after(removeTestIndex);
     }
 
-    it(`search genes ${namespace}`, function( done ){
+    it(`search entities ${namespace}`, function( done ){
       let promises = [];
 
-      sampleGeneNames.forEach( geneName => {
-        let lcName = geneName.toLowerCase();
-        let halfLength = Math.ceil( geneName.length / 2 );
-        let halfName = geneName.substring( 0, halfLength );
-        let ucName = geneName.toUpperCase();
+      sampleEntityNames.forEach( entityName => {
+        let lcName = entityName.toLowerCase();
+        let halfLength = Math.ceil( entityName.length / 2 );
+        let halfName = entityName.substring( 0, halfLength );
+        let ucName = entityName.toUpperCase();
 
-        promises.push( searchGene( lcName ), searchGene( halfName ), searchGene( ucName ) );
+        promises.push( searchEntity( lcName ), searchEntity( halfName ), searchEntity( ucName ) );
       } );
 
       Promise.all( promises )
         .should.be.fulfilled
         .then( results => {
-          sampleGeneNames.forEach( ( geneName, i ) => {
+          sampleEntityNames.forEach( ( entityName, i ) => {
             let start = i * 3;
             let lcRes = results[ start ];
             let halfRes = results[ start + 1 ];
             let ucRes = results[ start + 2 ];
 
-            expect(lcRes.length, `some ${geneName} data is found`).to.be.above(0);
+            expect(lcRes.length, `some ${entityName} data is found`).to.be.above(0);
             expect(halfRes, `search results for half substring of it
-              supersets search results for ${geneName}`).to.deep.include.members(lcRes);
-            expect(lcRes, `search is case insensitive for ${geneName}`).to.deep.equal(ucRes);
+              supersets search results for ${entityName}`).to.deep.include.members(lcRes);
+            expect(lcRes, `search is case insensitive for ${entityName}`).to.deep.equal(ucRes);
           } );
         } )
         .then( () => done(), error => done(error) );
     });
 
-    it(`get gene by id ${namespace}`, function( done ){
-      let id = sampleGeneId;
+    it(`get entity by id ${namespace}`, function( done ){
+      let id = sampleEntityId;
 
-      getGene(id).should.be.fulfilled.
+      getEntity(id).should.be.fulfilled.
         then( res => {
-          expect(res.length, 'Get query returns one gene').to.be.equal(1);
-          expect( res[0].id, 'Get query returns the expected gene' ).to.be.equal(id);
+          expect(res, 'Get query returns an entity').to.not.be.equal(null);
+          expect(getEntityId( res ), 'Get query returns the expected entity').to.be.equal(id);
         } )
         .then( () => done(), error => done(error) );
     });

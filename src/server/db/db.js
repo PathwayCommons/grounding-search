@@ -10,6 +10,7 @@ const MIN_GRAM = 1;
 const MAX_GRAM = 45;
 
 const processResult = res => res.hits.hits.map( entry => entry._source );
+const getFirstItem = list => list.length > 0 ? list[ 0 ] : null;
 const search = ( searchkey, searchField, namespace, from, size ) => {
   let client = db.connect();
   let searchParam = { from, size };
@@ -186,7 +187,8 @@ let db = {
   get: function( id, namespace ){
     let size = 1;
     let from = 0;
-    return search( id, ID_FIELD, namespace, from, size );
+    return search( id, ID_FIELD, namespace, from, size )
+      .then( getFirstItem );
   },
   exists: function() {
     let client = this.connect();

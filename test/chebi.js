@@ -28,10 +28,10 @@ const getEntryId = entry => {
 
 const namespace = 'chebi';
 const xmlEntries = buildIndex ? getXmlEntries() : [];
-const sampleGeneId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'CHEBI:53438';
+const sampleEntityId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'CHEBI:53438';
 const entryCount = xmlEntries.length;
-const sampleGeneNames = [ 'iron' ];
+const sampleEntityNames = [ 'iron' ];
 const datasource = chebi;
 
-let opts = { namespace, sampleGeneNames, sampleGeneId, entryCount, datasource, buildIndex };
+let opts = { namespace, sampleEntityNames, sampleEntityId, entryCount, datasource, buildIndex };
 DatasourceTest( opts );

@@ -10,10 +10,11 @@ const updateTestData = () => {
   return guaranteeIndex().then( updateEach );
 };
 
-const searchGene = geneName => aggregate.search( geneName );
-const getGene = geneId => aggregate.get( null, geneId );
+const searchEntity = entityName => aggregate.search( entityName );
+const getEntity = entityId => aggregate.get( null, entityId );
 const removeTestIndex = () => db.deleteIndex();
 const getFirstId = e => _.get( e, [ 0, 'id' ] );
+const getEntityId = e => _.get( e, 'id' );
 
 const SEARCH_OBJECT = Object.freeze({
   // Yang et al. Molecular Cell, Volume 53, Issue 1, 9 January 2014, Pages 88-100
@@ -83,7 +84,7 @@ const SEARCH_OBJECT = Object.freeze({
 });
 
 const ID_LIST = Object.values( SEARCH_OBJECT );
-const GENE_LIST = Object.keys( SEARCH_OBJECT );
+const ENTITY_LIST = Object.keys( SEARCH_OBJECT );
 
 describe('Search and Get Aggregate', function(){
   if ( buildIndex ) {
@@ -91,8 +92,8 @@ describe('Search and Get Aggregate', function(){
     after(removeTestIndex);
   }
 
-  it('search genes aggregate', function( done ){
-    let promises = GENE_LIST.map( searchGene );
+  it('search entities aggregate', function( done ){
+    let promises = ENTITY_LIST.map( searchEntity );
     Promise.all( promises )
       .should.be.fulfilled
       .then( results => {
@@ -101,13 +102,13 @@ describe('Search and Get Aggregate', function(){
       .then( () => done(), error => done(error) );
   });
 
-  it('get gene by id aggregate', function( done ){
-    let promises = ID_LIST.map( getGene );
+  it('get entity by id aggregate', function( done ){
+    let promises = ID_LIST.map( getEntity );
 
     Promise.all( promises )
       .should.be.fulfilled
       .then( results => {
-        expect( results.map( getFirstId ), 'get queries brings the expected genes' ).to.deep.equal( ID_LIST );
+        expect( results.map( getEntityId ), 'get queries brings the expected entities' ).to.deep.equal( ID_LIST );
       } )
       .then( () => done(), error => done(error) );
   });
