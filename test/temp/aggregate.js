@@ -11,7 +11,7 @@ const updateTestData = () => {
 };
 
 const searchGene = geneName => aggregate.search( geneName );
-const getGene = geneId => aggregate.get( geneId );
+const getGene = geneId => aggregate.get( null, geneId );
 const removeTestIndex = () => db.deleteIndex();
 const getFirstId = e => _.get( e, [ 0, 'id' ] );
 
