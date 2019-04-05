@@ -3,8 +3,9 @@ const Benchmark = require('benchmark');
 const suite = new Benchmark.Suite();
 const uniprot = require('../src/server/datasource/uniprot');
 const chebi = require('../src/server/datasource/chebi');
+const ncbi = require('../src/server/datasource/ncbi');
 
-const datasources = { uniprot, chebi }
+const datasources = { uniprot, chebi, ncbi }
 
 function BenchmarkDatasource( datasourceName, list ) {
   const datasource = datasources[ datasourceName ];

@@ -1,0 +1,7 @@
+#tax_id	GeneID	Symbol	LocusTag	Synonyms	dbXrefs	chromosome	map_location	description	type_of_gene	Symbol_from_nomenclature_authority	Full_name_from_nomenclature_authority	Nomenclature_status	Other_designations	Modification_date	Feature_type
+3649	110816216	LOC110816216	-	-	-	Un	-	TP53-regulating kinase	protein-coding	-	-	-	TP53-regulating kinase	20170908	-
+3694	7480688	LOC7480688	POPTR_002G049900v3	-	-	2	-	TP53-regulating kinase	protein-coding	-	-	-	TP53-regulating kinase	20181201	-
+3702	815977	AT2G14880	AT2G14880	T26I20.4|T26I20_4	Araport:AT2G14880|TAIR:AT2G14880	2	-	SWIB/MDM2 domain superfamily protein	protein-coding	-	-	-	SWIB/MDM2 domain superfamily protein	20190222	-
+3702	818127	AT2G35605	AT2G35605	-	Araport:AT2G35605|TAIR:AT2G35605	2	-	SWIB/MDM2 domain superfamily protein	protein-coding	-	-	-	SWIB/MDM2 domain superfamily protein	20190222	-
+9606	7157	TP53	-	BCC7|BMFS5|LFS1|P53|TRP53	MIM:191170|HGNC:HGNC:11998|Ensembl:ENSG00000141510	17	17p13.1	tumor protein p53	protein-coding	TP53	tumor protein p53	O	cellular tumor antigen p53|antigen NY-CO-13|mutant tumor protein 53|p53 tumor suppressor|phosphoprotein p53|transformation-related protein 53|tumor protein 53|tumor supressor p53	20190330	-
+9606	7158	TP53BP1	-	53BP1|TDRD30|p202|p53BP1	MIM:605230|HGNC:HGNC:11999|Ensembl:ENSG00000067369	15	15q15.3	tumor protein p53 binding protein 1	protein-coding	TP53BP1	tumor protein p53 binding protein 1	O	TP53-binding protein 1|p53-binding protein 1|tumor protein 53-binding protein, 1|tumor suppressor p53-binding protein 1	20190319	-

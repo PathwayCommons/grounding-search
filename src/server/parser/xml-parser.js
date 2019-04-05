@@ -7,7 +7,8 @@ function XmlParser(filePath, rootTagName, omitList = [], events) {
 
   let tagStack = [];
   let getTopTag = () => tagStack[tagStack.length - 1];
-  let { onData, onEnd } = events;
+  let onData = events.onData || _.noop;
+  let onEnd = events.onEnd || _.noop;
   let omitSet = new Set( omitList );
 
   const shouldStoreNode = node => {
@@ -58,7 +59,7 @@ function XmlParser(filePath, rootTagName, omitList = [], events) {
     tagStack.pop();
   };
 
-  parser.onend = onEnd || _.noop;
+  parser.onend = onEnd;
 
   let stream = fs.createReadStream(filePath);
 

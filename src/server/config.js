@@ -8,7 +8,9 @@ let defaults = {
   UNIPROT_FILE_NAME: 'uniprot.xml',
   UNIPROT_URL: 'ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz',
   CHEBI_FILE_NAME: 'chebi.owl',
-  CHEBI_URL: 'ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl.gz'
+  CHEBI_URL: 'ftp://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl.gz',
+  NCBI_FILE_NAME: 'ncbi',
+  NCBI_URL: 'ftp://ftp.ncbi.nih.gov/gene/DATA/gene_info.gz'
 };
 
 let envVars = _.pick( process.env, Object.keys( defaults ) );

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const uniprot = require('../datasource/uniprot');
 const chebi = require('../datasource/chebi');
+const ncbi = require('../datasource/ncbi');
 const aggregate = require('../datasource/aggregate');
 
 const handleReq = (source, req, res) => {
@@ -59,6 +60,30 @@ router.post('/uniprot', function(req, res){
 // e.g. POST /chebi { q: 'iron' }
 router.post('/chebi', function(req, res){
   handleReq(chebi, req, res);
+});
+
+/**
+ * @swagger
+ * /ncbi:
+ *   post:
+ *     description: ncbi search service
+ *     tags:
+ *       - grounding-search
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: q
+ *         description: Search text
+ *         in: formData
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: NCBI get query results
+ */
+// e.g. POST /ncbi { q: 'iron' }
+router.post('/ncbi', function(req, res){
+  handleReq(ncbi, req, res);
 });
 
 /**

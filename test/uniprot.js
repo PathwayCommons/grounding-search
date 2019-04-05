@@ -7,14 +7,26 @@ const DatasourceTest = require('./datasource');
 const { uniprot } = require('./util/datasource');
 const { buildIndex } = require('./util/param');
 const { UNIPROT_FILE_NAME, INPUT_PATH } = require('../src/server/config');
+const { isSupportedOrganism } = require('../src/server/datasource/organisms');
 
 const getXmlEntries = () => {
   let filePath = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
   let xml = fs.readFileSync( filePath );
   let json = xmljs.xml2js(xml, {compact: true});
-  let entries = _.get( json, ['uniprot', 'entry'] );
+  let entries = _.get( json, ['uniprot', 'entry'] )
+    .filter( hasSupportedOrganism );
 
   return entries;
+};
+
+const hasSupportedOrganism = entry => {
+  let orgId = getEntryOrg( entry );
+  return isSupportedOrganism( orgId );
+};
+
+const getEntryOrg = entry => {
+  let org = _.get( entry, ['organism', 'dbReference', '_attributes', 'id'] );
+  return org;
 };
 
 const getEntryId = entry => {
