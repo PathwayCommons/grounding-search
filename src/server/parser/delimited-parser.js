@@ -17,12 +17,12 @@ function DelimitedParser( filePath, events, hasHeaderLine ){
     let line = decoder.write(chunk);
 
     if ( firstLine ) {
+      firstLine = false;
+
       if ( hasHeaderLine ) {
         onHeader( line );
+        return;
       }
-
-      firstLine = false;
-      return;
     }
 
     onData( line );
