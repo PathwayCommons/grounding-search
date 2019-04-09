@@ -30,7 +30,8 @@ const getEntryOrg = entry => {
 };
 
 const getEntryId = entry => {
-  let id = _.get( entry, [ 'accession', 0, '_text' ] );
+  let id = _.get( entry, [ 'accession', '_text' ] )
+    || _.get( entry, [ 'accession', 0, '_text' ] );
   return id;
 };
 
@@ -38,7 +39,7 @@ const namespace = 'uniprot';
 const xmlEntries = buildIndex ? getXmlEntries() : [];
 const sampleEntityId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'Q7LG56';
 const entryCount = xmlEntries.length;
-const sampleEntityNames = [ 'tp53', 'mdm2' ];
+const sampleEntityNames = [ 'plag1', 'camkk2' ];
 const datasource = uniprot;
 
 let opts = { namespace, sampleEntityNames, sampleEntityId, entryCount, datasource, buildIndex };

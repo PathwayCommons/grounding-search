@@ -54,7 +54,7 @@ const namespace = 'ncbi';
 const entryLines = buildIndex ? readEntryLines() : [];
 const sampleEntityId = buildIndex ? getEntryId( entryLines[ 0 ] ) : '7157';
 const entryCount = entryLines.length;
-const sampleEntityNames = [ 'tp53', 'mdm2' ];
+const sampleEntityNames = [ 'plag1', 'camkk2' ];
 const datasource = ncbi;
 
 let opts = { namespace, sampleEntityNames, sampleEntityId, entryCount, datasource, buildIndex };

@@ -30,7 +30,7 @@ const namespace = 'chebi';
 const xmlEntries = buildIndex ? getXmlEntries() : [];
 const sampleEntityId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'CHEBI:53438';
 const entryCount = xmlEntries.length;
-const sampleEntityNames = [ 'iron' ];
+const sampleEntityNames = [ 'keto' ];
 const datasource = chebi;
 
 let opts = { namespace, sampleEntityNames, sampleEntityId, entryCount, datasource, buildIndex };

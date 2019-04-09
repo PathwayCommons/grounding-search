@@ -33,6 +33,8 @@ The following environment variables can be used to configure the server:
 - `npm run clear` : clear all data
 - `npm run clear:source` : clear data for `source` (i.e. `uniprot`, ...)
 - `npm run update` : update all data
+- `npm run test:inputgen` : generate input test file for each `source` (i.e. `uniprot`, ...)
+- `npm run test:inputgen` : generate input test file for `source` (i.e. `uniprot`, ...)
 
 ## Running via Docker
 
@@ -80,4 +82,3 @@ All files `/test` will be run by [Mocha](https://mochajs.org/).  You can `npm te
   1. For a breaking API change, run `npm version major.`
   1. For a specific version number (e.g. 1.2.3), run `npm version 1.2.3`.
 1. Push the release: `git push && git push --tags`
-
