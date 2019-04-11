@@ -83,19 +83,42 @@ const parseXml = (filePath, onData, onEnd) => {
 
 const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseXml, processEntry, includeEntry);
 
+/**
+ * Update the 'uniprot' entitites from the input file.
+ * @param {boolean} [forceIfFileExists] Whether to dowload the input source file for 'uniprot' 
+ * even if a version of it already exists.
+ * @returns {Promise}
+ */
 const update = function(forceIfFileExists){
   return download(UNIPROT_URL, UNIPROT_FILE_NAME, forceIfFileExists).then(updateFromFile);
 };
 
+/**
+ * Clear any entity whose namespace is 'uniprot'.
+ * @returns {Promise} 
+ */
 const clear = function(){
   const refreshIndex = () => db.refreshIndex();
   return db.clearNamespace(ENTRY_NS).then( refreshIndex );
 };
 
+/**
+ * Retrieve the entities matching best with the search string.
+ * @param {string} searchString Key string for searching the best matching entities.
+ * @param {string} [from] Offset from the first result to fetch.
+ * @param {number} [size] Maximum amount of hits to be returned.
+ * @returns {Promise} Promise object represents the array of best matching entities from 'uniprot'.
+ */
 const search = function(searchString, from, size){
   return db.search( searchString, ENTRY_NS, from, size );
 };
 
+/**
+ * Retrieve the entity that has the given id.
+ * @param {string} id The id of entity to search
+ * @returns {Promise} Promise objects represents the entity with the given id from 'uniprot',
+ * if there is no such entity it represents null.
+ */
 const get = function(id){
   return db.get( id, ENTRY_NS );
 };

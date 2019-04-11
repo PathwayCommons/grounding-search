@@ -26,6 +26,10 @@ const search = ( searchkey, searchField, namespace, from, size ) => {
 };
 
 let db = {
+  /**
+   * Connects the elasticsearch, if it is not connected already, and returns the client.
+   * @returns {elasticsearch.Client} Singleton elasticsearch client.
+   */
   connect: function(){
     let client = this.client;
 
@@ -38,20 +42,36 @@ let db = {
 
     return client;
   },
+  /**
+   * Refresh the elasticsearch index dedicated for the app.
+   * @returns {Promise}
+   */
   refreshIndex: function(){
     let client = this.connect();
     return client.indices.refresh( { index: INDEX } );
   },
+  /**
+   * Disable autorefreshing the index dedicated for the app.
+   * @returns {Promise}
+   */
   disableAutoRefresh: function(){
     let client = this.connect();
     let body = { refresh_interval: '-1' };
     return client.indices.putSettings( { index: INDEX, body } );
   },
+  /**
+   * Enable autorefreshing the index dedicated for the app.
+   * @returns {Promise}
+   */
   enableAutoRefresh: function(){
     let client = this.connect();
     let body = { refresh_interval: null };
     return client.indices.putSettings( { index: INDEX, body } );
   },
+  /**
+   * Create an elasticsearch index for the app.
+   * @returns {Promise}
+   */
   createIndex: function(){
     let client = this.connect();
 
@@ -136,16 +156,29 @@ let db = {
 
     return client.indices.create( { index: INDEX, body: { mappings, settings } } );
   },
+  /**
+   * Create elasticsearch index for the app if it is not already existing.
+   * @returns {Promise} 
+   */
   guaranteeIndex: function(){
     let indexExists = () => this.exists();
     let create = () => this.createIndex();
 
     return indexExists().then( exists => exists ? Promise.resolve() : create() );
   },
+  /**
+   * Delete the elasticsearch index dedicated for the app.
+   * @returns {Promise}
+   */
   deleteIndex: function(){
     let client = this.connect();
     return client.indices.delete( { index: INDEX } );
   },
+  /**
+   * Delete the entries of given namespace.
+   * @param {string} namespace The namespace to clear
+   * @returns {Promise} 
+   */
   clearNamespace: function( namespace ){
     let client = this.connect();
 
@@ -154,6 +187,11 @@ let db = {
 
     return client.deleteByQuery( { index: INDEX, body } );
   },
+  /**
+   * Recreate the elasticsearch index dedicated for the app. Deletes the index first if
+   * it already exists.
+   * @return {Promise}
+   */
   recreateIndex: function(){
     this.connect();
     let deleteIndex = () => this.deleteIndex();
@@ -164,8 +202,15 @@ let db = {
       .then( exists => exists ? deleteIndex() : Promise.resolve() )
       .then( createIndex );
   },
-  // 'refresh' parameter should be used carefully. Refreshing after every insert would decrease the performance.
-  // See: https://www.elastic.co/guide/en/elasticsearch/guide/current/near-real-time.html#refresh-api
+  /**
+   * Insert the given entries to elasticsearch index dedicated for the app as a chunk.
+   * @param {array} entries Entries to be inserted.
+   * @param {boolean} [refresh=false] Whether to refresh the index after the operation is completed.
+   * This parameter should be used carefully because refreshing after every insert would decrease 
+   * the performance. 
+   * See: https://www.elastic.co/guide/en/elasticsearch/guide/current/near-real-time.html#refresh-api
+   * @returns {Promise}
+   */
   insertEntries: function( entries, refresh = false ){
     let client = this.connect();
     let body = [];
@@ -181,19 +226,43 @@ let db = {
 
     return client.bulk( { body, refresh } );
   },
+  /**
+   * Retrieve the entities matching best with the search string within maximum search size.
+   * @param {string} searchkey Key string for searching the best matching entities.
+   * @param {string} [namespace=undefined] Namespace to seek the entities e.g. 'uniprot', 'chebi', ...
+   * @param {string} [from=0] Offset from the first result to fetch.
+   * @param {string} [size=50] Maximum amount of hits to be returned.
+   * @returns {Promise} Promise object represents the array of best matching entities.
+   */
   search: function( searchkey, namespace, from = 0, size = 50 ){
     return search( searchkey, META_SEARCH_FIELD, namespace, from, size );
   },
+  /**
+   * Retrieve the entity that has the given id.
+   * @param {string} id The id of entity to search
+   * @param {string} [namespace=undefined] Namespace to seek the entity e.g. 'uniprot', 'chebi', ...
+   * @returns {Promise} Promise objects represents the entity with the given id from the given namespace, 
+   * if there is no such entity it represents null.
+   */
   get: function( id, namespace ){
     let size = 1;
     let from = 0;
     return search( id, ID_FIELD, namespace, from, size )
       .then( getFirstItem );
   },
+  /**
+   * Check if the elasticsearch index dedicated for the app exists.
+   * @returns {Promise} Promise objects represents whether the index exists.
+   */
   exists: function() {
     let client = this.connect();
     return client.indices.exists( { index: INDEX } );
   },
+  /**
+   * Returns the number of entities in a namespace.
+   * @param {string} namespace Namespace to count number of entities.
+   * @return {Promise} Promise objects represents the number of entities.
+   */
   count: function(namespace) {
     let client = this.connect();
     let body = {};

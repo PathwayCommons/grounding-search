@@ -55,6 +55,14 @@ const ftpDownload = (url, outFileName) => {
   });
 };
 
+/**
+ * Download a file to the input folder.
+ * @param {string} url Url that hosts the file to download.
+ * @param {string} outFileName Name of output file after the download.
+ * @param {boolean} [forceIfFileExists=false] Whether to download output file and replace it if a file
+ * with the same name already exists.
+ * @returns {Promise}
+ */
 const dl = (url, outFileName, forceIfFileExists = false) => {
   const parsedUrl = new URL(url);
 

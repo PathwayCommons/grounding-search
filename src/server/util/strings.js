@@ -1,5 +1,10 @@
-// returns the nth node in str, where the nodes are splited by the delimiter,
-// assuming that no adjacent occurance of the delimiter exists
+/**
+ * Returns the nth node in str, where the nodes are splited by the delimiter,
+ * assuming that no adjacent occurance of the delimiter exists
+ * @param {string} str String to seek the nth node.
+ * @param {string} delimiter Delimiter that seperates the nodes.
+ * @param {number} n Index of node to seek.
+ */
 const nthStrNode = ( str, delimiter, n ) => {
   let i = 0;
   let start = 0;

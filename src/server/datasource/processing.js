@@ -15,6 +15,15 @@ const processChunk = (chunk, processEntry) => {
   return task(chunk).promise();
 };
 
+/**
+ * Update entries of a namespace based on an input file.
+ * @param {string} ns The namespace whose entries will be updated.
+ * @param {string} filePath Path of the file to read the entries from.
+ * @param {function} parse  A function that will be called to parse the data file.
+ * @param {function} processEntry A function that will be called to process entry data 
+ * before inserting it to database.
+ * @param {function} [includeEntry = () => true] A function called to decide whether to include or omit an entry.
+ */
 const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includeEntry = () => true){
   return new Promise( resolve => {
     let entries = [];

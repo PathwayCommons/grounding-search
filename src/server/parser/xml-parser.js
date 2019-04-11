@@ -2,6 +2,17 @@ let saxes = require('saxes');
 let fs = require('fs');
 let _ = require('lodash');
 
+/**
+ * Read xml file stream and consume input events as needed.
+ * @param {string} filePath Path to the input file.
+ * @param {string} rootTagName The name of the root tag for creating json objects.
+ * @param {array} omitList The list of xml tags to omit.
+ * @param {object} events Object that wraps the event functions to consume.
+ * @param {Function} [events.onData] A function to be consumed with a parameter 
+ * representing a data json as they are obtained.
+ * @param {Function} [events.onEnd] A function to be consumed when the parsing is
+ * ended.
+ */
 function XmlParser(filePath, rootTagName, omitList = [], events) {
   let parser = new saxes.SaxesParser();
 
