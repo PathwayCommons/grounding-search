@@ -25,6 +25,9 @@ const search = ( searchkey, searchField, namespace, from, size ) => {
     .then( processResult );
 };
 
+/**
+ * @exports db
+ */
 let db = {
   /**
    * Connects the elasticsearch, if it is not connected already, and returns the client.
