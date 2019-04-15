@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const elasticsearch = require('elasticsearch');
-const { INDEX } = require('../config');
+const { INDEX, MAX_SEARCH_ES } = require('../config');
 
 const TYPE = 'entry';
 const META_SEARCH_FIELD = 'meta_search';
@@ -161,7 +161,7 @@ let db = {
   },
   /**
    * Create elasticsearch index for the app if it is not already existing.
-   * @returns {Promise} 
+   * @returns {Promise}
    */
   guaranteeIndex: function(){
     let indexExists = () => this.exists();
@@ -180,7 +180,7 @@ let db = {
   /**
    * Delete the entries of given namespace.
    * @param {string} namespace The namespace to clear
-   * @returns {Promise} 
+   * @returns {Promise}
    */
   clearNamespace: function( namespace ){
     let client = this.connect();
@@ -209,8 +209,8 @@ let db = {
    * Insert the given entries to elasticsearch index dedicated for the app as a chunk.
    * @param {array} entries Entries to be inserted.
    * @param {boolean} [refresh=false] Whether to refresh the index after the operation is completed.
-   * This parameter should be used carefully because refreshing after every insert would decrease 
-   * the performance. 
+   * This parameter should be used carefully because refreshing after every insert would decrease
+   * the performance.
    * See: https://www.elastic.co/guide/en/elasticsearch/guide/current/near-real-time.html#refresh-api
    * @returns {Promise}
    */
@@ -237,14 +237,14 @@ let db = {
    * @param {string} [size=50] Maximum amount of hits to be returned.
    * @returns {Promise} Promise object represents the array of best matching entities.
    */
-  search: function( searchkey, namespace, from = 0, size = 50 ){
+  search: function( searchkey, namespace, from = 0, size = MAX_SEARCH_ES ){
     return search( searchkey, META_SEARCH_FIELD, namespace, from, size );
   },
   /**
    * Retrieve the entity that has the given id.
    * @param {string} id The id of entity to search
    * @param {string} [namespace=undefined] Namespace to seek the entity e.g. 'uniprot', 'chebi', ...
-   * @returns {Promise} Promise objects represents the entity with the given id from the given namespace, 
+   * @returns {Promise} Promise objects represents the entity with the given id from the given namespace,
    * if there is no such entity it represents null.
    */
   get: function( id, namespace ){

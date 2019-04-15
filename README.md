@@ -15,6 +15,8 @@ The following environment variables can be used to configure the server:
 
 - `NODE_ENV` : the environment mode, either `production` or `development` (default)
 - `PORT` : the port on which the server runs (default 3000)
+- `MAX_SEARCH_ES` : the maximum number of results to return from elasticsearch
+- `MAX_SEARCH_WS` : the maximum number of results to return in json from the webservice
 - `INPUT_PATH` : the path to the input folder where data files are located
 - `INDEX` : the elasticsearch index name to store data from all data sources
 - `UNIPROT_FILE_NAME` : name of the file where uniprot data will be read from
