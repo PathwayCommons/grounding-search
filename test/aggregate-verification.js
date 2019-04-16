@@ -1,4 +1,4 @@
-const { expect, should } = require('./util/chai');
+const { expect } = require('./util/chai');
 const { aggregate, applyToEachDS } = require('./util/datasource');
 const { forceDownload, buildIndex } = require('./util/param');
 const db = require('../src/server/db');

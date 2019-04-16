@@ -1,6 +1,4 @@
-const { expect, should } = require('./util/chai');
-const xmljs = require('xml-js');
-const fs = require('fs');
+const { expect } = require('./util/chai');
 const _ = require('lodash');
 const db = require('../src/server/db');
 const { forceDownload, maxSearchSize } = require('./util/param');

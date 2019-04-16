@@ -1,7 +1,5 @@
-const xmljs = require('xml-js');
 const path = require('path');
 const fs = require('fs');
-const _ = require('lodash');
 const StringDecoder = require('string_decoder').StringDecoder;
 
 const DatasourceTest = require('./datasource');

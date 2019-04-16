@@ -1,9 +1,8 @@
-const { expect, should } = require('./util/chai');
-const { aggregate, applyToEachDS , datasources, uniprot, chebi} = require('./util/datasource');
-const { forceDownload, maxSearchSize, buildIndex } = require('./util/param');
+const { expect } = require('./util/chai');
+const { aggregate, applyToEachDS } = require('./util/datasource');
+const { forceDownload, buildIndex } = require('./util/param');
 const { SEARCH_OBJECT } = require('./util/search');
 const db = require('../src/server/db');
-const _ = require('lodash');
 
 const updateTestData = () => {
   let guaranteeIndex = () => db.guaranteeIndex();
@@ -14,12 +13,8 @@ const updateTestData = () => {
 const searchEnt = name => aggregate.search( name );
 const getEnt = (ns, id) => aggregate.get( ns, id );
 const removeTestIndex = () => db.deleteIndex();
-const getFirstId = e => _.get( e, [ 0, 'id' ] );
 
-const GROUNDING_LIST = Object.values( SEARCH_OBJECT );
 const GENE_LIST = Object.keys( SEARCH_OBJECT );
-
-const groundingSpecified = name => SEARCH_OBJECT[name] != null;
 
 describe('Search and Get Aggregate', function(){
   if ( buildIndex ) {
