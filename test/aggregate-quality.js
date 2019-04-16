@@ -1,8 +1,8 @@
-const { expect, should } = require('../util/chai');
-const { aggregate, applyToEachDS , datasources, uniprot, chebi} = require('../util/datasource');
-const { forceDownload, maxSearchSize, buildIndex } = require('../util/param');
-const { SEARCH_OBJECT } = require('../util/search');
-const db = require('../../src/server/db');
+const { expect, should } = require('./util/chai');
+const { aggregate, applyToEachDS , datasources, uniprot, chebi} = require('./util/datasource');
+const { forceDownload, maxSearchSize, buildIndex } = require('./util/param');
+const { SEARCH_OBJECT } = require('./util/search');
+const db = require('../src/server/db');
 const _ = require('lodash');
 
 const updateTestData = () => {
