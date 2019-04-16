@@ -3,7 +3,7 @@ const _ = require('lodash');
 
 let defaults = {
   PORT: 3000,
-  MAX_SEARCH_ES: 100,
+  MAX_SEARCH_ES: 1000,
   MAX_SEARCH_WS: 100, // reduce this number later (probably 10 is ok)
   INDEX: 'groundingsearch',
   INPUT_PATH: 'input',
