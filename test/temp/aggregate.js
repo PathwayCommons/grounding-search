@@ -37,8 +37,11 @@ describe('Search and Get Aggregate', function(){
     it(`search ${name}`, function(){
       return ( searchEnt(name)
         .then( results => {
+          expect(results).to.exist;
+
           let firstResult = results[0];
 
+          expect(firstResult).to.exist;
           expect(firstResult.namespace, 'namespace').to.equal(namespace);
           expect(firstResult.id, 'id').to.equal(id);
         } )
@@ -48,6 +51,7 @@ describe('Search and Get Aggregate', function(){
     it(`get ${name}`, function(){
       return ( getEnt(namespace, id)
         .then( result => {
+          expect(result, 'result').to.exist;
           expect(result.namespace, 'namespace').to.equal(namespace);
           expect(result.id, 'id').to.equal(id);
         } )
