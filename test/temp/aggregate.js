@@ -46,7 +46,7 @@ describe('Search and Get Aggregate', function(){
     });
 
     it(`get ${name}`, function(){
-      return ( getEnt(id, namespace)
+      return ( getEnt(namespace, id)
         .then( result => {
           expect(result.namespace, 'namespace').to.equal(namespace);
           expect(result.id, 'id').to.equal(id);
