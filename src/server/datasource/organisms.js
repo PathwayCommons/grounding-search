@@ -13,15 +13,13 @@ const SORTED_MAIN_ORGANISMS = [
   '7955' // d. rerio
 ];
 
-const SUPPORTED_ORGANISMS = new Set(SORTED_MAIN_ORGANISMS);
-
 /**
  * Get whether an organism is supported by the system and should be shown in search
  * results.
  * @param {string} id The organism taxon ID
  */
-const isSupportedOrganism = id => {
-  return SUPPORTED_ORGANISMS.has( id ); // TODO should eventually just allow all
+const isSupportedOrganism = id => { // eslint-disable-line no-unused-vars
+  return true; // all organisms are supported
 };
 
 /**
