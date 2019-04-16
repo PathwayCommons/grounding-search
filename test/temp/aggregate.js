@@ -19,14 +19,19 @@ const getFirstId = e => _.get( e, [ 0, 'id' ] );
 const GROUNDING_LIST = Object.values( SEARCH_OBJECT );
 const GENE_LIST = Object.keys( SEARCH_OBJECT );
 
+const groundingSpecified = name => SEARCH_OBJECT[name] != null;
+
 describe('Search and Get Aggregate', function(){
   if ( buildIndex ) {
     before(updateTestData);
     after(removeTestIndex);
   }
 
-  GENE_LIST.forEach( (name, i) => {
-    const expectedGrounding = GROUNDING_LIST[i] || {}; // could be null b/c we haven't specified groundings yet...
+  GENE_LIST.forEach( name => {
+    const expectedGrounding = SEARCH_OBJECT[name]; // could be null b/c we haven't specified groundings yet...
+
+    if( !expectedGrounding ){ return; } // skip if no grounding specified
+
     const { id, namespace } = expectedGrounding;
 
     it(`search ${name}`, function(){
