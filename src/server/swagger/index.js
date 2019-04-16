@@ -32,4 +32,4 @@ export default function( port ) {
   router.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
   return router;
-};
+}
