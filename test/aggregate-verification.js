@@ -1,8 +1,8 @@
-const { expect, should } = require('./util/chai');
-const { aggregate, applyToEachDS } = require('./util/datasource');
-const { forceDownload, buildIndex } = require('./util/param');
-const db = require('../src/server/db');
-const _ = require('lodash');
+import { expect, should } from './util/chai';
+import { aggregate, applyToEachDS } from './util/datasource';
+import { forceDownload, buildIndex } from './util/param';
+import { db } from '../src/server/db';
+import _ from 'lodash';
 
 const sampleEntityNames = [ 'tp53', 'mdm2', 'iron' ];
 const sampleEntityIds = [ 'CHEBI:53438', 'Q7LG56' ];

@@ -1,4 +1,1 @@
-module.exports = Object.assign(
-  {},
-  require('./strings')
-);
+export * from './strings';

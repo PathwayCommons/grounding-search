@@ -1,6 +1,7 @@
-const _ = require('lodash');
-const { getDefaultOrganismIndex } = require('./datasource/organisms');
-const dice = require('dice-coefficient'); // sorensen dice coeff
+/** @module rank */
+import _ from 'lodash';
+import { getDefaultOrganismIndex } from './datasource/organisms';
+import dice from 'dice-coefficient'; // sorensen dice coeff
 
 const DISTANCE_FIELDS = ['name', 'synonyms']; // TODO should share list with db.js
 
@@ -91,4 +92,4 @@ const rank = (ents, searchTerm, organismCounts = {}) => {
 };
 
 
-module.exports = { rank };
+export { rank };

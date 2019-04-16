@@ -1,6 +1,8 @@
-let saxes = require('saxes');
-let fs = require('fs');
-let _ = require('lodash');
+/** @module xml-parser */
+
+import saxes from 'saxes';
+import fs from 'fs';
+import _ from 'lodash';
 
 /**
  * Read xml file stream and consume input events as needed.
@@ -85,4 +87,4 @@ function XmlParser(filePath, rootTagName, omitList = [], events) {
   return parser;
 }
 
-module.exports = XmlParser;
+export default XmlParser;

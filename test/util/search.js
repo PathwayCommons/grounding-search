@@ -61,4 +61,4 @@ const SEARCH_OBJECT = Object.freeze({
   'Twist': { namespace: 'uniprot', id: 'Q15672' }
 });
 
-module.exports = { SEARCH_OBJECT };
+export { SEARCH_OBJECT };

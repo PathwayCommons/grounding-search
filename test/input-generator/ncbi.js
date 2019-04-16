@@ -1,7 +1,7 @@
-const { getEntries } = require('./db');
-const fs = require('fs');
-const path = require('path');
-const _ = require('lodash');
+import { getEntries } from './db';
+import fs from 'fs';
+import path from 'path';
+import _ from 'lodash';
 
 const NODE_DELIMITER = '\t';
 const LINE_DELIMITER = '\n';

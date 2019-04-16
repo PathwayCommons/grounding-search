@@ -1,7 +1,7 @@
-const xmlBuilder = require('xmlbuilder');
-const { getEntries } = require('./db');
-const fs = require('fs');
-const path = require('path');
+import xmlBuilder from 'xmlbuilder';
+import { getEntries } from './db';
+import fs from 'fs';
+import path from 'path';
 
 const NS = 'chebi';
 const FILE_PATH = path.join( 'test', 'input', 'chebi.owl' );

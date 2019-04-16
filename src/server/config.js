@@ -16,8 +16,8 @@ let defaults = {
 let envVars = _.pick( process.env, Object.keys( defaults ) );
 
 
-let conf = Object.assign( {}, defaults, envVars );
+let config = Object.assign( {}, defaults, envVars );
 
-Object.freeze( conf );
+Object.freeze( config );
 
-module.exports = conf;
+export { config };

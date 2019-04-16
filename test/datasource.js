@@ -1,9 +1,9 @@
-const { expect, should } = require('./util/chai');
-const xmljs = require('xml-js');
-const fs = require('fs');
-const _ = require('lodash');
-const db = require('../src/server/db');
-const { forceDownload, maxSearchSize } = require('./util/param');
+import { expect, should } from './util/chai';
+import xmljs from 'xml-js';
+import fs from 'fs';
+import _ from 'lodash';
+import { db } from '../src/server/db';
+import { forceDownload, maxSearchSize } from './util/param';
 
 function DatasourceTest( opts ) {
   const { sampleEntityNames, sampleEntityId, datasource, namespace, entryCount, buildIndex } = opts;
@@ -107,4 +107,4 @@ function DatasourceTest( opts ) {
   });
 }
 
-module.exports = DatasourceTest;
+export default DatasourceTest;

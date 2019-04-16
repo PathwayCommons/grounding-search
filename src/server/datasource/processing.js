@@ -1,6 +1,8 @@
-const Future = require('fibers/future');
-const db = require('../db');
-const logger = require('../logger');
+/** @module processing */
+import Future from 'fibers/future';
+
+import { db } from '../db';
+import logger from '../logger';
 
 const ENTRIES_CHUNK_SIZE = 100;
 
@@ -83,4 +85,4 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
   } );
 };
 
-module.exports = { updateEntriesFromFile };
+export { updateEntriesFromFile };

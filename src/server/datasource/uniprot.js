@@ -1,12 +1,16 @@
-const XmlParser = require('../parser/xml-parser');
-const _ = require('lodash');
-const { INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } = require('../config');
-const { isSupportedOrganism } = require('./organisms');
-const db = require('../db');
-const path = require('path');
-const download = require('./download');
-const { updateEntriesFromFile } = require('./processing');
+/** @module uniprot */
 
+import path from 'path';
+import _ from 'lodash';
+
+import { config } from '../config';
+import { db } from '../db';
+import XmlParser from '../parser/xml-parser';
+import download from './download';
+import { isSupportedOrganism } from './organisms';
+import { updateEntriesFromFile } from './processing';
+
+const { INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } = config;
 const FILE_PATH = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
 const ENTRY_NS = 'uniprot';
 const ENTRY_TYPE = 'protein';
@@ -123,4 +127,4 @@ const get = function(id){
   return db.get( id, ENTRY_NS );
 };
 
-module.exports = { update, clear, search, get };
+export const uniprot = { update, clear, search, get };

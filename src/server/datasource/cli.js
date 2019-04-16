@@ -1,10 +1,11 @@
 // cli for updating/clearing a datasource
 
-const process = require('process');
-const logger = require('../logger');
-const uniprot = require('./uniprot');
-const chebi = require('./chebi');
-const ncbi = require('./ncbi');
+import process from 'process';
+import logger from '../logger';
+import { uniprot } from './uniprot';
+import { chebi } from './chebi';
+import { ncbi } from './ncbi';
+
 const sources = { uniprot, chebi, ncbi };
 const op = process.argv[2];
 const passedSourceId = process.argv[3];

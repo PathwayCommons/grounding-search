@@ -1,4 +1,5 @@
-const db = require('../db');
+/** @module aggregate */
+import { db } from '../db';
 
 /**
  * Retrieve the entities matching best with the search string.
@@ -23,4 +24,4 @@ const get = function(namespace, id){
   return db.get(id, namespace);
 };
 
-module.exports = { search, get };
+export const aggregate = { search, get };

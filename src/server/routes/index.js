@@ -1,9 +1,10 @@
-const express = require('express');
+import express from 'express';
+import { uniprot } from '../datasource/uniprot';
+import { chebi } from '../datasource/chebi';
+import { ncbi } from '../datasource/ncbi';
+import { aggregate } from '../datasource/aggregate';
+
 const router = express.Router();
-const uniprot = require('../datasource/uniprot');
-const chebi = require('../datasource/chebi');
-const ncbi = require('../datasource/ncbi');
-const aggregate = require('../datasource/aggregate');
 
 const handleReq = (source, req, res) => {
   source.search(req.body.q).then(searchRes => res.json(searchRes));
@@ -110,4 +111,4 @@ router.post('/search', function(req, res){
   handleReq(aggregate, req, res);
 });
 
-module.exports = router;
+export default router;

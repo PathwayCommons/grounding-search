@@ -1,9 +1,10 @@
-const chai = require('chai')
-  , expect = chai.expect
-  , should = chai.should();
-const chaiAsPromised = require('chai-as-promised');
+import chai from 'chai';
+import chaiAsPromised from 'chai-as-promised';
+
+const expect = chai.expect;
+const should = chai.should();
 
 // register chai plugin for promises
 chai.use( chaiAsPromised );
 
-module.exports = { expect, should };
+export { expect, should };

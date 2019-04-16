@@ -1,7 +1,7 @@
-const aggregate = require('../../src/server/datasource/aggregate');
-const uniprot = require('../../src/server/datasource/uniprot');
-const chebi = require('../../src/server/datasource/chebi');
-const ncbi = require('../../src/server/datasource/ncbi');
+import { aggregate } from '../../src/server/datasource/aggregate';
+import { uniprot } from '../../src/server/datasource/uniprot';
+import { chebi } from '../../src/server/datasource/chebi';
+import { ncbi } from '../../src/server/datasource/ncbi';
 
 const datasources = [ uniprot, chebi, ncbi ];
 
@@ -10,4 +10,4 @@ const applyToEachDS = op => {
   return Promise.all( promises );
 };
 
-module.exports = { aggregate, uniprot, chebi, ncbi, datasources, applyToEachDS };
+export { aggregate, uniprot, chebi, ncbi, datasources, applyToEachDS };

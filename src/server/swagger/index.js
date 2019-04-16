@@ -1,9 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const swaggerJSDoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
+import express from 'express';
+import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
 
-module.exports = function( port ) {
+const router = express.Router();
+
+export default function( port ) {
   const options = {
     swaggerDefinition: {
       info: {

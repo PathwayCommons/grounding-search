@@ -1,3 +1,4 @@
-let db = require('./db');
+// import db from './db';
 
-module.exports = db;
+// export default db;
+export * from './db';

@@ -1,3 +1,4 @@
+/** @module server/util/strings */
 /**
  * Returns the nth node in str, where the nodes are splited by the delimiter,
  * assuming that no adjacent occurance of the delimiter exists
@@ -24,4 +25,4 @@ const nthStrNode = ( str, delimiter, n ) => {
   return node;
 };
 
-module.exports = { nthStrNode };
+export { nthStrNode };

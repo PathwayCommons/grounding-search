@@ -1,11 +1,16 @@
-const XmlParser = require('../parser/xml-parser');
-const _ = require('lodash');
-const { INPUT_PATH, CHEBI_FILE_NAME, CHEBI_URL } = require('../config');
-const db = require('../db');
-const path = require('path');
-const download = require('./download');
-const { updateEntriesFromFile } = require('./processing');
+/** @module chebi */
 
+import path from 'path';
+import _ from 'lodash';
+
+import { config } from '../config';
+import { db } from '../db';
+import XmlParser from '../parser/xml-parser';
+
+import download from './download';
+import { updateEntriesFromFile }  from './processing';
+
+const { INPUT_PATH, CHEBI_FILE_NAME, CHEBI_URL } = config;
 const FILE_PATH = path.join(INPUT_PATH, CHEBI_FILE_NAME);
 const ENTRY_NS = 'chebi';
 const ENTRY_TYPE = 'chemical';
@@ -128,4 +133,4 @@ const get = function(id){
   return db.get( id, ENTRY_NS );
 };
 
-module.exports = { update, clear, search, get };
+export const chebi = { update, clear, search, get };

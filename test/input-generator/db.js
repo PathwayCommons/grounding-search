@@ -1,6 +1,6 @@
-const { SEARCH_OBJECT } = require('../util/search');
-const db = require('../../src/server/db');
-const _ = require('lodash');
+import { SEARCH_OBJECT } from '../util/search';
+import { db } from '../../src/server/db';
+import _ from 'lodash';
 
 const SEARCH_SIZE = 5;
 const SEARCH_FROM = 0;
@@ -49,4 +49,4 @@ function getEntries( namespace ) {
     .then( addMissingEntries );
 }
 
-module.exports = { getEntries };
+export { getEntries };

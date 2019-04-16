@@ -1,3 +1,5 @@
+/** @module organism */
+
 /**
  * This ordering determines the default sorting of results by organism.
  */
@@ -31,4 +33,4 @@ const isSupportedOrganism = id => {
  */
 const getDefaultOrganismIndex = id => SORTED_MAIN_ORGANISMS.indexOf('' + id);
 
-module.exports = { isSupportedOrganism, getDefaultOrganismIndex };
+export { isSupportedOrganism, getDefaultOrganismIndex };

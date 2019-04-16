@@ -1,9 +1,9 @@
-const { expect, should } = require('../util/chai');
-const { aggregate, applyToEachDS , datasources, uniprot, chebi} = require('../util/datasource');
-const { forceDownload, maxSearchSize, buildIndex } = require('../util/param');
-const { SEARCH_OBJECT } = require('../util/search');
-const db = require('../../src/server/db');
-const _ = require('lodash');
+import { expect, should } from '../util/chai';
+import { aggregate, applyToEachDS , datasources, uniprot, chebi } from '../util/datasource';
+import { forceDownload, maxSearchSize, buildIndex } from '../util/param';
+import { SEARCH_OBJECT } from '../util/search';
+import { db } from '../../src/server/db';
+import _ from 'lodash';
 
 const updateTestData = () => {
   let guaranteeIndex = () => db.guaranteeIndex();
