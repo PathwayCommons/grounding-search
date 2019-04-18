@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import elasticsearch from 'elasticsearch';
-import { INDEX, MAX_SEARCH_ES } from '../config';
+import { INDEX, MAX_SEARCH_ES, ELASTICSEARCH_HOST } from '../config';
 
 const TYPE = 'entry';
 const META_SEARCH_FIELD = 'meta_search';
@@ -38,7 +38,7 @@ let db = {
 
     if ( !client ) {
       client = this.client = new elasticsearch.Client({
-        host: 'localhost:9200',
+        host: ELASTICSEARCH_HOST,
         // log: 'trace'
       });
     }
