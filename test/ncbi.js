@@ -4,11 +4,10 @@ import path from 'path';
 import DatasourceTest from './datasource';
 import { ncbi } from './util/datasource';
 import { buildIndex } from './util/param';
-import { config } from '../src/server/config';
+import { NCBI_FILE_NAME, INPUT_PATH  } from '../src/server/config';
 import { isSupportedOrganism } from '../src/server/datasource/organisms';
 import { nthStrNode } from '../src/server/util';
 
-const { NCBI_FILE_NAME, INPUT_PATH } = config;
 const decoder = new StringDecoder('utf8');
 const ORG_INDEX = 0;
 const ID_INDEX = 1;

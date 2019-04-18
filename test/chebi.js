@@ -6,9 +6,8 @@ import _ from 'lodash';
 import DatasourceTest from './datasource';
 import { chebi } from './util/datasource';
 import { buildIndex } from './util/param';
-import { config } from '../src/server/config';
+import { CHEBI_FILE_NAME, INPUT_PATH } from '../src/server/config';
 
-const { CHEBI_FILE_NAME, INPUT_PATH } = config;
 const RDF = 'rdf:RDF';
 const CLASS = 'owl:Class';
 const ID = 'oboInOwl:id';

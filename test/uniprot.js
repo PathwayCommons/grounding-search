@@ -6,10 +6,8 @@ import _ from 'lodash';
 import DatasourceTest from './datasource';
 import { uniprot } from './util/datasource';
 import { buildIndex } from './util/param';
-import { config } from '../src/server/config';
+import { UNIPROT_FILE_NAME, INPUT_PATH } from '../src/server/config';
 import { isSupportedOrganism } from '../src/server/datasource/organisms';
-
-const { UNIPROT_FILE_NAME, INPUT_PATH } = config;
 
 const getXmlEntries = () => {
   let filePath = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
