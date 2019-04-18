@@ -1,6 +1,6 @@
-const _ = require('lodash');
-const elasticsearch = require('elasticsearch');
-const { INDEX, MAX_SEARCH_ES } = require('../config');
+import _ from 'lodash';
+import elasticsearch from 'elasticsearch';
+import { INDEX, MAX_SEARCH_ES } from '../config';
 
 const TYPE = 'entry';
 const META_SEARCH_FIELD = 'meta_search';
@@ -278,4 +278,4 @@ let db = {
   }
 };
 
-module.exports = db;
+export { db };

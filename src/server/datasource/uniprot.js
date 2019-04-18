@@ -1,11 +1,14 @@
-const XmlParser = require('../parser/xml-parser');
-const _ = require('lodash');
-const { INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } = require('../config');
-const { isSupportedOrganism } = require('./organisms');
-const db = require('../db');
-const path = require('path');
-const download = require('./download');
-const { updateEntriesFromFile } = require('./processing');
+/** @module uniprot */
+
+import path from 'path';
+import _ from 'lodash';
+
+import { INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } from '../config';
+import { db } from '../db';
+import XmlParser from '../parser/xml-parser';
+import download from './download';
+import { isSupportedOrganism } from './organisms';
+import { updateEntriesFromFile } from './processing';
 
 const FILE_PATH = path.join(INPUT_PATH, UNIPROT_FILE_NAME);
 const ENTRY_NS = 'uniprot';
@@ -85,7 +88,7 @@ const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseXml
 
 /**
  * Update the 'uniprot' entitites from the input file.
- * @param {boolean} [forceIfFileExists] Whether to dowload the input source file for 'uniprot' 
+ * @param {boolean} [forceIfFileExists] Whether to dowload the input source file for 'uniprot'
  * even if a version of it already exists.
  * @returns {Promise}
  */
@@ -95,7 +98,7 @@ const update = function(forceIfFileExists){
 
 /**
  * Clear any entity whose namespace is 'uniprot'.
- * @returns {Promise} 
+ * @returns {Promise}
  */
 const clear = function(){
   const refreshIndex = () => db.refreshIndex();
@@ -123,4 +126,4 @@ const get = function(id){
   return db.get( id, ENTRY_NS );
 };
 
-module.exports = { update, clear, search, get };
+export const uniprot = { update, clear, search, get };

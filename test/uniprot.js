@@ -1,13 +1,15 @@
-const xmljs = require('xml-js');
-const path = require('path');
-const fs = require('fs');
-const _ = require('lodash');
+import xmljs from 'xml-js';
+import path from 'path';
+import fs from 'fs';
+import _ from 'lodash';
 
-const DatasourceTest = require('./datasource');
-const { uniprot } = require('./util/datasource');
-const { buildIndex } = require('./util/param');
-const { UNIPROT_FILE_NAME, INPUT_PATH } = require('../src/server/config');
-const { isSupportedOrganism } = require('../src/server/datasource/organisms');
+import DatasourceTest from './datasource';
+import { uniprot } from './util/datasource';
+import { buildIndex } from './util/param';
+import { config } from '../src/server/config';
+import { isSupportedOrganism } from '../src/server/datasource/organisms';
+
+const { UNIPROT_FILE_NAME, INPUT_PATH } = config;
 
 const getXmlEntries = () => {
   let filePath = path.join(INPUT_PATH, UNIPROT_FILE_NAME);

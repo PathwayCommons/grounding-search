@@ -1,21 +1,23 @@
-const express = require('express');
-const path = require('path');
-const favicon = require('serve-favicon');
-const morgan = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
-const debug = require('debug')('grounding-search:server');
-const http = require('http');
-const config = require('./config');
-const logger = require('./logger');
-const stream = require('stream');
-const fs = require('fs');
-const swagger = require('./swagger');
+import express from 'express';
+import path from 'path';
+import favicon from 'serve-favicon';
+import morgan from 'morgan';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+import Debug from 'debug';
+import http from 'http';
+import { PORT } from './config';
+import logger from './logger';
+import stream from 'stream';
+import fs from 'fs';
+import swagger from './swagger';
+import routes from './routes/index';
 
 const app = express();
 const server = http.createServer(app);
+const debug = Debug('grounding-search:server');
 
-let port = normalizePort(config.PORT);
+let port = normalizePort(PORT);
 
 // view engine setup
 app.set('views', path.join(__dirname, '../', 'views'));
@@ -47,7 +49,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../..', 'public')));
 
-app.use( '/', require('./routes/index') );
+app.use( '/', routes );
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -119,4 +121,4 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-module.exports = app;
+export default app;

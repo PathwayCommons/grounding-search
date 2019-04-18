@@ -1,8 +1,17 @@
+<<<<<<< ours:test/aggregate-quality.js
 const { expect } = require('./util/chai');
 const { aggregate, applyToEachDS } = require('./util/datasource');
 const { forceDownload, buildIndex } = require('./util/param');
 const { SEARCH_OBJECT } = require('./util/search');
 const db = require('../src/server/db');
+=======
+import { expect, should } from '../util/chai';
+import { aggregate, applyToEachDS , datasources, uniprot, chebi } from '../util/datasource';
+import { forceDownload, maxSearchSize, buildIndex } from '../util/param';
+import { SEARCH_OBJECT } from '../util/search';
+import { db } from '../../src/server/db';
+import _ from 'lodash';
+>>>>>>> theirs:test/temp/aggregate.js
 
 const updateTestData = () => {
   let guaranteeIndex = () => db.guaranteeIndex();

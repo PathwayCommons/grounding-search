@@ -1,7 +1,9 @@
-const BinarySplit = require('binary-split');
-const StringDecoder = require('string_decoder').StringDecoder;
-const fs = require('fs');
-const _ = require('lodash');
+/** @module delimited-parser */
+
+import BinarySplit from 'binary-split';
+import { StringDecoder } from 'string_decoder';
+import fs from 'fs';
+import _ from 'lodash';
 
 const decoder = new StringDecoder('utf8');
 
@@ -46,4 +48,4 @@ function DelimitedParser( filePath, events, hasHeaderLine ){
   input.pipe(linestream);
 }
 
-module.exports = DelimitedParser;
+export default DelimitedParser;

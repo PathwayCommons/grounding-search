@@ -1,7 +1,8 @@
-const _ = require('lodash');
-const { getDefaultOrganismIndex } = require('./organisms');
-const dice = require('dice-coefficient'); // sorensen dice coeff
-const Future = require('fibers/future');
+/** @module rank */
+import _ from 'lodash';
+import { getDefaultOrganismIndex } from './organisms';
+import dice from 'dice-coefficient'; // sorensen dice coeff
+import Future from 'fibers/future';
 
 const DISTANCE_FIELDS = ['name', 'synonyms']; // TODO should share list with db.js
 
@@ -65,7 +66,7 @@ const getDistance = (ent, searchTerm) => {
  * is used based on the popularity of common model organisms.
  * @returns The sorted, ranked array of entities.  The best matches come first.
  */
-const rank = (ents, searchTerm, organismCounts = {}) => {
+export const rank = (ents, searchTerm, organismCounts = {}) => {
   let dist = ent => getDistance(ent, searchTerm);
 
   let orgCount = ent => ent.organism == null ? 0 : (organismCounts[ent.organism] || 0);
@@ -92,7 +93,7 @@ const rank = (ents, searchTerm, organismCounts = {}) => {
   return ents.sort(sortByDistThenOrgs);
 };
 
-const rankInThread = (ents, searchTerm, organismCounts) => {
+export const rankInThread = (ents, searchTerm, organismCounts) => {
   let task = Future.wrap(function(args, next){ // code in this block runs in its own thread
     let res = rank(args.ents, args.searchTerm, args.organismCounts);
     let err = null;
@@ -103,4 +104,3 @@ const rankInThread = (ents, searchTerm, organismCounts) => {
   return task({ ents, searchTerm, organismCounts }).promise();
 };
 
-module.exports = { rank, rankInThread };

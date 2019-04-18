@@ -1,9 +1,10 @@
-const express = require('express');
+import express from 'express';
+import { uniprot } from '../datasource/uniprot';
+import { chebi } from '../datasource/chebi';
+import { ncbi } from '../datasource/ncbi';
+import { aggregate } from '../datasource/aggregate';
+
 const router = express.Router();
-const uniprot = require('../datasource/uniprot');
-const chebi = require('../datasource/chebi');
-const ncbi = require('../datasource/ncbi');
-const aggregate = require('../datasource/aggregate');
 
 const dsNsMap = new Map([
   ['ncbi', ncbi],
@@ -138,4 +139,4 @@ router.post('/get', function(req, res){
   aggregate.get(namespace, id).then(searchRes => res.json(searchRes));
 });
 
-module.exports = router;
+export default router;

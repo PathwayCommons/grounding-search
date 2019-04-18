@@ -1,6 +1,7 @@
-const db = require('../db');
-const { rankInThread } = require('./rank');
-const { MAX_SEARCH_WS } = require('../config');
+/** @module aggregate */
+import { db } from '../db';
+import { rankInThread } from './rank';
+import { MAX_SEARCH_WS } from '../config';
 
 /**
  * Retrieve the entities matching best with the search string.
@@ -41,4 +42,4 @@ const get = function(namespace, id){
   return db.get(id, namespace);
 };
 
-module.exports = { search, get };
+export const aggregate = { search, get };

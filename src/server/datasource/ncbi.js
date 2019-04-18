@@ -1,12 +1,15 @@
-const DelimitedParser = require('../parser/delimited-parser');
-const _ = require('lodash');
-const { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL } = require('../config');
-const { isSupportedOrganism } = require('./organisms');
-const db = require('../db');
-const path = require('path');
-const download = require('./download');
-const { updateEntriesFromFile } = require('./processing');
-const { nthStrNode } = require('../util');
+/** @module ncbi */
+
+import path from 'path';
+import _ from 'lodash';
+
+import { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL } from '../config';
+import { db } from '../db';
+import { nthStrNode } from '../util';
+import DelimitedParser from '../parser/delimited-parser';
+import download from './download';
+import { isSupportedOrganism } from './organisms';
+import { updateEntriesFromFile } from './processing';
 
 const FILE_PATH = path.join(INPUT_PATH, NCBI_FILE_NAME);
 const ENTRY_NS = 'ncbi';
@@ -76,7 +79,7 @@ const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseFil
 
 /**
  * Update the 'uniprot' entitites from the input file.
- * @param {boolean} [forceIfFileExists] Whether to dowload the input source file for 'ncbi' 
+ * @param {boolean} [forceIfFileExists] Whether to dowload the input source file for 'ncbi'
  * even if a version of it already exists.
  * @returns {Promise}
  */
@@ -86,7 +89,7 @@ const update = function(forceIfFileExists){
 
 /**
  * Clear any entity whose namespace is 'ncbi'.
- * @returns {Promise} 
+ * @returns {Promise}
  */
 const clear = function(){
   const refreshIndex = () => db.refreshIndex();
@@ -114,4 +117,4 @@ const get = function(id){
   return db.get( id, ENTRY_NS );
 };
 
-module.exports = { update, clear, search, get };
+export const ncbi = { update, clear, search, get };

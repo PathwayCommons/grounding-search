@@ -1,14 +1,14 @@
-const path = require('path');
-const fs = require('fs');
-const StringDecoder = require('string_decoder').StringDecoder;
+import fs from 'fs';
+import { StringDecoder } from 'string_decoder';
+import path from 'path';
+import DatasourceTest from './datasource';
+import { ncbi } from './util/datasource';
+import { buildIndex } from './util/param';
+import { config } from '../src/server/config';
+import { isSupportedOrganism } from '../src/server/datasource/organisms';
+import { nthStrNode } from '../src/server/util';
 
-const DatasourceTest = require('./datasource');
-const { ncbi } = require('./util/datasource');
-const { buildIndex } = require('./util/param');
-const { NCBI_FILE_NAME, INPUT_PATH } = require('../src/server/config');
-const { isSupportedOrganism } = require('../src/server/datasource/organisms');
-const { nthStrNode } = require('../src/server/util');
-
+const { NCBI_FILE_NAME, INPUT_PATH } = config;
 const decoder = new StringDecoder('utf8');
 const ORG_INDEX = 0;
 const ID_INDEX = 1;

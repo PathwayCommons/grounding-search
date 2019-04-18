@@ -1,12 +1,13 @@
-const path = require('path');
-const logger = require('../logger');
-const httpDownload = require('download');
-const ftp = require('ftp');
-const { URL } = require('url');
-const fs = require('fs');
-const zlib = require('zlib');
+/** @module download */
 
-const { INPUT_PATH } = require('../config');
+import path from 'path';
+import logger from '../logger';
+import { INPUT_PATH } from '../config';
+import httpDownload from 'download';
+import ftp from 'ftp';
+import { URL } from 'url';
+import fs from 'fs';
+import zlib from 'zlib';
 
 const ftpDownload = (url, outFileName) => {
   return Promise.resolve().then(() => {
@@ -79,4 +80,4 @@ const dl = (url, outFileName, forceIfFileExists = false) => {
   }
 };
 
-module.exports = dl;
+export default dl;

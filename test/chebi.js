@@ -1,13 +1,14 @@
-const xmljs = require('xml-js');
-const path = require('path');
-const fs = require('fs');
-const _ = require('lodash');
+import xmljs from 'xml-js';
+import path from 'path';
+import fs from 'fs';
+import _ from 'lodash';
 
-const DatasourceTest = require('./datasource');
-const { chebi } = require('./util/datasource');
-const { buildIndex } = require('./util/param');
-const { CHEBI_FILE_NAME, INPUT_PATH } = require('../src/server/config');
+import DatasourceTest from './datasource';
+import { chebi } from './util/datasource';
+import { buildIndex } from './util/param';
+import { config } from '../src/server/config';
 
+const { CHEBI_FILE_NAME, INPUT_PATH } = config;
 const RDF = 'rdf:RDF';
 const CLASS = 'owl:Class';
 const ID = 'oboInOwl:id';
