@@ -1,4 +1,4 @@
-import { expect, should } from './util/chai';
+import { expect } from './util/chai';
 import { aggregate, applyToEachDS } from './util/datasource';
 import { forceDownload, buildIndex } from './util/param';
 import { db } from '../src/server/db';

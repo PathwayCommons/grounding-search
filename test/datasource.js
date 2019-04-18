@@ -1,6 +1,4 @@
-import { expect, should } from './util/chai';
-import xmljs from 'xml-js';
-import fs from 'fs';
+import { expect } from './util/chai';
 import _ from 'lodash';
 import { db } from '../src/server/db';
 import { forceDownload, maxSearchSize } from './util/param';

@@ -2,14 +2,12 @@
 
 import path from 'path';
 import logger from '../logger';
-import { config } from '../config';
+import { INPUT_PATH } from '../config';
 import httpDownload from 'download';
 import ftp from 'ftp';
 import { URL } from 'url';
 import fs from 'fs';
 import zlib from 'zlib';
-
-const { INPUT_PATH } = config;
 
 const ftpDownload = (url, outFileName) => {
   return Promise.resolve().then(() => {

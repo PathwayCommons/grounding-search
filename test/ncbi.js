@@ -1,9 +1,6 @@
-import xmljs from 'xml-js';
-import path from 'path';
 import fs from 'fs';
-import _ from 'lodash';
 import { StringDecoder } from 'string_decoder';
-
+import path from 'path';
 import DatasourceTest from './datasource';
 import { ncbi } from './util/datasource';
 import { buildIndex } from './util/param';

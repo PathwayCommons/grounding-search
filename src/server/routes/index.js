@@ -6,8 +6,20 @@ import { aggregate } from '../datasource/aggregate';
 
 const router = express.Router();
 
+const dsNsMap = new Map([
+  ['ncbi', ncbi],
+  ['chebi', chebi],
+  ['uniprot', uniprot],
+  ['aggregate', aggregate]
+]);
+
+const getDataSource = ns => dsNsMap.get(ns);
+
 const handleReq = (source, req, res) => {
-  source.search(req.body.q).then(searchRes => res.json(searchRes));
+  const q = req.body.q;
+  const orgCounts = req.body.organismCounts;
+
+  source.search(q, orgCounts).then(searchRes => res.json(searchRes));
 };
 
 /* GET home page. */
@@ -108,7 +120,23 @@ router.post('/ncbi', function(req, res){
  */
 // e.g. POST /search { q: 'p53' }
 router.post('/search', function(req, res){
-  handleReq(aggregate, req, res);
+  const { namespace } = req.body; // allow specifying namespace filter
+  let datasource;
+
+  if( namespace != null ){
+    datasource = getDataSource(namespace);
+  } else {
+    datasource = aggregate;
+  }
+
+  handleReq(datasource, req, res);
+});
+
+// TODO swagger docs
+router.post('/get', function(req, res){
+  const { namespace, id } = req.body;
+
+  aggregate.get(namespace, id).then(searchRes => res.json(searchRes));
 });
 
 export default router;

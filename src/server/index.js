@@ -6,7 +6,7 @@ import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import Debug from 'debug';
 import http from 'http';
-import { config } from './config';
+import { PORT } from './config';
 import logger from './logger';
 import stream from 'stream';
 import fs from 'fs';
@@ -17,7 +17,7 @@ const app = express();
 const server = http.createServer(app);
 const debug = Debug('grounding-search:server');
 
-let port = normalizePort(config.PORT);
+let port = normalizePort(PORT);
 
 // view engine setup
 app.set('views', path.join(__dirname, '../', 'views'));
