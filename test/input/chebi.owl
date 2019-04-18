@@ -1,1342 +1,159 @@
 <?xml version="1.0"?>
 <rdf:RDF>
   <owl:Class>
-    <oboInOwl:id>CHEBI:134083</oboInOwl:id>
-    <rdfs:label>hypoxia-inducible factor pathway activator</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>HIF pathway activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HIF pathway activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hypoxia activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hypoxia activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hypoxia-inducible factor pathway activators</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:102248</oboInOwl:id>
-    <rdfs:label>EC 1.14.11.29 (hypoxia-inducible factor-proline dioxygenase) inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>EC 1.14.11.29 (hypoxia-inducible factor-proline dioxygenase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 1.14.11.29 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 1.14.11.29 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HIF hydroxylase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HIF hydroxylase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hypoxia-inducible factor-L-proline, 2-oxoglutarate:oxygen oxidoreductase (4-hydroxylating) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hypoxia-inducible factor-L-proline, 2-oxoglutarate:oxygen oxidoreductase (4-hydroxylating) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>prolyl 4-hydroxylase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>prolyl 4-hydroxylase inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:67137</oboInOwl:id>
-    <rdfs:label>NMR shift reagent</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>NMR shift reagents</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>lanthanide shift reagent</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>lanthanide shift reagents</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>nuclear magnetic resonance shift reagent</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>nuclear magnetic resonance shift reagents</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:50229</oboInOwl:id>
-    <rdfs:label>Schiff base</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>Schiff bases</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Schiff's base</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Schiff's bases</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Schiff base</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:16233</oboInOwl:id>
-    <rdfs:label>(S)-cheilanthifoline</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(6aS)-6,6a,11,14-Tetrahydro-8-methoxy-12H-benzo[a]-1,3-benzodioxolo[4,5-g]quinolizim-9-ol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(6aS)-6,6a,11,14-tetrahydro-8-methoxy-12H-benzo[a]-1,3-benzodioxolo[4,5-g]quinolizim-9-ol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(6aS)-9-methoxy-6,11,12,14-tetrahydro-2H,6aH-[1,3]dioxolo[4,5-h]isoquino[2,1-b]isoquinolin-8-ol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(S)-Cheilanthifoline</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(S)-cheilanthifoline</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:132053</oboInOwl:id>
-    <rdfs:label>thifensulfuron</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>3-(4-methoxy-6-methyl-1,3,5-triazin-2-ylcarbamoylsulfamoyl)thiophene-2-carboxylic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>thiameturon</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>thifensulfuron acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-{[(4-methoxy-6-methyl-1,3,5-triazin-2-yl)carbamoyl]sulfamoyl}thiophene-2-carboxylic acid</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:83453</oboInOwl:id>
-    <rdfs:label>thifensulfuron-methyl</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>Thifensulfuron methyl</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>methyl 3-(4-methoxy-6-methyl-1,3,5-triazin-2-ylcarbamoylsulfamoyl)thiophene-2-carboxylate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>thiameturon-methyl</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>methyl 3-{[(4-methoxy-6-methyl-1,3,5-triazin-2-yl)carbamoyl]sulfamoyl}thiophene-2-carboxylate</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:2468</oboInOwl:id>
-    <rdfs:label>secondary alpha-hydroxy ketone</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>acyloin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>acyloins</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>secondary alpha-hydroxy ketones</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>secondary alpha-hydroxy-ketone</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>secondary alpha-hydroxy-ketones</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>secondary alpha-hydroxyketone</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>secondary alpha-hydroxyketones</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:90320</oboInOwl:id>
-    <rdfs:label>pyruvate ester</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>2-ketopropanoate ester</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-ketopropanoate esters</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-ketopropionate ester</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-ketopropionate esters</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-oxopropanoate ester</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-oxopropanoate esters</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-oxopropionate ester</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-oxopropionate esters</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-ketopropanoate ester</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-ketopropanoate esters</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-ketopropionate ester</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-ketopropionate esters</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-oxopropanoate ester</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-oxopropanoate esters</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-oxopropionate ester</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-oxopropionate esters</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>pyruvate esters</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:28158</oboInOwl:id>
-    <rdfs:label>6-oxoprostaglandin F1alpha</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>6-Keto-PGF1a</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-Keto-PGF1alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-Keto-prostaglandin F1a</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-Keto-prostaglandin F1alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-Ketoprostaglandin F1alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-Oxo-PGF1alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-oxo-PGF1alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-oxo-prostaglandin F1alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(13E,15S)-9alpha,11alpha,15-trihydroxy-6-oxoprost-13-en-1-oic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-Oxoprostaglandin F1alpha</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:63976</oboInOwl:id>
-    <rdfs:label>13,14-dihydro-15-keto-PGF2alpha</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>13,14-Dihydro-15-ketoprostaglandin F2alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>13,14-dihydro-15-keto-Prostaglandin F2a</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>15-Keto-13,14-dihydro-pgf2alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>15-Keto-13,14-dihydroprostaglandin F2-alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>15-Keto-13,14-dihydroprostaglandin F2alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>9S,11S-dihydroxy-15-oxo-5Z-prostenoic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Dhk-pgf2alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PGFM</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>dhk-PGF2alpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(5Z,9alpha,11alpha)-9,11-dihydroxy-15-oxoprost-5-en-1-oic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>13,14-Dihydro-15-keto-pgf2alpha</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:139588</oboInOwl:id>
-    <rdfs:label>alpha-hydroxy ketone</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>alpha-hydroxy ketones</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-hydroxy-ketone</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-hydroxy-ketones</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-hydroxyketone</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-hydroxyketones</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:85053</oboInOwl:id>
-    <rdfs:label>EC 2.7.11.31 {[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase} activator</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>3-hydroxy-3-methylglutaryl coenzyme A reductase kinase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-hydroxy-3-methylglutaryl coenzyme A reductase kinase activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-hydroxy-3-methylglutaryl-CoA reductase kinase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-hydroxy-3-methylglutaryl-CoA reductase kinase activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AMP-activated protein kinase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AMP-activated protein kinase activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AMPK activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AMPK activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[hydroxymethylglutaryl-CoA reductase (NADPH)] phosphotransferase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[hydroxymethylglutaryl-CoA reductase (NADPH)] phosphotransferase activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.31 ([hydroxymethylglutaryl-CoA reductase (NADPH)] kinase) activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.31 ([hydroxymethylglutaryl-CoA reductase (NADPH)] kinase) activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.31 activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.31 activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.31 {[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase} activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HMG-CoA reductase kinase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HMG-CoA reductase kinase activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK29 activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK29 activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[hydroxymethylglutaryl-CoA reductase (NADPH2)] kinase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[hydroxymethylglutaryl-CoA reductase (NADPH2)] kinase activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-hydroxy-beta-methylglutaryl-CoA reductase kinase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-hydroxy-beta-methylglutaryl-CoA reductase kinase activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl coenzyme A reductase kinase (phosphorylating) activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl coenzyme A reductase kinase (phosphorylating) activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl coenzyme A reductase kinase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl coenzyme A reductase kinase activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl-CoA reductase kinase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl-CoA reductase kinase activators</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>reductase kinase activator</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>reductase kinase activators</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:78622</oboInOwl:id>
-    <rdfs:label>EC 2.7.11.31 {[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase} inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>3-hydroxy-3-methylglutaryl coenzyme A reductase kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-hydroxy-3-methylglutaryl coenzyme A reductase kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-hydroxy-3-methylglutaryl-CoA reductase kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-hydroxy-3-methylglutaryl-CoA reductase kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AMP-activated protein kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AMP-activated protein kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AMPK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AMPK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[hydroxymethylglutaryl-CoA reductase (NADPH)] phosphotransferase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[hydroxymethylglutaryl-CoA reductase (NADPH)] phosphotransferase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.31 ([hydroxymethylglutaryl-CoA reductase (NADPH)] kinase) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.31 ([hydroxymethylglutaryl-CoA reductase (NADPH)] kinase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.31 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.31 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.31 {[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase} inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HMG-CoA reductase kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HMG-CoA reductase kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK29 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK29 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[hydroxymethylglutaryl-CoA reductase (NADPH)] kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[hydroxymethylglutaryl-CoA reductase (NADPH2)] kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[hydroxymethylglutaryl-CoA reductase (NADPH2)] kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-hydroxy-beta-methylglutaryl-CoA reductase kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-hydroxy-beta-methylglutaryl-CoA reductase kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl coenzyme A reductase kinase (phosphorylating) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl coenzyme A reductase kinase (phosphorylating) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl coenzyme A reductase kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl coenzyme A reductase kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl-CoA reductase kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>hydroxymethylglutaryl-CoA reductase kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>reductase kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>reductase kinase inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:139579</oboInOwl:id>
-    <rdfs:label>AMPK activator PT 1</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>2-Chloro-5-[[5-[[5-(4,5-dimethyl-2-nitrophenyl)-2-furanyl]methylene]-4,5-dihydro-4-oxo-2-thiazolyl]amino]benzoic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PT 1</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-chloro-5-[(5-{[5-(4,5-dimethyl-2-nitrophenyl)furan-2-yl]methylidene}-4-oxo-4,5-dihydro-1,3-thiazol-2-yl)amino]benzoic acid</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:140847</oboInOwl:id>
-    <rdfs:label>alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;3)-[alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)]-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>Arafalpha1-5Arafalpha1-5Arafalpha1-5Arafalpha1-5Arafalpha1-3(Arafalpha1-5Arafalpha1-5Arafalpha1-5Arafalpha1-5Arafalpha1-5)Arafalpha1-5Arafalpha1-5Arafalpha1-5Arafalpha1-5Arafalpha1-5Araf</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;3)-[alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)]-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;3)-[alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)]-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-D-arabinose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;3)-[alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)]-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-D-arabinofuranose</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:71474</oboInOwl:id>
-    <rdfs:label>alpha-D-Manp-(1-&gt;2)-alpha-D-Manp-(1-&gt;2)-alpha-D-Manp-(1-&gt;3)-[alpha-D-Manp-(1-&gt;3)-[alpha-D-Manp-(1-&gt;2)-alpha-D-Manp-(1-&gt;6)]-alpha-D-Manp-(1-&gt;6)]-alpha-D-Manp</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>Manalpha1-2Manalpha1-2Manalpha1-3(Manalpha1-2Manalpha1-6(Manalpha1-3)Manalpha1-6)Manalpha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-D-Man-(1-&gt;2)-alpha-D-Man-(1-&gt;2)-alpha-D-Man-(1-&gt;3)-[alpha-D-Man-(1-&gt;3)-[alpha-D-Man-(1-&gt;2)-alpha-D-Man-(1-&gt;6)]-alpha-D-Man-(1-&gt;6)]-alpha-D-Man</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-D-mannosyl-(1-&gt;2)-alpha-D-mannosyl-(1-&gt;2)-alpha-D-mannosyl-(1-&gt;3)-[alpha-D-mannosyl-(1-&gt;3)-[alpha-D-mannosyl-(1-&gt;2)-alpha-D-mannosyl-(1-&gt;6)]-alpha-D-mannosyl-(1-&gt;6)]-alpha-D-mannose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-D-mannopyranosyl-(1-&gt;2)-alpha-D-mannopyranosyl-(1-&gt;2)-alpha-D-mannopyranosyl-(1-&gt;3)-[alpha-D-mannopyranosyl-(1-&gt;3)-[alpha-D-mannopyranosyl-(1-&gt;2)-alpha-D-mannopyranosyl-(1-&gt;6)]-alpha-D-mannopyranosyl-(1-&gt;6)]-alpha-D-mannopyranose</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:68481</oboInOwl:id>
-    <rdfs:label>mTOR inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>mTOR inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>mammalian target of rapamycin inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>mammalian target of rapamycin inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:78544</oboInOwl:id>
-    <rdfs:label>GSK3-XIII</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>GSK-3 inhibitor XIII</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>N-(5-methyl-1H-pyrazol-3-yl)-2-phenylquinazolin-4-amine</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:31905</oboInOwl:id>
-    <rdfs:label>nicorandil</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>2-nicotinamidoethyl nitrate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Adancor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Ikorel</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>N-(2-hydroxyethyl)nicotinamide nitrate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Perisalol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SG 75</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SG-75</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Sigmart</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>nicorandil</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>nicorandilum</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-[(pyridin-3-ylcarbonyl)amino]ethyl nitrate</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:131686</oboInOwl:id>
-    <rdfs:label>CFTRinh-172</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(inh)-172</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-[(3-trifluoromethyl)phenyl]-5-[(3-carboxyphenyl)methylene]-2-thioxo-4-thiazolidinone</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>5-[(4-carboxyphenyl)methylene]-2-thioxo-3-[(3-trifluoromethyl)phenyl]-4-thiazolidinone</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>C2992_SIGMA</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CFTR(inh)-172</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cystic fibrosis transmembrane conductance regulator inhibitor CFTR(inh)-172</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cystic fibrosis transmembrane regulator inhibitor 172</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>4-({4-oxo-2-sulfanylidene-3-[3-(trifluoromethyl)phenyl]-1,3-thiazolidin-5-ylidene}methyl)benzoic acid</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:52770</oboInOwl:id>
-    <rdfs:label>succinyl-Leu-Leu-Val-Tyr-7-amino-4-methylcoumarin</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>4-[[(2S)-1-[[(2S)-1-[[(2S)-1-[[(2S)-3-(4-hydroxyphenyl)-1-[(4-methyl-2-oxochromen-7-yl)amino]-1-oxopropan-2-yl]amino]-3-methyl-1-oxobutan-2-yl] amino]-4-methyl-1-oxopentan-2-yl]amino]-4-methyl-1-oxopentan-2-yl]amino]-4-oxobutanoic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>N-Succinyl-leu-leu-val-tyr-7-amido-4-methylcoumarin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>S6510_sigma</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Suc-LLVY-AMC</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Suc-LLVY-mca</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Suc-Leu-Leu-Val-Tyr-AMC</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Suc-leu-leu-val-tyr-7-amino-4-methylcoumarin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Suc-leu-leu-val-tyr-mca</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Succinyl-leucyl-leucyl-valyl-tyrosyl-methylcoumarinamide</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>N-(3-carboxypropanoyl)-L-leucyl-L-leucyl-L-valyl-N-(4-methyl-2-oxo-2H-chromen-7-yl)-L-tyrosinamide</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:74109</oboInOwl:id>
-    <rdfs:label>(11Z,14Z)-3-oxoicosa-11,14-dienoyl-CoA</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-ketoeicosa-11,14-dienoyl-CoA</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-ketoeicosa-11,14-dienoyl-coenzyme A</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-ketoicosa-11,14-dienoyl-CoA</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-ketoicosa-11,14-dienoyl-coenzyme A</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-oxoeicosa-11,14-dienoyl-CoA</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-oxoeicosa-11,14-dienoyl-coenzyme A</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-oxoicosa-11,14-dienoyl-coenzyme A</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3'-phosphoadenosine 5'-{3-[(3R)-3-hydroxy-2,2-dimethyl-4-({3-[(2-{[(11Z,14Z)-3-oxoicosa-11,14-dienoyl]sulfanyl}ethyl)amino]-3-oxopropyl}amino)-4-oxobutyl] dihydrogen diphosphate}</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:74012</oboInOwl:id>
-    <rdfs:label>(11Z,14Z)-3-oxoicosa-11,14-dienoyl-CoA(4-)</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-oxoeicosa-11,14-dienoyl-CoA(4-)</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-oxoeicosa-11,14-dienoyl-coenzyme A(4-)</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-oxoicosa-11,14-dienoyl-CoA</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(11Z,14Z)-3-oxoicosa-11,14-dienoyl-coenzyme A(4-)</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-keto-(11Z,14Z)-e icosa-11,14-dienoyl-CoA(4-)</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-keto-(11Z,14Z)-icosa-11,14-dienoyl-CoA(4-)</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-oxo-(11Z,14Z)-eicosa-11,14-dienoyl-CoA(4-)</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-oxo-(11Z,14Z)-icosa-11,14-dienoyl-coenzyme A(4-)</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3'-phosphonatoadenosine 5'-{3-[(3R)-3-hydroxy-2,2-dimethyl-4-({3-[(2-{[(11Z,14Z)-3-oxoicosa-11,14-dienoyl]sulfanyl}ethyl)amino]-3-oxopropyl}amino)-4-oxobutyl] diphosphate}</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:28148</oboInOwl:id>
-    <rdfs:label>sodium stibogluconate</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>Antimony (V) derivative of sodium gluconate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Antimony sodium gluconate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Myostibin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Pentostam</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Stibanate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Stibanose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Stibatin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Stibinol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>estibogluconato sodico</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>natrii stibogluconas</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>sodium stibogluconate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>stibogluconate de sodium</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>trisodium 1-{[3-carboxylato-5-(1,2-dihydroxyethyl)-1-hydroxy-2,6,7-trioxa-1lambda(5)-stibabicyclo[2.2.1]hept-1-yl]oxy}-5-(1,2-dihydroxyethyl)-1-oxido-2,6,7-trioxa-1lambda(5)-stibabicyclo[2.2.1]heptane-3-carboxylate nonahydrate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Sodium stibogluconate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>trisodium 1-{[3-carboxylato-5-(1,2-dihydroxyethyl)-1-hydroxy-2,6,7-trioxa-1lambda(5)-stibabicyclo[2.2.1]hept-1-yl]oxy}-5-(1,2-dihydroxyethyl)-1-oxido-2,6,7-trioxa-1lambda(5)-stibabicyclo[2.2.1]heptane-3-carboxylate--water (1/9)</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:77560</oboInOwl:id>
-    <rdfs:label>1,1'-dioleyl 2,2'-dilysocardiolipin</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>1',3'-bis[1-(9Z)-octadecenoyl-sn-glycero-3-phospho]glycerol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>dioleyl dilysocardiolipin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(2R,14R)-2,5,8,11,14-pentahydroxy-5,11-dioxido-4,6,10,12-tetraoxa-5lambda(5),11lambda(5)-diphosphapentadecane-1,15-diyl (9Z,9'Z)bis-octadec-9-enoate</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:74829</oboInOwl:id>
-    <rdfs:label>12-aminolauroyl tripalmitoyl cardiolipin</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>1-[1-(12-aminolauroyl)-2-palmitoyl-sn-glycero-3-phospho]-3-[1,2-bis(palmitoyl)-sn-glycero-3-phospho]-sn-glycerol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(2R,14R)-14-{[(12-aminododecanoyl)oxy]methyl}-2-(hexadecanoyloxy)-5,8,11-trihydroxy-5,11-dioxido-16-oxo-4,6,10,12,15-pentaoxa-5lambda(5),11lambda(5)-diphosphahentriacont-1-yl hexadecanoate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>1-[1-(12-aminododecanoyl)-2-hexadecanoyl-sn-glycero-3-phospho]-3-[1,2-bis(hexadecanoyl)-sn-glycero-3-phospho]-sn-glycerol</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:84583</oboInOwl:id>
-    <rdfs:label>1,1'-dilinoleoyl-2-oleoyl monolysocardiolipin</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>1'-[1-(9Z,12Z-octadecadienoyl)-2-(9Z-octadecenoyl)-sn-glycero-3-phospho]-3'-[1-(9Z,12Z-octadecadienoyl)-sn-glycero-3-phospho]glycerol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>1'-[1-linoleoyl-2-oleoyl-sn-glycero-3-phospho]-3'-[1-linoleoyl-sn-glycero-3-phospho]glycerol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>1,1'-dilinoleoyl-2-oleoyl MLCL</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(2R,14R,25Z,28Z)-2,5,8,11-tetrahydroxy-14-[(9Z)-octadec-9-enoyloxy]-5,11-dioxido-17-oxo-4,6,10,12,16-pentaoxa-5lambda(5),11lambda(5)-diphosphatetratriaconta-25,28-dien-1-yl (9Z,12Z)-octadeca-9,12-dienoate</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:142890</oboInOwl:id>
-    <rdfs:label>vanilloyl-CoA</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>4-hydroxy-3-methoxybenzoyl-CoA</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>4-hydroxy-3-methoxybenzoyl-coenzyme A</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>S-{(9R)-1-[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-4-hydroxy-3-(phosphonooxy)tetrahydrofuran-2-yl]-3,5,9-trihydroxy-8,8-dimethyl-3,5-dioxido-10,14-dioxo-2,4,6-trioxa-11,15-diaza-3lambda(5),5lambda(5)-diphosphaheptadecan-17-yl} 4-hydroxy-3-methoxybenzenecarbothioate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>vanilloyl-coenzyme A</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>vanillyl-CoA</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3'-phosphoadenosine 5'-{3-[(3R)-3-hydroxy-4-{[3-({2-[(4-hydroxy-3-methoxybenzoyl)sulfanyl]ethyl}amino)-3-oxopropyl]amino}-2,2-dimethyl-4-oxobutyl] dihydrogen diphosphate}</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:62434</oboInOwl:id>
-    <rdfs:label>EC 2.7.10.1 (receptor protein-tyrosine kinase) inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>AATK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AATYK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AATYK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AATYK3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ACH inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ALK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ALK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ARK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[protein]-L-tyrosine O-phosphotransferase (receptor-type) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[protein]-L-tyrosine O-phosphotransferase (receptor-type) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AXL inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BRT inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bek inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bfgfr inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bsk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>C-FMS inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CAK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CCK4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CD115 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CD135 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CDw135 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CFD1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CKIT inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CSF1R inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cek1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cek10 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cek11 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cek2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cek3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cek5 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cek6 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cek7 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>DAlk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>DDR1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>DDR2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>DKFZp434C1418 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>DRT inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>DTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Dek inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Drosophila Eph kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.10.1 (receptor protein-tyrosine kinase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.10.1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.10.1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ECK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EDDR1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EGFR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPH inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHA1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHA2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHA6 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHA7 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHA8 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHB1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHB2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHB3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHB4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHT inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHT2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHT3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EPHX inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ERBB inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ERBB1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ERBB2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ERBB3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ERBB4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ERK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Ebk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Eek inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Ehk2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Ehk3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Elk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EphB5 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Eyk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FGFR1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FGFR2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FGFR3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FGFR4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FLG inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FLK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FLK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FLT1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FLT2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FLT3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FLT4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FMS inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Fv2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HBGFR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HEK11 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HEK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HEK3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HEK5 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HEK6 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HEP inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HER2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HER3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HER4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HGFR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HSCR1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IGF1R inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>INSR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>INSRR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IRR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JTK12 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JTK13 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JTK14 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JWS inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>K-SAM inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>KDR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>KGFR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>KIA0641 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>KIAA1079 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>KIAA1459 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>KIT inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>KLG inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Kil inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Kin15 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Kin16 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>LTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>MCF3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>MEN2A/B inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>MER inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>MERTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>MEhk1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>MST1R inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>MTC1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>MUSK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Mdk1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Mdk2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Mdk5 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Mep inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Mlk1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Mlk2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Mrk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Myk1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>N-SAM inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NEP inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NET inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NGL inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NOK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NTRK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NTRK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NTRK3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NTRK4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NTRKR1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NTRKR2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NTRKR3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>NYK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Neu inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Nsk2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Nuk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PCL inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PDGFR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PDGFRA inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PDGFRB inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PHB6 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PTK3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PTK7 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>RET inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>RON inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ROR1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ROR2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ROS1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>RSE inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>RTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>RYK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SEA inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SKY inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Sek2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Sek3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Sek4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Sfr inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TEK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TIE inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TIE1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TIE2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TIF inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TKT inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TRK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TRKA inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TRKB inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TRKC inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TRKE inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TYK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TYRO10 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TYRO3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TYRO7 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Tyro11 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Tyro5 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Tyro6 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UFO inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>VEGFR1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>VEGFR2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>VEGFR3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Vik inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>YK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Yrk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>anaplastic lymphoma kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>anaplastic lymphoma kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ephrin-B3 receptor tyrosine kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>insulin receptor protein-tyrosine kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>neurite outgrowth regulating kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>nork inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>novel oncogene with kinase-domain inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>receptor protein tyrosine kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>receptor protein-tyrosine kinase (EC 2.7.10.1) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>receptor protein-tyrosine kinase (EC 2.7.10.1) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>receptor protein-tyrosine kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>receptor protein-tyrosine kinase inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:50914</oboInOwl:id>
-    <rdfs:label>EC 2.7.1.137 (phosphatidylinositol 3-kinase) inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>1-phosphatidylinositol 3-kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>1-phosphatidylinositol 3-kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:1-phosphatidyl-1D-myo-inositol 3-phosphotransferase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:1-phosphatidyl-1D-myo-inositol 3-phosphotransferase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.1.137 (phosphatidylinositol 3-kinase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.1.137 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.1.137 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PI(3)K inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PI(3)K inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PI-3 kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PI-3 kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PI3-kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PI3-kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PI3K inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PI3K inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PtdIns-3-kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PtdIns-3-kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Vps34p inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Vps34p inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phosphatidylinositol 3-kinase (EC 2.7.1.137) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phosphatidylinositol 3-kinase (EC 2.7.1.137) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phosphatidylinositol 3-kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phosphatidylinositol 3-kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phosphatidylinositol-3-OH kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phosphatidylinositol-3-OH kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phosphoinositide 3-kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phosphoinositide 3-kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>type I phosphatidylinositol kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>type I phosphatidylinositol kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>type III phosphoinositide 3-kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>type III phosphoinositide 3-kinase inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:77747</oboInOwl:id>
-    <rdfs:label>EC 3.6.3.1 (phospholipid-translocating ATPase) inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>ATP phosphohydrolase (phospholipid-flipping) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP phosphohydrolase (phospholipid-flipping) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 3.6.3.1 (phospholipid-translocating ATPase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 3.6.3.1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 3.6.3.1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Mg(2)(+)-ATPase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Mg(2)(+)-ATPase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>aminophospholipid-transporting ATPase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>aminophospholipid-transporting ATPase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>flippase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>flippase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>magnesium-ATPase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>magnesium-ATPase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phospholipid-translocating ATPase (EC 3.6.3.1) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phospholipid-translocating ATPase (EC 3.6.3.1) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phospholipid-translocating ATPase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phospholipid-translocating ATPase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phospholipid-transporting ATPase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phospholipid-transporting ATPase inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:7449</oboInOwl:id>
-    <rdfs:label>nafenopin</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(+-)-nafenopin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-methyl-2-[4-(1,2,3,4-tetrahydronaphthalen-1-yl)phenoxy]propionic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-methyl-2-[p-(1,2,3,4-tetrahydronaphthalen-1-yl)phenoxy]propanoic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-methyl-2-[p-(1,2,3,4-tetrahydronaphthalen-1-yl)phenoxy]propionic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>C 13437 SU</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CH 13-437</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CH 13437</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Ciba 13437 SU</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>D,L-nafenopin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>DL-nafenopin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Melipan</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SU 13437</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SU-13437</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-methyl-alpha-(p-1,2,3,4-tetrahydronaphth-1-ylphenoxy)propionic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>dl-nafenopin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>nafenopin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>nafenopina</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>nafenopine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>nafenopinum</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>rac-2-methyl-2-[4-(1,2,3,4-tetrahydronaphthalen-1-yl)phenoxy]propanoic acid</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:78384</oboInOwl:id>
-    <rdfs:label>EC 5.1.3.2 (UDP-glucose 4-epimerase) inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 5.1.3.2 (UDP-glucose 4-epimerase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 5.1.3.2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 5.1.3.2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-D-galactose 4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-D-galactose 4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-alpha-D-glucose 4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-alpha-D-glucose 4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-galactose 4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-galactose 4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-glucose 4-epimerase (EC 5.1.3.2) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-glucose 4-epimerase (EC 5.1.3.2) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-glucose 4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-glucose 4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-glucose epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDP-glucose epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDPG-4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDPG-4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDPgalactose 4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDPgalactose 4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDPglucose 4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>UDPglucose 4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>galactowaldenase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>galactowaldenase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>uridine diphosphate galactose 4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>uridine diphosphate galactose 4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>uridine diphosphate glucose 4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>uridine diphosphate glucose 4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>uridine diphospho-galactose-4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>uridine diphospho-galactose-4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>uridine diphosphoglucose 4-epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>uridine diphosphoglucose 4-epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>uridine diphosphoglucose epimerase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>uridine diphosphoglucose epimerase inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:28821</oboInOwl:id>
-    <rdfs:label>piperine</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(E,E)-1-piperoylpiperidine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>1-Piperoyl-piperidine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>1-[(2E,4E)-5-(1,3-benzodioxol-5-yl)-1-oxo-2,4-pentadienyl]piperidine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>1-[(2E,4E)-5-(1,3-benzodioxol-5-yl)-2,4-pentadienoyl]piperidine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>1-piperoylpiperidine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>N-[(E,E)-Piperoyl]piperidine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>N-[(E,E)-piperoyl]piperidine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>1-[(2E,4E)-5-(1,3-benzodioxol-5-yl)penta-2,4-dienoyl]piperidine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Piperine</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:47898</oboInOwl:id>
-    <rdfs:label>4'-epidoxorubicin</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>4'-Epiadriamycin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Epiadriamycin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>epirubicin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>epirubicina</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>epirubicine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>epirubicinum</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>pidorubicina</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>pidorubicine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>pidorubicinum</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(1S,3S)-3,5,12-trihydroxy-3-(hydroxyacetyl)-10-methoxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl 3-amino-2,3,6-trideoxy-alpha-L-arabino-hexopyranoside</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:17855</oboInOwl:id>
-    <rdfs:label>triglyceride</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>Triacylglycerol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Triglycerid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Triglyzerid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>a triacylglycerol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>triacylglycerols</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>triglycerides</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Triglyceride</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>triglycerides</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:6367</oboInOwl:id>
-    <rdfs:label>lamotrigine</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>3,5-diamino-6-(2,3-dichlorophenyl)-1,2,4-triazine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Lamictal</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>lamotrigina</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>lamotrigine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>lamotriginum</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-(2,3-dichlorophenyl)-1,2,4-triazine-3,5-diamine</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:18236</oboInOwl:id>
-    <rdfs:label>6-demethylsterigmatocystin</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>demethylsterigmatocystin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(3aR,12cS)-6,8-dihydroxy-3a,12c-dihydro-7H-furo[3',2':4,5]furo[2,3-c]xanthen-7-one</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-Demethylsterigmatocystin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-demethylsterigmatocystin</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:18171</oboInOwl:id>
-    <rdfs:label>8-O-methylsterigmatocystin</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>7-O-Methylsterigmatocystin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>O-Methyl sterigmatocystin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>O-Methylsterigmatocystin</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(3aR,12cS)-6,8-dimethoxy-3a,12c-dihydro-7H-furo[3',2':4,5]furo[2,3-c]xanthen-7-one</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>8-O-methylsterigmatocystin</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:75941</oboInOwl:id>
-    <rdfs:label>rac-1,2-dioleoyl-3-palmitoylglycerol</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(+-)-1,2-dioleoyl-3-palmitoylglycerol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(+-)-glycerol dioleate palmitate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(+-)-palmitodiolein</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(+-)-palmitoyl-dioleylglycerol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(+-)-triglyceride OOP</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(+-)-triglyceride POO</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>rac-glycerol dioleate palmitate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>rac-palmitodiolein</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>rac-palmitoyl-dioleylglycerol</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>rac-triglyceride OOP</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>rac-triglyceride POO</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>rac-3-(hexadecanoyloxy)propane-1,2-diyl (9Z,9'Z)bis-octadec-9-enoate</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:77113</oboInOwl:id>
-    <rdfs:label>EC 2.7.11.10 (IkappaB kinase) inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>ATP:[IkappaB protein] phosphotransferase</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[IkappaB protein] phosphotransferase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CHUK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CHUK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.10 (IkappaB kinase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.10 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.10 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKA inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKA inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKB inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKB inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase (EC 2.7.11.10) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase (EC 2.7.11.10) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK12 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK12 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TANK-binding kinase 1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TANK-binding kinase 1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TBK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TBK1 inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:90213</oboInOwl:id>
-    <rdfs:label>beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;2)-alpha-D-Man-(1-&gt;3)-[beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;2)-alpha-D-Man-(1-&gt;6)]-beta-D-Man-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;4)-beta-D-GlcNAc</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>Galb1-4GlcNAcb1-3Galb1-4GlcNAcb1-3Galb1-4GlcNAcb1-3Galb1-4GlcNAcb1-3Galb1-4GlcNAcb1-2Mana1-6(Galb1-4GlcNAcb1-3Galb1-4GlcNAcb1-3Galb1-4GlcNAcb1-3Galb1-4GlcNAcb1-3Galb1-4GlcNAcb1-2Mana1-3)Manb1-4GlcNAcb1-4GlcNAcb</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-2Manalpha1-3(Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-2Manalpha1-6)Manbeta1-4GlcNAcbeta1-4GlcNAcbeta</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-2Manalpha1-6(Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-3Galbeta1-4GlcNAcbeta1-2Manalpha1-3)Manbeta1-4GlcNAcbeta1-4GlcNAcbeta</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;2)-alpha-D-Manp-(1-&gt;3)-[beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;2)-alpha-D-Manp-(1-&gt;6)]-beta-D-Manp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;4)-beta-D-GlcpNAc</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;3)-beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;3)-beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;3)-beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;3)-beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;2)-alpha-D-mannosyl-(1-&gt;3)-[beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;3)-beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;3)-beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;3)-beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;3)-beta-D-galactosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;2)-alpha-D-mannosyl-(1-&gt;6)]-beta-D-mannosyl-(1-&gt;4)-N-acetyl-beta-D-glucosaminyl-(1-&gt;4)-N-acetyl-beta-D-glucosamine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-galactopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-galactopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-galactopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-galactopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-galactopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;2)-alpha-D-mannopyranosyl-(1-&gt;3)-[beta-D-galactopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-galactopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-galactopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-galactopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-galactopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;2)-alpha-D-mannopyranosyl-(1-&gt;6)]-beta-D-mannopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranosyl-(1-&gt;4)-2-acetamido-2-deoxy-beta-D-glucopyranose</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:133612</oboInOwl:id>
-    <rdfs:label>beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-[beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;6)]-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-O[CH2]2NH2</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>2-aminoethyl beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-[beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;6)]-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranoside</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-aminoethyl beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-{6-O-[beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl]-beta-D-glucopyranosyl}-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranoside</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-aminoethyl beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-[beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;6)]-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucoosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucoside</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-aminoethyl beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-{6-O-[beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl]-beta-D-glucosyl}-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucoside</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-aminoethyl beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;6)-[beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)]-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucoside</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3(Glcbeta1-3Glcbeta1-6)Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3GlcbetaO[CH2]2NH2</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Glcbeta1-3Glcbeta1-6(Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3)Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3GlcbetaO[CH2]2NH2</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-[beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;6)]-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-O[CH2]2NH2</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;6)-[beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)]-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-O[CH2]2NH2</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-aminoethyl beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;6)-[beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)]-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranoside</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:133802</oboInOwl:id>
-    <rdfs:label>beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-[beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;6)]-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3(Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-6)Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-{6-O-[beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl]-beta-D-glucopyranosyl}-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-[beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;6)]-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-{6-O-[beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl]-beta-D-glucosyl}-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-[beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;6)]-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranose</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:62266</oboInOwl:id>
-    <rdfs:label>beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-[beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;6)]-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-Glc-(1&lt;-&gt;1')-Cer</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(Gal)4 (Glc)1 (GlcNAc)3 (Cer)1</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Galbeta1-4GlcNAcbeta1-3(Galbeta1-4GlcNAcbeta1-6)Galbeta1-4GlcNAcbeta1-3Galbeta1-4Glcbeta1-1Cer</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>I-antigen</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>LacNAc-Lc6Cer</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Lactoisooctaosylceramide</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-[beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;6)]-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-Glc-Cer</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-[beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;6)]-beta-D-Gal-(1-&gt;4)-beta-D-GlcNAc-(1-&gt;3)-beta-D-Gal-(1-&gt;4)-beta-D-Glc-Ceramide</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-[beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;6)]-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-Glcp-(1&lt;-&gt;1')-Cer</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-[beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;6)]-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-Glcp-(1&lt;-&gt;1')-Ceramide</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-[beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;6)]-beta-D-Galp-(1-&gt;4)-beta-D-GlcpNAc-(1-&gt;3)-beta-D-Galp-(1-&gt;4)-beta-D-Glcp-Cer</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-Gal-(1-&gt;4)-beta-GlcNAc-(1-&gt;3)-[beta-Gal-(1-&gt;4)-beta-GlcNAc-(1-&gt;6)]-beta-Gal-(1-&gt;4)-beta-GlcNAc-(1-&gt;3)-beta-Gal-(1-&gt;4)-beta-Glc-(1&lt;-&gt;1')-Cer</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-Gal-(1-&gt;4)-beta-GlcNAc-(1-&gt;3)-[beta-Gal-(1-&gt;4)-beta-GlcNAc-(1-&gt;6)]-beta-Gal-(1-&gt;4)-beta-GlcNAc-(1-&gt;3)-beta-Gal-(1-&gt;4)-beta-Glc-Cer</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>betaGal-&gt;4betaGlcNAc-&gt;3(betaGal-&gt;4betaGlcNAc-&gt;6)betaGal-&gt;4betaGlcNAc-&gt;3betaGal-&gt;4betaGlc-&gt;Cer</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>iso-nLc8Cer</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:133804</oboInOwl:id>
-    <rdfs:label>(1-&gt;3)-dodeca-beta-D-glucan</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(1-&gt;3)-dodeca-beta-D-glucopyranan</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta1-3Glcbeta</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[3)-beta-D-Glc-(1-&gt;]12</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[3)-beta-D-Glcp-(1-&gt;]12</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[beta-D-Glc-(1-&gt;3)-]11beta-D-Glc</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[beta-D-Glc-(1-&gt;3)]11-beta-D-Glc</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[beta-D-Glcp-(1-&gt;3)-]11beta-D-Glcp</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>[beta-D-Glcp-(1-&gt;3)]11-beta-D-Glcp</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc-(1-&gt;3)-beta-D-Glc</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp-(1-&gt;3)-beta-D-Glcp</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucosyl-(1-&gt;3)-beta-D-glucose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>dodeca-beta(1-&gt;3)-D-glucan</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>dodeca-beta(1-&gt;3)-D-glucopyranan</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>dodeca-beta-(1-&gt;3)-D-glucan</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>dodeca-beta-(1-&gt;3)-D-glucopyranan</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>dodeca-beta-glucan</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>dodeca-beta-glucopyranan</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranosyl-(1-&gt;3)-beta-D-glucopyranose</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:82665</oboInOwl:id>
-    <rdfs:label>EC 2.7.11.22 (cyclin-dependent kinase) inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>ATP:cyclin phosphotransferase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:cyclin phosphotransferase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bur1 Cdk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bur1 Cdk inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bur1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bur1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CDK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CDK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cak1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cak1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cak1p inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cak1p inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdc28p inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdc28p inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk-activating protein kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk19 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk19 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk3 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk4 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk5 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk5 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk6 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk6 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk7 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk7 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk8 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk8 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk9 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdk9 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>D-type cyclin kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>D-type cyclin kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.22 (cyclin-dependent kinase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.22 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.22 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PCTAIRE-1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PCTAIRE-1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK25 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK25 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cdc2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cdc2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cdc2 kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cdc2 kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cdk-activating kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cdk-activating kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin A-activated cdc2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin A-activated cdc2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin A-activated cdk2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin A-activated cdk2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin D-cdk6 kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin D-cdk6 kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin D-dependent kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin D-dependent kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin E kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin E kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-A associated kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-A associated kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-dependent kinase 6 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-dependent kinase 6 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-dependent kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-dependent kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-dependent kinase-2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-dependent kinase-2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-dependent kinase-4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-dependent kinase-4 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-dependent protein kinase activating kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyclin-dependent protein kinase activating kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cyk inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ndk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ndk inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>neuronal cdc2-like kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>neuronal cdc2-like kinase inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:77113</oboInOwl:id>
-    <rdfs:label>EC 2.7.11.10 (IkappaB kinase) inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>ATP:[IkappaB protein] phosphotransferase</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[IkappaB protein] phosphotransferase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CHUK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CHUK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.10 (IkappaB kinase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.10 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.10 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKA inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKA inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKB inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKB inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase (EC 2.7.11.10) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase (EC 2.7.11.10) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK12 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK12 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TANK-binding kinase 1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TANK-binding kinase 1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TBK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TBK1 inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:59668</oboInOwl:id>
-    <rdfs:label>nikkomycin</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>nikkomycins</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:623918</oboInOwl:id>
-    <rdfs:label>nikkomycin Z</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(2S)-{[(2S,3S,4S)-2-amino-4-hydroxy-4-(5-hydroxypyridin-2-yl)-3-methylbutanoyl]amino}-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-beta-D-allo-furanuronic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(2S)-{[(2S,3S,4S)-2-amino-4-hydroxy-4-(5-hydroxypyridin-2-yl)-3-methylbutanoyl]amino}[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]acetic acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Neopolyoxin C</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Nikkomycin</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:81209</oboInOwl:id>
-    <rdfs:label>Kikkanol A</rdfs:label>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:81211</oboInOwl:id>
-    <rdfs:label>Kikkanol C</rdfs:label>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:77113</oboInOwl:id>
-    <rdfs:label>EC 2.7.11.10 (IkappaB kinase) inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>ATP:[IkappaB protein] phosphotransferase</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[IkappaB protein] phosphotransferase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CHUK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CHUK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.10 (IkappaB kinase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.10 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.11.10 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKA inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKA inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKB inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKBKB inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IKK-2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase (EC 2.7.11.10) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase (EC 2.7.11.10) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IkappaB kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK12 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STK12 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TANK-binding kinase 1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TANK-binding kinase 1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TBK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TBK1 inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:81853</oboInOwl:id>
-    <rdfs:label>fenhexamid</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>2',3'-dichloro-4'-hydroxy-1-methylcyclohexanecarboxanilide</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>KBR 2738</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>KBR-2738</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>N-(2,3-dichloro-4-hydroxyphenyl)-1-methylcyclohexane-1-carboxamide</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Teldor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>fenhexamide</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>N-(2,3-dichloro-4-hydroxyphenyl)-1-methylcyclohexanecarboxamide</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:140489</oboInOwl:id>
-    <rdfs:label>tropomyosin-related kinase B receptor agonist</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>TrkB receptor agonist</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TrkB receptor agonists</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>tropomyosin-related kinase B receptor agonists</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:78681</oboInOwl:id>
-    <rdfs:label>tropomyosin-related kinase B receptor antagonist</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>TrkB receptor antagonist</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TrkB receptor antagonists</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>tropomyosin-related kinase B receptor antagonists</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:76617</oboInOwl:id>
-    <rdfs:label>EC 2.7.10.2 (non-specific protein-tyrosine kinase) inhibitor</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>ABL inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ABL inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ABL1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ABL1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ABL2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ABL2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ABLL inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ABLL inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ACK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ACK1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ACK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ACK2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AGMX1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>AGMX1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ARG inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ARG inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[protein]-L-tyrosine O-phosphotransferase (non-specific) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ATP:[protein]-L-tyrosine O-phosphotransferase (non-specific) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BLK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BLK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BMX inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BMX inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BRK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BRK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BTK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BTKL inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>BTKL inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bmk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bmk inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bruton's tyrosine kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bruton's tyrosine kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bsk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Bsk inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CAKb inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CAKb inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CHK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CHK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CSK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CSK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CTK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CYL inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>CYL inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdgip inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Cdgip inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.10.2 (non-specific protein-tyrosine kinase) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.10.2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EC 2.7.10.2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EMT inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>EMT inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ETK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ETK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FAK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FAK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FAK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FAK2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FER inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FER inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FES inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FES inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FGR inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FGR inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FPS inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FPS inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FRK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FRK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FYN inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>FYN inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Fadk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Fadk inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Fert1/2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Fert1/2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HCK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HCK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HCTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HCTK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HYL inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>HYL inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IMD1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IMD1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ITK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ITK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IYK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>IYK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JAK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JAK1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JAK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JAK2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JAK3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JAK3 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JTK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JTK1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JTK9 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>JTK9 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Janus kinase 1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Janus kinase 1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Janus kinase 2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Janus kinase 2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Janus kinase 3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Janus kinase 3 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Janus kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>L-JAK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>L-JAK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>LCK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>LCK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>LSK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>LSK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>LYN inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>LYN inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>MATK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>MATK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Ntk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Ntk inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PKB inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PKB inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PSCTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PSCTK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PSCTK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PSCTK1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PSCTK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PSCTK2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PSCTK4 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PSCTK4 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PSCTK5 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PSCTK5 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PTK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PTK2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PTK2B inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PTK2B inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PTK6 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PTK6 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PYK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PYK2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>RAFTK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>RAFTK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>RAK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>RAK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Rlk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Rlk inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SLK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SLK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SRC inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SRC inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SRC2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SRC2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SRK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SRK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SRM inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SRM inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SRMS inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SRMS inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STD inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>STD inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SYK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SYK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SYN inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>SYN inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Sik inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Sik inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TEC inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TEC inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TNK1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TNK1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TXK inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TXK inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TYK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TYK2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TYK3 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>TYK3 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Tck inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Tck inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Tsk inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Tsk inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>YES1 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>YES1 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>YK2 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>YK2 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ZAP70 inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ZAP70 inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cytoplasmic protein tyrosine kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>cytoplasmic protein tyrosine kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>focal adhesion kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>focal adhesion kinase inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>non-specific protein-tyrosine kinase (EC 2.7.10.2) inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>non-specific protein-tyrosine kinase (EC 2.7.10.2) inhibitors</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>p60c-src protein tyrosine kinase inhibitor</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>p60c-src protein tyrosine kinase inhibitors</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:140781</oboInOwl:id>
-    <rdfs:label>Ins3P-(3P-&gt;5)-beta-D-Araf-(1-&gt;2)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf-(1-&gt;5)-alpha-D-Araf</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>5-O-(1D-myo-inositol-3-phospho)-beta-D-arabinosyl-(1-&gt;2)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinosyl-(1-&gt;5)-alpha-D-arabinose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Ins3P-(3P-&gt;5)-beta-D-Ara-(1-&gt;2)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara-(1-&gt;5)-alpha-D-Ara</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>5-O-(hydroxy{[(1R,2S,3R,4R,5S,6S)-2,3,4,5,6-pentahydroxycyclohexyl]oxy}phosphoryl)-beta-D-arabinofuranosyl-(1-&gt;2)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranosyl-(1-&gt;5)-alpha-D-arabinofuranose</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:35890</oboInOwl:id>
-    <rdfs:label>trimethylphosphine</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(CH3)3P</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Me3P</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PMe3</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>trimethyl phosphine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>trimethylphosphane</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>trimethylphosphine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>trimethylphosphorus</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:29515</oboInOwl:id>
-    <rdfs:label>ansamitocin P3</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>2'-De(acetylmethylamino)-2'-methylmaytansine</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Antibiotic C15003P3</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>C15003P3</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Maytansinol isobutyrate</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>ansamitocin P-3</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>(1S,2R,3S,5S,6S,16E,18E,20R,21S)-11-chloro-21-hydroxy-12,20-dimethoxy-2,5,9,16-tetramethyl-8,23-dioxo-4,24-dioxa-9,22-diazatetracyclo[19.3.1.1(10,14).0(3,5)]hexacosa-10(26),11,13,16,18-pentaen-6-yl 2-methylpropanoate</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:61862</oboInOwl:id>
-    <rdfs:label>3-O-(H2O3P)-beta-D-Glcp-(1-&gt;4)-[alpha-L-Rhap-(1-&gt;2)]-beta-D-Galp</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>(Gal)1 (Glc)1 (LRha)1 (P)1</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-O-(H2O3P)-beta-D-Glc-(1-&gt;4)-[alpha-L-Rha-(1-&gt;2)]-beta-D-Gal</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-O-phosphono-beta-D-glucosyl-(1-&gt;4)-[alpha-L-rhamnosyl-(1-&gt;2)]-beta-D-galactose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-P-beta-D-Glc-(1-&gt;4)-[alpha-L-Rha-(1-&gt;2)]-beta-D-Gal</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-P-beta-D-Glcp-(1-&gt;4)-[alpha-L-Rhap-(1-&gt;2)]-beta-D-Galp</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-deoxy-alpha-L-mannopyranosyl-(1-&gt;2)-[3-O-phosphono-beta-D-glucopyranosyl-(1-&gt;4)]-beta-D-galactopyranose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-O-phosphono-beta-D-glucopyranosyl-(1-&gt;4)-[alpha-L-rhamnopyranosyl-(1-&gt;2)]-beta-D-galactopyranose</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:61868</oboInOwl:id>
-    <rdfs:label>3-O-(H2O3P)-beta-D-Glcp-(1-&gt;4)-[alpha-L-Rhap-(1-&gt;2)]-beta-D-Galp-(1-&gt;4)-beta-L-Rhap</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>3-O-(H2O3P)-beta-D-Glc-(1-&gt;4)-[alpha-L-Rha-(1-&gt;2)]-beta-D-Gal-(1-&gt;4)-beta-L-Rha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-O-phosphono-beta-D-glucosyl-(1-&gt;4)-[alpha-L-rhamnosyl-(1-&gt;2)]-beta-D-galactosyl-(1-&gt;4)-beta-L-mannose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-P-beta-D-Glc-(1-&gt;4)-[alpha-L-Rha-(1-&gt;2)]-beta-D-Gal-(1-&gt;4)-beta-L-Rha</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-P-beta-D-Glcp-(1-&gt;4)-[alpha-L-Rhap-(1-&gt;2)]-beta-D-Galp-(1-&gt;4)-beta-L-Rhap</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>6-deoxy-alpha-L-mannopyranosyl-(1-&gt;2)-[3-O-phosphono-beta-D-glucopyranosyl-(1-&gt;4)]-beta-D-galactopyranosyl-(1-&gt;4)-6-deoxy-beta-L-mannopyranose</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>3-O-phosphono-beta-D-glucopyranosyl-(1-&gt;4)-[alpha-L-rhamnopyranosyl-(1-&gt;2)]-beta-D-galactopyranosyl-(1-&gt;4)-beta-L-mannopyranose</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:32904</oboInOwl:id>
-    <rdfs:label>twistane</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>tricyclo[4.4.0.0(3,8)]decane</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:30915</oboInOwl:id>
-    <rdfs:label>2-oxoglutaric acid</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>2-Ketoglutaric acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>Oxoglutaric acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-Ketoglutaric acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>alpha-ketoglutaric acid</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>2-oxopentanedioic acid</oboInOwl:hasRelatedSynonym>
-  </owl:Class>
-  <owl:Class>
-    <oboInOwl:id>CHEBI:26034</oboInOwl:id>
-    <rdfs:label>phosphatidylinositol 3-phosphate</rdfs:label>
-    <oboInOwl:hasRelatedSynonym>PI(3)P</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>PtdIns3P</oboInOwl:hasRelatedSynonym>
-    <oboInOwl:hasRelatedSynonym>phosphatidylinositol 3-phosphates</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:id>CHEBI:77731</oboInOwl:id>
+    <rdfs:label>p53 activator</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>cellular tumor antigen p53 activator</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>cellular tumor antigen p53 activators</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>p53 activators</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>phosphoprotein p53 activator</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>phosphoprotein p53 activators</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>tumor protein p53 activator</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>tumor protein p53 activators</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>tumour protein p53 activator</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>tumour protein p53 activators</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>tumour suppressor p53 activator</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>tumour suppressor p53 activators</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:80210</oboInOwl:id>
+    <rdfs:label>P55-TNFR</rdfs:label>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:80211</oboInOwl:id>
+    <rdfs:label>P75-TNFR</rdfs:label>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:90780</oboInOwl:id>
+    <rdfs:label>AKT1 kinase inhibitor</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>AKT1 kinase inhibitors</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>RAC-alpha serine/threonine-protein kinase inhibitor</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>RAC-alpha serine/threonine-protein kinase inhibitors</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:69277</oboInOwl:id>
+    <rdfs:label>isochlamydosporol</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>2H,5H-Pyrano(4,3-b)pyran-2-one, 7,8-dihydro-5-hydroxy-4-methoxy-7,8-dimethyl-</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:82058</oboInOwl:id>
+    <rdfs:label>Trichlamide</rdfs:label>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:141695</oboInOwl:id>
+    <rdfs:label>N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-ceramide(d20:0)(5-)</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>GP1c(d20:0)(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-N-acyleicosasphinganine(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;3)-beta-D-Gal-(1-&gt;3)-beta-D-GalNAc-(1-&gt;4)-[alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;3)]-beta-D-Gal-(1-&gt;4)-beta-D-Glc-(1&lt;-&gt;1')-Cer(d20:0)(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>ganglioside GP1c (d20:0)</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:141696</oboInOwl:id>
+    <rdfs:label>N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-ceramide(d20:1(4E))(5-)</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>GP1c(d20:1(4E))(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-N-acyleicosasphing-4E-enine(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-N-acyleicosasphingosine(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;3)-beta-D-Gal-(1-&gt;3)-beta-D-GalNAc-(1-&gt;4)-[alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;3)]-beta-D-Gal-(1-&gt;4)-beta-D-Glc-(1&lt;-&gt;1')-Cer(d20:1(4E))(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>ganglioside GP1c (d20:1(4E))</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:141697</oboInOwl:id>
+    <rdfs:label>N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-[N-acetyl-alpha-neuraminosyl-(2-&gt;6)]-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-ceramide(5-)</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>GP1calphaCer(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>alpha-NeuAc-(2-&gt;3)-beta-D-Gal-(1-&gt;3)-[alpha-NeuAc-(2-&gt;6)]-beta-D-GalNAc-(1-&gt;4)-[alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;3)]-beta-D-Gal-(1-&gt;4)-beta-D-Glc-(1&lt;-&gt;1')-Cer(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>ganglioside GP1c alpha</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:141704</oboInOwl:id>
+    <rdfs:label>N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-[N-acetyl-alpha-neuraminosyl-(2-&gt;6)]-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-ceramide(t18:0)(5-)</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>GP1calpha(t18:0)(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-[N-acetyl-alpha-neuraminosyl-(2-&gt;6)]-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-N-acyl-(4R)-hydroxysphinganine(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-[N-acetyl-alpha-neuraminosyl-(2-&gt;6)]-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-N-acylphytosphingosine(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>alpha-NeuAc-(2-&gt;3)-beta-D-Gal-(1-&gt;3)-[alpha-NeuAc-(2-&gt;6)]-beta-D-GalNAc-(1-&gt;4)-[alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;3)]-beta-D-Gal-(1-&gt;4)-beta-D-Glc-(1&lt;-&gt;1')-Cer(t18:0)(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>ganglioside GP1c alpha (t18:0)</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:141706</oboInOwl:id>
+    <rdfs:label>N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-[N-acetyl-alpha-neuraminosyl-(2-&gt;6)]-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-ceramide(d20:1(4E))(5-)</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>GP1calpha(d20:1(4E))(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-[N-acetyl-alpha-neuraminosyl-(2-&gt;6)]-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-N-acyleicosasphing-4E-enine(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>N-acetyl-alpha-neuraminosyl-(2-&gt;3)-beta-D-galactosyl-(1-&gt;3)-[N-acetyl-alpha-neuraminosyl-(2-&gt;6)]-N-acetyl-beta-D-galactosaminyl-(1-&gt;4)-[N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;8)-N-acetyl-alpha-neuraminosyl-(2-&gt;3)]-beta-D-galactosyl-(1-&gt;4)-beta-D-glucosyl-(1&lt;-&gt;1')-N-acyleicosasphingosine(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>alpha-NeuAc-(2-&gt;3)-beta-D-Gal-(1-&gt;3)-[alpha-NeuAc-(2-&gt;6)]-beta-D-GalNAc-(1-&gt;4)-[alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;8)-alpha-NeuAc-(2-&gt;3)]-beta-D-Gal-(1-&gt;4)-beta-D-Glc-(1&lt;-&gt;1')-Cer(d20:1(4E))(5-)</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>ganglioside GP1c alpha (d20:1(4E))</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:138614</oboInOwl:id>
+    <rdfs:label>aspirin-triggered resolvin D2</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>(4Z,7R,8E,10Z,12E,14E,16R,17R,19Z)-7,16,17-trihydroxydocosahexaenoic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>17-epi-RvD2</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>17-epi-resolvin D2</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>7S,16R,17R-trihydroxy-4Z,8E,10Z,12E,14E,19Z-docosahexaenoic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>AT-RvD2</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>aspirin-triggered RvD2</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>(4Z,7R,8E,10Z,12E,14E,16R,17R,19Z)-7,16,17-trihydroxydocosa-4,8,10,12,14,19-hexaenoic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>aspirin-triggered resolvin D2</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:138179</oboInOwl:id>
+    <rdfs:label>aspirin-triggered resolvin D1</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>(4Z,7S,8R,9E,11E,13Z,15E,17R,19Z)-7,8,17-trihydroxydocosahexaenoic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>17(R)-RvD1</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>17(R)-resolvin D1</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>17-epi-resolvin D1</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>7S,8R,17R-trihydroxy-4Z,9E,11E,13Z,15E,19Z-docosahexaenoic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>AT-Resolvin D1</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>AT-RvD1</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>(4Z,7S,8R,9E,11E,13Z,15E,17R,19Z)-7,8,17-trihydroxydocosa-4,9,11,13,15,19-hexaenoic acid</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:138617</oboInOwl:id>
+    <rdfs:label>aspirin-triggered resolvin D5</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>(5Z,7S,8E,10Z,13Z,15Z,17R,19Z)-7,17-dihydroxydocosahexaenoic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>17-epi-RvD2</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>17-epi-resolvin D5</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>AT-RvD5</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>aspirin-triggered RvD5</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>(5Z,7S,8E,10Z,13Z,15Z,17R,19Z)-7,17-dihydroxydocosa-5,8,10,13,15,19-hexaenoic acid</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:141699</oboInOwl:id>
+    <rdfs:label>aspirin-based probe AP</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>2-(1,3-benzothiazol-2-yl)-4-fluorophenyl salicylate</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>probe AP</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>2-(1,3-benzothiazol-2-yl)-4-fluorophenyl 2-(acetyloxy)benzoate</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>2-(1,3-benzothiazol-2-yl)-4-fluorophenyl 2-acetoxybenzoate</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:138618</oboInOwl:id>
+    <rdfs:label>aspirin-triggered resolvin D6</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>(4S,5E,7Z,10Z,13Z,15E,17R,19Z)-4,17-dihydroxydocosahexaenoic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>17-epi-RvD6</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>17-epi-resolvin D6</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>AT-RvD6</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>aspirin-triggered RvD6</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>(4S,5E,7Z,10Z,13Z,15E,17R,19Z)-4,17-dihydroxydocosa-5,7,10,13,15,19-hexaenoic acid</oboInOwl:hasRelatedSynonym>
+  </owl:Class>
+  <owl:Class>
+    <oboInOwl:id>CHEBI:15365</oboInOwl:id>
+    <rdfs:label>acetylsalicylic acid</rdfs:label>
+    <oboInOwl:hasRelatedSynonym>2-(ACETYLOXY)BENZOIC ACID</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>2-Acetoxybenzenecarboxylic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>2-acetoxybenzoic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>ASA</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>Acetylsalicylate</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>Acetylsalicylsaeure</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>Aspirin</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>Azetylsalizylsaeure</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>Easprin</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>O-acetylsalicylic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>acide 2-(acetyloxy)benzoique</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>acide acetylsalicylique</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>acido acetilsalicilico</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>acidum acetylsalicylicum</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>o-acetoxybenzoic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>o-carboxyphenyl acetate</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>salicylic acid acetate</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>2-(acetyloxy)benzoic acid</oboInOwl:hasRelatedSynonym>
+    <oboInOwl:hasRelatedSynonym>Acetylsalicylic acid</oboInOwl:hasRelatedSynonym>
   </owl:Class>
 </rdf:RDF>

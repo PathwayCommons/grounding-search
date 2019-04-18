@@ -28,9 +28,9 @@ const getEntryId = entry => {
 
 const namespace = 'chebi';
 const xmlEntries = buildIndex ? getXmlEntries() : [];
-const sampleEntityId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'CHEBI:53438';
+const sampleEntityId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'CHEBI:15365';
 const entryCount = xmlEntries.length;
-const sampleEntityNames = [ 'keto' ];
+const sampleEntityNames = [ 'aspirin' ];
 const datasource = chebi;
 
 let opts = { namespace, sampleEntityNames, sampleEntityId, entryCount, datasource, buildIndex };
