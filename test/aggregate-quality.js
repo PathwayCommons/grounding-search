@@ -17,6 +17,8 @@ const removeTestIndex = () => db.deleteIndex();
 const GENE_LIST = Object.keys( SEARCH_OBJECT );
 
 describe('Search and Get Aggregate', function(){
+  this.timeout(10000);
+
   if ( buildIndex ) {
     before(updateTestData);
     after(removeTestIndex);
