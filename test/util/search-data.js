@@ -1570,1394 +1570,325 @@ const caseStudies = [
     "xref_id": "5460",
     "namespace": "ncbi",
     "sentence": "We found that the expression of Fosl1 , Gli3 , Wwtr1 , Twist2 , Sox2 , Oct4 , and Nanog was increased in CRPC cells compared with PPC cells             ."
-   }
-  //  ,
-  //  {
-  //   "text": "Ltb",
-  //   "xref_id": "Q06643",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Knockdown of p65 in CRPC cells decreased the expression of CD44 , Icam1 , Ltb , Traf2 , Vcam1 , and Xiap             ."
-  //  },
-  //  {
-  //   "text": "Traf2",
-  //   "xref_id": "Q12933",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Knockdown of p65 in CRPC cells decreased the expression of CD44 , Icam1 , Ltb , Traf2 , Vcam1 , and Xiap             ."
-  //  },
-  //  {
-  //   "text": "Icam1",
-  //   "xref_id": "P05362",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Knockdown of p65 in CRPC cells decreased the expression of CD44 , Icam1 , Ltb , Traf2 , Vcam1 , and Xiap             ."
-  //  },
-  //  {
-  //   "text": "p-IkappaBalpha protein",
-  //   "xref_id": "UAZ00323",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "We found that the expression of miR-196b-3p and p-IkappaBalpha protein and the p65 activity were increased while the expression of IkappaBalpha , PPP3CC , and Meis2 protein was decreased in LN-CRPC cells compared with LN-PPC cells                         ."
-  //  },
-  //  {
-  //   "text": "paraffin",
-  //   "xref_id": "UAZ00325",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Similarly , immunohistochemistry ( IHC ) analysis of paraffin embedded human prostate tumor tissue sections showed that prostate cancers with high expression of p-IkappaBalpha and nuclear p65 had low expression of PPP3CC , Meis2 , and IkappaBalpha , while prostate cancers with low expression of p-IkappaBalpha and nuclear p65 had high expression of PPP3CC , Meis2 , and IkappaBalpha             ."
-  //  },
-  //  {
-  //   "text": "EMT",
-  //   "xref_id": "O75751",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Discussion Several cellular and molecular mechanisms are reported related to CRPC development , including an increase in intratumoral androgen biosynthesis , aberrant AR activation , crosstalk with other oncogenic pathways , reactivation of EMT processes , and upregulation of genes that regulate stemness and self-renewal ( Dutt and Gao , 2009 , Karantanos et al. , 2013 ) ."
-  //  },
-  //  {
-  //   "text": "non-IkappaBalpha",
-  //   "xref_id": "UAZ00327",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Therefore , selective inhibition of the constitutive NF-kappaB in tumor cells by targeting the individual non-IkappaBalpha and NF-kappaB components of the constitutive signaling circuit will keep the strong anti-cancer efficacy of NF-kappaB inhibition while avoiding NF-kappaB suppression in normal ( immune ) cells that would be highly efficient and relatively low or free of toxic side effects related to indiscriminate IKK and NF-kappaB inhibition ."
-  //  },
-  //  {
-  //   "text": "miR-196 sub-family",
-  //   "xref_id": "UAZ00336",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "MiR-196b is a member of the miR-196 sub-family , which comprises miR-196a and miR-196b ( Chen et al. , 2011 ) ."
-  //  },
-  //  {
-  //   "text": "miR-196",
-  //   "xref_id": "UAZ00335",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Accumulating studies demonstrates that miR-196 plays critical roles in normal development and in the pathogenesis of human diseases such as cancer ( He et al. , 2011 , Lu et al. , 2014 ) ."
-  //  },
-  //  {
-  //   "text": "HOX-C8",
-  //   "xref_id": "P31273",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Several genes have been reported as the direct targets of miR-196b , including HOX-A in acute lymphoblastic leukemia ( Schotte et al. , 2010 ) , HOX-C8 in breast cancer ( Li et al. , 2010 ) , and NME4 ( nucleoside diphosphate kinase 4 ) in oral cancer ( Lu et al. , 2014 ) ."
-  //  },
-  //  {
-  //   "text": "HOX-A",
-  //   "xref_id": "P31908",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Several genes have been reported as the direct targets of miR-196b , including HOX-A in acute lymphoblastic leukemia ( Schotte et al. , 2010 ) , HOX-C8 in breast cancer ( Li et al. , 2010 ) , and NME4 ( nucleoside diphosphate kinase 4 ) in oral cancer ( Lu et al. , 2014 ) ."
-  //  },
-  //  {
-  //   "text": "NME4",
-  //   "xref_id": "O00746",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Several genes have been reported as the direct targets of miR-196b , including HOX-A in acute lymphoblastic leukemia ( Schotte et al. , 2010 ) , HOX-C8 in breast cancer ( Li et al. , 2010 ) , and NME4 ( nucleoside diphosphate kinase 4 ) in oral cancer ( Lu et al. , 2014 ) ."
-  //  },
-  //  {
-  //   "text": "Myc-CaP allograft tumor",
-  //   "xref_id": "UAZ00315",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "CRPC Cells Are Highly Tumorigenic and Cancer Stem Cell like  ( A ) Tumorigenicity analysis in FVB male mice inoculated with indicated numbers of cultured Myc-CaP cells or primary cells purified from primary Myc-CaP allograft tumor ( PPC ) or castration resistant Myc-CaP allograft tumor ( CRPC ) ."
-  //  },
-  //  {
-  //   "text": "MTT",
-  //   "xref_id": "64965",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "( B ) Viability of cells was measured by the MTT assay ."
-  //  },
-  //  {
-  //   "text": "GST-IkappaBalpha-32P protein",
-  //   "xref_id": "UAZ00319",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( H ) In vitro dephosphorylation of GST-IkappaBalpha-32P protein by PPP3CC protein ."
-  //  },
-  //  {
-  //   "text": "A)-(D",
-  //   "xref_id": "UAZ00318",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The results in ( A )-( D ) and ( F )-( H ) represent the mean +/- SD of three independent experiments performed in triplicate ."
-  //  },
-  //  {
-  //   "text": "miR-196b-3p inhibitor",
-  //   "xref_id": "UAZ00304",
-  //   "namespace": "uaz",
-  //   "type": "simple-chemical",
-  //   "sentence": "( C ) Western blot analysis of Meis2 expression in CRPC cells treated with control or miR-196b-3p inhibitor for 48 hr ."
-  //  },
-  //  {
-  //   "text": "PPP3CC/p-IkappaBalpha/p65/miR-196b/Meis2 Circuit",
-  //   "xref_id": "UAZ00342",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "PPP3CC/p-IkappaBalpha/p65/miR-196b/Meis2 Circuit Promotes the Expression of Stem Cell Transcription Factors in CRPC  ( A ) Western blot analysis of PPP3CC expression in PPC cells transfected with scrambled ( Con-si ) or Meis2 siRNA ( Meis2-si ) for 48 hr ."
-  //  },
-  //  {
-  //   "text": "Twist",
-  //   "xref_id": "Q15672",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "( H and I ) qRT-PCR analysis of Twist , Sox2 , Oct4 , and Nanog mRNA expression in CRPC cells transfected with scrambled ( Con-si ) or p65 siRNA ( p65-si ) for 48 hr ( H ) or with control or miR-196b-3p inhibitor ( miR-196b-3p in ) for 48 hr ( I ) ."
-  //  },
-  //  {
-  //   "text": "PPP3CC/p-IkappaBalpha/p65/miR-196b/Meis2",
-  //   "xref_id": "UAZ00333",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The PPP3CC/p-IkappaBalpha/p65/miR-196b/Meis2 Circuit Is Manifested in Human Prostate Cancers  ( A ) Western blot analysis of indicated proteins in primary cells purified from primary ( LN-PPC ) or castration resistant ( LN-CRPC ) LNCaP xenograft tumors in Rag1-/- mice ."
-  //  },
-  //  {
-  //   "text": "RIG-I",
-  //   "xref_id": "O95786",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Phosphorylation Dependent Feedback Inhibition of RIG-I by DAPK1 Identified by Kinome-wide siRNA Screening ."
-  //  },
-  //  {
-  //   "text": "DAPK1",
-  //   "xref_id": "P53355",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Phosphorylation Dependent Feedback Inhibition of RIG-I by DAPK1 Identified by Kinome-wide siRNA Screening ."
-  //  },
-  //  {
-  //   "text": "Issue 3",
-  //   "xref_id": "UAZ00379",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Volume 65 , Issue 3 , pp403-415 ."
-  //  },
-  //  {
-  //   "text": "pp403-415",
-  //   "xref_id": "UAZ00372",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Volume 65 , Issue 3 , pp403-415 ."
-  //  },
-  //  {
-  //   "text": "DA",
-  //   "xref_id": "13730",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "8 February 02 , 2017  Willemsen J , Wicht O , Wolanski JC , Baur N , Bastian S , Haas DA , Matula P , Knapp B , Meyniel-Schicklin L , Wang C , Bartenschlager R , Lohmann V , Rohr K , Erfle H , Kaderali L , Marcotrigiano J , Pichlmair A , Binder M.  Cell-autonomous induction of type I interferon must be stringently regulated ."
-  //  },
-  //  {
-  //   "text": "Bastian S",
-  //   "xref_id": "UAZ00346",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "8 February 02 , 2017  Willemsen J , Wicht O , Wolanski JC , Baur N , Bastian S , Haas DA , Matula P , Knapp B , Meyniel-Schicklin L , Wang C , Bartenschlager R , Lohmann V , Rohr K , Erfle H , Kaderali L , Marcotrigiano J , Pichlmair A , Binder M.  Cell-autonomous induction of type I interferon must be stringently regulated ."
-  //  },
-  //  {
-  //   "text": "IRF3",
-  //   "xref_id": "Q14653",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Using unbiased kinome-wide RNAi screening followed by thorough validation , we identified 22 factors that regulate RIG-I and IRF3 signaling activity ."
-  //  },
-  //  {
-  //   "text": "interferon-beta",
-  //   "xref_id": "P01574",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "RIG-I signaling triggers DAPK1 kinase activation , and active DAPK1 potently inhibits RIG-I stimulated IRF3 activity and interferon-beta production ."
-  //  },
-  //  {
-  //   "text": "PRRs",
-  //   "xref_id": "UAZ00357",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "In vertebrates , virus infection elicits a rapid cell-autonomous immune response initiated by sensing of virus derived pathogen associated molecular patterns ( PAMPs ) by germline encoded pattern recognition receptors ( PRRs ) ."
-  //  },
-  //  {
-  //   "text": "pattern recognition receptors",
-  //   "xref_id": "UAZ00375",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "In vertebrates , virus infection elicits a rapid cell-autonomous immune response initiated by sensing of virus derived pathogen associated molecular patterns ( PAMPs ) by germline encoded pattern recognition receptors ( PRRs ) ."
-  //  },
-  //  {
-  //   "text": "RIG-I-like receptor",
-  //   "xref_id": "UAZ00345",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The PRRs of the RIG-I-like receptor ( RLR ) family detect virus derived RNAs ."
-  //  },
-  //  {
-  //   "text": "RLR",
-  //   "xref_id": "Q96C10",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "The PRRs of the RIG-I-like receptor ( RLR ) family detect virus derived RNAs ."
-  //  },
-  //  {
-  //   "text": "MAVS",
-  //   "xref_id": "Q7Z434",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Upon binding to stimulatory RNA , RIG-I undergoes conformational changes allowing it to bind and activate mitochondrial antiviral signaling protein ( MAVS ) ( Abbas et al. , 2013 , Binder et al. , 2011 , Hornung et al. , 2006 , Patel et al. , 2013 ) ."
-  //  },
-  //  {
-  //   "text": "TBK1",
-  //   "xref_id": "Q9UHD2",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Activated RIG-I and MAVS complexes recruit the kinases TBK1 and IKKepsilon , which , in turn , recruit and activate the transcription factor IRF3 ( Liu et al. , 2015 , McNab et al. , 2015 ) , as well as the canonical IKKs ( alpha , beta , and gamma ) to activate nuclear factor kappaB ( NF-kappaB ) ."
-  //  },
-  //  {
-  //   "text": "IKKepsilon",
-  //   "xref_id": "Q14164",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Activated RIG-I and MAVS complexes recruit the kinases TBK1 and IKKepsilon , which , in turn , recruit and activate the transcription factor IRF3 ( Liu et al. , 2015 , McNab et al. , 2015 ) , as well as the canonical IKKs ( alpha , beta , and gamma ) to activate nuclear factor kappaB ( NF-kappaB ) ."
-  //  },
-  //  {
-  //   "text": "IFIT1",
-  //   "xref_id": "P09914",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Simultaneous activation of IRF3 and NF-kappaB results in the production of type I and type III interferon ( IFN ) , proinflammatory cytokines as well as direct induction of antiviral genes such as IFIT1 ( Chan and Gack , 2015 ) ."
-  //  },
-  //  {
-  //   "text": "ISGs",
-  //   "xref_id": "UAZ00385",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Exposure of cells to IFNs induces expression of a broad panel of IFN stimulated genes ( ISGs ) , which act in concert to protect from virus infections ."
-  //  },
-  //  {
-  //   "text": "IFNs",
-  //   "xref_id": "UAZ00389",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Exposure of cells to IFNs induces expression of a broad panel of IFN stimulated genes ( ISGs ) , which act in concert to protect from virus infections ."
-  //  },
-  //  {
-  //   "text": "Fan",
-  //   "xref_id": "Q92636",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Fan Yang , Huafeng Zhang , Yide Mei , Mian Wu Volume 53 , Issue 1 , 9 January 2014 , Pages 88-100  Reciprocal Regulation of HIF-1alpha and LincRNA-p21 Modulates the Warburg Effect  Summary ."
-  //  },
-  //  {
-  //   "text": "PP1",
-  //   "xref_id": "PPP1",
-  //   "namespace": "be",
-  //   "type": "protein",
-  //   "sentence": "For example , activity promoting ubiquitylation of RIG-I ( Gack et al. , 2007 ) is balanced by deubiquitylation ( Cui et al. , 2014 , Fan et al. , 2014 ) , and activating dephosphorylation of RIG-I by PP1 ( Wies et al. , 2013 ) is countered by inhibitory phosphorylation through PKC ( Maharaj et al. , 2012 ) ."
-  //  },
-  //  {
-  //   "text": "eGFP",
-  //   "xref_id": "UAZ00386",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Cells were stimulated by transfection of poly ( I : C ) , which specifically triggers RIG-I-dependent signaling in these cells , and activation of antiviral signaling was quantified by assessing nuclear translocation of eGFP tagged IRF3                          ."
-  //  },
-  //  {
-  //   "text": "PPI",
-  //   "xref_id": "644102",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "We further performed network analyses to assess the connectivity of our hit candidates based on a curated human protein-protein-interaction ( PPI ) network ."
-  //  },
-  //  {
-  //   "text": "AKT1",
-  //   "xref_id": "P31749",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "In this network , AKT1 acted as a central hub directly linking to six other candidates , confirming its described role in regulating the induction of the IFN system ( Gantner et al. , 2012 ) ."
-  //  },
-  //  {
-  //   "text": "Renilla luciferase encoding Rift Valley fever virus",
-  //   "xref_id": "UAZ00348",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The most robust validation screen ( highest Z scores ) was based on A549 cells infected with a Renilla luciferase encoding Rift Valley fever virus ( RVFVDeltaNSs_RLuc ) , which is known to very efficiently trigger RIG-I signaling ( Kuri et al. , 2010 ) ."
-  //  },
-  //  {
-  //   "text": "RVFVDeltaNSs_RLuc",
-  //   "xref_id": "UAZ00378",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The most robust validation screen ( highest Z scores ) was based on A549 cells infected with a Renilla luciferase encoding Rift Valley fever virus ( RVFVDeltaNSs_RLuc ) , which is known to very efficiently trigger RIG-I signaling ( Kuri et al. , 2010 ) ."
-  //  },
-  //  {
-  //   "text": "STAR",
-  //   "xref_id": "P25092",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "We considered a hit validated when its effect was significant in the primary , the RVFV and at least one other validation screen ( see STAR Methods ) ."
-  //  },
-  //  {
-  //   "text": "AAK1",
-  //   "xref_id": "Q2M2I8",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Twenty-one identified hits ( AAK1 was excluded for technical reasons ) were further characterized with respect to their effect on RIG-I-mediated IRF3 activation upon knockdown or overexpression in 293TRIG-I cells ."
-  //  },
-  //  {
-  //   "text": "luciferase reporter",
-  //   "xref_id": "UAZ00394",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "For the knockdown setting , the respective siRNA yielding the strongest effect in validation screening was used and IRF3 activity ( IFIT1 promoter ) luciferase reporter activation as well as endogenous IFIT1 mRNA production were assessed                         ."
-  //  },
-  //  {
-  //   "text": "hit genes",
-  //   "xref_id": "UAZ00354",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To complement gene silencing , we further obtained cDNAs for all hit genes and assessed the effect of their overexpression on RIG-I-mediated IRF3 activation ."
-  //  },
-  //  {
-  //   "text": "NP",
-  //   "xref_id": "O60259",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Staining the viral NP protein and subsequent flow-cytometric analysis demonstrated reproducible and potent effects on the number of FLUAV positive cells for a majority of genes            ."
-  //  },
-  //  {
-  //   "text": "Ankyrin",
-  //   "xref_id": "UAZ00352",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "DAPK1 is a 160-kDa Ca2 +-/calmodulin ( CaM )-dependent serine/threonine kinase , comprised of an N-terminal kinase domain followed by a regulatory CaM binding domain , eight Ankyrin repeats , a cytoskeleton associating ROC-COR domain and a C-terminal death domain ( schematic in Figure 4A , interaction network in Figure S1B ) ( Carlessi et al. , 2011 ) ."
-  //  },
-  //  {
-  //   "text": "RVFV",
-  //   "xref_id": "UAZ00398",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Accordingly , silencing of DAPK1 had profound negative effects on viral replication , both for RVFV            , as well as for FLUAV            ."
-  //  },
-  //  {
-  //   "text": "Ankyrin Repeats",
-  //   "xref_id": "UAZ00355",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "DAPK1 Kinase Activity and Ankyrin Repeats Are Essential for RIG-I Pathway Inhibition In order to dissect which domains of DAPK1             are essential for mediating its inhibitory effect on RIG-I signaling , a series of deletion mutants were tested for their ability to inhibit IRF3 activation ."
-  //  },
-  //  {
-  //   "text": "ROC-,",
-  //   "xref_id": "UAZ00366",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The death domain , the ROC-, and the regulatory CaM binding domains were dispensable for the inhibitory effect on IRF3 activation ."
-  //  },
-  //  {
-  //   "text": "Kin",
-  //   "xref_id": "O60870",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Indeed , we could identify a minimal construct comprising only the kinase-, CaM binding , and Ankyrin repeats domains ( Kin | CaM | Ank ) to be sufficient to confer the complete inhibition of IRF3 activation            ."
-  //  },
-  //  {
-  //   "text": "Ank",
-  //   "xref_id": "P16157",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Indeed , we could identify a minimal construct comprising only the kinase-, CaM binding , and Ankyrin repeats domains ( Kin | CaM | Ank ) to be sufficient to confer the complete inhibition of IRF3 activation            ."
-  //  },
-  //  {
-  //   "text": "Ankyrin repeats domains",
-  //   "xref_id": "UAZ00370",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Indeed , we could identify a minimal construct comprising only the kinase-, CaM binding , and Ankyrin repeats domains ( Kin | CaM | Ank ) to be sufficient to confer the complete inhibition of IRF3 activation            ."
-  //  },
-  //  {
-  //   "text": "Ankyrin repeats domain",
-  //   "xref_id": "UAZ00350",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "These findings support the notion that DAPK1 's capacity to inhibit antiviral signaling strongly depends on its Ankyrin repeats domain as well as on the enzymatic activity of its kinase domain ."
-  //  },
-  //  {
-  //   "text": "CCCP",
-  //   "xref_id": "2603",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "The most critical step to activate its kinase activity is dephosphorylation of p-S308 , which can be triggered by mitochondrial uncoupling , e.g. , by treatment of cells with a protonophore such as CCCP ( Shang et al. , 2005 ) ."
-  //  },
-  //  {
-  //   "text": "p-S308",
-  //   "xref_id": "UAZ00388",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The most critical step to activate its kinase activity is dephosphorylation of p-S308 , which can be triggered by mitochondrial uncoupling , e.g. , by treatment of cells with a protonophore such as CCCP ( Shang et al. , 2005 ) ."
-  //  },
-  //  {
-  //   "text": "S5C-S5H",
-  //   "xref_id": "UAZ00401",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "A repetition ( total n = 3 ) of this experiment is shown in Figures S5C-S5H , in which secretion rates ( as opposed to accumulated levels in supernatant ) were determined for IFN-beta ."
-  //  },
-  //  {
-  //   "text": "TRADD",
-  //   "xref_id": "Q15628",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "We therefore screened the most prominent canonical signal transducers of the pathway , namely , RIG-I , MAVS , TRADD , TBK1 , IKKepsilon , IRF3 , and IRF7 for interaction with DAPK1 ."
-  //  },
-  //  {
-  //   "text": "IRF7",
-  //   "xref_id": "Q92985",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "We therefore screened the most prominent canonical signal transducers of the pathway , namely , RIG-I , MAVS , TRADD , TBK1 , IKKepsilon , IRF3 , and IRF7 for interaction with DAPK1 ."
-  //  },
-  //  {
-  //   "text": "gamma32P-ATP",
-  //   "xref_id": "UAZ00399",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "For this purpose , we performed in vitro kinase assays using Strep-tag affinity purified DAPK1Kin | CaM | ANK and recombinant RIG-I in the presence of gamma32P-ATP ."
-  //  },
-  //  {
-  //   "text": "DAPK1K42A",
-  //   "xref_id": "UAZ00397",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "This phosphorylation was approximately 50 % less efficient in the absence of CaM and basically absent in the enzymatically inactive DAPK1K42A control , highlighting the specificity for DAPK1 and ruling out artifacts by potentially co-purifying cellular kinases ."
-  //  },
-  //  {
-  //   "text": "DAPK1K42A variant",
-  //   "xref_id": "UAZ00360",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Seven phosphorylation sites on RIG-I were unambiguously identified in samples containing enzymatically active DAPK1 , but not the enzymatically inactive DAPK1K42A variant or an unrelated control protein            ."
-  //  },
-  //  {
-  //   "text": "Hel2 region",
-  //   "xref_id": "UAZ00373",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Cluster I was located in the Hel2 region of the helicase domain , and cluster II in the pincer domain of RIG-I            ."
-  //  },
-  //  {
-  //   "text": "S8",
-  //   "xref_id": "66348",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "In addition , we further identified the very N-terminal serine at position 8 ( S8 ) to be phosphorylated by DAPK1 ."
-  //  },
-  //  {
-  //   "text": "tip",
-  //   "xref_id": "O75663",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Upon binding of RIG-I to certain RNAs , such as 5 '-OH-hairpinRNA , the motif forms an alpha-helix and a loop , with cluster I residue T667 residing at the very tip of this loop            ."
-  //  },
-  //  {
-  //   "text": "RIG-IT667E",
-  //   "xref_id": "UAZ00349",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Furthermore , less 5 ' ppp-dsRNA could be co-precipitated with RIG-IT667E and RIG-IT667E and T671E as compared to RIG-IWT            ."
-  //  },
-  //  {
-  //   "text": "RIG-IWT",
-  //   "xref_id": "UAZ00395",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Furthermore , less 5 ' ppp-dsRNA could be co-precipitated with RIG-IT667E and RIG-IT667E and T671E as compared to RIG-IWT            ."
-  //  },
-  //  {
-  //   "text": "A549RIG-I",
-  //   "xref_id": "UAZ00374",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To confirm the strong inhibitory effect of T667 phosphorylation in a more physiological setting , we stably reconstituted A549RIG-I KO cells with RIG-I by lentiviral transduction , either with the wild-type ( WT ) form or the phosphomimetic variants , and infected these cells with FLUAV ."
-  //  },
-  //  {
-  //   "text": "IFNlambda",
-  //   "xref_id": "UAZ00365",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "For WT and S8E , we observed robust induction of IFIT1 protein and secretion of IFNlambda upon FLUAV infection , whereas phosphomimetics of the cluster I residues , including the individual T667E mutation , almost completely abrogated IFIT1 and IFNlambda induction                    ."
-  //  },
-  //  {
-  //   "text": "inositol",
-  //   "xref_id": "892",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "The Krishnan screen revealed a functionally important role of inositol pyrophosphates in the induction of type I IFN ."
-  //  },
-  //  {
-  //   "text": "ITPKC",
-  //   "xref_id": "Q96DU7",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "While our screen did not identify ( or not cover ) the same genes as theirs , functional annotation clustering did reveal a strong enrichment of candidate genes in phosphatidylinositol and inositolphosphate metabolism and signaling , including PI3K enzymes and ITPKC ( Data S2 , cluster 2 ) ."
-  //  },
-  //  {
-  //   "text": "CTNNB1",
-  //   "xref_id": "P35222",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "A recent report has shown that lincRNA-p21 can bind JUNB and CTNNB1 mRNAs and suppress their translation ( Yoon et al. , 2012 ) ."
-  //  },
-  //  {
-  //   "text": "CSNK1G2",
-  //   "xref_id": "P78368",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "In line with their model , in our primary screen we found significant effects for isoforms of canonical downstream kinases of Wnt signaling , such as GSK3alpha and GSK3beta or the CSNK1A1 paralog CSNK1G2 and the closely related CSNK1A1L ."
-  //  },
-  //  {
-  //   "text": "CSNK1A1L",
-  //   "xref_id": "Q8N752",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "In line with their model , in our primary screen we found significant effects for isoforms of canonical downstream kinases of Wnt signaling , such as GSK3alpha and GSK3beta or the CSNK1A1 paralog CSNK1G2 and the closely related CSNK1A1L ."
-  //  },
-  //  {
-  //   "text": "CSNK1A1",
-  //   "xref_id": "P48729",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "In line with their model , in our primary screen we found significant effects for isoforms of canonical downstream kinases of Wnt signaling , such as GSK3alpha and GSK3beta or the CSNK1A1 paralog CSNK1G2 and the closely related CSNK1A1L ."
-  //  },
-  //  {
-  //   "text": "Gsk3beta",
-  //   "xref_id": "P49841",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Consistently , genetic abrogation of Gsk3alpha or Gsk3beta led to a decrease in Foxk1 phosphorylation , an effect more pronounced in Gsk3alpha-/- cells in which Gsk3beta was knocked down            ."
-  //  },
-  //  {
-  //   "text": "Gsk3alpha",
-  //   "xref_id": "P49840",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Consistently , genetic abrogation of Gsk3alpha or Gsk3beta led to a decrease in Foxk1 phosphorylation , an effect more pronounced in Gsk3alpha-/- cells in which Gsk3beta was knocked down            ."
-  //  },
-  //  {
-  //   "text": "Hk2",
-  //   "xref_id": "O00139",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-  //  },
-  //  {
-  //   "text": "Pfkl",
-  //   "xref_id": "P17858",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-  //  },
-  //  {
-  //   "text": "PKLR",
-  //   "xref_id": "P30613",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "One such functional module is glucose metabolism ( Data S2 , cluster 17 ) : out of four kinase activities required for core glycolysis , isoforms of three were identified as hit candidates in our screen ( HK2 , PKLR , and PFKL ) ."
-  //  },
-  //  {
-  //   "text": "IRFs",
-  //   "xref_id": "UAZ00380",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Possibly , a second , independent effect of DAPK1 at the level of the IRFs is dominant in their cell system ."
-  //  },
-  //  {
-  //   "text": "PAMP",
-  //   "xref_id": "P35318",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Instead , we found that DAPK1 interacts with the PAMP sensor RIG-I ."
-  //  },
-  //  {
-  //   "text": "PKCalpha and beta",
-  //   "xref_id": "UAZ00392",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "In line with our model of kinase activity dependent inhibition of RIG-I , one of these residues was serine 8 , phosphorylation of which by PKCalpha and beta has been described before to negatively regulate RIG-I activation ( Nistal-Villan et al. , 2010 , Wies et al. , 2013 ) ."
-  //  },
-  //  {
-  //   "text": "ID",
-  //   "xref_id": "P41134",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Enrichment p values calculated with Fisher 's exact test and indicated in the figure ; for PPI maps of hit candidates ,                 ( D ) Validation screening based on Rift Valley fever virus ( RVFV ) : Renilla luciferase encoding RVFVDeltaNSs replication in siRNA transfected A549Ago2 cells ; two siRNAs per candidate gene ( QIAGEN siRNA ID indicated ) ."
-  //  },
-  //  {
-  //   "text": "panel",
-  //   "xref_id": "UAZ00369",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Lower panel : IRF3 luciferase reporter activity in 293TRIG-I cells transfected with increasing amounts of expression constructs ( 0 , 100 , 500 , 700 ng of plasmid DNA ) and subsequently ( 8 hr post transfection [ p.t. ] ) stimulated by transfection of poly ( I : C ) ."
-  //  },
-  //  {
-  //   "text": "IRF3 luciferase reporter",
-  //   "xref_id": "UAZ00387",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Lower panel : IRF3 luciferase reporter activity in 293TRIG-I cells transfected with increasing amounts of expression constructs ( 0 , 100 , 500 , 700 ng of plasmid DNA ) and subsequently ( 8 hr post transfection [ p.t. ] ) stimulated by transfection of poly ( I : C ) ."
-  //  },
-  //  {
-  //   "text": "post",
-  //   "xref_id": "Q2M3R5",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Lower panel : IRF3 luciferase reporter activity in 293TRIG-I cells transfected with increasing amounts of expression constructs ( 0 , 100 , 500 , 700 ng of plasmid DNA ) and subsequently ( 8 hr post transfection [ p.t. ] ) stimulated by transfection of poly ( I : C ) ."
-  //  },
-  //  {
-  //   "text": "hit gene",
-  //   "xref_id": "UAZ00381",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( B ) A549 cells were transfected with siRNAs against the indicated hit gene or RIG-I as a positive control and infected with influenza A virus ( FLUAV ) ."
-  //  },
-  //  {
-  //   "text": "hit gene targeting siRNA (+)",
-  //   "xref_id": "UAZ00356",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Data show four independent experiments , each as a pairwise comparison of negative control siRNA (-) against hit gene targeting siRNA ( + ) ."
-  //  },
-  //  {
-  //   "text": "TCID50",
-  //   "xref_id": "UAZ00361",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( C ) Virus production was measured by TCID50 upon low MOI infection ( MOI = 0.001 ) of A549 cells silenced for DAPK1 ."
-  //  },
-  //  {
-  //   "text": "NF-kappaB luciferase",
-  //   "xref_id": "UAZ00343",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Silencing of DAPK1 lead to increased activity of IRF3 and NF-kappaB luciferase reporters , as well as to increased expression of IFN-beta mRNA ."
-  //  },
-  //  {
-  //   "text": "ISG",
-  //   "xref_id": "UAZ00393",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Signaling through the antiviral RIG-I and IRF3 pathway monitored by detecting phosphorylated TBK1 ( pTBK1 ) and IRF3 ( pIRF3 ) and induction of RIG-I expression ( RIG-I is an ISG ) ."
-  //  },
-  //  {
-  //   "text": "DAKP1",
-  //   "xref_id": "UAZ00376",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Activation of DAKP1 with the protonophore CCCP served as a positive control ( bottom panel ) ."
-  //  },
-  //  {
-  //   "text": "calnexin",
-  //   "xref_id": "P27824",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Loading control was calnexin ."
-  //  },
-  //  {
-  //   "text": "pS308-DAPK1",
-  //   "xref_id": "UAZ00382",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( B ) Densitometric quantification of immunoblot signals for pS308-DAPK1 and pTBK1 plotted over time post-5 ' ppp-dsRNA transfection ; values are normalized to loading controls and the respective total protein levels of DAPK1 and TBK1 ."
-  //  },
-  //  {
-  //   "text": "Cas9",
-  //   "xref_id": "J3F2B0",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "( C ) Activation of DAPK1 is dependent on active antiviral signaling , as transfection of RIG-I CRISPR and Cas9 knockout cells ( A549RIG-I KO ) with 5 ' ppp-dsRNA does not trigger pS308 dephosphorylation ."
-  //  },
-  //  {
-  //   "text": "siDAPK1_1",
-  //   "xref_id": "UAZ00390",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( D-H ) Analysis of mock or DAPK1 silenced ( siDAPK1_1 ) A549 cells stimulated by transfection of 5 ' ppp-dsRNA for the indicated time span ( 0-24 hr ) ."
-  //  },
-  //  {
-  //   "text": "DAPK1WT",
-  //   "xref_id": "UAZ00351",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( D ) In vitro gamma-32P-ATP phosphorylation assay using Strep-tag affinity purified Kin | CaM | Ank of wild-type DAPK1 ( DAPK1WT ) or enzymatically inactive DAPK1K42A and recombinant RIG-I ."
-  //  },
-  //  {
-  //   "text": "log2",
-  //   "xref_id": "Q5BPS0",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Measurements were performed in duplicates from three independent in vitro experiments ; log2 intensities are indicated by color ."
-  //  },
-  //  {
-  //   "text": "PDBID 5F9F",
-  //   "xref_id": "UAZ00396",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( B ) Phosphorylation of threonine 667 modeled into the crystal structure of 5 '-OH-dsRNA-bound RIG-I ( PDBID 5F9F ) ."
-  //  },
-  //  {
-  //   "text": "Cas9 knockout",
-  //   "xref_id": "UAZ00371",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( D-F ) IFIT1 immunoblotting ( D ) , IFN-lambda ELISA ( E ) , and flow-cytometric analysis ( F ) of A549RIG-I KO ( CRISPR and Cas9 knockout ) cells reconstituted with RIG-IWT or the indicated phosphomimetic mutant and infected with FLUAV ."
-  //  },
-  //  {
-  //   "text": "CRISPR",
-  //   "xref_id": "UAZ00400",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( D-F ) IFIT1 immunoblotting ( D ) , IFN-lambda ELISA ( E ) , and flow-cytometric analysis ( F ) of A549RIG-I KO ( CRISPR and Cas9 knockout ) cells reconstituted with RIG-IWT or the indicated phosphomimetic mutant and infected with FLUAV ."
-  //  },
-  //  {
-  //   "text": "cluster I sites",
-  //   "xref_id": "UAZ00362",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Phosphorylation of cluster I sites abrogates IFN production and ISG expression and promotes FLUAV replication ."
-  //  },
-  //  {
-  //   "text": "Hif1alpha",
-  //   "xref_id": "Q16665",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Foxk1 transcriptionally regulates Hif1alpha expression ."
-  //  },
-  //  {
-  //   "text": "LincRNA-p21",
-  //   "xref_id": "UAZ00410",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Fan Yang , Huafeng Zhang , Yide Mei , Mian Wu Volume 53 , Issue 1 , 9 January 2014 , Pages 88-100  Reciprocal Regulation of HIF-1alpha and LincRNA-p21 Modulates the Warburg Effect  Summary ."
-  //  },
-  //  {
-  //   "text": "Mei",
-  //   "xref_id": "6328",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Fan Yang , Huafeng Zhang , Yide Mei , Mian Wu Volume 53 , Issue 1 , 9 January 2014 , Pages 88-100  Reciprocal Regulation of HIF-1alpha and LincRNA-p21 Modulates the Warburg Effect  Summary ."
-  //  },
-  //  {
-  //   "text": "Mian Wu\nVolume 53",
-  //   "xref_id": "UAZ00434",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Fan Yang , Huafeng Zhang , Yide Mei , Mian Wu Volume 53 , Issue 1 , 9 January 2014 , Pages 88-100  Reciprocal Regulation of HIF-1alpha and LincRNA-p21 Modulates the Warburg Effect  Summary ."
-  //  },
-  //  {
-  //   "text": "VHL",
-  //   "xref_id": "P40337",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Hypoxia and HIF-1alpha-induced lincRNA-p21 is able to bind HIF-1alpha and VHL and thus disrupts the VHL-HIF-1alpha interaction ."
-  //  },
-  //  {
-  //   "text": "VHL-HIF-1alpha",
-  //   "xref_id": "UAZ00407",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Hypoxia and HIF-1alpha-induced lincRNA-p21 is able to bind HIF-1alpha and VHL and thus disrupts the VHL-HIF-1alpha interaction ."
-  //  },
-  //  {
-  //   "text": "HIF-1beta",
-  //   "xref_id": "P27540",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "HIF-1 is a heterodimeric transcription factor , consisting of HIF-1alpha ( and subsequently HIF-2alpha and HIF-3alpha ) as the O2 responsive subunit and HIF-1beta as the constitutively expressed subunit ( Schofield and Ratcliffe , 2004 ) ."
-  //  },
-  //  {
-  //   "text": "HIF-2alpha",
-  //   "xref_id": "Q99814",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "HIF-1 is a heterodimeric transcription factor , consisting of HIF-1alpha ( and subsequently HIF-2alpha and HIF-3alpha ) as the O2 responsive subunit and HIF-1beta as the constitutively expressed subunit ( Schofield and Ratcliffe , 2004 ) ."
-  //  },
-  //  {
-  //   "text": "HIF-3alpha",
-  //   "xref_id": "Q9Y2N7",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "HIF-1 is a heterodimeric transcription factor , consisting of HIF-1alpha ( and subsequently HIF-2alpha and HIF-3alpha ) as the O2 responsive subunit and HIF-1beta as the constitutively expressed subunit ( Schofield and Ratcliffe , 2004 ) ."
-  //  },
-  //  {
-  //   "text": "PHD",
-  //   "xref_id": "P20941",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Under normoxic conditions , HIF-1alpha is hydroxylated on proline residue 402 and/or 564 by proline hydroxylase domain ( PHD ) proteins ( Kaelin and Ratcliffe , 2008 ) ."
-  //  },
-  //  {
-  //   "text": "Ubiquitin",
-  //   "xref_id": "P0CG47",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "14-3-3 Proteins Facilitate the Ubiquitin Mediated Degradation of CBF1 and CBF3 We further assessed the significance of interaction between 14-3-3 proteins and CBF proteins ."
-  //  },
-  //  {
-  //   "text": "proteasome",
-  //   "xref_id": "Proteasome",
-  //   "namespace": "be",
-  //   "type": "protein",
-  //   "sentence": "In this study , we found that the plasma membrane localized kinase cold responsive protein kinase 1 ( CRPK1 ) is activated by cold stress and phosphorylates 14-3-3 proteins , which in turn translocate from the cytoplasm into the nucleus to promote the degradation of CBFs via the 26S proteasome pathway ."
-  //  },
-  //  {
-  //   "text": "CoA",
-  //   "xref_id": "6816",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "It has been shown that , under hypoxic conditions , activation of HIF-1alpha contributes to the Warburg effect through coordinated upregulation of glycolysis and downregulation of oxidative phosphorylation , both of which are mainly achieved by inducing expression of the following : ( 1 ) glucose transporters such as Glut1 to increase glucose uptake ( Iyer et al. , 1998 , Ryan et al. , 1998 , Wood et al. , 1998 ) , ( 2 ) glycolytic enzymes to accelerate flux from glucose to pyruvate ( Iyer et al. , 1998 ) , ( 3 ) pyruvate dehydrogenase kinase 1 ( PDK1 ) to inhibit the conversion of pyruvate to acetyl CoA ( Kim et al. , 2006 , Papandreou et al. , 2006 ) , and ( 4 ) lactate dehydrogenase A ( LDHA ) to promote pyruvate-to-lactate conversion ( Iyer et al. , 1998 , Ryan et al. , 1998 ) ."
-  //  },
-  //  {
-  //   "text": "Glut1",
-  //   "xref_id": "P11166",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "It has been shown that , under hypoxic conditions , activation of HIF-1alpha contributes to the Warburg effect through coordinated upregulation of glycolysis and downregulation of oxidative phosphorylation , both of which are mainly achieved by inducing expression of the following : ( 1 ) glucose transporters such as Glut1 to increase glucose uptake ( Iyer et al. , 1998 , Ryan et al. , 1998 , Wood et al. , 1998 ) , ( 2 ) glycolytic enzymes to accelerate flux from glucose to pyruvate ( Iyer et al. , 1998 ) , ( 3 ) pyruvate dehydrogenase kinase 1 ( PDK1 ) to inhibit the conversion of pyruvate to acetyl CoA ( Kim et al. , 2006 , Papandreou et al. , 2006 ) , and ( 4 ) lactate dehydrogenase A ( LDHA ) to promote pyruvate-to-lactate conversion ( Iyer et al. , 1998 , Ryan et al. , 1998 ) ."
-  //  },
-  //  {
-  //   "text": "pyruvate",
-  //   "xref_id": "1060",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Interestingly , gene set enrichment analysis ( GSEA ) showed that the most significantly altered pathways were metabolic pathways , including glycolysis and gluconeogenesis , pyruvate metabolism , galactose metabolism , steroid biosynthesis , and amino acid and nucleotide metabolism                ."
-  //  },
-  //  {
-  //   "text": "PDK1",
-  //   "xref_id": "Q15118",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "It has been shown that , under hypoxic conditions , activation of HIF-1alpha contributes to the Warburg effect through coordinated upregulation of glycolysis and downregulation of oxidative phosphorylation , both of which are mainly achieved by inducing expression of the following : ( 1 ) glucose transporters such as Glut1 to increase glucose uptake ( Iyer et al. , 1998 , Ryan et al. , 1998 , Wood et al. , 1998 ) , ( 2 ) glycolytic enzymes to accelerate flux from glucose to pyruvate ( Iyer et al. , 1998 ) , ( 3 ) pyruvate dehydrogenase kinase 1 ( PDK1 ) to inhibit the conversion of pyruvate to acetyl CoA ( Kim et al. , 2006 , Papandreou et al. , 2006 ) , and ( 4 ) lactate dehydrogenase A ( LDHA ) to promote pyruvate-to-lactate conversion ( Iyer et al. , 1998 , Ryan et al. , 1998 ) ."
-  //  },
-  //  {
-  //   "text": "LDHA",
-  //   "xref_id": "P00338",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "It has been shown that , under hypoxic conditions , activation of HIF-1alpha contributes to the Warburg effect through coordinated upregulation of glycolysis and downregulation of oxidative phosphorylation , both of which are mainly achieved by inducing expression of the following : ( 1 ) glucose transporters such as Glut1 to increase glucose uptake ( Iyer et al. , 1998 , Ryan et al. , 1998 , Wood et al. , 1998 ) , ( 2 ) glycolytic enzymes to accelerate flux from glucose to pyruvate ( Iyer et al. , 1998 ) , ( 3 ) pyruvate dehydrogenase kinase 1 ( PDK1 ) to inhibit the conversion of pyruvate to acetyl CoA ( Kim et al. , 2006 , Papandreou et al. , 2006 ) , and ( 4 ) lactate dehydrogenase A ( LDHA ) to promote pyruvate-to-lactate conversion ( Iyer et al. , 1998 , Ryan et al. , 1998 ) ."
-  //  },
-  //  {
-  //   "text": "ISCU1/2",
-  //   "xref_id": "UAZ00477",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "A recent report has shown that , besides regulating protein coding genes expression , hypoxia and HIF-1alpha is able to induce expression of a microRNA-210 , which in turn decreases the expression of the iron-sulfur cluster assembly proteins ISCU1/2 , thereby repressing oxidative phosphorylation ( Chan et al. , 2009 ) ."
-  //  },
-  //  {
-  //   "text": "NEAT1",
-  //   "xref_id": "UAZ00417",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The bioinformatics analysis revealed that promoter regions of six known lncRNAs ( lincRNA-p21 , linc-ROR , MALAT1 , NEAT1 , HOTAIR , and A7 ) contain potential HREs                              ."
-  //  },
-  //  {
-  //   "text": "linc-ROR",
-  //   "xref_id": "UAZ00464",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The bioinformatics analysis revealed that promoter regions of six known lncRNAs ( lincRNA-p21 , linc-ROR , MALAT1 , NEAT1 , HOTAIR , and A7 ) contain potential HREs                              ."
-  //  },
-  //  {
-  //   "text": "HOTAIR",
-  //   "xref_id": "UAZ00424",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The bioinformatics analysis revealed that promoter regions of six known lncRNAs ( lincRNA-p21 , linc-ROR , MALAT1 , NEAT1 , HOTAIR , and A7 ) contain potential HREs                              ."
-  //  },
-  //  {
-  //   "text": "MALAT1",
-  //   "xref_id": "Q9UHZ2",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "The bioinformatics analysis revealed that promoter regions of six known lncRNAs ( lincRNA-p21 , linc-ROR , MALAT1 , NEAT1 , HOTAIR , and A7 ) contain potential HREs                              ."
-  //  },
-  //  {
-  //   "text": "sh-lincRNA-p21-3",
-  //   "xref_id": "UAZ00463",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Therefore , unless specified otherwise , sh-lincRNA-p21-3 was used in the subsequent studies ."
-  //  },
-  //  {
-  //   "text": "lincRNA-p21 knockdown",
-  //   "xref_id": "UAZ00421",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "All these hypoxia induced effects , however , were greatly reversed by lincRNA-p21 knockdown                , suggesting that lincRNA-p21 functions as a critical mediator of hypoxia enhanced glycolysis ."
-  //  },
-  //  {
-  //   "text": "HRE-luciferase",
-  //   "xref_id": "UAZ00461",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "HIF-1alpha acts by binding to HIF-1alpha response element ( HRE ) upon hypoxia ; we thereby utilized HRE-luciferase reporter system to examine how lincRNA-p21 affects HIF-1alpha-regulated luciferase expression ."
-  //  },
-  //  {
-  //   "text": "HRE",
-  //   "xref_id": "UAZ00465",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "HIF-1alpha acts by binding to HIF-1alpha response element ( HRE ) upon hypoxia ; we thereby utilized HRE-luciferase reporter system to examine how lincRNA-p21 affects HIF-1alpha-regulated luciferase expression ."
-  //  },
-  //  {
-  //   "text": "HIF-1alpha response element",
-  //   "xref_id": "UAZ00426",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "HIF-1alpha acts by binding to HIF-1alpha response element ( HRE ) upon hypoxia ; we thereby utilized HRE-luciferase reporter system to examine how lincRNA-p21 affects HIF-1alpha-regulated luciferase expression ."
-  //  },
-  //  {
-  //   "text": "wild-type reporter",
-  //   "xref_id": "UAZ00468",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Moreover , when HIF-1alpha activity was inhibited by treatment with digoxin ( a potent inhibitor of HIF-1alpha [ Zhang et al. , 2008 ] ) or by reducing HIF-1alpha expression using its specific shRNA , lincRNA-p21 knockdown failed to show any effect on wild-type reporter activity under hypoxia                               , implying that lincRNA-p21 indeed affects hypoxia induced transcription via HIF-1alpha ."
-  //  },
-  //  {
-  //   "text": "digoxin",
-  //   "xref_id": "53477737",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Moreover , when HIF-1alpha activity was inhibited by treatment with digoxin ( a potent inhibitor of HIF-1alpha [ Zhang et al. , 2008 ] ) or by reducing HIF-1alpha expression using its specific shRNA , lincRNA-p21 knockdown failed to show any effect on wild-type reporter activity under hypoxia                               , implying that lincRNA-p21 indeed affects hypoxia induced transcription via HIF-1alpha ."
-  //  },
-  //  {
-  //   "text": "sh-lincRNA-p21",
-  //   "xref_id": "UAZ00411",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To rule out the off-target effect of sh-lincRNA-p21 , we generated a shRNA resistant lincRNA-p21-expressing plasmid ."
-  //  },
-  //  {
-  //   "text": "exogenous HIF-1alpha",
-  //   "xref_id": "UAZ00429",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To investigate whether lincRNA-p21 regulates hypoxia enhanced glycolysis through HIF-1alpha , exogenous HIF-1alpha was introduced into lincRNA-p21 knockdown cells ."
-  //  },
-  //  {
-  //   "text": "Hif-1alpha mRNA",
-  //   "xref_id": "UAZ00449",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "mTORC1 can regulate Hif-1alpha level by increasing its mRNA abundance and its translation , whereas how mTORC1 increases Hif-1alpha mRNA level is not clear ( Pouyssegur et al. , 2006 , Land and Tee , 2007 , Duvel et al. , 2010 , Dodd et al. , 2015 ) ."
-  //  },
-  //  {
-  //   "text": "HIF-1alpha half-life",
-  //   "xref_id": "UAZ00431",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "However , lincRNA-p21 knockdown led to a robust decrease in HIF-1alpha half-life under hypoxia            ."
-  //  },
-  //  {
-  //   "text": "MG132",
-  //   "xref_id": "UAZ00442",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "CBFs-Myc levels in Super : CBFs-Myc transgenic seedlings decreased after 300-muM cycloheximide ( CHX , an inhibitor of protein synthesis ) treatment and increased after 50-muM MG132 ( a proteasome inhibitor ) treatment , and the effect of CHX was partially suppressed by MG132                     ."
-  //  },
-  //  {
-  //   "text": "proteasome inhibitor",
-  //   "xref_id": "UAZ00473",
-  //   "namespace": "uaz",
-  //   "type": "simple-chemical",
-  //   "sentence": "CBFs-Myc levels in Super : CBFs-Myc transgenic seedlings decreased after 300-muM cycloheximide ( CHX , an inhibitor of protein synthesis ) treatment and increased after 50-muM MG132 ( a proteasome inhibitor ) treatment , and the effect of CHX was partially suppressed by MG132                     ."
-  //  },
-  //  {
-  //   "text": "ubiquitin-proteasome",
-  //   "xref_id": "UAZ00472",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Hydroxylation of the HIF-1alpha protein at proline residue 564 is required for VHL binding and subsequent degradation through the ubiquitin-proteasome pathway ( Ivan et al. , 2001 , Jaakkola et al. , 2001 ) ."
-  //  },
-  //  {
-  //   "text": "hyp564 HIF-1alpha",
-  //   "xref_id": "UAZ00409",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "We therefore determined the effect of lincRNA-p21 on hyp564 HIF-1alpha levels ."
-  //  },
-  //  {
-  //   "text": "HIF-1alpha-VHL",
-  //   "xref_id": "UAZ00405",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Correlated with this , knockdown of lincRNA-p21 enhanced the HIF-1alpha-VHL and the hyp465-HIF-1alpha-VHL interactions under hypoxia                     ."
-  //  },
-  //  {
-  //   "text": "VHL-HIF-2alpha",
-  //   "xref_id": "UAZ00444",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Knockdown of lincRNA-p21 inhibited hypoxia induced HIF-2alpha expression and enhanced the VHL-HIF-2alpha interaction                      ."
-  //  },
-  //  {
-  //   "text": "HIF-1alpha deletion mutants",
-  //   "xref_id": "UAZ00450",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Interestingly , all the HIF-1alpha deletion mutants examined appeared to be able to associate with lincRNA-p21                            , indicating the involvement of multiple domains of HIF-1alpha in binding to lincRNA-p21 ."
-  //  },
-  //  {
-  //   "text": "CoCl2",
-  //   "xref_id": "3032536",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Treatment of cells with CoCl2 or DMOG , which are inducers of HIF-1alpha expression ( Fukuda et al. , 2007 ) , also led to a dramatic increase in lincRNA-p21 levels            ."
-  //  },
-  //  {
-  //   "text": "DMOG",
-  //   "xref_id": "UAZ00415",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Treatment of cells with CoCl2 or DMOG , which are inducers of HIF-1alpha expression ( Fukuda et al. , 2007 ) , also led to a dramatic increase in lincRNA-p21 levels            ."
-  //  },
-  //  {
-  //   "text": "lincRNA-p21 gene",
-  //   "xref_id": "UAZ00436",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Two putative HREs ( 5 '-RCGTG-3 ' ) were found within the promoter and second exon of the lincRNA-p21 gene            ."
-  //  },
-  //  {
-  //   "text": "firefly luciferase reporter",
-  //   "xref_id": "UAZ00445",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "DNA fragments containing wild-type or mutant HREs were inserted into the promoter region of a firefly luciferase reporter plasmid ."
-  //  },
-  //  {
-  //   "text": "doxorubicin",
-  //   "xref_id": "40469134",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Consistent with this report , mouse lincRNA-p21 was shown to mediate doxorubicin induced apoptosis in mouse embryonic fibroblast ( MEF ) cells by using three different types of detection methods                        ."
-  //  },
-  //  {
-  //   "text": "HIF-1alpha-lincRNA-p21",
-  //   "xref_id": "UAZ00432",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Cells were pretreated with hypoxia to allow the activation of the HIF-1alpha-lincRNA-p21 signaling before they were inoculated into the flank of nude mice ."
-  //  },
-  //  {
-  //   "text": "JUNB",
-  //   "xref_id": "P17275",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "A recent report has shown that lincRNA-p21 can bind JUNB and CTNNB1 mRNAs and suppress their translation ( Yoon et al. , 2012 ) ."
-  //  },
-  //  {
-  //   "text": "miR-130",
-  //   "xref_id": "UAZ00478",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "In addition to lncRNAs , several hypoxia and HIF-1alpha-induced miRNAs , such as miR-130 and miR-155 , have recently been shown to inhibit HIF-1alpha expression by targeting its 3 ' UTR or hampering its translation , thereby forming a negative feedback loop to control hypoxia response ( Bruning et al. , 2011 , Saito et al. , 2011 ) ."
-  //  },
-  //  {
-  //   "text": "miR-155",
-  //   "xref_id": "UAZ00440",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "In addition to lncRNAs , several hypoxia and HIF-1alpha-induced miRNAs , such as miR-130 and miR-155 , have recently been shown to inhibit HIF-1alpha expression by targeting its 3 ' UTR or hampering its translation , thereby forming a negative feedback loop to control hypoxia response ( Bruning et al. , 2011 , Saito et al. , 2011 ) ."
-  //  },
-  //  {
-  //   "text": "HIF-1alpha binding domain",
-  //   "xref_id": "UAZ00466",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "We have found that the VHL domain responsible for lincRNA-p21 binding is also the HIF-1alpha binding domain , indicating that lincRNA-p21 and HIF-1alpha may competitively bind to VHL ."
-  //  },
-  //  {
-  //   "text": "Fantin",
-  //   "xref_id": "UAZ00458",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "More importantly , either inhibiting PDK1 activity by its specific inhibitor or knocking down LDHA by siRNA can slow tumor growth ( Bonnet et al. , 2007 , Fantin et al. , 2006 ) , indicating that certain HIF-1alpha-responsive genes associated with energy metabolism could be potential candidates for cancer therapy ."
-  //  },
-  //  {
-  //   "text": "MALAT",
-  //   "xref_id": "UAZ00471",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "A strong association between lncRNAs and human cancer has been clearly established , as many lncRNAs , including HOTAIR and MALAT , are dysregulated in a variety of human cancers ( Gutschner and Diederichs , 2012 , Mitra et al. , 2012 ) ."
-  //  },
-  //  {
-  //   "text": "lncRNA LincRNA-p21",
-  //   "xref_id": "UAZ00456",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Human lncRNA LincRNA-p21 Mediates the Promoting Effect of Hypoxia on Glycolysis ( A ) Real-time RT-PCR analysis of the indicated lncRNA levels in the presence or absence of hypoxia ."
-  //  },
-  //  {
-  //   "text": "(F)",
-  //   "xref_id": "UAZ00459",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( E-G ) HeLa ( E ) , MCF7 ( F ) , and H1299 ( G ) cells expressing either control shRNA or lincRNA-p21 shRNA were cultured under normoxic or hypoxic conditions for 24 hr ."
-  //  },
-  //  {
-  //   "text": "(I)",
-  //   "xref_id": "UAZ00422",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( H-J ) HeLa ( H ) , MCF7 ( I ) , and H1299 ( J ) cells expressing either control shRNA or lincRNA-p21 shRNA were cultured under normoxic or hypoxic conditions for 24 hr ."
-  //  },
-  //  {
-  //   "text": "HRE reporter construct",
-  //   "xref_id": "UAZ00404",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( E ) HeLa cells expressing either control shRNA or lincRNA-p21 shRNA were cotransfected with the HRE reporter construct and Renilla luciferase plasmid ."
-  //  },
-  //  {
-  //   "text": "lincRNA-p21 shRNA",
-  //   "xref_id": "UAZ00412",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( F ) HeLa cells expressing control shRNA , lincRNA-p21 shRNA , HIF-1alpha shRNA , or both lincRNA-p21 and HIF-1alpha shRNAs were cotransfected with the HRE reporter construct and Renilla luciferase plasmid ."
-  //  },
-  //  {
-  //   "text": "HIF-1alpha shRNA",
-  //   "xref_id": "UAZ00408",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( F ) HeLa cells expressing control shRNA , lincRNA-p21 shRNA , HIF-1alpha shRNA , or both lincRNA-p21 and HIF-1alpha shRNAs were cotransfected with the HRE reporter construct and Renilla luciferase plasmid ."
-  //  },
-  //  {
-  //   "text": "HIF-1alpha shRNAs",
-  //   "xref_id": "UAZ00428",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( F ) HeLa cells expressing control shRNA , lincRNA-p21 shRNA , HIF-1alpha shRNA , or both lincRNA-p21 and HIF-1alpha shRNAs were cotransfected with the HRE reporter construct and Renilla luciferase plasmid ."
-  //  },
-  //  {
-  //   "text": "p3xFlag-myc-cmv-24-HIF-1alpha",
-  //   "xref_id": "UAZ00438",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( I and J ) HeLa cells expressing either control shRNA or lincRNA-p21 shRNA were transfected with or without p3xFlag-myc-cmv-24-HIF-1alpha , as indicated ."
-  //  },
-  //  {
-  //   "text": "pcDNA-V5",
-  //   "xref_id": "UAZ00453",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( B ) HeLa cells expressing either control shRNA or lincRNA-p21 shRNA were transfected with pcDNA-V5 and His-HIF-1alpha ."
-  //  },
-  //  {
-  //   "text": "His-HIF-1alpha",
-  //   "xref_id": "UAZ00430",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( B ) HeLa cells expressing either control shRNA or lincRNA-p21 shRNA were transfected with pcDNA-V5 and His-HIF-1alpha ."
-  //  },
-  //  {
-  //   "text": "MG132 (5 muM",
-  //   "xref_id": "UAZ00423",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( C ) HeLa cells expressing either control shRNA or lincRNA-p21 shRNA were cultured under normoxic or hypoxic conditions in the presence or absence of MG132 ( 5 muM ) for 24 hr ."
-  //  },
-  //  {
-  //   "text": "lincRNA-p21 shRNAs",
-  //   "xref_id": "UAZ00414",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( D ) HeLa cells expressing control shRNA , lincRNA-p21 shRNA , or both VHL and lincRNA-p21 shRNAs were cultured under normoxic or hypoxic conditions for 24 hr ."
-  //  },
-  //  {
-  //   "text": "anti-HIF-1alpha antibody",
-  //   "xref_id": "UAZ00433",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( F ) Cell lysates were immunoprecipitated with either control IgG or anti-HIF-1alpha antibody ."
-  //  },
-  //  {
-  //   "text": "anti-VHL",
-  //   "xref_id": "UAZ00475",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( G ) Cell lysates were immunoprecipitated with control IgG , anti-VHL , or anti-HIF-1alpha antibody ."
-  //  },
-  //  {
-  //   "text": "recombinant Flag-HIF-1alpha",
-  //   "xref_id": "UAZ00452",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( H ) GST-VHL proteins bound with glutathione agarose beads were incubated with purified recombinant Flag-HIF-1alpha in the presence or absence of in vitro transcribed lincRNA-p21 for 3 hr ."
-  //  },
-  //  {
-  //   "text": "GST-VHL proteins",
-  //   "xref_id": "UAZ00455",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( H ) GST-VHL proteins bound with glutathione agarose beads were incubated with purified recombinant Flag-HIF-1alpha in the presence or absence of in vitro transcribed lincRNA-p21 for 3 hr ."
-  //  },
-  //  {
-  //   "text": "LincRNA-p21 Associates",
-  //   "xref_id": "UAZ00443",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "LincRNA-p21 Associates with HIF-1alpha and VHL ( A and B ) HeLa cells were cultured under hypoxic conditions for 24 hr ."
-  //  },
-  //  {
-  //   "text": "formaldehyde",
-  //   "xref_id": "712",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Cells were then crosslinked with or without 1 % formaldehyde before IP real-time RT-PCR assays were carried out ."
-  //  },
-  //  {
-  //   "text": "anti-VHL antibody",
-  //   "xref_id": "UAZ00451",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( A ) An isotype matched IgG and anti-VHL antibody were used in IP real-time RT-PCR assays ."
-  //  },
-  //  {
-  //   "text": "biotin",
-  //   "xref_id": "171548",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Cell lysates were then incubated with in vitro synthesized biotin labeled sense or antisense lincRNA-p21 probes for biotin pull-down assay , followed by western blot analysis ."
-  //  },
-  //  {
-  //   "text": "pEGFP-C1-VHL",
-  //   "xref_id": "UAZ00462",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( E ) HeLa cells were transfected with p3xFlag-myc-cmv-24-HIF-1alpha and pEGFP-C1-VHL ."
-  //  },
-  //  {
-  //   "text": "isotype-matched control IgG",
-  //   "xref_id": "UAZ00406",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Cell lysates were first immunoprecipitated with either anti-Flag antibody or an isotype matched control IgG ."
-  //  },
-  //  {
-  //   "text": "anti-GFP antibody",
-  //   "xref_id": "UAZ00446",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The immunoblots were probed with anti-GFP antibody , and specific antibodies were used to detect plasma membrane ATPase ( AHA2 ) as a membrane marker and phosphoenolpyruvate carboxylase ( PEPC ) as a soluble marker ."
-  //  },
-  //  {
-  //   "text": "ND",
-  //   "xref_id": "25145403",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "ND indicates that lincRNA-p21 in the second immunoprecipitates was not detectable ."
-  //  },
-  //  {
-  //   "text": "HIF-2alpha shRNA",
-  //   "xref_id": "UAZ00435",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "LincRNA-p21 Is a Direct Target of HIF-1alpha ( A and B ) HeLa cells expressing control shRNA , HIF-1alpha shRNA , HIF-2alpha shRNA , or p53 shRNA were cultured under normoxic or hypoxic conditions for 24 hr ."
-  //  },
-  //  {
-  //   "text": "lincRNA-p21 gene promoter",
-  //   "xref_id": "UAZ00454",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( E ) Schematic illustration of consensus HIF-1alpha responsive element in lincRNA-p21 gene promoter ."
-  //  },
-  //  {
-  //   "text": "consensus HIF-1alpha responsive element",
-  //   "xref_id": "UAZ00439",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( E ) Schematic illustration of consensus HIF-1alpha responsive element in lincRNA-p21 gene promoter ."
-  //  },
-  //  {
-  //   "text": "HRE-WT",
-  //   "xref_id": "UAZ00469",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( I and J ) HeLa cells expressing control shRNA , HIF-1alpha shRNA-1 , or HIF-1alpha shRNA-2 were cotransfected with the HRE-WT reporter constructs and Renilla luciferase plasmid ."
-  //  },
-  //  {
-  //   "text": "HIF-1alpha shRNA-2",
-  //   "xref_id": "UAZ00476",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( I and J ) HeLa cells expressing control shRNA , HIF-1alpha shRNA-1 , or HIF-1alpha shRNA-2 were cotransfected with the HRE-WT reporter constructs and Renilla luciferase plasmid ."
-  //  },
-  //  {
-  //   "text": "HIF-1alpha shRNA-1",
-  //   "xref_id": "UAZ00437",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( I and J ) HeLa cells expressing control shRNA , HIF-1alpha shRNA-1 , or HIF-1alpha shRNA-2 were cotransfected with the HRE-WT reporter constructs and Renilla luciferase plasmid ."
-  //  },
-  //  {
-  //   "text": "LincRNA-p21 Functions",
-  //   "xref_id": "UAZ00447",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "LincRNA-p21 Functions as an Oncogene to Promote Tumor Formation ( A and B ) MEF cells expressing either control shRNA or mlincRNA-p21 shRNA were treated with the indicated concentration of doxorubicin for 24 hr ."
-  //  },
-  //  {
-  //   "text": "mlincRNA-p21 shRNA",
-  //   "xref_id": "UAZ00448",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "LincRNA-p21 Functions as an Oncogene to Promote Tumor Formation ( A and B ) MEF cells expressing either control shRNA or mlincRNA-p21 shRNA were treated with the indicated concentration of doxorubicin for 24 hr ."
-  //  },
-  //  {
-  //   "text": "mlincRNA-p21",
-  //   "xref_id": "UAZ00467",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The expression levels of mlincRNA-p21 are shown in Figure S5A ."
-  //  },
-  //  {
-  //   "text": "Ana",
-  //   "xref_id": "Q14201",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "mTORC1 Promotes Metabolic Reprogramming by the Suppression of GSK3 Dependent Foxk1 Phosphorylation  Long He , Ana P. Gomes , Xin Wang , Sang Oh Yoon , Gina Lee , Michal J. Nagiec , Sungyun Cho , Andre Chavez , Tasnia Islam , Yonghao Yu , John M.Asara , Bo YeonKim , John Blenis  Molecular Cell Volume 70 , Issue 5 , 7 June 2018 , Pages 949-960 ."
-  //  },
-  //  {
-  //   "text": "mTORC1",
-  //   "xref_id": "mTORC1",
-  //   "namespace": "be",
-  //   "type": "protein",
-  //   "sentence": "mTORC1 Promotes Metabolic Reprogramming by the Suppression of GSK3 Dependent Foxk1 Phosphorylation  Long He , Ana P. Gomes , Xin Wang , Sang Oh Yoon , Gina Lee , Michal J. Nagiec , Sungyun Cho , Andre Chavez , Tasnia Islam , Yonghao Yu , John M.Asara , Bo YeonKim , John Blenis  Molecular Cell Volume 70 , Issue 5 , 7 June 2018 , Pages 949-960 ."
-  //  },
-  //  {
-  //   "text": "Foxk1",
-  //   "xref_id": "P85037",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "mTORC1 Promotes Metabolic Reprogramming by the Suppression of GSK3 Dependent Foxk1 Phosphorylation  Long He , Ana P. Gomes , Xin Wang , Sang Oh Yoon , Gina Lee , Michal J. Nagiec , Sungyun Cho , Andre Chavez , Tasnia Islam , Yonghao Yu , John M.Asara , Bo YeonKim , John Blenis  Molecular Cell Volume 70 , Issue 5 , 7 June 2018 , Pages 949-960 ."
-  //  },
-  //  {
-  //   "text": "14-3-3",
-  //   "xref_id": "PF00244",
-  //   "namespace": "pfam",
-  //   "type": "protein",
-  //   "sentence": "Surprisingly , Foxk1 phosphorylation is increased upon mTORC1 suppression , which elicits a 14-3-3 interaction , a reduction of DNA binding , and nuclear exclusion ."
-  //  },
-  //  {
-  //   "text": "Srebp1/2",
-  //   "xref_id": "UAZ00502",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The broad control that mTORC1 exerts over metabolism has been largely attributed to the regulation of a small number of transcription factors , including c-Myc , Srebp1/2 , Hif-1alpha , Atf4 , and Tfeb , although in most cases the molecular mechanisms remain unclear ( Laplante and Sabatini , 2013 , Ben-Sahra and Manning , 2017 ) ."
-  //  },
-  //  {
-  //   "text": "Tfeb",
-  //   "xref_id": "P19484",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "The broad control that mTORC1 exerts over metabolism has been largely attributed to the regulation of a small number of transcription factors , including c-Myc , Srebp1/2 , Hif-1alpha , Atf4 , and Tfeb , although in most cases the molecular mechanisms remain unclear ( Laplante and Sabatini , 2013 , Ben-Sahra and Manning , 2017 ) ."
-  //  },
+   },
+   {
+    "text": "Ltb",
+    "xref_id": "4050",
+    "namespace": "ncbi",
+    "sentence": "Knockdown of p65 in CRPC cells decreased the expression of CD44 , Icam1 , Ltb , Traf2 , Vcam1 , and Xiap             ."
+   },
+   {
+    "text": "Traf2",
+    "xref_id": "7186",
+    "namespace": "ncbi",
+    "sentence": "Knockdown of p65 in CRPC cells decreased the expression of CD44 , Icam1 , Ltb , Traf2 , Vcam1 , and Xiap             ."
+   },
+   {
+    "text": "Icam1",
+    "xref_id": "3383",
+    "namespace": "ncbi",
+    "sentence": "Knockdown of p65 in CRPC cells decreased the expression of CD44 , Icam1 , Ltb , Traf2 , Vcam1 , and Xiap             ."
+   },
+   {
+    "text": "HOX-C8",
+    "xref_id": "3224",
+    "namespace": "ncbi",
+    "sentence": "Several genes have been reported as the direct targets of miR-196b , including HOX-A in acute lymphoblastic leukemia ( Schotte et al. , 2010 ) , HOX-C8 in breast cancer ( Li et al. , 2010 ) , and NME4 ( nucleoside diphosphate kinase 4 ) in oral cancer ( Lu et al. , 2014 ) ."
+   },
+   {
+    "text": "NME4",
+    "xref_id": "4833",
+    "namespace": "ncbi",
+    "sentence": "Several genes have been reported as the direct targets of miR-196b , including HOX-A in acute lymphoblastic leukemia ( Schotte et al. , 2010 ) , HOX-C8 in breast cancer ( Li et al. , 2010 ) , and NME4 ( nucleoside diphosphate kinase 4 ) in oral cancer ( Lu et al. , 2014 ) ."
+   },
+   {
+    "text": "RIG-I",
+    "xref_id": "23586",
+    "namespace": "ncbi",
+    "sentence": "Phosphorylation Dependent Feedback Inhibition of RIG-I by DAPK1 Identified by Kinome-wide siRNA Screening ."
+   },
+   {
+    "text": "DAPK1",
+    "xref_id": "1612",
+    "namespace": "ncbi",
+    "sentence": "Phosphorylation Dependent Feedback Inhibition of RIG-I by DAPK1 Identified by Kinome-wide siRNA Screening ."
+   },
+   {
+    "text": "IRF3",
+    "xref_id": "3661",
+    "namespace": "ncbi",
+    "sentence": "Using unbiased kinome-wide RNAi screening followed by thorough validation , we identified 22 factors that regulate RIG-I and IRF3 signaling activity ."
+   },
+   {
+    "text": "interferon-beta",
+    "xref_id": "3456",
+    "namespace": "ncbi",
+    "sentence": "RIG-I signaling triggers DAPK1 kinase activation , and active DAPK1 potently inhibits RIG-I stimulated IRF3 activity and interferon-beta production ."
+   },   
+   {
+    "text": "MAVS",
+    "xref_id": "57506",
+    "namespace": "ncbi",
+    "sentence": "Upon binding to stimulatory RNA , RIG-I undergoes conformational changes allowing it to bind and activate mitochondrial antiviral signaling protein ( MAVS ) ( Abbas et al. , 2013 , Binder et al. , 2011 , Hornung et al. , 2006 , Patel et al. , 2013 ) ."
+   },
+   {
+    "text": "TBK1",
+    "xref_id": "29110",
+    "namespace": "ncbi",
+    "sentence": "Activated RIG-I and MAVS complexes recruit the kinases TBK1 and IKKepsilon , which , in turn , recruit and activate the transcription factor IRF3 ( Liu et al. , 2015 , McNab et al. , 2015 ) , as well as the canonical IKKs ( alpha , beta , and gamma ) to activate nuclear factor kappaB ( NF-kappaB ) ."
+   },
+   {
+    "text": "IKKepsilon",
+    "xref_id": "9641",
+    "namespace": "ncbi",
+    "sentence": "Activated RIG-I and MAVS complexes recruit the kinases TBK1 and IKKepsilon , which , in turn , recruit and activate the transcription factor IRF3 ( Liu et al. , 2015 , McNab et al. , 2015 ) , as well as the canonical IKKs ( alpha , beta , and gamma ) to activate nuclear factor kappaB ( NF-kappaB ) ."
+   },
+   {
+    "text": "IFIT1",
+    "xref_id": "3434",
+    "namespace": "ncbi",
+    "sentence": "Simultaneous activation of IRF3 and NF-kappaB results in the production of type I and type III interferon ( IFN ) , proinflammatory cytokines as well as direct induction of antiviral genes such as IFIT1 ( Chan and Gack , 2015 ) ."
+   },  
+   {
+    "text": "PP1", //complex
+    "xref_id": null,
+    "namespace": null,
+    "sentence": "For example , activity promoting ubiquitylation of RIG-I ( Gack et al. , 2007 ) is balanced by deubiquitylation ( Cui et al. , 2014 , Fan et al. , 2014 ) , and activating dephosphorylation of RIG-I by PP1 ( Wies et al. , 2013 ) is countered by inhibitory phosphorylation through PKC ( Maharaj et al. , 2012 ) ."
+   },   
+   {
+    "text": "AKT1",
+    "xref_id": "207",
+    "namespace": "ncbi",
+    "sentence": "In this network , AKT1 acted as a central hub directly linking to six other candidates , confirming its described role in regulating the induction of the IFN system ( Gantner et al. , 2012 ) ."
+   },
+   {
+    "text": "AAK1",
+    "xref_id": "Q2M2I8",
+    "namespace": "ncbi",
+    "sentence": "Twenty-one identified hits ( AAK1 was excluded for technical reasons ) were further characterized with respect to their effect on RIG-I-mediated IRF3 activation upon knockdown or overexpression in 293TRIG-I cells ."
+   },
+   {
+    "text": "CCCP",
+    "xref_id": "CHEBI:3259",
+    "namespace": "chebi",
+    "sentence": "The most critical step to activate its kinase activity is dephosphorylation of p-S308 , which can be triggered by mitochondrial uncoupling , e.g. , by treatment of cells with a protonophore such as CCCP ( Shang et al. , 2005 ) ."
+   },
+   {
+    "text": "TRADD",
+    "xref_id": "8717",
+    "namespace": "ncbi",
+    "sentence": "We therefore screened the most prominent canonical signal transducers of the pathway , namely , RIG-I , MAVS , TRADD , TBK1 , IKKepsilon , IRF3 , and IRF7 for interaction with DAPK1 ."
+   },
+   {
+    "text": "IRF7",
+    "xref_id": "3665",
+    "namespace": "ncbi",
+    "sentence": "We therefore screened the most prominent canonical signal transducers of the pathway , namely , RIG-I , MAVS , TRADD , TBK1 , IKKepsilon , IRF3 , and IRF7 for interaction with DAPK1 ."
+   },
+   {
+    "text": "IFNlambda",
+    "xref_id": "282618",
+    "namespace": "ncbi",
+    "sentence": "For WT and S8E , we observed robust induction of IFIT1 protein and secretion of IFNlambda upon FLUAV infection , whereas phosphomimetics of the cluster I residues , including the individual T667E mutation , almost completely abrogated IFIT1 and IFNlambda induction                    ."
+   },
+   {
+    "text": "inositol",
+    "xref_id": "CHEBI:17268",
+    "namespace": "chebi",
+    "sentence": "The Krishnan screen revealed a functionally important role of inositol pyrophosphates in the induction of type I IFN ."
+   },
+   {
+    "text": "ITPKC",
+    "xref_id": "80271",
+    "namespace": "ncbi",
+    "sentence": "While our screen did not identify ( or not cover ) the same genes as theirs , functional annotation clustering did reveal a strong enrichment of candidate genes in phosphatidylinositol and inositolphosphate metabolism and signaling , including PI3K enzymes and ITPKC ( Data S2 , cluster 2 ) ."
+   },
+   {
+    "text": "CTNNB1",
+    "xref_id": "1499",
+    "namespace": "ncbi",
+    "sentence": "A recent report has shown that lincRNA-p21 can bind JUNB and CTNNB1 mRNAs and suppress their translation ( Yoon et al. , 2012 ) ."
+   },
+   {
+    "text": "CSNK1G2",
+    "xref_id": "1455",
+    "namespace": "ncbi",
+    "sentence": "In line with their model , in our primary screen we found significant effects for isoforms of canonical downstream kinases of Wnt signaling , such as GSK3alpha and GSK3beta or the CSNK1A1 paralog CSNK1G2 and the closely related CSNK1A1L ."
+   },
+   {
+    "text": "CSNK1A1L",
+    "xref_id": "122011",
+    "namespace": "ncbi",
+    "sentence": "In line with their model , in our primary screen we found significant effects for isoforms of canonical downstream kinases of Wnt signaling , such as GSK3alpha and GSK3beta or the CSNK1A1 paralog CSNK1G2 and the closely related CSNK1A1L ."
+   },
+   {
+    "text": "Gsk3beta",
+    "xref_id": "2932",
+    "namespace": "ncbi",
+    "sentence": "Consistently , genetic abrogation of Gsk3alpha or Gsk3beta led to a decrease in Foxk1 phosphorylation , an effect more pronounced in Gsk3alpha-/- cells in which Gsk3beta was knocked down            ."
+   },
+   {
+    "text": "Gsk3alpha",
+    "xref_id": "2931",
+    "namespace": "ncbi",
+    "sentence": "Consistently , genetic abrogation of Gsk3alpha or Gsk3beta led to a decrease in Foxk1 phosphorylation , an effect more pronounced in Gsk3alpha-/- cells in which Gsk3beta was knocked down            ."
+   },
+   {
+    "text": "Hk2",
+    "xref_id": "3099",
+    "namespace": "ncbi",
+    "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
+   },
+   {
+    "text": "Pfkl",
+    "xref_id": "5211",
+    "namespace": "ncbi",
+    "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
+   },
+   {
+    "text": "PKLR",
+    "xref_id": "5313",
+    "namespace": "ncbi",
+    "sentence": "One such functional module is glucose metabolism ( Data S2 , cluster 17 ) : out of four kinase activities required for core glycolysis , isoforms of three were identified as hit candidates in our screen ( HK2 , PKLR , and PFKL ) ."
+   },
+   {
+    "text": "DAKP1",
+    "xref_id": "1612",
+    "namespace": "ncbi",
+    "sentence": "Activation of DAKP1 with the protonophore CCCP served as a positive control ( bottom panel ) ."
+   },
+   {
+    "text": "calnexin",
+    "xref_id": "821",
+    "namespace": "ncbi",
+    "sentence": "Loading control was calnexin ."
+   },
+   {
+    "text": "LincRNA-p21",
+    "xref_id": "102800311",
+    "namespace": "ncbi",
+    "sentence": "Fan Yang , Huafeng Zhang , Yide Mei , Mian Wu Volume 53 , Issue 1 , 9 January 2014 , Pages 88-100  Reciprocal Regulation of HIF-1alpha and LincRNA-p21 Modulates the Warburg Effect  Summary ."
+   },
+   {
+    "text": "VHL",
+    "xref_id": "7428",
+    "namespace": "ncbi",
+    "sentence": "Hypoxia and HIF-1alpha-induced lincRNA-p21 is able to bind HIF-1alpha and VHL and thus disrupts the VHL-HIF-1alpha interaction ."
+   },
+   {
+    "text": "Glut1",
+    "xref_id": "6513",
+    "namespace": "ncbi",
+    "sentence": "It has been shown that , under hypoxic conditions , activation of HIF-1alpha contributes to the Warburg effect through coordinated upregulation of glycolysis and downregulation of oxidative phosphorylation , both of which are mainly achieved by inducing expression of the following : ( 1 ) glucose transporters such as Glut1 to increase glucose uptake ( Iyer et al. , 1998 , Ryan et al. , 1998 , Wood et al. , 1998 ) , ( 2 ) glycolytic enzymes to accelerate flux from glucose to pyruvate ( Iyer et al. , 1998 ) , ( 3 ) pyruvate dehydrogenase kinase 1 ( PDK1 ) to inhibit the conversion of pyruvate to acetyl CoA ( Kim et al. , 2006 , Papandreou et al. , 2006 ) , and ( 4 ) lactate dehydrogenase A ( LDHA ) to promote pyruvate-to-lactate conversion ( Iyer et al. , 1998 , Ryan et al. , 1998 ) ."
+   },
+   {
+    "text": "pyruvate",
+    "xref_id": "CHEBI:15361",
+    "namespace": "chebi",
+    "sentence": "Interestingly , gene set enrichment analysis ( GSEA ) showed that the most significantly altered pathways were metabolic pathways , including glycolysis and gluconeogenesis , pyruvate metabolism , galactose metabolism , steroid biosynthesis , and amino acid and nucleotide metabolism                ."
+   },
+   {
+    "text": "PDK1",
+    "xref_id": "5163",
+    "namespace": "ncbi",
+    "sentence": "It has been shown that , under hypoxic conditions , activation of HIF-1alpha contributes to the Warburg effect through coordinated upregulation of glycolysis and downregulation of oxidative phosphorylation , both of which are mainly achieved by inducing expression of the following : ( 1 ) glucose transporters such as Glut1 to increase glucose uptake ( Iyer et al. , 1998 , Ryan et al. , 1998 , Wood et al. , 1998 ) , ( 2 ) glycolytic enzymes to accelerate flux from glucose to pyruvate ( Iyer et al. , 1998 ) , ( 3 ) pyruvate dehydrogenase kinase 1 ( PDK1 ) to inhibit the conversion of pyruvate to acetyl CoA ( Kim et al. , 2006 , Papandreou et al. , 2006 ) , and ( 4 ) lactate dehydrogenase A ( LDHA ) to promote pyruvate-to-lactate conversion ( Iyer et al. , 1998 , Ryan et al. , 1998 ) ."
+   },
+   {
+    "text": "LDHA",
+    "xref_id": "3939",
+    "namespace": "ncbi",
+    "sentence": "It has been shown that , under hypoxic conditions , activation of HIF-1alpha contributes to the Warburg effect through coordinated upregulation of glycolysis and downregulation of oxidative phosphorylation , both of which are mainly achieved by inducing expression of the following : ( 1 ) glucose transporters such as Glut1 to increase glucose uptake ( Iyer et al. , 1998 , Ryan et al. , 1998 , Wood et al. , 1998 ) , ( 2 ) glycolytic enzymes to accelerate flux from glucose to pyruvate ( Iyer et al. , 1998 ) , ( 3 ) pyruvate dehydrogenase kinase 1 ( PDK1 ) to inhibit the conversion of pyruvate to acetyl CoA ( Kim et al. , 2006 , Papandreou et al. , 2006 ) , and ( 4 ) lactate dehydrogenase A ( LDHA ) to promote pyruvate-to-lactate conversion ( Iyer et al. , 1998 , Ryan et al. , 1998 ) ."
+   },   
+   {
+    "text": "NEAT1",
+    "xref_id": "283131",
+    "namespace": "ncbi",
+    "sentence": "The bioinformatics analysis revealed that promoter regions of six known lncRNAs ( lincRNA-p21 , linc-ROR , MALAT1 , NEAT1 , HOTAIR , and A7 ) contain potential HREs                              ."
+   },
+   {
+    "text": "linc-ROR",
+    "xref_id": "100885779",
+    "namespace": "ncbi",
+    "sentence": "The bioinformatics analysis revealed that promoter regions of six known lncRNAs ( lincRNA-p21 , linc-ROR , MALAT1 , NEAT1 , HOTAIR , and A7 ) contain potential HREs                              ."
+   },
+   {
+    "text": "HOTAIR",
+    "xref_id": "100124700",
+    "namespace": "ncbi",
+    "sentence": "The bioinformatics analysis revealed that promoter regions of six known lncRNAs ( lincRNA-p21 , linc-ROR , MALAT1 , NEAT1 , HOTAIR , and A7 ) contain potential HREs                              ."
+   },
+   {
+    "text": "MALAT1",
+    "xref_id": "378938",
+    "namespace": "ncbi",
+    "sentence": "The bioinformatics analysis revealed that promoter regions of six known lncRNAs ( lincRNA-p21 , linc-ROR , MALAT1 , NEAT1 , HOTAIR , and A7 ) contain potential HREs                              ."
+   },
+   {
+    "text": "digoxin",
+    "xref_id": "CHEBI:4551",
+    "namespace": "chebi",
+    "sentence": "Moreover , when HIF-1alpha activity was inhibited by treatment with digoxin ( a potent inhibitor of HIF-1alpha [ Zhang et al. , 2008 ] ) or by reducing HIF-1alpha expression using its specific shRNA , lincRNA-p21 knockdown failed to show any effect on wild-type reporter activity under hypoxia                               , implying that lincRNA-p21 indeed affects hypoxia induced transcription via HIF-1alpha ."
+   },
+   {
+    "text": "MG132",
+    "xref_id": "CHEBI:75142",
+    "namespace": "chebi",
+    "sentence": "CBFs-Myc levels in Super : CBFs-Myc transgenic seedlings decreased after 300-muM cycloheximide ( CHX , an inhibitor of protein synthesis ) treatment and increased after 50-muM MG132 ( a proteasome inhibitor ) treatment , and the effect of CHX was partially suppressed by MG132                     ."
+   },
+   {
+    "text": "DMOG",
+    "xref_id": "CHEBI:102218",
+    "namespace": "chebi",
+    "sentence": "Treatment of cells with CoCl2 or DMOG , which are inducers of HIF-1alpha expression ( Fukuda et al. , 2007 ) , also led to a dramatic increase in lincRNA-p21 levels            ."
+   },
+   {
+    "text": "doxorubicin",
+    "xref_id": "CHEBI:28748",
+    "namespace": "chebi",
+    "sentence": "Consistent with this report , mouse lincRNA-p21 was shown to mediate doxorubicin induced apoptosis in mouse embryonic fibroblast ( MEF ) cells by using three different types of detection methods                        ."
+   },
+   {
+    "text": "JUNB",
+    "xref_id": "3726",
+    "namespace": "ncbi",
+    "sentence": "A recent report has shown that lincRNA-p21 can bind JUNB and CTNNB1 mRNAs and suppress their translation ( Yoon et al. , 2012 ) ."
+   },
+   {
+    "text": "miR-130",
+    "xref_id": "406919",
+    "namespace": "ncbi",
+    "sentence": "In addition to lncRNAs , several hypoxia and HIF-1alpha-induced miRNAs , such as miR-130 and miR-155 , have recently been shown to inhibit HIF-1alpha expression by targeting its 3 ' UTR or hampering its translation , thereby forming a negative feedback loop to control hypoxia response ( Bruning et al. , 2011 , Saito et al. , 2011 ) ."
+   },
+   {
+    "text": "miR-155",
+    "xref_id": "406947",
+    "namespace": "ncbi",
+    "sentence": "In addition to lncRNAs , several hypoxia and HIF-1alpha-induced miRNAs , such as miR-130 and miR-155 , have recently been shown to inhibit HIF-1alpha expression by targeting its 3 ' UTR or hampering its translation , thereby forming a negative feedback loop to control hypoxia response ( Bruning et al. , 2011 , Saito et al. , 2011 ) ."
+   },
+   {
+    "text": "formaldehyde",
+    "xref_id": "CHEBI:16842",
+    "namespace": "chebi",
+    "sentence": "Cells were then crosslinked with or without 1 % formaldehyde before IP real-time RT-PCR assays were carried out ."
+   },
+   {
+    "text": "biotin",
+    "xref_id": "CHEBI:15956",
+    "namespace": "chebi",
+    "sentence": "Cell lysates were then incubated with in vitro synthesized biotin labeled sense or antisense lincRNA-p21 probes for biotin pull-down assay , followed by western blot analysis ."
+   },
+   {
+    "text": "Foxk1",
+    "xref_id": "221937",
+    "namespace": "ncbi",
+    "sentence": "mTORC1 Promotes Metabolic Reprogramming by the Suppression of GSK3 Dependent Foxk1 Phosphorylation  Long He , Ana P. Gomes , Xin Wang , Sang Oh Yoon , Gina Lee , Michal J. Nagiec , Sungyun Cho , Andre Chavez , Tasnia Islam , Yonghao Yu , John M.Asara , Bo YeonKim , John Blenis  Molecular Cell Volume 70 , Issue 5 , 7 June 2018 , Pages 949-960 ."
+   },
+   {
+    "text": "Tfeb",
+    "xref_id": "7942",
+    "namespace": "ncbi",
+    "sentence": "The broad control that mTORC1 exerts over metabolism has been largely attributed to the regulation of a small number of transcription factors , including c-Myc , Srebp1/2 , Hif-1alpha , Atf4 , and Tfeb , although in most cases the molecular mechanisms remain unclear ( Laplante and Sabatini , 2013 , Ben-Sahra and Manning , 2017 ) ."
+   },
   //  {
   //   "text": "Atf4",
   //   "xref_id": "P18848",
