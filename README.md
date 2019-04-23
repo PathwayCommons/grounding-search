@@ -8,12 +8,21 @@
 - [Elasticsearch](https://www.elastic.co/products/elasticsearch) ^6.6.0
 
 
+## Supported data sources
+
+- NCBI gene (`ncbi`)
+- Chebi (`chebi`)
+- Uniprot (`uniprot`)
+
+The data sources included by default (e.g. `npm run update`) are `ncbi` and `chebi`.
+
 
 ## Configuration
 
 The following environment variables can be used to configure the server:
 
 - `NODE_ENV` : the environment mode, either `production` or `development` (default)
+- `LOG_LEVEL` : the level for the log file (`info`, `warn`, `error`)
 - `PORT` : the port on which the server runs (default 3000)
 - `ELASTICSEARCH_HOST` : the `host:port` that points to elasticsearch
 - `MAX_SEARCH_ES` : the maximum number of results to return from elasticsearch
@@ -22,6 +31,10 @@ The following environment variables can be used to configure the server:
 - `INDEX` : the elasticsearch index name to store data from all data sources
 - `UNIPROT_FILE_NAME` : name of the file where uniprot data will be read from
 - `UNIPROT_URL` : url to download uniprot file from
+- `CHEBI_FILE_NAME` : name of the file where chebi data will be read from
+- `CHEBI_URL` : url to download chebi file from
+- `NCBI_FILE_NAME` : name of the file where ncbi data will be read from
+- `NCBI_URL` : url to download ncbi file from
 
 ## Run targets
 
@@ -32,10 +45,13 @@ The following environment variables can be used to configure the server:
 - `npm test:sample` : run tests with sample data
 - `npm run lint` : lint the project
 - `npm run benchmark` : run all benchmarking
-- `npm run benchmark:source` : run benchmarking for `source` (i.e. `uniprot`, ...)
+- `npm run benchmark:source` : run benchmarking for `source` (i.e. `ncbi`, `chebi`)
 - `npm run clear` : clear all data
-- `npm run clear:source` : clear data for `source` (i.e. `uniprot`, ...)
-- `npm run update` : update all data
+- `npm run clear:source` : clear data for `source` (i.e. `ncbi`, `chebi`)
+- `npm run update` : update all data (download then index)
+- `npm run update:source` : update data for `source` (i.e. `ncbi`, `chebi`) in elasticsearch
+- `npm run index` : index all data
+- `npm run index:source` : index data for `source` (i.e. `ncbi`, `chebi`) in elasticsearch
 - `npm run test:inputgen` : generate input test file for each `source` (i.e. `uniprot`, ...)
 - `npm run test:inputgen` : generate input test file for `source` (i.e. `uniprot`, ...)
 
