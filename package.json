@@ -52,6 +52,7 @@
     "morgan": "^1.7.0",
     "saxes": "^3.1.9",
     "serve-favicon": "^2.3.0",
+    "split": "^1.0.1",
     "swagger-jsdoc": "^3.2.7",
     "swagger-ui-express": "^4.0.2",
     "winston": "^2.3.1",
