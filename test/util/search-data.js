@@ -554,6 +554,7 @@ const topGene2Pubmed = [
 ];
 
 const caseStudies = [
+  // https://doi.org/10.1016/j.molcel.2011.01.014
   {
     "text": "myc",
     "xref_id": "4609",
@@ -650,6 +651,7 @@ const caseStudies = [
     "namespace": "ncbi",
     "sentence": "Unlike deregulated MYC , serum can stimulate RB phosphorylation via its more potent influence on CYCD and CDK4 ,6 activity ( Leone et al. , 1997 ) ."
    },
+   // http://dx.doi.org/10.1016/j.molcel.2017.01.019
    {
     "text": "CDK2",
     "xref_id": "1017",
@@ -681,6 +683,7 @@ const caseStudies = [
     "namespace": "ncbi",
     "sentence": "E2f1 and p19Arf were normalized to -Actin ; miRNA signals were normalized to U6 snRNA ."
    },
+   // https://doi.org/10.1016/j.molcel.2017.11.025
    {
     "text": "cytochrome c",
     "xref_id": "54205",
@@ -1089,6 +1092,7 @@ const caseStudies = [
     "namespace": "chebi",
     "sentence": "( H ) GST-VHL proteins bound with glutathione agarose beads were incubated with purified recombinant Flag-HIF-1alpha in the presence or absence of in vitro transcribed lincRNA-p21 for 3 hr ."
    },
+   // https://doi.org/10.1016/j.molcel.2018.08.014
    {
     "text": "CamK-A",
     "xref_id": "85451",
@@ -1155,6 +1159,7 @@ const caseStudies = [
     "namespace": "chebi",
     "sentence": "Thapsigargin ( Tg ) can activate store operated Ca2+ entry by ferrying endoplasmic reticulum ( ER ) Ca2+ into the cytosol , where the intracellular Ca2+ level will increase and can be monitored with calcium indicators GCaMP6s ( Jing et al. , 2015 , Ma et al. , 2015 ) ."
    },
+   // http://dx.doi.org/10.1016/j.molcel.2016.11.034
    {
     "text": "p65",
     "xref_id": "5970",
@@ -1600,6 +1605,7 @@ const caseStudies = [
     "namespace": "ncbi",
     "sentence": "Several genes have been reported as the direct targets of miR-196b , including HOX-A in acute lymphoblastic leukemia ( Schotte et al. , 2010 ) , HOX-C8 in breast cancer ( Li et al. , 2010 ) , and NME4 ( nucleoside diphosphate kinase 4 ) in oral cancer ( Lu et al. , 2014 ) ."
    },
+   // http://dx.doi.org/10.1016/j.molcel.2016.12.021
    {
     "text": "RIG-I",
     "xref_id": "23586",
@@ -1762,6 +1768,7 @@ const caseStudies = [
     "namespace": "ncbi",
     "sentence": "Loading control was calnexin ."
    },
+   // http://dx.doi.org/10.1016/j.molcel.2013.11.004
    {
     "text": "LincRNA-p21",
     "xref_id": "102800311",
@@ -1876,6 +1883,7 @@ const caseStudies = [
     "namespace": "chebi",
     "sentence": "Cell lysates were then incubated with in vitro synthesized biotin labeled sense or antisense lincRNA-p21 probes for biotin pull-down assay , followed by western blot analysis ."
    },
+   // https://doi.org/10.1016/j.molcel.2018.04.024
    {
     "text": "Foxk1",
     "xref_id": "221937",
@@ -1968,858 +1976,330 @@ const caseStudies = [
    },
    {
     "text": "Shmt2",
-    "xref_id": "P34897",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": "6472",
+    "namespace": "ncbi",
     "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
    },
    {
     "text": "Pgm2",
-    "xref_id": "Q96G03",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": "55276",
+    "namespace": "ncbi",
     "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
    },
    {
     "text": "Mthfd1l",
-    "xref_id": "Q6UB35",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": " 25902",
+    "namespace": "ncbi",
     "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
    },
    {
     "text": "Eno1",
-    "xref_id": "P06733",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": "2023",
+    "namespace": "ncbi",
     "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
    },
    {
     "text": "Tpi1",
-    "xref_id": "P60174",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": "7167",
+    "namespace": "ncbi",
     "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
    },
    {
     "text": "Aldoa",
-    "xref_id": "P04075",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": "226",
+    "namespace": "ncbi",
     "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
    },
    {
     "text": "Ldh1",
-    "xref_id": "Q81RW4",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": "852503",
+    "namespace": "ncbi",
     "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
    },
    {
     "text": "glucose-6-phosphate",
-    "xref_id": "5958",
-    "namespace": "pubchem",
-    "type": "simple-chemical",
+    "xref_id": "CHEBI:4170",
+    "namespace": "chebi",
     "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
    },
    {
     "text": "Psat1",
-    "xref_id": "Q9Y617",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": " 29968",
+    "namespace": "ncbi",
     "sentence": "Interestingly , and while known to be regulated by hypoxia , serine synthesis enzymes ( Phgdh , Psat1 , and Psph ) were not altered by knockdown of Foxk1 ."
    },
    {
     "text": "Phgdh",
-    "xref_id": "O43175",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": "26227",
+    "namespace": "ncbi",
     "sentence": "Interestingly , and while known to be regulated by hypoxia , serine synthesis enzymes ( Phgdh , Psat1 , and Psph ) were not altered by knockdown of Foxk1 ."
    },
    {
     "text": "Prps2",
-    "xref_id": "P11908",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": " 5634",
+    "namespace": "ncbi",
     "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
    },
    {
     "text": "Atic",
-    "xref_id": "P31939",
-    "namespace": "uniprot",
-    "type": "protein",
+    "xref_id": " 471",
+    "namespace": "ncbi",
     "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
    },
-  //  {
-  //   "text": "Gart",
-  //   "xref_id": "P22102",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
-  //  },
-  //  {
-  //   "text": "Pfas",
-  //   "xref_id": "O15067",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
-  //  },
-  //  {
-  //   "text": "Impdh1",
-  //   "xref_id": "P20839",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
-  //  },
-  //  {
-  //   "text": "purine",
-  //   "xref_id": "1044",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
-  //  },
-  //  {
-  //   "text": "S/A quadruple mutant",
-  //   "xref_id": "O82265",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "With these cells , we found that both WT and S/A quadruple mutant of Foxk1 restored the suppression of glucose uptake and RNA and DNA synthesis , with the S/A quadruple mutant exhibiting a higher efficacy than WT                  ."
-  //  },
-  //  {
-  //   "text": "Sin3",
-  //   "xref_id": "O48686",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Recently , Foxk1 has also been shown to cooperate with the Sin3 complex and transcriptionally regulate autophagy in myoblasts , in an mTORC1 dependent fashion ( Bowman et al. , 2014 ) ."
-  //  },
-  //  {
-  //   "text": "S427/431",
-  //   "xref_id": "UAZ00506",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "It is worth noting that , although relatively modest , Foxk1 phosphorylation at S427/431 also contributes to the interaction with 14-3-3 , possibly by modulating the phosphorylation status on S402 , promoting conformational changes that modulate binding affinity , and/or by allowing different proteins to dock to Foxk1 and facilitate the interaction with 14-3-3 ."
-  //  },
-  //  {
-  //   "text": "mannose",
-  //   "xref_id": "18950",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "( C and D ) GSEA of glycolysis ( gluconeogenesis ) genes ( C ) and mannose metabolism ( D ) in Foxk1 knockdown and Foxk1 rescued MEFs ."
-  //  },
-  //  {
-  //   "text": "ANOVA",
-  //   "xref_id": "Q9UNW9",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "One-way ANOVA with Dunnett 's post-test , * p < 0.001 ."
-  //  },
-  //  {
-  //   "text": "RNA (F)",
-  //   "xref_id": "UAZ00491",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Total RNA ( F ) or whole-cell lysates ( G ) were prepared and subjected to qPCR or immunoblot analysis , respectively ."
-  //  },
-  //  {
-  //   "text": "shFoxk1",
-  //   "xref_id": "UAZ00503",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Foxk1 and Foxk2 Orchestrate Hif-1alpha Expression , Glucose Consumption , and Cell Proliferation in Tsc2-/- MEFs  Cell lines were established with knockdown of Foxk1 ( shFoxk1 ) , Foxk2 ( shFoxk2 ) , or both ( shFoxk1 plus shFoxk2 ) in Tsc2-/- MEFs ."
-  //  },
-  //  {
-  //   "text": "shFoxk2",
-  //   "xref_id": "UAZ00511",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Foxk1 and Foxk2 Orchestrate Hif-1alpha Expression , Glucose Consumption , and Cell Proliferation in Tsc2-/- MEFs  Cell lines were established with knockdown of Foxk1 ( shFoxk1 ) , Foxk2 ( shFoxk2 ) , or both ( shFoxk1 plus shFoxk2 ) in Tsc2-/- MEFs ."
-  //  },
-  //  {
-  //   "text": "C-F",
-  //   "xref_id": "UAZ00490",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( C-F ) Glucose uptake ( C ) , EdU incorporation S-phase transition assay ( D ) , cell clonogenic assay ( E ) , and cell growth curves ( F ) were determined in the same cell lines established above ."
-  //  },
-  //  {
-  //   "text": "Gsk3 alphabeta",
-  //   "xref_id": "UAZ00499",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "( D ) Whole-cell lysates from serum stimulated WT or Gsk3 alphabeta deficient MEFs , treated with the indicated inhibitors , were subjected to immunoblot analysis with the appropriate antibodies ."
-  //  },
-  //  {
-  //   "text": "Recombinant WT",
-  //   "xref_id": "UAZ00493",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Recombinant WT and mutant GST Foxk1 were incubated with active Gsk3alpha , and phosphorylation was determined by autoradiography ."
-  //  },
-  //  {
-  //   "text": "HA-14-3-3",
-  //   "xref_id": "P29310",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "( E ) Tsc2-/- MEFs expressing HA-14-3-3 were exposed to the indicated inhibitors , and coIP was performed prior to immunoblot analysis with the indicated antibodies ."
-  //  },
-  //  {
-  //   "text": "CoIP",
-  //   "xref_id": "UAZ00504",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "CoIP assays using transgenic plants expressing Super : CBFs-Myc                      confirmed the interaction of CBF proteins and 14-3-3 proteins in vivo ."
-  //  },
-  //  {
-  //   "text": "PP2ACdc55",
-  //   "xref_id": "UAZ00521",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "PP2ACdc55 specifically counteracts phosphorylation on threonine residues , and consequently , we find that threonine directed phosphorylation occurs late in the cell cycle ."
-  //  },
-  //  {
-  //   "text": "Ndd1",
-  //   "xref_id": "Q08887",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Furthermore , the late phosphorylation of a model substrate , Ndd1 , depends on threonine identity of its Cdk target sites ."
-  //  },
-  //  {
-  //   "text": "G1-, S",
-  //   "xref_id": "UAZ00523",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Sequential ordering of phosphorylation events is in part thought to arise from transcriptional waves of G1-, S phase-, and mitosis specific cyclins that confer substrate specificity to the kinase ."
-  //  },
-  //  {
-  //   "text": "swe1Delta",
-  //   "xref_id": "UAZ00525",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To disambiguate a possible role of PP2ACdc55 in dephosphorylating Cdk substrates , we therefore employed a budding yeast strain background lacking the Cdk tyrosine kinase Swe1 ( swe1Delta ) ."
-  //  },
-  //  {
-  //   "text": "Swe1",
-  //   "xref_id": "P32944",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Notably , absence of PP2ACdc55 no longer causes morphological defects in cells lacking Swe1 ( Wang and Burke , 1997 ) ."
-  //  },
-  //  {
-  //   "text": "Sli15",
-  //   "xref_id": "P38283",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "To examine the impact of PP2ACdc55 on the kinetics of Cdk substrate phosphorylation , we compared the electrophoretic mobility changes of three known Cdk targets , Ask1 , Sli15 , and Ndd1 ( Li and Elledge , 2003 , Pereira and Schiebel , 2003 , Reynolds et al. , 2003 ) , during synchronous cell-cycle progression of swe1Delta and swe1Delta cdc55Delta cells            ."
-  //  },
-  //  {
-  //   "text": "Ask1",
-  //   "xref_id": "Q99683",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "To examine the impact of PP2ACdc55 on the kinetics of Cdk substrate phosphorylation , we compared the electrophoretic mobility changes of three known Cdk targets , Ask1 , Sli15 , and Ndd1 ( Li and Elledge , 2003 , Pereira and Schiebel , 2003 , Reynolds et al. , 2003 ) , during synchronous cell-cycle progression of swe1Delta and swe1Delta cdc55Delta cells            ."
-  //  },
-  //  {
-  //   "text": "swe1Delta cdc55Delta",
-  //   "xref_id": "UAZ00537",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "PP2ACdc55 Counteracts Threonine Phosphorylation To obtain a global view of Cdk substrates affected by PP2ACdc55 , we quantitatively compared the phosphoproteomes of swe1Delta and swe1Delta cdc55Delta cells at three time points during synchronous cell-cycle progression in G1 , S , and G2                     ."
-  //  },
-  //  {
-  //   "text": "Ndd1-derived sites",
-  //   "xref_id": "UAZ00539",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Among those , in samples taken in S and G2 phase , we found several Ndd1 derived sites ."
-  //  },
-  //  {
-  //   "text": "Cox",
-  //   "xref_id": "COX",
-  //   "namespace": "be",
-  //   "type": "protein",
-  //   "sentence": "We then performed a 2D annotation enrichment analysis , which tests for the enrichment of motifs at either high or low SILAC ratios , based on their rank ( Cox and Mann , 2012 ) ."
-  //  },
-  //  {
-  //   "text": "phosphoserine",
-  //   "xref_id": "106",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "In particular , this was the case for phosphothreonine containing , but not phosphoserine containing , Cdk sites            ."
-  //  },
-  //  {
-  //   "text": "phosphothreonine",
-  //   "xref_id": "3246323",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "In particular , this was the case for phosphothreonine containing , but not phosphoserine containing , Cdk sites            ."
-  //  },
-  //  {
-  //   "text": "PP2A",
-  //   "xref_id": "P67775",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "An in vitro preference for threonine dephosphorylation has been noted during the early biochemical characterization of PP2A using peptide substrates ( Agostinis et al. , 1990 ) ."
-  //  },
-  //  {
-  //   "text": "Cdc55",
-  //   "xref_id": "Q00362",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "An acidic patch on Cdc55 that has been implicated in substrate interactions ( Xu et al. , 2008 ) could be a reason for this preference ."
-  //  },
-  //  {
-  //   "text": "Sli15 subunit",
-  //   "xref_id": "UAZ00532",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "This could be a secondary consequence of increased Cdk phosphorylation on its regulatory Sli15 subunit            , which is thought to attenuate Aurora kinase activity ( Zimniak et al. , 2012 ) ."
-  //  },
-  //  {
-  //   "text": "SILAC",
-  //   "xref_id": "UAZ00529",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To address whether this is the case , we used SILAC followed by mass spectrometry to compare the phosphoproteomes of G2 and mitosis , using a pair of sequential samples taken from wild-type cells that synchronously passed through the cell cycle ."
-  //  },
-  //  {
-  //   "text": "pTPxR/K",
-  //   "xref_id": "UAZ00544",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "2D annotation enrichment analysis , incorporating a repeat experiment using inverse labeling , revealed that the phosphorylation site motif most strongly enriched in mitosis , compared to G2 , was pTPxR/K             ."
-  //  },
-  //  {
-  //   "text": "pTP",
-  //   "xref_id": "P05451",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "This allowed us to follow the abundance of 405 phosphoserine-proline ( pSP ) - or phosphothreonine-proline ( pTP )-containing phosphosites during cell-cycle progression ."
-  //  },
-  //  {
-  //   "text": "pSP",
-  //   "xref_id": "O00186",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "This allowed us to follow the abundance of 405 phosphoserine-proline ( pSP ) - or phosphothreonine-proline ( pTP )-containing phosphosites during cell-cycle progression ."
-  //  },
-  //  {
-  //   "text": "rest",
-  //   "xref_id": "Q13127",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "83 ( 20 % ) of these showed a greater than 2-fold increase between G1 and mitosis , the rest were either stable or displayed unclear patterns            ."
-  //  },
-  //  {
-  //   "text": "pTPs",
-  //   "xref_id": "Q03393",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Categorizing the increasing phosphosites into pSPs and pTPs and plotting their abundance over time made apparent that pSP sites indeed increased earlier in the cell cycle compared to pTP sites            ."
-  //  },
-  //  {
-  //   "text": "Stb1",
-  //   "xref_id": "Q9ULK5",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Early sites included known early Cdk targets ( e.g. , Whi5 and Stb1 ) , while late sites included known late substrates ( e.g. , Ndd1 and Net1 ) , thus validating our assignments ."
-  //  },
-  //  {
-  //   "text": "Net1",
-  //   "xref_id": "P23975",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Early sites included known early Cdk targets ( e.g. , Whi5 and Stb1 ) , while late sites included known late substrates ( e.g. , Ndd1 and Net1 ) , thus validating our assignments ."
-  //  },
-  //  {
-  //   "text": "logos",
-  //   "xref_id": "3325",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "We then created sequence logos of the phosphosites in each category ."
-  //  },
-  //  {
-  //   "text": "Ndd1-10S protein",
-  //   "xref_id": "UAZ00536",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "In an otherwise wild-type strain background , phosphorylation of the resulting Ndd1-10S protein was both advanced and increased during cell-cycle progression           ."
-  //  },
-  //  {
-  //   "text": "Ndd1-10S",
-  //   "xref_id": "UAZ00530",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Consistent with the idea that PP2ACdc55 delays Ndd1 phosphorylation by targeting threonines , PP2ACdc55 impacted on the phosphorylation timing of Ndd1-10S to a smaller degree when compared to wild-type Ndd1             ."
-  //  },
-  //  {
-  //   "text": "PP2ACdc55 delays Ndd1",
-  //   "xref_id": "UAZ00538",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Consistent with the idea that PP2ACdc55 delays Ndd1 phosphorylation by targeting threonines , PP2ACdc55 impacted on the phosphorylation timing of Ndd1-10S to a smaller degree when compared to wild-type Ndd1             ."
-  //  },
-  //  {
-  //   "text": "wild-type Ndd1",
-  //   "xref_id": "UAZ00527",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Consistent with the idea that PP2ACdc55 delays Ndd1 phosphorylation by targeting threonines , PP2ACdc55 impacted on the phosphorylation timing of Ndd1-10S to a smaller degree when compared to wild-type Ndd1             ."
-  //  },
-  //  {
-  //   "text": "Clb2",
-  //   "xref_id": "P24869",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "To differentiate between these scenarios , we aimed to compensate for increased Cdk activity in swe1Delta cells by removing Clb2 , one of the four mitotic cyclins ( Fitch et al. , 1992 ) ."
-  //  },
-  //  {
-  //   "text": "APC",
-  //   "xref_id": "P25054",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "In synchronized cultures , we monitored DNA content as a sign of S phase , spindle formation as a marker for G2 , and the beginning of spindle elongation as indicator for mitosis when the anaphase promoting complex ( APC ) is activated as Cdk activity reaches its peak           ."
-  //  },
-  //  {
-  //   "text": "swe1Delta clb2Delta",
-  //   "xref_id": "UAZ00531",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "cdc55 deletion in the swe1Delta clb2Delta background did not change the timing of S and G2 phases but caused a notable advance of anaphase onset ."
-  //  },
-  //  {
-  //   "text": "cdc55 deletion",
-  //   "xref_id": "UAZ00533",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The consequent mitotic delay in swe1Delta apc-12A cells ( even more pronounced in swe1Delta apc-12A clb2Delta cells ) was substantially reduced by cdc55 deletion             , suggesting that PP2ACdc55 targets substrates in addition to the APC ."
-  //  },
-  //  {
-  //   "text": "Cdc14 phosphatase inhibitor",
-  //   "xref_id": "UAZ00522",
-  //   "namespace": "uaz",
-  //   "type": "simple-chemical",
-  //   "sentence": "Another previously characterized PP2ACdc55 target is the Cdc14 phosphatase inhibitor Net1 ( Queralt et al. , 2006 ) ."
-  //  },
-  //  {
-  //   "text": "CDC14TAB6 allele",
-  //   "xref_id": "UAZ00534",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To test whether premature Net1 phosphorylation and consequent Cdc14 activation advances the cell cycle , we utilized the CDC14TAB6 allele ( Shou and Deshaies , 2002 ) , which similarly advances Cdc14 activation ."
-  //  },
-  //  {
-  //   "text": "Shou",
-  //   "xref_id": "UAZ00543",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To test whether premature Net1 phosphorylation and consequent Cdc14 activation advances the cell cycle , we utilized the CDC14TAB6 allele ( Shou and Deshaies , 2002 ) , which similarly advances Cdc14 activation ."
-  //  },
-  //  {
-  //   "text": "CDC14TAB6",
-  //   "xref_id": "UAZ00540",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "CDC14TAB6 only slightly advanced mitosis in clb2Delta cells , while cdc55 deletion in this background further accelerated mitotic progression             ."
-  //  },
-  //  {
-  //   "text": "PP2ACdc55 targets",
-  //   "xref_id": "UAZ00541",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Together , this suggests that APC and Net1 are two of potentially many PP2ACdc55 targets that together define mitotic timing ."
-  //  },
-  //  {
-  //   "text": "Sic1",
-  //   "xref_id": "P38634",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Early events , such as Sic1 degradation and Clb5 accumulation , were delayed to a lesser degree than later events , such as Orc6 phosphorylation and Clb2 accumulation            ."
-  //  },
-  //  {
-  //   "text": "Clb5",
-  //   "xref_id": "P30283",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Early events , such as Sic1 degradation and Clb5 accumulation , were delayed to a lesser degree than later events , such as Orc6 phosphorylation and Clb2 accumulation            ."
-  //  },
-  //  {
-  //   "text": "Orc6",
-  //   "xref_id": "Q9Y5N6",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Early events , such as Sic1 degradation and Clb5 accumulation , were delayed to a lesser degree than later events , such as Orc6 phosphorylation and Clb2 accumulation            ."
-  //  },
-  //  {
-  //   "text": "PP2ACdc55 Delays",
-  //   "xref_id": "UAZ00542",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "PP2ACdc55 Delays Cdk Substrate Phosphorylation Independently of Impacting Cdk Tyrosine Phosphorylation  ( A ) Simplified schematics of how PP2ACdc55 is thought to affect Cdk activity in vertebrates and budding yeast ( Chica et al. , 2016 , Harvey et al. , 2011 , Kinoshita et al. , 1993 , Lee et al. , 1991 , Minshull et al. , 1996 ) ."
-  //  },
-  //  {
-  //   "text": "alpha-factor",
-  //   "xref_id": "86289906",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "swe1Delta and swe1Delta cdc55Delta cells were arrested in G1 by pheromone alpha-factor treatment and released to progress through a synchronous cell cycle before re-arrest in the next G1 phase by alpha-factor re-addition ."
-  //  },
-  //  {
-  //   "text": "FACS",
-  //   "xref_id": "P9WQ37",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "See also Figure S4A for FACS analysis to confirm the cell-cycle state of cells at the three time points , Figure S4B for a 2D annotation of full Cdk consensus sites , Figure S4C for sequence logos taking into account the species specific probability of amino acid occurrence , Table S1 for a summary of peptide counts , and Data S1 for the abridged mass spectrometry data ."
-  //  },
-  //  {
-  //   "text": "S5B",
-  //   "xref_id": "UAZ00535",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "See also Figures S5A and S5B for cell-cycle analysis and for the aggregate traces of all the sites , subdivided into phosphorylation timing categories , Table S1 for a summary of peptide counts , and Data S2 for the abridged mass spectrometry data ."
-  //  },
-  //  {
-  //   "text": "Pph21",
-  //   "xref_id": "P23594",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Figure 6 Ectopic PP2ACdc55 Delays Cell-Cycle Progression in a Dosage Dependent Manner ( A ) Increased Cdc55 and Pph21 levels following overexpression of these PP2ACdc55 subunits were analyzed by western blotting from cells growing asynchronously in galactose containing medium ."
-  //  },
-  //  {
-  //   "text": "PP2ACdc55 subunits",
-  //   "xref_id": "UAZ00528",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Figure 6 Ectopic PP2ACdc55 Delays Cell-Cycle Progression in a Dosage Dependent Manner ( A ) Increased Cdc55 and Pph21 levels following overexpression of these PP2ACdc55 subunits were analyzed by western blotting from cells growing asynchronously in galactose containing medium ."
-  //  },
-  //  {
-  //   "text": "VOLUME 66",
-  //   "xref_id": "UAZ00586",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Plasma Membrane CRPK1 Mediated Phosphorylation of 14-3-3 Proteins Induces Their Nuclear Import to Fine-Tune CBF Signaling during Cold Response  Molecular Cell , VOLUME 66 , Issue 1 , 6 April , 2017 , pp117-128 Ziyan Liu , Yuxin Jia , Yanglin Ding , Yiting Shi , Zhen Li , Yan Guo , Zhizhong Gong , Shuhua Yang  In plant cells , changes in fluidity of the plasma mem- brane may serve as the primary sensor of cold stress ; however , the precise mechanism and how the cell transduces and fine-tunes cold signals remain elusive ."
-  //  },
-  //  {
-  //   "text": "April",
-  //   "xref_id": "O75888",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Plasma Membrane CRPK1 Mediated Phosphorylation of 14-3-3 Proteins Induces Their Nuclear Import to Fine-Tune CBF Signaling during Cold Response  Molecular Cell , VOLUME 66 , Issue 1 , 6 April , 2017 , pp117-128 Ziyan Liu , Yuxin Jia , Yanglin Ding , Yiting Shi , Zhen Li , Yan Guo , Zhizhong Gong , Shuhua Yang  In plant cells , changes in fluidity of the plasma mem- brane may serve as the primary sensor of cold stress ; however , the precise mechanism and how the cell transduces and fine-tunes cold signals remain elusive ."
-  //  },
-  //  {
-  //   "text": "CBF",
-  //   "xref_id": "Q03701",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Plasma Membrane CRPK1 Mediated Phosphorylation of 14-3-3 Proteins Induces Their Nuclear Import to Fine-Tune CBF Signaling during Cold Response  Molecular Cell , VOLUME 66 , Issue 1 , 6 April , 2017 , pp117-128 Ziyan Liu , Yuxin Jia , Yanglin Ding , Yiting Shi , Zhen Li , Yan Guo , Zhizhong Gong , Shuhua Yang  In plant cells , changes in fluidity of the plasma mem- brane may serve as the primary sensor of cold stress ; however , the precise mechanism and how the cell transduces and fine-tunes cold signals remain elusive ."
-  //  },
-  //  {
-  //   "text": "Ding",
-  //   "xref_id": "Q99496",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Plasma Membrane CRPK1 Mediated Phosphorylation of 14-3-3 Proteins Induces Their Nuclear Import to Fine-Tune CBF Signaling during Cold Response  Molecular Cell , VOLUME 66 , Issue 1 , 6 April , 2017 , pp117-128 Ziyan Liu , Yuxin Jia , Yanglin Ding , Yiting Shi , Zhen Li , Yan Guo , Zhizhong Gong , Shuhua Yang  In plant cells , changes in fluidity of the plasma mem- brane may serve as the primary sensor of cold stress ; however , the precise mechanism and how the cell transduces and fine-tunes cold signals remain elusive ."
-  //  },
-  //  {
-  //   "text": "CRPK1",
-  //   "xref_id": "UAZ00554",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Here we show that the cold activated plasma membrane protein cold responsive protein kinase 1 ( CRPK1 ) phosphorylates 14-3-3 proteins ."
-  //  },
-  //  {
-  //   "text": "C-repeat- binding factor",
-  //   "xref_id": "UAZ00592",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The phosphorylated 14-3-3 proteins shuttle from the cytosol to the nucleus , where they interact with and destabilize the key cold responsive C-repeat- binding factor ( CBF ) proteins ."
-  //  },
-  //  {
-  //   "text": "14-3-3kl mutants",
-  //   "xref_id": "UAZ00644",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Consistent with this , the crpk1 and 14-3-3kl mutants show enhanced freezing tolerance , and transgenic plants overex- pressing 14-3-3l show reduced freezing tolerance ."
-  //  },
-  //  {
-  //   "text": "CRPK1-14-3-3 module",
-  //   "xref_id": "UAZ00636",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Thus , our study reveals that the CRPK1-14-3-3 module transduces the cold signal from the plasma membrane to the nucleus to modulate CBF stability , which ensures a faithfully adjusted response to cold stress of plants ."
-  //  },
-  //  {
-  //   "text": "CBFs",
-  //   "xref_id": "UAZ00551",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Because of their key role in cold acclimation , the transcriptional regulation of CBFs has been extensively studied ( Shi et al. , 2015 ) ."
-  //  },
-  //  {
-  //   "text": "CAMTA3",
-  //   "xref_id": "UAZ00594",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Inducer of CBF expression 1 ( ICE1 ) , calmodulin binding transcription activator 3 ( CAMTA3 ) , and brassinazole resistant 1 ( BZR1 ) positively regulate CBF expression ( Chinnusamy et al. , 2003 , Doherty et al. , 2009 , Li et al. , 2017 ) , whereas MYB15 and ethylene-insensitive 3 ( EIN3 ) negatively regulate CBF expression ( Agarwal et al. , 2006 , Shi et al. , 2012 ) ."
-  //  },
-  //  {
-  //   "text": "MYB15",
-  //   "xref_id": "UAZ00614",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Inducer of CBF expression 1 ( ICE1 ) , calmodulin binding transcription activator 3 ( CAMTA3 ) , and brassinazole resistant 1 ( BZR1 ) positively regulate CBF expression ( Chinnusamy et al. , 2003 , Doherty et al. , 2009 , Li et al. , 2017 ) , whereas MYB15 and ethylene-insensitive 3 ( EIN3 ) negatively regulate CBF expression ( Agarwal et al. , 2006 , Shi et al. , 2012 ) ."
-  //  },
-  //  {
-  //   "text": "ICE1",
-  //   "xref_id": "Q9Y2F5",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Inducer of CBF expression 1 ( ICE1 ) , calmodulin binding transcription activator 3 ( CAMTA3 ) , and brassinazole resistant 1 ( BZR1 ) positively regulate CBF expression ( Chinnusamy et al. , 2003 , Doherty et al. , 2009 , Li et al. , 2017 ) , whereas MYB15 and ethylene-insensitive 3 ( EIN3 ) negatively regulate CBF expression ( Agarwal et al. , 2006 , Shi et al. , 2012 ) ."
-  //  },
-  //  {
-  //   "text": "Protein kinase",
-  //   "xref_id": "P25848",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Protein kinase mediated phosphorylation has been found to modulate cold response of plants ."
-  //  },
-  //  {
-  //   "text": "OST1",
-  //   "xref_id": "Q940H6",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "A recent study identified one protein kinase , open stomata 1 ( OST1 ) , that positively regulates freezing tolerance ."
-  //  },
-  //  {
-  //   "text": "open stomata 1",
-  //   "xref_id": "UAZ00562",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "A recent study identified one protein kinase , open stomata 1 ( OST1 ) , that positively regulates freezing tolerance ."
-  //  },
-  //  {
-  //   "text": "CBL",
-  //   "xref_id": "P22681",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Other protein kinases , including the mitogen activated protein kinase kinase 2 ( MKK2 ) and CBL interacting protein kinase 3 ( AtCIPK3 ) , have been implicated in plant cold responses ( Kim et al. , 2003 , Teige et al. , 2004 ) ."
-  //  },
-  //  {
-  //   "text": "MKK2",
-  //   "xref_id": "P36507",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Other protein kinases , including the mitogen activated protein kinase kinase 2 ( MKK2 ) and CBL interacting protein kinase 3 ( AtCIPK3 ) , have been implicated in plant cold responses ( Kim et al. , 2003 , Teige et al. , 2004 ) ."
-  //  },
-  //  {
-  //   "text": "AtCIPK3",
-  //   "xref_id": "UAZ00598",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Other protein kinases , including the mitogen activated protein kinase kinase 2 ( MKK2 ) and CBL interacting protein kinase 3 ( AtCIPK3 ) , have been implicated in plant cold responses ( Kim et al. , 2003 , Teige et al. , 2004 ) ."
-  //  },
-  //  {
-  //   "text": "SOS2",
-  //   "xref_id": "Q07890",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Arabidopsis 14-3-3 proteins regulate the activities of plasma membrane H +-ATPase ( Fuglsang et al. , 2007 ) and salt overly sensitive 2 ( SOS2 ) kinase ( Zhou et al. , 2014 ) , the stability of aminocyclopropane-1-carboxylic acid synthase isoforms ( Catala et al. , 2014 , Yoon and Kieber , 2013 ) , and the localization of the transcription factor BZR1 and brassinosteroid-insensitive 1-EMS suppressor 1 ( BES1 ) ( Gampala et al. , 2007 ) ."
-  //  },
-  //  {
-  //   "text": "brassinosteroid-insensitive 1-EMS suppressor 1",
-  //   "xref_id": "UAZ00572",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Arabidopsis 14-3-3 proteins regulate the activities of plasma membrane H +-ATPase ( Fuglsang et al. , 2007 ) and salt overly sensitive 2 ( SOS2 ) kinase ( Zhou et al. , 2014 ) , the stability of aminocyclopropane-1-carboxylic acid synthase isoforms ( Catala et al. , 2014 , Yoon and Kieber , 2013 ) , and the localization of the transcription factor BZR1 and brassinosteroid-insensitive 1-EMS suppressor 1 ( BES1 ) ( Gampala et al. , 2007 ) ."
-  //  },
-  //  {
-  //   "text": "BES1",
-  //   "xref_id": "Q9LN63",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Arabidopsis 14-3-3 proteins regulate the activities of plasma membrane H +-ATPase ( Fuglsang et al. , 2007 ) and salt overly sensitive 2 ( SOS2 ) kinase ( Zhou et al. , 2014 ) , the stability of aminocyclopropane-1-carboxylic acid synthase isoforms ( Catala et al. , 2014 , Yoon and Kieber , 2013 ) , and the localization of the transcription factor BZR1 and brassinosteroid-insensitive 1-EMS suppressor 1 ( BES1 ) ( Gampala et al. , 2007 ) ."
-  //  },
-  //  {
-  //   "text": "Van",
-  //   "xref_id": "Q15025",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "In animals , phosphorylation of 14-3-3 proteins causes a decrease in binding to Raf-1 protein kinase ( Van Der Hoeven et al. , 2000 ) , and phosphorylation of 14-3-3zeta leads to the disruption of its dimeric structure ( Powell et al. , 2003 ) ."
-  //  },
-  //  {
-  //   "text": "Raf-1",
-  //   "xref_id": "P04049",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "In animals , phosphorylation of 14-3-3 proteins causes a decrease in binding to Raf-1 protein kinase ( Van Der Hoeven et al. , 2000 ) , and phosphorylation of 14-3-3zeta leads to the disruption of its dimeric structure ( Powell et al. , 2003 ) ."
-  //  },
-  //  {
-  //   "text": "14-3-3zeta",
-  //   "xref_id": "Q1HR36",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "In animals , phosphorylation of 14-3-3 proteins causes a decrease in binding to Raf-1 protein kinase ( Van Der Hoeven et al. , 2000 ) , and phosphorylation of 14-3-3zeta leads to the disruption of its dimeric structure ( Powell et al. , 2003 ) ."
-  //  },
-  //  {
-  //   "text": "SnRK2.8)",
-  //   "xref_id": "UAZ00557",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "In Arabidopsis , 14-3-3kappa and chi are phosphorylated by SNF1 related protein kinase 2.8 ( SnRK2 .8 ) ( Shin et al. , 2007 ) ."
-  //  },
-  //  {
-  //   "text": "SNF1-related protein kinase 2.8",
-  //   "xref_id": "UAZ00574",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "In Arabidopsis , 14-3-3kappa and chi are phosphorylated by SNF1 related protein kinase 2.8 ( SnRK2 .8 ) ( Shin et al. , 2007 ) ."
-  //  },
-  //  {
-  //   "text": "protein kinase mutants",
-  //   "xref_id": "UAZ00603",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Results  CRPK1 Negatively Regulates Freezing Tolerance To identify protein kinases involved in freezing tolerance , we performed a genetic screen for protein kinase mutants ( Ding et al. , 2015 ) , and we isolated several candidate receptor like protein kinase mutants with altered freezing tolerance ."
-  //  },
-  //  {
-  //   "text": "receptor-like protein kinase mutants",
-  //   "xref_id": "UAZ00545",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Results  CRPK1 Negatively Regulates Freezing Tolerance To identify protein kinases involved in freezing tolerance , we performed a genetic screen for protein kinase mutants ( Ding et al. , 2015 ) , and we isolated several candidate receptor like protein kinase mutants with altered freezing tolerance ."
-  //  },
-  //  {
-  //   "text": "protein kinase 1",
-  //   "xref_id": "P34101",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "In this study , we further characterized a mutant ( SALK_004253C ) that contains a T-DNA insertion in At1g16670 , and we named this allele cold responsive protein kinase 1 ( crpk1-1 )                      ."
-  //  },
-  //  {
-  //   "text": "crpk1-1",
-  //   "xref_id": "UAZ00564",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "In this study , we further characterized a mutant ( SALK_004253C ) that contains a T-DNA insertion in At1g16670 , and we named this allele cold responsive protein kinase 1 ( crpk1-1 )                      ."
-  //  },
-  //  {
-  //   "text": "At1g16670",
-  //   "xref_id": "UAZ00642",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "In this study , we further characterized a mutant ( SALK_004253C ) that contains a T-DNA insertion in At1g16670 , and we named this allele cold responsive protein kinase 1 ( crpk1-1 )                      ."
-  //  },
-  //  {
-  //   "text": "CA",
-  //   "xref_id": "271",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "The crpk1-1 null mutant showed significantly enhanced freezing tolerance compared to the wild-type under both non acclimated ( NA ) and cold acclimated ( CA , 4degreesC for 3 days ) conditions                    ."
-  //  },
-  //  {
-  //   "text": "NA",
-  //   "xref_id": "5360545",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "The crpk1-1 null mutant showed significantly enhanced freezing tolerance compared to the wild-type under both non acclimated ( NA ) and cold acclimated ( CA , 4degreesC for 3 days ) conditions                    ."
-  //  },
-  //  {
-  //   "text": "crpk1-1 mutant",
-  //   "xref_id": "UAZ00566",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Accordingly , the crpk1-1 mutant showed less electrolyte leakage than the wild-type with or without cold acclimation            ."
-  //  },
-  //  {
-  //   "text": "crpk1-2",
-  //   "xref_id": "UAZ00618",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The second allele , crpk1-2 ( SALK_054771 ) , was isolated                      , and it showed enhanced freezing tolerance similar to crpk1-1                      ."
-  //  },
-  //  {
-  //   "text": "SALK_054771",
-  //   "xref_id": "UAZ00606",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "The second allele , crpk1-2 ( SALK_054771 ) , was isolated                      , and it showed enhanced freezing tolerance similar to crpk1-1                      ."
-  //  },
-  //  {
-  //   "text": "CRPK1 genomic fragment",
-  //   "xref_id": "UAZ00591",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Two independent transgenic lines expressing CRPK1 genomic fragment ( CRPK1 : CRPK1 ) fully complemented the freezing tolerance of crpk1-1                            , indicating that the freezing tolerance of crpk1-1 is caused by the mutation of CRPK1 ."
-  //  },
-  //  {
-  //   "text": "CBF1-CBF3",
-  //   "xref_id": "UAZ00659",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To test whether CRPK1 mediates cold signaling via a CBF dependent pathway , we examined the expression of CBF1-CBF3 in the crpk1-1 mutant under cold stress ."
-  //  },
-  //  {
-  //   "text": "COR15B",
-  //   "xref_id": "Q9SIN5",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Cold induction of three CBF genes in crpk1-1 mutants was slightly higher than in the wild-type                     ; however , the expression of CBF targets , including RD29A , COR15B , and KIN1 , significantly increased in crpk1-1 compared to the wild-type                     ."
-  //  },
-  //  {
-  //   "text": "crpk1-1 mutants",
-  //   "xref_id": "UAZ00596",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Cold induction of three CBF genes in crpk1-1 mutants was slightly higher than in the wild-type                     ; however , the expression of CBF targets , including RD29A , COR15B , and KIN1 , significantly increased in crpk1-1 compared to the wild-type                     ."
-  //  },
-  //  {
-  //   "text": "RD29A",
-  //   "xref_id": "Q06738",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Cold induction of three CBF genes in crpk1-1 mutants was slightly higher than in the wild-type                     ; however , the expression of CBF targets , including RD29A , COR15B , and KIN1 , significantly increased in crpk1-1 compared to the wild-type                     ."
-  //  },
-  //  {
-  //   "text": "KIN1",
-  //   "xref_id": "P18612",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Cold induction of three CBF genes in crpk1-1 mutants was slightly higher than in the wild-type                     ; however , the expression of CBF targets , including RD29A , COR15B , and KIN1 , significantly increased in crpk1-1 compared to the wild-type                     ."
-  //  },
-  //  {
-  //   "text": "RLCK",
-  //   "xref_id": "UAZ00641",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "CRPK1 Protein Localizes to the Plasma Membrane CRPK1 encodes an unknown protein kinase that belongs to the receptor like cytoplasmic kinase ( RLCK ) family ( Shiu and Bleecker , 2001 ) ."
-  //  },
-  //  {
-  //   "text": "receptor-like cytoplasmic kinase",
-  //   "xref_id": "UAZ00580",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "CRPK1 Protein Localizes to the Plasma Membrane CRPK1 encodes an unknown protein kinase that belongs to the receptor like cytoplasmic kinase ( RLCK ) family ( Shiu and Bleecker , 2001 ) ."
-  //  },
-  //  {
-  //   "text": "CRPK1 Protein",
-  //   "xref_id": "UAZ00637",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "CRPK1 Protein Localizes to the Plasma Membrane CRPK1 encodes an unknown protein kinase that belongs to the receptor like cytoplasmic kinase ( RLCK ) family ( Shiu and Bleecker , 2001 ) ."
-  //  },
-  //  {
-  //   "text": "CRPK1-GFP",
-  //   "xref_id": "UAZ00579",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To determine the subcellular localization of CRPK1 , we generated the Super : CRPK1-GFP construct harboring Super promoter driven CRPK1 fused to GFP and 35S : FLS2-mCherry as a plasma membrane marker ( Robatzek et al. , 2006 ) , and we co-transformed them into wild-type Col protoplasts ."
-  //  },
-  //  {
-  //   "text": "CRPK1G2A-GFP",
-  //   "xref_id": "UAZ00609",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "When we mutated the potential myristoylation site of CRPK1 ( Gly2 ) to Ala , the signal of CRPK1G2A-GFP was still observed at the plasma membrane            , suggesting that the plasma membrane localization was not due to the myristoylation of G2 at the N terminus of CRPK1 ."
-  //  },
+   {
+    "text": "Gart",
+    "xref_id": "2618",
+    "namespace": "ncbi",
+    "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
+   },
+   {
+    "text": "Pfas",
+    "xref_id": "5198",
+    "namespace": "ncbi",
+    "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
+   },
+   {
+    "text": "Impdh1",
+    "xref_id": "3614",
+    "namespace": "ncbi",
+    "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
+   },
+   {
+    "text": "Sin3",
+    "xref_id": null,
+    "namespace": null,
+    "sentence": "Recently , Foxk1 has also been shown to cooperate with the Sin3 complex and transcriptionally regulate autophagy in myoblasts , in an mTORC1 dependent fashion ( Bowman et al. , 2014 ) ."
+   },
+   {
+    "text": "mannose",
+    "xref_id": "CHEBI:4208",
+    "namespace": "chebi",
+    "sentence": "( C and D ) GSEA of glycolysis ( gluconeogenesis ) genes ( C ) and mannose metabolism ( D ) in Foxk1 knockdown and Foxk1 rescued MEFs ."
+   },
+   // http://dx.doi.org/10.1016/j.molcel.2016.12.018
+   {
+    "text": "Ndd1",
+    "xref_id": "854554",
+    "namespace": "ncbi",
+    "sentence": "Furthermore , the late phosphorylation of a model substrate , Ndd1 , depends on threonine identity of its Cdk target sites ."
+   },
+   {
+    "text": "Swe1",
+    "xref_id": "853252",
+    "namespace": "ncbi",
+    "sentence": "Notably , absence of PP2ACdc55 no longer causes morphological defects in cells lacking Swe1 ( Wang and Burke , 1997 ) ."
+   },
+   {
+    "text": "Sli15",
+    "xref_id": "852453",
+    "namespace": "ncbi",
+    "sentence": "To examine the impact of PP2ACdc55 on the kinetics of Cdk substrate phosphorylation , we compared the electrophoretic mobility changes of three known Cdk targets , Ask1 , Sli15 , and Ndd1 ( Li and Elledge , 2003 , Pereira and Schiebel , 2003 , Reynolds et al. , 2003 ) , during synchronous cell-cycle progression of swe1Delta and swe1Delta cdc55Delta cells            ."
+   },
+   {
+    "text": "Ask1",
+    "xref_id": "853814",
+    "namespace": "ncbi",
+    "sentence": "To examine the impact of PP2ACdc55 on the kinetics of Cdk substrate phosphorylation , we compared the electrophoretic mobility changes of three known Cdk targets , Ask1 , Sli15 , and Ndd1 ( Li and Elledge , 2003 , Pereira and Schiebel , 2003 , Reynolds et al. , 2003 ) , during synchronous cell-cycle progression of swe1Delta and swe1Delta cdc55Delta cells            ."
+   },
+   {
+    "text": "PP2A", //complex
+    "xref_id": null,
+    "namespace": null,
+    "sentence": "An in vitro preference for threonine dephosphorylation has been noted during the early biochemical characterization of PP2A using peptide substrates ( Agostinis et al. , 1990 ) ."
+   },
+   {
+    "text": "Cdc55",
+    "xref_id": "852685",
+    "namespace": "ncbi",
+    "sentence": "An acidic patch on Cdc55 that has been implicated in substrate interactions ( Xu et al. , 2008 ) could be a reason for this preference ."
+   },
+   {
+    "text": "Stb1",
+    "xref_id": "855407",
+    "namespace": "ncbi",
+    "sentence": "Early sites included known early Cdk targets ( e.g. , Whi5 and Stb1 ) , while late sites included known late substrates ( e.g. , Ndd1 and Net1 ) , thus validating our assignments ."
+   },
+   {
+    "text": "Net1",
+    "xref_id": "853369",
+    "namespace": "ncbi",
+    "sentence": "Early sites included known early Cdk targets ( e.g. , Whi5 and Stb1 ) , while late sites included known late substrates ( e.g. , Ndd1 and Net1 ) , thus validating our assignments ."
+   },
+   {
+    "text": "Clb2",
+    "xref_id": "856236",
+    "namespace": "ncbi",
+    "sentence": "To differentiate between these scenarios , we aimed to compensate for increased Cdk activity in swe1Delta cells by removing Clb2 , one of the four mitotic cyclins ( Fitch et al. , 1992 ) ."
+   },
+   {
+    "text": "APC",
+    "xref_id": null,
+    "namespace": null,
+    "sentence": "In synchronized cultures , we monitored DNA content as a sign of S phase , spindle formation as a marker for G2 , and the beginning of spindle elongation as indicator for mitosis when the anaphase promoting complex ( APC ) is activated as Cdk activity reaches its peak           ."
+   },
+   {
+    "text": "Sic1",
+    "xref_id": "850768",
+    "namespace": "ncbi",
+    "sentence": "Early events , such as Sic1 degradation and Clb5 accumulation , were delayed to a lesser degree than later events , such as Orc6 phosphorylation and Clb2 accumulation            ."
+   },
+   {
+    "text": "Clb5",
+    "xref_id": "856237",
+    "namespace": "ncbi",
+    "sentence": "Early events , such as Sic1 degradation and Clb5 accumulation , were delayed to a lesser degree than later events , such as Orc6 phosphorylation and Clb2 accumulation            ."
+   },
+   {
+    "text": "Orc6",
+    "xref_id": "856518",
+    "namespace": "ncbi",
+    "sentence": "Early events , such as Sic1 degradation and Clb5 accumulation , were delayed to a lesser degree than later events , such as Orc6 phosphorylation and Clb2 accumulation            ."
+   },
+   {
+    "text": "Pph21",
+    "xref_id": "851421",
+    "namespace": "ncbi",
+    "sentence": "Figure 6 Ectopic PP2ACdc55 Delays Cell-Cycle Progression in a Dosage Dependent Manner ( A ) Increased Cdc55 and Pph21 levels following overexpression of these PP2ACdc55 subunits were analyzed by western blotting from cells growing asynchronously in galactose containing medium ."
+   },
+   // http://dx.doi.org/10.1016/j.molcel.2017.02.016
+   {
+    "text": "CBF", // family
+    "xref_id": null,
+    "namespace": null,
+    "sentence": "Plasma Membrane CRPK1 Mediated Phosphorylation of 14-3-3 Proteins Induces Their Nuclear Import to Fine-Tune CBF Signaling during Cold Response  Molecular Cell , VOLUME 66 , Issue 1 , 6 April , 2017 , pp117-128 Ziyan Liu , Yuxin Jia , Yanglin Ding , Yiting Shi , Zhen Li , Yan Guo , Zhizhong Gong , Shuhua Yang  In plant cells , changes in fluidity of the plasma mem- brane may serve as the primary sensor of cold stress ; however , the precise mechanism and how the cell transduces and fine-tunes cold signals remain elusive ."
+   },
+   {
+    "text": "CRPK1",
+    "xref_id": "838236",
+    "namespace": "ncbi",
+    "sentence": "Here we show that the cold activated plasma membrane protein cold responsive protein kinase 1 ( CRPK1 ) phosphorylates 14-3-3 proteins ."
+   },
+   {
+    "text": "CAMTA3",
+    "xref_id": "816762",
+    "namespace": "ncbi",
+    "sentence": "Inducer of CBF expression 1 ( ICE1 ) , calmodulin binding transcription activator 3 ( CAMTA3 ) , and brassinazole resistant 1 ( BZR1 ) positively regulate CBF expression ( Chinnusamy et al. , 2003 , Doherty et al. , 2009 , Li et al. , 2017 ) , whereas MYB15 and ethylene-insensitive 3 ( EIN3 ) negatively regulate CBF expression ( Agarwal et al. , 2006 , Shi et al. , 2012 ) ."
+   },
+   {
+    "text": "MYB15",
+    "xref_id": "821904",
+    "namespace": "ncbi",
+    "sentence": "Inducer of CBF expression 1 ( ICE1 ) , calmodulin binding transcription activator 3 ( CAMTA3 ) , and brassinazole resistant 1 ( BZR1 ) positively regulate CBF expression ( Chinnusamy et al. , 2003 , Doherty et al. , 2009 , Li et al. , 2017 ) , whereas MYB15 and ethylene-insensitive 3 ( EIN3 ) negatively regulate CBF expression ( Agarwal et al. , 2006 , Shi et al. , 2012 ) ."
+   },
+   {
+    "text": "ICE1",
+    "xref_id": "822287",
+    "namespace": "ncbi",
+    "sentence": "Inducer of CBF expression 1 ( ICE1 ) , calmodulin binding transcription activator 3 ( CAMTA3 ) , and brassinazole resistant 1 ( BZR1 ) positively regulate CBF expression ( Chinnusamy et al. , 2003 , Doherty et al. , 2009 , Li et al. , 2017 ) , whereas MYB15 and ethylene-insensitive 3 ( EIN3 ) negatively regulate CBF expression ( Agarwal et al. , 2006 , Shi et al. , 2012 ) ."
+   },
+   {
+    "text": "OST1",
+    "xref_id": "829541",
+    "namespace": "ncbi",
+    "sentence": "A recent study identified one protein kinase , open stomata 1 ( OST1 ) , that positively regulates freezing tolerance ."
+   },
+   {
+    "text": "open stomata 1",
+    "xref_id": "829541",
+    "namespace": "ncbi",
+    "sentence": "A recent study identified one protein kinase , open stomata 1 ( OST1 ) , that positively regulates freezing tolerance ."
+   },
+   {
+    "text": "CBL",
+    "xref_id": "817240",
+    "namespace": "ncbi",
+    "sentence": "Other protein kinases , including the mitogen activated protein kinase kinase 2 ( MKK2 ) and CBL interacting protein kinase 3 ( AtCIPK3 ) , have been implicated in plant cold responses ( Kim et al. , 2003 , Teige et al. , 2004 ) ."
+   },
+   {
+    "text": "MKK2",
+    "xref_id": "829103",
+    "namespace": "ncbi",
+    "sentence": "Other protein kinases , including the mitogen activated protein kinase kinase 2 ( MKK2 ) and CBL interacting protein kinase 3 ( AtCIPK3 ) , have been implicated in plant cold responses ( Kim et al. , 2003 , Teige et al. , 2004 ) ."
+   },
+   {
+    "text": "AtCIPK3",
+    "xref_id": "817240",
+    "namespace": "ncbi",
+    "sentence": "Other protein kinases , including the mitogen activated protein kinase kinase 2 ( MKK2 ) and CBL interacting protein kinase 3 ( AtCIPK3 ) , have been implicated in plant cold responses ( Kim et al. , 2003 , Teige et al. , 2004 ) ."
+   },
+   {
+    "text": "SOS2",
+    "xref_id": "833502",
+    "namespace": "ncbi",
+    "sentence": "Arabidopsis 14-3-3 proteins regulate the activities of plasma membrane H +-ATPase ( Fuglsang et al. , 2007 ) and salt overly sensitive 2 ( SOS2 ) kinase ( Zhou et al. , 2014 ) , the stability of aminocyclopropane-1-carboxylic acid synthase isoforms ( Catala et al. , 2014 , Yoon and Kieber , 2013 ) , and the localization of the transcription factor BZR1 and brassinosteroid-insensitive 1-EMS suppressor 1 ( BES1 ) ( Gampala et al. , 2007 ) ."
+   },
+   {
+    "text": "brassinosteroid-insensitive 1-EMS suppressor 1",
+    "xref_id": "838518",
+    "namespace": "ncbi",
+    "sentence": "Arabidopsis 14-3-3 proteins regulate the activities of plasma membrane H +-ATPase ( Fuglsang et al. , 2007 ) and salt overly sensitive 2 ( SOS2 ) kinase ( Zhou et al. , 2014 ) , the stability of aminocyclopropane-1-carboxylic acid synthase isoforms ( Catala et al. , 2014 , Yoon and Kieber , 2013 ) , and the localization of the transcription factor BZR1 and brassinosteroid-insensitive 1-EMS suppressor 1 ( BES1 ) ( Gampala et al. , 2007 ) ."
+   },
+   {
+    "text": "BES1",
+    "xref_id": "838518",
+    "namespace": "ncbi",
+    "sentence": "Arabidopsis 14-3-3 proteins regulate the activities of plasma membrane H +-ATPase ( Fuglsang et al. , 2007 ) and salt overly sensitive 2 ( SOS2 ) kinase ( Zhou et al. , 2014 ) , the stability of aminocyclopropane-1-carboxylic acid synthase isoforms ( Catala et al. , 2014 , Yoon and Kieber , 2013 ) , and the localization of the transcription factor BZR1 and brassinosteroid-insensitive 1-EMS suppressor 1 ( BES1 ) ( Gampala et al. , 2007 ) ."
+   },
+   {
+    "text": "Raf-1",
+    "xref_id": "5894",
+    "namespace": "ncbi",
+    "sentence": "In animals , phosphorylation of 14-3-3 proteins causes a decrease in binding to Raf-1 protein kinase ( Van Der Hoeven et al. , 2000 ) , and phosphorylation of 14-3-3zeta leads to the disruption of its dimeric structure ( Powell et al. , 2003 ) ."
+   },
+   {
+    "text": "COR15B",
+    "xref_id": "818853",
+    "namespace": "ncbi",
+    "sentence": "Cold induction of three CBF genes in crpk1-1 mutants was slightly higher than in the wild-type                     ; however , the expression of CBF targets , including RD29A , COR15B , and KIN1 , significantly increased in crpk1-1 compared to the wild-type                     ."
+   },
+   {
+    "text": "RD29A",
+    "xref_id": "835307",
+    "namespace": "ncbi",
+    "sentence": "Cold induction of three CBF genes in crpk1-1 mutants was slightly higher than in the wild-type                     ; however , the expression of CBF targets , including RD29A , COR15B , and KIN1 , significantly increased in crpk1-1 compared to the wild-type                     ."
+   },
+   {
+    "text": "KIN1",
+    "xref_id": "831453",
+    "namespace": "ncbi",
+    "sentence": "Cold induction of three CBF genes in crpk1-1 mutants was slightly higher than in the wild-type                     ; however , the expression of CBF targets , including RD29A , COR15B , and KIN1 , significantly increased in crpk1-1 compared to the wild-type                     ."
+   },
+   ---STOP
+   {
+    "text": "RLCK",
+    "xref_id": "UAZ00641",
+    "namespace": "uaz",
+    "type": "protein",
+    "sentence": "CRPK1 Protein Localizes to the Plasma Membrane CRPK1 encodes an unknown protein kinase that belongs to the receptor like cytoplasmic kinase ( RLCK ) family ( Shiu and Bleecker , 2001 ) ."
+   },
+   {
+    "text": "receptor-like cytoplasmic kinase",
+    "xref_id": "UAZ00580",
+    "namespace": "uaz",
+    "type": "protein",
+    "sentence": "CRPK1 Protein Localizes to the Plasma Membrane CRPK1 encodes an unknown protein kinase that belongs to the receptor like cytoplasmic kinase ( RLCK ) family ( Shiu and Bleecker , 2001 ) ."
+   },
+   {
+    "text": "CRPK1 Protein",
+    "xref_id": "UAZ00637",
+    "namespace": "uaz",
+    "type": "protein",
+    "sentence": "CRPK1 Protein Localizes to the Plasma Membrane CRPK1 encodes an unknown protein kinase that belongs to the receptor like cytoplasmic kinase ( RLCK ) family ( Shiu and Bleecker , 2001 ) ."
+   },
+   {
+    "text": "CRPK1-GFP",
+    "xref_id": "UAZ00579",
+    "namespace": "uaz",
+    "type": "protein",
+    "sentence": "To determine the subcellular localization of CRPK1 , we generated the Super : CRPK1-GFP construct harboring Super promoter driven CRPK1 fused to GFP and 35S : FLS2-mCherry as a plasma membrane marker ( Robatzek et al. , 2006 ) , and we co-transformed them into wild-type Col protoplasts ."
+   },
+   {
+    "text": "CRPK1G2A-GFP",
+    "xref_id": "UAZ00609",
+    "namespace": "uaz",
+    "type": "protein",
+    "sentence": "When we mutated the potential myristoylation site of CRPK1 ( Gly2 ) to Ala , the signal of CRPK1G2A-GFP was still observed at the plasma membrane            , suggesting that the plasma membrane localization was not due to the myristoylation of G2 at the N terminus of CRPK1 ."
+   },
   //  {
   //   "text": "FM4-64",
   //   "xref_id": "25195391",
