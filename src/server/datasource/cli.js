@@ -11,7 +11,7 @@ const op = process.argv[2];
 const passedSourceId = process.argv[3];
 const source = sources[passedSourceId];
 
-if( op !== 'update' && op !== 'clear' ){
+if( op !== 'update' && op !== 'clear' && op !== 'index' ){
   logger.error(`Op '${op}' not supported; try 'update' or 'clear'`);
 }
 
@@ -20,8 +20,8 @@ if( source == null ){
 } else {
   logger.info(`Applying ${op} on source '${passedSourceId}'...`);
 
-  let fcn = op === 'update' ? source.update : source.clear;
-  let forceDownload = true;
+  let fcn = op === 'update' || op === 'index' ? source.update : source.clear;
+  let forceDownload = op === 'update';
 
   fcn(forceDownload).then(() => {
     logger.info(`Successfully applied ${op} on source '${passedSourceId}'`);
