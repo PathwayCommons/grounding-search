@@ -1424,7 +1424,6 @@ const caseStudies = [
     "text": "Fen1",
     "xref_id": "2237",
     "namespace": "ncbi",
-    "type": "protein",
     "sentence": "The role of PRMT5 in the DNA damage response has been largely unexplored , with only three known DNA repair substrates , p53 , Fen1 , and Rad9 ( Guo et al. , 2010 , He et al. , 2011 , Jansson et al. , 2008 ) ."
    },   
    {
@@ -1889,321 +1888,168 @@ const caseStudies = [
     "namespace": "ncbi",
     "sentence": "The broad control that mTORC1 exerts over metabolism has been largely attributed to the regulation of a small number of transcription factors , including c-Myc , Srebp1/2 , Hif-1alpha , Atf4 , and Tfeb , although in most cases the molecular mechanisms remain unclear ( Laplante and Sabatini , 2013 , Ben-Sahra and Manning , 2017 ) ."
    },
-  //  {
-  //   "text": "Atf4",
-  //   "xref_id": "P18848",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "The broad control that mTORC1 exerts over metabolism has been largely attributed to the regulation of a small number of transcription factors , including c-Myc , Srebp1/2 , Hif-1alpha , Atf4 , and Tfeb , although in most cases the molecular mechanisms remain unclear ( Laplante and Sabatini , 2013 , Ben-Sahra and Manning , 2017 ) ."
-  //  },
-  //  {
-  //   "text": "sugar",
-  //   "xref_id": "5988",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Consistent with the results attained with this platform , we also observed that Foxk1 knockdown significantly and specifically reduced glucose uptake in these cells            , which resides at the apex of sugar metabolism , thus supporting a significant role of Foxk1 as a critical regulator of glucose metabolism ."
-  //  },
-  //  {
-  //   "text": "apex",
-  //   "xref_id": "P27695",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Consistent with the results attained with this platform , we also observed that Foxk1 knockdown significantly and specifically reduced glucose uptake in these cells            , which resides at the apex of sugar metabolism , thus supporting a significant role of Foxk1 as a critical regulator of glucose metabolism ."
-  //  },
-  //  {
-  //   "text": "MEME-ChIP",
-  //   "xref_id": "UAZ00487",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Using a MEME-ChIP de novo motif search ( Machanick and Bailey , 2011 ) , we identified the forkhead and winged helix motif ( GTAAACA ) as the most significantly enriched DNA sequence ( E value = 2.3e-98 )            ."
-  //  },
-  //  {
-  //   "text": "SPP",
-  //   "xref_id": "Q8TCT9",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Using the SPP package ( Kharchenko et al. , 2008 ) , we identified 28,933 genomic Foxk1 binding sites ( false discovery rate [ FDR ] < 0.01 ) , of which 11.6 % were localized to promoter regions                    ."
-  //  },
-  //  {
-  //   "text": "Hif-1alpha promoter",
-  //   "xref_id": "UAZ00481",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Foxk1 knockdown significantly decreased the activity of the Hif-1alpha promoter            , blocked the ability of serum to induce Hif-1alpha gene expression            , and , consequently , significantly impaired the ability of serum to induce Hif-1alpha protein levels            ."
-  //  },
-  //  {
-  //   "text": "Hif-1alpha gene",
-  //   "xref_id": "UAZ00500",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Foxk1 knockdown significantly decreased the activity of the Hif-1alpha promoter            , blocked the ability of serum to induce Hif-1alpha gene expression            , and , consequently , significantly impaired the ability of serum to induce Hif-1alpha protein levels            ."
-  //  },
-  //  {
-  //   "text": "Hifs",
-  //   "xref_id": "HIF",
-  //   "namespace": "be",
-  //   "type": "protein",
-  //   "sentence": "Foxk1 and Foxk2 Orchestrate Hif-1alpha Expression , Glucose Consumption , and Cell Proliferation in Tsc2-/- MEFs The hypoxia inducible factors ( Hifs ) are extremely important for maintaining cellular homeostasis under conditions of low oxygen and stress , as they orchestrate a significant metabolic remodeling to allow for proper cellular function and survival in hostile environments , such as a growing , poorly vascularized tumor ( Keith et al. , 2011 , Nakazawa et al. , 2016 ) ."
-  //  },
-  //  {
-  //   "text": "Foxk2",
-  //   "xref_id": "Q01167",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Foxk1 and Foxk2 Orchestrate Hif-1alpha Expression , Glucose Consumption , and Cell Proliferation in Tsc2-/- MEFs The hypoxia inducible factors ( Hifs ) are extremely important for maintaining cellular homeostasis under conditions of low oxygen and stress , as they orchestrate a significant metabolic remodeling to allow for proper cellular function and survival in hostile environments , such as a growing , poorly vascularized tumor ( Keith et al. , 2011 , Nakazawa et al. , 2016 ) ."
-  //  },
-  //  {
-  //   "text": "5-Ethynyl-2'-deoxyuridine",
-  //   "xref_id": "UAZ00518",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Consistently , we observed that Foxk1 and Foxk2 are important regulators of cell proliferation in Tsc2-/- MEFs , as illustrated by 5-Ethynyl-2 '-deoxyuridine ( EdU ) incorporation , proliferation curves , and clonogenic assay ."
-  //  },
-  //  {
-  //   "text": "EdU",
-  //   "xref_id": "UAZ00505",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Consistently , we observed that Foxk1 and Foxk2 are important regulators of cell proliferation in Tsc2-/- MEFs , as illustrated by 5-Ethynyl-2 '-deoxyuridine ( EdU ) incorporation , proliferation curves , and clonogenic assay ."
-  //  },
-  //  {
-  //   "text": "Foxk1/2",
-  //   "xref_id": "UAZ00497",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Together , these data strongly suggest that , in addition to enhancing its translation efficiency , mTORC1 regulates Hif-1alpha level through a Foxk1/2 mediated transcriptional mechanism , which is sufficient to alter glucose metabolism and cell proliferation ."
-  //  },
-  //  {
-  //   "text": "Foxk",
-  //   "xref_id": "UAZ00494",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Additional in-depth analysis of Foxk regulated modifications is needed ."
-  //  },
-  //  {
-  //   "text": "Torin 1",
-  //   "xref_id": "UAZ00517",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "As expected , the inhibition of mTORC1 by rapamycin or Torin 1 ( an mTOR catalytic inhibitor ) suppressed the ability of serum stimulation to promote Foxk1 dephosphorylation ."
-  //  },
-  //  {
-  //   "text": "AktVIII",
-  //   "xref_id": "UAZ00501",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Accordingly , the PI3K inhibitor ( LY294002 ) or the Akt inhibitor ( AktVIII ) also partially suppressed Foxk1 dephosphorylation after serum stimulation ."
-  //  },
-  //  {
-  //   "text": "LY294002",
-  //   "xref_id": "3973",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Accordingly , the PI3K inhibitor ( LY294002 ) or the Akt inhibitor ( AktVIII ) also partially suppressed Foxk1 dephosphorylation after serum stimulation ."
-  //  },
-  //  {
-  //   "text": "Akt inhibitor",
-  //   "xref_id": "UAZ00480",
-  //   "namespace": "uaz",
-  //   "type": "simple-chemical",
-  //   "sentence": "Accordingly , the PI3K inhibitor ( LY294002 ) or the Akt inhibitor ( AktVIII ) also partially suppressed Foxk1 dephosphorylation after serum stimulation ."
-  //  },
-  //  {
-  //   "text": "PI3K inhibitor",
-  //   "xref_id": "UAZ00485",
-  //   "namespace": "uaz",
-  //   "type": "simple-chemical",
-  //   "sentence": "Accordingly , the PI3K inhibitor ( LY294002 ) or the Akt inhibitor ( AktVIII ) also partially suppressed Foxk1 dephosphorylation after serum stimulation ."
-  //  },
-  //  {
-  //   "text": "RSK inhibitor",
-  //   "xref_id": "UAZ00509",
-  //   "namespace": "uaz",
-  //   "type": "simple-chemical",
-  //   "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
-  //  },
-  //  {
-  //   "text": "AZD6244",
-  //   "xref_id": "10127622",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
-  //  },
-  //  {
-  //   "text": "BI-D1870",
-  //   "xref_id": "25023738",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
-  //  },
-  //  {
-  //   "text": "SB203580",
-  //   "xref_id": "176155",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
-  //  },
-  //  {
-  //   "text": "MEK inhibitor",
-  //   "xref_id": "UAZ00496",
-  //   "namespace": "uaz",
-  //   "type": "simple-chemical",
-  //   "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
-  //  },
-  //  {
-  //   "text": "p38-MAPK inhibitor",
-  //   "xref_id": "UAZ00512",
-  //   "namespace": "uaz",
-  //   "type": "simple-chemical",
-  //   "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
-  //  },
-  //  {
-  //   "text": "CHIR99021",
-  //   "xref_id": "9956119",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "Interestingly , the Gsk3 inhibitor CHIR99021 further decreased Foxk1 phosphorylation , suggesting that Gsk3 promotes Foxk1 phosphorylation upon the inhibition of mTORC1             ."
-  //  },
-  //  {
-  //   "text": "Gsk3 inhibitor",
-  //   "xref_id": "UAZ00484",
-  //   "namespace": "uaz",
-  //   "type": "simple-chemical",
-  //   "sentence": "Interestingly , the Gsk3 inhibitor CHIR99021 further decreased Foxk1 phosphorylation , suggesting that Gsk3 promotes Foxk1 phosphorylation upon the inhibition of mTORC1             ."
-  //  },
-  //  {
-  //   "text": "SB216763",
-  //   "xref_id": "UAZ00495",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Importantly , we observed that Gsk3 inhibition ( with two structurally unrelated inhibitors , SB216763 and CHIR99021 ) was sufficient to suppress the increase in Foxk1 phosphorylation elicited by mTORC1 inhibition                    ."
-  //  },
-  //  {
-  //   "text": "recombinant GST-Foxk1",
-  //   "xref_id": "UAZ00513",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "We also performed an in vitro kinase assay and demonstrated that Gsk3alpha can directly phosphorylate recombinant GST-Foxk1 , which was decreased with the S402/406A or S427/431A mutants and substantially diminished with the S402 , 406 , 427 , and 431A quadruple mutant            ."
-  //  },
-  //  {
-  //   "text": "S402/406A",
-  //   "xref_id": "UAZ00515",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "We also performed an in vitro kinase assay and demonstrated that Gsk3alpha can directly phosphorylate recombinant GST-Foxk1 , which was decreased with the S402/406A or S427/431A mutants and substantially diminished with the S402 , 406 , 427 , and 431A quadruple mutant            ."
-  //  },
-  //  {
-  //   "text": "S427/431A mutants",
-  //   "xref_id": "UAZ00483",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "We also performed an in vitro kinase assay and demonstrated that Gsk3alpha can directly phosphorylate recombinant GST-Foxk1 , which was decreased with the S402/406A or S427/431A mutants and substantially diminished with the S402 , 406 , 427 , and 431A quadruple mutant            ."
-  //  },
-  //  {
-  //   "text": "CHIR00921",
-  //   "xref_id": "UAZ00519",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "Importantly , and mirroring the effects on Foxk1 phosphorylation , treatment with rapamycin enhanced the interaction between 14-3-3 and Foxk1 , while pre-treatment with the Gsk3 inhibitor CHIR00921 diminished this interaction            ."
-  //  },
-  //  {
-  //   "text": "S427/431A",
-  //   "xref_id": "UAZ00516",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "To determine if in fact these novel phosphorylation sites are creating a 14-3-3-binding site on Foxk1 , we utilized our mutant constructs ( S402/406A , S427/431A , and S402 , 406 , 427 , and 431A ) ."
-  //  },
-  //  {
-  //   "text": "S402/406",
-  //   "xref_id": "UAZ00514",
-  //   "namespace": "uaz",
-  //   "type": "protein",
-  //   "sentence": "These data implicate a critical role of S402/406 phosphorylation of Foxk1 in generating a 14-3-3 binding , which correlates with Foxk1 trafficking and subcellular localization ."
-  //  },
-  //  {
-  //   "text": "Shmt2",
-  //   "xref_id": "P34897",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-  //  },
-  //  {
-  //   "text": "Pgm2",
-  //   "xref_id": "Q96G03",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-  //  },
-  //  {
-  //   "text": "Mthfd1l",
-  //   "xref_id": "Q6UB35",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-  //  },
-  //  {
-  //   "text": "Eno1",
-  //   "xref_id": "P06733",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-  //  },
-  //  {
-  //   "text": "Tpi1",
-  //   "xref_id": "P60174",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-  //  },
-  //  {
-  //   "text": "Aldoa",
-  //   "xref_id": "P04075",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-  //  },
-  //  {
-  //   "text": "Ldh1",
-  //   "xref_id": "Q81RW4",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-  //  },
-  //  {
-  //   "text": "glucose-6-phosphate",
-  //   "xref_id": "5958",
-  //   "namespace": "pubchem",
-  //   "type": "simple-chemical",
-  //   "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
-  //  },
-  //  {
-  //   "text": "Psat1",
-  //   "xref_id": "Q9Y617",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Interestingly , and while known to be regulated by hypoxia , serine synthesis enzymes ( Phgdh , Psat1 , and Psph ) were not altered by knockdown of Foxk1 ."
-  //  },
-  //  {
-  //   "text": "Phgdh",
-  //   "xref_id": "O43175",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Interestingly , and while known to be regulated by hypoxia , serine synthesis enzymes ( Phgdh , Psat1 , and Psph ) were not altered by knockdown of Foxk1 ."
-  //  },
-  //  {
-  //   "text": "Prps2",
-  //   "xref_id": "P11908",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
-  //  },
-  //  {
-  //   "text": "Atic",
-  //   "xref_id": "P31939",
-  //   "namespace": "uniprot",
-  //   "type": "protein",
-  //   "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
-  //  },
+   {
+    "text": "Atf4",
+    "xref_id": "468",
+    "namespace": "ncbi",
+    "sentence": "The broad control that mTORC1 exerts over metabolism has been largely attributed to the regulation of a small number of transcription factors , including c-Myc , Srebp1/2 , Hif-1alpha , Atf4 , and Tfeb , although in most cases the molecular mechanisms remain unclear ( Laplante and Sabatini , 2013 , Ben-Sahra and Manning , 2017 ) ."
+   },
+   {
+    "text": "sugar",
+    "xref_id": "CHEBI:4167",
+    "namespace": "chebi",
+    "sentence": "Consistent with the results attained with this platform , we also observed that Foxk1 knockdown significantly and specifically reduced glucose uptake in these cells            , which resides at the apex of sugar metabolism , thus supporting a significant role of Foxk1 as a critical regulator of glucose metabolism ."
+   },
+   {
+    "text": "Foxk2",
+    "xref_id": "3607",
+    "namespace": "ncbi",
+    "sentence": "Foxk1 and Foxk2 Orchestrate Hif-1alpha Expression , Glucose Consumption , and Cell Proliferation in Tsc2-/- MEFs The hypoxia inducible factors ( Hifs ) are extremely important for maintaining cellular homeostasis under conditions of low oxygen and stress , as they orchestrate a significant metabolic remodeling to allow for proper cellular function and survival in hostile environments , such as a growing , poorly vascularized tumor ( Keith et al. , 2011 , Nakazawa et al. , 2016 ) ."
+   },
+   {
+    "text": "5-Ethynyl-2'-deoxyuridine",
+    "xref_id": "472172",
+    "namespace": "pubchem",
+    "sentence": "Consistently , we observed that Foxk1 and Foxk2 are important regulators of cell proliferation in Tsc2-/- MEFs , as illustrated by 5-Ethynyl-2 '-deoxyuridine ( EdU ) incorporation , proliferation curves , and clonogenic assay ."
+   },
+   {
+    "text": "EdU",
+    "xref_id": "472172",
+    "namespace": "pubchem",
+    "sentence": "Consistently , we observed that Foxk1 and Foxk2 are important regulators of cell proliferation in Tsc2-/- MEFs , as illustrated by 5-Ethynyl-2 '-deoxyuridine ( EdU ) incorporation , proliferation curves , and clonogenic assay ."
+   },
+   {
+    "text": "Torin 1",
+    "xref_id": "CHEBI:84327",
+    "namespace": "chebi",
+    "sentence": "As expected , the inhibition of mTORC1 by rapamycin or Torin 1 ( an mTOR catalytic inhibitor ) suppressed the ability of serum stimulation to promote Foxk1 dephosphorylation ."
+   },
+   {
+    "text": "AktVIII",
+    "xref_id": "CHEBI:91346",
+    "namespace": "chebi",
+    "sentence": "Accordingly , the PI3K inhibitor ( LY294002 ) or the Akt inhibitor ( AktVIII ) also partially suppressed Foxk1 dephosphorylation after serum stimulation ."
+   },
+   {
+    "text": "LY294002",
+    "xref_id": "CHEBI:65329",
+    "namespace": "chebi",
+    "sentence": "Accordingly , the PI3K inhibitor ( LY294002 ) or the Akt inhibitor ( AktVIII ) also partially suppressed Foxk1 dephosphorylation after serum stimulation ."
+   },
+   {
+    "text": "AZD6244",
+    "xref_id": "CHEBI:90227",
+    "namespace": "chebi",
+    "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
+   },
+   {
+    "text": "BI-D1870",
+    "xref_id": "25023738",
+    "namespace": "pubchem",
+    "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
+   },
+   {
+    "text": "SB203580",
+    "xref_id": "CHEBI:90705",
+    "namespace": "chebi",
+    "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
+   },
+   {
+    "text": "CHIR99021",
+    "xref_id": "CHEBI:91091",
+    "namespace": "chebi",
+    "sentence": "Interestingly , the Gsk3 inhibitor CHIR99021 further decreased Foxk1 phosphorylation , suggesting that Gsk3 promotes Foxk1 phosphorylation upon the inhibition of mTORC1             ."
+   },
+   {
+    "text": "SB216763",
+    "xref_id": "CHEBI:91421",
+    "namespace": "chebi",
+    "sentence": "Importantly , we observed that Gsk3 inhibition ( with two structurally unrelated inhibitors , SB216763 and CHIR99021 ) was sufficient to suppress the increase in Foxk1 phosphorylation elicited by mTORC1 inhibition                    ."
+   },
+   {
+    "text": "Shmt2",
+    "xref_id": "P34897",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
+   },
+   {
+    "text": "Pgm2",
+    "xref_id": "Q96G03",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
+   },
+   {
+    "text": "Mthfd1l",
+    "xref_id": "Q6UB35",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
+   },
+   {
+    "text": "Eno1",
+    "xref_id": "P06733",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
+   },
+   {
+    "text": "Tpi1",
+    "xref_id": "P60174",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
+   },
+   {
+    "text": "Aldoa",
+    "xref_id": "P04075",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
+   },
+   {
+    "text": "Ldh1",
+    "xref_id": "Q81RW4",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
+   },
+   {
+    "text": "glucose-6-phosphate",
+    "xref_id": "5958",
+    "namespace": "pubchem",
+    "type": "simple-chemical",
+    "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
+   },
+   {
+    "text": "Psat1",
+    "xref_id": "Q9Y617",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Interestingly , and while known to be regulated by hypoxia , serine synthesis enzymes ( Phgdh , Psat1 , and Psph ) were not altered by knockdown of Foxk1 ."
+   },
+   {
+    "text": "Phgdh",
+    "xref_id": "O43175",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Interestingly , and while known to be regulated by hypoxia , serine synthesis enzymes ( Phgdh , Psat1 , and Psph ) were not altered by knockdown of Foxk1 ."
+   },
+   {
+    "text": "Prps2",
+    "xref_id": "P11908",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
+   },
+   {
+    "text": "Atic",
+    "xref_id": "P31939",
+    "namespace": "uniprot",
+    "type": "protein",
+    "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
+   },
   //  {
   //   "text": "Gart",
   //   "xref_id": "P22102",
