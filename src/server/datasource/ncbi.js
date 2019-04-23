@@ -64,10 +64,7 @@ const processEntry = entryLine => {
   return { namespace, type, id, organism, name, synonyms };
 };
 
-const includeEntry = entryLine => {
-  let orgId = nthStrNode( entryLine, NODE_DELIMITER, NODE_INDICES.ORGANISM );
-  return isSupportedOrganism(orgId);
-};
+const includeEntry = () => true;
 
 const parseFile = (filePath, onData, onEnd) => {
   let hasHeaderLine = true;
