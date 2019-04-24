@@ -272,7 +272,7 @@
       "sentence": "To examine the impact of PP2ACdc55 on the kinetics of Cdk substrate phosphorylation , we compared the electrophoretic mobility changes of three known Cdk targets , Ask1 , Sli15 , and Ndd1 ( Li and Elledge , 2003 , Pereira and Schiebel , 2003 , Reynolds et al. , 2003 ) , during synchronous cell-cycle progression of swe1Delta and swe1Delta cdc55Delta cells            ."
      },
      {
-      "text": "PP2A", //complex
+      "text": "PP2A",
       "xref_id": null,
       "namespace": null,
       "sentence": "An in vitro preference for threonine dephosphorylation has been noted during the early biochemical characterization of PP2A using peptide substrates ( Agostinis et al. , 1990 ) ."
@@ -630,13 +630,13 @@
       "sentence": "These structures are first coated by replication protein A ( RPA ) , which is later displaced by the RAD51 protein , the main facilitator of strand invasion and recombination ( Panier and Boulton , 2014 ) ."
      },
      {
-      "text": "RPA",//complex
+      "text": "RPA",
       "xref_id": null,
       "namespace": null,
       "sentence": "These structures are first coated by replication protein A ( RPA ) , which is later displaced by the RAD51 protein , the main facilitator of strand invasion and recombination ( Panier and Boulton , 2014 ) ."
      },
      {
-      "text": "H4", //family
+      "text": "H4", 
       "xref_id": null,
       "namespace": null,
       "sentence": "53BP1 possesses a Tudor domain in tandem with a UDR domain that is specifically able to read H4K20me2 marks in combination with ubiquitylated histone H2A ( Fradet-Turcotte et al. , 2013 ) ."
@@ -661,7 +661,7 @@
       "sentence": "DSB formation induces activation of the ATM signaling pathway , leading to the recruitment of the E3 ligases RNF8 and RNF168 , which polyubiquitylate both H2A and JMJD2A , the latter of which triggers its degradation ( Mallette et al. , 2012 ) ."
      },
      {
-      "text": "H2", //family
+      "text": "H2", 
       "xref_id": null,
       "namespace": null,
       "sentence": "In addition to this , it has been shown that a combination of TIP60 mediated H2AK15 acetylation and recruitment of the TIP60 complex component MBTD1 to H4K20me2 facilitates 53BP1 mobilization from break ends ( Jacquet et al. , 2016 ) ."
@@ -829,7 +829,7 @@
       "sentence": "Here , we show that an intrinsic constitutively activated feedforward signaling circuit composed of IkappaBalpha and NF-kappaB ( p65 ) , miR-196b-3p , Meis2 , and PPP3CC is formed during the emergence of castration resistant prostate cancer ( CRPC ) ."
      },   
      {
-      "text": "IkappaB kinase", //family
+      "text": "IkappaB kinase",
       "xref_id": null,
       "namespace": null,
       "sentence": "A number of stimuli activate NF-kappaB , mostly through IkappaB kinase ( IKK )-dependent phosphorylation and subsequent degradation of the IkappaB inhibitory proteins ."
@@ -865,7 +865,7 @@
       "sentence": "We found that CRPC cells were much more sensitive than PPC cell to the treatment of inhibitors , BAY11-7082 or celastrol , which can inhibit IkappaBalpha or NF-kappaB                     ."
      },
      {
-      "text": "protein phosphatase 2b", //complex - calcineurin
+      "text": "protein phosphatase 2b",
       "xref_id": null,
       "namespace": null,
       "sentence": "We found that treatment with the phosphatase inhibitors , cypermethrin and deltamethrin , which inhibit serine/threonine protein phosphatase 2b ( PP2B ) , increased p-IkappaBalpha expression and p65 activity in PPC cells                          ."
@@ -1308,7 +1308,7 @@
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
      {
-      "text": "glutathione S-transferase", //family
+      "text": "glutathione S-transferase", 
       "xref_id": null,
       "namespace": null,
       "sentence": "As a control , the glutathione S-transferase ( GST ) protein did not bind to any region of CamK-A            ."
@@ -1397,7 +1397,7 @@
    "id": "http://dx.doi.org/10.1016/j.molcel.2017.02.016",
    "entities": [
     {
-      "text": "CBF", // family
+      "text": "CBF", 
       "xref_id": null,
       "namespace": null,
       "sentence": "Plasma Membrane CRPK1 Mediated Phosphorylation of 14-3-3 Proteins Induces Their Nuclear Import to Fine-Tune CBF Signaling during Cold Response  Molecular Cell , VOLUME 66 , Issue 1 , 6 April , 2017 , pp117-128 Ziyan Liu , Yuxin Jia , Yanglin Ding , Yiting Shi , Zhen Li , Yan Guo , Zhizhong Gong , Shuhua Yang  In plant cells , changes in fluidity of the plasma mem- brane may serve as the primary sensor of cold stress ; however , the precise mechanism and how the cell transduces and fine-tunes cold signals remain elusive ."
@@ -1499,13 +1499,13 @@
       "sentence": "Cold induction of three CBF genes in crpk1-1 mutants was slightly higher than in the wild-type                     ; however , the expression of CBF targets , including RD29A , COR15B , and KIN1 , significantly increased in crpk1-1 compared to the wild-type                     ."
      },
      {
-      "text": "RLCK", //family
+      "text": "RLCK", 
       "xref_id": null,
       "namespace": null,
       "sentence": "CRPK1 Protein Localizes to the Plasma Membrane CRPK1 encodes an unknown protein kinase that belongs to the receptor like cytoplasmic kinase ( RLCK ) family ( Shiu and Bleecker , 2001 ) ."
      },
      {
-      "text": "receptor-like cytoplasmic kinase", //family
+      "text": "receptor-like cytoplasmic kinase",
       "xref_id": null,
       "namespace": null,
       "sentence": "CRPK1 Protein Localizes to the Plasma Membrane CRPK1 encodes an unknown protein kinase that belongs to the receptor like cytoplasmic kinase ( RLCK ) family ( Shiu and Bleecker , 2001 ) ."
@@ -1600,7 +1600,7 @@
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
      {
-      "text": "glutathione S-transferase", //family
+      "text": "glutathione S-transferase", 
       "xref_id": null,
       "namespace": null,
       "sentence": "As a control , the glutathione S-transferase ( GST ) protein did not bind to any region of CamK-A            ."
@@ -1845,7 +1845,7 @@
       "sentence": "Simultaneous activation of IRF3 and NF-kappaB results in the production of type I and type III interferon ( IFN ) , proinflammatory cytokines as well as direct induction of antiviral genes such as IFIT1 ( Chan and Gack , 2015 ) ."
      },  
      {
-      "text": "PP1", //complex
+      "text": "PP1",
       "xref_id": null,
       "namespace": null,
       "sentence": "For example , activity promoting ubiquitylation of RIG-I ( Gack et al. , 2007 ) is balanced by deubiquitylation ( Cui et al. , 2014 , Fan et al. , 2014 ) , and activating dephosphorylation of RIG-I by PP1 ( Wies et al. , 2013 ) is countered by inhibitory phosphorylation through PKC ( Maharaj et al. , 2012 ) ."
