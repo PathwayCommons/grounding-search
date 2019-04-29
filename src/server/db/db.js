@@ -198,9 +198,10 @@ const db = {
       }
     };
 
-    if ( !_.isNil( namespace ) ) {
-      _.set( body, [ 'query', 'bool', 'filter', 'term', NS_FIELD ], namespace );
-    }
+    // TODO apply ns filter a different way...
+    // if ( !_.isNil( namespace ) ) {
+    //   _.set( body, [ 'query', 'bool', 'filter', 'term', NS_FIELD ], namespace );
+    // }
 
     return client.search({ index, type, body }).then( processResult );
   },
