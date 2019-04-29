@@ -1,0 +1,136 @@
+[
+  { "id": "https://www.pathwaycommons.org/archives/PC2/v11/blacklist.txt",
+    "entities": [
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:15378",
+        "text": "hydrogen"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:15377",
+        "text": "water"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:16908",
+        "text": "NADH"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:15422",
+        "text": "ATP"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:16526",
+        "text": "CO2"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:37565",
+        "text": "GTP"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:17552",
+        "text": "GDP"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:15379",
+        "text": "Oxygen"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:16761",
+        "text": "ADP"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:18009",
+        "text": "NADP"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:35780",
+        "text": "phosphate"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:15846",
+        "text": "NAD"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:18367",
+        "text": "phosphate"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:29888",
+        "text": "Pyrophosphate"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:58349",
+        "text": "NADP(+)"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:25524",
+        "text": "NAD(P)"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:68836",
+        "text": "diphosphate group"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:57540",
+        "text": "NAD(+)"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:13392",
+        "text": "NAD(P)H"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:57783",
+        "text": "NADPH"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:16474",
+        "text": "NADPH"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:13390",
+        "text": "NAD(P)(+)"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:58307",
+        "text": "FADH2"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:17877",
+        "text": "FADH2"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:456216",
+        "text": "ADP"
+      },
+      {
+        "namespace": "chebi",
+        "xref_id": "CHEBI:26078",
+        "text":"Phosphate"
+      }
+    ]
+  }
+]
