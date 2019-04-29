@@ -218,7 +218,7 @@ const db = {
       id: (namespace + ':' + id).toUpperCase(),
       index: INDEX,
       type: TYPE
-    });
+    }).then( res => res._source );
   },
   /**
    * Check if the elasticsearch index dedicated for the app exists.
