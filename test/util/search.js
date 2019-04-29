@@ -20,7 +20,7 @@ const SEARCH_OBJECT = Object.freeze({
   'ace': { namespace: 'ncbi', id: '1636' },
 
   // an example chemical
-  'aspirin': { namespace: 'chebi', id: 'CHEBI:15365' }
+  'aspirin': { namespace: 'chebi', id: '15365' }
 });
 
 export { SEARCH_OBJECT };
