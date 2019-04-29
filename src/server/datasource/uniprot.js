@@ -6,7 +6,7 @@ import _ from 'lodash';
 import { INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } from '../config';
 import { db } from '../db';
 import XmlParser from '../parser/xml-parser';
-import download from './download';
+import downloadFile from './download';
 import { isSupportedOrganism } from './organisms';
 import { updateEntriesFromFile } from './processing';
 
@@ -87,13 +87,27 @@ const parseXml = (filePath, onData, onEnd) => {
 const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseXml, processEntry, includeEntry);
 
 /**
+ * Downloads the 'uniprot' entities and stores them in the input file.
+ * @returns {Promise} A promise that is resolved when the download is done.
+ */
+const download = function(){
+  return downloadFile(UNIPROT_URL, UNIPROT_FILE_NAME);
+};
+
+/**
+ * Update the 'uniprot' entities in the index from the input file.
+ * @returns {Promise} A promise that is resolved when the indexing is done.
+ */
+const index = function(){
+  return updateFromFile();
+};
+
+/**
  * Update the 'uniprot' entitites from the input file.
- * @param {boolean} [forceIfFileExists] Whether to dowload the input source file for 'uniprot'
- * even if a version of it already exists.
  * @returns {Promise}
  */
-const update = function(forceIfFileExists){
-  return download(UNIPROT_URL, UNIPROT_FILE_NAME, forceIfFileExists).then(updateFromFile);
+const update = function(){
+  return download().then(index);
 };
 
 /**
@@ -126,4 +140,4 @@ const get = function(id){
   return db.get( id, ENTRY_NS );
 };
 
-export const uniprot = { update, clear, search, get };
+export const uniprot = { download, index, update, clear, search, get };

@@ -7,7 +7,7 @@ import { INPUT_PATH, CHEBI_FILE_NAME, CHEBI_URL } from '../config';
 import { db } from '../db';
 import XmlParser from '../parser/xml-parser';
 
-import download from './download';
+import downloadFile from './download';
 import { updateEntriesFromFile }  from './processing';
 
 const FILE_PATH = path.join(INPUT_PATH, CHEBI_FILE_NAME);
@@ -93,18 +93,32 @@ const parseXml = (filePath, onData, onEnd) => {
 const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseXml, processEntry, includeEntry);
 
 /**
- * Update the 'chebi' entitites from the input file.
- * @param {boolean} [forceIfFileExists] Whether to dowload the input source file for 'chebi'
- * even if a version of it already exists.
- * @returns {Promise}
+ * Index the existing 'chebi' entities file.
+ * @returns A promise that resolves when the input file is indexed.
  */
-const update = function(forceIfFileExists){
-  return download(CHEBI_URL, CHEBI_FILE_NAME, forceIfFileExists).then(updateFromFile);
+const index = function(){
+  return updateFromFile();
+};
+
+/**
+ * Downloads the 'chebi' entities and stores them in the input file.
+ * @returns {Promise} A promise that resolves when the input file is downloaded.
+ */
+const download = function(){
+  return downloadFile(CHEBI_URL, CHEBI_FILE_NAME);
+};
+
+/**
+ * Downloads and updates the 'chebi' entitites.
+ * @returns {Promise} A promise that resolves when the input file is downloaded and indexed.
+ */
+const update = function(){
+  return download().then(updateFromFile);
 };
 
 /**
  * Clear any entity whose namespace is 'chebi'.
- * @returns {Promise}
+ * @returns {Promise} A promise that resolves when clearing is done.
  */
 const clear = function(){
   const refreshIndex = () => db.refreshIndex();
@@ -132,4 +146,4 @@ const get = function(id){
   return db.get( id, ENTRY_NS );
 };
 
-export const chebi = { update, clear, search, get };
+export const chebi = { download, index, update, clear, search, get };

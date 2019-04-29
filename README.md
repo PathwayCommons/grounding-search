@@ -50,6 +50,8 @@ The following environment variables can be used to configure the server:
 - `npm run clear:source` : clear data for `source` (i.e. `ncbi`, `chebi`)
 - `npm run update` : update all data (download then index)
 - `npm run update:source` : update data for `source` (i.e. `ncbi`, `chebi`) in elasticsearch
+- `npm run download` : download all data
+- `npm run download:source` download data for `source` (i.e. `ncbi`, `chebi`)
 - `npm run index` : index all data
 - `npm run index:source` : index data for `source` (i.e. `ncbi`, `chebi`) in elasticsearch
 - `npm run test:inputgen` : generate input test file for each `source` (i.e. `uniprot`, ...)

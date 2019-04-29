@@ -5,10 +5,8 @@ import _ from 'lodash';
 
 import { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL } from '../config';
 import { db } from '../db';
-import { nthStrNode } from '../util';
 import DelimitedParser from '../parser/delimited-parser';
-import download from './download';
-import { isSupportedOrganism } from './organisms';
+import downloadFile from './download';
 import { updateEntriesFromFile } from './processing';
 
 const FILE_PATH = path.join(INPUT_PATH, NCBI_FILE_NAME);
@@ -75,18 +73,32 @@ const parseFile = (filePath, onData, onEnd) => {
 const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseFile, processEntry, includeEntry);
 
 /**
- * Update the 'uniprot' entitites from the input file.
- * @param {boolean} [forceIfFileExists] Whether to dowload the input source file for 'ncbi'
- * even if a version of it already exists.
- * @returns {Promise}
+ * Downloads the 'ncbi' entities and stores them in the input file.
+ * @returns {Promise} A promise that is resolved when the download is done.
  */
-const update = function(forceIfFileExists){
-  return download(NCBI_URL, NCBI_FILE_NAME, forceIfFileExists).then(updateFromFile);
+const download = function(){
+  return downloadFile(NCBI_URL, NCBI_FILE_NAME);
+};
+
+/**
+ * Update the 'ncbi' entities in the index from the input file.
+ * @returns {Promise} A promise that is resolved when the indexing is done.
+ */
+const index = function(){
+  return updateFromFile();
+};
+
+/**
+ * Update the 'ncbi' entitites from the input file.
+ * @returns {Promise} A promise that is resolved when downloading and indexing are done.
+ */
+const update = function(){
+  return download().then(index);
 };
 
 /**
  * Clear any entity whose namespace is 'ncbi'.
- * @returns {Promise}
+ * @returns {Promise} A promise that resolves when the index is cleared.
  */
 const clear = function(){
   const refreshIndex = () => db.refreshIndex();
@@ -114,4 +126,4 @@ const get = function(id){
   return db.get( id, ENTRY_NS );
 };
 
-export const ncbi = { update, clear, search, get };
+export const ncbi = { download, index, update, clear, search, get };
