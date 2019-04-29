@@ -61,7 +61,7 @@ const processEntry = entry => {
   let namespace = ENTRY_NS;
   let type = ENTRY_TYPE;
 
-  let id = findChild( entry, XML_TAGS.ID );
+  let id = findChild( entry, XML_TAGS.ID ).replace('CHEBI:', '');
   let name = findChild( entry, XML_TAGS.NAME );
   let inchi = findChild( entry, XML_TAGS.INCHI );
   let inchiKey = findChild( entry, XML_TAGS.INCHIKEY );

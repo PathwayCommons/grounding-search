@@ -3,32 +3,12 @@ import elasticsearch from 'elasticsearch';
 import { INDEX, MAX_SEARCH_ES, ELASTICSEARCH_HOST } from '../config';
 
 const TYPE = 'entry';
-const META_SEARCH_FIELD = 'meta_search';
-const ID_FIELD = 'id';
 const NS_FIELD = 'namespace';
-const MIN_GRAM = 1;
-const MAX_GRAM = 45;
-
-const processResult = res => res.hits.hits.map( entry => entry._source );
-const getFirstItem = list => list.length > 0 ? list[ 0 ] : null;
-const search = ( searchkey, searchField, namespace, from, size ) => {
-  let client = db.connect();
-  let searchParam = { from, size };
-
-  if ( !_.isNil( namespace ) ) {
-    _.set( searchParam, [ 'query', 'bool', 'filter', 'term', NS_FIELD ], namespace );
-  }
-
-  _.set( searchParam, [ 'query', 'bool', 'must', 'match', searchField ], searchkey );
-
-  return client.search( { index: INDEX, type: TYPE, body: searchParam } )
-    .then( processResult );
-};
 
 /**
  * @exports db
  */
-let db = {
+const db = {
   /**
    * Connects the elasticsearch, if it is not connected already, and returns the client.
    * @returns {elasticsearch.Client} Singleton elasticsearch client.
@@ -76,86 +56,44 @@ let db = {
    * @returns {Promise}
    */
   createIndex: function(){
-    let client = this.connect();
-
-    let searchableFieldProps = { type: 'text', analyzer: 'ngram_analyzer', 'search_analyzer': 'standard' };
-    let searchableFields = ['id', 'name', 'synonyms'];
-    let searchableMatchStr = searchableFields.join('|');
-    let mappings = {};
-    let dynamicTemplates = [
-      {
-        'template_unsearchable': {
-          'mapping': {
-            'index': 'false'
+    const client = this.connect();
+ 
+    // include mappings for all fields that we use for search
+    const mappings = {
+      [TYPE]: {
+        properties: {
+          name: {
+            type: 'text',
+            analyzer: 'standard'
           },
-          'match_pattern': 'regex',
-          'unmatch': searchableMatchStr.concat('|', NS_FIELD),
-          'match_mapping_type': '*'
-        }
-      },
-      {
-        'template_searchable': {
-          'mapping': {
-            'type': 'text',
-            'index': 'false',
-            'copy_to': META_SEARCH_FIELD
-          },
-          'match_pattern': 'regex',
-          'match': searchableMatchStr,
-          'unmatch': ID_FIELD,
-          'match_mapping_type': 'string'
-        }
-      },
-      {
-        'template_id': {
-          'mapping': {
-            'type': 'text',
-            'index': 'true',
-            'copy_to': META_SEARCH_FIELD
-          },
-          'match_pattern': 'regex',
-          'match': ID_FIELD,
-          'match_mapping_type': 'string'
-        }
-      },
-      {
-        'template_ns': {
-          'mapping': {
-            'type': 'text',
-            'index': 'true'
-          },
-          'match_pattern': 'regex',
-          'match': NS_FIELD,
-          'match_mapping_type': 'string'
-        }
-      }
-    ];
-
-    let settings = {
-      'refresh_interval': '-1',
-      'analysis': {
-        'filter': {
-          'ngram_filter': {
-            'type': 'nGram',
-            'min_gram': MIN_GRAM,
-            'max_gram': MAX_GRAM
-          }
-        },
-        'analyzer': {
-          'ngram_analyzer': {
-            'type': 'custom',
-            'tokenizer': 'standard',
-            'filter': [
-              'lowercase',
-              'ngram_filter'
-            ]
+          synonyms: {
+            type: 'text',
+            analyzer: 'standard'
           }
         }
       }
     };
 
-    _.set( mappings, [ TYPE, 'properties', META_SEARCH_FIELD ], searchableFieldProps );
-    _.set( mappings, [ TYPE, 'dynamic_templates' ], dynamicTemplates );
+    const settings = {
+      number_of_shards: 5, // TODO reconsider default
+      refresh_interval: '-1',
+      analysis: {
+        filter: {
+          bigram: {
+            type: 'ngram',
+            min_gram: 2,
+            max_gram: 2
+          }
+        },
+        analyzer: {
+          strdist: {
+            type: 'custom',
+            tokenizer: 'whitespace',
+            filter: ['lowercase', 'bigram'],
+          }
+        }
+      }
+    };
 
     return client.indices.create( { index: INDEX, body: { mappings, settings } } );
   },
@@ -219,7 +157,7 @@ let db = {
     let body = [];
 
     entries.forEach( entry => {
-      body.push( { index: { _index: INDEX, _type: TYPE } } );
+      body.push( { index: { _index: INDEX, _type: TYPE, _id: (entry.namespace + ':' + entry.id).toUpperCase() } } );
       body.push( entry );
     } );
 
@@ -231,14 +169,40 @@ let db = {
   },
   /**
    * Retrieve the entities matching best with the search string within maximum search size.
-   * @param {string} searchkey Key string for searching the best matching entities.
+   * @param {string} searchString Key string for searching the best matching entities.
    * @param {string} [namespace=undefined] Namespace to seek the entities e.g. 'uniprot', 'chebi', ...
    * @param {string} [from=0] Offset from the first result to fetch.
    * @param {string} [size=50] Maximum amount of hits to be returned.
    * @returns {Promise} Promise object represents the array of best matching entities.
    */
-  search: function( searchkey, namespace, from = 0, size = MAX_SEARCH_ES ){
-    return search( searchkey, META_SEARCH_FIELD, namespace, from, size );
+  search: function( searchString, namespace, from = 0, size = MAX_SEARCH_ES ){
+    const index = INDEX;
+    const type = TYPE;
+    const client = db.connect();
+    const processResult = res => res.hits.hits.map( entry => {
+      entry._source.esScore = entry._score;
+      
+      return entry._source;
+    });
+
+    const body = {
+      from,
+      size,
+      query: {
+        multi_match: {
+          query: searchString,
+          type: 'best_fields',
+          fuzziness: 3,
+          fields: ['name', 'synonyms']
+        }
+      }
+    };
+
+    if ( !_.isNil( namespace ) ) {
+      _.set( body, [ 'query', 'bool', 'filter', 'term', NS_FIELD ], namespace );
+    }
+
+    return client.search({ index, type, body }).then( processResult );
   },
   /**
    * Retrieve the entity that has the given id.
@@ -248,10 +212,13 @@ let db = {
    * if there is no such entity it represents null.
    */
   get: function( id, namespace ){
-    let size = 1;
-    let from = 0;
-    return search( id, ID_FIELD, namespace, from, size )
-      .then( getFirstItem );
+    let client = this.connect();
+
+    return client.get({
+      id: (namespace + ':' + id).toUpperCase(),
+      index: INDEX,
+      type: TYPE
+    });
   },
   /**
    * Check if the elasticsearch index dedicated for the app exists.
