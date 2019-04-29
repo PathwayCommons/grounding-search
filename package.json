@@ -38,7 +38,7 @@
     "download:uniprot": "node -r esm src/server/datasource/cli download uniprot",
     "download:chebi": "node -r esm src/server/datasource/cli download chebi",
     "download:ncbi": "node -r esm src/server/datasource/cli download ncbi",
-    "clear": "run-p clear:*",
+    "clear": "node -r esm src/server/datasource/cli clear all",
     "clear:uniprot": "node -r esm src/server/datasource/cli clear uniprot",
     "clear:chebi": "node -r esm src/server/datasource/cli clear chebi",
     "clear:ncbi": "node -r esm src/server/datasource/cli clear ncbi",
