@@ -106,7 +106,7 @@
     },
     {
      "text": "nitrogen",
-     "xref_id": "CHEBI:25555",
+     "xref_id": "25555",
      "namespace": "chebi",
      "sentence": "Dimethylation can occur asymmetrically ( ADMA ) , with two methyl groups placed onto one of the terminal nitrogen atoms of the guanidino group , or symmetrically ( SDMA ) , where one methyl group is placed onto each of the terminal nitrogen atoms ."
     },
@@ -136,7 +136,7 @@
     },
     {
      "text": "aphidicolin",
-     "xref_id": "CHEBI:2766",
+     "xref_id": "2766",
      "namespace": "chebi",
      "sentence": "To examine this more closely , we assessed the resolution of IR induced DSBs only in G2 cells , using aphidicolin to block the transit of any damaged S-phase cells into G2 ."
     },
@@ -166,13 +166,13 @@
     },
     {
      "text": "Olaparib",
-     "xref_id": "CHEBI:83766",
+     "xref_id": "83766",
      "namespace": "chebi",
      "sentence": "To further substantiate that PRMT5 is an important component of HR mediated repair , we treated cells with camptothecin ( CPT ) and Olaparib , two genotoxic agents that induce DNA lesions specifically repaired by HR ( Arnaudeau et al. , 2001 , McCabe et al. , 2006 ) ."
     },
     {
      "text": "camptothecin",
-     "xref_id": "CHEBI:27656",
+     "xref_id": "27656",
      "namespace": "chebi",
      "sentence": "To further substantiate that PRMT5 is an important component of HR mediated repair , we treated cells with camptothecin ( CPT ) and Olaparib , two genotoxic agents that induce DNA lesions specifically repaired by HR ( Arnaudeau et al. , 2001 , McCabe et al. , 2006 ) ."
     },
@@ -184,25 +184,25 @@
     },
     {
      "text": "cycloheximide",
-     "xref_id": "CHEBI:27641",
+     "xref_id": "27641",
      "namespace": "chebi",
      "sentence": "The incorporation of radiolabeled methionine via de novo protein synthesis was efficiently blocked by the addition of cycloheximide and chloramphenicol , as indicated by the low levels of methyl labeled GFP protein in FLAG-GFP-transfected cells                     ."
     },
     {
      "text": "chloramphenicol",
-     "xref_id": "CHEBI:17698",
+     "xref_id": "17698",
      "namespace": "chebi",
      "sentence": "The incorporation of radiolabeled methionine via de novo protein synthesis was efficiently blocked by the addition of cycloheximide and chloramphenicol , as indicated by the low levels of methyl labeled GFP protein in FLAG-GFP-transfected cells                     ."
     },
     {
      "text": "Trichostatin A",
-     "xref_id": "CHEBI:46024",
+     "xref_id": "46024",
      "namespace": "chebi",
      "sentence": "Consistent with this premise , exposure of cells expressing the RUVBL1 R205K mutant to Trichostatin A ( TSA ) rescued the defect in 53BP1 mobilization and RPA foci formation after IR                    ."
     },
     {
      "text": "4-OHT",
-     "xref_id": "CHEBI:41774",
+     "xref_id": "41774",
      "namespace": "chebi",
      "sentence": "In this system , treatment of control cells with 4-hydroxy-tamoxifen ( 4-OHT ) and the Shield-1 ligand induces DNA damage , as evident by a single 53BP1 focus , and an enrichment of H4K16 acetylation at break ends                       ( Shanbhag et al. , 2010 , Tang et al. , 2013 ) ."
     },
@@ -214,13 +214,13 @@
     },
     {
      "text": "ADP",
-     "xref_id": "CHEBI:16761",
+     "xref_id": "16761",
      "namespace": "chebi",
      "sentence": "In contrast , in the ADP bound form of ct RUVBL2 , R206 is found somewhat buried and capped by the side chain of Met187                      ."
     },
     {
      "text": "hydrogen",
-     "xref_id": "CHEBI:49637",
+     "xref_id": "49637",
      "namespace": "chebi",
      "sentence": "Indeed , while methylation does not change the overall charge of the residue , it does alter the availability of hydrogen donors and increases van der Waals interactive forces ( Liu et al. , 2010 , Yang et al. , 2010 ) ."
     },
@@ -232,7 +232,7 @@
     },
     {
      "text": "tetracycline",
-     "xref_id": "CHEBI:27902",
+     "xref_id": "27902",
      "namespace": "chebi",
      "sentence": "PRMT5 Binds to and Methylates RUVBL1 at R205  ( A ) SYPRO Ruby stain of PRMT5 protein complexes isolated from 293T cells stably expressing tetracycline regulated TAP tagged catalytically inactive PRMT5 ( PRMT5 MD ) is shown ."
     }
@@ -356,7 +356,7 @@
      },
      {
       "text": "sugar",
-      "xref_id": "CHEBI:4167",
+      "xref_id": "4167",
       "namespace": "chebi",
       "sentence": "Consistent with the results attained with this platform , we also observed that Foxk1 knockdown significantly and specifically reduced glucose uptake in these cells            , which resides at the apex of sugar metabolism , thus supporting a significant role of Foxk1 as a critical regulator of glucose metabolism ."
      },
@@ -380,25 +380,25 @@
      },
      {
       "text": "Torin 1",
-      "xref_id": "CHEBI:84327",
+      "xref_id": "84327",
       "namespace": "chebi",
       "sentence": "As expected , the inhibition of mTORC1 by rapamycin or Torin 1 ( an mTOR catalytic inhibitor ) suppressed the ability of serum stimulation to promote Foxk1 dephosphorylation ."
      },
      {
       "text": "AktVIII",
-      "xref_id": "CHEBI:91346",
+      "xref_id": "91346",
       "namespace": "chebi",
       "sentence": "Accordingly , the PI3K inhibitor ( LY294002 ) or the Akt inhibitor ( AktVIII ) also partially suppressed Foxk1 dephosphorylation after serum stimulation ."
      },
      {
       "text": "LY294002",
-      "xref_id": "CHEBI:65329",
+      "xref_id": "65329",
       "namespace": "chebi",
       "sentence": "Accordingly , the PI3K inhibitor ( LY294002 ) or the Akt inhibitor ( AktVIII ) also partially suppressed Foxk1 dephosphorylation after serum stimulation ."
      },
      {
       "text": "AZD6244",
-      "xref_id": "CHEBI:90227",
+      "xref_id": "90227",
       "namespace": "chebi",
       "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
      },
@@ -410,19 +410,19 @@
      },
      {
       "text": "SB203580",
-      "xref_id": "CHEBI:90705",
+      "xref_id": "90705",
       "namespace": "chebi",
       "sentence": "The MEK inhibitor ( AZD6244 ) , the p38-MAPK inhibitor ( SB203580 ) , and the RSK inhibitor ( BI-D1870 ) did not affect the phosphorylation status of Foxk1 under these conditions ."
      },
      {
       "text": "CHIR99021",
-      "xref_id": "CHEBI:91091",
+      "xref_id": "91091",
       "namespace": "chebi",
       "sentence": "Interestingly , the Gsk3 inhibitor CHIR99021 further decreased Foxk1 phosphorylation , suggesting that Gsk3 promotes Foxk1 phosphorylation upon the inhibition of mTORC1             ."
      },
      {
       "text": "SB216763",
-      "xref_id": "CHEBI:91421",
+      "xref_id": "91421",
       "namespace": "chebi",
       "sentence": "Importantly , we observed that Gsk3 inhibition ( with two structurally unrelated inhibitors , SB216763 and CHIR99021 ) was sufficient to suppress the increase in Foxk1 phosphorylation elicited by mTORC1 inhibition                    ."
      },
@@ -470,7 +470,7 @@
      },
      {
       "text": "glucose-6-phosphate",
-      "xref_id": "CHEBI:4170",
+      "xref_id": "4170",
       "namespace": "chebi",
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
@@ -524,7 +524,7 @@
      },
      {
       "text": "mannose",
-      "xref_id": "CHEBI:4208",
+      "xref_id": "4208",
       "namespace": "chebi",
       "sentence": "( C and D ) GSEA of glycolysis ( gluconeogenesis ) genes ( C ) and mannose metabolism ( D ) in Foxk1 knockdown and Foxk1 rescued MEFs ."
      }
@@ -553,7 +553,7 @@
      }, 
      {
       "text": "DAPI",
-      "xref_id": "CHEBI:51231",
+      "xref_id": "51231",
       "namespace": "chebi",
       "sentence": "DAPI was used to stain nuclei ( pseudo-color , red ) ."
      },
@@ -674,7 +674,7 @@
      },
      {
       "text": "SAM",
-      "xref_id": "CHEBI:15414",
+      "xref_id": "15414",
       "namespace": "chebi",
       "sentence": "Protein arginine methyltransferases ( PRMTs ) catalyze mono- and dimethylation of the guanidino group of the arginine residue using S-adenosyl methionine ( SAM ) as a methyl donor ."
      },
@@ -686,7 +686,7 @@
      },  
      {
       "text": "nitrogen",
-      "xref_id": "CHEBI:25555",
+      "xref_id": "25555",
       "namespace": "chebi",
       "sentence": "Dimethylation can occur asymmetrically ( ADMA ) , with two methyl groups placed onto one of the terminal nitrogen atoms of the guanidino group , or symmetrically ( SDMA ) , where one methyl group is placed onto each of the terminal nitrogen atoms ."
      },
@@ -722,7 +722,7 @@
      },
      {
       "text": "aphidicolin",
-      "xref_id": "CHEBI:2766",
+      "xref_id": "2766",
       "namespace": "chebi",
       "sentence": "To examine this more closely , we assessed the resolution of IR induced DSBs only in G2 cells , using aphidicolin to block the transit of any damaged S-phase cells into G2 ."
      },
@@ -752,13 +752,13 @@
      },
      {
       "text": "camptothecin",
-      "xref_id": "CHEBI:27656",
+      "xref_id": "27656",
       "namespace": "chebi",
       "sentence": "To further substantiate that PRMT5 is an important component of HR mediated repair , we treated cells with camptothecin ( CPT ) and Olaparib , two genotoxic agents that induce DNA lesions specifically repaired by HR ( Arnaudeau et al. , 2001 , McCabe et al. , 2006 ) ."
      },
      {
       "text": "Olaparib",
-      "xref_id": "CHEBI:83766",
+      "xref_id": "83766",
       "namespace": "chebi",
       "sentence": "To further substantiate that PRMT5 is an important component of HR mediated repair , we treated cells with camptothecin ( CPT ) and Olaparib , two genotoxic agents that induce DNA lesions specifically repaired by HR ( Arnaudeau et al. , 2001 , McCabe et al. , 2006 ) ."
      },
@@ -770,31 +770,31 @@
      },
      {
       "text": "cycloheximide",
-      "xref_id": "CHEBI:27641",
+      "xref_id": "27641",
       "namespace": "chebi",
       "sentence": "CBFs-Myc levels in Super : CBFs-Myc transgenic seedlings decreased after 300-muM cycloheximide ( CHX , an inhibitor of protein synthesis ) treatment and increased after 50-muM MG132 ( a proteasome inhibitor ) treatment , and the effect of CHX was partially suppressed by MG132                     ."
      },
      {
       "text": "chloramphenicol",
-      "xref_id": "CHEBI:17698",
+      "xref_id": "17698",
       "namespace": "chebi",
       "sentence": "The incorporation of radiolabeled methionine via de novo protein synthesis was efficiently blocked by the addition of cycloheximide and chloramphenicol , as indicated by the low levels of methyl labeled GFP protein in FLAG-GFP-transfected cells                     ."
      },
      {
       "text": "Trichostatin A",
-      "xref_id": "CHEBI:46024",
+      "xref_id": "46024",
       "namespace": "chebi",
       "sentence": "Consistent with this premise , exposure of cells expressing the RUVBL1 R205K mutant to Trichostatin A ( TSA ) rescued the defect in 53BP1 mobilization and RPA foci formation after IR                    ."
      },
      {
       "text": "TSA",
-      "xref_id": "CHEBI:46024",
+      "xref_id": "46024",
       "namespace": "chebi",
       "sentence": "Consistent with this premise , exposure of cells expressing the RUVBL1 R205K mutant to Trichostatin A ( TSA ) rescued the defect in 53BP1 mobilization and RPA foci formation after IR                    ."
      },
      {
       "text": "4-OHT",
-      "xref_id": "CHEBI:41774",
+      "xref_id": "41774",
       "namespace": "chebi",
       "sentence": "In this system , treatment of control cells with 4-hydroxy-tamoxifen ( 4-OHT ) and the Shield-1 ligand induces DNA damage , as evident by a single 53BP1 focus , and an enrichment of H4K16 acetylation at break ends                       ( Shanbhag et al. , 2010 , Tang et al. , 2013 ) ."
      },
@@ -806,7 +806,7 @@
      },   
      {
       "text": "hydrogen",
-      "xref_id": "CHEBI:49637",
+      "xref_id": "49637",
       "namespace": "chebi",
       "sentence": "Indeed , while methylation does not change the overall charge of the residue , it does alter the availability of hydrogen donors and increases van der Waals interactive forces ( Liu et al. , 2010 , Yang et al. , 2010 ) ."
      },
@@ -818,7 +818,7 @@
      },
      {
       "text": "tetracycline",
-      "xref_id": "CHEBI:27902",
+      "xref_id": "27902",
       "namespace": "chebi",
       "sentence": "PRMT5 Binds to and Methylates RUVBL1 at R205  ( A ) SYPRO Ruby stain of PRMT5 protein complexes isolated from 293T cells stably expressing tetracycline regulated TAP tagged catalytically inactive PRMT5 ( PRMT5 MD ) is shown ."
      },
@@ -860,7 +860,7 @@
      },
      {
       "text": "celastrol",
-      "xref_id": "CHEBI:63959",
+      "xref_id": "63959",
       "namespace": "chebi",
       "sentence": "We found that CRPC cells were much more sensitive than PPC cell to the treatment of inhibitors , BAY11-7082 or celastrol , which can inhibit IkappaBalpha or NF-kappaB                     ."
      },
@@ -872,13 +872,13 @@
      },
      {
       "text": "cypermethrin",
-      "xref_id": "CHEBI:4042",
+      "xref_id": "4042",
       "namespace": "chebi",
       "sentence": "We found that treatment with the phosphatase inhibitors , cypermethrin and deltamethrin , which inhibit serine/threonine protein phosphatase 2b ( PP2B ) , increased p-IkappaBalpha expression and p65 activity in PPC cells                          ."
      },
      {
       "text": "deltamethrin",
-      "xref_id": "CHEBI:4388",
+      "xref_id": "4388",
       "namespace": "chebi",
       "sentence": "We found that treatment with the phosphatase inhibitors , cypermethrin and deltamethrin , which inhibit serine/threonine protein phosphatase 2b ( PP2B ) , increased p-IkappaBalpha expression and p65 activity in PPC cells                          ."
      },
@@ -1003,7 +1003,7 @@
      },
      {
       "text": "alpha-KG",
-      "xref_id": "CHEBI:30915",
+      "xref_id": "30915",
       "namespace": "chebi",
       "sentence": "alpha-KG binds to CamKK2 and recruits AMPK to CamKK2 ."
      },
@@ -1027,7 +1027,7 @@
      },
     {
       "text": "AMP",
-      "xref_id": "CHEBI:16027",
+      "xref_id": "16027",
       "namespace": "chebi",
       "sentence": "It is known that an increased AMP and ATP ratio activates AMPK ( Mihaylova and Shaw , 2011 ) ."
      },
@@ -1045,13 +1045,13 @@
      },
      {
       "text": "oxygen",
-      "xref_id": "CHEBI:25805",
+      "xref_id": "25805",
       "namespace": "chebi",
       "sentence": "In fact , cells have evolved intricate networks that ensure their ability to rewire cellular metabolism between anabolic to catabolic processes to reflect the abundance of nutrients , oxygen , energy , and growth factors and allow the cells to thrive and maintain organ function ."
      },
      {
       "text": "fumarate",
-      "xref_id": "CHEBI:18012",
+      "xref_id": "18012",
       "namespace": "chebi",
       "sentence": "In addition , we found that a glutaminolytic enzyme , glutamate dehydrogenase 1 ( GDH1 ) , promotes tumor growth by regulating redox homeostasis through its product alpha-ketoglutarate ( alpha-KG ) and subsequent metabolite fumarate by activating a reactive oxygen species ( ROS ) scavenging enzyme , glutathione peroxidase 1 ( GPx1 ) ( Jin et al. , 2015 , Jin et al. , 2016 ) ."
      },
@@ -1069,7 +1069,7 @@
      },
      {
       "text": "isocitrate",
-      "xref_id": "CHEBI:30887",
+      "xref_id": "30887",
       "namespace": "chebi",
       "sentence": "For instance , studies reveal that cancer cells switch from oxidative to reductive metabolism in utilizing glutamine during matrix detachment and support redox homeostasis via isocitrate dehydrogenase 1 ( IDH1 ) ( Jiang et al. , 2016 ) ."
      },
@@ -1081,7 +1081,7 @@
      },
      {
       "text": "estrogen",
-      "xref_id": "CHEBI:16469",
+      "xref_id": "16469",
       "namespace": "chebi",
       "sentence": "Extracellular matrix ( ECM ) detached cells are known to be nutrient starved , which limits energy production , whereas estrogen related receptor or oncogenes such as ErbB2 maintain TCA flux through PDK4 upregulation ( Grassian et al. , 2011 , Kamarajugadda et al. , 2012 ) ."
      },
@@ -1105,13 +1105,13 @@
      },
      {
       "text": "malate",
-      "xref_id": "CHEBI:6650",
+      "xref_id": "6650",
       "namespace": "chebi",
       "sentence": "alpha-KG , but not other TCA intermediate metabolites , including succinate , malate , or fumarate , rescued the anoikis induced by GDH1 targeted downregulation            ."
      },
      {
       "text": "succinate",
-      "xref_id": "CHEBI:15741",
+      "xref_id": "15741",
       "namespace": "chebi",
       "sentence": "alpha-KG , but not other TCA intermediate metabolites , including succinate , malate , or fumarate , rescued the anoikis induced by GDH1 targeted downregulation            ."
      },
@@ -1123,31 +1123,31 @@
      },
      {
       "text": "citrate",
-      "xref_id": "CHEBI:30769",
+      "xref_id": "30769",
       "namespace": "chebi",
       "sentence": "Consistent with previous reports , detachment was accompanied by enhanced reductive carboxylation of glutamine , assessed by increased labeling at citrate m +5 , whereas glutamine oxidation reflected by the m +4 fraction of citrate was decreased upon detachment             ."
      }, 
      {
       "text": "N-acetyl-L-cysteine",
-      "xref_id": "CHEBI:28939",
+      "xref_id": "28939",
       "namespace": "chebi",
       "sentence": "Treating cells with N-acetyl-L-cysteine ( NAC ) , a scavenger of free radicals , did not affect either glutamine deprivation- or hypoxia induced PGK1 K388 acetylation or Beclin1 S30 phosphorylation                      , suggesting that these modifications are ROS production independent ."
      },
      {
       "text": "ATP",
-      "xref_id": "CHEBI:15422",
+      "xref_id": "15422",
       "namespace": "chebi",
       "sentence": "Furthermore , cell-free degradation assays showed that CBF proteins were degraded in the presence of ATP , and this degradation was inhibited by MG132 ."
      },
      {
       "text": "rapamycin",
-      "xref_id": "CHEBI:9168",
+      "xref_id": "9168",
       "namespace": "chebi",
       "sentence": "Surprisingly , we found that Foxk1 migration on SDS-PAGE in Tsc2-/- MEFs was dramatically decreased by rapamycin treatment within 30 min and was sustained for up to 24 hr            ."
      },
      {
       "text": "calcium",
-      "xref_id": "CHEBI:29108",
+      "xref_id": "29108",
       "namespace": "chebi",
       "sentence": "Both calcium ( Ca2+ ) flux and Ca2 +-dependent signaling play a crucial role in this process , although the underlying mechanism has yet to be elucidated ."
      },
@@ -1159,7 +1159,7 @@
      },
      {
       "text": "purpurin",
-      "xref_id": "CHEBI:8645",
+      "xref_id": "8645",
       "namespace": "chebi",
       "sentence": "We previously screened and identified purpurin and its cell-permeable analog R162 as GDH1 selective inhibitors ( Jin et al. , 2015 ) ."
      },
@@ -1267,7 +1267,7 @@
      },
      {
       "text": "phosphatidylinositol",
-      "xref_id": "CHEBI:28874",
+      "xref_id": "28874",
       "namespace": "chebi",
       "sentence": "Primary Screening and Bioinformatics Functional annotation analysis showed strongest enrichment of hit candidates in processes such as cytokinesis , phosphatidylinositol metabolism and signaling , and intracellular protein trafficking but also in disease associated pathways , TLR signaling , and the innate immune response ( Data S2 ) ."
      },
@@ -1279,7 +1279,7 @@
      },
      {
       "text": "glucose",
-      "xref_id": "CHEBI:17234",
+      "xref_id": "17234",
       "namespace": "chebi",
       "sentence": "Importantly , we also demonstrate that Foxk1 regulates glucose , serine , and nucleotide metabolism directly or through induction of the Hif-1alpha transcription factor in response to mTORC1 signaling ."
      },
@@ -1291,7 +1291,7 @@
      },
      {
       "text": "chloroquine",
-      "xref_id": "CHEBI:3638",
+      "xref_id": "3638",
       "namespace": "chebi",
       "sentence": "Inhibition of lysosomal activity by chloroquine ( CQ ) increased expression of LC3B-II and p62             ."
      },
@@ -1303,7 +1303,7 @@
      },
      {
       "text": "lactate",
-      "xref_id": "CHEBI:422",
+      "xref_id": "422",
       "namespace": "chebi",
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
@@ -1315,7 +1315,7 @@
      },
      {
       "text": "Torin1",
-      "xref_id": "CHEBI:84327",
+      "xref_id": "84327",
       "namespace": "chebi",
       "sentence": "As expected , glutamine deprivation and mTOR inhibitor Torin1 treatment reduced mTOR mediated p70S6K T389 phosphorylation             ."
      },
@@ -1327,13 +1327,13 @@
      },
      {
       "text": "phosphate",
-      "xref_id": "CHEBI:18367",
+      "xref_id": "18367",
       "namespace": "chebi",
       "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) ."
      },
      {
       "text": "3-phosphoglycerate",
-      "xref_id": "CHEBI:17794",
+      "xref_id": "17794",
       "namespace": "chebi",
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
@@ -1369,25 +1369,25 @@
      }, 
      {
       "text": "temozolomide",
-      "xref_id": "CHEBI:72564",
+      "xref_id": "72564",
       "namespace": "chebi",
       "sentence": "We compared the survival duration of the 74 patients , all of whom had received standard adjuvant radiotherapy after surgical resection of GBM followed by treatment with an alkylating agent ( temozolomide in most cases ) , with tumor acetylation levels of PGK1 K388 and phosphorylation levels of Beclin1 S30 ."
      },
      {
       "text": "galactose",
-      "xref_id": "CHEBI:28061",
+      "xref_id": "28061",
       "namespace": "chebi",
       "sentence": "Figure 6 Ectopic PP2ACdc55 Delays Cell-Cycle Progression in a Dosage Dependent Manner ( A ) Increased Cdc55 and Pph21 levels following overexpression of these PP2ACdc55 subunits were analyzed by western blotting from cells growing asynchronously in galactose containing medium ."
      },
      {
       "text": "acetyl-CoA",
-      "xref_id": "CHEBI:15351",
+      "xref_id": "15351",
       "namespace": "chebi",
       "sentence": "( B ) An in vitro acetylation assay was performed by mixing purified ARD1 and purified PGK1 in the presence or absence of acetyl-CoA ( Ac-CoA ) ."
      }, 
      {
       "text": "glutathione",
-      "xref_id": "CHEBI:16856",
+      "xref_id": "16856",
       "namespace": "chebi",
       "sentence": "( H ) GST-VHL proteins bound with glutathione agarose beads were incubated with purified recombinant Flag-HIF-1alpha in the presence or absence of in vitro transcribed lincRNA-p21 for 3 hr ."
      }
@@ -1512,7 +1512,7 @@
      },
      {
       "text": "FM4-64",
-      "xref_id": "CHEBI:52078",
+      "xref_id": "52078",
       "namespace": "chebi",
       "sentence": "We also generated stable transgenic plants expressing CRPK1 : CRPK1-GFP , and we observed the CRPK1-GFP signal at the plasma membrane before or after cold treatment , which was overlapped with the signal dyed with FM4-64 , a plasma membrane stain            ."
      },
@@ -1559,7 +1559,7 @@
      },
      {
       "text": "phosphatidylinositol",
-      "xref_id": "CHEBI:28874",
+      "xref_id": "28874",
       "namespace": "chebi",
       "sentence": "Primary Screening and Bioinformatics Functional annotation analysis showed strongest enrichment of hit candidates in processes such as cytokinesis , phosphatidylinositol metabolism and signaling , and intracellular protein trafficking but also in disease associated pathways , TLR signaling , and the innate immune response ( Data S2 ) ."
      },
@@ -1571,7 +1571,7 @@
      },
      {
       "text": "glucose",
-      "xref_id": "CHEBI:17234",
+      "xref_id": "17234",
       "namespace": "chebi",
       "sentence": "Importantly , we also demonstrate that Foxk1 regulates glucose , serine , and nucleotide metabolism directly or through induction of the Hif-1alpha transcription factor in response to mTORC1 signaling ."
      },
@@ -1583,7 +1583,7 @@
      },
      {
       "text": "chloroquine",
-      "xref_id": "CHEBI:3638",
+      "xref_id": "3638",
       "namespace": "chebi",
       "sentence": "Inhibition of lysosomal activity by chloroquine ( CQ ) increased expression of LC3B-II and p62             ."
      },
@@ -1595,7 +1595,7 @@
      },
      {
       "text": "lactate",
-      "xref_id": "CHEBI:422",
+      "xref_id": "422",
       "namespace": "chebi",
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
@@ -1607,7 +1607,7 @@
      },
      {
       "text": "Torin1",
-      "xref_id": "CHEBI:84327",
+      "xref_id": "84327",
       "namespace": "chebi",
       "sentence": "As expected , glutamine deprivation and mTOR inhibitor Torin1 treatment reduced mTOR mediated p70S6K T389 phosphorylation             ."
      },
@@ -1619,13 +1619,13 @@
      },
      {
       "text": "phosphate",
-      "xref_id": "CHEBI:18367",
+      "xref_id": "18367",
       "namespace": "chebi",
       "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) ."
      },
      {
       "text": "3-phosphoglycerate",
-      "xref_id": "CHEBI:17794",
+      "xref_id": "17794",
       "namespace": "chebi",
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
@@ -1661,19 +1661,19 @@
      }, 
      {
       "text": "temozolomide",
-      "xref_id": "CHEBI:72564",
+      "xref_id": "72564",
       "namespace": "chebi",
       "sentence": "We compared the survival duration of the 74 patients , all of whom had received standard adjuvant radiotherapy after surgical resection of GBM followed by treatment with an alkylating agent ( temozolomide in most cases ) , with tumor acetylation levels of PGK1 K388 and phosphorylation levels of Beclin1 S30 ."
      },
      {
       "text": "galactose",
-      "xref_id": "CHEBI:28061",
+      "xref_id": "28061",
       "namespace": "chebi",
       "sentence": "Figure 6 Ectopic PP2ACdc55 Delays Cell-Cycle Progression in a Dosage Dependent Manner ( A ) Increased Cdc55 and Pph21 levels following overexpression of these PP2ACdc55 subunits were analyzed by western blotting from cells growing asynchronously in galactose containing medium ."
      },
      {
       "text": "acetyl-CoA",
-      "xref_id": "CHEBI:15351",
+      "xref_id": "15351",
       "namespace": "chebi",
       "sentence": "( B ) An in vitro acetylation assay was performed by mixing purified ARD1 and purified PGK1 in the presence or absence of acetyl-CoA ( Ac-CoA ) ."
      }
@@ -1780,7 +1780,7 @@
       },
       {
         "text": "Hoechst 33258",
-        "xref_id": "CHEBI:52082",
+        "xref_id": "52082",
         "namespace": "chebi",
         "type": "simple-chemical",
         "sentence": "( C ) Microscopy of cells infected as in ( A ) and stained with Hoechst 33258 ."
@@ -1864,7 +1864,7 @@
      },
      {
       "text": "CCCP",
-      "xref_id": "CHEBI:3259",
+      "xref_id": "3259",
       "namespace": "chebi",
       "sentence": "The most critical step to activate its kinase activity is dephosphorylation of p-S308 , which can be triggered by mitochondrial uncoupling , e.g. , by treatment of cells with a protonophore such as CCCP ( Shang et al. , 2005 ) ."
      },
@@ -1888,7 +1888,7 @@
      },
      {
       "text": "inositol",
-      "xref_id": "CHEBI:17268",
+      "xref_id": "17268",
       "namespace": "chebi",
       "sentence": "The Krishnan screen revealed a functionally important role of inositol pyrophosphates in the induction of type I IFN ."
      },
@@ -2061,7 +2061,7 @@
      },
      {
       "text": "Hoechst 33258",
-      "xref_id": "CHEBI:52082",
+      "xref_id": "52082",
       "namespace": "chebi",
       "type": "simple-chemical",
       "sentence": "( C ) Microscopy of cells infected as in ( A ) and stained with Hoechst 33258 ."
@@ -2097,7 +2097,7 @@
      },
      {
       "text": "pyruvate",
-      "xref_id": "CHEBI:15361",
+      "xref_id": "15361",
       "namespace": "chebi",
       "sentence": "Interestingly , gene set enrichment analysis ( GSEA ) showed that the most significantly altered pathways were metabolic pathways , including glycolysis and gluconeogenesis , pyruvate metabolism , galactose metabolism , steroid biosynthesis , and amino acid and nucleotide metabolism                ."
      },
@@ -2139,25 +2139,25 @@
      },
      {
       "text": "digoxin",
-      "xref_id": "CHEBI:4551",
+      "xref_id": "4551",
       "namespace": "chebi",
       "sentence": "Moreover , when HIF-1alpha activity was inhibited by treatment with digoxin ( a potent inhibitor of HIF-1alpha [ Zhang et al. , 2008 ] ) or by reducing HIF-1alpha expression using its specific shRNA , lincRNA-p21 knockdown failed to show any effect on wild-type reporter activity under hypoxia                               , implying that lincRNA-p21 indeed affects hypoxia induced transcription via HIF-1alpha ."
      },
      {
       "text": "MG132",
-      "xref_id": "CHEBI:75142",
+      "xref_id": "75142",
       "namespace": "chebi",
       "sentence": "CBFs-Myc levels in Super : CBFs-Myc transgenic seedlings decreased after 300-muM cycloheximide ( CHX , an inhibitor of protein synthesis ) treatment and increased after 50-muM MG132 ( a proteasome inhibitor ) treatment , and the effect of CHX was partially suppressed by MG132                     ."
      },
      {
       "text": "DMOG",
-      "xref_id": "CHEBI:102218",
+      "xref_id": "102218",
       "namespace": "chebi",
       "sentence": "Treatment of cells with CoCl2 or DMOG , which are inducers of HIF-1alpha expression ( Fukuda et al. , 2007 ) , also led to a dramatic increase in lincRNA-p21 levels            ."
      },
      {
       "text": "doxorubicin",
-      "xref_id": "CHEBI:28748",
+      "xref_id": "28748",
       "namespace": "chebi",
       "sentence": "Consistent with this report , mouse lincRNA-p21 was shown to mediate doxorubicin induced apoptosis in mouse embryonic fibroblast ( MEF ) cells by using three different types of detection methods                        ."
      },
@@ -2181,19 +2181,19 @@
      },
      {
       "text": "formaldehyde",
-      "xref_id": "CHEBI:16842",
+      "xref_id": "16842",
       "namespace": "chebi",
       "sentence": "Cells were then crosslinked with or without 1 % formaldehyde before IP real-time RT-PCR assays were carried out ."
      },
      {
       "text": "biotin",
-      "xref_id": "CHEBI:15956",
+      "xref_id": "15956",
       "namespace": "chebi",
       "sentence": "Cell lysates were then incubated with in vitro synthesized biotin labeled sense or antisense lincRNA-p21 probes for biotin pull-down assay , followed by western blot analysis ."
      },
      {
       "text": "glutathione",
-      "xref_id": "CHEBI:16856",
+      "xref_id": "16856",
       "namespace": "chebi",
       "sentence": "( H ) GST-VHL proteins bound with glutathione agarose beads were incubated with purified recombinant Flag-HIF-1alpha in the presence or absence of in vitro transcribed lincRNA-p21 for 3 hr ."
      }
