@@ -1,4 +1,18 @@
-const env = (key, defaultVal) => process.env[key] != null ? process.env[key] : defaultVal;
+import _ from 'lodash';
+
+const env = (key, defaultVal) => {
+  if( process.env[key] != null ){
+    let val =  process.env[key];
+
+    if( _.isNumber(defaultVal) ){
+      val = parseFloat(val);
+    }
+
+    return val;
+  } else {
+    return defaultVal;
+  }
+};
 
 export const PORT = env('PORT', 3000);
 
@@ -8,6 +22,9 @@ export const ELASTICSEARCH_HOST = 'localhost:9200';
 
 export const MAX_SEARCH_ES = env('MAX_SEARCH_ES', 10000);
 export const MAX_SEARCH_WS = env('MAX_SEARCH_WS', 100);
+
+export const CHUNK_SIZE = env('ENTRIES_CHUNK_SIZE', 100);
+export const MAX_SIMULT_CHUNKS = env('MAX_SIM_CHUNKS', 10);
 
 export const INDEX = env('INDEX', 'groundingsearch');
 export const INPUT_PATH = env('INPUT_PATH', 'input');

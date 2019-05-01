@@ -4,8 +4,7 @@ import _ from 'lodash';
 
 import { db } from '../db';
 import logger from '../logger';
-
-const ENTRIES_CHUNK_SIZE = 100;
+import { CHUNK_SIZE, MAX_SIMULT_CHUNKS } from '../config';
 
 const processChunk = (chunk, processEntry) => {
   let task = Future.wrap(function(chunk, next){ // code in this block runs in its own thread
@@ -31,14 +30,32 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
   return new Promise( resolve => {
     let entries = [];
     let processes = [];
+    let fileStream;
 
     // n.b. skip if empty chunk
-    const insertChunk = chunk => chunk.length === 0 ? Promise.resolve() : db.insertEntries( chunk, false );
+    const insertChunk = chunk => {
+      if( chunk.length === 0 ){
+        return Promise.resolve();
+      }
+
+      return db.insertEntries( chunk, false ).then(res => {
+        if( res.errors ){
+          let err = new Error('A chunk failed to be inserted');
+
+          err.chunk = chunk;
+          err.response = res;
+
+          throw err;
+        }
+
+        return res;
+      });
+    };
 
     const enqueueEntry = entry => {
       entries.push(entry);
 
-      if( entries.length >= ENTRIES_CHUNK_SIZE ){
+      if( entries.length >= CHUNK_SIZE ){
         return dequeueEntries();
       } else {
         return Promise.resolve();
@@ -53,7 +70,21 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
 
       processes.push(process);
 
-      process.then(() => _.pull(processes, process));
+      // when we have to many active processing operations, pause the input stream
+      // so we don't build up too much memory
+      if( processes.length >= MAX_SIMULT_CHUNKS ){
+        fileStream.pause();
+      }
+
+      process.then(() => {
+        _.pull(processes, process);
+
+        // resume the input stream once we've decreased the active number of
+        // processing operations
+        if( processes.length < MAX_SIMULT_CHUNKS ){
+          fileStream.resume();
+        }
+      });
 
       return process;
     };
@@ -64,7 +95,13 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
       }
     };
 
-    const onData = consumeEntry;
+    const onData = (entry, dataFileStream) => {
+      if( fileStream == null ){
+        fileStream = dataFileStream;
+      }
+
+      consumeEntry(entry);
+    };
 
     const onEnd = () => {
       logger.info(`Updating index with processed ${ns} data`);
