@@ -49,9 +49,11 @@ describe('Search and Get Aggregate', function(){
 
               // try with top result for now...
 
+              const expected = `${namespace}:${xref_id}`.toUpperCase();
+              const actual = `${firstResult.namespace}:${firstResult.id}`.toUpperCase();
+
               expect(firstResult, 'first result').to.exist;
-              expect(firstResult.namespace, 'namespace').to.equal(namespace);
-              expect(firstResult.id, 'id').to.equal(xref_id);
+              expect(actual, 'namespace').to.equal(expected);
 
               // in future maybe be more lenient...
 
