@@ -32,7 +32,8 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
     let entries = [];
     let processes = [];
 
-    const insertChunk = chunk => db.insertEntries( chunk, false );
+    // n.b. skip if empty chunk
+    const insertChunk = chunk => chunk.length === 0 ? Promise.resolve() : db.insertEntries( chunk, false );
 
     const enqueueEntry = entry => {
       entries.push(entry);

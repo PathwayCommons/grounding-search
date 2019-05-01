@@ -20,7 +20,7 @@ const SORTED_MAIN_ORGANISMS = [
  * results.
  * @param {string} id The organism taxon ID
  */
-const isSupportedOrganism = id => { // eslint-disable-line no-unused-vars
+export const isSupportedOrganism = id => { // eslint-disable-line no-unused-vars
   return true; // all organisms are supported
 };
 
@@ -29,6 +29,23 @@ const isSupportedOrganism = id => { // eslint-disable-line no-unused-vars
  * indicates a higher precedence.
  * @param {string} id The organism taxon ID
  */
-const getDefaultOrganismIndex = id => SORTED_MAIN_ORGANISMS.indexOf('' + id);
+export const getDefaultOrganismIndex = id => {
+  return getOrganismIndex(id, SORTED_MAIN_ORGANISMS);
+};
 
-export { isSupportedOrganism, getDefaultOrganismIndex };
+/**
+ * Get the index of the organism in its default ordering.  An earlier, lower index
+ * indicates a higher precedence.
+ * @param {string} id The organism taxon ID
+ * @param {Array[string]} organismOrdering A sorted array of taxon IDs to use for getting the index
+ */
+export const getOrganismIndex = (id, organismOrdering) => {
+  const length = organismOrdering.length;
+  const index = organismOrdering.indexOf('' + id);
+
+  if( index === -1 ){ // not found
+    return length;
+  } else {
+    return index;
+  }
+};

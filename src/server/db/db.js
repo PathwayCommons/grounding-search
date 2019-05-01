@@ -75,24 +75,24 @@ const db = {
     };
 
     const settings = {
-      number_of_shards: 5, // TODO reconsider default
-      refresh_interval: '-1',
-      analysis: {
-        filter: {
-          bigram: {
-            type: 'ngram',
-            min_gram: 2,
-            max_gram: 2
-          }
-        },
-        analyzer: {
-          strdist: {
-            type: 'custom',
-            tokenizer: 'whitespace',
-            filter: ['lowercase', 'bigram'],
-          }
-        }
-      }
+      // number_of_shards: 5, // TODO reconsider default
+      refresh_interval: '-1'
+      // analysis: {
+      //   filter: {
+      //     bigram: {
+      //       type: 'ngram',
+      //       min_gram: 2,
+      //       max_gram: 2
+      //     }
+      //   },
+      //   analyzer: {
+      //     strdist: {
+      //       type: 'custom',
+      //       tokenizer: 'whitespace',
+      //       filter: ['lowercase', 'bigram'],
+      //     }
+      //   }
+      // }
     };
 
     return client.indices.create( { index: INDEX, body: { mappings, settings } } );
@@ -167,6 +167,13 @@ const db = {
     let body = [];
 
     entries.forEach( entry => {
+
+      // remove duplicate synonyms to avoid noisy elasticsearch results
+      entry.synonyms = _.uniqBy(entry.synonyms, str => str.toLowerCase());
+
+      // remove the main name from the synonym list (if it exists) for the same reason
+      _.remove(entry.synonyms, syn => syn.toLowerCase() === entry.name.toLowerCase());
+
       body.push( { index: { _index: INDEX, _type: TYPE, _id: (entry.namespace + ':' + entry.id).toUpperCase() } } );
       body.push( entry );
     } );
@@ -195,23 +202,31 @@ const db = {
       return entry._source;
     });
 
-    const body = {
-      from,
-      size,
-      query: {
-        multi_match: {
-          query: searchString,
-          type: 'best_fields',
-          fuzziness: 3,
-          fields: ['name', 'synonyms']
-        }
+    let query = {
+      multi_match: {
+        query: searchString,
+        type: 'best_fields',
+        fuzziness: 2,
+        fields: ['name', 'synonyms']
       }
     };
 
-    // TODO apply ns filter a different way...
-    // if ( !_.isNil( namespace ) ) {
-    //   _.set( body, [ 'query', 'bool', 'filter', 'term', NS_FIELD ], namespace );
-    // }
+    if( !_.isNil(namespace) ){
+      query = {
+        bool: {
+          must: {
+            term: { [NS_FIELD]: namespace }
+          },
+          should: query
+        }
+      };
+    }
+
+    const body = {
+      from,
+      size,
+      query
+    };
 
     return client.search({ index, type, body }).then( processResult );
   },
