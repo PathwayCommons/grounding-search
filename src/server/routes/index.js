@@ -33,16 +33,16 @@ router.get('/', function(req, res) {
  */
 // e.g. POST /search { q: 'p53' }
 router.post('/search', function(req, res){
-  const { namespace, q, organismIndices } = req.body;
+  const { namespace, q, organismOrdering } = req.body;
 
-  aggregate.search(q, namespace, organismIndices).then(ents => res.json(ents));
+  aggregate.search(q, namespace, organismOrdering).then(ents => res.json(ents));
 });
 
 // TODO docs
 router.get('/search', function(req, res){
-  const { namespace, q, organismIndices } = req.query;
+  const { namespace, q, organismOrdering } = req.query;
 
-  aggregate.search(q, namespace, organismIndices).then(ents => res.json(ents));
+  aggregate.search(q, namespace, organismOrdering).then(ents => res.json(ents));
 });
 
 // TODO swagger docs
