@@ -57,7 +57,7 @@ const db = {
    */
   createIndex: function(){
     const client = this.connect();
- 
+
     // include mappings for all fields that we use for search
     const mappings = {
       [TYPE]: {
@@ -104,8 +104,18 @@ const db = {
   guaranteeIndex: function(){
     let indexExists = () => this.exists();
     let create = () => this.createIndex();
+    let createIfNotExists = exists => exists ? Promise.resolve() : create();
 
-    return indexExists().then( exists => exists ? Promise.resolve() : create() );
+    return (
+      Promise.resolve()
+        .then( indexExists )
+        .then( createIfNotExists )
+        .catch(err => { // in case running multiple index scripts in parallel
+          return indexExists().then(exists => {
+            if( !exists ){ throw err; }
+          });
+        })
+    );
   },
   /**
    * Delete the elasticsearch index dedicated for the app.
@@ -181,7 +191,7 @@ const db = {
     const client = db.connect();
     const processResult = res => res.hits.hits.map( entry => {
       entry._source.esScore = entry._score;
-      
+
       return entry._source;
     });
 
