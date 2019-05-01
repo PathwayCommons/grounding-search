@@ -1,8 +1,7 @@
-const _ = require('lodash');
-
-const MOLECULAR_CELL = require('./data/molecular-cell.json');
-const TOP_NCBI_GENE = require('./data/top-ncbi-gene.json');
-const PC_BLACKLIST = require('./data/pc-blacklist.json');
+import _ from 'lodash';
+import MOLECULAR_CELL from './data/molecular-cell.json';
+import TOP_NCBI_GENE from './data/top-ncbi-gene.json';
+import PC_BLACKLIST from './data/pc-blacklist.json';
 
 const SEARCH_OBJECTS = _.concat( [],
   MOLECULAR_CELL,
