@@ -1,5 +1,6 @@
 /** @module processing */
 import Future from 'fibers/future';
+import _ from 'lodash';
 
 import { db } from '../db';
 import logger from '../logger';
@@ -22,16 +23,17 @@ const processChunk = (chunk, processEntry) => {
  * @param {string} ns The namespace whose entries will be updated.
  * @param {string} filePath Path of the file to read the entries from.
  * @param {function} parse  A function that will be called to parse the data file.
- * @param {function} processEntry A function that will be called to process entry data 
+ * @param {function} processEntry A function that will be called to process entry data
  * before inserting it to database.
  * @param {function} [includeEntry = () => true] A function called to decide whether to include or omit an entry.
  */
 const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includeEntry = () => true){
   return new Promise( resolve => {
     let entries = [];
-    let process = Promise.resolve();
+    let processes = [];
 
-    const insertChunk = chunk => db.insertEntries( chunk, false );
+    // n.b. skip if empty chunk
+    const insertChunk = chunk => chunk.length === 0 ? Promise.resolve() : db.insertEntries( chunk, false );
 
     const enqueueEntry = entry => {
       entries.push(entry);
@@ -47,7 +49,11 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
       let chunk = entries;
       entries = [];
 
-      process = process.then(() => processChunk(chunk, processEntry)).then(insertChunk);
+      let process = processChunk(chunk, processEntry).then(insertChunk);
+
+      processes.push(process);
+
+      process.then(() => _.pull(processes, process));
 
       return process;
     };
@@ -61,13 +67,12 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
     const onData = consumeEntry;
 
     const onEnd = () => {
-      dequeueEntries(); // last chunk might not be full
-
       logger.info(`Updating index with processed ${ns} data`);
 
       const manualRefresh = () => db.refreshIndex();
 
-      process
+      Promise.all(processes)
+        .then( dequeueEntries ) // last chunk might not be full
         .then( () => logger.info(`Finished updating ${ns} data`) )
         .then( manualRefresh )
         .then( resolve );

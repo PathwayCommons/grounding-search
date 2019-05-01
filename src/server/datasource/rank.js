@@ -1,6 +1,6 @@
 /** @module rank */
 import _ from 'lodash';
-import { getDefaultOrganismIndex } from './organisms';
+import { getOrganismIndex, getDefaultOrganismIndex } from './organisms';
 import dice from 'dice-coefficient'; // sorensen dice coeff
 import Future from 'fibers/future';
 
@@ -57,7 +57,7 @@ const getDistance = (ent, searchTerm) => {
  * Rank an array of entities.
  * @param {EntityJSON} ents An array of entities to sort.
  * @param {string} searchTerm The search term used for sorting the entities.
- * @param {object} [organismCounts] An object map of organism taxon IDs to the
+ * @param {object} [organismIndices] An object map of organism taxon IDs to the
  * relative weight of the organisms.  Example: `{ '9606': 3, '10090': 1 }`
  * This sets a preference of organism ordering when there is a distance tie (e.g.
  * P53 for human or P53 for mouse).  The counts ould be, for example, the number
@@ -66,22 +66,29 @@ const getDistance = (ent, searchTerm) => {
  * is used based on the popularity of common model organisms.
  * @returns The sorted, ranked array of entities.  The best matches come first.
  */
-export const rank = (ents, searchTerm, organismCounts = {}) => {
+export const rank = (ents, searchTerm, organismOrdering) => {
   let dist = ent => getDistance(ent, searchTerm);
 
-  let orgCount = ent => ent.organism == null ? 0 : (organismCounts[ent.organism] || 0);
-  let defOrgCount = ent => ent.organism == null ? 0 : getDefaultOrganismIndex(ent.organism);
+  ents.forEach(ent => {
+    ent.defaultOrganismIndex = getDefaultOrganismIndex(ent.organism);
+
+    if( organismOrdering == null ){
+      ent.organismIndex = ent.defaultOrganismIndex;
+    } else {
+      ent.organismIndex = getOrganismIndex(ent.organism, organismOrdering);
+    }
+  });
 
   let sortByDistThenOrgs = (a, b) => {
     let distDiff = dist(a) - dist(b);
 
     if( distDiff === 0 ){
-      let orgDiff = orgCount(b) - orgCount(a);
+      let orgDiff = a.organismIndex - b.organismIndex;
 
       if( orgDiff === 0 ){
-        let defaultOrgDiff = defOrgCount(a) - defOrgCount(b);
+        let defOrgDiff = a.defaultOrganismIndex - b.defaultOrganismIndex;
 
-        return defaultOrgDiff;
+        return defOrgDiff;
       } else {
         return orgDiff;
       }
@@ -93,14 +100,14 @@ export const rank = (ents, searchTerm, organismCounts = {}) => {
   return ents.sort(sortByDistThenOrgs);
 };
 
-export const rankInThread = (ents, searchTerm, organismCounts) => {
+export const rankInThread = (ents, searchTerm, organismOrdering) => {
   let task = Future.wrap(function(args, next){ // code in this block runs in its own thread
-    let res = rank(args.ents, args.searchTerm, args.organismCounts);
+    let res = rank(args.ents, args.searchTerm, args.organismOrdering);
     let err = null;
 
     next( err, res );
   });
 
-  return task({ ents, searchTerm, organismCounts }).promise();
+  return task({ ents, searchTerm, organismOrdering }).promise();
 };
 

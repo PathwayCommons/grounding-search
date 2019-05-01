@@ -6,7 +6,7 @@ export const LOG_LEVEL = env('LOG_LEVEL', 'info');
 
 export const ELASTICSEARCH_HOST = 'localhost:9200';
 
-export const MAX_SEARCH_ES = env('MAX_SEARCH_ES', 1000);
+export const MAX_SEARCH_ES = env('MAX_SEARCH_ES', 10000);
 export const MAX_SEARCH_WS = env('MAX_SEARCH_WS', 100);
 
 export const INDEX = env('INDEX', 'groundingsearch');
