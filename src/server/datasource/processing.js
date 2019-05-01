@@ -5,7 +5,7 @@ import _ from 'lodash';
 import { db } from '../db';
 import logger from '../logger';
 
-const ENTRIES_CHUNK_SIZE = 1000;
+const ENTRIES_CHUNK_SIZE = 100;
 
 const processChunk = (chunk, processEntry) => {
   let task = Future.wrap(function(chunk, next){ // code in this block runs in its own thread
