@@ -7,6 +7,7 @@ const SORTED_MAIN_ORGANISMS = [
   '9606',  // h. sapiens
   '10090', // m. musculus
   '4932', // s. cervisiae
+  '559292', // s. cervisiae strain S288C
   '7227', // d. melonogaster
   '83333',  // e. coli
   '6239', // c. elegans
@@ -40,6 +41,8 @@ export const getDefaultOrganismIndex = id => {
  * @param {Array[string]} organismOrdering A sorted array of taxon IDs to use for getting the index
  */
 export const getOrganismIndex = (id, organismOrdering) => {
+  if(id == null){ return 0; } // if org doesn't apply, then it's the same as an org match
+
   const length = organismOrdering.length;
   const index = organismOrdering.indexOf('' + id);
 
