@@ -188,11 +188,10 @@ const db = {
    * Retrieve the entities matching best with the search string within maximum search size.
    * @param {string} searchString Key string for searching the best matching entities.
    * @param {string} [namespace=undefined] Namespace to seek the entities e.g. 'uniprot', 'chebi', ...
-   * @param {string} [from=0] Offset from the first result to fetch.
-   * @param {string} [size=50] Maximum amount of hits to be returned.
+   * @param {number} fuzziness The amount of fuzziness to use.  Higher values allow looser matches.
    * @returns {Promise} Promise object represents the array of best matching entities.
    */
-  search: function( searchString, namespace, from = 0, size = MAX_SEARCH_ES ){
+  search: function( searchString, namespace, fuzziness = 2 ){
     const index = INDEX;
     const type = TYPE;
     const client = db.connect();
@@ -206,7 +205,7 @@ const db = {
       multi_match: {
         query: searchString,
         type: 'best_fields',
-        fuzziness: 2,
+        fuzziness,
         fields: ['name', 'synonyms']
       }
     };
@@ -223,8 +222,7 @@ const db = {
     }
 
     const body = {
-      from,
-      size,
+      size: MAX_SEARCH_ES,
       query
     };
 

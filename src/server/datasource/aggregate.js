@@ -2,6 +2,7 @@
 import { db } from '../db';
 import { rankInThread } from './rank';
 import { MAX_SEARCH_WS } from '../config';
+import _ from 'lodash';
 
 /**
  * Retrieve the entities matching best with the search string.
@@ -16,13 +17,20 @@ import { MAX_SEARCH_WS } from '../config';
  * @returns {Promise} Promise object represents the array of best matching entries.
  */
 const search = function(searchString, namespace, organismOrdering){
-  const doSearch = () => db.search(searchString, namespace);
+  const doSearch = fuzziness => db.search(searchString, namespace, fuzziness);
   const doRank = ents => rankInThread(ents, searchString, organismOrdering);
   const shortenList = ents => ents.slice(0, MAX_SEARCH_WS);
 
+  const doSearches = () => {
+    return (
+      Promise.all([ doSearch(0), doSearch() ]) // exact search to avoid fuzziness noise
+        .then(ress => _.uniqBy(_.concat(...ress), ent => `${ent.namespace}:${ent.id}`))
+    );
+  };
+
   return (
     Promise.resolve()
-      .then(doSearch)
+      .then(doSearches)
       .then(doRank)
       .then(shortenList)
   );

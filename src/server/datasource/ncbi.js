@@ -108,12 +108,10 @@ const clear = function(){
 /**
  * Retrieve the entities matching best with the search string.
  * @param {string} searchString Key string for searching the best matching entities.
- * @param {string} [from] Offset from the first result to fetch.
- * @param {number} [size] Maximum amount of hits to be returned.
  * @returns {Promise} Promise object represents the array of best matching entities from 'ncbi'.
  */
-const search = function(searchString, from, size){
-  return db.search( searchString, ENTRY_NS, from, size );
+const search = function(searchString){
+  return db.search( searchString, ENTRY_NS );
 };
 
 /**
