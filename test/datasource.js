@@ -67,25 +67,20 @@ function DatasourceTest( opts ) {
 
       sampleEntityNames.forEach( entityName => {
         let lcName = entityName.toLowerCase();
-        let halfLength = Math.ceil( entityName.length / 2 );
-        let halfName = entityName.substring( 0, halfLength );
         let ucName = entityName.toUpperCase();
 
-        promises.push( searchEntity( lcName ), searchEntity( halfName ), searchEntity( ucName ) );
+        promises.push( searchEntity( lcName ), searchEntity( ucName ) );
       } );
 
       Promise.all( promises )
         .should.be.fulfilled
         .then( results => {
           sampleEntityNames.forEach( ( entityName, i ) => {
-            let start = i * 3;
+            let start = i * 2;
             let lcRes = results[ start ];
-            let halfRes = results[ start + 1 ];
-            let ucRes = results[ start + 2 ];
+            let ucRes = results[ start + 1 ];
 
             expect(lcRes.length, `some ${entityName} data is found`).to.be.above(0);
-            expect(halfRes, `search results for half substring of it
-              supersets search results for ${entityName}`).to.deep.include.members(lcRes);
             expect(lcRes, `search is case insensitive for ${entityName}`).to.deep.equal(ucRes);
           } );
         } )

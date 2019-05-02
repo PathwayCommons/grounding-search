@@ -219,7 +219,15 @@ const db = {
       id: (namespace + ':' + id).toUpperCase(),
       index: INDEX,
       type: TYPE
-    }).then( res => res._source );
+    }).catch( err => {
+      if ( err.status === 404 ) {
+        // if id is not found resolve null instead of throwing 404 error
+        return Promise.resolve( null );
+      }
+      else {
+        throw err;
+      }
+    } ).then( res => res && res._source );
   },
   /**
    * Check if the elasticsearch index dedicated for the app exists.

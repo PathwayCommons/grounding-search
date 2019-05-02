@@ -5,7 +5,7 @@ import { db } from '../src/server/db';
 import _ from 'lodash';
 
 const sampleEntityNames = [ 'tp53', 'mdm2', 'iron' ];
-const sampleEntityIds = [ 'CHEBI:53438', 'Q7LG56' ];
+const sampleEntityIds = [ '53438', 'Q7LG56' ];
 
 const updateTestData = () => {
   let guaranteeIndex = () => db.guaranteeIndex();

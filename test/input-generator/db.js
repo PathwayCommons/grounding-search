@@ -34,8 +34,8 @@ function getEntries( namespace ) {
     let existing = new Set();
 
     groups.forEach( group => {
-      let newMembers = group.filter( m => !existing.has( m ) );
-      newMembers.forEach( m => existing.add( m ) );
+      let newMembers = group.filter( m => !existing.has( m.id ) );
+      newMembers.forEach( m => existing.add( m.id ) );
       members = members.concat( newMembers );
     } );
 

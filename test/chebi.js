@@ -23,12 +23,12 @@ const getXmlEntries = () => {
 
 const getEntryId = entry => {
   let id = _.get( entry, [ ID, '_text' ] );
-  return id;
+  return id.replace('CHEBI:', '');
 };
 
 const namespace = 'chebi';
 const xmlEntries = buildIndex ? getXmlEntries() : [];
-const sampleEntityId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : 'CHEBI:15365';
+const sampleEntityId = buildIndex ? getEntryId( xmlEntries[ 0 ] ) : '15365';
 const entryCount = xmlEntries.length;
 const sampleEntityNames = [ 'aspirin' ];
 const datasource = chebi;
