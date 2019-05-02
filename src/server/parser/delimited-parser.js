@@ -22,9 +22,10 @@ function DelimitedParser( filePath, events, hasHeaderLine ){
   let onEnd = events.onEnd || _.noop;
   let onHeader = events.onHeader || _.noop;
   let firstLine = true;
+  let fileStream = fs.createReadStream(filePath);
 
   (
-    fs.createReadStream(filePath)
+    fileStream
       .pipe(split())
       .on('data', function(line) {
         if ( firstLine ) {
@@ -36,9 +37,9 @@ function DelimitedParser( filePath, events, hasHeaderLine ){
           }
         }
 
-        onData( line );
+        onData( line, fileStream );
       })
-      .on('end', onEnd)
+      .on('end', () => onEnd(fileStream))
   );
 
 }

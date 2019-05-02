@@ -3,7 +3,6 @@ import { db } from '../../src/server/db';
 import _ from 'lodash';
 
 const SEARCH_SIZE = 5;
-const SEARCH_FROM = 0;
 
 function getEntries( namespace ) {
   let searchValues = Object.values( SEARCH_OBJECT );
@@ -13,7 +12,7 @@ function getEntries( namespace ) {
     .filter( grounding => grounding && grounding.namespace == namespace )
     .map( grounding => grounding.id );
 
-  let search = name => db.search( name, namespace, SEARCH_FROM, SEARCH_SIZE );
+  let search = name => db.search( name, namespace );
   let get = id => db.get( id, namespace );
 
   let addMissingEntries = entries => {
@@ -32,6 +31,8 @@ function getEntries( namespace ) {
   let distinctFlatten = groups => {
     let members = [];
     let existing = new Set();
+
+    groups = groups.slice(0, SEARCH_SIZE);
 
     groups.forEach( group => {
       let newMembers = group.filter( m => !existing.has( m.id ) );

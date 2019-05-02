@@ -6,97 +6,10 @@ import { aggregate } from '../datasource/aggregate';
 
 const router = express.Router();
 
-const dsNsMap = new Map([
-  ['ncbi', ncbi],
-  ['chebi', chebi],
-  ['uniprot', uniprot],
-  ['aggregate', aggregate]
-]);
-
-const getDataSource = ns => dsNsMap.get(ns);
-
-const handleReq = (source, req, res) => {
-  const q = req.body.q;
-  const orgCounts = req.body.organismCounts;
-
-  source.search(q, orgCounts).then(searchRes => res.json(searchRes));
-};
 
 /* GET home page. */
 router.get('/', function(req, res) {
   res.redirect('/api/docs');
-});
-
-/**
- * @swagger
- * /uniprot:
- *   post:
- *     description: uniprot search service
- *     tags:
- *       - grounding-search
- *     produces:
- *       - application/json
- *     parameters:
- *       - name: q
- *         description: Search text
- *         in: formData
- *         required: true
- *         type: string
- *     responses:
- *       200:
- *         description: Uniprot get query results
- */
-// e.g. POST /uniprot { q: 'p53' }
-router.post('/uniprot', function(req, res){
-  handleReq(uniprot, req, res);
-});
-
-/**
- * @swagger
- * /chebi:
- *   post:
- *     description: chebi search service
- *     tags:
- *       - grounding-search
- *     produces:
- *       - application/json
- *     parameters:
- *       - name: q
- *         description: Search text
- *         in: formData
- *         required: true
- *         type: string
- *     responses:
- *       200:
- *         description: Chebi get query results
- */
-// e.g. POST /chebi { q: 'iron' }
-router.post('/chebi', function(req, res){
-  handleReq(chebi, req, res);
-});
-
-/**
- * @swagger
- * /ncbi:
- *   post:
- *     description: ncbi search service
- *     tags:
- *       - grounding-search
- *     produces:
- *       - application/json
- *     parameters:
- *       - name: q
- *         description: Search text
- *         in: formData
- *         required: true
- *         type: string
- *     responses:
- *       200:
- *         description: NCBI get query results
- */
-// e.g. POST /ncbi { q: 'iron' }
-router.post('/ncbi', function(req, res){
-  handleReq(ncbi, req, res);
 });
 
 /**
@@ -120,16 +33,16 @@ router.post('/ncbi', function(req, res){
  */
 // e.g. POST /search { q: 'p53' }
 router.post('/search', function(req, res){
-  const { namespace } = req.body; // allow specifying namespace filter
-  let datasource;
+  const { namespace, q, organismOrdering } = req.body;
 
-  if( namespace != null ){
-    datasource = getDataSource(namespace);
-  } else {
-    datasource = aggregate;
-  }
+  aggregate.search(q, namespace, organismOrdering).then(ents => res.json(ents));
+});
 
-  handleReq(datasource, req, res);
+// TODO docs
+router.get('/search', function(req, res){
+  const { namespace, q, organismOrdering } = req.query;
+
+  aggregate.search(q, namespace, organismOrdering).then(ents => res.json(ents));
 });
 
 // TODO swagger docs

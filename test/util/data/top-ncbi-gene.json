@@ -1,0 +1,590 @@
+[
+  {
+    "id": 9606,
+    "organismOrdering": [9606],
+    "entities": [
+      {
+        "text": "P53",
+        "xref_id": "7157",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "TNF-alpha",
+        "xref_id": "7124",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HER1",
+        "xref_id": "1956",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "VEGF",
+        "xref_id": "7422",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IL-6",
+        "xref_id": "3569",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "APO-E",
+        "xref_id": "348",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "TGF-beta1",
+        "xref_id": "7040",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "methylenetetrahydrofolate reductase",
+        "xref_id": "4524",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ER",
+        "xref_id": "2099",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "AKT1",
+        "xref_id": "207",
+        "namespace": "ncbi",
+        "sentence": null
+      }
+    ]
+  },
+  {
+    "id": 10090,
+    "organismOrdering": [10090],
+    "entities": [
+      {
+        "text": "ROSA26",
+        "xref_id": "14910",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "p53",
+        "xref_id": "22059",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "TNF-alpha",
+        "xref_id": "21926",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "TLR4",
+        "xref_id": "21898",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Apo-E",
+        "xref_id": "11816",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IFN-gamma",
+        "xref_id": "15978",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Beta-catenin",
+        "xref_id": "12387",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Shh",
+        "xref_id": "20423",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Caspase 3",
+        "xref_id": "12367",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "TGF-beta1",
+        "xref_id": "21803",
+        "namespace": "ncbi",
+        "sentence": null
+      }
+    ]
+  },
+  {
+    "id": 4932,
+    "organismOrdering": [4932],
+    "entities": [
+      {
+        "text": "atp6",
+        "xref_id": "24573110",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "cox1",
+        "xref_id": "24573120",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "cytb",
+        "xref_id": "24573121",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "rps3",
+        "xref_id": "24573122",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ACI60_gt21",
+        "xref_id": "24573114",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "atp8",
+        "xref_id": "24573117",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "atp9",
+        "xref_id": "24573116",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "cox2",
+        "xref_id": "24573139",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "cox3",
+        "xref_id": "24573142",
+        "namespace": "ncbi",
+        "sentence": null
+      }
+    ]
+  },
+  {
+    "id": 7227,
+    "organismOrdering": [7227],
+    "entities": [
+      {
+        "text": "white",
+        "xref_id": "31271",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "wingless",
+        "xref_id": "34009",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Notch",
+        "xref_id": "31293",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "dpp",
+        "xref_id": "33432",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "engrailed",
+        "xref_id": "36240",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "armadillo",
+        "xref_id": "31151",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "hedgehog",
+        "xref_id": "42737",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Delta",
+        "xref_id": "42313",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "EGFR",
+        "xref_id": "37455",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Eve",
+        "xref_id": "36039",
+        "namespace": "ncbi",
+        "sentence": null
+      }
+    ]
+  },
+  {
+    "id": 83333,
+    "organismOrdering": [83333],
+    "entities": [
+      {
+        "text": "ssb",
+        "xref_id": "1263584",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "tnpA",
+        "xref_id": "1263527",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "sopA",
+        "xref_id": "1263522",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "CcdB",
+        "xref_id": "1263593",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "YcbB",
+        "xref_id": "1263513",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PifA",
+        "xref_id": "1263512",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "traS",
+        "xref_id": "1263588",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "traI",
+        "xref_id": "1263574",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "repB",
+        "xref_id": "1263561",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "traR",
+        "xref_id": "1263563",
+        "namespace": "ncbi",
+        "sentence": null
+      }
+    ]
+  },
+  {
+    "id": 6239,
+    "organismOrdering": [6239],
+    "entities": [
+      {
+        "text": "DAF-16",
+        "xref_id": "172981",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "DAF-2",
+        "xref_id": "175410",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "SKN-1",
+        "xref_id": "177343",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "lin-4",
+        "xref_id": "266860",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "let-7",
+        "xref_id": "266952",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ced-3",
+        "xref_id": "178272",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "POP-1",
+        "xref_id": "171849",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ced-4",
+        "xref_id": "175643",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ced-9",
+        "xref_id": "3565776",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "DAF-12",
+        "xref_id": "181263",
+        "namespace": "ncbi",
+        "sentence": null
+      }
+    ]
+  },
+  {
+    "id": 3702,
+    "organismOrdering": [3702],
+    "entities": [
+      {
+        "text": "phytochrome B",
+        "xref_id": "816394",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "COP1",
+        "xref_id": "817857",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "FLC",
+        "xref_id": "830878",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "MPK6",
+        "xref_id": "818982",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "phyA",
+        "xref_id": "837483",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HY5",
+        "xref_id": "830996",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "BAK1",
+        "xref_id": "829480",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "FT",
+        "xref_id": "842859",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "NPR1",
+        "xref_id": "842733",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "BRI1",
+        "xref_id": "830095",
+        "namespace": "ncbi",
+        "sentence": null
+      }
+    ]
+  },
+  {
+    "id": 10116,
+    "organismOrdering": [10116],
+    "entities": [
+      {
+        "text": "TNF-alpha",
+        "xref_id": "24835",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "BDNF",
+        "xref_id": "24225",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "TGF-beta1",
+        "xref_id": "59086",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "VEGF-A",
+        "xref_id": "83785",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IL1",
+        "xref_id": "24494",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Mmp9",
+        "xref_id": "81687",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Akt1",
+        "xref_id": "24185",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ERK",
+        "xref_id": "50689",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IL-6",
+        "xref_id": "24498",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "iNOS",
+        "xref_id": "24599",
+        "namespace": "ncbi",
+        "sentence": null
+      }
+    ]
+  },
+  {
+    "id": 7955,
+    "organismOrdering": [7955],
+    "entities": [
+      {
+        "text": "myod",
+        "xref_id": "30513",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "pax2a",
+        "xref_id": "30425",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "shh",
+        "xref_id": "30269",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "myl7",
+        "xref_id": "30592",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ntl",
+        "xref_id": "30399",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "krx20",
+        "xref_id": "30190",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "kdra",
+        "xref_id": "796537",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "gata1",
+        "xref_id": "30481",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "gsc",
+        "xref_id": "30212",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "FGF8",
+        "xref_id": "30538",
+        "namespace": "ncbi",
+        "sentence": null
+      }
+    ]
+  }
+]

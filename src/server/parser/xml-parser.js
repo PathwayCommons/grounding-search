@@ -10,7 +10,7 @@ import _ from 'lodash';
  * @param {string} rootTagName The name of the root tag for creating json objects.
  * @param {array} omitList The list of xml tags to omit.
  * @param {object} events Object that wraps the event functions to consume.
- * @param {Function} [events.onData] A function to be consumed with a parameter 
+ * @param {Function} [events.onData] A function to be consumed with a parameter
  * representing a data json as they are obtained.
  * @param {Function} [events.onEnd] A function to be consumed when the parsing is
  * ended.
@@ -66,13 +66,15 @@ function XmlParser(filePath, rootTagName, omitList = [], events) {
     }
 
     if( topTag.name === rootTagName ){
-      onData(topTag);
+      onData(topTag, stream);
     }
 
     tagStack.pop();
   };
 
-  parser.onend = onEnd;
+  parser.onend = () => {
+    onEnd(stream);
+  };
 
   let stream = fs.createReadStream(filePath);
 

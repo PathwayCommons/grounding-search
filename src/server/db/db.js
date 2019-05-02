@@ -57,7 +57,7 @@ const db = {
    */
   createIndex: function(){
     const client = this.connect();
- 
+
     // include mappings for all fields that we use for search
     const mappings = {
       [TYPE]: {
@@ -75,24 +75,24 @@ const db = {
     };
 
     const settings = {
-      number_of_shards: 5, // TODO reconsider default
-      refresh_interval: '-1',
-      analysis: {
-        filter: {
-          bigram: {
-            type: 'ngram',
-            min_gram: 2,
-            max_gram: 2
-          }
-        },
-        analyzer: {
-          strdist: {
-            type: 'custom',
-            tokenizer: 'whitespace',
-            filter: ['lowercase', 'bigram'],
-          }
-        }
-      }
+      // number_of_shards: 5, // TODO reconsider default
+      refresh_interval: '-1'
+      // analysis: {
+      //   filter: {
+      //     bigram: {
+      //       type: 'ngram',
+      //       min_gram: 2,
+      //       max_gram: 2
+      //     }
+      //   },
+      //   analyzer: {
+      //     strdist: {
+      //       type: 'custom',
+      //       tokenizer: 'whitespace',
+      //       filter: ['lowercase', 'bigram'],
+      //     }
+      //   }
+      // }
     };
 
     return client.indices.create( { index: INDEX, body: { mappings, settings } } );
@@ -104,8 +104,18 @@ const db = {
   guaranteeIndex: function(){
     let indexExists = () => this.exists();
     let create = () => this.createIndex();
+    let createIfNotExists = exists => exists ? Promise.resolve() : create();
 
-    return indexExists().then( exists => exists ? Promise.resolve() : create() );
+    return (
+      Promise.resolve()
+        .then( indexExists )
+        .then( createIfNotExists )
+        .catch(err => { // in case running multiple index scripts in parallel
+          return indexExists().then(exists => {
+            if( !exists ){ throw err; }
+          });
+        })
+    );
   },
   /**
    * Delete the elasticsearch index dedicated for the app.
@@ -157,6 +167,13 @@ const db = {
     let body = [];
 
     entries.forEach( entry => {
+
+      // remove duplicate synonyms to avoid noisy elasticsearch results
+      entry.synonyms = _.uniqBy(entry.synonyms, str => str.toLowerCase());
+
+      // remove the main name from the synonym list (if it exists) for the same reason
+      _.remove(entry.synonyms, syn => syn.toLowerCase() === entry.name.toLowerCase());
+
       body.push( { index: { _index: INDEX, _type: TYPE, _id: (entry.namespace + ':' + entry.id).toUpperCase() } } );
       body.push( entry );
     } );
@@ -171,37 +188,43 @@ const db = {
    * Retrieve the entities matching best with the search string within maximum search size.
    * @param {string} searchString Key string for searching the best matching entities.
    * @param {string} [namespace=undefined] Namespace to seek the entities e.g. 'uniprot', 'chebi', ...
-   * @param {string} [from=0] Offset from the first result to fetch.
-   * @param {string} [size=50] Maximum amount of hits to be returned.
+   * @param {number} fuzziness The amount of fuzziness to use.  Higher values allow looser matches.
    * @returns {Promise} Promise object represents the array of best matching entities.
    */
-  search: function( searchString, namespace, from = 0, size = MAX_SEARCH_ES ){
+  search: function( searchString, namespace, fuzziness = 2 ){
     const index = INDEX;
     const type = TYPE;
     const client = db.connect();
     const processResult = res => res.hits.hits.map( entry => {
       entry._source.esScore = entry._score;
-      
+
       return entry._source;
     });
 
-    const body = {
-      from,
-      size,
-      query: {
-        multi_match: {
-          query: searchString,
-          type: 'best_fields',
-          fuzziness: 3,
-          fields: ['name', 'synonyms']
-        }
+    let query = {
+      multi_match: {
+        query: searchString,
+        type: 'best_fields',
+        fuzziness,
+        fields: ['name', 'synonyms']
       }
     };
 
-    // TODO apply ns filter a different way...
-    // if ( !_.isNil( namespace ) ) {
-    //   _.set( body, [ 'query', 'bool', 'filter', 'term', NS_FIELD ], namespace );
-    // }
+    if( !_.isNil(namespace) ){
+      query = {
+        bool: {
+          must: {
+            term: { [NS_FIELD]: namespace }
+          },
+          should: query
+        }
+      };
+    }
+
+    const body = {
+      size: MAX_SEARCH_ES,
+      query
+    };
 
     return client.search({ index, type, body }).then( processResult );
   },
