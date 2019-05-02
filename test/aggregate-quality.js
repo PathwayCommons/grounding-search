@@ -39,7 +39,7 @@ describe('Search and Get Aggregate', function(){
         if( !xref_id ){ return; } // skip if no grounding specified
 
         it(`search ${text} ${organismOrdering || []}`, function(){
-          return ( searchEnt(text)
+          return ( searchEnt(text, organismOrdering)
             .then( results => {
               expect( results ).to.exist;
 

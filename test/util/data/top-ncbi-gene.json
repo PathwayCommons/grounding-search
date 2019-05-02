@@ -1,7 +1,7 @@
 [
   {
     "id": 9606,
-    "organismOrderings": [9606],
+    "organismOrdering": [9606],
     "entities": [
       {
         "text": "P53",
@@ -67,7 +67,7 @@
   },
   {
     "id": 10090,
-    "organismOrderings": [10090],
+    "organismOrdering": [10090],
     "entities": [
       {
         "text": "ROSA26",
@@ -133,7 +133,7 @@
   },
   {
     "id": 4932,
-    "organismOrderings": [4932],
+    "organismOrdering": [4932],
     "entities": [
       {
         "text": "atp6",
@@ -193,7 +193,7 @@
   },
   {
     "id": 7227,
-    "organismOrderings": [7227],
+    "organismOrdering": [7227],
     "entities": [
       {
         "text": "white",
@@ -259,7 +259,7 @@
   },
   {
     "id": 83333,
-    "organismOrderings": [83333],
+    "organismOrdering": [83333],
     "entities": [
       {
         "text": "ssb",
@@ -325,7 +325,7 @@
   },
   {
     "id": 6239,
-    "organismOrderings": [6239],
+    "organismOrdering": [6239],
     "entities": [
       {
         "text": "DAF-16",
@@ -391,7 +391,7 @@
   },
   {
     "id": 3702,
-    "organismOrderings": [3702],
+    "organismOrdering": [3702],
     "entities": [
       {
         "text": "phytochrome B",
@@ -457,7 +457,7 @@
   },
   {
     "id": 10116,
-    "organismOrderings": [10116],
+    "organismOrdering": [10116],
     "entities": [
       {
         "text": "TNF-alpha",
@@ -523,7 +523,7 @@
   },
   {
     "id": 7955,
-    "organismOrderings": [7955],
+    "organismOrdering": [7955],
     "entities": [
       {
         "text": "myod",
