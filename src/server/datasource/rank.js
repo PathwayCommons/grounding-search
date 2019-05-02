@@ -87,14 +87,11 @@ export const rank = (ents, searchTerm, organismOrdering) => {
     const d = dist(ent);
 
     metric += Math.round(d * 100);
-    metric *= 100;
-
+    metric *= 1000;
     metric += ent.organismIndex;
     metric *= 1000;
-
     metric += ent.defaultOrganismIndex;
-    metric *= 1000;
-
+    metric *= 100;
     metric += Math.abs(ent.charge == null ? 0 : ent.charge);
 
     ent.overallDistance = metric;
