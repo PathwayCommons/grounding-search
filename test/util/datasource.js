@@ -3,7 +3,7 @@ import { uniprot } from '../../src/server/datasource/uniprot';
 import { chebi } from '../../src/server/datasource/chebi';
 import { ncbi } from '../../src/server/datasource/ncbi';
 
-const datasources = [ uniprot, chebi, ncbi ];
+const datasources = [ chebi, ncbi ];
 
 const applyToEachDS = op => {
   let promises = datasources.map( ds => op( ds ) );
