@@ -405,13 +405,14 @@ export const getDefaultOrganismIndex = id => {
  * @param {string} id The organism taxon ID
  * @param {Array[string]} organismOrdering A sorted array of taxon IDs to use for getting the index
  */
-export const getOrganismIndex = (id, organismOrdering) => {
+export const getOrganismIndex = (id, organismOrdering = []) => {
   if(id == null){ return 0; } // if org doesn't apply, then it's the same as an org match
 
   const length = organismOrdering.length;
-  const index = indexMap.get('' + id);
+  const idStr = '' + id;
+  const index = organismOrdering === SORTED_MAIN_ORGANISMS ? indexMap.get(idStr) : organismOrdering.indexOf(idStr);
 
-  if( index === -1 ){ // not found
+  if( index == null || index === -1 ){ // not found
     return length;
   } else {
     return index;

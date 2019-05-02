@@ -1,7 +1,4 @@
 import express from 'express';
-import { uniprot } from '../datasource/uniprot';
-import { chebi } from '../datasource/chebi';
-import { ncbi } from '../datasource/ncbi';
 import { aggregate } from '../datasource/aggregate';
 
 const router = express.Router();
