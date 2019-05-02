@@ -6,8 +6,6 @@ import Future from 'fibers/future';
 
 const DISTANCE_FIELDS = ['name', 'synonyms']; // TODO should share list with db.js
 
-const isChemical = ent => ent.namespace === 'chebi';
-
 /**
  * Get the distance between the two strings.
  * @param {string} a Get the
@@ -71,11 +69,6 @@ const getDistance = (ent, searchTerm) => {
 export const rank = (ents, searchTerm, organismOrdering) => {
   const dist = ent => getDistance(ent, searchTerm);
 
-  // ensure that taxon ids are strings
-  if( organismOrdering != null ){
-    organismOrdering = organismOrdering.map(id => id + '');
-  }
-
   ents.forEach(ent => {
     ent.defaultOrganismIndex = getDefaultOrganismIndex(ent.organism);
 
@@ -86,32 +79,30 @@ export const rank = (ents, searchTerm, organismOrdering) => {
     }
   });
 
-  const cmp = (a, b) => {
-    const da = dist(a);
-    const db = dist(b);
+  const getMetric = (ent => {
+    if( ent.overallDistance != null ){ return ent.overallDistance; }
 
-    const distDiff = da - db;
-    if( distDiff !== 0 ){ return distDiff; }
+    let metric = 0;
 
-    const orgDiff = a.organismIndex - b.organismIndex;
-    if( orgDiff !== 0 ){ return orgDiff; }
+    const d = dist(ent);
 
-    const defOrgDiff = a.defaultOrganismIndex - b.defaultOrganismIndex;
-    if( defOrgDiff !== 0 ){ return defOrgDiff; }
+    metric += Math.round(d * 100);
+    metric *= 100;
 
-    if( isChemical(a) && isChemical(b) && a.charge !== b.charge ){
-      if( a.charge === 0 ){
-        return -1;
-      } else {
-        return 1;
-      }
-    }
+    metric += ent.organismIndex;
+    metric *= 1000;
 
-    // if all else is equal, use the elasticsearch score
-    return a.esScore - b.esScore;
-  };
+    metric += ent.defaultOrganismIndex;
+    metric *= 1000;
 
-  return ents.sort(cmp);
+    metric += Math.abs(ent.charge == null ? 0 : ent.charge);
+
+    ent.overallDistance = metric;
+
+    return metric;
+  });
+
+  return _.sortBy(ents, getMetric);
 };
 
 export const rankInThread = (ents, searchTerm, organismOrdering) => {
