@@ -1,5 +1,5 @@
 import xmlBuilder from 'xmlbuilder';
-import { getEntries } from './db';
+import Query from './query';
 import fs from 'fs';
 import path from 'path';
 
