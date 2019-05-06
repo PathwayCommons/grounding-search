@@ -19,7 +19,8 @@ const TAGS = Object.freeze({
   DB_REFERENCE: 'dbReference'
 });
 
-getEntries( NS ).then( entries => {
+let query = new Query( NS );
+query.getEntries().then( entries => {
   let xmlRoot = xmlBuilder.create( TAGS.UNIPROT );
 
   entries.forEach( entry => {

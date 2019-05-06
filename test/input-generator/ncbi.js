@@ -1,4 +1,4 @@
-import { getEntries } from './db';
+import Query from './query';
 import fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
@@ -38,7 +38,8 @@ Object.keys( NODE_INDICES ).forEach( n => {
   INDEX_TO_NAME[ index ] = fieldName;
 } );
 
-getEntries( NS ).then( entries => {
+let query = new Query( NS );
+query.getEntries().then( entries => {
   let lines = [ HEADER_LINE ];
 
   entries.forEach( entry => {

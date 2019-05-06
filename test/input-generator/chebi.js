@@ -1,5 +1,5 @@
 import xmlBuilder from 'xmlbuilder';
-import { getEntries } from './db';
+import Query from './query';
 import fs from 'fs';
 import path from 'path';
 
@@ -14,7 +14,8 @@ const TAGS = Object.freeze({
   SYNONYM: 'oboInOwl:hasRelatedSynonym'
 });
 
-getEntries( NS ).then( entries => {
+let query = new Query( NS );
+query.getEntries().then( entries => {
   let xmlRoot = xmlBuilder.create( TAGS.RDF );
 
   entries.forEach( entry => {
