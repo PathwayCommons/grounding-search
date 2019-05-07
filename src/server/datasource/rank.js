@@ -69,6 +69,9 @@ const getDistance = (ent, searchTerm) => {
 export const rank = (ents, searchTerm, organismOrdering) => {
   const dist = ent => getDistance(ent, searchTerm);
 
+  // ensure ids are strings
+  organismOrdering = organismOrdering.map(id => '' + id);
+
   ents.forEach(ent => {
     ent.defaultOrganismIndex = getDefaultOrganismIndex(ent.organism);
 
