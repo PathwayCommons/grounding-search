@@ -72,7 +72,7 @@ const processEntry = entry => {
   let charge = safeGetAsFloat( entry, XML_TAGS.CHARGE );
   let mass = safeGetAsFloat( entry, XML_TAGS.MASS );
   let monoisotopicMass = safeGetAsFloat( entry, XML_TAGS.MONOISOTOPIC_MASS );
-  let formulae = findChild( entry, XML_TAGS.FORMULA );
+  let formulae = filterChildren( entry, XML_TAGS.FORMULA );
 
   return { namespace, type, id, name, inchi, inchiKey, synonyms,
     charge, mass, monoisotopicMass, formulae };
