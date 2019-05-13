@@ -1527,6 +1527,7 @@
   },
   {
    "id": "http://dx.doi.org/10.1016/j.molcel.2017.01.027",
+   "organismOrdering": [9606],
    "entities": [
     {
       "text": "Beclin1",
