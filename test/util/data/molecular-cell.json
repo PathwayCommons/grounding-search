@@ -1683,6 +1683,7 @@
   },
   {
    "id": "https://doi.org/10.1016/j.molcel.2018.08.014",
+   "organismOrdering": [9606],
    "entities": [
       {
         "text": "myc",
