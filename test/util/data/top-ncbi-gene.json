@@ -836,6 +836,90 @@
         "xref_id": "830095",
         "namespace": "ncbi",
         "sentence": null
+      },
+      {
+        "text": "pin1",
+        "xref_id": "843693",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "SKP1",
+        "xref_id": "843928",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PIF3",
+        "xref_id": "837479",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+     {
+        "text": "MPK3",
+        "xref_id": "823706",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "FLS2",
+        "xref_id": "834676",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ETHYLENE RESPONSE 1",
+        "xref_id": "842951",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ABI1",
+        "xref_id": "828714",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "CRY1",
+        "xref_id": "826470",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PIF4",
+        "xref_id": "818903",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "phot1",
+        "xref_id": "823721",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "OST1",
+        "xref_id": "829541",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "MYC2",
+        "xref_id": "840158",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "RGA",
+        "xref_id": "814686",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "AGO1",
+        "xref_id": "841262",
+        "namespace": "ncbi",
+        "sentence": null
       }
     ]
   },
