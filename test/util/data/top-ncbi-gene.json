@@ -212,7 +212,97 @@
         "xref_id": "21803",
         "namespace": "ncbi",
         "sentence": null
-      }
+      },
+      {
+        "text": "MYD88",
+        "xref_id": 17874,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "PECAM-1",
+        "xref_id": 18613,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "Leptin",
+        "xref_id": 16846,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "IL-6",
+        "xref_id": 16193,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "IL-10",
+        "xref_id": 16153,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "Leptin receptor",
+        "xref_id": 16847,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "Pax6",
+        "xref_id": 18508,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "Akt1",
+        "xref_id": 11651,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "TLR2",
+        "xref_id": 24088,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "Ki-67",
+        "xref_id": 17345,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "Stat3",
+        "xref_id": 20848,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "PTEN",
+        "xref_id": 19211,
+        "namespace": "ncbi",
+        "sentence": ""
+       },
+       {
+        "text": "RAG1",
+        "xref_id": 19373,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "Fas",
+        "xref_id": 14102,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "VEGF",
+        "xref_id": 22339,
+        "namespace": "ncbi",
+        "sentence": null
+       }
     ]
   },
   {
