@@ -1,5 +1,6 @@
 [
   { "id": "https://www.pathwaycommons.org/archives/PC2/v11/blacklist.txt",
+    "organismOrdering": [],
     "entities": [
       {
         "namespace": "chebi",
