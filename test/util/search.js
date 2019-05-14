@@ -4,9 +4,9 @@ import TOP_NCBI_GENE from './data/top-ncbi-gene.json';
 import PC_BLACKLIST from './data/pc-blacklist.json';
 
 const SEARCH_OBJECTS = _.concat( [],
-  MOLECULAR_CELL,
+  // MOLECULAR_CELL,
   TOP_NCBI_GENE,
-  PC_BLACKLIST
+  // PC_BLACKLIST
 );
 
 export { SEARCH_OBJECTS };

@@ -466,7 +466,7 @@
         "sentence": null
       },
       {
-        "text": "ADH",
+        "text": "alcohol dehydrogenase",
         "xref_id": "3771877",
         "namespace": "ncbi",
         "sentence": null
@@ -604,14 +604,8 @@
         "sentence": null
       },
       {
-        "text": "Ccdb",
-        "xref_id": "1263593",
-        "namespace": "ncbi",
-        "sentence": null
-      },
-      {
         "text": "traE",
-        "xref_id": 1263497,
+        "xref_id": "1263497",
         "namespace": "ncbi",
         "sentence": null
       }
@@ -970,7 +964,7 @@
         "sentence": null
       },
       {
-        "text": "ERK",
+        "text": "ERK1",
         "xref_id": "50689",
         "namespace": "ncbi",
         "sentence": null
@@ -1018,7 +1012,7 @@
         "sentence": null
       },
       {
-        "text": "TLR-4",
+        "text": "toll-like receptor 4",
         "xref_id": "29260",
         "namespace": "ncbi",
         "sentence": null
@@ -1060,7 +1054,7 @@
         "sentence": null
       },
       {
-        "text": "Endothelin-1",
+        "text": "ET-1",
         "xref_id": "24323",
         "namespace": "ncbi",
         "sentence": null
@@ -1194,12 +1188,6 @@
       {
         "text": "Tal1",
         "xref_id": "30766",
-        "namespace": "ncbi",
-        "sentence": null
-      },
-      {
-        "text": "EF1",
-        "xref_id": "30516",
         "namespace": "ncbi",
         "sentence": null
       },
