@@ -680,6 +680,96 @@
         "xref_id": "181263",
         "namespace": "ncbi",
         "sentence": null
+      },
+      {
+        "text": "UNC-6",
+        "xref_id": "180961",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "lin-12",
+        "xref_id": "176282",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "GLR-1",
+        "xref_id": "176204",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HIF-1",
+        "xref_id": "180359",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "CEP-1",
+        "xref_id": "172616",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "cdc-42",
+        "xref_id": "174233",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "UNC-40",
+        "xref_id": "172233",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "GLD-1",
+        "xref_id": "172532",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "CED-10",
+        "xref_id": "177111",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "lin-35",
+        "xref_id": "172249",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "hsf-1",
+        "xref_id": "173078",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "GLP-1",
+        "xref_id": "176286",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "EGL-1",
+        "xref_id": "179943",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PAR-6",
+        "xref_id": "173137",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PAR-3",
+        "xref_id": "175783",
+        "namespace": "ncbi",
+        "sentence": null
       }
     ]
   },
