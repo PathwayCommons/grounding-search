@@ -986,6 +986,96 @@
         "xref_id": "24599",
         "namespace": "ncbi",
         "sentence": null
+      },
+      {
+        "text": "MAPK1",
+        "xref_id": "116590",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "eNOS",
+        "xref_id": "24600",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "p53",
+        "xref_id": "24842",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "COX-2",
+        "xref_id": "29527",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HIF-1alpha",
+        "xref_id": "29560",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "TLR-4",
+        "xref_id": "29260",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HO-1",
+        "xref_id": "24451",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IGF-1",
+        "xref_id": "24482",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "p38",
+        "xref_id": "81649",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Bcl2",
+        "xref_id": "24224",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Beta-Catenin",
+        "xref_id": "84353",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "MMP-2",
+        "xref_id": "81686",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Endothelin-1",
+        "xref_id": "24323",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "AGT",
+        "xref_id": "24179",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "leptin",
+        "xref_id": "25608",
+        "namespace": "ncbi",
+        "sentence": null
       }
     ]
   },
