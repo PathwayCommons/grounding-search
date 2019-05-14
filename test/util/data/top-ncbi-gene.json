@@ -62,6 +62,90 @@
         "xref_id": "207",
         "namespace": "ncbi",
         "sentence": null
+      },
+      {
+        "text": "HIF-1alpha",
+        "xref_id": "3091",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IL-10",
+        "xref_id": "3586",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "NFKB1",
+        "xref_id": "4790",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "BRCA1",
+        "xref_id": "672",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HER2",
+        "xref_id": "2064",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "MMP-9",
+        "xref_id": "4318",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IL-1beta",
+        "xref_id": "3553",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HLA-DRB1",
+        "xref_id": "3123",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "STAT3",
+        "xref_id": "6774",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "APP",
+        "xref_id": "351",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ACE",
+        "xref_id": "1636",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "beta-catenin",
+        "xref_id": "1499",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "p16",
+        "xref_id": "1029",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "K-Ras",
+        "xref_id": "3845",
+        "namespace": "ncbi",
+        "sentence": null
       }
     ]
   },
@@ -126,6 +210,96 @@
       {
         "text": "TGF-beta1",
         "xref_id": "21803",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "MYD88",
+        "xref_id": "17874",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PECAM-1",
+        "xref_id": "18613",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Leptin",
+        "xref_id": "16846",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IL-6",
+        "xref_id": "16193",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IL-10",
+        "xref_id": "16153",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Leptin receptor",
+        "xref_id": "16847",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Pax6",
+        "xref_id": "18508",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Akt1",
+        "xref_id": "11651",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "TLR2",
+        "xref_id": "24088",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Ki-67",
+        "xref_id": "17345",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Stat3",
+        "xref_id": "20848",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PTEN",
+        "xref_id": "19211",
+        "namespace": "ncbi",
+        "sentence": ""
+      },
+      {
+        "text": "RAG1",
+        "xref_id": "19373",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Fas",
+        "xref_id": "14102",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "VEGF",
+        "xref_id": "22339",
         "namespace": "ncbi",
         "sentence": null
       }
@@ -254,6 +428,90 @@
         "xref_id": "36039",
         "namespace": "ncbi",
         "sentence": null
+      },
+      {
+        "text": "ELAV",
+        "xref_id": "31000",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "E-cadherin",
+        "xref_id": "37386",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "bicoid",
+        "xref_id": "40830",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Dlg",
+        "xref_id": "32083",
+        "namespace": "ncbi",
+        "sentence": ""
+      },
+      {
+        "text": "PER",
+        "xref_id": "31251",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "hunchback",
+        "xref_id": "41032",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "alcohol dehydrogenase",
+        "xref_id": "3771877",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Fas2",
+        "xref_id": "31364",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "DRas",
+        "xref_id": "41140",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "cut",
+        "xref_id": "44540",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "reaper",
+        "xref_id": "40015",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "shibire",
+        "xref_id": "45928",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "hid",
+        "xref_id": "40009",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Kruppel",
+        "xref_id": "38012",
+        "namespace": "ncbi",
+        "sentence": null
       }
     ]
   },
@@ -318,6 +576,36 @@
       {
         "text": "traR",
         "xref_id": "1263563",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "traM",
+        "xref_id": "1263565",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "traG",
+        "xref_id": "1263567",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "traI",
+        "xref_id": "1263574",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "traS",
+        "xref_id": "1263588",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "traE",
+        "xref_id": "1263497",
         "namespace": "ncbi",
         "sentence": null
       }
@@ -386,6 +674,96 @@
         "xref_id": "181263",
         "namespace": "ncbi",
         "sentence": null
+      },
+      {
+        "text": "UNC-6",
+        "xref_id": "180961",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "lin-12",
+        "xref_id": "176282",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "GLR-1",
+        "xref_id": "176204",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HIF-1",
+        "xref_id": "180359",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "CEP-1",
+        "xref_id": "172616",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "cdc-42",
+        "xref_id": "174233",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "UNC-40",
+        "xref_id": "172233",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "GLD-1",
+        "xref_id": "172532",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "CED-10",
+        "xref_id": "177111",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "lin-35",
+        "xref_id": "172249",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "hsf-1",
+        "xref_id": "173078",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "GLP-1",
+        "xref_id": "176286",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "EGL-1",
+        "xref_id": "179943",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PAR-6",
+        "xref_id": "173137",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PAR-3",
+        "xref_id": "175783",
+        "namespace": "ncbi",
+        "sentence": null
       }
     ]
   },
@@ -452,6 +830,90 @@
         "xref_id": "830095",
         "namespace": "ncbi",
         "sentence": null
+      },
+      {
+        "text": "pin1",
+        "xref_id": "843693",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "SKP1",
+        "xref_id": "843928",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PIF3",
+        "xref_id": "837479",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+     {
+        "text": "MPK3",
+        "xref_id": "823706",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "FLS2",
+        "xref_id": "834676",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ETHYLENE RESPONSE 1",
+        "xref_id": "842951",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ABI1",
+        "xref_id": "828714",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "CRY1",
+        "xref_id": "826470",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "PIF4",
+        "xref_id": "818903",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "phot1",
+        "xref_id": "823721",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "OST1",
+        "xref_id": "829541",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "MYC2",
+        "xref_id": "840158",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "RGA",
+        "xref_id": "814686",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "AGO1",
+        "xref_id": "841262",
+        "namespace": "ncbi",
+        "sentence": null
       }
     ]
   },
@@ -502,7 +964,7 @@
         "sentence": null
       },
       {
-        "text": "ERK",
+        "text": "ERK1",
         "xref_id": "50689",
         "namespace": "ncbi",
         "sentence": null
@@ -516,6 +978,96 @@
       {
         "text": "iNOS",
         "xref_id": "24599",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "MAPK1",
+        "xref_id": "116590",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "eNOS",
+        "xref_id": "24600",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "p53",
+        "xref_id": "24842",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "COX-2",
+        "xref_id": "29527",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HIF-1alpha",
+        "xref_id": "29560",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "toll-like receptor 4",
+        "xref_id": "29260",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HO-1",
+        "xref_id": "24451",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IGF-1",
+        "xref_id": "24482",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "p38",
+        "xref_id": "81649",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Bcl2",
+        "xref_id": "24224",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Beta-Catenin",
+        "xref_id": "84353",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "MMP-2",
+        "xref_id": "81686",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "ET-1",
+        "xref_id": "24323",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "AGT",
+        "xref_id": "24179",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "leptin",
+        "xref_id": "25608",
         "namespace": "ncbi",
         "sentence": null
       }
@@ -582,6 +1134,78 @@
       {
         "text": "FGF8",
         "xref_id": "30538",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "p53",
+        "xref_id": "30590",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IL-1beta",
+        "xref_id": "405770",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HSP70",
+        "xref_id": "560210",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "bmp4",
+        "xref_id": "30612",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "TNFalpha",
+        "xref_id": "405785",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "dlx2a",
+        "xref_id": "30574",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "bmp2b",
+        "xref_id": "30632",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "isl1",
+        "xref_id": "30147",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Tal1",
+        "xref_id": "30766",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Chordin",
+        "xref_id": "30161",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "SOX10",
+        "xref_id": "140616",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Ngn1",
+        "xref_id": "30239",
         "namespace": "ncbi",
         "sentence": null
       }
