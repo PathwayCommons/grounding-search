@@ -1142,6 +1142,84 @@
         "xref_id": "30538",
         "namespace": "ncbi",
         "sentence": null
+      },
+      {
+        "text": "p53",
+        "xref_id": "30590",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "IL-1beta",
+        "xref_id": "405770",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "HSP70",
+        "xref_id": "560210",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "bmp4",
+        "xref_id": "30612",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "TNFalpha",
+        "xref_id": "405785",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "dlx2a",
+        "xref_id": "30574",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "bmp2b",
+        "xref_id": "30632",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "isl1",
+        "xref_id": "30147",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Tal1",
+        "xref_id": "30766",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "EF1",
+        "xref_id": "30516",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Chordin",
+        "xref_id": "30161",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "SOX10",
+        "xref_id": "140616",
+        "namespace": "ncbi",
+        "sentence": null
+      },
+      {
+        "text": "Ngn1",
+        "xref_id": "30239",
+        "namespace": "ncbi",
+        "sentence": null
       }
     ]
   }
