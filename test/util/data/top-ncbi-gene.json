@@ -62,7 +62,91 @@
         "xref_id": "207",
         "namespace": "ncbi",
         "sentence": null
-      }
+      },
+      {
+        "text": "HIF-1alpha",
+        "xref_id": 3091,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "IL-10",
+        "xref_id": 3586,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "NFKB1",
+        "xref_id": 4790,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "BRCA1",
+        "xref_id": 672,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "HER2",
+        "xref_id": 2064,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "MMP-9",
+        "xref_id": 4318,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "IL-1beta",
+        "xref_id": 3553,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "HLA-DRB1",
+        "xref_id": 3123,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "STAT3",
+        "xref_id": 6774,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "APP",
+        "xref_id": 351,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "ACE",
+        "xref_id": 1636,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "beta-catenin",
+        "xref_id": 1499,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "p16",
+        "xref_id": 1029,
+        "namespace": "ncbi",
+        "sentence": null
+       },
+       {
+        "text": "K-Ras",
+        "xref_id": 3845,
+        "namespace": "ncbi",
+        "sentence": null
+       }
     ]
   },
   {
