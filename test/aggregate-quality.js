@@ -22,6 +22,8 @@ const removeTestIndex = () => db.deleteIndex();
 
 const isSameSanitized = (name1, name2) => sanitize(name1) === sanitize(name2);
 
+const getDispId = ent => `${ent.namespace}:${ent.id}`;
+
 const DEFAULT_LOOSE = 3;
 
 describe('Search and Get Aggregate', function(){
@@ -67,7 +69,7 @@ describe('Search and Get Aggregate', function(){
               } else {
                 expect(results.some(isExpectedResult), `expected result ${expected} in the result set`);
 
-                expect(topResults.some(isExpectedResult), `expected result ${expected} in top ${loose}`).to.be.true;
+                expect(topResults.some(isExpectedResult), `expected result ${expected} in top ${loose} (${topResults.map(getDispId)})`).to.be.true;
 
                 if( isSameSanitized(firstResult.name, text) ){
                   // the first result is an exact name match so it's hard to differentiate
