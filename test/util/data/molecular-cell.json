@@ -1163,6 +1163,7 @@
      {
       "text": "CaM",
       "xref_id": "801",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "DAPK1 is a 160-kDa Ca2 +-/calmodulin ( CaM )-dependent serine/threonine kinase , comprised of an N-terminal kinase domain followed by a regulatory CaM binding domain , eight Ankyrin repeats , a cytoskeleton associating ROC-COR domain and a C-terminal death domain ( schematic in Figure 4A , interaction network in Figure S1B ) ( Carlessi et al. , 2011 ) ."
      },
