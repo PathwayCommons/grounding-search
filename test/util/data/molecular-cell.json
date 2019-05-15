@@ -2182,6 +2182,7 @@
      {
       "text": "JUNB",
       "xref_id": "3726",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "A recent report has shown that lincRNA-p21 can bind JUNB and CTNNB1 mRNAs and suppress their translation ( Yoon et al. , 2012 ) ."
      },
