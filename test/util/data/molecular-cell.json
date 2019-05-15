@@ -2188,6 +2188,7 @@
      {
       "text": "miR-130",
       "xref_id": "406919",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "In addition to lncRNAs , several hypoxia and HIF-1alpha-induced miRNAs , such as miR-130 and miR-155 , have recently been shown to inhibit HIF-1alpha expression by targeting its 3 ' UTR or hampering its translation , thereby forming a negative feedback loop to control hypoxia response ( Bruning et al. , 2011 , Saito et al. , 2011 ) ."
      },
