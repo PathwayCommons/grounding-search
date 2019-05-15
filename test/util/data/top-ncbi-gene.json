@@ -857,6 +857,7 @@
       },
       {
         "text": "FLS2",
+        "loose": true,
         "xref_id": "834676",
         "namespace": "ncbi",
         "sentence": null
