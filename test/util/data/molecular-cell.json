@@ -816,7 +816,8 @@
       "text": "hydrogen",
       "xref_id": "49637",
       "namespace": "chebi",
-      "sentence": "Indeed , while methylation does not change the overall charge of the residue , it does alter the availability of hydrogen donors and increases van der Waals interactive forces ( Liu et al. , 2010 , Yang et al. , 2010 ) ."
+      "sentence": "Indeed , while methylation does not change the overall charge of the residue , it does alter the availability of hydrogen donors and increases van der Waals interactive forces ( Liu et al. , 2010 , Yang et al. , 2010 ) .",
+      "loose": true
      },
      {
       "text": "TRRAP",
