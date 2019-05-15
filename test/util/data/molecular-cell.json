@@ -1899,6 +1899,7 @@
      {
       "text": "IFNlambda",
       "xref_id": "282618",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "For WT and S8E , we observed robust induction of IFIT1 protein and secretion of IFNlambda upon FLUAV infection , whereas phosphomimetics of the cluster I residues , including the individual T667E mutation , almost completely abrogated IFIT1 and IFNlambda induction                    ."
      },
