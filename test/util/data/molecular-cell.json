@@ -163,6 +163,7 @@
     {
      "text": "KAP1",
      "xref_id": "10155",
+     "loose": true,
      "namespace": "ncbi",
      "sentence": "In contrast , activation of the ATM signaling cascade , determined by the phosphorylation of ATM and its downstream substrates CHK2 and KAP1 , was unaffected by PRMT5 depletion                     ."
     },
