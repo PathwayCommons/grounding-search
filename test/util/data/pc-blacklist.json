@@ -54,7 +54,8 @@
       {
         "namespace": "chebi",
         "xref_id": "35780",
-        "text": "phosphate"
+        "text": "phosphate",
+        "loose": 5
       },
       {
         "namespace": "chebi",
@@ -64,7 +65,8 @@
       {
         "namespace": "chebi",
         "xref_id": "18367",
-        "text": "phosphate"
+        "text": "phosphate",
+        "loose": 5
       },
       {
         "namespace": "chebi",
@@ -129,7 +131,8 @@
       {
         "namespace": "chebi",
         "xref_id": "26078",
-        "text":"Phosphate"
+        "text":"Phosphate",
+        "loose": 5
       }
     ]
   }
