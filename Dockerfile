@@ -3,7 +3,6 @@ FROM node:10.15.3
 
 # Allow user configuration of variable at build-time using --build-arg flag
 ARG NODE_ENV
-# Docker Desktop for Mac: ELASTICSEARCH_HOST="host.docker.internal:<port>"
 ARG ELASTICSEARCH_HOST 
 
 # Initialize env variables and override with build-time flag, if set 
