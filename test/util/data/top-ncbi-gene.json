@@ -1068,6 +1068,7 @@
       {
         "text": "leptin",
         "xref_id": "25608",
+        "loose": true,
         "namespace": "ncbi",
         "sentence": null
       }
