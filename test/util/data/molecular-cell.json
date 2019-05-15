@@ -360,8 +360,9 @@
       "sentence": "The broad control that mTORC1 exerts over metabolism has been largely attributed to the regulation of a small number of transcription factors , including c-Myc , Srebp1/2 , Hif-1alpha , Atf4 , and Tfeb , although in most cases the molecular mechanisms remain unclear ( Laplante and Sabatini , 2013 , Ben-Sahra and Manning , 2017 ) ."
      },
      {
-      "text": "sugar",
+      "text": "glucose",
       "xref_id": "4167",
+      "loose": true,
       "namespace": "chebi",
       "sentence": "Consistent with the results attained with this platform , we also observed that Foxk1 knockdown significantly and specifically reduced glucose uptake in these cells            , which resides at the apex of sugar metabolism , thus supporting a significant role of Foxk1 as a critical regulator of glucose metabolism ."
      },
