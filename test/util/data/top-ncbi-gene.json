@@ -1166,7 +1166,8 @@
         "text": "TNFalpha",
         "xref_id": "405785",
         "namespace": "ncbi",
-        "sentence": null
+        "sentence": null,
+        "loose": true
       },
       {
         "text": "dlx2a",
