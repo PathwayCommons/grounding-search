@@ -1556,6 +1556,7 @@
      {
       "text": "ARD1",
       "xref_id": "8260",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "Here , we demonstrate that glutamine deprivation and hypoxia result in inhibition of mTOR mediated acetyl-transferase ARD1 S228 phosphorylation , leading to ARD1 dependent phosphoglycerate kinase 1 ( PGK1 ) K388 acetylation and subsequent PGK1 mediated Beclin1 S30 phosphorylation ."
      },
