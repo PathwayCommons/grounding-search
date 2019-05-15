@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import elasticsearch from 'elasticsearch';
-import { INDEX, MAX_SEARCH_ES, ELASTICSEARCH_HOST } from '../config';
+import { INDEX, MAX_SEARCH_ES, ELASTICSEARCH_HOST, MAX_FUZZ_ES } from '../config';
 
 const TYPE = 'entry';
 const NS_FIELD = 'namespace';
@@ -62,13 +62,22 @@ const db = {
     const mappings = {
       [TYPE]: {
         properties: {
+          id: {
+            type: 'keyword'
+          },
+          type: {
+            type: 'keyword'
+          },
+          organism: {
+            type: 'keyword'
+          },
           name: {
-            type: 'text',
-            analyzer: 'standard'
+            type: 'keyword',
+            normalizer: 'name_norm'
           },
           synonyms: {
-            type: 'text',
-            analyzer: 'standard'
+            type: 'keyword',
+            normalizer: 'name_norm'
           }
         }
       }
@@ -76,23 +85,33 @@ const db = {
 
     const settings = {
       // number_of_shards: 5, // TODO reconsider default
-      refresh_interval: '-1'
-      // analysis: {
-      //   filter: {
-      //     bigram: {
-      //       type: 'ngram',
-      //       min_gram: 2,
-      //       max_gram: 2
-      //     }
-      //   },
-      //   analyzer: {
-      //     strdist: {
-      //       type: 'custom',
-      //       tokenizer: 'whitespace',
-      //       filter: ['lowercase', 'bigram'],
-      //     }
-      //   }
-      // }
+      refresh_interval: '-1',
+      analysis: {
+        char_filter: {
+          name_word_filter: {
+            type: 'pattern_replace',
+            pattern: '(-|\\s)',
+            replacement: ''
+          },
+          alpha_filter: {
+            type: 'pattern_replace',
+            pattern: '(\\s|-|[0-9]|^)alpha(\\s|-|[0-9]|$)',
+            replacement: '$1a$2'
+          },
+          beta_filter: {
+            type: 'pattern_replace',
+            pattern: '(\\s|-|[0-9]|^)beta(\\s|-|[0-9]|$)',
+            replacement: '$1b$2'
+          }
+        },
+        normalizer: {
+          name_norm: {
+            type: 'custom',
+            filter: ['lowercase', 'asciifolding'],
+            char_filter: ['alpha_filter', 'beta_filter', 'name_word_filter']
+          }
+        }
+      }
     };
 
     return client.indices.create( { index: INDEX, body: { mappings, settings } } );
@@ -191,7 +210,7 @@ const db = {
    * @param {number} fuzziness The amount of fuzziness to use.  Higher values allow looser matches.
    * @returns {Promise} Promise object represents the array of best matching entities.
    */
-  search: function( searchString, namespace, fuzziness = 2 ){
+  search: function( searchString, namespace, fuzziness = MAX_FUZZ_ES, size = MAX_SEARCH_ES ){
     const index = INDEX;
     const type = TYPE;
     const client = db.connect();
@@ -222,7 +241,7 @@ const db = {
     }
 
     const body = {
-      size: MAX_SEARCH_ES,
+      size,
       query
     };
 

@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { getOrganismIndex, getDefaultOrganismIndex } from './organisms';
 import dice from 'dice-coefficient'; // sorensen dice coeff
 import Future from 'fibers/future';
+import { sanitizeNameForCmp as sanitize } from '../util';
 
 const DISTANCE_FIELDS = ['name', 'synonyms']; // TODO should share list with db.js
 
@@ -13,8 +14,11 @@ const DISTANCE_FIELDS = ['name', 'synonyms']; // TODO should share list with db.
  * @returns {Number} The distance between the strings, ranging on [0, 1] with
  * lower values indicating a smaller distance between the strings.
  */
-const stringDistanceMetric = (a, b) => {
-  return 1 - dice(a.toLowerCase(), b.toLowerCase());
+const stringDistanceMetric = (a, b, shouldSanitize = true) => {
+  const A = shouldSanitize ? sanitize(a) : a;
+  const B = shouldSanitize ? sanitize(b) : b;
+
+  return 1 - dice(A, B);
 };
 
 /**
@@ -22,17 +26,17 @@ const stringDistanceMetric = (a, b) => {
  * @param {EntityJson} ent The entity to test.
  * @param {String} searchTerm The search term (usually typed by a user as the name
  * of something he's looking for).
+ * @param {Boolean} shouldSanitize Whether to sanitize the names (true) or to use the raw
+ * names (false).
  * @returns {Number} The distance.
  */
-const getDistance = (ent, searchTerm) => {
-  if( ent.distance != null ){ return ent.distance; } // cached distance
-
+const getDistance = (ent, searchTerm, shouldSanitize = true) => {
   let undef = Number.MAX_SAFE_INTEGER;
   let dist = undef;
 
   // overall dist is min distance of all checked fields
   let checkDist = val => {
-    let d = val == null ? undef : stringDistanceMetric( searchTerm, val );
+    let d = val == null ? undef : stringDistanceMetric(searchTerm, val, shouldSanitize);
 
     dist = Math.min( d, dist );
   };
@@ -47,8 +51,6 @@ const getDistance = (ent, searchTerm) => {
   };
 
   DISTANCE_FIELDS.forEach( k => check( ent[k] ) );
-
-  ent.distance = dist; // store cached distance in-place
 
   return dist;
 };
@@ -67,8 +69,6 @@ const getDistance = (ent, searchTerm) => {
  * @returns The sorted, ranked array of entities.  The best matches come first.
  */
 export const rank = (ents, searchTerm, organismOrdering) => {
-  const dist = ent => getDistance(ent, searchTerm);
-
   // ensure ids are strings
   if( organismOrdering != null ){
     organismOrdering = organismOrdering.map(id => '' + id);
@@ -79,9 +79,20 @@ export const rank = (ents, searchTerm, organismOrdering) => {
 
     if( organismOrdering == null ){
       ent.organismIndex = ent.defaultOrganismIndex;
+      ent.combinedOrganismIndex = ent.organismIndex;
     } else {
       ent.organismIndex = getOrganismIndex(ent.organism, organismOrdering);
+
+      if( ent.organismIndex === organismOrdering.length ){ // not in ordering list
+        ent.combinedOrganismIndex = ent.organismIndex + ent.defaultOrganismIndex;
+      } else {
+        ent.combinedOrganismIndex = ent.organismIndex;
+      }
     }
+
+    ent.distance = getDistance(ent, searchTerm);
+    // ent.rawDistance = getDistance(ent, searchTerm, false);
+    ent.nameDistance = stringDistanceMetric(ent.name, searchTerm);
   });
 
   const getMetric = (ent => {
@@ -89,15 +100,16 @@ export const rank = (ents, searchTerm, organismOrdering) => {
 
     let metric = 0;
 
-    const d = dist(ent);
+    const d = ent.distance;
+    const dn = ent.nameDistance;
 
     metric += Math.round(d * 100);
     metric *= 1000;
-    metric += ent.organismIndex;
-    metric *= 1000;
-    metric += ent.defaultOrganismIndex;
+    metric += ent.combinedOrganismIndex;
     metric *= 100;
     metric += Math.abs(ent.charge == null ? 0 : ent.charge);
+    metric *= 1000;
+    metric += Math.round(dn * 100);
 
     ent.overallDistance = metric;
 

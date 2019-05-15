@@ -1,8 +1,18 @@
 /** @module aggregate */
 import { db } from '../db';
 import { rankInThread } from './rank';
-import { MAX_SEARCH_WS } from '../config';
 import _ from 'lodash';
+import { MAX_SEARCH_WS, MAX_FUZZ_ES } from '../config';
+
+const filterSearchString = function(searchString){
+  const rnaMatch = searchString.match(/(.*) (.*){0,2}rna/i);
+
+  if( rnaMatch != null ){
+    return rnaMatch[1];
+  } else {
+    return searchString;
+  }
+};
 
 /**
  * Retrieve the entities matching best with the search string.
@@ -17,13 +27,15 @@ import _ from 'lodash';
  * @returns {Promise} Promise object represents the array of best matching entries.
  */
 const search = function(searchString, namespace, organismOrdering){
+  searchString = filterSearchString(searchString);
+
   const doSearch = fuzziness => db.search(searchString, namespace, fuzziness);
   const doRank = ents => rankInThread(ents, searchString, organismOrdering);
   const shortenList = ents => ents.slice(0, MAX_SEARCH_WS);
 
   const doSearches = () => {
     return (
-      Promise.all([ doSearch(0), doSearch() ]) // exact search to avoid fuzziness noise
+      Promise.all([ doSearch(0), doSearch(MAX_FUZZ_ES) ]) // exact search to make sure we always include exact matches
         .then(ress => _.uniqBy(_.concat(...ress), ent => `${ent.namespace}:${ent.id}`))
     );
   };
