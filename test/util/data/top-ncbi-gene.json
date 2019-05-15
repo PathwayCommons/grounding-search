@@ -1032,6 +1032,7 @@
       {
         "text": "p38",
         "xref_id": "81649",
+        "loose": true,
         "namespace": "ncbi",
         "sentence": null
       },
