@@ -603,7 +603,8 @@
       "text": "Rif1",
       "xref_id": "55183",
       "namespace": "ncbi",
-      "sentence": "The main determinant for HR mediated repair is resection of the DNA DSB end , which is controlled by a 53BP1 containing protein complex containing Rif1 , PTIP , and Rev7 ( Panier and Boulton , 2014 ) ."
+      "sentence": "The main determinant for HR mediated repair is resection of the DNA DSB end , which is controlled by a 53BP1 containing protein complex containing Rif1 , PTIP , and Rev7 ( Panier and Boulton , 2014 ) .",
+      "loose": true
      },
      {
       "text": "PTIP",
