@@ -1465,6 +1465,7 @@
      {
       "text": "AtCIPK3",
       "xref_id": "817240",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "Other protein kinases , including the mitogen activated protein kinase kinase 2 ( MKK2 ) and CBL interacting protein kinase 3 ( AtCIPK3 ) , have been implicated in plant cold responses ( Kim et al. , 2003 , Teige et al. , 2004 ) ."
      },
