@@ -1636,8 +1636,9 @@
       "text": "phosphate",
       "xref_id": "18367",
       "namespace": "chebi",
-      "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) ."
-     },
+      "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) .",
+      "loose": true
+    },
      {
       "text": "3-phosphoglycerate",
       "xref_id": "17794",
