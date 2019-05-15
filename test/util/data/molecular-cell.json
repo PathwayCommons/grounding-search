@@ -108,6 +108,7 @@
     {
      "text": "nitrogen",
      "xref_id": "25555",
+     "loose": true,
      "namespace": "chebi",
      "sentence": "Dimethylation can occur asymmetrically ( ADMA ) , with two methyl groups placed onto one of the terminal nitrogen atoms of the guanidino group , or symmetrically ( SDMA ) , where one methyl group is placed onto each of the terminal nitrogen atoms ."
     },
