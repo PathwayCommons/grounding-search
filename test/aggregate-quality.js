@@ -3,6 +3,8 @@ import { aggregate, applyToEachDS } from './util/datasource';
 import { forceDownload, buildIndex } from './util/param';
 import { SEARCH_OBJECTS } from './util/search';
 import { db } from '../src/server/db';
+import { sanitizeNameForCmp as sanitize } from '../src/server/util';
+import _ from 'lodash';
 
 const updateTestData = () => {
   let guaranteeIndex = () => db.guaranteeIndex();
@@ -18,6 +20,10 @@ const getEnt = (ns, id) => aggregate.get( ns, id );
 
 const removeTestIndex = () => db.deleteIndex();
 
+const isSameSanitized = (name1, name2) => sanitize(name1) === sanitize(name2);
+
+const DEFAULT_LOOSE = 3;
+
 describe('Search and Get Aggregate', function(){
   this.timeout(10000);
 
@@ -26,8 +32,6 @@ describe('Search and Get Aggregate', function(){
     after(removeTestIndex);
   }
 
-
-
   SEARCH_OBJECTS.forEach( testCase => {
     const { id, entities } = testCase;
 
@@ -35,6 +39,11 @@ describe('Search and Get Aggregate', function(){
       entities.forEach( entity => {
         const { text, xref_id, namespace } = entity;
         const organismOrdering = entity.organismOrdering || testCase.organismOrdering;
+        let loose = entity.loose || testCase.loose;
+
+        if( !_.isNumber(loose) ){
+          loose = loose ? DEFAULT_LOOSE : 0;
+        }
 
         if( !xref_id ){ return; } // skip if no grounding specified
 
@@ -45,24 +54,24 @@ describe('Search and Get Aggregate', function(){
 
               const isExpectedResult = res => res.namespace === entity.namespace && res.id === xref_id;
               const firstResult = results[0];
-              const topResults = results.slice(0, 3);
-
-              // try with top result for now...
-
-              const expected = `${namespace}:${xref_id}`.toUpperCase();
-              const actual = `${firstResult.namespace}:${firstResult.id}`.toUpperCase();
+              const topResults = results.slice(0, loose);
 
               expect(firstResult, 'first result').to.exist;
-              expect(actual, 'namespace').to.equal(expected);
 
-              // in future maybe be more lenient...
+              const expected = `${namespace}:${xref_id}`.toUpperCase();
 
-              expect(topResults.some(isExpectedResult), 'top three has expected result').to.be.true;
+              if( loose === 0 ){
+                const actual = `${firstResult.namespace}:${firstResult.id}`.toUpperCase();
 
-              if( !isExpectedResult(firstResult) ){ // these cases are acceptable ties
-                if( firstResult.name.toLowerCase() === text.toLowerCase() ){
+                expect(actual).to.equal(expected);
+              } else {
+                expect(results.some(isExpectedResult), `expected result ${expected} in the result set`);
+
+                expect(topResults.some(isExpectedResult), `expected result ${expected} in top ${loose}`).to.be.true;
+
+                if( isSameSanitized(firstResult.name, text) ){
                   // the first result is an exact name match so it's hard to differentiate
-                } else if( firstResult.synonyms.some(syn => syn.toLowerCase() === text.toLowerCase()) ){
+                } else if( firstResult.synonyms.some(syn => isSameSanitized(syn, text)) ){
                   // the first result has an exact synonym match
                 } else {
                   throw new Error('The first result is neither the expected result nor an exact text match');
