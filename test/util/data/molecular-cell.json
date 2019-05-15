@@ -1965,7 +1965,8 @@
       "sentence": "One such functional module is glucose metabolism ( Data S2 , cluster 17 ) : out of four kinase activities required for core glycolysis , isoforms of three were identified as hit candidates in our screen ( HK2 , PKLR , and PFKL ) ."
      },
      {
-      "text": "DAKP1",
+      "text": "DAPK1",
+      "note": "typo in paper text",
       "xref_id": "1612",
       "namespace": "ncbi",
       "sentence": "Activation of DAKP1 with the protonophore CCCP served as a positive control ( bottom panel ) ."
