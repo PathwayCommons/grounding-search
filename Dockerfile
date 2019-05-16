@@ -3,11 +3,9 @@ FROM node:10.15.3
 
 # Allow user configuration of variable at build-time using --build-arg flag
 ARG NODE_ENV
-ARG ELASTICSEARCH_HOST 
 
 # Initialize env variables and override with build-time flag, if set 
 ENV NODE_ENV ${NODE_ENV:-production}
-ENV ELASTICSEARCH_HOST ${ELASTICSEARCH_HOST:-localhost:9200}
 
 # Create an unprivileged user w/ home directory
 RUN groupadd appuser \
