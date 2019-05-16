@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import elasticsearch from 'elasticsearch';
 import { INDEX, MAX_SEARCH_ES, ELASTICSEARCH_HOST, MAX_FUZZ_ES } from '../config';
+import { sanitizeNameForCmp } from '../util';
 
 const TYPE = 'entry';
 const NS_FIELD = 'namespace';
@@ -98,17 +99,27 @@ const db = {
             pattern: '(\\s|-|[0-9]|^)alpha(\\s|-|[0-9]|$)',
             replacement: '$1a$2'
           },
+          alpha_filter2: {
+            type: 'pattern_replace',
+            pattern: '(\\w)alpha',
+            replacement: '$1a'
+          },
           beta_filter: {
             type: 'pattern_replace',
             pattern: '(\\s|-|[0-9]|^)beta(\\s|-|[0-9]|$)',
             replacement: '$1b$2'
+          },
+          beta_filter2: {
+            type: 'pattern_replace',
+            pattern: '(\\w)beta',
+            replacement: '$1b'
           }
         },
         normalizer: {
           name_norm: {
             type: 'custom',
             filter: ['lowercase', 'asciifolding'],
-            char_filter: ['alpha_filter', 'beta_filter', 'name_word_filter']
+            char_filter: ['alpha_filter', 'alpha_filter2', 'beta_filter', 'beta_filter2', 'name_word_filter']
           }
         }
       }
