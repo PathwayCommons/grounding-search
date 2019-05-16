@@ -857,6 +857,7 @@
       },
       {
         "text": "FLS2",
+        "loose": true,
         "xref_id": "834676",
         "namespace": "ncbi",
         "sentence": null
@@ -1032,6 +1033,7 @@
       {
         "text": "p38",
         "xref_id": "81649",
+        "loose": true,
         "namespace": "ncbi",
         "sentence": null
       },
@@ -1068,6 +1070,7 @@
       {
         "text": "leptin",
         "xref_id": "25608",
+        "loose": true,
         "namespace": "ncbi",
         "sentence": null
       }
@@ -1165,7 +1168,8 @@
         "text": "TNFalpha",
         "xref_id": "405785",
         "namespace": "ncbi",
-        "sentence": null
+        "sentence": null,
+        "loose": true
       },
       {
         "text": "dlx2a",
