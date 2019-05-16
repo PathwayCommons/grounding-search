@@ -222,7 +222,7 @@ const db = {
 
     let query = {
       multi_match: {
-        query: searchString,
+        query: sanitizeNameForCmp(searchString),
         type: 'best_fields',
         fuzziness,
         fields: ['name', 'synonyms']
