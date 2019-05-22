@@ -1803,6 +1803,7 @@
   },
   {
    "id": "http://dx.doi.org/10.1016/j.molcel.2016.12.021",
+   "organismOrdering": [9606, 10090, 11320, 11588, 11191],
    "entities": [
     {
       "text": "RIG-I",
