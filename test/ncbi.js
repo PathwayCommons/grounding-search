@@ -6,13 +6,38 @@ import { ncbi } from './util/datasource';
 import { buildIndex } from './util/param';
 import { NCBI_FILE_NAME, INPUT_PATH  } from '../src/server/config';
 import { isSupportedOrganism } from '../src/server/datasource/organisms';
-import { nthStrNode } from '../src/server/util';
 
 const decoder = new StringDecoder('utf8');
 const ORG_INDEX = 0;
 const ID_INDEX = 1;
 const LINE_DELIMITER = '\n';
 const NODE_DELIMITER = '\t';
+
+/**
+ * Returns the nth node in str, where the nodes are splited by the delimiter,
+ * assuming that no adjacent occurance of the delimiter exists
+ * @param {string} str String to seek the nth node.
+ * @param {string} delimiter Delimiter that seperates the nodes.
+ * @param {number} n Index of node to seek.
+ */
+const nthStrNode = ( str, delimiter, n ) => {
+  let i = 0;
+  let start = 0;
+  while ( start != -1 && i < n ) {
+    start = str.indexOf( delimiter, start ) + 1;
+    i ++;
+  }
+
+  let end = str.indexOf( delimiter, start );
+
+  // if there is no more occurance of the delimiter go until the end of str
+  if ( end == -1 ) {
+    end = undefined;
+  }
+
+  let node = str.substring( start, end );
+  return node;
+};
 
 const getEntryLines = data => {
   let text = decoder.write( data );

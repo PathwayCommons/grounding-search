@@ -1,28 +1,12 @@
 /** @module server/util/strings */
-/**
- * Returns the nth node in str, where the nodes are splited by the delimiter,
- * assuming that no adjacent occurance of the delimiter exists
- * @param {string} str String to seek the nth node.
- * @param {string} delimiter Delimiter that seperates the nodes.
- * @param {number} n Index of node to seek.
- */
-const nthStrNode = ( str, delimiter, n ) => {
-  let i = 0;
-  let start = 0;
-  while ( start != -1 && i < n ) {
-    start = str.indexOf( delimiter, start ) + 1;
-    i ++;
-  }
 
-  let end = str.indexOf( delimiter, start );
-
-  // if there is no more occurance of the delimiter go until the end of str
-  if ( end == -1 ) {
-    end = undefined;
-  }
-
-  let node = str.substring( start, end );
-  return node;
+export const sanitizeNameForCmp = name => {
+  return ( name
+    .toLowerCase()
+    .replace(/(\s|-|[0-9]|^)alpha(\s|-|[0-9]|$)/g, '$1a$2')
+    .replace(/(\w)alpha/g, '$1a')
+    .replace(/(\s|-|[0-9]|^)beta(\s|-|[0-9]|$)/g, '$1b$2')
+    .replace(/(\w)beta/g, '$1b')
+    .replace(/[\s-]/g, '')
+  );
 };
-
-export { nthStrNode };

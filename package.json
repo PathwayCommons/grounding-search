@@ -35,7 +35,7 @@
     "index:uniprot": "node -r esm src/server/datasource/cli index uniprot",
     "index:chebi": "node -r esm src/server/datasource/cli index chebi",
     "index:ncbi": "node -r esm src/server/datasource/cli index ncbi",
-    "download": "run-s index:chebi update:ncbi",
+    "download": "run-s download:chebi download:ncbi",
     "download:uniprot": "node -r esm src/server/datasource/cli download uniprot",
     "download:chebi": "node -r esm src/server/datasource/cli download chebi",
     "download:ncbi": "node -r esm src/server/datasource/cli download ncbi",

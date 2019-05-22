@@ -49,7 +49,8 @@
      "text": "Rif1",
      "xref_id": "55183",
      "namespace": "ncbi",
-     "sentence": "The main determinant for HR mediated repair is resection of the DNA DSB end , which is controlled by a 53BP1 containing protein complex containing Rif1 , PTIP , and Rev7 ( Panier and Boulton , 2014 ) ."
+     "sentence": "The main determinant for HR mediated repair is resection of the DNA DSB end , which is controlled by a 53BP1 containing protein complex containing Rif1 , PTIP , and Rev7 ( Panier and Boulton , 2014 ) .",
+     "loose": true
     },
     {
      "text": "BRCA1",
@@ -108,6 +109,7 @@
     {
      "text": "nitrogen",
      "xref_id": "25555",
+     "loose": true,
      "namespace": "chebi",
      "sentence": "Dimethylation can occur asymmetrically ( ADMA ) , with two methyl groups placed onto one of the terminal nitrogen atoms of the guanidino group , or symmetrically ( SDMA ) , where one methyl group is placed onto each of the terminal nitrogen atoms ."
     },
@@ -162,6 +164,7 @@
     {
      "text": "KAP1",
      "xref_id": "10155",
+     "loose": true,
      "namespace": "ncbi",
      "sentence": "In contrast , activation of the ATM signaling cascade , determined by the phosphorylation of ATM and its downstream substrates CHK2 and KAP1 , was unaffected by PRMT5 depletion                     ."
     },
@@ -203,7 +206,7 @@
     },
     {
      "text": "4-OHT",
-     "xref_id": "41774",
+     "xref_id": "44616",
      "namespace": "chebi",
      "sentence": "In this system , treatment of control cells with 4-hydroxy-tamoxifen ( 4-OHT ) and the Shield-1 ligand induces DNA damage , as evident by a single 53BP1 focus , and an enrichment of H4K16 acetylation at break ends                       ( Shanbhag et al. , 2010 , Tang et al. , 2013 ) ."
     },
@@ -223,7 +226,8 @@
      "text": "hydrogen",
      "xref_id": "49637",
      "namespace": "chebi",
-     "sentence": "Indeed , while methylation does not change the overall charge of the residue , it does alter the availability of hydrogen donors and increases van der Waals interactive forces ( Liu et al. , 2010 , Yang et al. , 2010 ) ."
+     "sentence": "Indeed , while methylation does not change the overall charge of the residue , it does alter the availability of hydrogen donors and increases van der Waals interactive forces ( Liu et al. , 2010 , Yang et al. , 2010 ) .",
+     "loose": true
     },
     {
      "text": "TRRAP",
@@ -241,7 +245,7 @@
   },
   {
    "id": "http://dx.doi.org/10.1016/j.molcel.2016.12.018",
-   "organismOrdering": [4932],
+   "organismOrdering": [4932, 559292],
    "entities": [
     {
       "text": "CDK2",
@@ -358,8 +362,9 @@
       "sentence": "The broad control that mTORC1 exerts over metabolism has been largely attributed to the regulation of a small number of transcription factors , including c-Myc , Srebp1/2 , Hif-1alpha , Atf4 , and Tfeb , although in most cases the molecular mechanisms remain unclear ( Laplante and Sabatini , 2013 , Ben-Sahra and Manning , 2017 ) ."
      },
      {
-      "text": "sugar",
+      "text": "glucose",
       "xref_id": "4167",
+      "loose": true,
       "namespace": "chebi",
       "sentence": "Consistent with the results attained with this platform , we also observed that Foxk1 knockdown significantly and specifically reduced glucose uptake in these cells            , which resides at the apex of sugar metabolism , thus supporting a significant role of Foxk1 as a critical regulator of glucose metabolism ."
      },
@@ -601,7 +606,8 @@
       "text": "Rif1",
       "xref_id": "55183",
       "namespace": "ncbi",
-      "sentence": "The main determinant for HR mediated repair is resection of the DNA DSB end , which is controlled by a 53BP1 containing protein complex containing Rif1 , PTIP , and Rev7 ( Panier and Boulton , 2014 ) ."
+      "sentence": "The main determinant for HR mediated repair is resection of the DNA DSB end , which is controlled by a 53BP1 containing protein complex containing Rif1 , PTIP , and Rev7 ( Panier and Boulton , 2014 ) .",
+      "loose": true
      },
      {
       "text": "PTIP",
@@ -691,6 +697,7 @@
      {
       "text": "nitrogen",
       "xref_id": "25555",
+      "loose": true,
       "namespace": "chebi",
       "sentence": "Dimethylation can occur asymmetrically ( ADMA ) , with two methyl groups placed onto one of the terminal nitrogen atoms of the guanidino group , or symmetrically ( SDMA ) , where one methyl group is placed onto each of the terminal nitrogen atoms ."
      },
@@ -812,7 +819,8 @@
       "text": "hydrogen",
       "xref_id": "49637",
       "namespace": "chebi",
-      "sentence": "Indeed , while methylation does not change the overall charge of the residue , it does alter the availability of hydrogen donors and increases van der Waals interactive forces ( Liu et al. , 2010 , Yang et al. , 2010 ) ."
+      "sentence": "Indeed , while methylation does not change the overall charge of the residue , it does alter the availability of hydrogen donors and increases van der Waals interactive forces ( Liu et al. , 2010 , Yang et al. , 2010 ) .",
+      "loose": true
      },
      {
       "text": "TRRAP",
@@ -1151,7 +1159,7 @@
       "sentence": "Surprisingly , we found that Foxk1 migration on SDS-PAGE in Tsc2-/- MEFs was dramatically decreased by rapamycin treatment within 30 min and was sustained for up to 24 hr            ."
      },
      {
-      "text": "calcium",
+      "text": "Ca2+",
       "xref_id": "29108",
       "namespace": "chebi",
       "sentence": "Both calcium ( Ca2+ ) flux and Ca2 +-dependent signaling play a crucial role in this process , although the underlying mechanism has yet to be elucidated ."
@@ -1159,6 +1167,7 @@
      {
       "text": "CaM",
       "xref_id": "801",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "DAPK1 is a 160-kDa Ca2 +-/calmodulin ( CaM )-dependent serine/threonine kinase , comprised of an N-terminal kinase domain followed by a regulatory CaM binding domain , eight Ankyrin repeats , a cytoskeleton associating ROC-COR domain and a C-terminal death domain ( schematic in Figure 4A , interaction network in Figure S1B ) ( Carlessi et al. , 2011 ) ."
      },
@@ -1182,7 +1191,7 @@
      },
      {
       "text": "Snail3",
-      "xref_id": " 333929",
+      "xref_id": "333929",
       "namespace": "ncbi",
       "sentence": "Five among the 96 TFs were activated more than 1.8-fold when cells were cultured under detached conditions , including PLAG1 , SATB1 , and Snail3            ."
      },
@@ -1256,8 +1265,9 @@
       "text": "ARD1",
       "xref_id": "8260",
       "namespace": "ncbi",
-      "sentence": "Here , we demonstrate that glutamine deprivation and hypoxia result in inhibition of mTOR mediated acetyl-transferase ARD1 S228 phosphorylation , leading to ARD1 dependent phosphoglycerate kinase 1 ( PGK1 ) K388 acetylation and subsequent PGK1 mediated Beclin1 S30 phosphorylation ."
-     },
+      "sentence": "Here , we demonstrate that glutamine deprivation and hypoxia result in inhibition of mTOR mediated acetyl-transferase ARD1 S228 phosphorylation , leading to ARD1 dependent phosphoglycerate kinase 1 ( PGK1 ) K388 acetylation and subsequent PGK1 mediated Beclin1 S30 phosphorylation .",
+      "loose": true
+    },
      {
       "text": "VPS34",
       "xref_id": "5289",
@@ -1339,6 +1349,7 @@
      {
       "text": "3-phosphoglycerate",
       "xref_id": "17794",
+      "loose": true,
       "namespace": "chebi",
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
@@ -1459,6 +1470,7 @@
      {
       "text": "AtCIPK3",
       "xref_id": "817240",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "Other protein kinases , including the mitogen activated protein kinase kinase 2 ( MKK2 ) and CBL interacting protein kinase 3 ( AtCIPK3 ) , have been implicated in plant cold responses ( Kim et al. , 2003 , Teige et al. , 2004 ) ."
      },
@@ -1549,6 +1561,7 @@
      {
       "text": "ARD1",
       "xref_id": "8260",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "Here , we demonstrate that glutamine deprivation and hypoxia result in inhibition of mTOR mediated acetyl-transferase ARD1 S228 phosphorylation , leading to ARD1 dependent phosphoglycerate kinase 1 ( PGK1 ) K388 acetylation and subsequent PGK1 mediated Beclin1 S30 phosphorylation ."
      },
@@ -1628,11 +1641,13 @@
       "text": "phosphate",
       "xref_id": "18367",
       "namespace": "chebi",
-      "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) ."
-     },
+      "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) .",
+      "loose": true
+    },
      {
       "text": "3-phosphoglycerate",
       "xref_id": "17794",
+      "loose": true,
       "namespace": "chebi",
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
@@ -1705,7 +1720,7 @@
       {
         "text": "p19Arf",
         "xref_id": "1029",
-        "namespace": "uniprot",
+        "namespace": "ncbi",
         "sentence": "This biphasic pattern was also reflected in other nodes in immediate network including the miR-17-92 micro RNA cluster and p19Arf ."
       },
       {
@@ -1729,12 +1744,13 @@
       {
         "text": "p130",
         "xref_id": "5934",
+        "loose": true,
         "namespace": "ncbi",
         "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
       },
       {
         "text": "RB",
-        "xref_id": " 5925",
+        "xref_id": "5925",
         "namespace": "ncbi",
         "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
       },
@@ -1867,7 +1883,7 @@
      },
      {
       "text": "AAK1",
-      "xref_id": "Q2M2I8",
+      "xref_id": "22848",
       "namespace": "ncbi",
       "sentence": "Twenty-one identified hits ( AAK1 was excluded for technical reasons ) were further characterized with respect to their effect on RIG-I-mediated IRF3 activation upon knockdown or overexpression in 293TRIG-I cells ."
      },
@@ -1892,12 +1908,14 @@
      {
       "text": "IFNlambda",
       "xref_id": "282618",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "For WT and S8E , we observed robust induction of IFIT1 protein and secretion of IFNlambda upon FLUAV infection , whereas phosphomimetics of the cluster I residues , including the individual T667E mutation , almost completely abrogated IFIT1 and IFNlambda induction                    ."
      },
      {
       "text": "inositol",
       "xref_id": "17268",
+      "loose": true,
       "namespace": "chebi",
       "sentence": "The Krishnan screen revealed a functionally important role of inositol pyrophosphates in the induction of type I IFN ."
      },
@@ -1956,7 +1974,8 @@
       "sentence": "One such functional module is glucose metabolism ( Data S2 , cluster 17 ) : out of four kinase activities required for core glycolysis , isoforms of three were identified as hit candidates in our screen ( HK2 , PKLR , and PFKL ) ."
      },
      {
-      "text": "DAKP1",
+      "text": "DAPK1",
+      "note": "typo in paper text",
       "xref_id": "1612",
       "namespace": "ncbi",
       "sentence": "Activation of DAKP1 with the protonophore CCCP served as a positive control ( bottom panel ) ."
@@ -1988,7 +2007,7 @@
      {
       "text": "p19Arf",
       "xref_id": "1029",
-      "namespace": "uniprot",
+      "namespace": "ncbi",
       "sentence": "This biphasic pattern was also reflected in other nodes in immediate network including the miR-17-92 micro RNA cluster and p19Arf ."
      },
      {
@@ -2012,12 +2031,13 @@
      {
       "text": "p130",
       "xref_id": "5934",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
      },
      {
       "text": "RB",
-      "xref_id": " 5925",
+      "xref_id": "5925",
       "namespace": "ncbi",
       "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
      },
@@ -2175,12 +2195,14 @@
      {
       "text": "JUNB",
       "xref_id": "3726",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "A recent report has shown that lincRNA-p21 can bind JUNB and CTNNB1 mRNAs and suppress their translation ( Yoon et al. , 2012 ) ."
      },
      {
       "text": "miR-130",
       "xref_id": "406919",
+      "loose": true,
       "namespace": "ncbi",
       "sentence": "In addition to lncRNAs , several hypoxia and HIF-1alpha-induced miRNAs , such as miR-130 and miR-155 , have recently been shown to inhibit HIF-1alpha expression by targeting its 3 ' UTR or hampering its translation , thereby forming a negative feedback loop to control hypoxia response ( Bruning et al. , 2011 , Saito et al. , 2011 ) ."
      },

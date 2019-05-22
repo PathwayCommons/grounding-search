@@ -4,7 +4,8 @@
       {
         "namespace": "chebi",
         "xref_id": "15378",
-        "text": "hydrogen"
+        "text": "hydrogen",
+        "loose": 8
       },
       {
         "namespace": "chebi",
@@ -29,7 +30,8 @@
       {
         "namespace": "chebi",
         "xref_id": "37565",
-        "text": "GTP"
+        "text": "GTP",
+        "loose": true
       },
       {
         "namespace": "chebi",
@@ -49,22 +51,26 @@
       {
         "namespace": "chebi",
         "xref_id": "18009",
-        "text": "NADP"
+        "text": "NADP",
+        "loose": true
       },
       {
         "namespace": "chebi",
         "xref_id": "35780",
-        "text": "phosphate"
+        "text": "phosphate",
+        "loose": 5
       },
       {
         "namespace": "chebi",
         "xref_id": "15846",
-        "text": "NAD"
+        "text": "NAD",
+        "loose": true
       },
       {
         "namespace": "chebi",
         "xref_id": "18367",
-        "text": "phosphate"
+        "text": "phosphate",
+        "loose": 5
       },
       {
         "namespace": "chebi",
@@ -73,7 +79,7 @@
       },
       {
         "namespace": "chebi",
-        "xref_id": "58349",
+        "xref_id": "18009",
         "text": "NADP(+)"
       },
       {
@@ -88,7 +94,7 @@
       },
       {
         "namespace": "chebi",
-        "xref_id": "57540",
+        "xref_id": "15846",
         "text": "NAD(+)"
       },
       {
@@ -99,7 +105,8 @@
       {
         "namespace": "chebi",
         "xref_id": "57783",
-        "text": "NADPH"
+        "text": "NADPH",
+        "loose": true
       },
       {
         "namespace": "chebi",
@@ -114,22 +121,26 @@
       {
         "namespace": "chebi",
         "xref_id": "58307",
-        "text": "FADH2"
+        "text": "FADH2",
+        "loose": true
       },
       {
         "namespace": "chebi",
         "xref_id": "17877",
-        "text": "FADH2"
+        "text": "FADH2",
+        "loose": true
       },
       {
         "namespace": "chebi",
         "xref_id": "456216",
+        "loose": 5,
         "text": "ADP"
       },
       {
         "namespace": "chebi",
         "xref_id": "26078",
-        "text":"Phosphate"
+        "text":"Phosphate",
+        "loose": 5
       }
     ]
   }
