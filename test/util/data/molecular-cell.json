@@ -241,6 +241,7 @@
   },
   {
    "id": "http://dx.doi.org/10.1016/j.molcel.2016.12.018",
+   "organismOrdering": [4932],
    "entities": [
     {
       "text": "CDK2",
