@@ -2231,5 +2231,126 @@
       "sentence": "( H ) GST-VHL proteins bound with glutathione agarose beads were incubated with purified recombinant Flag-HIF-1alpha in the presence or absence of in vitro transcribed lincRNA-p21 for 3 hr ."
      }
    ]
-  }
+  },
+  {
+    "id": "https://doi.org/10.1016/j.molcel.2019.03.023",
+    "organismOrdering": [10090],
+    "entities": [
+     {
+      "text": "ANKRD31", 
+      "namespace": "ncbi", 
+      "xref_id": "625662", 
+      "sentence": "REC114 Partner ANKRD31 Controls Number , Timing , and Location of Meiotic DNA Breaks  Michiel Boekhout , Mehmet E. Karasu , Juncheng Wang , Laurent Acquaviva , Florencia Pratto , Kevin Brick , Diana Y. Eng , Jiaqi Xu , R. Daniel Camerini-Otero , Dinshaw J. Patel , Scott Keeney  DOI : https://doi.org/10.1016/j.molcel.2019.03.023  Summary Double-strand breaks ( DSBs ) initiate the homologous recombination that is crucial for meiotic chromosome pairing and segregation ."
+     }, 
+     {
+      "text": "REC114", 
+      "namespace": "ncbi", 
+      "xref_id": "73673", 
+      "sentence": "REC114 Partner ANKRD31 Controls Number , Timing , and Location of Meiotic DNA Breaks  Michiel Boekhout , Mehmet E. Karasu , Juncheng Wang , Laurent Acquaviva , Florencia Pratto , Kevin Brick , Diana Y. Eng , Jiaqi Xu , R. Daniel Camerini-Otero , Dinshaw J. Patel , Scott Keeney  DOI : https://doi.org/10.1016/j.molcel.2019.03.023  Summary Double-strand breaks ( DSBs ) initiate the homologous recombination that is crucial for meiotic chromosome pairing and segregation ."
+     }, 
+     {
+      "text": "MEI4", 
+      "namespace": "ncbi", 
+      "xref_id": "75033", 
+      "sentence": "Results  ANKRD31 Is a Meiosis Specific REC114 Interactor We used mouse REC114 and MEI4 as baits in a yeast two-hybrid screen with a cDNA library from juvenile mouse testes ."
+     }, 
+     {
+      "text": "SYCP3", 
+      "namespace": "ncbi", 
+      "xref_id": "20962", 
+      "sentence": "Early in prophase I , aligned sister chromatids begin to form a synaptonemal complex protein 3 ( SYCP3 )-containing protein axis from which chromatin loops emanate ( leptonema ) ."
+     }, 
+     {
+      "text": "IHO1", 
+      "namespace": "ncbi", 
+      "xref_id": "434438", 
+      "sentence": "ANKRD31 also colocalizes with MEI4 , MEI1 , and IHO1 ( Acquaviva et al. , 2019 ) ."
+     }, 
+     {
+      "text": "MEI1", 
+      "namespace": "ncbi", 
+      "xref_id": "74369", 
+      "sentence": "ANKRD31 also colocalizes with MEI4 , MEI1 , and IHO1 ( Acquaviva et al. , 2019 ) ."
+     }, 
+     {
+      "text": "SYCP1", 
+      "namespace": "ncbi", 
+      "xref_id": "20957", 
+      "sentence": "We tracked synapsis by immunostaining for SYCP3 and the SC central region protein SYCP1 ( de Vries et al. , 2005 ) ."
+     }, 
+     {
+      "text": "DMC1", 
+      "namespace": "ncbi", 
+      "xref_id": "13404", 
+      "sentence": "To assess recombination , we immunostained chromosomes for RAD51 and DMC1                              ."
+     }, 
+     {
+      "text": "RAD51", 
+      "namespace": "ncbi", 
+      "xref_id": "19361", 
+      "sentence": "To assess recombination , we immunostained chromosomes for RAD51 and DMC1                              ."
+     }, 
+     {
+      "text": "RPA", 
+      "namespace": null, 
+      "xref_id": null, 
+      "sentence": "Earlier-stage cells also had fewer foci of the single stranded DNA ( ssDNA )-binding replication protein A ( RPA )                     ."
+     }, 
+     {
+      "text": "histone H2AX", 
+      "namespace": "ncbi", 
+      "xref_id": "15270", 
+      "sentence": "We also examined the phosphorylation of histone H2AX ( gammaH2AX ) , which is formed rapidly by ATM in response to DSBs and then disappears progressively as recombination proceeds until it is largely gone from autosomes in pachynema             ( Mahadevaiah et al. , 2001 , Barchi et al. , 2005 ) ."
+     }, 
+     {
+      "text": "gammaH2AX", 
+      "namespace": "ncbi", 
+      "xref_id": "15270", 
+      "sentence": "We also examined the phosphorylation of histone H2AX ( gammaH2AX ) , which is formed rapidly by ATM in response to DSBs and then disappears progressively as recombination proceeds until it is largely gone from autosomes in pachynema             ( Mahadevaiah et al. , 2001 , Barchi et al. , 2005 ) ."
+     }, 
+     {
+      "text": "ATM", 
+      "namespace": "ncbi", 
+      "xref_id": "11920", 
+      "sentence": "We also examined the phosphorylation of histone H2AX ( gammaH2AX ) , which is formed rapidly by ATM in response to DSBs and then disappears progressively as recombination proceeds until it is largely gone from autosomes in pachynema             ( Mahadevaiah et al. , 2001 , Barchi et al. , 2005 ) ."
+     }, 
+     {
+      "text": "MLH1", 
+      "namespace": "ncbi", 
+      "xref_id": "17350", 
+      "sentence": "By comparison , autosomes showed only a modest defect : pachytene cells with complete autosome synapsis had a small increase in the number of MLH1 foci ( means of 23.7 in wild type and 24.8 in Ankrd31-/-; Figure 4E ) ."
+     }, 
+     {
+      "text": "PRDM9", 
+      "namespace": "ncbi", 
+      "xref_id": "213389", 
+      "sentence": "PAR DSBs are largely independent of PRDM9 ( Brick et al. , 2012 )             and have other requirements that are distinct from autosomes ( Kauppi et al. , 2011 , Smagulova et al. , 2013 ) , so a PAR defect does not predict that SPO11 targeting to PRDM9 sites would be affected ."
+     }, 
+     {
+      "text": "SPO11", 
+      "namespace": "ncbi", 
+      "xref_id": "26972", 
+      "sentence": "PAR DSBs are largely independent of PRDM9 ( Brick et al. , 2012 )             and have other requirements that are distinct from autosomes ( Kauppi et al. , 2011 , Smagulova et al. , 2013 ) , so a PAR defect does not predict that SPO11 targeting to PRDM9 sites would be affected ."
+     },
+     {
+      "text": "CARM1", 
+      "namespace": "ncbi", 
+      "xref_id": "59035", 
+      "sentence": "A structural homology search revealed that REC114N is similar to the N-terminal domain of coactivator associated methyltransferase 1 ( CARM1 ) ( Troffer-Charlier et al. , 2007 ) , which belongs to the PH domain superfamily ."
+     },
+     {
+      "text": "ammonium", 
+      "namespace": "chebi", 
+      "xref_id": "28938", 
+      "sentence": "The aromatic ring of W1857 also forms a cation-pi interaction by packing against the ammonium group of R117 and the aromatic side chain of invariant W51 from REC114N ."
+     }, 
+     {
+      "text": "hematoxylin", 
+      "namespace": "chebi", 
+      "xref_id": "51686", 
+      "sentence": "Images show adult ( 4 months ) testis sections stained with TUNEL and hematoxylin ."
+     }
+    ]
+   }
+
  ]
