@@ -2788,5 +2788,125 @@
         "sentence":"Interestingly , we found that induction of [ Ca2+ ] i by the calcium ionophore A23187 ( causing influx of extracellular Ca2+ ) or the SERCA inhibitor thapsigargin ( causing Ca2+ release from intracellular stores ) also resulted in Exo1 S746 phosphorylation and increased 14-3-3 s binding                      ( Nickless et al. , 2014 ) ."
       }
     ]
+  },
+  {
+    "id":"https://doi.org/10.1016/j.molcel.2019.04.005",
+    "organismOrdering": [9606],
+    "entities":[
+      {
+        "text":"PD-L1",
+        "xref_id":"29126",
+        "namespace":"ncbi",
+        "sentence":"PD-L1 ( B7-H1 ) Competes with the RNA Exosome to Regulate the DNA Damage Response and Can Be Targeted to Sensitize to Radiation or Chemotherapy  Xinyi Tu , Bo Qin , Yong Zhang , Cheng Zhang , Mohamed Kahila , Somaira Nowsheen , Ping Yin , Jian Yuan , Huadong Pei , Hu Li , Jia Yu , Zhiwang Song , Qin Zhou , Fei Zhao , Jiaqi Liu , Chao Zhang , Haidong Dong , Robert W. Mutter , Zhenkun Lou  DOI : https://doi.org/10.1016/j.molcel.2019.04.005  Summary Programmed death ligand 1 ( PD-L1 , also called B7-H1 ) is an immune checkpoint protein that inhibits immune function through its binding of the programmed cell death protein 1 ( PD-1 ) receptor ."
+      },
+      {
+        "text":"programmed cell death protein 1",
+        "xref_id":"5133",
+        "namespace":"ncbi",
+        "sentence":"PD-L1 ( B7-H1 ) Competes with the RNA Exosome to Regulate the DNA Damage Response and Can Be Targeted to Sensitize to Radiation or Chemotherapy  Xinyi Tu , Bo Qin , Yong Zhang , Cheng Zhang , Mohamed Kahila , Somaira Nowsheen , Ping Yin , Jian Yuan , Huadong Pei , Hu Li , Jia Yu , Zhiwang Song , Qin Zhou , Fei Zhao , Jiaqi Liu , Chao Zhang , Haidong Dong , Robert W. Mutter , Zhenkun Lou  DOI : https://doi.org/10.1016/j.molcel.2019.04.005  Summary Programmed death ligand 1 ( PD-L1 , also called B7-H1 ) is an immune checkpoint protein that inhibits immune function through its binding of the programmed cell death protein 1 ( PD-1 ) receptor ."
+      },
+      {
+        "text":"PD-1",
+        "xref_id":"5133",
+        "namespace":"ncbi",
+        "sentence":"PD-L1 ( B7-H1 ) Competes with the RNA Exosome to Regulate the DNA Damage Response and Can Be Targeted to Sensitize to Radiation or Chemotherapy  Xinyi Tu , Bo Qin , Yong Zhang , Cheng Zhang , Mohamed Kahila , Somaira Nowsheen , Ping Yin , Jian Yuan , Huadong Pei , Hu Li , Jia Yu , Zhiwang Song , Qin Zhou , Fei Zhao , Jiaqi Liu , Chao Zhang , Haidong Dong , Robert W. Mutter , Zhenkun Lou  DOI : https://doi.org/10.1016/j.molcel.2019.04.005  Summary Programmed death ligand 1 ( PD-L1 , also called B7-H1 ) is an immune checkpoint protein that inhibits immune function through its binding of the programmed cell death protein 1 ( PD-1 ) receptor ."
+      },
+      {
+        "text":"NBS1",
+        "xref_id":"4683",
+        "namespace":"ncbi",
+        "sentence":"Here , we discovered that intracellular PD-L1 acts as an RNA binding protein that regulates the mRNA stability of NBS1 , BRCA1 , and other DNA damage related genes ."
+      },
+      {
+        "text":"CMTM6",
+        "xref_id":"54918",
+        "namespace":"ncbi",
+        "sentence":"Furthermore , we developed a PD-L1 antibody , H1A , which abrogates the interaction of PD-L1 with CMTM6 , thereby promoting PD-L1 degradation ."
+      },
+      {
+        "text":"cisplatin",
+        "xref_id":"27899",
+        "namespace":"chebi",
+        "sentence":"Results  Knockdown of PD-L1 Sensitizes Cancer to Radiotherapy To examine the function of PD-L1 in response to cancer therapy independent of its role in immune cell regulation , we knocked down PD-L1 using two separate small hairpin RNAs ( shRNAs ) in the HCT116 colorectal carcinoma and MDA-MB-231 breast cancer cell lines and assessed it for sensitivity to chemotherapy ( cisplatin ) and ionizing radiation ( IR ) in vitro ."
+      },
+      {
+        "text":"MG132",
+        "xref_id":"75142",
+        "namespace":"chebi",
+        "sentence":"We treated control and PD-L1 depleted MDA-MB-231 cells with the proteasome inhibitor MG132 ."
+      },
+      {
+        "text":"biotin",
+        "xref_id":"15956",
+        "namespace":"chebi",
+        "sentence":"We performed the RNA pull-down assay using in vitro biotin labeling of the 3 ' UTR of NBS1 RNAs ."
+      },
+      {
+        "text":"EXOSC10",
+        "xref_id":"5394",
+        "namespace":"ncbi",
+        "sentence":"EXOSC10 , which harbors 3 '-5' exoribonuclease activity , is an important catalytic component of the RNA exosome ( Lejeune et al. , 2003 , Tomecki et al. , 2010 , van Dijk et al. , 2007 ) ."
+      },
+      {
+        "text":"actinomycin D",
+        "xref_id":"27666",
+        "namespace":"chebi",
+        "sentence":"To rule out the possibility that actinomycin D itself could be affecting BRCA1 and NBS1 mRNA stability , we also measured RNA stability using the 5-ethynyluridine ( EU ) labeling and releasing method ."
+      },
+      {
+        "text":"EXOSC4",
+        "xref_id":"54512",
+        "namespace":"ncbi",
+        "sentence":"To further elucidate the role of the RNA exosome in the RNA stabilizing function of PD-L1 , we evaluated the impact of EXOSC4 , an essential component of the core of the exosome , on PD-L1 target RNAs ."
+      },
+      {
+        "text":"FANCL",
+        "xref_id":"55120",
+        "namespace":"ncbi",
+        "sentence":"As predicted by the sequencing data , the mRNA levels of ATM , POLQ , and FANCL were decreased to an extent similar to that of BRCA1 mRNA under PD-L1 knockdown conditions            ."
+      },
+      {
+        "text":"POLQ",
+        "xref_id":"10721",
+        "namespace":"ncbi",
+        "sentence":"As predicted by the sequencing data , the mRNA levels of ATM , POLQ , and FANCL were decreased to an extent similar to that of BRCA1 mRNA under PD-L1 knockdown conditions            ."
+      },
+      {
+        "text":"ATM",
+        "xref_id":"472",
+        "namespace":"ncbi",
+        "sentence":"As predicted by the sequencing data , the mRNA levels of ATM , POLQ , and FANCL were decreased to an extent similar to that of BRCA1 mRNA under PD-L1 knockdown conditions            ."
+      },
+      {
+        "text":"atezolizumab",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"The clinically available PD-L1 antibodies durvalumab and atezolizumab bind PD-L1 extracellularly , abrogating the PD-L1 and PD-1 checkpoint ."
+      },
+      {
+        "text":"chloroquine",
+        "xref_id":"3638",
+        "namespace":"chebi",
+        "sentence":"Therefore , to investigate the mechanism of how H1A was regulating PD-L1 levels , we first treated MDA-MB-231 cells with the lysosomal inhibitor chloroquine ."
+      },
+      {
+        "text":"MRE11",
+        "xref_id":"4361",
+        "namespace":"ncbi",
+        "sentence":"Figure 2 PD-L1 Binds and Stabilizes NBS1 and BRCA1 mRNA Hide caption ( A ) Western blot analysis of BRCA1 , NBS1 , RAD50 , MRE11 , and PD-L1 in MDA-MB-231 cells infected with lentiviruses encoding control shRNA or two different shRNAs targeting PD-L1 ."
+      },
+      {
+        "text":"RAD50",
+        "xref_id":"10111",
+        "namespace":"ncbi",
+        "sentence":"Figure 2 PD-L1 Binds and Stabilizes NBS1 and BRCA1 mRNA Hide caption ( A ) Western blot analysis of BRCA1 , NBS1 , RAD50 , MRE11 , and PD-L1 in MDA-MB-231 cells infected with lentiviruses encoding control shRNA or two different shRNAs targeting PD-L1 ."
+      },
+      {
+        "text":"DAPI",
+        "xref_id":"51231",
+        "namespace":"chebi",
+        "sentence":"PD-L1 was labeled with GFP , and the nucleus was labeled with DAPI ."
+      }
+    ]
   }
  ]
