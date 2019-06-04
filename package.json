@@ -28,6 +28,7 @@
     "benchmark:chebi": "node -r esm benchmark/chebi",
     "benchmark:ncbi": "node -r esm benchmark/ncbi",
     "update": "run-s update:chebi update:ncbi",
+    "update-start": "run-s update start",
     "update:uniprot": "node -r esm src/server/datasource/cli update uniprot",
     "update:chebi": "node -r esm src/server/datasource/cli update chebi",
     "update:ncbi": "node -r esm src/server/datasource/cli update ncbi",
