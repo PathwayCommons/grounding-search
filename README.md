@@ -43,6 +43,7 @@ The following environment variables can be used to configure the server:
 - `npm start` : start the server
 - `npm stop` : stop the server
 - `npm run watch` : watch mode (debug mode enabled, autoreload)
+- `npm run refresh` : run clear, update, then start
 - `npm test` : run tests for read only methods (e.g. search and get) assuming that data is already existing
 - `npm test:sample` : run tests with sample data
 - `npm run lint` : lint the project
