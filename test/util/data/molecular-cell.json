@@ -2704,5 +2704,89 @@
         "sentence":"( C ) Cell survival of ND1 and ND6 cells pretreated for 72 h with DMSO or tunicamycin in glucose and then cultured in galactose media for an additional 72 h. ( D ) SC levels of ND1 and ND6 mutant cybrid cells treated for 72 h with CCT020312 ."
       }
     ]
+  },
+  {
+    "id":"https://doi.org/10.1016/j.molcel.2019.04.003",
+    "organismOrdering": [9606],
+    "entities":[
+      {
+        "text":"Exo1",
+        "xref_id":"9156",
+        "namespace":"ncbi",
+        "sentence":"Ca2 +-Stimulated AMPK Dependent Phosphorylation of Exo1 Protects Stressed Replication Forks from Aberrant Resection  Shan Li , Zeno Lavagnino , Delphine Lemacon , Lingzhen Kong , Alessandro Ustione , Xuewen Ng , Yuanya Zhang , Yingchun Wang , Bin Zheng , Helen Piwnica-Worms , Alessandro Vindigni , David W. Piston , Zhongsheng You  DOI : https://doi.org/10.1016/j.molcel.2019.04.003  Summary Abnormal processing of stressed replication forks by nucleases can cause fork collapse , genomic instability , and cell death ."
+      },
+      {
+        "text":"RPA2",
+        "xref_id":"6118",
+        "namespace":"ncbi",
+        "sentence":"We then assessed the levels of fork resection in these cells after HU treatment by western blot to detect S4/8 phosphorylation of the RPA2 subunit of RPA , a marker of fork resection ( Higgs et al. , 2015 , Sartori et al. , 2007 ) ."
+      },
+      {
+        "text":"RPA",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"We then assessed the levels of fork resection in these cells after HU treatment by western blot to detect S4/8 phosphorylation of the RPA2 subunit of RPA , a marker of fork resection ( Higgs et al. , 2015 , Sartori et al. , 2007 ) ."
+      },
+      {
+        "text":"thymidine",
+        "xref_id":"17748",
+        "namespace":"chebi",
+        "sentence":"In addition , we performed a single-molecule DNA fiber analysis to detect the resection of nascent DNA at replication forks in the cells that were pulse labeled sequentially with thymidine analogs IdU ( red ) and CIdU ( green ) followed by HU treatment ( Buisson et al. , 2015 , Higgs et al. , 2015 , Lemacon et al. , 2017 ) ."
+      },
+      {
+        "text":"14-3-3eta",
+        "xref_id":"7533",
+        "namespace":"ncbi",
+        "sentence":"By examining the association of 14-3-3eta with additional Exo1 truncation mutants in cells through co-immunoprecipitation , we further narrowed down the region in Exo1 essential for 14-3-3 binding to aa 701-750             ."
+      },
+      {
+        "text":"aphidicolin",
+        "xref_id":"2766",
+        "namespace":"chebi",
+        "sentence":"HU or aphidicolin ( APH ) treatment also induced S746 phosphorylation of ectopically expressed Exo1-GFP                     ."
+      },
+      {
+        "text":"BrdU",
+        "xref_id":"472552",
+        "namespace":"chebi",
+        "sentence":"In addition to RPA2 phosphorylation and DNA fiber analyses , we performed native bromodeoxyuridine ( BrdU ) immunofluorescence ( IF ) to assess fork resection where incorporated BrdU was detected specifically in single stranded DNA ( ssDNA ) by IF staining under a nondenaturing condition ( Buisson et al. , 2015 , Higgs et al. , 2015 , Sartori et al. , 2007 ) ."
+      },
+      {
+        "text":"Chk1",
+        "xref_id":"1111",
+        "namespace":"ncbi",
+        "sentence":"AMPK and Chk1 Phosphorylate Exo1 at S746 in Response to Replication Stress We next sought to identify the protein kinase ( s ) that phosphorylate Exo1 at S746 upon replication stress ."
+      },
+      {
+        "text":"AMPK1",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"Indeed , purified recombinant AMPK1 complex ( alpha1/beta1/gamma1 ) and Chk1 protein were both capable of phosphorylating Exo1 at S746 in vitro                ."
+      },
+      {
+        "text":"AMPKalpha2",
+        "xref_id":"5563",
+        "namespace":"ncbi",
+        "sentence":"Importantly , the aberrant fork resection phenotype observed in AMPKalpha-KO cells could be rescued by ectopic expression of Flag tagged AMPKalpha1 or AMPKalpha2                      ."
+      },
+      {
+        "text":"CaM",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"Replication Stress Induces an Elevated Level of [ Ca2+ ] i , which Is Both Necessary and Sufficient to Trigger AMPK Activation and Exo1 Phosphorylation Because CaMKK2 is activated by Ca2 +-bound CaM ( Marcelo et al. , 2016 ) , we speculated that replication stress induces an increase in [ Ca2+ ] i concentration , which in turn triggers the activation of the downstream CaMKK2-AMPK-Exo1 pathway for fork protection ."
+      },
+      {
+        "text":"DNA polymerase delta",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"Furthermore , replication stress caused by siRNA mediated partial knockdown of a subunit of DNA polymerase delta also elevated [ Ca2+ ] i             ."
+      },
+      {
+        "text":"thapsigargin",
+        "xref_id":"9516",
+        "namespace":"chebi",
+        "sentence":"Interestingly , we found that induction of [ Ca2+ ] i by the calcium ionophore A23187 ( causing influx of extracellular Ca2+ ) or the SERCA inhibitor thapsigargin ( causing Ca2+ release from intracellular stores ) also resulted in Exo1 S746 phosphorylation and increased 14-3-3 s binding                      ( Nickless et al. , 2014 ) ."
+      }
+    ]
   }
  ]
