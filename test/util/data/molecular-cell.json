@@ -540,13 +540,14 @@
   },
   {
    "id": "http://dx.doi.org/10.1016/j.molcel.2016.11.034",
-   "organismOrdering": [10090, 9606],
+   "organismOrdering": [9606, 10090],
    "entities": [
     {
       "text": "p65",
       "xref_id": "5970",
       "namespace": "ncbi",
-      "sentence": "Molecular Cell VOLUME 65 , ISSUE 1 , P154-167 , JANUARY 05 , 2017  Ji-Hak Jeong , Sun-Jin Park Shohreh Iravani Dickinson , Jun-Li Luo ( jlluo@scripps.edu ) A Constitutive Intrinsic Inflammatory Signaling Circuit Composed of miR-196b , Meis2 , PPP3CC , and p65 Drives Prostate Cancer Castration Resistance  Androgen deprivation therapy is the most effective treatment for advanced prostate cancer , but almost all cancer eventually becomes castration resistant , and the underlying mechanisms are largely unknown ."
+      "sentence": "Molecular Cell VOLUME 65 , ISSUE 1 , P154-167 , JANUARY 05 , 2017  Ji-Hak Jeong , Sun-Jin Park Shohreh Iravani Dickinson , Jun-Li Luo ( jlluo@scripps.edu ) A Constitutive Intrinsic Inflammatory Signaling Circuit Composed of miR-196b , Meis2 , PPP3CC , and p65 Drives Prostate Cancer Castration Resistance  Androgen deprivation therapy is the most effective treatment for advanced prostate cancer , but almost all cancer eventually becomes castration resistant , and the underlying mechanisms are largely unknown .",
+      "loose": true
      },
      {
       "text": "IKKbeta",
@@ -666,7 +667,7 @@
      },
      {
       "text": "RNF8",
-      "xref_id": " 9025",
+      "xref_id": "9025",
       "namespace": "ncbi",
       "sentence": "DSB formation induces activation of the ATM signaling pathway , leading to the recruitment of the E3 ligases RNF8 and RNF168 , which polyubiquitylate both H2A and JMJD2A , the latter of which triggers its degradation ( Mallette et al. , 2012 ) ."
      },
@@ -684,7 +685,7 @@
      },
      {
       "text": "SAM",
-      "xref_id": "15414",
+      "xref_id": "67040",
       "namespace": "chebi",
       "sentence": "Protein arginine methyltransferases ( PRMTs ) catalyze mono- and dimethylation of the guanidino group of the arginine residue using S-adenosyl methionine ( SAM ) as a methyl donor ."
      },
@@ -759,7 +760,8 @@
       "text": "KAP1",
       "xref_id": "10155",
       "namespace": "ncbi",
-      "sentence": "In contrast , activation of the ATM signaling cascade , determined by the phosphorylation of ATM and its downstream substrates CHK2 and KAP1 , was unaffected by PRMT5 depletion                     ."
+      "sentence": "In contrast , activation of the ATM signaling cascade , determined by the phosphorylation of ATM and its downstream substrates CHK2 and KAP1 , was unaffected by PRMT5 depletion                     .",
+      "loose": true
      },
      {
       "text": "camptothecin",
@@ -801,11 +803,12 @@
       "text": "TSA",
       "xref_id": "46024",
       "namespace": "chebi",
-      "sentence": "Consistent with this premise , exposure of cells expressing the RUVBL1 R205K mutant to Trichostatin A ( TSA ) rescued the defect in 53BP1 mobilization and RPA foci formation after IR                    ."
+      "sentence": "Consistent with this premise , exposure of cells expressing the RUVBL1 R205K mutant to Trichostatin A ( TSA ) rescued the defect in 53BP1 mobilization and RPA foci formation after IR                    .",
+      "loose": true
      },
      {
       "text": "4-OHT",
-      "xref_id": "41774",
+      "xref_id": "44616",
       "namespace": "chebi",
       "sentence": "In this system , treatment of control cells with 4-hydroxy-tamoxifen ( 4-OHT ) and the Shield-1 ligand induces DNA damage , as evident by a single 53BP1 focus , and an enrichment of H4K16 acetylation at break ends                       ( Shanbhag et al. , 2010 , Tang et al. , 2013 ) ."
      },
@@ -908,7 +911,7 @@
      },
      {
       "text": "PPP3CB",
-      "xref_id": "19056",
+      "xref_id": "5532",
       "namespace": "ncbi",
       "sentence": "CNA has three isoforms : CNAalpha ( PPP3CA ) , CNAbeta ( PPP3CB ) , and CNAgamma ( PPP3CC ) , while CNB has two isoforms : CNBalpha ( PPP3R1 ) and CNBbeta ( PPP3R2 ) ."
      },
