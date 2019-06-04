@@ -2908,5 +2908,186 @@
         "sentence":"PD-L1 was labeled with GFP , and the nucleus was labeled with DAPI ."
       }
     ]
+  },
+  {
+    "id":"https://doi.org/10.1016/j.molcel.2019.04.009",
+    "organismOrdering": [9606],
+    "entities":[
+      {
+        "text":"KDM3A",
+        "xref_id":"55818",
+        "namespace":"ncbi",
+        "sentence":"Acetylation of PHF5A Modulates Stress Responses and Colorectal Carcinogenesis through Alternative Splicing Mediated Upregulation of KDM3A  Zhang , Minghui Liu , Boya Liu , Mengmeng Ren , Hongpeng Jiang , Junhua Zou , Xiaoyun Liu , Hongquan Zhang,Wei-Guo Zhu , Yuxin Yin , Zhang Zhang , Wei Gu , Jianyuan Luo  DOI : https://doi.org/10.1016/j.molcel.2019.04.009  Summary Alternative pre-mRNA-splicing-induced post-transcriptional gene expression regulation is one of the pathways for tumors maintaining proliferation rates accompanying the malignant phenotype under stress ."
+      },
+      {
+        "text":"PHF5A",
+        "xref_id":"84844",
+        "namespace":"ncbi",
+        "sentence":"Acetylation of PHF5A Modulates Stress Responses and Colorectal Carcinogenesis through Alternative Splicing Mediated Upregulation of KDM3A  Zhang , Minghui Liu , Boya Liu , Mengmeng Ren , Hongpeng Jiang , Junhua Zou , Xiaoyun Liu , Hongquan Zhang,Wei-Guo Zhu , Yuxin Yin , Zhang Zhang , Wei Gu , Jianyuan Luo  DOI : https://doi.org/10.1016/j.molcel.2019.04.009  Summary Alternative pre-mRNA-splicing-induced post-transcriptional gene expression regulation is one of the pathways for tumors maintaining proliferation rates accompanying the malignant phenotype under stress ."
+      },
+      {
+        "text":"Acetyl-CoA",
+        "xref_id":"15351",
+        "namespace":"chebi",
+        "sentence":"Here , we uncover a list of hyperacetylated proteins in the context of acutely reduced Acetyl-CoA levels under nutrient starvation ."
+      },
+      {
+        "text":"p300",
+        "xref_id":"2033",
+        "namespace":"ncbi",
+        "sentence":"PHF5A , a component of U2 snRNPs , can be acetylated at lysine 29 in response to multiple cellular stresses , which is dependent on p300 ."
+      },
+      {
+        "text":"Trichostatin A",
+        "xref_id":"46024",
+        "namespace":"chebi",
+        "sentence":"To further confirm the acetylation of PHF5A , we treated HEK293T cells with Trichostatin A ( TSA ) and Nicotinamide ( NAM ) , the inhibitors of HDAC class I and II or sirtuins , respectively ."
+      },
+      {
+        "text":"sirtuins",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"To further confirm the acetylation of PHF5A , we treated HEK293T cells with Trichostatin A ( TSA ) and Nicotinamide ( NAM ) , the inhibitors of HDAC class I and II or sirtuins , respectively ."
+      },
+      {
+        "text":"Nicotinamide",
+        "xref_id":"17154",
+        "namespace":"chebi",
+        "sentence":"To further confirm the acetylation of PHF5A , we treated HEK293T cells with Trichostatin A ( TSA ) and Nicotinamide ( NAM ) , the inhibitors of HDAC class I and II or sirtuins , respectively ."
+      },
+      {
+        "text":"Menadione",
+        "xref_id":"28869",
+        "namespace":"chebi",
+        "sentence":"Interestingly , we observed that PHF5A K29 acetylation was also increased dramatically in cells with serum starvation , endoplasmic reticulum ( ER ) stress ( Tunicamycin ) , viral infection [ Poly ( I : C ) ] , oxidative stress ( Menadione ) , or DNA damage stress ( Cisplatin ) treatment                              ."
+      },
+      {
+        "text":"PCAF",
+        "xref_id":"8850",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation under Cellular Stress Is p300 Dependent To identify the Histone Acetyltransferase ( HAT ) for PHF5A K29 acetylation under cellular stresses , we co-transfected PHF5A with different HATs -- CBP , p300 , PCAF , TIP60 , and hMOF ."
+      },
+      {
+        "text":"TIP60",
+        "xref_id":"10524",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation under Cellular Stress Is p300 Dependent To identify the Histone Acetyltransferase ( HAT ) for PHF5A K29 acetylation under cellular stresses , we co-transfected PHF5A with different HATs -- CBP , p300 , PCAF , TIP60 , and hMOF ."
+      },
+      {
+        "text":"CBP",
+        "xref_id":"1387",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation under Cellular Stress Is p300 Dependent To identify the Histone Acetyltransferase ( HAT ) for PHF5A K29 acetylation under cellular stresses , we co-transfected PHF5A with different HATs -- CBP , p300 , PCAF , TIP60 , and hMOF .",
+        "loose": true
+      },
+      {
+        "text":"hMOF",
+        "xref_id":"84148",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation under Cellular Stress Is p300 Dependent To identify the Histone Acetyltransferase ( HAT ) for PHF5A K29 acetylation under cellular stresses , we co-transfected PHF5A with different HATs -- CBP , p300 , PCAF , TIP60 , and hMOF ."
+      },
+      {
+        "text":"HDAC6",
+        "xref_id":"10013",
+        "namespace":"ncbi",
+        "sentence":"We found that HDAC6 or SIRT2 reduced PHF5A acetylation                     ."
+      },
+      {
+        "text":"SIRT2",
+        "xref_id":"22933",
+        "namespace":"ncbi",
+        "sentence":"We found that HDAC6 or SIRT2 reduced PHF5A acetylation                     ."
+      },
+      {
+        "text":"SF3B5",
+        "xref_id":"83443",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation Affects the Interaction of U2 snRNP Complex As a component of U2 snRNPs , PHF5A is a scaffold protein interacting with SF3B1 , SF3B3 , SF3B5 , and intron pre-mRNA            ."
+      },
+      {
+        "text":"SF3B3",
+        "xref_id":"23450",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation Affects the Interaction of U2 snRNP Complex As a component of U2 snRNPs , PHF5A is a scaffold protein interacting with SF3B1 , SF3B3 , SF3B5 , and intron pre-mRNA            ."
+      },
+      {
+        "text":"SF3B1",
+        "xref_id":"23451",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation Affects the Interaction of U2 snRNP Complex As a component of U2 snRNPs , PHF5A is a scaffold protein interacting with SF3B1 , SF3B3 , SF3B5 , and intron pre-mRNA            ."
+      },
+      {
+        "text":"DKK1",
+        "xref_id":"22943",
+        "namespace":"ncbi",
+        "sentence":"The recruitment of KDM3A to AXIN2 , DKK1 , CCND1 , and c-Myc at the Wnt responsive element region ( WRE ) or the introns and coding exons region was enhanced in PHF5A K29Q compared with PHF5A WT in parallel with decreased H3K9me2 enrichment                    ."
+      },
+      {
+        "text":"CCND1",
+        "xref_id":"595",
+        "namespace":"ncbi",
+        "sentence":"The recruitment of KDM3A to AXIN2 , DKK1 , CCND1 , and c-Myc at the Wnt responsive element region ( WRE ) or the introns and coding exons region was enhanced in PHF5A K29Q compared with PHF5A WT in parallel with decreased H3K9me2 enrichment                    ."
+      },
+      {
+        "text":"AXIN2",
+        "xref_id":"8313",
+        "namespace":"ncbi",
+        "sentence":"The recruitment of KDM3A to AXIN2 , DKK1 , CCND1 , and c-Myc at the Wnt responsive element region ( WRE ) or the introns and coding exons region was enhanced in PHF5A K29Q compared with PHF5A WT in parallel with decreased H3K9me2 enrichment                    ."
+      },
+      {
+        "text":"SF3B2",
+        "xref_id":"10992",
+        "namespace":"ncbi",
+        "sentence":"HEK293T cells were transfected with PHF5A-WT , PHF5A-K29Q , or PHF5A-K87Q and detected the expression levels of SF3B1 , SF3B2 , SF3B3 , SF3B4 , SF3B5 , and U2AF1 ."
+      },
+      {
+        "text":"SF3B4",
+        "xref_id":"10262",
+        "namespace":"ncbi",
+        "sentence":"HEK293T cells were transfected with PHF5A-WT , PHF5A-K29Q , or PHF5A-K87Q and detected the expression levels of SF3B1 , SF3B2 , SF3B3 , SF3B4 , SF3B5 , and U2AF1 ."
+      }
+    ]
+  },
+  {
+    "id":"https://doi.org/10.1016/j.molcel.2019.05.006",
+    "organismOrdering": [9606],
+    "entities":[
+      {
+        "text":"RPA",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"Using single-molecule imaging of reconstituted human DNA repair factors , we identify phosphorylated RPA ( pRPA ) as a negative resection regulator ."
+      },
+      {
+        "text":"DNA2",
+        "xref_id":"1763",
+        "namespace":"ncbi",
+        "sentence":"Bloom 's syndrome ( BLM ) helicase together with exonuclease 1 ( EXO1 ) and DNA2 nucleases catalyze kilobase-length DNA resection on nucleosome coated DNA ."
+      },
+      {
+        "text":"BLM",
+        "xref_id":"641",
+        "namespace":"ncbi",
+        "sentence":"Bloom 's syndrome ( BLM ) helicase together with exonuclease 1 ( EXO1 ) and DNA2 nucleases catalyze kilobase-length DNA resection on nucleosome coated DNA ."
+      },
+      {
+        "text":"RPA70",
+        "xref_id":"6117",
+        "namespace":"ncbi",
+        "sentence":"pRPA Inhibits DNA Resection Phosphorylation of RPA induces conformational changes within the RPA70 subunit ( Binz et al. , 2003 , Binz et al. , 2004 , Marechal and Zou , 2015 ) ."
+      },
+      {
+        "text":"RPA32",
+        "xref_id":"6118",
+        "namespace":"ncbi",
+        "sentence":"pmRPA substitutes the RPA32 residues at positions 8 , 11-13 , 21 , 23 , 29 , and 33 for aspartic acids and recapitulates RPA phosphorylation phenotypes in vitro and in vivo ( Binz et al. , 2003 , Lee et al. , 2010 ) ."
+      },
+      {
+        "text":"ATRIP",
+        "xref_id":"84126",
+        "namespace":"ncbi",
+        "sentence":"This compound binds within the basic cleft of RPA70N , blocking ATR interacting protein ( ATRIP ) and BLM interactions ( Kang et al. , 2018 , Souza-Fagundes et al. , 2012 ) ."
+      }
+    ]
   }
  ]
