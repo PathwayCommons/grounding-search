@@ -2242,117 +2242,117 @@
     "organismOrdering": [10090],
     "entities": [
     {
-      "text": "ANKRD31", 
-      "namespace": "ncbi", 
-      "xref_id": "625662", 
+      "text": "ANKRD31",
+      "namespace": "ncbi",
+      "xref_id": "625662",
       "sentence": "REC114 Partner ANKRD31 Controls Number , Timing , and Location of Meiotic DNA Breaks  Michiel Boekhout , Mehmet E. Karasu , Juncheng Wang , Laurent Acquaviva , Florencia Pratto , Kevin Brick , Diana Y. Eng , Jiaqi Xu , R. Daniel Camerini-Otero , Dinshaw J. Patel , Scott Keeney  DOI : https://doi.org/10.1016/j.molcel.2019.03.023  Summary Double-strand breaks ( DSBs ) initiate the homologous recombination that is crucial for meiotic chromosome pairing and segregation ."
-    }, 
+    },
     {
-      "text": "REC114", 
-      "namespace": "ncbi", 
-      "xref_id": "73673", 
+      "text": "REC114",
+      "namespace": "ncbi",
+      "xref_id": "73673",
       "sentence": "REC114 Partner ANKRD31 Controls Number , Timing , and Location of Meiotic DNA Breaks  Michiel Boekhout , Mehmet E. Karasu , Juncheng Wang , Laurent Acquaviva , Florencia Pratto , Kevin Brick , Diana Y. Eng , Jiaqi Xu , R. Daniel Camerini-Otero , Dinshaw J. Patel , Scott Keeney  DOI : https://doi.org/10.1016/j.molcel.2019.03.023  Summary Double-strand breaks ( DSBs ) initiate the homologous recombination that is crucial for meiotic chromosome pairing and segregation ."
-    }, 
+    },
     {
-      "text": "MEI4", 
-      "namespace": "ncbi", 
-      "xref_id": "75033", 
+      "text": "MEI4",
+      "namespace": "ncbi",
+      "xref_id": "75033",
       "sentence": "Results  ANKRD31 Is a Meiosis Specific REC114 Interactor We used mouse REC114 and MEI4 as baits in a yeast two-hybrid screen with a cDNA library from juvenile mouse testes ."
-    }, 
+    },
     {
-      "text": "SYCP3", 
-      "namespace": "ncbi", 
-      "xref_id": "20962", 
+      "text": "SYCP3",
+      "namespace": "ncbi",
+      "xref_id": "20962",
       "sentence": "Early in prophase I , aligned sister chromatids begin to form a synaptonemal complex protein 3 ( SYCP3 )-containing protein axis from which chromatin loops emanate ( leptonema ) ."
-    }, 
+    },
     {
-      "text": "IHO1", 
-      "namespace": "ncbi", 
-      "xref_id": "434438", 
+      "text": "IHO1",
+      "namespace": "ncbi",
+      "xref_id": "434438",
       "sentence": "ANKRD31 also colocalizes with MEI4 , MEI1 , and IHO1 ( Acquaviva et al. , 2019 ) ."
-    }, 
+    },
     {
-      "text": "MEI1", 
-      "namespace": "ncbi", 
-      "xref_id": "74369", 
+      "text": "MEI1",
+      "namespace": "ncbi",
+      "xref_id": "74369",
       "sentence": "ANKRD31 also colocalizes with MEI4 , MEI1 , and IHO1 ( Acquaviva et al. , 2019 ) ."
-    }, 
+    },
     {
-      "text": "SYCP1", 
-      "namespace": "ncbi", 
-      "xref_id": "20957", 
+      "text": "SYCP1",
+      "namespace": "ncbi",
+      "xref_id": "20957",
       "sentence": "We tracked synapsis by immunostaining for SYCP3 and the SC central region protein SYCP1 ( de Vries et al. , 2005 ) ."
-    }, 
+    },
     {
-      "text": "DMC1", 
-      "namespace": "ncbi", 
-      "xref_id": "13404", 
+      "text": "DMC1",
+      "namespace": "ncbi",
+      "xref_id": "13404",
       "sentence": "To assess recombination , we immunostained chromosomes for RAD51 and DMC1                              ."
-    }, 
+    },
     {
-      "text": "RAD51", 
-      "namespace": "ncbi", 
-      "xref_id": "19361", 
+      "text": "RAD51",
+      "namespace": "ncbi",
+      "xref_id": "19361",
       "sentence": "To assess recombination , we immunostained chromosomes for RAD51 and DMC1                              ."
-    }, 
+    },
     {
-      "text": "RPA", 
-      "namespace": null, 
-      "xref_id": null, 
+      "text": "RPA",
+      "namespace": null,
+      "xref_id": null,
       "sentence": "Earlier-stage cells also had fewer foci of the single stranded DNA ( ssDNA )-binding replication protein A ( RPA )                     ."
-    }, 
+    },
     {
-      "text": "histone H2AX", 
-      "namespace": "ncbi", 
-      "xref_id": "15270", 
+      "text": "histone H2AX",
+      "namespace": "ncbi",
+      "xref_id": "15270",
       "sentence": "We also examined the phosphorylation of histone H2AX ( gammaH2AX ) , which is formed rapidly by ATM in response to DSBs and then disappears progressively as recombination proceeds until it is largely gone from autosomes in pachynema             ( Mahadevaiah et al. , 2001 , Barchi et al. , 2005 ) ."
-    }, 
+    },
     {
-      "text": "gammaH2AX", 
-      "namespace": "ncbi", 
-      "xref_id": "15270", 
+      "text": "gammaH2AX",
+      "namespace": "ncbi",
+      "xref_id": "15270",
       "sentence": "We also examined the phosphorylation of histone H2AX ( gammaH2AX ) , which is formed rapidly by ATM in response to DSBs and then disappears progressively as recombination proceeds until it is largely gone from autosomes in pachynema             ( Mahadevaiah et al. , 2001 , Barchi et al. , 2005 ) ."
-    }, 
+    },
     {
-      "text": "ATM", 
-      "namespace": "ncbi", 
-      "xref_id": "11920", 
+      "text": "ATM",
+      "namespace": "ncbi",
+      "xref_id": "11920",
       "sentence": "We also examined the phosphorylation of histone H2AX ( gammaH2AX ) , which is formed rapidly by ATM in response to DSBs and then disappears progressively as recombination proceeds until it is largely gone from autosomes in pachynema             ( Mahadevaiah et al. , 2001 , Barchi et al. , 2005 ) ."
-    }, 
+    },
     {
-    "text": "MLH1", 
-      "namespace": "ncbi", 
-      "xref_id": "17350", 
+    "text": "MLH1",
+      "namespace": "ncbi",
+      "xref_id": "17350",
       "sentence": "By comparison , autosomes showed only a modest defect : pachytene cells with complete autosome synapsis had a small increase in the number of MLH1 foci ( means of 23.7 in wild type and 24.8 in Ankrd31-/-; Figure 4E ) ."
-    }, 
+    },
     {
-      "text": "PRDM9", 
-      "namespace": "ncbi", 
-      "xref_id": "213389", 
-      "sentence": "PAR DSBs are largely independent of PRDM9 ( Brick et al. , 2012 )             and have other requirements that are distinct from autosomes ( Kauppi et al. , 2011 , Smagulova et al. , 2013 ) , so a PAR defect does not predict that SPO11 targeting to PRDM9 sites would be affected ."
-    }, 
-    {
-      "text": "SPO11", 
-      "namespace": "ncbi", 
-      "xref_id": "26972", 
+      "text": "PRDM9",
+      "namespace": "ncbi",
+      "xref_id": "213389",
       "sentence": "PAR DSBs are largely independent of PRDM9 ( Brick et al. , 2012 )             and have other requirements that are distinct from autosomes ( Kauppi et al. , 2011 , Smagulova et al. , 2013 ) , so a PAR defect does not predict that SPO11 targeting to PRDM9 sites would be affected ."
     },
     {
-      "text": "CARM1", 
-      "namespace": "ncbi", 
-      "xref_id": "59035", 
+      "text": "SPO11",
+      "namespace": "ncbi",
+      "xref_id": "26972",
+      "sentence": "PAR DSBs are largely independent of PRDM9 ( Brick et al. , 2012 )             and have other requirements that are distinct from autosomes ( Kauppi et al. , 2011 , Smagulova et al. , 2013 ) , so a PAR defect does not predict that SPO11 targeting to PRDM9 sites would be affected ."
+    },
+    {
+      "text": "CARM1",
+      "namespace": "ncbi",
+      "xref_id": "59035",
       "sentence": "A structural homology search revealed that REC114N is similar to the N-terminal domain of coactivator associated methyltransferase 1 ( CARM1 ) ( Troffer-Charlier et al. , 2007 ) , which belongs to the PH domain superfamily ."
     },
     {
-      "text": "ammonium", 
-      "namespace": "chebi", 
-      "xref_id": "28938", 
+      "text": "ammonium",
+      "namespace": "chebi",
+      "xref_id": "28938",
       "sentence": "The aromatic ring of W1857 also forms a cation-pi interaction by packing against the ammonium group of R117 and the aromatic side chain of invariant W51 from REC114N ."
-    }, 
+    },
     {
-      "text": "hematoxylin", 
-      "namespace": "chebi", 
-      "xref_id": "51686", 
+      "text": "hematoxylin",
+      "namespace": "chebi",
+      "xref_id": "51686",
       "sentence": "Images show adult ( 4 months ) testis sections stained with TUNEL and hematoxylin ."
     }]
   },
@@ -2361,136 +2361,733 @@
     "organismOrdering": [9606],
     "entities": [
     {
-      "text": "TEX264", 
-      "namespace": "ncbi", 
-      "xref_id": "51368", 
+      "text": "TEX264",
+      "namespace": "ncbi",
+      "xref_id": "51368",
       "sentence": "Intrinsically Disordered Protein TEX264 Mediates ER-phagy  Haruka Chino , Tomohisa Hatta , Tohru Natsume , Noboru Mizushima  DOI : https://doi.org/10.1016/j.molcel.2019.03.033  Summary Certain proteins and organelles can be selectively degraded by autophagy ."
-    }, 
+    },
     {
-      "text": "ER", 
-      "namespace": null, 
-      "xref_id": null, 
+      "text": "ER",
+      "namespace": null,
+      "xref_id": null,
       "sentence": "TEX264 is an ER protein with a single transmembrane domain and a LIR motif ."
-    }, 
+    },
     {
-      "text": "CCPG1", 
-      "namespace": "ncbi", 
-      "xref_id": "9236", 
+      "text": "CCPG1",
+      "namespace": "ncbi",
+      "xref_id": "9236",
       "sentence": "ER-phagy is profoundly blocked by deletion of TEX264 alone and almost completely by additional deletion of FAM134B and CCPG1 ."
-    }, 
+    },
     {
-      "text": "FAM134B", 
-      "namespace": "ncbi", 
-      "xref_id": "54463", 
+      "text": "FAM134B",
+      "namespace": "ncbi",
+      "xref_id": "54463",
       "sentence": "ER-phagy is profoundly blocked by deletion of TEX264 alone and almost completely by additional deletion of FAM134B and CCPG1 ."
-    }, 
+    },
     {
-      "text": "LC3B", 
-      "namespace": "ncbi", 
-      "xref_id": "81631", 
+      "text": "LC3B",
+      "namespace": "ncbi",
+      "xref_id": "81631",
       "sentence": "Results To identify novel substrates and receptors of selective autophagy , we searched for proteins that interacted with LC3B in a LIR dependent manner ."
-    }, 
+    },
     {
-      "text": "p62", 
-      "namespace": "ncbi", 
-      "xref_id": "8878", 
+      "text": "p62",
+      "namespace": "ncbi",
+      "xref_id": "8878",
       "sentence": "As a positive control , p62 ( also known as SQSTM1 ) was detected as one of the top candidates                      ."
-    }, 
+    },
     {
-      "text": "SQSTM1", 
-      "namespace": "ncbi", 
-      "xref_id": "8878", 
+      "text": "SQSTM1",
+      "namespace": "ncbi",
+      "xref_id": "8878",
       "sentence": "As a positive control , p62 ( also known as SQSTM1 ) was detected as one of the top candidates                      ."
-    }, 
+    },
     {
-      "text": "cytochrome b5", 
-      "namespace": "ncbi", 
-      "xref_id": "1528", 
+      "text": "cytochrome b5",
+      "namespace": "ncbi",
+      "xref_id": "1528",
       "sentence": "TEX264-GFP showed a reticular pattern under nutrient rich conditions and colocalized with the ER marker cytochrome b5            ."
-    }, 
+    },
     {
-      "text": "FIP200", 
-      "namespace": "ncbi", 
-      "xref_id": "9821", 
+      "text": "FIP200",
+      "namespace": "ncbi",
+      "xref_id": "9821",
       "sentence": "Most of these structures colocalized with the autophagosomal protein LC3                    , as well as the isolation membrane proteins FIP200 and WIPI2            ."
-    }, 
+    },
     {
-      "text": "WIPI2", 
-      "namespace": "ncbi", 
-      "xref_id": "26100", 
+      "text": "WIPI2",
+      "namespace": "ncbi",
+      "xref_id": "26100",
       "sentence": "Most of these structures colocalized with the autophagosomal protein LC3                    , as well as the isolation membrane proteins FIP200 and WIPI2            ."
-    }, 
+    },
     {
-      "text": "bafilomycin A1", 
-      "namespace": "chebi", 
-      "xref_id": "22689", 
+      "text": "bafilomycin A1",
+      "namespace": "chebi",
+      "xref_id": "22689",
       "sentence": "The number of theseTEX264 structures increased following bafilomycin A1 treatment , suggesting that TEX264 is delivered to lysosomes                    ."
-    }, 
+    },
     {
-      "text": "LAMP1", 
-      "namespace": "ncbi", 
-      "xref_id": "3916", 
+      "text": "LAMP1",
+      "namespace": "ncbi",
+      "xref_id": "3916",
       "sentence": "In fact , some of the TEX264 positive puncta colocalized with LAMP1 under starvation conditions            ."
-    }, 
+    },
     {
-      "text": "doxycycline", 
-      "namespace": "chebi", 
-      "xref_id": "50845", 
+      "text": "doxycycline",
+      "namespace": "chebi",
+      "xref_id": "50845",
       "sentence": "We developed a doxycycline inducible ER-phagy reporter that has an N-terminal ER signal sequence followed by tandem monomeric RFP and GFP sequences and the ER retention sequence KDEL            ."
-    }, 
+    },
     {
-      "text": "SEC62", 
-      "namespace": "ncbi", 
-      "xref_id": "7095", 
+      "text": "SEC62",
+      "namespace": "ncbi",
+      "xref_id": "7095",
       "sentence": "TEX264 Is a Major ER-phagy Receptor To date , four ER-phagy receptors , namely , FAM134B , CCPG1 , RTN3L , and SEC62 , have been reported in mammals ( Fumagalli et al. , 2016 , Grumati et al. , 2017 , Grumati et al. , 2018 , Khaminets et al. , 2015 , Smith et al. , 2018 ) ."
-    }, 
+    },
     {
-      "text": "RTN3", 
-      "namespace": "ncbi", 
-      "xref_id": "10313", 
+      "text": "RTN3",
+      "namespace": "ncbi",
+      "xref_id": "10313",
       "sentence": "Simultaneous depletion of FAM134B , CCPG1 , RTN3 , and SEC62 ( not TEX264 ) caused a partial reduction in the cleavage of the ER-phagy reporter under basal and starvation conditions , but a significant level ( > 50 % ) of ER-phagy activity remained                                    ."
-    }, 
+    },
     {
-      "text": "GABARAPL1", 
-      "namespace": "ncbi", 
-      "xref_id": "23710", 
+      "text": "GABARAPL1",
+      "namespace": "ncbi",
+      "xref_id": "23710",
       "sentence": "TEX264 interacted strongly with LC3A , GABARAP , and GABARAPL1 ."
-    }, 
+    },
     {
-      "text": "GABARAP", 
-      "namespace": "ncbi", 
-      "xref_id": "11337", 
+      "text": "GABARAP",
+      "namespace": "ncbi",
+      "xref_id": "11337",
       "sentence": "TEX264 interacted strongly with LC3A , GABARAP , and GABARAPL1 ."
-    }, 
+    },
     {
-      "text": "LC3A", 
-      "namespace": "ncbi", 
-      "xref_id": "84557", 
+      "text": "LC3A",
+      "namespace": "ncbi",
+      "xref_id": "84557",
       "sentence": "TEX264 interacted strongly with LC3A , GABARAP , and GABARAPL1 ."
-    }, 
+    },
     {
-      "text": "RTN4", 
-      "namespace": "ncbi", 
-      "xref_id": "57142", 
+      "text": "RTN4",
+      "namespace": "ncbi",
+      "xref_id": "57142",
       "sentence": "However , it might reflect a change in ER distribution rather than an increase in ER volume , because no significant change in the amount of ER resident proteins such as RTN4 was detected in TEX264-KO and triple-KO cells by immunoblotting             ."
-    }, 
+    },
     {
-      "text": "ATG13", 
-      "namespace": "ncbi", 
-      "xref_id": "9776", 
+      "text": "ATG13",
+      "namespace": "ncbi",
+      "xref_id": "9776",
       "sentence": "When we inserted an IDR sequence from human ATG13 ( amino acids 191-248 ) corresponding to the previously characterized IDR region in yeast Atg13 ( Yamamoto et al. , 2016 ) , LC3 colocalization was rescued                    ."
-    }, 
+    },
     {
-      "text": "Cytb5", 
-      "namespace": "ncbi", 
-      "xref_id": "1528", 
+      "text": "Cytb5",
+      "namespace": "ncbi",
+      "xref_id": "1528",
       "sentence": "Figure 2 TEX264 Is Present in the ER and Colocalizes with Autophagosomes Hide caption ( A ) MEFs stably expressing TEX264-GFP and mRuby3-cytochrom b5 ( Cytb5 ) were directly observed by fluorescence microscopy ."
-    }, 
+    },
     {
-      "text": "Atg5", 
-      "namespace": "ncbi", 
-      "xref_id": "9474", 
+      "text": "Atg5",
+      "namespace": "ncbi",
+      "xref_id": "9474",
       "sentence": "( C and D ) Immunoblotting of endogenous TEX264 ( and other ER-phagy receptors ) in postnuclear supernatants of brains from three independent Fip200f/+ ; nestin-CRE ( Ctrl ) and Fip200f/f ; nestin-CRE ( neuro-KO ) mice ( C ) and the indicated organs from Atg5 +/+ ; NSE-Atg5 ( +/+ ) and Atg5-/-; NSE-Atg5 ( KO ) mice ( D ) ."
     }]
+  },
+  {
+    "id":"https://doi.org/10.1016/j.molcel.2019.03.031",
+    "organismOrdering": [9606],
+    "entities":[
+      {
+        "text":"PERK",
+        "xref_id":"9451",
+        "namespace":"ncbi",
+        "sentence":"Here we show that ER stress and glucose deprivation stimulate mitochondrial bioenergetics and formation of respiratory supercomplexes ( SCs ) through protein kinase R like ER kinase ( PERK ) .",
+        "loose": true
+      },
+      {
+        "text":"COX7A2L",
+        "xref_id":"9167",
+        "namespace":"ncbi",
+        "sentence":"The PERK-eIF2alpha-ATF4 axis increases supercomplex assembly factor 1 ( SCAF1 or COX7A2L ) , promoting SCs and enhanced mitochondrial respiration ."
+      },
+      {
+        "text":"oxygen",
+        "xref_id":"15379",
+        "namespace":"chebi",
+        "sentence":"Mitochondria from galactose cultured cells exhibited increased oxygen consumption driven by pyruvate and malate ( CI substrates ) , as well as an increase in CI , combined CI+CIII , and CIV enzymatic activity ."
+      },
+      {
+        "text":"Chloramphenicol",
+        "xref_id":"17698",
+        "namespace":"chebi",
+        "sentence":"Chloramphenicol , a specific inhibitor of mitochondrial protein translation , abolished SC levels when cells were grown in glucose ; however , SC levels were maintained in galactose media             ."
+      },
+      {
+        "text":"AMPK",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"AMP activated protein kinase ( AMPK ) is known to promote energy generating processes under conditions of nutrient stress ( Hardie et al. , 2012 ) ."
+      },
+      {
+        "text":"AICAR",
+        "xref_id":"18406",
+        "namespace":"chebi",
+        "sentence":"To determine whether AMPK regulates SC formation , we treated cells with the AMPK activator AICAR in glucose conditions or the AMPK inhibitor compound C in galactose conditions ."
+      },
+      {
+        "text":"dihydroxyacetone-phosphate",
+        "xref_id":"16108",
+        "namespace":"chebi",
+        "sentence":"As expected , levels of glycolytic intermediates such as dihydroxyacetone-phosphate and lactate were decreased in cells grown in galactose media                     ."
+      },
+      {
+        "text":"lactate",
+        "xref_id":"24996",
+        "namespace":"chebi",
+        "sentence":"As expected , levels of glycolytic intermediates such as dihydroxyacetone-phosphate and lactate were decreased in cells grown in galactose media                     ."
+      },
+      {
+        "text":"UDP-GlcNAc",
+        "xref_id":"16264",
+        "namespace":"chebi",
+        "sentence":"We identified uridine diphosphate ( UDP )-N-acetylglucosamine ( UDP-GlcNAc ) as the most downregulated metabolite after glucose deprivation             ."
+      },
+      {
+        "text":"Cathepsin C",
+        "xref_id":"1075",
+        "namespace":"ncbi",
+        "sentence":"Global O linked N-acetylglucosamine glycosylation ( O GlcNAcylation ) was reduced in cells cultured in galactose media , as well as N glycosylation of the ER-resident protein Cathepsin C                          ."
+      },
+      {
+        "text":"N-acetylglucosamine",
+        "xref_id":"28009",
+        "namespace":"chebi",
+        "sentence":"Global O linked N-acetylglucosamine glycosylation ( O GlcNAcylation ) was reduced in cells cultured in galactose media , as well as N glycosylation of the ER-resident protein Cathepsin C                          .",
+        "loose": true
+      },
+      {
+        "text":"tunicamycin",
+        "xref_id":"29699",
+        "namespace":"chebi",
+        "sentence":"To test this and uncouple it from nutrient stress , we used low doses of tunicamycin to block protein glycosylation and trigger ER stress in glucose conditions without causing cell death             ."
+      },
+      {
+        "text":"brefeldin A",
+        "xref_id":"48080",
+        "namespace":"chebi",
+        "sentence":"We used an additional inducer of ER stress , brefeldin A , and observed a similar increase in SC levels compared to tunicamycin treatment             ."
+      },
+      {
+        "text":"Xbp1",
+        "xref_id":"7494",
+        "namespace":"ncbi",
+        "sentence":"Activation of ER Stress Sensor PERK Enhances OXPHOS Capacity and Promotes Electron Transfer Chain SC Assembly Both In Vitro and In Vivo To determine the role of the ER stress sensor proteins in glucose deprivation induced SC formation , we used CRISPR-Cas9 editing technology to deplete X-box-binding protein 1 ( Xbp1 , which is downstream of IRE1 ) , PERK , and ATF6                      ."
+      },
+      {
+        "text":"IRE1",
+        "xref_id":"2081",
+        "namespace":"ncbi",
+        "sentence":"Activation of ER Stress Sensor PERK Enhances OXPHOS Capacity and Promotes Electron Transfer Chain SC Assembly Both In Vitro and In Vivo To determine the role of the ER stress sensor proteins in glucose deprivation induced SC formation , we used CRISPR-Cas9 editing technology to deplete X-box-binding protein 1 ( Xbp1 , which is downstream of IRE1 ) , PERK , and ATF6                      ."
+      },
+      {
+        "text":"ATF6",
+        "xref_id":"22926",
+        "namespace":"ncbi",
+        "sentence":"Activation of ER Stress Sensor PERK Enhances OXPHOS Capacity and Promotes Electron Transfer Chain SC Assembly Both In Vitro and In Vivo To determine the role of the ER stress sensor proteins in glucose deprivation induced SC formation , we used CRISPR-Cas9 editing technology to deplete X-box-binding protein 1 ( Xbp1 , which is downstream of IRE1 ) , PERK , and ATF6                      ."
+      },
+      {
+        "text":"GSK2606414",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"Similar results were obtained when PERK activity was inhibited using GSK2606414                  ."
+      },
+      {
+        "text":"eIF2alpha",
+        "xref_id":"1965",
+        "namespace":"ncbi",
+        "sentence":"Because eIF2alpha is the canonical downstream target of PERK , we next tested whether it mediates the increases in SCs caused by glucose deprivation ."
+      },
+      {
+        "text":"ISRIB",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"A selective inhibitor , ISRIB ( Sidrauski et al. , 2015 ) , was used to block eIF2alpha phosphorylation in cells cultured in galactose             ."
+      },
+      {
+        "text":"ATF4",
+        "xref_id":"468",
+        "namespace":"ncbi",
+        "sentence":"Because ATF4 is downstream of the PERK-eIF2alpha axis , we tested whether SCAF1 mRNA was controlled by this transcription factor ."
+      },
+      {
+        "text":"tricarboxylic acid",
+        "xref_id":"27093",
+        "namespace":"chebi",
+        "sentence":"This decline was extended to some tricarboxylic acid ( TCA ) cycle intermediates , including oxaloacetate , which was decreased in both depleted cell lines ."
+      },
+      {
+        "text":"oxaloacetate",
+        "xref_id":"16452",
+        "namespace":"chebi",
+        "sentence":"This decline was extended to some tricarboxylic acid ( TCA ) cycle intermediates , including oxaloacetate , which was decreased in both depleted cell lines ."
+      },
+      {
+        "text":"OPA1",
+        "xref_id":"4976",
+        "namespace":"ncbi",
+        "sentence":"Two cell lines with altered mitochondrial cristae were generated by depleting OPA1 or MIC60 using CRISPR technology ."
+      },
+      {
+        "text":"MIC60",
+        "xref_id":"10989",
+        "namespace":"ncbi",
+        "sentence":"Two cell lines with altered mitochondrial cristae were generated by depleting OPA1 or MIC60 using CRISPR technology ."
+      },
+      {
+        "text":"ND6",
+        "xref_id":"4541",
+        "namespace":"ncbi",
+        "sentence":"Human cybrid cells carrying a mutation ( 3796 A > G , found in adult onset dystonia ) in the mitochondrial encoded protein ND1 or in ND6 ( 14459 G > A , found in Leber hereditary optic neuropathy ) were treated with tunicamycin for 72 h. BN-PAGE analysis revealed partial rescue in defective CI assembly ( primarily found in SCs ) , which correlated with an increase in oxygen consumption                          ."
+      },
+      {
+        "text":"ND1",
+        "xref_id":"4535",
+        "namespace":"ncbi",
+        "sentence":"Human cybrid cells carrying a mutation ( 3796 A > G , found in adult onset dystonia ) in the mitochondrial encoded protein ND1 or in ND6 ( 14459 G > A , found in Leber hereditary optic neuropathy ) were treated with tunicamycin for 72 h. BN-PAGE analysis revealed partial rescue in defective CI assembly ( primarily found in SCs ) , which correlated with an increase in oxygen consumption                          ."
+      },
+      {
+        "text":"ACAD9",
+        "xref_id":"28976",
+        "namespace":"ncbi",
+        "sentence":"Similar results were obtained in fibroblasts derived from patients harboring a mutation in ACAD9 , a chaperone protein necessary for CI assembly                    ."
+      },
+      {
+        "text":"ND4",
+        "xref_id":"4538",
+        "namespace":"ncbi",
+        "sentence":"We next tested whether PERK activation could increase SC assembly in mouse ND4 ( delA10227 ) or ND6 ( delC13887 ) non missense mutant cells in which no CI is detected ."
+      },
+      {
+        "text":"COX10",
+        "xref_id":"1352",
+        "namespace":"ncbi",
+        "sentence":"Consistent with these results , PERK activation failed to protect against cell death in Rieske knockout ( KO ) and COX10 KO fibroblasts , as well as MELAS ( mitochondrial encephalomyopathy and stroke like episodes A3243G-Leucine tRNA ) cybrid cells with complete ETC deficiency             ."
+      },
+      {
+        "text":"citrate synthase",
+        "xref_id":"1431",
+        "namespace":"ncbi",
+        "sentence":"( C ) Mitochondrial enzymatic activities of CI , CIV , CII , CI+III , and CII+III normalized to citrate synthase ( CS ) levels ."
+      },
+      {
+        "text":"digitonin",
+        "xref_id":"27729",
+        "namespace":"chebi",
+        "sentence":"( D ) Top : immunodetection of the indicated proteins representing CI , CIII , CIV , and CII after blue native PAGE ( BN-PAGE ) of digitonin solubilized mitochondria from glucose or galactose ( 48 h ) ."
+      },
+      {
+        "text":"GRP78",
+        "xref_id":"3309",
+        "namespace":"ncbi",
+        "sentence":"( E ) Western blot analysis of ER stress markers GRP78 and BiP , CHOP , and ATF4 in U2OS cells cultured in galactose at the indicated time points ."
+      },
+      {
+        "text":"CHOP",
+        "xref_id":"1649",
+        "namespace":"ncbi",
+        "sentence":"( E ) Western blot analysis of ER stress markers GRP78 and BiP , CHOP , and ATF4 in U2OS cells cultured in galactose at the indicated time points ."
+      },
+      {
+        "text":"DMSO",
+        "xref_id":"28262",
+        "namespace":"chebi",
+        "sentence":"( C ) Cell survival of ND1 and ND6 cells pretreated for 72 h with DMSO or tunicamycin in glucose and then cultured in galactose media for an additional 72 h. ( D ) SC levels of ND1 and ND6 mutant cybrid cells treated for 72 h with CCT020312 ."
+      }
+    ]
+  },
+  {
+    "id":"https://doi.org/10.1016/j.molcel.2019.04.003",
+    "organismOrdering": [9606],
+    "entities":[
+      {
+        "text":"Exo1",
+        "xref_id":"9156",
+        "namespace":"ncbi",
+        "sentence":"Ca2 +-Stimulated AMPK Dependent Phosphorylation of Exo1 Protects Stressed Replication Forks from Aberrant Resection  Shan Li , Zeno Lavagnino , Delphine Lemacon , Lingzhen Kong , Alessandro Ustione , Xuewen Ng , Yuanya Zhang , Yingchun Wang , Bin Zheng , Helen Piwnica-Worms , Alessandro Vindigni , David W. Piston , Zhongsheng You  DOI : https://doi.org/10.1016/j.molcel.2019.04.003  Summary Abnormal processing of stressed replication forks by nucleases can cause fork collapse , genomic instability , and cell death ."
+      },
+      {
+        "text":"RPA2",
+        "xref_id":"6118",
+        "namespace":"ncbi",
+        "sentence":"We then assessed the levels of fork resection in these cells after HU treatment by western blot to detect S4/8 phosphorylation of the RPA2 subunit of RPA , a marker of fork resection ( Higgs et al. , 2015 , Sartori et al. , 2007 ) ."
+      },
+      {
+        "text":"RPA",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"We then assessed the levels of fork resection in these cells after HU treatment by western blot to detect S4/8 phosphorylation of the RPA2 subunit of RPA , a marker of fork resection ( Higgs et al. , 2015 , Sartori et al. , 2007 ) ."
+      },
+      {
+        "text":"thymidine",
+        "xref_id":"17748",
+        "namespace":"chebi",
+        "sentence":"In addition , we performed a single-molecule DNA fiber analysis to detect the resection of nascent DNA at replication forks in the cells that were pulse labeled sequentially with thymidine analogs IdU ( red ) and CIdU ( green ) followed by HU treatment ( Buisson et al. , 2015 , Higgs et al. , 2015 , Lemacon et al. , 2017 ) ."
+      },
+      {
+        "text":"14-3-3eta",
+        "xref_id":"7533",
+        "namespace":"ncbi",
+        "sentence":"By examining the association of 14-3-3eta with additional Exo1 truncation mutants in cells through co-immunoprecipitation , we further narrowed down the region in Exo1 essential for 14-3-3 binding to aa 701-750             ."
+      },
+      {
+        "text":"aphidicolin",
+        "xref_id":"2766",
+        "namespace":"chebi",
+        "sentence":"HU or aphidicolin ( APH ) treatment also induced S746 phosphorylation of ectopically expressed Exo1-GFP                     ."
+      },
+      {
+        "text":"BrdU",
+        "xref_id":"472552",
+        "namespace":"chebi",
+        "sentence":"In addition to RPA2 phosphorylation and DNA fiber analyses , we performed native bromodeoxyuridine ( BrdU ) immunofluorescence ( IF ) to assess fork resection where incorporated BrdU was detected specifically in single stranded DNA ( ssDNA ) by IF staining under a nondenaturing condition ( Buisson et al. , 2015 , Higgs et al. , 2015 , Sartori et al. , 2007 ) ."
+      },
+      {
+        "text":"Chk1",
+        "xref_id":"1111",
+        "namespace":"ncbi",
+        "sentence":"AMPK and Chk1 Phosphorylate Exo1 at S746 in Response to Replication Stress We next sought to identify the protein kinase ( s ) that phosphorylate Exo1 at S746 upon replication stress ."
+      },
+      {
+        "text":"AMPK1",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"Indeed , purified recombinant AMPK1 complex ( alpha1/beta1/gamma1 ) and Chk1 protein were both capable of phosphorylating Exo1 at S746 in vitro                ."
+      },
+      {
+        "text":"AMPKalpha2",
+        "xref_id":"5563",
+        "namespace":"ncbi",
+        "sentence":"Importantly , the aberrant fork resection phenotype observed in AMPKalpha-KO cells could be rescued by ectopic expression of Flag tagged AMPKalpha1 or AMPKalpha2                      ."
+      },
+      {
+        "text":"CaM",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"Replication Stress Induces an Elevated Level of [ Ca2+ ] i , which Is Both Necessary and Sufficient to Trigger AMPK Activation and Exo1 Phosphorylation Because CaMKK2 is activated by Ca2 +-bound CaM ( Marcelo et al. , 2016 ) , we speculated that replication stress induces an increase in [ Ca2+ ] i concentration , which in turn triggers the activation of the downstream CaMKK2-AMPK-Exo1 pathway for fork protection ."
+      },
+      {
+        "text":"DNA polymerase delta",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"Furthermore , replication stress caused by siRNA mediated partial knockdown of a subunit of DNA polymerase delta also elevated [ Ca2+ ] i             ."
+      },
+      {
+        "text":"thapsigargin",
+        "xref_id":"9516",
+        "namespace":"chebi",
+        "sentence":"Interestingly , we found that induction of [ Ca2+ ] i by the calcium ionophore A23187 ( causing influx of extracellular Ca2+ ) or the SERCA inhibitor thapsigargin ( causing Ca2+ release from intracellular stores ) also resulted in Exo1 S746 phosphorylation and increased 14-3-3 s binding                      ( Nickless et al. , 2014 ) ."
+      }
+    ]
+  },
+  {
+    "id":"https://doi.org/10.1016/j.molcel.2019.04.005",
+    "organismOrdering": [9606],
+    "entities":[
+      {
+        "text":"PD-L1",
+        "xref_id":"29126",
+        "namespace":"ncbi",
+        "sentence":"PD-L1 ( B7-H1 ) Competes with the RNA Exosome to Regulate the DNA Damage Response and Can Be Targeted to Sensitize to Radiation or Chemotherapy  Xinyi Tu , Bo Qin , Yong Zhang , Cheng Zhang , Mohamed Kahila , Somaira Nowsheen , Ping Yin , Jian Yuan , Huadong Pei , Hu Li , Jia Yu , Zhiwang Song , Qin Zhou , Fei Zhao , Jiaqi Liu , Chao Zhang , Haidong Dong , Robert W. Mutter , Zhenkun Lou  DOI : https://doi.org/10.1016/j.molcel.2019.04.005  Summary Programmed death ligand 1 ( PD-L1 , also called B7-H1 ) is an immune checkpoint protein that inhibits immune function through its binding of the programmed cell death protein 1 ( PD-1 ) receptor ."
+      },
+      {
+        "text":"programmed cell death protein 1",
+        "xref_id":"5133",
+        "namespace":"ncbi",
+        "sentence":"PD-L1 ( B7-H1 ) Competes with the RNA Exosome to Regulate the DNA Damage Response and Can Be Targeted to Sensitize to Radiation or Chemotherapy  Xinyi Tu , Bo Qin , Yong Zhang , Cheng Zhang , Mohamed Kahila , Somaira Nowsheen , Ping Yin , Jian Yuan , Huadong Pei , Hu Li , Jia Yu , Zhiwang Song , Qin Zhou , Fei Zhao , Jiaqi Liu , Chao Zhang , Haidong Dong , Robert W. Mutter , Zhenkun Lou  DOI : https://doi.org/10.1016/j.molcel.2019.04.005  Summary Programmed death ligand 1 ( PD-L1 , also called B7-H1 ) is an immune checkpoint protein that inhibits immune function through its binding of the programmed cell death protein 1 ( PD-1 ) receptor ."
+      },
+      {
+        "text":"PD-1",
+        "xref_id":"5133",
+        "namespace":"ncbi",
+        "sentence":"PD-L1 ( B7-H1 ) Competes with the RNA Exosome to Regulate the DNA Damage Response and Can Be Targeted to Sensitize to Radiation or Chemotherapy  Xinyi Tu , Bo Qin , Yong Zhang , Cheng Zhang , Mohamed Kahila , Somaira Nowsheen , Ping Yin , Jian Yuan , Huadong Pei , Hu Li , Jia Yu , Zhiwang Song , Qin Zhou , Fei Zhao , Jiaqi Liu , Chao Zhang , Haidong Dong , Robert W. Mutter , Zhenkun Lou  DOI : https://doi.org/10.1016/j.molcel.2019.04.005  Summary Programmed death ligand 1 ( PD-L1 , also called B7-H1 ) is an immune checkpoint protein that inhibits immune function through its binding of the programmed cell death protein 1 ( PD-1 ) receptor ."
+      },
+      {
+        "text":"NBS1",
+        "xref_id":"4683",
+        "namespace":"ncbi",
+        "sentence":"Here , we discovered that intracellular PD-L1 acts as an RNA binding protein that regulates the mRNA stability of NBS1 , BRCA1 , and other DNA damage related genes ."
+      },
+      {
+        "text":"CMTM6",
+        "xref_id":"54918",
+        "namespace":"ncbi",
+        "sentence":"Furthermore , we developed a PD-L1 antibody , H1A , which abrogates the interaction of PD-L1 with CMTM6 , thereby promoting PD-L1 degradation ."
+      },
+      {
+        "text":"cisplatin",
+        "xref_id":"27899",
+        "namespace":"chebi",
+        "sentence":"Results  Knockdown of PD-L1 Sensitizes Cancer to Radiotherapy To examine the function of PD-L1 in response to cancer therapy independent of its role in immune cell regulation , we knocked down PD-L1 using two separate small hairpin RNAs ( shRNAs ) in the HCT116 colorectal carcinoma and MDA-MB-231 breast cancer cell lines and assessed it for sensitivity to chemotherapy ( cisplatin ) and ionizing radiation ( IR ) in vitro ."
+      },
+      {
+        "text":"MG132",
+        "xref_id":"75142",
+        "namespace":"chebi",
+        "sentence":"We treated control and PD-L1 depleted MDA-MB-231 cells with the proteasome inhibitor MG132 ."
+      },
+      {
+        "text":"biotin",
+        "xref_id":"15956",
+        "namespace":"chebi",
+        "sentence":"We performed the RNA pull-down assay using in vitro biotin labeling of the 3 ' UTR of NBS1 RNAs ."
+      },
+      {
+        "text":"EXOSC10",
+        "xref_id":"5394",
+        "namespace":"ncbi",
+        "sentence":"EXOSC10 , which harbors 3 '-5' exoribonuclease activity , is an important catalytic component of the RNA exosome ( Lejeune et al. , 2003 , Tomecki et al. , 2010 , van Dijk et al. , 2007 ) ."
+      },
+      {
+        "text":"actinomycin D",
+        "xref_id":"27666",
+        "namespace":"chebi",
+        "sentence":"To rule out the possibility that actinomycin D itself could be affecting BRCA1 and NBS1 mRNA stability , we also measured RNA stability using the 5-ethynyluridine ( EU ) labeling and releasing method ."
+      },
+      {
+        "text":"EXOSC4",
+        "xref_id":"54512",
+        "namespace":"ncbi",
+        "sentence":"To further elucidate the role of the RNA exosome in the RNA stabilizing function of PD-L1 , we evaluated the impact of EXOSC4 , an essential component of the core of the exosome , on PD-L1 target RNAs ."
+      },
+      {
+        "text":"FANCL",
+        "xref_id":"55120",
+        "namespace":"ncbi",
+        "sentence":"As predicted by the sequencing data , the mRNA levels of ATM , POLQ , and FANCL were decreased to an extent similar to that of BRCA1 mRNA under PD-L1 knockdown conditions            ."
+      },
+      {
+        "text":"POLQ",
+        "xref_id":"10721",
+        "namespace":"ncbi",
+        "sentence":"As predicted by the sequencing data , the mRNA levels of ATM , POLQ , and FANCL were decreased to an extent similar to that of BRCA1 mRNA under PD-L1 knockdown conditions            ."
+      },
+      {
+        "text":"ATM",
+        "xref_id":"472",
+        "namespace":"ncbi",
+        "sentence":"As predicted by the sequencing data , the mRNA levels of ATM , POLQ , and FANCL were decreased to an extent similar to that of BRCA1 mRNA under PD-L1 knockdown conditions            ."
+      },
+      {
+        "text":"atezolizumab",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"The clinically available PD-L1 antibodies durvalumab and atezolizumab bind PD-L1 extracellularly , abrogating the PD-L1 and PD-1 checkpoint ."
+      },
+      {
+        "text":"chloroquine",
+        "xref_id":"3638",
+        "namespace":"chebi",
+        "sentence":"Therefore , to investigate the mechanism of how H1A was regulating PD-L1 levels , we first treated MDA-MB-231 cells with the lysosomal inhibitor chloroquine ."
+      },
+      {
+        "text":"MRE11",
+        "xref_id":"4361",
+        "namespace":"ncbi",
+        "sentence":"Figure 2 PD-L1 Binds and Stabilizes NBS1 and BRCA1 mRNA Hide caption ( A ) Western blot analysis of BRCA1 , NBS1 , RAD50 , MRE11 , and PD-L1 in MDA-MB-231 cells infected with lentiviruses encoding control shRNA or two different shRNAs targeting PD-L1 ."
+      },
+      {
+        "text":"RAD50",
+        "xref_id":"10111",
+        "namespace":"ncbi",
+        "sentence":"Figure 2 PD-L1 Binds and Stabilizes NBS1 and BRCA1 mRNA Hide caption ( A ) Western blot analysis of BRCA1 , NBS1 , RAD50 , MRE11 , and PD-L1 in MDA-MB-231 cells infected with lentiviruses encoding control shRNA or two different shRNAs targeting PD-L1 ."
+      },
+      {
+        "text":"DAPI",
+        "xref_id":"51231",
+        "namespace":"chebi",
+        "sentence":"PD-L1 was labeled with GFP , and the nucleus was labeled with DAPI ."
+      }
+    ]
+  },
+  {
+    "id":"https://doi.org/10.1016/j.molcel.2019.04.009",
+    "organismOrdering": [9606],
+    "entities":[
+      {
+        "text":"KDM3A",
+        "xref_id":"55818",
+        "namespace":"ncbi",
+        "sentence":"Acetylation of PHF5A Modulates Stress Responses and Colorectal Carcinogenesis through Alternative Splicing Mediated Upregulation of KDM3A  Zhang , Minghui Liu , Boya Liu , Mengmeng Ren , Hongpeng Jiang , Junhua Zou , Xiaoyun Liu , Hongquan Zhang,Wei-Guo Zhu , Yuxin Yin , Zhang Zhang , Wei Gu , Jianyuan Luo  DOI : https://doi.org/10.1016/j.molcel.2019.04.009  Summary Alternative pre-mRNA-splicing-induced post-transcriptional gene expression regulation is one of the pathways for tumors maintaining proliferation rates accompanying the malignant phenotype under stress ."
+      },
+      {
+        "text":"PHF5A",
+        "xref_id":"84844",
+        "namespace":"ncbi",
+        "sentence":"Acetylation of PHF5A Modulates Stress Responses and Colorectal Carcinogenesis through Alternative Splicing Mediated Upregulation of KDM3A  Zhang , Minghui Liu , Boya Liu , Mengmeng Ren , Hongpeng Jiang , Junhua Zou , Xiaoyun Liu , Hongquan Zhang,Wei-Guo Zhu , Yuxin Yin , Zhang Zhang , Wei Gu , Jianyuan Luo  DOI : https://doi.org/10.1016/j.molcel.2019.04.009  Summary Alternative pre-mRNA-splicing-induced post-transcriptional gene expression regulation is one of the pathways for tumors maintaining proliferation rates accompanying the malignant phenotype under stress ."
+      },
+      {
+        "text":"Acetyl-CoA",
+        "xref_id":"15351",
+        "namespace":"chebi",
+        "sentence":"Here , we uncover a list of hyperacetylated proteins in the context of acutely reduced Acetyl-CoA levels under nutrient starvation ."
+      },
+      {
+        "text":"p300",
+        "xref_id":"2033",
+        "namespace":"ncbi",
+        "sentence":"PHF5A , a component of U2 snRNPs , can be acetylated at lysine 29 in response to multiple cellular stresses , which is dependent on p300 ."
+      },
+      {
+        "text":"Trichostatin A",
+        "xref_id":"46024",
+        "namespace":"chebi",
+        "sentence":"To further confirm the acetylation of PHF5A , we treated HEK293T cells with Trichostatin A ( TSA ) and Nicotinamide ( NAM ) , the inhibitors of HDAC class I and II or sirtuins , respectively ."
+      },
+      {
+        "text":"sirtuins",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"To further confirm the acetylation of PHF5A , we treated HEK293T cells with Trichostatin A ( TSA ) and Nicotinamide ( NAM ) , the inhibitors of HDAC class I and II or sirtuins , respectively ."
+      },
+      {
+        "text":"Nicotinamide",
+        "xref_id":"17154",
+        "namespace":"chebi",
+        "sentence":"To further confirm the acetylation of PHF5A , we treated HEK293T cells with Trichostatin A ( TSA ) and Nicotinamide ( NAM ) , the inhibitors of HDAC class I and II or sirtuins , respectively ."
+      },
+      {
+        "text":"Menadione",
+        "xref_id":"28869",
+        "namespace":"chebi",
+        "sentence":"Interestingly , we observed that PHF5A K29 acetylation was also increased dramatically in cells with serum starvation , endoplasmic reticulum ( ER ) stress ( Tunicamycin ) , viral infection [ Poly ( I : C ) ] , oxidative stress ( Menadione ) , or DNA damage stress ( Cisplatin ) treatment                              ."
+      },
+      {
+        "text":"PCAF",
+        "xref_id":"8850",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation under Cellular Stress Is p300 Dependent To identify the Histone Acetyltransferase ( HAT ) for PHF5A K29 acetylation under cellular stresses , we co-transfected PHF5A with different HATs -- CBP , p300 , PCAF , TIP60 , and hMOF ."
+      },
+      {
+        "text":"TIP60",
+        "xref_id":"10524",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation under Cellular Stress Is p300 Dependent To identify the Histone Acetyltransferase ( HAT ) for PHF5A K29 acetylation under cellular stresses , we co-transfected PHF5A with different HATs -- CBP , p300 , PCAF , TIP60 , and hMOF ."
+      },
+      {
+        "text":"CBP",
+        "xref_id":"1387",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation under Cellular Stress Is p300 Dependent To identify the Histone Acetyltransferase ( HAT ) for PHF5A K29 acetylation under cellular stresses , we co-transfected PHF5A with different HATs -- CBP , p300 , PCAF , TIP60 , and hMOF .",
+        "loose": true
+      },
+      {
+        "text":"hMOF",
+        "xref_id":"84148",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation under Cellular Stress Is p300 Dependent To identify the Histone Acetyltransferase ( HAT ) for PHF5A K29 acetylation under cellular stresses , we co-transfected PHF5A with different HATs -- CBP , p300 , PCAF , TIP60 , and hMOF ."
+      },
+      {
+        "text":"HDAC6",
+        "xref_id":"10013",
+        "namespace":"ncbi",
+        "sentence":"We found that HDAC6 or SIRT2 reduced PHF5A acetylation                     ."
+      },
+      {
+        "text":"SIRT2",
+        "xref_id":"22933",
+        "namespace":"ncbi",
+        "sentence":"We found that HDAC6 or SIRT2 reduced PHF5A acetylation                     ."
+      },
+      {
+        "text":"SF3B5",
+        "xref_id":"83443",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation Affects the Interaction of U2 snRNP Complex As a component of U2 snRNPs , PHF5A is a scaffold protein interacting with SF3B1 , SF3B3 , SF3B5 , and intron pre-mRNA            ."
+      },
+      {
+        "text":"SF3B3",
+        "xref_id":"23450",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation Affects the Interaction of U2 snRNP Complex As a component of U2 snRNPs , PHF5A is a scaffold protein interacting with SF3B1 , SF3B3 , SF3B5 , and intron pre-mRNA            ."
+      },
+      {
+        "text":"SF3B1",
+        "xref_id":"23451",
+        "namespace":"ncbi",
+        "sentence":"PHF5A Acetylation Affects the Interaction of U2 snRNP Complex As a component of U2 snRNPs , PHF5A is a scaffold protein interacting with SF3B1 , SF3B3 , SF3B5 , and intron pre-mRNA            ."
+      },
+      {
+        "text":"DKK1",
+        "xref_id":"22943",
+        "namespace":"ncbi",
+        "sentence":"The recruitment of KDM3A to AXIN2 , DKK1 , CCND1 , and c-Myc at the Wnt responsive element region ( WRE ) or the introns and coding exons region was enhanced in PHF5A K29Q compared with PHF5A WT in parallel with decreased H3K9me2 enrichment                    ."
+      },
+      {
+        "text":"CCND1",
+        "xref_id":"595",
+        "namespace":"ncbi",
+        "sentence":"The recruitment of KDM3A to AXIN2 , DKK1 , CCND1 , and c-Myc at the Wnt responsive element region ( WRE ) or the introns and coding exons region was enhanced in PHF5A K29Q compared with PHF5A WT in parallel with decreased H3K9me2 enrichment                    ."
+      },
+      {
+        "text":"AXIN2",
+        "xref_id":"8313",
+        "namespace":"ncbi",
+        "sentence":"The recruitment of KDM3A to AXIN2 , DKK1 , CCND1 , and c-Myc at the Wnt responsive element region ( WRE ) or the introns and coding exons region was enhanced in PHF5A K29Q compared with PHF5A WT in parallel with decreased H3K9me2 enrichment                    ."
+      },
+      {
+        "text":"SF3B2",
+        "xref_id":"10992",
+        "namespace":"ncbi",
+        "sentence":"HEK293T cells were transfected with PHF5A-WT , PHF5A-K29Q , or PHF5A-K87Q and detected the expression levels of SF3B1 , SF3B2 , SF3B3 , SF3B4 , SF3B5 , and U2AF1 ."
+      },
+      {
+        "text":"SF3B4",
+        "xref_id":"10262",
+        "namespace":"ncbi",
+        "sentence":"HEK293T cells were transfected with PHF5A-WT , PHF5A-K29Q , or PHF5A-K87Q and detected the expression levels of SF3B1 , SF3B2 , SF3B3 , SF3B4 , SF3B5 , and U2AF1 ."
+      }
+    ]
+  },
+  {
+    "id":"https://doi.org/10.1016/j.molcel.2019.05.006",
+    "organismOrdering": [9606],
+    "entities":[
+      {
+        "text":"RPA",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"Using single-molecule imaging of reconstituted human DNA repair factors , we identify phosphorylated RPA ( pRPA ) as a negative resection regulator ."
+      },
+      {
+        "text":"DNA2",
+        "xref_id":"1763",
+        "namespace":"ncbi",
+        "sentence":"Bloom 's syndrome ( BLM ) helicase together with exonuclease 1 ( EXO1 ) and DNA2 nucleases catalyze kilobase-length DNA resection on nucleosome coated DNA ."
+      },
+      {
+        "text":"BLM",
+        "xref_id":"641",
+        "namespace":"ncbi",
+        "sentence":"Bloom 's syndrome ( BLM ) helicase together with exonuclease 1 ( EXO1 ) and DNA2 nucleases catalyze kilobase-length DNA resection on nucleosome coated DNA ."
+      },
+      {
+        "text":"RPA70",
+        "xref_id":"6117",
+        "namespace":"ncbi",
+        "sentence":"pRPA Inhibits DNA Resection Phosphorylation of RPA induces conformational changes within the RPA70 subunit ( Binz et al. , 2003 , Binz et al. , 2004 , Marechal and Zou , 2015 ) ."
+      },
+      {
+        "text":"RPA32",
+        "xref_id":"6118",
+        "namespace":"ncbi",
+        "sentence":"pmRPA substitutes the RPA32 residues at positions 8 , 11-13 , 21 , 23 , 29 , and 33 for aspartic acids and recapitulates RPA phosphorylation phenotypes in vitro and in vivo ( Binz et al. , 2003 , Lee et al. , 2010 ) ."
+      },
+      {
+        "text":"ATRIP",
+        "xref_id":"84126",
+        "namespace":"ncbi",
+        "sentence":"This compound binds within the basic cleft of RPA70N , blocking ATR interacting protein ( ATRIP ) and BLM interactions ( Kang et al. , 2018 , Souza-Fagundes et al. , 2012 ) ."
+      }
+    ]
   }
  ]
