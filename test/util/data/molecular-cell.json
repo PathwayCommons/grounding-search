@@ -3243,630 +3243,103 @@
   },
   {
     "id":"https://doi.org/10.1016/j.molcel.2019.04.026",
+    "organismOrdering": [83333, 511145],
     "entities":[
       {
-        "text":"Cyclin",
-        "xref_id":"P12004",
-        "namespace":"uniprot",
-        "sentence":"Cyclin Specific Docking Mechanisms Reveal the Complexity of M-CDK Function in the Cell Cycle  Mihkel Ord , Rainis Venta , Kaidi Moll , Ervin Valk , Mart Loog  DOI : https://doi.org/10.1016/j.molcel.2019.04.026  Summary Cyclin dependent kinases ( CDKs ) coordinate hundreds of molecular events during the cell cycle ."
-      },
-      {
-        "text":"M-CDK",
-        "xref_id":"UAZ01067",
-        "namespace":"uaz",
-        "sentence":"Cyclin Specific Docking Mechanisms Reveal the Complexity of M-CDK Function in the Cell Cycle  Mihkel Ord , Rainis Venta , Kaidi Moll , Ervin Valk , Mart Loog  DOI : https://doi.org/10.1016/j.molcel.2019.04.026  Summary Cyclin dependent kinases ( CDKs ) coordinate hundreds of molecular events during the cell cycle ."
-      },
-      {
-        "text":"Mart Loog\n\nDOI",
-        "xref_id":"UAZ01068",
-        "namespace":"uaz",
-        "sentence":"Cyclin Specific Docking Mechanisms Reveal the Complexity of M-CDK Function in the Cell Cycle  Mihkel Ord , Rainis Venta , Kaidi Moll , Ervin Valk , Mart Loog  DOI : https://doi.org/10.1016/j.molcel.2019.04.026  Summary Cyclin dependent kinases ( CDKs ) coordinate hundreds of molecular events during the cell cycle ."
-      },
-      {
-        "text":"Ervin Valk",
-        "xref_id":"UAZ01124",
-        "namespace":"uaz",
-        "sentence":"Cyclin Specific Docking Mechanisms Reveal the Complexity of M-CDK Function in the Cell Cycle  Mihkel Ord , Rainis Venta , Kaidi Moll , Ervin Valk , Mart Loog  DOI : https://doi.org/10.1016/j.molcel.2019.04.026  Summary Cyclin dependent kinases ( CDKs ) coordinate hundreds of molecular events during the cell cycle ."
-      },
-      {
-        "text":"LxF",
-        "xref_id":"UAZ01063",
-        "namespace":"uaz",
-        "sentence":"We uncovered a cyclin docking motif , LxF , that mediates binding of replication factor Cdc6 to mitotic cyclin ."
-      },
-      {
         "text":"Cdc6",
-        "xref_id":"Q99741",
-        "namespace":"uniprot",
+        "xref_id":"853244",
+        "namespace":"ncbi",
         "sentence":"We uncovered a cyclin docking motif , LxF , that mediates binding of replication factor Cdc6 to mitotic cyclin ."
       },
       {
         "text":"Cks1",
-        "xref_id":"P61024",
-        "namespace":"uniprot",
+        "xref_id":"852432",
+        "namespace":"ncbi",
         "sentence":"This interaction leads to phospho-adaptor Cks1 mediated inhibition of M-CDK to facilitate Cdc6 accumulation and sequestration in mitosis ."
       },
       {
-        "text":"LxF motif",
-        "xref_id":"UAZ01065",
-        "namespace":"uaz",
-        "sentence":"The LxF motif and Cks1 also mediate the mutual inhibition between M-CDK and the tyrosine kinase Swe1 ."
-      },
-      {
-        "text":"G1-CDK",
-        "xref_id":"UAZ01130",
-        "namespace":"uaz",
-        "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
-      },
-      {
         "text":"Clb3",
-        "xref_id":"P24870",
-        "namespace":"uniprot",
+        "xref_id":"851400",
+        "namespace":"ncbi",
         "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
       },
       {
         "text":"Clb5",
-        "xref_id":"P30283",
-        "namespace":"uniprot",
+        "xref_id":"856237",
+        "namespace":"ncbi",
         "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
       },
       {
         "text":"Clb2",
-        "xref_id":"P24869",
-        "namespace":"uniprot",
-        "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
-      },
-      {
-        "text":"G2-CDK",
-        "xref_id":"UAZ01135",
-        "namespace":"uaz",
-        "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
-      },
-      {
-        "text":"S-CDK",
-        "xref_id":"UAZ01074",
-        "namespace":"uaz",
-        "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
-      },
-      {
-        "text":"cyclin-Cdk1",
-        "xref_id":"UAZ01126",
-        "namespace":"uaz",
+        "xref_id":"856236",
+        "namespace":"ncbi",
         "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
       },
       {
         "text":"Cln2",
-        "xref_id":"O14773",
-        "namespace":"uniprot",
+        "xref_id":"855819",
+        "namespace":"ncbi",
         "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
       },
       {
-        "text":"M-cyclin",
-        "xref_id":"Q8JTH1",
-        "namespace":"uniprot",
-        "sentence":"In contrast , a mutation in the hp of M-cyclin enhanced the phosphorylation of Cdc6 ."
-      },
-      {
-        "text":"S-CDK hp",
-        "xref_id":"UAZ01114",
-        "namespace":"uaz",
-        "sentence":"Such a remarkable cyclin specific phosphorylation profile suggested that the interaction between Cdc6 and M-CDK could be inhibitory , whereas the S-CDK hp interaction promotes phosphorylation ."
-      },
-      {
-        "text":"Ki",
-        "xref_id":"4875",
-        "namespace":"pubchem",
-        "sentence":"Indeed , M-CDK was inhibited by Cdc6 with low nanomolar Ki values , whereas inhibition was weakened by more than two orders of magnitude in the hpm version                                ."
-      },
-      {
-        "text":"phosphate",
-        "xref_id":"1061",
-        "namespace":"pubchem",
-        "sentence":"Mutation of the phosphate binding pocket of Cks1 ( Cks1mut ) reduced inhibition by about 10 times , much like the phosphorylation site mutants                                 ."
-      },
-      {
-        "text":"Cks1mut",
-        "xref_id":"UAZ01077",
-        "namespace":"uaz",
-        "sentence":"Mutation of the phosphate binding pocket of Cks1 ( Cks1mut ) reduced inhibition by about 10 times , much like the phosphorylation site mutants                                 ."
-      },
-      {
-        "text":"TP",
-        "xref_id":"P19971",
-        "namespace":"uniprot",
-        "sentence":"Because Cks1 only binds phospho-threonines and not phospho-serines ( Koivomagi et al. , 2013 , McGrath et al. , 2013 ) , we mutated the N-terminal TP sites to SPs and also observed a loss of inhibition ."
-      },
-      {
-        "text":"SPs",
-        "xref_id":"P49903",
-        "namespace":"uniprot",
-        "sentence":"Because Cks1 only binds phospho-threonines and not phospho-serines ( Koivomagi et al. , 2013 , McGrath et al. , 2013 ) , we mutated the N-terminal TP sites to SPs and also observed a loss of inhibition ."
-      },
-      {
-        "text":"PP2A-B55",
-        "xref_id":"UAZ01115",
-        "namespace":"uaz",
-        "sentence":"A quite analogous mechanism has been reported in PP2A-B55 inhibition by endosulfine , where the mechanism is called inhibition by unfair competition ( Williams et al. , 2014 ) ."
-      },
-      {
-        "text":"hp",
-        "xref_id":"P00738",
-        "namespace":"uniprot",
-        "sentence":"Judging from the known distance requirements between the Cks1 binding sites , the active site , and the hp ( Koivomagi et al. , 2013 ) , we identified a conserved motif , 47LxF49 , that is crucial for inhibition                                       ."
-      },
-      {
-        "text":"LxF mutation",
-        "xref_id":"UAZ01081",
-        "namespace":"uaz",
-        "sentence":"The effect of LxF mutation ( L47A F49A ) showed very little additive effect when Clb2 ( hpm ) was used instead of Clb2 ( wild-type [ WT ] ) ."
-      },
-      {
-        "text":"wild-type [WT])",
-        "xref_id":"UAZ01079",
-        "namespace":"uaz",
-        "sentence":"The effect of LxF mutation ( L47A F49A ) showed very little additive effect when Clb2 ( hpm ) was used instead of Clb2 ( wild-type [ WT ] ) ."
-      },
-      {
-        "text":"hpm",
-        "xref_id":"UAZ01084",
-        "namespace":"uaz",
-        "sentence":"The effect of LxF mutation ( L47A F49A ) showed very little additive effect when Clb2 ( hpm ) was used instead of Clb2 ( wild-type [ WT ] ) ."
-      },
-      {
-        "text":"126FQSLP130",
-        "xref_id":"UAZ01104",
-        "namespace":"uaz",
-        "sentence":"Therefore , we propose a mechanism where Cdk1 first phosphorylates the N-terminal TP sites , which then bind to Cks1 , whereas LxF binds to the hp of Clb2 , and , additionally , an interaction between 126FQSLP130 and M-CDK enhances the inhibition            ."
-      },
-      {
         "text":"Cdk1",
-        "xref_id":"P06493",
-        "namespace":"uniprot",
+        "xref_id":"852457",
+        "namespace":"ncbi",
         "sentence":"Therefore , we propose a mechanism where Cdk1 first phosphorylates the N-terminal TP sites , which then bind to Cks1 , whereas LxF binds to the hp of Clb2 , and , additionally , an interaction between 126FQSLP130 and M-CDK enhances the inhibition            ."
-      },
-      {
-        "text":"NES",
-        "xref_id":"P48681",
-        "namespace":"uniprot",
-        "sentence":"We used a phospho regulated nulear localization signal ( NLS ) as a sensor for Cdk1 activity ( NLS-nuclear export signal ( NES )-GFP ; Liku et al. , 2005 ; Figure 2B ) and anaphase onset as a reference point by following spindle elongation with Spc42-mCherry-labeled spindle pole body ( SPB )            ."
       },
       {
         "text":"SIC1",
-        "xref_id":"P38634",
-        "namespace":"uniprot",
+        "xref_id":"850768",
+        "namespace":"ncbi",
         "sentence":"However , when SIC1 was deleted in the background , the effect of the LxF mutation on the magnitude of nuclear accumulation of the sensor was prominent ."
       },
       {
         "text":"anaphase-promoting complex",
-        "xref_id":"UAZ01116",
-        "namespace":"uaz",
+        "xref_id":null,
+        "namespace":null,
         "sentence":"In addition to Sic1 and Cdc6 , a third negative regulator of Cdk1 in mitotic exit is the anaphase promoting complex ( APC ) , which is responsible for the destruction of cyclins ( Visintin et al. , 1997 , Calzada et al. , 2001 , Archambault et al. , 2003 ) ."
       },
       {
         "text":"APC",
-        "xref_id":"P25054",
-        "namespace":"uniprot",
+        "xref_id":null,
+        "namespace":null,
         "sentence":"In addition to Sic1 and Cdc6 , a third negative regulator of Cdk1 in mitotic exit is the anaphase promoting complex ( APC ) , which is responsible for the destruction of cyclins ( Visintin et al. , 1997 , Calzada et al. , 2001 , Archambault et al. , 2003 ) ."
       },
       {
         "text":"CDH1",
-        "xref_id":"P12830",
-        "namespace":"uniprot",
+        "xref_id":"852881",
+        "namespace":"ncbi",
         "sentence":"Deletion of CDH1 , the late mitotic activator of APC , caused a minor drop in G1 levels of the sensor , and the cdc6 ( lxf ) mutation did not lead to a further decrease ."
       },
       {
-        "text":"Cdc6-Citrine",
-        "xref_id":"UAZ01127",
-        "namespace":"uaz",
-        "sentence":"We analyzed the effect of mutations in the two SCF binding degrons on Cdc6-Citrine levels                            ."
-      },
-      {
         "text":"SCF",
-        "xref_id":"P21583",
-        "namespace":"uniprot",
+        "xref_id":null,
+        "namespace":null,
         "sentence":"We analyzed the effect of mutations in the two SCF binding degrons on Cdc6-Citrine levels                            ."
-      },
-      {
-        "text":"M-CDK hp-LxF",
-        "xref_id":"UAZ01125",
-        "namespace":"uaz",
-        "sentence":"These results support the hypothesis that the M-CDK hp-LxF interaction shields the N-terminal degron and directs the degradation of Cdc6 in mitosis mostly via the C-terminal degron ."
-      },
-      {
-        "text":"RxL2",
-        "xref_id":"UAZ01080",
-        "namespace":"uaz",
-        "sentence":"The RxL2 docking motif enhanced Cdc6 phosphorylation by about 10-fold , indicating that RxL2 directs S-CDK to phosphorylate T7                      ."
-      },
-      {
-        "text":"Cdc6(lxf)",
-        "xref_id":"UAZ01093",
-        "namespace":"uaz",
-        "sentence":"Contrarily , Cdc6 ( lxf ) was multi phosphorylated by M-CDK ."
-      },
-      {
-        "text":"M-CDK-Cdc6",
-        "xref_id":"UAZ01133",
-        "namespace":"uaz",
-        "sentence":"Strains that express Cdc6 ( lxf ) have fewer cells in S phase , which suggests that , in wild-type cells , M-CDK-Cdc6 interaction might inhibit replication origin licensing             ."
-      },
-      {
-        "text":"FEAR network",
-        "xref_id":"UAZ01111",
-        "namespace":"uaz",
-        "sentence":"First , we focused on Spo12 , whose phosphorylation by M-CDK is essential for the FEAR network ( Tomson et al. , 2009 ) ."
-      },
-      {
-        "text":"Phos-tag",
-        "xref_id":"UAZ00655",
-        "namespace":"uaz",
-        "sentence":"To follow the phosphorylation of Spo12 in vivo , we used Phos-tag western blotting of synchronized cells ."
-      },
-      {
-        "text":"RxL motif",
-        "xref_id":"UAZ01073",
-        "namespace":"uaz",
-        "sentence":"To confirm that loss of phosphorylation because of the LxF mutation is caused by disrupting the interaction between Clb2 and Spo12 , we replaced the LxF motif with a different cyclin docking motif , the RxL motif ."
-      },
-      {
-        "text":"RxL-specific Clb3-",
-        "xref_id":"UAZ01095",
-        "namespace":"uaz",
-        "sentence":"This could indicate that the RxL motif can direct phosphorylation of Spo12 by RxL specific Clb3- or Clb5-Cdk1 ( the remaining tail of the peak ) ."
-      },
-      {
-        "text":"Clb5-Cdk1",
-        "xref_id":"UAZ01105",
-        "namespace":"uaz",
-        "sentence":"This could indicate that the RxL motif can direct phosphorylation of Spo12 by RxL specific Clb3- or Clb5-Cdk1 ( the remaining tail of the peak ) ."
       },
       {
         "text":"Swe1",
-        "xref_id":"P32944",
-        "namespace":"uniprot",
+        "xref_id":"853252",
+        "namespace":"ncbi",
         "sentence":"The LxF Interaction Drives the Regulation of M-CDK by Swe1 In the early cell cycle , Swe1 binds M-CDK to phosphorylate the inhibitory site Y19 in Cdk1 , whereas rising CDK activity leads to multi phosphorylation and inactivation of Swe1 ( Harvey et al. , 2005 ) ."
       },
       {
-        "text":"Clb2-Cdk1",
-        "xref_id":"UAZ01070",
-        "namespace":"uaz",
-        "sentence":"It is known that Clb2-Cdk1 has the highest affinity for Swe1 compared with earlier CDK complexes ( Hu and Aparicio , 2005 , Keaton et al. , 2007 ) and that this depends on the hp of Clb2 ( Hu et al. , 2008 ) ."
-      },
-      {
-        "text":"Hu",
-        "xref_id":"UAZ01090",
-        "namespace":"uaz",
-        "sentence":"It is known that Clb2-Cdk1 has the highest affinity for Swe1 compared with earlier CDK complexes ( Hu and Aparicio , 2005 , Keaton et al. , 2007 ) and that this depends on the hp of Clb2 ( Hu et al. , 2008 ) ."
-      },
-      {
-        "text":"N-Swe1",
-        "xref_id":"UAZ01099",
-        "namespace":"uaz",
-        "sentence":"We mutated three candidate LxF motifs in the N-terminal non kinase domain of Swe1 ( N-Swe1 [ 1-450 ] )            ."
-      },
-      {
-        "text":"LxF1 mutant",
-        "xref_id":"UAZ01107",
-        "namespace":"uaz",
-        "sentence":"In kinase assays with Clb2 ( hpm ) , a similar drop in phosphorylation as with the LxF1 mutant was observed             ."
-      },
-      {
-        "text":"Clb2 hp",
-        "xref_id":"UAZ01076",
-        "namespace":"uaz",
-        "sentence":"These results suggest that LxF1 is the major docking motif responsible for Clb2 hp dependent phosphorylation of Swe1 ."
-      },
-      {
-        "text":"LxF1",
-        "xref_id":"UAZ01086",
-        "namespace":"uaz",
-        "sentence":"These results suggest that LxF1 is the major docking motif responsible for Clb2 hp dependent phosphorylation of Swe1 ."
-      },
-      {
-        "text":"Swe1 candidate LxF motifs",
-        "xref_id":"UAZ01118",
-        "namespace":"uaz",
-        "sentence":"To test the role of the Swe1 candidate LxF motifs in vivo , we set up an assay to measure Swe1 mediated mitotic arrest because of depolymerization of actin in response to treatment with Latrunculin B ( Lat B ) ( McMillan et al. , 1998 , McMillan et al. , 1999 ) ."
-      },
-      {
-        "text":"Lat B",
-        "xref_id":"6436219",
-        "namespace":"pubchem",
-        "sentence":"To test the role of the Swe1 candidate LxF motifs in vivo , we set up an assay to measure Swe1 mediated mitotic arrest because of depolymerization of actin in response to treatment with Latrunculin B ( Lat B ) ( McMillan et al. , 1998 , McMillan et al. , 1999 ) ."
-      },
-      {
-        "text":"LxF2",
-        "xref_id":"UAZ01110",
-        "namespace":"uaz",
-        "sentence":"Both the N-terminal motif LxF1 and a LxF2 and LxF3 double mutant displayed faster accumulation of anaphase cells compared with the wild-type strain ."
-      },
-      {
-        "text":"LxF3",
-        "xref_id":"UAZ01128",
-        "namespace":"uaz",
-        "sentence":"Both the N-terminal motif LxF1 and a LxF2 and LxF3 double mutant displayed faster accumulation of anaphase cells compared with the wild-type strain ."
-      },
-      {
-        "text":"LxF sites",
-        "xref_id":"UAZ01117",
-        "namespace":"uaz",
-        "sentence":"These results , combined with the phosphorylation data in Figure 5B , led us to hypothesize that , as in Cdc6 , a threonine based optimal CDK site just upstream of LxF2 and LxF3 , T196 , could serve as a Cks1 docking site that , together with the LxF sites , would form a complex presenting CDK for tyrosine phosphorylation by Swe1             ."
-      },
-      {
-        "text":"5B",
-        "xref_id":"5462311",
-        "namespace":"pubchem",
-        "sentence":"These results , combined with the phosphorylation data in Figure 5B , led us to hypothesize that , as in Cdc6 , a threonine based optimal CDK site just upstream of LxF2 and LxF3 , T196 , could serve as a Cks1 docking site that , together with the LxF sites , would form a complex presenting CDK for tyrosine phosphorylation by Swe1             ."
-      },
-      {
-        "text":"Swe1 mutants",
-        "xref_id":"UAZ01097",
-        "namespace":"uaz",
-        "sentence":"This idea was supported by the fact that substitution of threonines with serines in key CDK sites in Swe1 reduces tyrosine phosphorylation of Cdk1 in vivo ( McGrath et al. , 2013 ) and also by the observation that Swe1 mutants lacking catalytic activity exhibit some of the inhibition of Cdk1 ( McMillan et al. , 1999 ) ."
-      },
-      {
-        "text":"Clb2-LxF",
-        "xref_id":"UAZ01094",
-        "namespace":"uaz",
-        "sentence":"These data allow one to argue that the key mechanism for docking M-CDK for tyrosine phosphorylation is binding of phosphorylated T196 with Cks1 , supported by the Clb2-LxF interactions ."
-      },
-      {
-        "text":"wild-type Swe1",
-        "xref_id":"UAZ01108",
-        "namespace":"uaz",
-        "sentence":"The initial velocities of Cdk1 Y19 phosphorylation were lowest in the T196S and LxF2 and LxF3 mutants , whereas Swe1 ( lxf1 ) displayed an intermediate rate and wild-type Swe1 the highest rate            ."
-      },
-      {
-        "text":"LxF3 mutants",
-        "xref_id":"UAZ01089",
-        "namespace":"uaz",
-        "sentence":"The initial velocities of Cdk1 Y19 phosphorylation were lowest in the T196S and LxF2 and LxF3 mutants , whereas Swe1 ( lxf1 ) displayed an intermediate rate and wild-type Swe1 the highest rate            ."
-      },
-      {
-        "text":"result",
-        "xref_id":"4594",
-        "namespace":"pubchem",
-        "sentence":"This result , combined with the LxF1 effect on N-Swe1 phosphorylation , suggests that LxF1 could direct phosphorylation of T196 , followed by binding of pT196 to Cks1 and secondary docking via LxF2 and LxF3 , leading to inhibitory Y19 phosphorylation            ."
-      },
-      {
-        "text":"pT196",
-        "xref_id":"UAZ01096",
-        "namespace":"uaz",
-        "sentence":"This result , combined with the LxF1 effect on N-Swe1 phosphorylation , suggests that LxF1 could direct phosphorylation of T196 , followed by binding of pT196 to Cks1 and secondary docking via LxF2 and LxF3 , leading to inhibitory Y19 phosphorylation            ."
-      },
-      {
-        "text":"Swe1-Cdk1",
-        "xref_id":"UAZ01103",
-        "namespace":"uaz",
-        "sentence":"In conclusion , the mechanism of the Swe1-Cdk1 interactions elucidated here represent a key example of differential roles of LxF motifs in building the CDK thresholds via a self primed inhibitory mechanism and enhanced phosphorylation ."
-      },
-      {
-        "text":"LxF motifs",
-        "xref_id":"UAZ01071",
-        "namespace":"uaz",
-        "sentence":"In conclusion , the mechanism of the Swe1-Cdk1 interactions elucidated here represent a key example of differential roles of LxF motifs in building the CDK thresholds via a self primed inhibitory mechanism and enhanced phosphorylation ."
-      },
-      {
-        "text":"M-CDK-LxF",
-        "xref_id":"UAZ01106",
-        "namespace":"uaz",
-        "sentence":"The Global Importance of the M-CDK-LxF Interaction To estimate the global importance of M-CDK docking , we searched for potential LxF motifs from disordered regions of the S. cerevisiae proteome ."
-      },
-      {
         "text":"Bni1",
-        "xref_id":"P41832",
-        "namespace":"uniprot",
+        "xref_id":"855450",
+        "namespace":"ncbi",
         "sentence":"We purified two of these targets , Bud3 and Bni1 , and analyzed the cyclin specificity of their phosphorylation ."
       },
       {
         "text":"Bud3",
-        "xref_id":"Q9HF61",
-        "namespace":"uniprot",
+        "xref_id":"850345",
+        "namespace":"ncbi",
         "sentence":"We purified two of these targets , Bud3 and Bni1 , and analyzed the cyclin specificity of their phosphorylation ."
       },
       {
-        "text":"hp of Clb2",
-        "xref_id":"UAZ01072",
-        "namespace":"uaz",
-        "sentence":"Both Bud3 and Bni1 are highly Clb2 specific substrates , and notably , mutation of the hp of Clb2 or the predicted LxF motif in substrates decreases their phosphorylation rate by over 40-fold                    ."
-      },
-      {
-        "text":"Formin Bni1",
-        "xref_id":"Q5AL52",
-        "namespace":"uniprot",
-        "sentence":"Formin Bni1 interacts with a nucleation promoting factor and the polarity determinant Bud6 , which is localized at the bud tip and bud neck ( Segal et al. , 2000 ) ."
-      },
-      {
         "text":"Bud6",
-        "xref_id":"P41697",
-        "namespace":"uniprot",
+        "xref_id":"851029",
+        "namespace":"ncbi",
         "sentence":"Both Bni1 and Bud6 are involved in polarized growth and mitotic spindle orientation ( Segal et al. , 2000 , Graziano et al. , 2011 ) ."
-      },
-      {
-        "text":"Kao",
-        "xref_id":"P19801",
-        "namespace":"uniprot",
-        "sentence":"Bud3 has been shown to recruit Clb2 to the bud neck in a hp dependent manner for timely phosphorylation and degradation of Swe1 ( Bailly et al. , 2003 , Kao et al. , 2014 ) ."
-      },
-      {
-        "text":"2011b",
-        "xref_id":"UAZ01112",
-        "namespace":"uaz",
-        "sentence":"Previously , docking mechanisms for three of the four major classes of budding yeast CDK complexes have been found : G1-CDK ( Bhaduri and Pryciak , 2011 , Koivomagi et al. , 2011b ) , S-CDK ( Wilmes et al. , 2004 , Loog and Morgan , 2005 ) , and G2-CDK ( M.O. and M.L. , unpublished data ) ."
-      },
-      {
-        "text":"CDK complexes",
-        "xref_id":"UAZ01121",
-        "namespace":"uaz",
-        "sentence":"Previously , docking mechanisms for three of the four major classes of budding yeast CDK complexes have been found : G1-CDK ( Bhaduri and Pryciak , 2011 , Koivomagi et al. , 2011b ) , S-CDK ( Wilmes et al. , 2004 , Loog and Morgan , 2005 ) , and G2-CDK ( M.O. and M.L. , unpublished data ) ."
-      },
-      {
-        "text":"KM",
-        "xref_id":"7016114",
-        "namespace":"pubchem",
-        "sentence":"For the full consensus site , the effect was close to 7-fold , which agrees with our previous observations that M-CDK has a low micromolar KM value for full consensus sites , leaving less space for potentiation from the docking interactions , whose affinity is in the same range ( Koivomagi et al. , 2011b ) ."
-      },
-      {
-        "text":"LxF Motif\nHide caption\n(A) G1-, S-,",
-        "xref_id":"UAZ01064",
-        "namespace":"uaz",
-        "sentence":"Figure 1 Cdc6 Inhibits M-CDK via Cks1 and an LxF Motif Hide caption ( A ) G1-, S-, and M-Cdk1 complexes show different specificity toward Cdc6 ."
-      },
-      {
-        "text":"M-Cdk1",
-        "xref_id":"UAZ01120",
-        "namespace":"uaz",
-        "sentence":"Figure 1 Cdc6 Inhibits M-CDK via Cks1 and an LxF Motif Hide caption ( A ) G1-, S-, and M-Cdk1 complexes show different specificity toward Cdc6 ."
-      },
-      {
-        "text":"wild-type M-CDK",
-        "xref_id":"UAZ01119",
-        "namespace":"uaz",
-        "sentence":"( B ) To test the inhibition of M-CDK by Cdc6 , increasing amounts of purified Cdc6 were used in a histone H1 kinase assay with either wild-type M-CDK or its hpm version ."
-      },
-      {
-        "text":"E-G",
-        "xref_id":"6427052",
-        "namespace":"pubchem",
-        "sentence":"( E-G ) The Ki values for inhibition of M-CDK histone H1 phosphorylation activity by Cdc6 and its various mutants were measured with either wild-type Cks1 or Cks1 ( mut ) ( phosphopocket mutant , F ) ."
-      },
-      {
-        "text":"fqslp",
-        "xref_id":"UAZ01134",
-        "namespace":"uaz",
-        "sentence":"Cdc6 ( lxf ) carries L47A F49A , and Cdc6 ( fqslp ) carries the triple mutation F126A L129A P130A ."
-      },
-      {
-        "text":"SP",
-        "xref_id":"Q03403",
-        "namespace":"uniprot",
-        "sentence":"Phosphorylation of the SP sites leads to nuclear export of the sensor ."
-      },
-      {
-        "text":"Error bars",
-        "xref_id":"UAZ01113",
-        "namespace":"uaz",
-        "sentence":"Error bars show +/- SEM ."
-      },
-      {
-        "text":"AP",
-        "xref_id":"83525",
-        "namespace":"pubchem",
-        "sentence":"Cdc6 ( AP1-4 ) contains mutations T7A T23A T39A S43A , and in Cdc6 ( AP ) , all CDK consensus motifs except the indicated one were mutated ."
-      },
-      {
-        "text":"Phos-tag SDS-PAGE",
-        "xref_id":"UAZ01082",
-        "namespace":"uaz",
-        "sentence":"Autoradiographs of Phos-tag SDS-PAGE ."
-      },
-      {
-        "text":"Cdc6-M-CDK inhibitory complex",
-        "xref_id":"UAZ01092",
-        "namespace":"uaz",
-        "sentence":"( J ) Diagram illustrating the shielding mechanism of the N-terminal degron and Cdc6 licensing activity in the Cdc6-M-CDK inhibitory complex ."
-      },
-      {
-        "text":"NLS-NES-GFP Cdk1",
-        "xref_id":"UAZ01131",
-        "namespace":"uaz",
-        "sentence":"Figure 4 LxF Targets M-CDK for Spo12 Phosphorylation , Leading to FEAR Network Activation Hide caption ( A ) The NLS-NES-GFP Cdk1 activity sensor was used to measure the timing of Cdc14 phosphatase activation after spindle elongation in a live cell microscopy assay ."
-      },
-      {
-        "text":"FEAR",
-        "xref_id":"Q47129",
-        "namespace":"uniprot",
-        "sentence":"Figure 4 LxF Targets M-CDK for Spo12 Phosphorylation , Leading to FEAR Network Activation Hide caption ( A ) The NLS-NES-GFP Cdk1 activity sensor was used to measure the timing of Cdc14 phosphatase activation after spindle elongation in a live cell microscopy assay ."
-      },
-      {
-        "text":"WT",
-        "xref_id":"UAZ00221",
-        "namespace":"uaz",
-        "sentence":"WT/hpm shows the relative phosphorylation rate of Spo12 between Clb2 ( WT ) and Clb2 ( hpm ) ."
-      },
-      {
-        "text":"Sic1 amino acids 1-33",
-        "xref_id":"UAZ01102",
-        "namespace":"uaz",
-        "sentence":"( G ) A model substrate based on Sic1 amino acids 1-33 with a minimal consensus phosphorylation site ( SP ) at a 24-amino-acid distance from the LxF motif ( PEKLQF from Cdc6 ) was used to study LxF as a linear docking motif ."
-      },
-      {
-        "text":"PEKLQF",
-        "xref_id":"UAZ01078",
-        "namespace":"uaz",
-        "sentence":"( G ) A model substrate based on Sic1 amino acids 1-33 with a minimal consensus phosphorylation site ( SP ) at a 24-amino-acid distance from the LxF motif ( PEKLQF from Cdc6 ) was used to study LxF as a linear docking motif ."
-      },
-      {
-        "text":"Lat",
-        "xref_id":"O43561",
-        "namespace":"uniprot",
-        "sentence":"( C ) The onset of anaphase in strains expressing different Swe1 mutants was followed after release of cells from pheromone induced G1 arrest to medium containing Lat B. Spindle elongation was determined using Spc42-mCherry ."
-      },
-      {
-        "text":"Clb2-Cdk1-Y19",
-        "xref_id":"UAZ01123",
-        "namespace":"uaz",
-        "sentence":"( E ) Quantified profiles of Clb2-Cdk1-Y19 phosphorylation in a two-way assay for indicated Swe1 mutants ."
-      },
-      {
-        "text":"SD",
-        "xref_id":"P46060",
-        "namespace":"uniprot",
-        "sentence":"The error bars show SD ."
-      },
-      {
-        "text":"Clb2-, Clb5-,",
-        "xref_id":"UAZ01087",
-        "namespace":"uaz",
-        "sentence":"( C ) Autoradiographs of wild-type targets and their LxF mutants from experiments with Clb2-, Clb5-, and Clb2 ( hpm )-Cdk1 ."
-      },
-      {
-        "text":"hpm)-Cdk1",
-        "xref_id":"UAZ01069",
-        "namespace":"uaz",
-        "sentence":"( C ) Autoradiographs of wild-type targets and their LxF mutants from experiments with Clb2-, Clb5-, and Clb2 ( hpm )-Cdk1 ."
-      },
-      {
-        "text":"LxF mutants",
-        "xref_id":"UAZ01083",
-        "namespace":"uaz",
-        "sentence":"( C ) Autoradiographs of wild-type targets and their LxF mutants from experiments with Clb2-, Clb5-, and Clb2 ( hpm )-Cdk1 ."
-      },
-      {
-        "text":"LxF-dependent targets",
-        "xref_id":"UAZ01098",
-        "namespace":"uaz",
-        "sentence":"For comparison , we analyzed two additional LxF dependent targets , Fir1 and N-Swe1 ."
-      },
-      {
-        "text":"Fir1",
-        "xref_id":"P40020",
-        "namespace":"uniprot",
-        "sentence":"For comparison , we analyzed two additional LxF dependent targets , Fir1 and N-Swe1 ."
-      },
-      {
-        "text":"LxF mutant",
-        "xref_id":"UAZ01100",
-        "namespace":"uaz",
-        "sentence":"WT/mut shows the phosphorylation rate of the wild type and the LxF mutant ."
-      },
-      {
-        "text":"wild-type Clb2",
-        "xref_id":"UAZ01066",
-        "namespace":"uaz",
-        "sentence":"WT/hpm denotes the relative phosphorylation rate of wild-type Clb2 and Clb2 ( hpm ) ."
-      },
-      {
-        "text":"arrow",
-        "xref_id":"297",
-        "namespace":"pubchem",
-        "sentence":"The white arrow points to the bud neck ."
-      },
-      {
-        "text":"SPxR site",
-        "xref_id":"UAZ01136",
-        "namespace":"uaz",
-        "sentence":"The obtained values were normalized against the substrate with the SPxR site and no docking sites phosphorylated by Clb2 ( hpm )-Cdk1 ."
       }
     ]
   }
