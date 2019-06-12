@@ -3093,151 +3093,253 @@
   {
     "id":"https://doi.org/10.1016/j.molcel.2019.03.035",
     "organismOrdering": [83333, 511145],
-    "entities":[  
-      {  
+    "entities":[
+      {
         "text":"YgdH",
         "namespace":"ncbi",
         "xref_id":"947266",
         "sentence":"In Escherichia coli , the nucleosidase PpnN ( YgdH ) regulates purine homeostasis by cleaving nucleoside monophosphates and specifically binds ( p ) ppGpp ."
       },
-      {  
+      {
         "text":"PpnN",
         "namespace":"ncbi",
         "xref_id":"947266",
         "sentence":"Here , we show that ( p ) ppGpp stimulates the catalytic activity of PpnN both in vitro and in vivo causing accumulation of several types of nucleobases during stress ."
       },
-      {  
+      {
         "text":"XMP",
         "namespace":"chebi",
         "xref_id":"15652",
         "sentence":"To understand if ( p ) ppGpp affects the catalytic activity of PpnN , we purified His6-PpnN to homogeneity ( see STAR Methods for details ) and used XMP ( 25 muM ) as substrate , because XMP and its cleavage product , xanthine , exhibit significantly different extinction coefficients at 252 nm ( Arent et al. , 2006 ) , and the reaction thus can be followed spectroscopically ."
       },
-      {  
+      {
         "text":"xanthine",
         "namespace":"chebi",
         "xref_id":"15318",
         "sentence":"To understand if ( p ) ppGpp affects the catalytic activity of PpnN , we purified His6-PpnN to homogeneity ( see STAR Methods for details ) and used XMP ( 25 muM ) as substrate , because XMP and its cleavage product , xanthine , exhibit significantly different extinction coefficients at 252 nm ( Arent et al. , 2006 ) , and the reaction thus can be followed spectroscopically ."
       },
-      {  
+      {
         "text":"guanine",
         "namespace":"chebi",
         "xref_id":"16235",
         "sentence":"To further support this , we used guanosine monophosphate ( GMP ) as substrate and monitored the accumulation of the reaction product guanine by untargeted mass spectrometry             ( Fuhrer et al. , 2011 ) ."
       },
-      {  
+      {
         "text":"guanosine monophosphate",
         "namespace":"chebi",
         "xref_id":"17345",
         "sentence":"To further support this , we used guanosine monophosphate ( GMP ) as substrate and monitored the accumulation of the reaction product guanine by untargeted mass spectrometry             ( Fuhrer et al. , 2011 ) ."
       },
-      {  
+      {
         "text":"GMP",
         "namespace":"chebi",
         "xref_id":"17345",
         "sentence":"To further support this , we used guanosine monophosphate ( GMP ) as substrate and monitored the accumulation of the reaction product guanine by untargeted mass spectrometry             ( Fuhrer et al. , 2011 ) ."
       },
-      {  
+      {
         "text":"pppGpp",
         "namespace":"chebi",
         "xref_id":"16690",
         "sentence":"Taken together , these data conclusively demonstrate that PpnN is capable of cleaving both GMP and XMP into nucleobase and R5P and is stimulated by both ppGpp and pppGpp in the physiological substrate range , with pppGpp having a more pronounced effect ."
       },
-      {  
+      {
         "text":"Gpt",
         "namespace":"ncbi",
         "xref_id":"944817",
         "sentence":"Stimulation of PpnN by ( p ) ppGpp Causes Accumulation of Nucleobases In Vivo The observation that ( p ) ppGpp stimulates purified PpnN to degrade purine nucleotides in vitro complements previous studies showing that the alarmone inhibits the two E. coli phosphoribosyl transferases , Gpt and Hpt , in re-synthesizing the same nucleotides in vivo ( Hochstadt-Ozer and Cashel , 1972 ) ."
       },
-      {  
+      {
         "text":"Hpt",
         "namespace":"ncbi",
         "xref_id":"946624",
         "sentence":"Stimulation of PpnN by ( p ) ppGpp Causes Accumulation of Nucleobases In Vivo The observation that ( p ) ppGpp stimulates purified PpnN to degrade purine nucleotides in vitro complements previous studies showing that the alarmone inhibits the two E. coli phosphoribosyl transferases , Gpt and Hpt , in re-synthesizing the same nucleotides in vivo ( Hochstadt-Ozer and Cashel , 1972 ) ."
       },
-      {  
+      {
         "text":"hypoxanthine",
         "namespace":"chebi",
         "xref_id":"17368",
         "sentence":"Using this approach , we observed a sudden and significant increase in the levels of the nucleobases guanine , xanthine , and hypoxanthine in WT cells at 5 min post induction of starvation , quickly declining to basal levels                     ."
       },
-      {  
+      {
         "text":"cytosine",
         "namespace":"chebi",
         "xref_id":"16040",
         "sentence":"Thymine and cytosine displayed similar trends but of lower magnitude              while adenine could not be identified due to mass overlap with 2-hydroxymethylserine ."
       },
-      {  
+      {
         "text":"Thymine",
         "namespace":"chebi",
         "xref_id":"17821",
         "sentence":"Thymine and cytosine displayed similar trends but of lower magnitude              while adenine could not be identified due to mass overlap with 2-hydroxymethylserine ."
       },
-      {  
+      {
         "text":"adenine",
         "namespace":"chebi",
         "xref_id":"16708",
         "sentence":"Thymine and cytosine displayed similar trends but of lower magnitude              while adenine could not be identified due to mass overlap with 2-hydroxymethylserine ."
       },
-      {  
+      {
         "text":"allantoin",
         "namespace":"chebi",
         "xref_id":"15676",
         "sentence":"We also observed increased levels of two other degradation products of purine nucleobases , urate and allantoin , in the WT strain             ."
       },
-      {  
+      {
         "text":"AMP",
         "namespace":"chebi",
         "xref_id":"16027",
         "sentence":"Alignment with the structure of an uncharacterized nucleotide binding protein from Mycobacterium marinum showing similarity to the PpnN core domain and determined in the presence of adenosine monophosphate ( AMP ) ( PDB : 3SBX , Figure S3C ) ( Baugh et al. , 2015 ) , however , suggests that H157 , R241 , T261 , and E264 of PpnN are likely to be involved in either substrate binding and/or catalysis                      .",
         "loose": true
       },
-      {  
+      {
         "text":"adenosine monophosphate",
         "namespace":"chebi",
         "xref_id":"16027",
         "sentence":"Alignment with the structure of an uncharacterized nucleotide binding protein from Mycobacterium marinum showing similarity to the PpnN core domain and determined in the presence of adenosine monophosphate ( AMP ) ( PDB : 3SBX , Figure S3C ) ( Baugh et al. , 2015 ) , however , suggests that H157 , R241 , T261 , and E264 of PpnN are likely to be involved in either substrate binding and/or catalysis                      ."
       },
-      {  
+      {
         "text":"kanamycin",
         "namespace":"chebi",
         "xref_id":"6104",
         "sentence":"To follow the fraction of DeltappnN cells in the mixed population over time , we replaced the lacZ allele of WT E. coli by a kanamycin resistance cassette ( WT lacZ : : kan ) allowing visual determination of the number of cells of a given type on X-gal plates ( see STAR Methods for details ) ."
       },
-      {  
+      {
         "text":"lacZ",
         "namespace":"ncbi",
         "xref_id":"945006",
         "sentence":"As a control for the effect of the lacZ gene replacement , we repeated the experiment in a setting where the WT strain was co-cultured with a DeltappnN lacZ : : kan strain and obtained similar results ( data not shown ) ."
       },
-      {  
+      {
         "text":"ofloxacin",
         "namespace":"chebi",
         "xref_id":"7731",
         "sentence":"Given the importance of ppnN in competitive fitness , we therefore tested the tolerance of E. coli WT and the DeltappnN strain toward multiple antibiotics , namely ampicillin ( targeting the cell wall ) , gentamicin ( targeting the small ribosomal subunit ) , and the fluoroquinolone antibiotics , ofloxacin and ciprofloxacin ( both targeting DNA gyrase and topoisomerase IV ) ."
       },
-      {  
+      {
         "text":"gentamicin",
         "namespace":"chebi",
         "xref_id":"17833",
         "sentence":"Given the importance of ppnN in competitive fitness , we therefore tested the tolerance of E. coli WT and the DeltappnN strain toward multiple antibiotics , namely ampicillin ( targeting the cell wall ) , gentamicin ( targeting the small ribosomal subunit ) , and the fluoroquinolone antibiotics , ofloxacin and ciprofloxacin ( both targeting DNA gyrase and topoisomerase IV ) ."
       },
-      {  
+      {
         "text":"topoisomerase IV",
         "namespace":null,
         "xref_id":null,
         "sentence":"Given the importance of ppnN in competitive fitness , we therefore tested the tolerance of E. coli WT and the DeltappnN strain toward multiple antibiotics , namely ampicillin ( targeting the cell wall ) , gentamicin ( targeting the small ribosomal subunit ) , and the fluoroquinolone antibiotics , ofloxacin and ciprofloxacin ( both targeting DNA gyrase and topoisomerase IV ) ."
       },
-      {  
+      {
         "text":"ampicillin",
         "namespace":"chebi",
         "xref_id":"28971",
         "sentence":"Given the importance of ppnN in competitive fitness , we therefore tested the tolerance of E. coli WT and the DeltappnN strain toward multiple antibiotics , namely ampicillin ( targeting the cell wall ) , gentamicin ( targeting the small ribosomal subunit ) , and the fluoroquinolone antibiotics , ofloxacin and ciprofloxacin ( both targeting DNA gyrase and topoisomerase IV ) ."
       },
-      {  
+      {
         "text":"ciprofloxacin",
         "namespace":"chebi",
         "xref_id":"100241",
         "sentence":"Given the importance of ppnN in competitive fitness , we therefore tested the tolerance of E. coli WT and the DeltappnN strain toward multiple antibiotics , namely ampicillin ( targeting the cell wall ) , gentamicin ( targeting the small ribosomal subunit ) , and the fluoroquinolone antibiotics , ofloxacin and ciprofloxacin ( both targeting DNA gyrase and topoisomerase IV ) ."
+      }
+    ]
+  },
+  {
+    "id":"https://doi.org/10.1016/j.molcel.2019.04.026",
+    "organismOrdering": [559292],
+    "entities":[
+      {
+        "text":"Cdc6",
+        "xref_id":"853244",
+        "namespace":"ncbi",
+        "sentence":"We uncovered a cyclin docking motif , LxF , that mediates binding of replication factor Cdc6 to mitotic cyclin ."
+      },
+      {
+        "text":"Cks1",
+        "xref_id":"852432",
+        "namespace":"ncbi",
+        "sentence":"This interaction leads to phospho-adaptor Cks1 mediated inhibition of M-CDK to facilitate Cdc6 accumulation and sequestration in mitosis ."
+      },
+      {
+        "text":"Clb3",
+        "xref_id":"851400",
+        "namespace":"ncbi",
+        "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
+      },
+      {
+        "text":"Clb5",
+        "xref_id":"856237",
+        "namespace":"ncbi",
+        "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
+      },
+      {
+        "text":"Clb2",
+        "xref_id":"856236",
+        "namespace":"ncbi",
+        "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
+      },
+      {
+        "text":"Cln2",
+        "xref_id":"855819",
+        "namespace":"ncbi",
+        "sentence":"Cdc6 Inhibits Mitotic CDK , but Not G1-, S-, or G2-CDK Using purified Cdc6 and four cyclin-Cdk1 complexes , we found that although it is a poor substrate for Cln2 ( G1-CDK ) and Clb2 ( M-CDK ) complexes , Cdc6 was efficiently phosphorylated by both Clb5 ( S-CDK ) and Clb3 ( G2-CDK ) complexes            ."
+      },
+      {
+        "text":"Cdk1",
+        "xref_id":"852457",
+        "namespace":"ncbi",
+        "sentence":"Therefore , we propose a mechanism where Cdk1 first phosphorylates the N-terminal TP sites , which then bind to Cks1 , whereas LxF binds to the hp of Clb2 , and , additionally , an interaction between 126FQSLP130 and M-CDK enhances the inhibition            ."
+      },
+      {
+        "text":"SIC1",
+        "xref_id":"850768",
+        "namespace":"ncbi",
+        "sentence":"However , when SIC1 was deleted in the background , the effect of the LxF mutation on the magnitude of nuclear accumulation of the sensor was prominent ."
+      },
+      {
+        "text":"anaphase-promoting complex",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"In addition to Sic1 and Cdc6 , a third negative regulator of Cdk1 in mitotic exit is the anaphase promoting complex ( APC ) , which is responsible for the destruction of cyclins ( Visintin et al. , 1997 , Calzada et al. , 2001 , Archambault et al. , 2003 ) ."
+      },
+      {
+        "text":"APC",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"In addition to Sic1 and Cdc6 , a third negative regulator of Cdk1 in mitotic exit is the anaphase promoting complex ( APC ) , which is responsible for the destruction of cyclins ( Visintin et al. , 1997 , Calzada et al. , 2001 , Archambault et al. , 2003 ) ."
+      },
+      {
+        "text":"CDH1",
+        "xref_id":"852881",
+        "namespace":"ncbi",
+        "sentence":"Deletion of CDH1 , the late mitotic activator of APC , caused a minor drop in G1 levels of the sensor , and the cdc6 ( lxf ) mutation did not lead to a further decrease ."
+      },
+      {
+        "text":"SCF",
+        "xref_id":null,
+        "namespace":null,
+        "sentence":"We analyzed the effect of mutations in the two SCF binding degrons on Cdc6-Citrine levels                            ."
+      },
+      {
+        "text":"Swe1",
+        "xref_id":"853252",
+        "namespace":"ncbi",
+        "sentence":"The LxF Interaction Drives the Regulation of M-CDK by Swe1 In the early cell cycle , Swe1 binds M-CDK to phosphorylate the inhibitory site Y19 in Cdk1 , whereas rising CDK activity leads to multi phosphorylation and inactivation of Swe1 ( Harvey et al. , 2005 ) ."
+      },
+      {
+        "text":"Bni1",
+        "xref_id":"855450",
+        "namespace":"ncbi",
+        "sentence":"We purified two of these targets , Bud3 and Bni1 , and analyzed the cyclin specificity of their phosphorylation ."
+      },
+      {
+        "text":"Bud3",
+        "xref_id":"850345",
+        "namespace":"ncbi",
+        "sentence":"We purified two of these targets , Bud3 and Bni1 , and analyzed the cyclin specificity of their phosphorylation ."
+      },
+      {
+        "text":"Bud6",
+        "xref_id":"851029",
+        "namespace":"ncbi",
+        "sentence":"Both Bni1 and Bud6 are involved in polarized growth and mitotic spindle orientation ( Segal et al. , 2000 , Graziano et al. , 2011 ) ."
       }
     ]
   }
