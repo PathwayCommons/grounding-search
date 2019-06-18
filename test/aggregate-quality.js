@@ -70,14 +70,6 @@ describe('Search and Get Aggregate', function(){
                 expect(results.some(isExpectedResult), `expected result ${expected} in the result set`);
 
                 expect(topResults.some(isExpectedResult), `expected result ${expected} in top ${loose} (${topResults.map(getDispId)})`).to.be.true;
-
-                if( isSameSanitized(firstResult.name, text) ){
-                  // the first result is an exact name match so it's hard to differentiate
-                } else if( firstResult.synonyms.some(syn => isSameSanitized(syn, text)) ){
-                  // the first result has an exact synonym match
-                } else {
-                  throw new Error('The first result is neither the expected result nor an exact text match');
-                }
               }
             } )
           );
