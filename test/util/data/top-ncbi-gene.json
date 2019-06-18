@@ -55,7 +55,8 @@
         "text": "ER",
         "xref_id": "2099",
         "namespace": "ncbi",
-        "sentence": null
+        "sentence": null,
+        "loose": true
       },
       {
         "text": "AKT1",
@@ -229,7 +230,8 @@
         "text": "Leptin",
         "xref_id": "16846",
         "namespace": "ncbi",
-        "sentence": null
+        "sentence": null,
+        "loose": true
       },
       {
         "text": "IL-6",
@@ -415,7 +417,8 @@
         "text": "Delta",
         "xref_id": "42313",
         "namespace": "ncbi",
-        "sentence": null
+        "sentence": null,
+        "loose": true
       },
       {
         "text": "EGFR",
@@ -947,7 +950,7 @@
         "sentence": null
       },
       {
-        "text": "IL1",
+        "text": "IL1b",
         "xref_id": "24494",
         "namespace": "ncbi",
         "sentence": null

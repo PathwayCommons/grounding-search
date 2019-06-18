@@ -536,7 +536,7 @@
       "xref_id": "4208",
       "namespace": "chebi",
       "sentence": "( C and D ) GSEA of glycolysis ( gluconeogenesis ) genes ( C ) and mannose metabolism ( D ) in Foxk1 knockdown and Foxk1 rescued MEFs .",
-      "loose": true
+      "loose": 5
      }
    ]
   },
@@ -1003,8 +1003,8 @@
    "entities": [
     {
       "text": "cytochrome c",
-      "xref_id": "54205",
-      "namespace": "ncbi",
+      "xref_id": "18070",
+      "namespace": "chebi",
       "sentence": "Detachment induced apoptosis in GDH1 knockdown cells was accompanied by a reduction in mitochondrial membrane potential and cytochrome c release                      ."
      },
      {
@@ -1027,8 +1027,8 @@
      },
      {
       "text": "AMPK",
-      "xref_id": "5562",
-      "namespace": "ncbi",
+      "xref_id": null,
+      "namespace": null,
       "sentence": "Autophagy can be enhanced by phosphorylating mouse Beclin1 at S91 and S94 ( S93 and S96 in humans ) by AMPK in response to glucose starvation and at S14 ( S15 in humans ) by ULK1 after amino acid deprivation ( Kim et al. , 2013 , Russell et al. , 2013 ) ."
      },
      {
@@ -1047,18 +1047,20 @@
       "text": "AMP",
       "xref_id": "16027",
       "namespace": "chebi",
+      "loose": true,
       "sentence": "It is known that an increased AMP and ATP ratio activates AMPK ( Mihaylova and Shaw , 2011 ) ."
      },
      {
       "text": "TAK1",
       "xref_id": "6885",
       "namespace": "ncbi",
+      "loose": true,
       "sentence": "AMPKalpha is also phosphorylated by other upstream kinases , calcium/calmodulin dependent protein kinase kinase 2 ( CamKK2 ) and TGF-beta-activated kinase 1 ( TAK1 ) ( Hardie et al. , 2012 , Luo et al. , 2010 ) ."
      },
      {
       "text": "mTORC1",
-      "xref_id": "2475",
-      "namespace": "ncbi",
+      "xref_id": null,
+      "namespace": null,
       "sentence": "Summary  The mammalian Target of Rapamycin Complex 1 ( mTORC1 )-signaling system plays a critical role in the maintenance of cellular homeostasis by sensing and integrating multiple extracellular and intracellular cues ."
      },
      {
@@ -1093,7 +1095,7 @@
      },
      {
       "text": "ErbB2",
-      "xref_id": " 2064",
+      "xref_id": "2064",
       "namespace": "ncbi",
       "sentence": "Extracellular matrix ( ECM ) detached cells are known to be nutrient starved , which limits energy production , whereas estrogen related receptor or oncogenes such as ErbB2 maintain TCA flux through PDK4 upregulation ( Grassian et al. , 2011 , Kamarajugadda et al. , 2012 ) ."
      },
@@ -1249,7 +1251,7 @@
       "sentence": "( E ) Effect of alpha-KG-producing enzymes GPT2 , GOT2 , and IDH2 on alpha-KG and anoikis in GDH1 knockdown cells ."
      },
      {
-      "text": "p-ACC1",
+      "text": "ACC1",
       "xref_id": "31",
       "namespace": "ncbi",
       "sentence": "A549 cells with GDH1 knockdown were transfected with AMPKalpha ( D ) or treated with 100 muM A769662 ( E ) , and cultured under detached conditions followed by anoikis assay ( top ) , ATP assay ( middle ) , and western blot analysis of p-AMPKalpha and p-ACC1 ( bottom ) ."
@@ -1304,7 +1306,7 @@
       "sentence": "Importantly , we also demonstrate that Foxk1 regulates glucose , serine , and nucleotide metabolism directly or through induction of the Hif-1alpha transcription factor in response to mTORC1 signaling ."
      },
      {
-      "text": "p62 (a receptor",
+      "text": "p62",
       "xref_id": "23636",
       "namespace": "ncbi",
       "sentence": "As expected , glutamine ( Gln ) deprivation for short period of time ( 30 min ) induced autophagy , as evidenced by an increased conversion of LC3B-I to LC3B-II ( a phosphatidylethanolamine derivative of LC3B-I ) and induced degradation of p62 ( a receptor for cargo destined to be degraded by autophagy ) in U87 human glioblastoma ( GBM ) cells             ."
@@ -1349,8 +1351,9 @@
       "text": "phosphate",
       "xref_id": "18367",
       "namespace": "chebi",
-      "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) ."
-     },
+      "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) .",
+      "loose": 10
+    },
      {
       "text": "3-phosphoglycerate",
       "xref_id": "17794",
@@ -1601,7 +1604,7 @@
       "sentence": "Importantly , we also demonstrate that Foxk1 regulates glucose , serine , and nucleotide metabolism directly or through induction of the Hif-1alpha transcription factor in response to mTORC1 signaling ."
      },
      {
-      "text": "p62 (a receptor",
+      "text": "p62",
       "xref_id": "23636",
       "namespace": "ncbi",
       "sentence": "As expected , glutamine ( Gln ) deprivation for short period of time ( 30 min ) induced autophagy , as evidenced by an increased conversion of LC3B-I to LC3B-II ( a phosphatidylethanolamine derivative of LC3B-I ) and induced degradation of p62 ( a receptor for cargo destined to be degraded by autophagy ) in U87 human glioblastoma ( GBM ) cells             ."
@@ -1647,7 +1650,7 @@
       "xref_id": "18367",
       "namespace": "chebi",
       "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) .",
-      "loose": true
+      "loose": 10
     },
      {
       "text": "3-phosphoglycerate",
@@ -1995,7 +1998,7 @@
   },
   {
    "id": "https://doi.org/10.1016/j.molcel.2011.01.014",
-   "organismOrdering": [10116],
+   "organismOrdering": [9606, 10116, 10090],
    "entities": [
     {
       "text": "myc",
@@ -2092,8 +2095,9 @@
       "text": "CDK4",
       "xref_id": "1019",
       "namespace": "ncbi",
-      "sentence": "Unlike deregulated MYC , serum can stimulate RB phosphorylation via its more potent influence on CYCD and CDK4 ,6 activity ( Leone et al. , 1997 ) ."
-     },
+      "sentence": "Unlike deregulated MYC , serum can stimulate RB phosphorylation via its more potent influence on CYCD and CDK4 ,6 activity ( Leone et al. , 1997 ) .",
+      "loose": true
+    },
      {
       "text": "Hoechst 33258",
       "xref_id": "52082",
