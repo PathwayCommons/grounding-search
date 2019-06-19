@@ -3346,5 +3346,170 @@
         "sentence":"Both Bni1 and Bud6 are involved in polarized growth and mitotic spindle orientation ( Segal et al. , 2000 , Graziano et al. , 2011 ) ."
       }
     ]
+  },
+  {
+    "id": "https://doi.org/10.1016/j.molcel.2019.05.019",
+    "organismOrdering": [9606],
+    "entities": [
+      {
+        "text": "ChREBP",
+        "namespace": "ncbi",
+        "xref_id": "51085",
+        "sentence": "HCF-1 Regulates De Novo Lipogenesis through a Nutrient Sensitive Complex with ChREBP  Elizabeth A. Lane , Dong Wook Choi , Luisa Garcia-Haro , Zebulon G. Levine , Meghan Tedoldi , Suzanne Walker , Nika N. Danial  DOI : https://doi.org/10.1016/j.molcel.2019.05.019  Summary Carbohydrate response element binding protein ( ChREBP ) is a key transcriptional regulator of de novo lipogenesis ( DNL ) in response to carbohydrates and in hepatic steatosis ."
+      },
+      {
+        "text": "HCF-1",
+        "namespace": "ncbi",
+        "xref_id": "3054",
+        "sentence": "HCF-1 Regulates De Novo Lipogenesis through a Nutrient Sensitive Complex with ChREBP  Elizabeth A. Lane , Dong Wook Choi , Luisa Garcia-Haro , Zebulon G. Levine , Meghan Tedoldi , Suzanne Walker , Nika N. Danial  DOI : https://doi.org/10.1016/j.molcel.2019.05.019  Summary Carbohydrate response element binding protein ( ChREBP ) is a key transcriptional regulator of de novo lipogenesis ( DNL ) in response to carbohydrates and in hepatic steatosis ."
+      },
+      {
+        "text": "OGT",
+        "namespace": "ncbi",
+        "xref_id": "8473",
+        "sentence": "Biochemical and genetic studies show that HCF-1 is O GlcNAcylated in response to glucose as a prerequisite for its binding to ChREBP and subsequent recruitment of OGT , ChREBP O GlcNAcylation , and activation ."
+      },
+      {
+        "text": "PHF2",
+        "namespace": "ncbi",
+        "xref_id": "5253",
+        "sentence": "The HCF-1 : ChREBP complex resides at lipogenic gene promoters , where HCF-1 regulates H3K4 trimethylation to prime recruitment of the Jumonji C domain containing histone demethylase PHF2 for epigenetic activation of these promoters ."
+      },
+      {
+        "text": "BAD",
+        "namespace": "ncbi",
+        "xref_id": "572",
+        "sentence": "ChREBP Dependent De Novo Lipogenesis Is Regulated by BAD Phosphorylation To initially assess glucose modulation of DNL following alterations in BAD , we quantified incorporation of glucose carbons into lipid fractions of wild-type ( WT ) and Bad-/- primary hepatocytes following incubation with low ( 5 mM ) versus high ( 25 mM ) glucose concentrations ."
+      },
+      {
+        "text": "GK",
+        "namespace": "ncbi",
+        "xref_id": "2645",
+        "sentence": "This defect was fully reversed by genetic reconstitution with the phosphomimic BAD S155D variant , capable of activating GK but not the phospho deficient BAD AAA variant , harboring triple Ala mutations within the BAD BH3 domain ( L151A , S155A , and D156A ) that blunt its GK activating capacity ( Danial et al. , 2008 , Gimenez-Cassina et al. , 2014 ; Figures 1A and S1A ) .",
+        "loose": 3
+      },
+      {
+        "text": "SREBP-1C",
+        "namespace": "ncbi",
+        "xref_id": "6720",
+        "sentence": "Hepatic lipogenesis is substantially regulated at the transcriptional level by the sterol regulatory element binding protein-1C ( SREBP-1C ) and ChREBP transcription factors , which have overlapping target genes and mediate the input from insulin and glucose , respectively ( Abdul Wahed et al. , 2017 , Agius , 2016b , Herman et al. , 2012 , Uyeda and Repa , 2006 , Wang et al. , 2015 , Yecies et al. , 2011 ) .",
+        "loose": 4
+      },
+      {
+        "text": "sterol regulatory element-binding protein-1C",
+        "namespace": "ncbi",
+        "xref_id": "6720",
+        "sentence": "Hepatic lipogenesis is substantially regulated at the transcriptional level by the sterol regulatory element binding protein-1C ( SREBP-1C ) and ChREBP transcription factors , which have overlapping target genes and mediate the input from insulin and glucose , respectively ( Abdul Wahed et al. , 2017 , Agius , 2016b , Herman et al. , 2012 , Uyeda and Repa , 2006 , Wang et al. , 2015 , Yecies et al. , 2011 ) .",
+        "loose": 3
+      },
+      {
+        "text": "insulin",
+        "namespace": "ncbi",
+        "xref_id": "3630",
+        "sentence": "Hepatic lipogenesis is substantially regulated at the transcriptional level by the sterol regulatory element binding protein-1C ( SREBP-1C ) and ChREBP transcription factors , which have overlapping target genes and mediate the input from insulin and glucose , respectively ( Abdul Wahed et al. , 2017 , Agius , 2016b , Herman et al. , 2012 , Uyeda and Repa , 2006 , Wang et al. , 2015 , Yecies et al. , 2011 ) ."
+      },
+      {
+        "text": "Pdhk",
+        "namespace":null,
+        "xref_id":null,
+        "sentence": "However , the expression of other genes whose transcription is not glucose responsive , such as Chrebpalpha , Srebp-1C , and pyruvate dehydrogenase kinase ( Pdhk ) ( Stamatikos et al. , 2016 , Zhang et al. , 2015 ) , was comparable with WT hepatocytes stimulated with glucose            ."
+      },
+      {
+        "text": "Acc",
+        "namespace": "ncbi",
+        "xref_id": "31",
+        "sentence": "BAD dependent changes in lipogenic gene expression are associated with altered ChREBP activity , as evident from two complementary functional readouts ; luciferase reporters containing the carbohydrate response elements ( ChoREs ) of the L-Pk and Acc genes and chromatin immunoprecipitation ( ChIP ) assays examining promoter occupancy of ChREBP at target genes ."
+      },
+      {
+        "text": "L-Pk",
+        "namespace": "ncbi",
+        "xref_id": "5313",
+        "sentence": "BAD dependent changes in lipogenic gene expression are associated with altered ChREBP activity , as evident from two complementary functional readouts ; luciferase reporters containing the carbohydrate response elements ( ChoREs ) of the L-Pk and Acc genes and chromatin immunoprecipitation ( ChIP ) assays examining promoter occupancy of ChREBP at target genes ."
+      },
+      {
+        "text": "Max-like protein X",
+        "namespace": "ncbi",
+        "xref_id": "6945",
+        "sentence": "Among proteins captured by the anti-FLAG antibody in WT hepatocytes were known ChREBP binding proteins such as Max like protein X ( Mlx ) , an obligate partner of ChREBP ( Ma et al. , 2006 ; Figures S3A-S3C ) ."
+      },
+      {
+        "text": "MG132",
+        "namespace": "chebi",
+        "xref_id": "75142",
+        "sentence": "These experiments were performed in the presence of the proteasome inhibitor MG132 to normalize ChREBP protein stability ( Guinez et al. , 2011 ) because endogenous ChREBP levels were found to be lower in Bad-/- hepatocytes and liver compared with WT controls ( see below ) ."
+      },
+      {
+        "text": "PGC1alpha",
+        "namespace": "ncbi",
+        "xref_id": "10891",
+        "sentence": "In comparison , the HCF-1 : PGC1alpha complex is enriched only at low or basal glucose concentrations or in the fasted state in hepatocytes and liver ( Ruan et al. , 2012 ) , and other HCF-1-containing complexes are not known to be nutrient responsive ( Mazars et al. , 2010 , Thomas et al. , 2016 , Tyagi et al. , 2007 ) ."
+      },
+      {
+        "text": "NRF1",
+        "namespace": "ncbi",
+        "xref_id": "4899",
+        "sentence": "This adaptor like function of HCF-1 has been demonstrated in the context of two interacting partners , PGC1alpha and NRF1 ( Han et al. , 2017 , Ruan et al. , 2012 ) , and remains to be further studied ."
+      },
+      {
+        "text": "UDP-GlcNAc",
+        "namespace": "chebi",
+        "xref_id": "16264",
+        "sentence": "This is a relevant question because factors beyond UDP-GlcNAc levels can regulate protein O GlcNAcylation , as evident from preferential O GlcNAcylation of some OGT substrates under conditions where UDP-GlcNAc levels are reduced ( Ruan et al. , 2012 , Taylor et al. , 2009 , Yang and Qian , 2017 ) ."
+      },
+      {
+        "text": "GFAT",
+        "namespace": null,
+        "xref_id": null,
+        "sentence": "To test this possibility , we used GlcNAc or glucosamine ( GlcN ) , which bypasses the rate limiting reaction catalyzed by glutamine-fructose-6-phosphate aminotransferase ( GFAT ) to enter the HBP upon direct phosphorylation ( Guinez et al. , 2011 ) and found that both were sufficient to restore HCF-1 O GlcNAcylation in Bad-/- hepatocytes                     ."
+      },
+      {
+        "text": "glucosamine",
+        "namespace": "chebi",
+        "xref_id": "5417",
+        "sentence": "To test this possibility , we used GlcNAc or glucosamine ( GlcN ) , which bypasses the rate limiting reaction catalyzed by glutamine-fructose-6-phosphate aminotransferase ( GFAT ) to enter the HBP upon direct phosphorylation ( Guinez et al. , 2011 ) and found that both were sufficient to restore HCF-1 O GlcNAcylation in Bad-/- hepatocytes                     ."
+      },
+      {
+        "text": "glutamine-fructose-6-phosphate aminotransferase",
+        "namespace": null,
+        "xref_id": null,
+        "sentence": "To test this possibility , we used GlcNAc or glucosamine ( GlcN ) , which bypasses the rate limiting reaction catalyzed by glutamine-fructose-6-phosphate aminotransferase ( GFAT ) to enter the HBP upon direct phosphorylation ( Guinez et al. , 2011 ) and found that both were sufficient to restore HCF-1 O GlcNAcylation in Bad-/- hepatocytes                     ."
+      },
+      {
+        "text": "malonyl-CoA",
+        "namespace": "chebi",
+        "xref_id": "15531",
+        "sentence": "These include malonyl-CoA , produced downstream of the glycolytic and oxidative arms of glucose metabolism , as well as NADPH , generated through the pentose phosphate pathway , which are not expected to be restored by GlcNAc treatment ( Alves-Bezerra and Cohen , 2017 , Sanders and Griffin , 2016 ) ."
+      },
+      {
+        "text": "KDM7C",
+        "namespace": "ncbi",
+        "xref_id": "5253",
+        "sentence": "ChREBP has been shown recently to recruit the epigenetic co-activator plant homeodomain finger 2 ( PHF2 ) , also known as KDM7C , which , in turn , demethylates inhibitory H3K9me2 marks at the promoters of ChREBP target genes to enhance transcription ( Bricambert et al. , 2018 ) ."
+      },
+      {
+        "text": "acetyl-CoA carboxylase 1",
+        "namespace": "ncbi",
+        "xref_id": "31",
+        "sentence": "L-PK , liver pyruvate kinase ; Acly , ATP citrate lyase ; Acc1 , acetyl-CoA carboxylase 1 ; Fas , fatty acid synthase ; Elovl6 , Elovl fatty acid elongase 6 ; Scd-1 , stearoyl-CoA desaturase ; Chrebp , carbohydrate response element binding protein ; Srebp-1c , sterol regulatory element binding protein-1C ; Pdhk , pyruvate dehydrogenase kinase ."
+      },
+      {
+        "text": "stearoyl-CoA desaturase",
+        "namespace": "ncbi",
+        "xref_id": "6319",
+        "sentence": "L-PK , liver pyruvate kinase ; Acly , ATP citrate lyase ; Acc1 , acetyl-CoA carboxylase 1 ; Fas , fatty acid synthase ; Elovl6 , Elovl fatty acid elongase 6 ; Scd-1 , stearoyl-CoA desaturase ; Chrebp , carbohydrate response element binding protein ; Srebp-1c , sterol regulatory element binding protein-1C ; Pdhk , pyruvate dehydrogenase kinase ."
+      },
+      {
+        "text": "Elovl fatty acid elongase 6",
+        "namespace": "ncbi",
+        "xref_id": "79071",
+        "sentence": "L-PK , liver pyruvate kinase ; Acly , ATP citrate lyase ; Acc1 , acetyl-CoA carboxylase 1 ; Fas , fatty acid synthase ; Elovl6 , Elovl fatty acid elongase 6 ; Scd-1 , stearoyl-CoA desaturase ; Chrebp , carbohydrate response element binding protein ; Srebp-1c , sterol regulatory element binding protein-1C ; Pdhk , pyruvate dehydrogenase kinase ."
+      },
+      {
+        "text": "Scd-1",
+        "namespace": "ncbi",
+        "xref_id": "6319",
+        "sentence": "L-PK , liver pyruvate kinase ; Acly , ATP citrate lyase ; Acc1 , acetyl-CoA carboxylase 1 ; Fas , fatty acid synthase ; Elovl6 , Elovl fatty acid elongase 6 ; Scd-1 , stearoyl-CoA desaturase ; Chrebp , carbohydrate response element binding protein ; Srebp-1c , sterol regulatory element binding protein-1C ; Pdhk , pyruvate dehydrogenase kinase ."
+      }
+    ]
   }
  ]
