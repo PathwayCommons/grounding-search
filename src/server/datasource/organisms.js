@@ -3,6 +3,8 @@
 import ECOLI_STRAIN_IDS from './strains/e-coli';
 import SCERVISIAE_STRAIN_IDS from './strains/s-cervisiae';
 
+const toString = id => '' + id;
+
 /**
  * An `Organism` object contains the taxon ID of the organism and other data
  * about the organism.
@@ -15,10 +17,10 @@ class Organism {
    * @param {Array[String]} descendantIds An array of taxon IDs for the descendants or strains of the organism.
    */
   constructor(id, name, descendantIds = []){
-    this.id = '' + id;
+    this.id = toString(id);
     this.name = name;
-    this.descendantIds = descendantIds;
-    this.ids = [this.id, ...this.descendantIds].map(id => '' + id);
+    this.descendantIds = descendantIds.map(toString);
+    this.ids = [this.id, ...this.descendantIds];
   }
 
   /**
@@ -27,7 +29,7 @@ class Organism {
    * @returns Returns true if the passed ID matches the main organism ID or one of the descendant IDs.
    */
   is(id){
-    id = '' + id;
+    id = toString(id);
 
     const idMatches = idToCheck => idToCheck === id;
 
@@ -50,16 +52,14 @@ const SORTED_MAIN_ORGANISMS = [
   new Organism(7955, 'Danio rerio')
 ];
 
-const DEFAULT_ORGANISM_ORDERING = SORTED_MAIN_ORGANISMS.reduce((ordering, org) => {
-  org.ids.forEach(id => ordering.push(id));
-
-  return ordering;
-}, []);
+const DEFAULT_ORGANISM_ORDERING = [];
 
 const indexMap = new Map();
 
-DEFAULT_ORGANISM_ORDERING.forEach((id, index) => {
-  indexMap.set(id, index);
+SORTED_MAIN_ORGANISMS.forEach((org, index) => {
+  org.ids.forEach(id => {
+    indexMap.set(id, index);
+  });
 });
 
 /**
@@ -89,8 +89,9 @@ export const getDefaultOrganismIndex = id => {
 export const getOrganismIndex = (id, organismOrdering = []) => {
   if(id == null){ return 0; } // if org doesn't apply, then it's the same as an org match
 
-  const length = organismOrdering.length;
-  const index = organismOrdering === DEFAULT_ORGANISM_ORDERING ? indexMap.get(id) : organismOrdering.indexOf(id);
+  const isDef = organismOrdering === DEFAULT_ORGANISM_ORDERING;
+  const length = isDef ? SORTED_MAIN_ORGANISMS.length : organismOrdering.length;
+  const index = isDef ? indexMap.get(id) : organismOrdering.indexOf(id);
 
   if( index == null || index === -1 ){ // not found
     return length;
