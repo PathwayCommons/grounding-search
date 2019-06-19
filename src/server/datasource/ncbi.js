@@ -8,6 +8,7 @@ import { db } from '../db';
 import DelimitedParser from '../parser/delimited-parser';
 import downloadFile from './download';
 import { updateEntriesFromFile } from './processing';
+import { getOrganismById } from './organisms';
 
 const FILE_PATH = path.join(INPUT_PATH, NCBI_FILE_NAME);
 const ENTRY_NS = 'ncbi';
@@ -48,6 +49,7 @@ const processEntry = entryLine => {
   let type = ENTRY_TYPE;
 
   let organism = nodes[ NODE_INDICES.ORGANISM ];
+  let organismName = getOrganismById(organism).name;
   let id = nodes[ NODE_INDICES.ID ];
   let name = nodes[ NODE_INDICES.SYMBOL ];
 
@@ -59,7 +61,7 @@ const processEntry = entryLine => {
   [ NODE_INDICES.DESCRIPTION, NODE_INDICES.NA_SYMBOL, NODE_INDICES.NA_FULL_NAME ]
     .forEach( i => pushIfValid( synonyms, nodes[ i ] ) );
 
-  return { namespace, type, id, organism, name, synonyms };
+  return { namespace, type, id, organism, organismName, name, synonyms };
 };
 
 const includeEntry = () => true;

@@ -52,15 +52,27 @@ const SORTED_MAIN_ORGANISMS = [
   new Organism(7955, 'Danio rerio')
 ];
 
+const OTHER = new Organism(-1, 'Other');
+
 const DEFAULT_ORGANISM_ORDERING = [];
 
-const indexMap = new Map();
+const idMap = new Map();
 
-SORTED_MAIN_ORGANISMS.forEach((org, index) => {
-  org.ids.forEach(id => {
-    indexMap.set(id, index);
+SORTED_MAIN_ORGANISMS.forEach((organism, index) => {
+  organism.ids.forEach(id => {
+    idMap.set(id, { organism, index });
   });
 });
+
+export const getOrganismById = id => {
+  id = toString(id);
+
+  if( idMap.has(id) ){
+    return idMap.get(id).organism;
+  } else {
+    return OTHER;
+  }
+};
 
 /**
  * Get whether an organism is supported by the system and should be shown in search
@@ -89,9 +101,11 @@ export const getDefaultOrganismIndex = id => {
 export const getOrganismIndex = (id, organismOrdering = []) => {
   if(id == null){ return 0; } // if org doesn't apply, then it's the same as an org match
 
+  id = toString(id);
+
   const isDef = organismOrdering === DEFAULT_ORGANISM_ORDERING;
   const length = isDef ? SORTED_MAIN_ORGANISMS.length : organismOrdering.length;
-  const index = isDef ? indexMap.get(id) : organismOrdering.indexOf(id);
+  const index = isDef ? (idMap.has(id) ? idMap.get(id).index : null) : organismOrdering.indexOf(id);
 
   if( index == null || index === -1 ){ // not found
     return length;
