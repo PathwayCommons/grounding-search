@@ -1066,7 +1066,8 @@
       "text": "oxygen",
       "xref_id": "25805",
       "namespace": "chebi",
-      "sentence": "In fact , cells have evolved intricate networks that ensure their ability to rewire cellular metabolism between anabolic to catabolic processes to reflect the abundance of nutrients , oxygen , energy , and growth factors and allow the cells to thrive and maintain organ function ."
+      "sentence": "In fact , cells have evolved intricate networks that ensure their ability to rewire cellular metabolism between anabolic to catabolic processes to reflect the abundance of nutrients , oxygen , energy , and growth factors and allow the cells to thrive and maintain organ function .",
+      "loose": true
      },
      {
       "text": "fumarate",
@@ -1597,12 +1598,6 @@
       "sentence": "While our screen did not identify ( or not cover ) the same genes as theirs , functional annotation clustering did reveal a strong enrichment of candidate genes in phosphatidylinositol and inositolphosphate metabolism and signaling , including PI3K enzymes and ITPKC ( Data S2 , cluster 2 ) ."
      },
      {
-      "text": "glucose",
-      "xref_id": "17234",
-      "namespace": "chebi",
-      "sentence": "Importantly , we also demonstrate that Foxk1 regulates glucose , serine , and nucleotide metabolism directly or through induction of the Hif-1alpha transcription factor in response to mTORC1 signaling ."
-     },
-     {
       "text": "p62",
       "xref_id": "23636",
       "namespace": "ncbi",
@@ -1619,12 +1614,6 @@
       "xref_id": "8408",
       "namespace": "ncbi",
       "sentence": "This limited enhanced Beclin1 S15 phosphorylation may result from hypermethylation of ULK1/2 promoter and low expression of ULK1/2 in glioma cells ( Shukla et al. , 2014 ) ."
-     },
-     {
-      "text": "lactate",
-      "xref_id": "422",
-      "namespace": "chebi",
-      "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
      {
       "text": "glutathione S-transferase",
@@ -2533,12 +2522,6 @@
         "sentence":"As expected , levels of glycolytic intermediates such as dihydroxyacetone-phosphate and lactate were decreased in cells grown in galactose media                     ."
       },
       {
-        "text":"lactate",
-        "xref_id":"24996",
-        "namespace":"chebi",
-        "sentence":"As expected , levels of glycolytic intermediates such as dihydroxyacetone-phosphate and lactate were decreased in cells grown in galactose media                     ."
-      },
-      {
         "text":"UDP-GlcNAc",
         "xref_id":"16264",
         "namespace":"chebi",
@@ -2597,7 +2580,8 @@
         "text":"eIF2alpha",
         "xref_id":"1965",
         "namespace":"ncbi",
-        "sentence":"Because eIF2alpha is the canonical downstream target of PERK , we next tested whether it mediates the increases in SCs caused by glucose deprivation ."
+        "sentence":"Because eIF2alpha is the canonical downstream target of PERK , we next tested whether it mediates the increases in SCs caused by glucose deprivation .",
+        "loose": true
       },
       {
         "text":"ISRIB",
@@ -3394,7 +3378,8 @@
         "text": "insulin",
         "namespace": "ncbi",
         "xref_id": "3630",
-        "sentence": "Hepatic lipogenesis is substantially regulated at the transcriptional level by the sterol regulatory element binding protein-1C ( SREBP-1C ) and ChREBP transcription factors , which have overlapping target genes and mediate the input from insulin and glucose , respectively ( Abdul Wahed et al. , 2017 , Agius , 2016b , Herman et al. , 2012 , Uyeda and Repa , 2006 , Wang et al. , 2015 , Yecies et al. , 2011 ) ."
+        "sentence": "Hepatic lipogenesis is substantially regulated at the transcriptional level by the sterol regulatory element binding protein-1C ( SREBP-1C ) and ChREBP transcription factors , which have overlapping target genes and mediate the input from insulin and glucose , respectively ( Abdul Wahed et al. , 2017 , Agius , 2016b , Herman et al. , 2012 , Uyeda and Repa , 2006 , Wang et al. , 2015 , Yecies et al. , 2011 ) .",
+        "loose": true
       },
       {
         "text": "Pdhk",
