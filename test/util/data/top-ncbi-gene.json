@@ -1036,7 +1036,6 @@
       {
         "text": "p38",
         "xref_id": "81649",
-        "loose": true,
         "namespace": "ncbi",
         "sentence": null
       },
@@ -1171,8 +1170,7 @@
         "text": "TNFalpha",
         "xref_id": "405785",
         "namespace": "ncbi",
-        "sentence": null,
-        "loose": true
+        "sentence": null
       },
       {
         "text": "dlx2a",

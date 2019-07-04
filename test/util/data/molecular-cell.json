@@ -49,8 +49,7 @@
      "text": "Rif1",
      "xref_id": "55183",
      "namespace": "ncbi",
-     "sentence": "The main determinant for HR mediated repair is resection of the DNA DSB end , which is controlled by a 53BP1 containing protein complex containing Rif1 , PTIP , and Rev7 ( Panier and Boulton , 2014 ) .",
-     "loose": true
+     "sentence": "The main determinant for HR mediated repair is resection of the DNA DSB end , which is controlled by a 53BP1 containing protein complex containing Rif1 , PTIP , and Rev7 ( Panier and Boulton , 2014 ) ."
     },
     {
      "text": "BRCA1",
@@ -1067,7 +1066,8 @@
       "text": "oxygen",
       "xref_id": "25805",
       "namespace": "chebi",
-      "sentence": "In fact , cells have evolved intricate networks that ensure their ability to rewire cellular metabolism between anabolic to catabolic processes to reflect the abundance of nutrients , oxygen , energy , and growth factors and allow the cells to thrive and maintain organ function ."
+      "sentence": "In fact , cells have evolved intricate networks that ensure their ability to rewire cellular metabolism between anabolic to catabolic processes to reflect the abundance of nutrients , oxygen , energy , and growth factors and allow the cells to thrive and maintain organ function .",
+      "loose": true
      },
      {
       "text": "fumarate",
@@ -1598,12 +1598,6 @@
       "sentence": "While our screen did not identify ( or not cover ) the same genes as theirs , functional annotation clustering did reveal a strong enrichment of candidate genes in phosphatidylinositol and inositolphosphate metabolism and signaling , including PI3K enzymes and ITPKC ( Data S2 , cluster 2 ) ."
      },
      {
-      "text": "glucose",
-      "xref_id": "17234",
-      "namespace": "chebi",
-      "sentence": "Importantly , we also demonstrate that Foxk1 regulates glucose , serine , and nucleotide metabolism directly or through induction of the Hif-1alpha transcription factor in response to mTORC1 signaling ."
-     },
-     {
       "text": "p62",
       "xref_id": "23636",
       "namespace": "ncbi",
@@ -1620,12 +1614,6 @@
       "xref_id": "8408",
       "namespace": "ncbi",
       "sentence": "This limited enhanced Beclin1 S15 phosphorylation may result from hypermethylation of ULK1/2 promoter and low expression of ULK1/2 in glioma cells ( Shukla et al. , 2014 ) ."
-     },
-     {
-      "text": "lactate",
-      "xref_id": "422",
-      "namespace": "chebi",
-      "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
      {
       "text": "glutathione S-transferase",
@@ -2056,18 +2044,6 @@
       "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
      },
      {
-      "text": "CYCD",
-      "xref_id": "595",
-      "namespace": "ncbi",
-      "sentence": "First , MYC regulates expression of Cyclin D ( CYCD ) which serves as the regulatory component of kinases that phosphorylate pocket proteins and disrupt their inhibitory activity ( Ewen et al. , 1993 ; Tedesco et al. , 2002 ) ."
-     },
-     {
-      "text": "CYCE",
-      "xref_id": "898",
-      "namespace": "ncbi",
-      "sentence": "Second , activator E2Fs transcriptionally upregulate CYCE which stimulates additional phosphorylation of pocket proteins and prevents them from sequestering activator E2Fs ( Weintraub et al. , 1992 ) ."
-     },
-     {
       "text": "p53",
       "xref_id": "7157",
       "namespace": "ncbi",
@@ -2204,7 +2180,6 @@
      {
       "text": "JUNB",
       "xref_id": "3726",
-      "loose": true,
       "namespace": "ncbi",
       "sentence": "A recent report has shown that lincRNA-p21 can bind JUNB and CTNNB1 mRNAs and suppress their translation ( Yoon et al. , 2012 ) ."
      },
@@ -2398,7 +2373,8 @@
       "text": "p62",
       "namespace": "ncbi",
       "xref_id": "8878",
-      "sentence": "As a positive control , p62 ( also known as SQSTM1 ) was detected as one of the top candidates                      ."
+      "sentence": "As a positive control , p62 ( also known as SQSTM1 ) was detected as one of the top candidates                      .",
+      "loose": true
     },
     {
       "text": "SQSTM1",
@@ -2410,7 +2386,8 @@
       "text": "cytochrome b5",
       "namespace": "ncbi",
       "xref_id": "1528",
-      "sentence": "TEX264-GFP showed a reticular pattern under nutrient rich conditions and colocalized with the ER marker cytochrome b5            ."
+      "sentence": "TEX264-GFP showed a reticular pattern under nutrient rich conditions and colocalized with the ER marker cytochrome b5            .",
+      "loose": true
     },
     {
       "text": "FIP200",
@@ -2545,12 +2522,6 @@
         "sentence":"As expected , levels of glycolytic intermediates such as dihydroxyacetone-phosphate and lactate were decreased in cells grown in galactose media                     ."
       },
       {
-        "text":"lactate",
-        "xref_id":"24996",
-        "namespace":"chebi",
-        "sentence":"As expected , levels of glycolytic intermediates such as dihydroxyacetone-phosphate and lactate were decreased in cells grown in galactose media                     ."
-      },
-      {
         "text":"UDP-GlcNAc",
         "xref_id":"16264",
         "namespace":"chebi",
@@ -2609,7 +2580,8 @@
         "text":"eIF2alpha",
         "xref_id":"1965",
         "namespace":"ncbi",
-        "sentence":"Because eIF2alpha is the canonical downstream target of PERK , we next tested whether it mediates the increases in SCs caused by glucose deprivation ."
+        "sentence":"Because eIF2alpha is the canonical downstream target of PERK , we next tested whether it mediates the increases in SCs caused by glucose deprivation .",
+        "loose": true
       },
       {
         "text":"ISRIB",
@@ -3406,7 +3378,8 @@
         "text": "insulin",
         "namespace": "ncbi",
         "xref_id": "3630",
-        "sentence": "Hepatic lipogenesis is substantially regulated at the transcriptional level by the sterol regulatory element binding protein-1C ( SREBP-1C ) and ChREBP transcription factors , which have overlapping target genes and mediate the input from insulin and glucose , respectively ( Abdul Wahed et al. , 2017 , Agius , 2016b , Herman et al. , 2012 , Uyeda and Repa , 2006 , Wang et al. , 2015 , Yecies et al. , 2011 ) ."
+        "sentence": "Hepatic lipogenesis is substantially regulated at the transcriptional level by the sterol regulatory element binding protein-1C ( SREBP-1C ) and ChREBP transcription factors , which have overlapping target genes and mediate the input from insulin and glucose , respectively ( Abdul Wahed et al. , 2017 , Agius , 2016b , Herman et al. , 2012 , Uyeda and Repa , 2006 , Wang et al. , 2015 , Yecies et al. , 2011 ) .",
+        "loose": true
       },
       {
         "text": "Pdhk",
@@ -3512,96 +3485,96 @@
       }
     ]
   },
-  {  
+  {
     "id":"https://doi.org/10.1016/j.molcel.2019.05.020",
     "organismOrdering": [9606],
-    "entities":[  
-      {  
+    "entities":[
+      {
         "text":"FBXL5",
         "namespace":"ncbi",
         "xref_id":"26234",
         "sentence":"An Oxygen Dependent Interaction between FBXL5 and the CIA Targeting Complex Regulates Iron Homeostasis  Adarsh K. Mayank , Vijaya Pandey , Ajay A. Vashisht , William D. Barshop , Shima Rayatpisheh , Tanu Sharma , Tisha Haque , David N. Powers , James A. Wohlschlegel  DOI : https://doi.org/10.1016/j.molcel.2019.05.020  Summary The iron sensing protein FBXL5 is the substrate adaptor for a SKP1-CUL1-RBX1 E3 ubiquitin ligase complex that regulates the degradation of iron regulatory proteins ( IRPs ) ."
       },
-      {  
+      {
         "text":"CIA",
         "namespace":null,
         "xref_id":null,
         "sentence":"An Oxygen Dependent Interaction between FBXL5 and the CIA Targeting Complex Regulates Iron Homeostasis  Adarsh K. Mayank , Vijaya Pandey , Ajay A. Vashisht , William D. Barshop , Shima Rayatpisheh , Tanu Sharma , Tisha Haque , David N. Powers , James A. Wohlschlegel  DOI : https://doi.org/10.1016/j.molcel.2019.05.020  Summary The iron sensing protein FBXL5 is the substrate adaptor for a SKP1-CUL1-RBX1 E3 ubiquitin ligase complex that regulates the degradation of iron regulatory proteins ( IRPs ) ."
       },
-      {  
+      {
         "text":"MMS19",
         "namespace":"ncbi",
         "xref_id":"64210",
         "sentence":"Here , we describe a mechanism of FBXL5 regulation involving its interaction with the cytosolic Fe-S cluster assembly ( CIA ) targeting complex composed of MMS19 , FAM96B , and CIAO1 ."
       },
-      {  
+      {
         "text":"CIAO1",
         "namespace":"ncbi",
         "xref_id":"9391",
         "sentence":"Here , we describe a mechanism of FBXL5 regulation involving its interaction with the cytosolic Fe-S cluster assembly ( CIA ) targeting complex composed of MMS19 , FAM96B , and CIAO1 ."
       },
-      {  
+      {
         "text":"FAM96B",
         "namespace":"ncbi",
         "xref_id":"51647",
         "sentence":"Here , we describe a mechanism of FBXL5 regulation involving its interaction with the cytosolic Fe-S cluster assembly ( CIA ) targeting complex composed of MMS19 , FAM96B , and CIAO1 ."
       },
-      {  
+      {
         "text":"Skp1",
         "namespace":"ncbi",
         "xref_id":"6500",
         "sentence":"To validate this observation , we performed coimmunoprecipitation ( co-IP ) analyses in cells stably expressing either hemagglutinin ( HA )-FLAG-tagged wild-type ( WT ) FBXL5 or FBXL5-DeltaFbox , a dominant negative mutant of FBXL5 that is defective in Skp1 binding , rendering it unable to incorporate into an active SCFFBXL5 E3 ubiquitin ligase complex ."
       },
-      {  
+      {
         "text":"Ubiquitin",
         "namespace":null,
         "xref_id":null,
         "sentence":"CIA Targeting Complex Is Not a Substrate of the FBXL5-E3 Ubiquitin Ligase Complex To examine the functional relevance of the FBXL5 , CIA , and targeting complex interaction , we tested the hypothesis that the CIA targeting complex was targeted by FBXL5 for ubiquitin dependent degradation in a relationship analogous to the FBXL5-IRP2 interaction ."
       },
-      {  
+      {
         "text":"IRP2",
         "namespace":"ncbi",
         "xref_id":"3658",
         "sentence":"In contrast to IRP2 , which is stabilized by and preferentially co-precipitates with FBXL5-DeltaFbox , the CIA targeting complex interacts equally well with both the Wt and mutant forms of FBXL5 , suggesting that the interaction may differ from the hypothesized E3-substrate relationship            ."
       },
-      {  
+      {
         "text":"IRP1",
         "namespace":"ncbi",
         "xref_id":"48",
         "sentence":"The pattern for IRP1 expression appeared to behave similarly , although the effects were much weaker than was seen with IRP2 , raising questions regarding its potential significance                    ."
       },
-      {  
+      {
         "text":"FAM96A",
         "namespace":"ncbi",
         "xref_id":"84191",
         "sentence":"The positive influence of FAM96A overexpression on IRP2 levels as shown in Figure 2A has been reported previously and has been suggested to exert a stabilizing effect on IRP2 protein levels ( Stehling et al. , 2013 ) ."
       },
-      {  
+      {
         "text":"molecular oxygen",
         "namespace":"chebi",
         "xref_id":"15379",
         "sentence":"Physiological Relevance of the Interaction between FBXL5 and the CIA Targeting Complex Hemerythrin like domains bind molecular oxygen ( O2 ) via two iron atoms coordinated by carboxylate groups and a mu-oxo-bridge ( Ruiz and Bruick , 2014 ) ."
       },
-      {  
+      {
         "text":"TfR1",
         "namespace":"ncbi",
         "xref_id":"7037",
         "sentence":"As shown in Figure S5 , overexpression of FBXL5-DeltaCTBD led to upregulation of the relative mRNA levels of DMT1 and TfR1 as compared to WT FBXL5 overexpression even when cells were subjected to high O2 tension ."
       },
-      {  
+      {
         "text":"DMT1",
         "namespace":"ncbi",
         "xref_id":"4891",
         "sentence":"As shown in Figure S5 , overexpression of FBXL5-DeltaCTBD led to upregulation of the relative mRNA levels of DMT1 and TfR1 as compared to WT FBXL5 overexpression even when cells were subjected to high O2 tension .",
         "loose": true
       },
-      {  
+      {
         "text":"cobalt chloride",
         "namespace":"chebi",
         "xref_id":"35696",
         "sentence":"We tested this possibility by examining how the interaction between FBXL5 and the CIA targeting complex is affected by cobalt chloride ( CoCl2 ) , a well established chemical inducer of hypoxia ( Wu and Yotnda , 2011 ) ."
       },
-      {  
+      {
         "text":"alpha-tubulin",
         "namespace":null,
         "xref_id":null,
