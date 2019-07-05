@@ -17,9 +17,7 @@ const aggregateSearch = entityName => searchEntity( entityName, aggregate );
 const removeTestIndex = () => db.deleteIndex();
 
 describe('Query Aggregate', function(){
-  // loading test data may need a higher timeout
-  // depending on the platform
-  this.timeout(6000);
+  this.timeout(10000);
 
   if ( buildIndex ) {
     before(updateTestData);

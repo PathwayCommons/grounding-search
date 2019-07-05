@@ -5,6 +5,7 @@ import { sanitizeNameForCmp } from '../util';
 
 const TYPE = 'entry';
 const NS_FIELD = 'namespace';
+const ORG_FIELD = 'organism';
 
 /**
  * @exports db
@@ -215,6 +216,58 @@ const db = {
     return client.bulk( { body, refresh } );
   },
   /**
+   * Update the given entries in elasticsearch index dedicated for the app.
+   * @param {array} updates An array of objects each of which defines the updates
+   * to be applied on an entity.
+   * @param {string} namespace Namespace  whose entities are to be updated e.g. 'uniprot', 'chebi', ...
+   * @param {boolean} [refresh=false] Whether to refresh the index after the operation is completed.
+   * This parameter should be used carefully because refreshing after every insert would decrease
+   * the performance.
+   * See: https://www.elastic.co/guide/en/elasticsearch/guide/current/near-real-time.html#refresh-api
+   * @returns {Promise}
+   */
+  updateEntries: function( updates, namespace, refresh = false ){
+    let client = this.connect();
+    let body = [];
+
+    updates.forEach( update => {
+      body.push( { update: { _index: INDEX, _type: TYPE, _id: (namespace + ':' + update.id).toUpperCase() } } );
+      body.push( { doc: update.updates } );
+    } );
+
+    if( body.length === 0 ){
+      throw new Error('Can not update DB from empty list');
+    }
+
+    return client.bulk( { body, refresh } );
+  },
+  /**
+   * Remove the entries with the given ids from the elasticsearch index dedicated for the app.
+   * @param {array} entryIds Array of entry ids to be removed from the elasticsearch index.
+   * @param {string} namespace Namespace  whose entities are to be removed e.g. 'uniprot', 'chebi', ...
+   * @param {boolean} [refresh=false] Whether to refresh the index after the operation is completed.
+   * This parameter should be used carefully because refreshing after every insert would decrease
+   * the performance.
+   * See: https://www.elastic.co/guide/en/elasticsearch/guide/current/near-real-time.html#refresh-api
+   * @returns {Promise}
+   */
+  removeEntries: function( entryIds, namespace, refresh = false ){
+    let client = this.connect();
+
+    let body = {};
+
+    let i = 0;
+
+    if ( namespace ) {
+      _.set( body, [ 'query', 'bool', 'filter', i, 'term', NS_FIELD ], namespace );
+      i++;
+    }
+
+    _.set( body, [ 'query', 'bool', 'filter', i, 'terms', 'id' ], entryIds );
+
+    return client.deleteByQuery( { index: INDEX, body, refresh } );
+  },
+  /**
    * Retrieve the entities matching best with the search string within maximum search size.
    * @param {string} searchString Key string for searching the best matching entities.
    * @param {string} [namespace=undefined] Namespace to seek the entities e.g. 'uniprot', 'chebi', ...
@@ -304,6 +357,67 @@ const db = {
     }
 
     return client.count( { index: INDEX, body } ).then( res => res.count );
+  },
+  /**
+   * Retrieve the entities having the given organism id/s.
+   * @param {string} orgIds organism id/s to search by.
+   * @param {string} [namespace=undefined] Namespace to seek the entities e.g. 'uniprot', 'chebi', ...
+   * @param {string} [name=undefined] Name of entities that will be placed in search results.
+   * @param {number} [from=0] Offset from the first result to be fetched
+   * @param {number} [size=0] Max amount of hits to be returned.
+   * @param {string} [scroll=undefined] The time to keep the search context open for.
+   * If this parameter is set then from and size parameters are omitted and
+   * all the hits are returned.
+   * @returns {Promise} Promise object represents the array of best matching entities.
+   */
+  searchByOrg: function(orgIds, namespace, name, from = 0, size = MAX_SEARCH_ES, scroll ) {
+    let client = this.connect();
+    let body = { size, from };
+    let index = INDEX;
+    let type = TYPE;
+
+    if ( scroll ) {
+      body = { size: MAX_SEARCH_ES };
+    }
+
+    if ( !_.isArray( orgIds ) ) {
+      orgIds = [ orgIds ];
+    }
+
+    let i = 0;
+
+    if ( namespace ) {
+      _.set( body, ['query', 'bool', 'filter', i, 'term', NS_FIELD], namespace );
+      i++;
+    }
+
+    if ( name ) {
+      _.set( body, ['query', 'bool', 'filter', i, 'term', 'name'], name );
+      i++;
+    }
+
+    _.set( body, ['query', 'bool', 'filter', i, 'terms', ORG_FIELD], orgIds );
+
+    let allResults = [];
+    const processResult = res => res.hits.hits.map( entry => entry._source );
+    const processAndLoadMore = res => {
+      allResults = allResults.concat( processResult( res ) );
+      if ( scroll && res.hits.total != allResults.length ) {
+        return client.scroll( {
+          scrollId: res._scroll_id,
+          scroll
+        } ).then( processAndLoadMore );
+      }
+
+      return Promise.resolve( allResults );
+    };
+
+    let searchParam = { index, type, body };
+    if ( scroll ) {
+      searchParam.scroll = scroll;
+    }
+
+    return client.search(searchParam).then( processAndLoadMore );
   }
 };
 

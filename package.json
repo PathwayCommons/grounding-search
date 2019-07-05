@@ -51,6 +51,7 @@
     "binary-split": "^1.0.5",
     "body-parser": "^1.15.1",
     "cookie-parser": "^1.4.3",
+    "deep-equal-in-any-order": "^1.0.13",
     "dice-coefficient": "^1.0.3",
     "download": "^7.1.0",
     "elasticsearch": "^15.4.1",
