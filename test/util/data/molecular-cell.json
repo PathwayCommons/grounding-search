@@ -222,13 +222,6 @@
      "sentence": "In contrast , in the ADP bound form of ct RUVBL2 , R206 is found somewhat buried and capped by the side chain of Met187                      ."
     },
     {
-     "text": "hydrogen",
-     "xref_id": "49637",
-     "namespace": "chebi",
-     "sentence": "Indeed , while methylation does not change the overall charge of the residue , it does alter the availability of hydrogen donors and increases van der Waals interactive forces ( Liu et al. , 2010 , Yang et al. , 2010 ) .",
-     "loose": true
-    },
-    {
      "text": "TRRAP",
      "xref_id": "8295",
      "namespace": "ncbi",
@@ -697,13 +690,6 @@
       "sentence": "Protein arginine methyltransferases ( PRMTs ) catalyze mono- and dimethylation of the guanidino group of the arginine residue using S-adenosyl methionine ( SAM ) as a methyl donor ."
      },
      {
-      "text": "nitrogen",
-      "xref_id": "25555",
-      "loose": true,
-      "namespace": "chebi",
-      "sentence": "Dimethylation can occur asymmetrically ( ADMA ) , with two methyl groups placed onto one of the terminal nitrogen atoms of the guanidino group , or symmetrically ( SDMA ) , where one methyl group is placed onto each of the terminal nitrogen atoms ."
-     },
-     {
       "text": "PRMT1",
       "xref_id": "3276",
       "namespace": "ncbi",
@@ -756,13 +742,6 @@
       "xref_id": "11200",
       "namespace": "ncbi",
       "sentence": "In contrast , activation of the ATM signaling cascade , determined by the phosphorylation of ATM and its downstream substrates CHK2 and KAP1 , was unaffected by PRMT5 depletion                     ."
-     },
-     {
-      "text": "KAP1",
-      "xref_id": "10155",
-      "namespace": "ncbi",
-      "sentence": "In contrast , activation of the ATM signaling cascade , determined by the phosphorylation of ATM and its downstream substrates CHK2 and KAP1 , was unaffected by PRMT5 depletion                     .",
-      "loose": true
      },
      {
       "text": "camptothecin",
@@ -818,13 +797,6 @@
       "xref_id": "2237",
       "namespace": "ncbi",
       "sentence": "The role of PRMT5 in the DNA damage response has been largely unexplored , with only three known DNA repair substrates , p53 , Fen1 , and Rad9 ( Guo et al. , 2010 , He et al. , 2011 , Jansson et al. , 2008 ) ."
-     },
-     {
-      "text": "hydrogen",
-      "xref_id": "49637",
-      "namespace": "chebi",
-      "sentence": "Indeed , while methylation does not change the overall charge of the residue , it does alter the availability of hydrogen donors and increases van der Waals interactive forces ( Liu et al. , 2010 , Yang et al. , 2010 ) .",
-      "loose": true
      },
      {
       "text": "TRRAP",
@@ -1041,13 +1013,6 @@
       "xref_id": "5324",
       "namespace": "ncbi",
       "sentence": "PLAG1 induces GDH1 expression upon cell detachment from the matrix ."
-     },
-    {
-      "text": "AMP",
-      "xref_id": "16027",
-      "namespace": "chebi",
-      "loose": true,
-      "sentence": "It is known that an increased AMP and ATP ratio activates AMPK ( Mihaylova and Shaw , 2011 ) ."
      },
      {
       "text": "TAK1",
@@ -1348,13 +1313,6 @@
       "sentence": "As expected , glutamine deprivation and mTOR inhibitor Torin1 treatment reduced mTOR mediated p70S6K T389 phosphorylation             ."
      },
      {
-      "text": "phosphate",
-      "xref_id": "18367",
-      "namespace": "chebi",
-      "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) .",
-      "loose": 10
-    },
-     {
       "text": "3-phosphoglycerate",
       "xref_id": "17794",
       "loose": true,
@@ -1567,13 +1525,6 @@
       "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
      },
      {
-      "text": "ARD1",
-      "xref_id": "8260",
-      "loose": true,
-      "namespace": "ncbi",
-      "sentence": "Here , we demonstrate that glutamine deprivation and hypoxia result in inhibition of mTOR mediated acetyl-transferase ARD1 S228 phosphorylation , leading to ARD1 dependent phosphoglycerate kinase 1 ( PGK1 ) K388 acetylation and subsequent PGK1 mediated Beclin1 S30 phosphorylation ."
-     },
-     {
       "text": "VPS34",
       "xref_id": "5289",
       "namespace": "ncbi",
@@ -1634,13 +1585,6 @@
       "sentence": "As expected , glutamine deprivation and mTOR inhibitor Torin1 treatment reduced mTOR mediated p70S6K T389 phosphorylation             ."
      },
      {
-      "text": "phosphate",
-      "xref_id": "18367",
-      "namespace": "chebi",
-      "sentence": "DAPK1 kinase activity has been described to be strictly inhibited by autophosphorylation at serine 308 ( S308 ) ; only upon removal of this phosphate DAPK1 kinase becomes active again ( Shohat et al. , 2002 ) .",
-      "loose": 10
-    },
-     {
       "text": "3-phosphoglycerate",
       "xref_id": "17794",
       "loose": true,
@@ -1682,12 +1626,6 @@
       "xref_id": "72564",
       "namespace": "chebi",
       "sentence": "We compared the survival duration of the 74 patients , all of whom had received standard adjuvant radiotherapy after surgical resection of GBM followed by treatment with an alkylating agent ( temozolomide in most cases ) , with tumor acetylation levels of PGK1 K388 and phosphorylation levels of Beclin1 S30 ."
-     },
-     {
-      "text": "galactose",
-      "xref_id": "28061",
-      "namespace": "chebi",
-      "sentence": "Figure 6 Ectopic PP2ACdc55 Delays Cell-Cycle Progression in a Dosage Dependent Manner ( A ) Increased Cdc55 and Pph21 levels following overexpression of these PP2ACdc55 subunits were analyzed by western blotting from cells growing asynchronously in galactose containing medium ."
      },
      {
       "text": "acetyl-CoA",
@@ -2021,13 +1959,6 @@
      {
       "text": "p107",
       "xref_id": "5933",
-      "namespace": "ncbi",
-      "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
-     },
-     {
-      "text": "p130",
-      "xref_id": "5934",
-      "loose": true,
       "namespace": "ncbi",
       "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
      },

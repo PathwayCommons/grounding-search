@@ -56,12 +56,6 @@
       },
       {
         "namespace": "chebi",
-        "xref_id": "35780",
-        "text": "phosphate",
-        "loose": 5
-      },
-      {
-        "namespace": "chebi",
         "xref_id": "15846",
         "text": "NAD",
         "loose": true
@@ -135,12 +129,6 @@
         "xref_id": "456216",
         "loose": 5,
         "text": "ADP"
-      },
-      {
-        "namespace": "chebi",
-        "xref_id": "26078",
-        "text":"Phosphate",
-        "loose": 5
       }
     ]
   }
