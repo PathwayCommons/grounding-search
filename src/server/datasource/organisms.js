@@ -2,6 +2,7 @@
 
 import ECOLI_STRAIN_IDS from './strains/e-coli';
 import SCERVISIAE_STRAIN_IDS from './strains/s-cervisiae';
+import ROOT_STRAINS from './strains/root';
 
 const toString = id => '' + id;
 
@@ -43,9 +44,9 @@ class Organism {
 const SORTED_MAIN_ORGANISMS = [
   new Organism(9606, 'Homo sapiens'),
   new Organism(10090, 'Mus musculus'),
-  new Organism(4932, 'Saccharomyces cervisiae', SCERVISIAE_STRAIN_IDS),
+  new Organism(ROOT_STRAINS.SCERVISIAE, 'Saccharomyces cervisiae', SCERVISIAE_STRAIN_IDS),
   new Organism(7227, 'Drosophila melanogaster'),
-  new Organism(562, 'Escherichia coli', ECOLI_STRAIN_IDS),
+  new Organism(ROOT_STRAINS.ECOLI, 'Escherichia coli', ECOLI_STRAIN_IDS),
   new Organism(6239, 'Caenorhabditis elegans'),
   new Organism(3702, 'Arabidopsis thaliana'),
   new Organism(10116, 'Rattus norvegicus'),

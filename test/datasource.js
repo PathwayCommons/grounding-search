@@ -28,18 +28,18 @@ function DatasourceTest( opts ) {
     }
 
     it(`update test data ${namespace}`, function( done ){
-      // loading test data may need a higher timeout
-      // depending on the platform
-      this.timeout(6000);
+      this.timeout(10000);
 
       updateTestData().should.be.fulfilled
         .then( () => indexExists().should.eventually.be.equal( true, 'index is created to load data' ) )
-        .then( () => getEntryCount().should.eventually.equal( entryCount, 'all entries are saved to database' ) )
+        .then( () => getEntryCount().should.eventually.equal( entryCount, 'number of entries saved to database is as expected' ) )
         .then( () => done(), error => done(error) );
     });
   });
 
   describe(`Clear Data ${namespace}`, function(){
+    this.timeout(10000);
+
     before( function() {
       if ( buildIndex ) {
         return updateTestData();
@@ -57,6 +57,8 @@ function DatasourceTest( opts ) {
   });
 
   describe(`Search and Get ${namespace}`, function(){
+    this.timeout(10000);
+
     if ( buildIndex ) {
       before(updateTestData);
       after(removeTestIndex);
