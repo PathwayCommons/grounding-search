@@ -203,7 +203,14 @@ describe(`merge strains ${namespace}`, function(){
         }
       } );
 
-      after( removeTestIndex );
+      after( function() {
+        if ( !buildIndex ) {
+          this.skip();
+        }
+        else {
+          return removeTestIndex();
+        }
+      } );
 
       it(`merge strains ${namespace} root exists`, function( done ){
         let synonyms = _.uniq( _.concat( ...entries.map( e => e.synonyms ) ) );
