@@ -42,7 +42,7 @@ describe('Search and Get Aggregate', function(){
             .then( results => {
               const rank = _.findIndex( results,  _.matches( expected ) );
               const actual =  pickRecord( _.head( results ) );
-              const message = JSON.stringify({ text, organismOrdering, rank });
+              const message = JSON.stringify({ text, organismOrdering, expected, actual, rank });
               expect( actual, message ).to.eql( expected );
             })
           );
@@ -52,7 +52,7 @@ describe('Search and Get Aggregate', function(){
           return ( getEnt( namespace, id )
             .then( result => {
               const actual =  pickRecord( result );
-              const message = JSON.stringify({ text });
+              const message = JSON.stringify({ text, expected, actual });
               expect( actual, message ).to.eql( expected );
             } )
           );
