@@ -46,6 +46,8 @@ The following environment variables can be used to configure the server:
 - `npm run refresh` : run clear, update, then start
 - `npm test` : run tests for read only methods (e.g. search and get) assuming that data is already existing
 - `npm test:sample` : run tests with sample data
+- `npm run test:quality` : run the search quality tests (expects full db)
+- `npm run test:quality:csv` : run the search quality tests and output a csv file
 - `npm run lint` : lint the project
 - `npm run benchmark` : run all benchmarking
 - `npm run benchmark:source` : run benchmarking for `source` (i.e. `ncbi`, `chebi`)
@@ -57,8 +59,6 @@ The following environment variables can be used to configure the server:
 - `npm run download:source` download data for `source` (i.e. `ncbi`, `chebi`)
 - `npm run index` : index all data
 - `npm run index:source` : index data for `source` (i.e. `ncbi`, `chebi`) in elasticsearch
-- `npm run test:quality` : run the search quality tests (expects full db)
-- `npm run test:quality:csv` : run the search quality tests and output a csv file
 - `npm run test:inputgen` : generate input test file for each `source` (i.e. `uniprot`, ...)
 - `npm run test:inputgen` : generate input test file for `source` (i.e. `uniprot`, ...)
 
