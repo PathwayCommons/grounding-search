@@ -19,6 +19,7 @@
     "test": "mocha -r esm --exclude test/uniprot.js",
     "test:sample": "cross-env TESTS_BUILD_INDEX=true INPUT_PATH=test/input/ INDEX=graundingsearch-test run-s test",
     "test:quality": "mocha -r esm test/aggregate-quality.js",
+    "test:quality:csv": "mocha -r esm test/aggregate-quality.js --reporter test/util/quality-reporter.js",
     "test:inputgen": "run-s test:inputgen:chebi test:inputgen:ncbi",
     "test:inputgen:uniprot": "node -r esm test/input-generator/uniprot",
     "test:inputgen:chebi": "node -r esm test/input-generator/chebi",
