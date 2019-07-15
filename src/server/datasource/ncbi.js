@@ -147,15 +147,15 @@ const mergeStrains = function(){
 
         let synonyms = _.uniq( _.concat( ancestor.synonyms, ...updates.synonyms ) );
         let ids = _.uniq( _.concat( id, updates.ids ) );
-        let organisms = _.uniq( _.concat( ancestor.organism, updates.organisms ) );
+        let organisms = _.uniq( _.concat( '' + ancestor.organism, updates.organisms ) );
         let organism = updates.organism;
 
-        let sanitizedUpdates = { synonyms, ids, organisms };
+        let mergedUpdates = { synonyms, ids, organisms, organism };
         if ( organism ) {
-          sanitizedUpdates.organism = organism;
+          mergedUpdates.organism = organism;
         }
 
-        chunk.push( { id, ENTRY_NS, updates: { synonyms, ids, organisms } } );
+        chunk.push( { id, ENTRY_NS, updates: mergedUpdates } );
 
         if ( chunk.length === CHUNK_SIZE ) {
           chunks.push( chunk );

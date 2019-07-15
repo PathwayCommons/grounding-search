@@ -17,7 +17,14 @@ const searchEnt = ( name, organismOrdering ) => {
 
 const getEnt = ( ns, id ) => aggregate.get( ns, id );
 const removeTestIndex = () => db.deleteIndex();
-const pickRecord = o => _.pick( o, [ 'namespace', 'id' ] );
+const pickRecord = ( o, idPref ) => {
+  let res = _.pick( o, [ 'namespace', 'id' ] );
+  if ( idPref && res.id != idPref && _.includes( o.ids, idPref ) ) {
+    _.set( res, 'id', idPref );
+  }
+
+  return res;
+};
 
 describe('Search and Get Aggregate', function(){
   this.timeout(10000);
@@ -41,7 +48,8 @@ describe('Search and Get Aggregate', function(){
           return ( searchEnt(text, organismOrdering)
             .then( results => {
               const rank = _.findIndex( results,  _.matches( expected ) );
-              const actual =  pickRecord( _.head( results ) );
+              let topRes = _.head( results );
+              const actual =  pickRecord( topRes, expected.id );
               const message = JSON.stringify({ text, organismOrdering, expected, actual, rank });
               expect( actual, message ).to.eql( expected );
             })
@@ -51,7 +59,7 @@ describe('Search and Get Aggregate', function(){
         it(`get ${text}`, function(){
           return ( getEnt( namespace, id )
             .then( result => {
-              const actual =  pickRecord( result );
+              const actual =  pickRecord( result, id );
               const message = JSON.stringify({ text, expected, actual });
               expect( actual, message ).to.eql( expected );
             } )

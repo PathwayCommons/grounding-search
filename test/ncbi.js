@@ -132,49 +132,49 @@ DatasourceTest( opts );
 describe(`merge strains ${namespace}`, function(){
   let testEntries = [
     {
-      "namespace": "ncbi",
-      "type": "protein",
-      "id": "39537837",
-      "organism": "562",
-      "name": "ccdB",
-      "synonyms": [
-        "type II toxin-antitoxin system toxin CcdB"
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '39537837',
+      'organism': '562',
+      'name': 'ccdB',
+      'synonyms': [
+        'type II toxin-antitoxin system toxin CcdB'
       ]
     },
     {
-      "namespace": "ncbi",
-      "type": "protein",
-      "id": "18252830",
-      "organism": "1311757",
-      "name": "ccdB",
-      "synonyms": [
-        "plasmid maintenance protein,Toxin CcdB"
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '18252830',
+      'organism': '1311757',
+      'name': 'ccdB',
+      'synonyms': [
+        'plasmid maintenance protein,Toxin CcdB'
       ]
     },
     {
-      "namespace": "ncbi",
-      "type": "protein",
-      "id": "8164769",
-      "organism": "563770",
-      "name": "ccdB",
-      "synonyms": [
-        "plasmid maintenance protein CcdB"
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '8164769',
+      'organism': '563770',
+      'name': 'ccdB',
+      'synonyms': [
+        'plasmid maintenance protein CcdB'
       ]
     },
     {
-      "namespace": "ncbi",
-      "type": "protein",
-      "id": "9292836",
-      "organism": "762608",
-      "name": "ccdB",
-      "synonyms": [
-        "cytotoxic protein CcdB"
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '9292836',
+      'organism': '762608',
+      'name': 'ccdB',
+      'synonyms': [
+        'cytotoxic protein CcdB'
       ]
     }
   ];
 
   let rootOrgId = 562;
-  let rootEntry = _.find( testEntries, { 'organism': rootOrgId } );
+  let rootEntry = _.find( testEntries, { 'organism': '' + rootOrgId } );
   let descendantEntries = _.difference( testEntries, [ rootEntry ] );
 
   mergeStrainsTest( testEntries, rootOrgId, 'root exists' );
@@ -212,10 +212,10 @@ describe(`merge strains ${namespace}`, function(){
         }
       } );
 
-      it(`merge strains ${namespace} root exists`, function( done ){
+      it(`merge strains ${namespace} ${message}`, function( done ){
         let synonyms = _.uniq( _.concat( ...entries.map( e => e.synonyms ) ) );
         let ids = _.uniq( _.concat( entries.map( e => e.id ) ) );
-        let organisms = _.uniq( _.concat( entries.map( e => e.organism ) ) );
+        let organisms = _.uniq( _.concat( entries.map( e => e.organism ), '' + rootOrgId ) );
 
         searchByOrg().should.be.fulfilled.
           then( res => {
