@@ -320,20 +320,17 @@ const db = {
    */
   get: function( id, namespace ){
     let client = this.connect();
+    let body = {};
 
-    return client.get({
-      id: (namespace + ':' + id).toUpperCase(),
+    _.set( body, ['query', 'bool', 'must', 'multi_match', 'fields'], ['id', 'ids'] );
+    _.set( body, ['query', 'bool', 'must', 'multi_match', 'query'], id );
+    _.set( body, ['query', 'bool', 'filter', 'term', NS_FIELD], namespace );
+
+    return client.search({
+      body,
       index: INDEX,
       type: TYPE
-    }).catch( err => {
-      if ( err.status === 404 ) {
-        // if id is not found resolve null instead of throwing 404 error
-        return Promise.resolve( null );
-      }
-      else {
-        throw err;
-      }
-    } ).then( res => res && res._source );
+    }).then( res => res.hits.hits.map( e => e._source )[0] );
   },
   /**
    * Check if the elasticsearch index dedicated for the app exists.

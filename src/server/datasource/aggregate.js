@@ -2,6 +2,8 @@
 import { db } from '../db';
 import { rankInThread } from './rank';
 import _ from 'lodash';
+import ROOT_STRAINS from './strains/root';
+import { getOrganismById } from './organisms';
 import { MAX_SEARCH_WS, MAX_FUZZ_ES } from '../config';
 
 const filterSearchString = function(searchString){
@@ -28,6 +30,25 @@ const filterSearchString = function(searchString){
  */
 const search = function(searchString, namespace, organismOrdering){
   searchString = filterSearchString(searchString);
+
+  if ( organismOrdering ) {
+    organismOrdering = organismOrdering.map( orgId => {
+      let rootNames = Object.keys( ROOT_STRAINS );
+      for ( let i = 0; i < rootNames.length; i++ ) {
+        let rootOrgId = ROOT_STRAINS[ rootNames[ i ] ];
+        let rootOrg = getOrganismById( rootOrgId );
+        let descendantOrgIds = rootOrg.descendantIds;
+
+        if ( _.includes( descendantOrgIds, '' + orgId ) ) {
+          return rootOrgId;
+        }
+      }
+
+      return orgId;
+    } );
+
+    organismOrdering = _.uniq( organismOrdering );
+  }
 
   const doSearch = fuzziness => db.search(searchString, namespace, fuzziness);
   const doRank = ents => rankInThread(ents, searchString, organismOrdering);
