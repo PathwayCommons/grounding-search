@@ -238,7 +238,7 @@ const mergeStrains = function(){
 
             return registerUpdates( [ mergeInto ], [ mergeFromList ] );
           } );
-        } )
+        } );
     };
 
     const searchAndRegisterDescendants = () => {
