@@ -87,7 +87,7 @@ const getEntryName = entryLine => {
   return name.toLowerCase();
 };
 
-const numberOfMergedDescendants = entities => {
+const numberOfMergedEntities = entities => {
   let count = 0;
 
   Object.keys(ROOT_STRAINS).forEach( rootName => {
@@ -102,7 +102,13 @@ const numberOfMergedDescendants = entities => {
     let descendantsByName = _.groupBy( descendants, e => getEntryName( e ) );
 
     let descendantNames = Object.keys( descendantsByName );
+    let rootNames = Object.keys( rootsByName );
 
+    // if there are multiple roots with the same name and organism
+    // they will be merged into a single root
+    rootNames.forEach( name => {
+      count += ( rootsByName[ name ].length - 1 );
+    } );
 
     descendantNames.forEach( name => {
       count += descendantsByName[ name ].length;
@@ -121,7 +127,7 @@ const numberOfMergedDescendants = entities => {
 const namespace = 'ncbi';
 const entryLines = buildIndex ? readEntryLines() : [];
 const sampleEntityId = buildIndex ? getEntryId( entryLines[ 0 ] ) : '7157';
-const entryCount = entryLines.length - numberOfMergedDescendants(entryLines);
+const entryCount = entryLines.length - numberOfMergedEntities(entryLines);
 const sampleEntityNames = [ 'p53' ];
 const datasource = ncbi;
 
@@ -139,6 +145,16 @@ describe(`merge strains ${namespace}`, function(){
       'name': 'ccdB',
       'synonyms': [
         'type II toxin-antitoxin system toxin CcdB'
+      ]
+    },
+    {
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '39537837-2',
+      'organism': '562',
+      'name': 'ccdB',
+      'synonyms': [
+        'type II toxin-antitoxin system toxin CcdB(2)'
       ]
     },
     {
@@ -174,11 +190,13 @@ describe(`merge strains ${namespace}`, function(){
   ];
 
   let rootOrgId = 562;
-  let rootEntry = _.find( testEntries, { 'organism': '' + rootOrgId } );
-  let descendantEntries = _.difference( testEntries, [ rootEntry ] );
+  let uniqEntries = _.uniqBy( testEntries, e => e.name + '' + e.organism );
+  let rootEntry = _.find( uniqEntries, { 'organism': '' + rootOrgId } );
+  let descendantEntries = _.difference( uniqEntries, [ rootEntry ] );
 
-  mergeStrainsTest( testEntries, rootOrgId, 'root exists' );
-  mergeStrainsTest( descendantEntries, rootOrgId, 'no root' );
+  mergeStrainsTest( testEntries, rootOrgId, 'double root exists' );
+  mergeStrainsTest( uniqEntries, rootOrgId, 'root exists uniqe' );
+  mergeStrainsTest( descendantEntries, rootOrgId, 'no root uniqe' );
 
   function mergeStrainsTest( entries, rootOrgId, message ) {
     describe( `merge strains ${namespace} ${message}`, function(){

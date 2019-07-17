@@ -17,6 +17,7 @@ const ENTRY_NS = 'ncbi';
 const ENTRY_TYPE = 'protein';
 const NODE_DELIMITER = '\t';
 const EMPTY_VALUE = '-';
+const DEFAULT_SCROLL = '10s';
 
 const NODE_INDICES = Object.freeze({
   ORGANISM: 0,
@@ -105,31 +106,19 @@ const update = function(){
 };
 
 const mergeStrains = function(){
+  const getEntryName = e => e && e.name.toLowerCase();
   let rootOrgIds = Object.values( ROOT_STRAINS );
 
   return seqPromise( rootOrgIds, rootOrgId => {
     let rootOrg = getOrganismById( rootOrgId );
     let descendantOrgIds = rootOrg.descendantIds;
-    let ancestorMap = new Map();
+    let rootMap = new Map();
     let updateMap = new Map();
     let toRemoveIds = [];
 
     const findAncestor = function( descendantEntry ){
-      let descendantName = descendantEntry.name;
-      let from = 0;
-      let size = 1;
-
-      // check the cached results first
-      if ( ancestorMap.has( descendantName ) ) {
-        return Promise.resolve( ancestorMap.get( descendantName ) );
-      }
-
-      return db.searchByOrg( rootOrgId, ENTRY_NS, descendantName, from, size )
-        .then( res => res.length == 0 ? null : res[ 0 ] )
-        .then( ancestor => {
-          ancestorMap.set( descendantName, ancestor );
-          return ancestor;
-        } );
+      let descendantName = getEntryName( descendantEntry );
+      return Promise.resolve( rootMap.get( descendantName ) );
     };
 
     const updateDb = function(){
@@ -142,7 +131,7 @@ const mergeStrains = function(){
       }
 
       updateMap.forEach( ( updates, name ) => {
-        let ancestor = ancestorMap.get( name );
+        let ancestor = rootMap.get( name );
         let { id } = ancestor;
 
         let synonyms = _.uniq( _.concat( ancestor.synonyms, ...updates.synonyms ) );
@@ -176,44 +165,87 @@ const mergeStrains = function(){
       return updateChunk().then( removeMergedDescendants );
     };
 
-    const registerUpdates = function( ancestors, descendants ){
-      ancestors.forEach( ( ancestor, i ) => {
-        let descendant = descendants[ i ];
-        let updates = updateMap.has( descendant.name ) ?
-          updateMap.get( descendant.name ) : { synonyms: [], ids: [], organisms: [] };
+    const registerUpdates = function( roots, mergeFromLists ){
+      roots.forEach( ( root, i ) => {
+        let mergeFromList = mergeFromLists[ i ];
 
-        if ( ancestor == null ) {
-          let updatedAncestor = ancestorMap.get( descendant.name );
-          if ( updatedAncestor == null ) {
+        if ( mergeFromList.length == 0 ) {
+          throw 'mergeFromList must not be empty!';
+        }
+
+        let name = getEntryName( mergeFromList[ 0 ] );
+        let updates = updateMap.has( name ) ? updateMap.get( name )
+          : { synonyms: [], ids: [], organisms: [] };
+
+        if ( root == null ) {
+          let updatedRoot = rootMap.get( name );
+          if ( updatedRoot == null ) {
+            if ( mergeFromList.length != 1 ) {
+              throw 'if root is null then mergeFromList must include a single entry which will be converted to a root!';
+            }
+
+            let descendant = mergeFromList[ 0 ];
+
             // the organism of descendant will be updated as the
             // organism of root so keep the old organism in the organisms list
             updates.organisms.push( descendant.organism );
             updates.organism = rootOrgId;
             descendant.organism = rootOrgId;
 
-            ancestorMap.set( descendant.name, descendant );
+            rootMap.set( name, descendant );
           }
           else {
-            ancestor = updatedAncestor;
+            root = updatedRoot;
           }
         }
 
-        if ( ancestor != null ) {
-          updates.synonyms.push( descendant.synonyms );
-          updates.ids.push( descendant.id );
-          updates.organisms.push( descendant.organism );
-          toRemoveIds.push( descendant.id );
+        if ( root != null ) {
+          updates.synonyms.push( ...mergeFromList.map( e => e.synonyms ) );
+          updates.ids.push( ...mergeFromList.map( e => e.id ) );
+          updates.organisms.push( ...mergeFromList.map( e => e.organism ) );
+          toRemoveIds.push( ...mergeFromList.map( e => e.id ) );
         }
 
-        updateMap.set( descendant.name, updates );
+        updateMap.set( name, updates );
       } );
     };
 
-    const searchAndRegister = () => {
+    const searchAndRegisterRoots = () => {
       let name = null;
       let from = null;
       let size = null;
-      let scroll = '10s';
+      let scroll = DEFAULT_SCROLL;
+
+      return db.searchByOrg( rootOrgId, ENTRY_NS, name, from, size, scroll )
+        .then( rootEntries => {
+          if ( rootEntries.length == 0 ) {
+            return Promise.resolve();
+          }
+
+          let rootsByName = _.groupBy( rootEntries, e => getEntryName( e ) );
+          let rootNames = Object.keys( rootsByName );
+
+          return seqPromise( rootNames, name => {
+            let rootsForName = rootsByName[ name ];
+            let mergeInto = rootsForName[ 0 ];
+            let mergeFromList = rootsForName.slice( 1 );
+
+            rootMap.set( name, mergeInto );
+
+            if ( mergeFromList.length === 0 ){
+              return Promise.resolve();
+            }
+
+            return registerUpdates( [ mergeInto ], [ mergeFromList ] );
+          } );
+        } )
+    };
+
+    const searchAndRegisterDescendants = () => {
+      let name = null;
+      let from = null;
+      let size = null;
+      let scroll = DEFAULT_SCROLL;
       const CHUNK_SIZE = 50;
 
       return db.searchByOrg( descendantOrgIds, ENTRY_NS, name, from, size, scroll )
@@ -227,9 +259,13 @@ const mergeStrains = function(){
           return seqPromise( chunks, chunk => {
             let promises = chunk.map( e => findAncestor( e ) );
             return Promise.all( promises )
-              .then( ancestors => registerUpdates( ancestors, chunk ) );
+              .then( ancestors => registerUpdates( ancestors, chunk.map( c => [ c ] ) ) );
           } );
         } );
+    };
+
+    const searchAndRegister = () => {
+      return searchAndRegisterRoots().then( searchAndRegisterDescendants );
     };
 
     return searchAndRegister().then( updateDb );
