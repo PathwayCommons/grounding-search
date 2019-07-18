@@ -170,7 +170,8 @@ const mergeStrains = function(){
         let mergeFromList = mergeFromLists[ i ];
 
         if ( mergeFromList.length == 0 ) {
-          throw 'mergeFromList must not be empty!';
+          let error = new Error('mergeFromList must not be empty!');
+          throw error;
         }
 
         let name = getEntryName( mergeFromList[ 0 ] );
@@ -181,7 +182,8 @@ const mergeStrains = function(){
           let updatedRoot = rootMap.get( name );
           if ( updatedRoot == null ) {
             if ( mergeFromList.length != 1 ) {
-              throw 'if root is null then mergeFromList must include a single entry which will be converted to a root!';
+              let error = new Error('if root is null then mergeFromList must include a single entry which will be converted to a root!');
+              throw error;
             }
 
             let descendant = mergeFromList[ 0 ];
