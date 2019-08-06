@@ -22,8 +22,10 @@ const decoder = new StringDecoder('utf8');
 const ORG_INDEX = 0;
 const ID_INDEX = 1;
 const NAME_INDEX = 2;
+const SYNONYMS_INDEX = 4;
 const LINE_DELIMITER = '\n';
 const NODE_DELIMITER = '\t';
+const EMPTY_VALUE = '-';
 
 /**
  * Returns the nth node in str, where the nodes are splited by the delimiter,
@@ -87,6 +89,30 @@ const getEntryName = entryLine => {
   return name.toLowerCase();
 };
 
+const safeSplit = ( val, delimiter = '|' ) => {
+  if ( !isValidValue( val ) ) {
+    return [];
+  }
+
+  return val.split( delimiter );
+};
+
+const isValidValue = val => val != EMPTY_VALUE && !_.isNil( val );
+
+const getSingleSynonym = entryLine => {
+  let synonymsText = nthStrNode( entryLine, NODE_DELIMITER, SYNONYMS_INDEX );
+  let synonyms = _.uniq( safeSplit( synonymsText ).map( t => t.toLowerCase() ) );
+  if ( synonyms.length == 1 ) {
+    let synonym = synonyms[ 0 ];
+
+    if ( synonym != getEntryName( entryLine ) ) {
+      return synonym;
+    }
+  }
+
+  return undefined;
+};
+
 const numberOfMergedEntities = entities => {
   let count = 0;
 
@@ -100,9 +126,63 @@ const numberOfMergedEntities = entities => {
 
     let rootsByName = _.groupBy( roots, e => getEntryName( e ) );
     let descendantsByName = _.groupBy( descendants, e => getEntryName( e ) );
+    let rootsBySingleSynonym = _.groupBy( roots, e => getSingleSynonym( e ) );
 
     let descendantNames = Object.keys( descendantsByName );
     let rootNames = Object.keys( rootsByName );
+    let singleSynonyms = Object.keys( rootsBySingleSynonym );
+    let appendToByName = new Map();
+    let singleSynonymMergeRefs = new Map();
+
+    const findAppendToName = synonym => {
+      let appendToName = synonym;
+      if ( singleSynonymMergeRefs.has( appendToName ) ) {
+        appendToName = singleSynonymMergeRefs.get( appendToName )
+      }
+      return appendToName;
+    };
+
+    singleSynonyms.forEach( synonym => {
+      let appendToName = findAppendToName( synonym );
+
+      if ( rootsByName[ appendToName ] ) {
+        if ( !appendToByName.has( appendToName ) ) {
+          appendToByName.set( appendToName, [] );
+        }
+
+        let matchingEnts = rootsBySingleSynonym[ synonym ];
+        appendToByName.get( appendToName ).push( ...matchingEnts );
+
+        let matchingNames = _.uniq( matchingEnts.map( e => getEntryName( e ) ) );
+
+        matchingNames.forEach( entryName => {
+          // handle circular single synonym references
+          if ( entryName == appendToName ) {
+            return;
+          }
+
+          singleSynonymMergeRefs.set( entryName, appendToName );
+
+          if ( appendToByName.has( entryName ) ) {
+            let matchingAppendTo = appendToByName.get( entryName );
+            appendToByName.get( appendToName ).push( ...matchingAppendTo );
+            appendToByName.delete( entryName );
+            matchingAppendTo.forEach( e => {
+              singleSynonymMergeRefs.set( getEntryName( e ), appendToName );
+            } );
+          }
+        } );
+      }
+    } );
+
+    let nameSet = new Set();
+    [ ...appendToByName.keys() ].forEach( name => {
+      let ents = appendToByName.get( name );
+      let groupsByEntName = _.groupBy( ents, e => getEntryName( e ) );
+      Object.keys( groupsByEntName ).forEach( n => nameSet.add( n ) );
+    } );
+
+    count += nameSet.size;
 
     // if there are multiple roots with the same name and organism
     // they will be merged into a single root
@@ -190,6 +270,66 @@ describe(`merge strains ${namespace}`, function(){
   ];
 
   let rootOrgId = 562;
+  let singleSynonymEntries = [
+    {
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '1',
+      'organism': '562',
+      'name': 'A',
+      'synonyms': [
+        'B'
+      ]
+    },
+    {
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '2',
+      'organism': '562',
+      'name': 'B',
+      'synonyms': [
+        'C'
+      ]
+    },
+    {
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '3',
+      'organism': '562',
+      'name': 'B',
+      'synonyms': [
+      ]
+    },
+    {
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '4',
+      'organism': '562',
+      'name': 'C',
+      'synonyms': [
+        'D'
+      ]
+    },
+    {
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '5',
+      'organism': '562',
+      'name': 'D',
+      'synonyms': [
+      ]
+    },
+    {
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '6',
+      'organism': '562',
+      'name': 'd',
+      'synonyms': [
+        'B'
+      ]
+    }
+  ];
   let uniqEntries = _.uniqBy( testEntries, e => e.name + '' + e.organism );
   let rootEntry = _.find( uniqEntries, { 'organism': '' + rootOrgId } );
   let descendantEntries = _.difference( uniqEntries, [ rootEntry ] );
@@ -197,6 +337,7 @@ describe(`merge strains ${namespace}`, function(){
   mergeStrainsTest( testEntries, rootOrgId, 'double root exists' );
   mergeStrainsTest( uniqEntries, rootOrgId, 'root exists uniqe' );
   mergeStrainsTest( descendantEntries, rootOrgId, 'no root uniqe' );
+  mergeStrainsTest( singleSynonymEntries, rootOrgId, 'single synonym exists' );
 
   function mergeStrainsTest( entries, rootOrgId, message ) {
     describe( `merge strains ${namespace} ${message}`, function(){
