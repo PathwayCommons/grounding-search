@@ -107,6 +107,13 @@ const update = function(){
 
 const mergeStrains = function(){
   const getEntryName = e => e && e.name.toLowerCase();
+  const getSingleSynonym = e => {
+    if ( e && e.synonyms && e.synonyms.length == 1 ) {
+      return e.synonyms[ 0 ].toLowerCase();
+    }
+
+    return undefined;
+  };
   let rootOrgIds = Object.values( ROOT_STRAINS );
 
   return seqPromise( rootOrgIds, rootOrgId => {
@@ -131,6 +138,11 @@ const mergeStrains = function(){
       }
 
       updateMap.forEach( ( updates, name ) => {
+
+        if ( !rootMap.has( name ) ) {
+          return Promise.resolve();
+        }
+
         let ancestor = rootMap.get( name );
         let { id } = ancestor;
 
@@ -225,10 +237,100 @@ const mergeStrains = function(){
           }
 
           let rootsByName = _.groupBy( rootEntries, e => getEntryName( e ) );
+          let rootsBySingleSynonym = _.groupBy( rootEntries, e => getSingleSynonym( e ) );
+          // merging roots is originally based on the root names but extend that
+          // behaviour by considering the single synonyms with the help of
+          // this map
+          let appendToByName = new Map();
+          // exclude some entities from merge list by name because they are to
+          // be merged into another root caused by their single synonyms
+          let excludeByName = new Map();
+          // keeps track of where entries are merged to because of their single synonyms
+          let singleSynonymMergeRefs = new Map();
           let rootNames = Object.keys( rootsByName );
+          let singleSynonyms = Object.keys( rootsBySingleSynonym );
+
+          const findAppendToName = synonym => {
+            let appendToName = synonym;
+            if ( singleSynonymMergeRefs.has( appendToName ) ) {
+              appendToName = singleSynonymMergeRefs.get( appendToName );
+            }
+            return appendToName;
+          };
+
+          singleSynonyms.forEach( synonym => {
+            let appendToName = findAppendToName( synonym );
+            if ( rootsByName[ appendToName ] ) {
+              if ( !appendToByName.has( appendToName ) ) {
+                appendToByName.set( appendToName, [] );
+              }
+
+              let matchingEnts = rootsBySingleSynonym[ synonym ];
+              let extendedEnts = _.flattenDeep( matchingEnts.map( e => rootsByName[ getEntryName( e ) ] ) );
+
+              appendToByName.get( appendToName ).push( ...extendedEnts );
+
+              extendedEnts.forEach( ent => {
+                const excludeFrom = n => {
+                  if ( !excludeByName.has( n ) ) {
+                    excludeByName.set( n, [] );
+                  }
+
+                  excludeByName.get( n ).push( ent.id );
+                };
+
+                let name = getEntryName( ent );
+                let appendToName = findAppendToName( name );
+                if ( appendToName != name ) {
+                  excludeFrom( appendToName );
+                }
+              } );
+
+              let matchingNames = _.uniq( matchingEnts.map( e => getEntryName( e ) ) );
+              matchingNames.forEach( entryName => {
+                // handle circular single synonym references
+                if ( entryName == appendToName ) {
+                  return;
+                }
+
+                singleSynonymMergeRefs.set( entryName, appendToName );
+                if ( appendToByName.has( entryName ) ) {
+                  let matchingAppendTo = appendToByName.get( entryName );
+                  appendToByName.get( appendToName ).push( ...matchingAppendTo );
+                  appendToByName.delete( entryName );
+                  matchingAppendTo.forEach( e => {
+                    singleSynonymMergeRefs.set( getEntryName( e ), appendToName );
+                  } );
+                }
+              } );
+            }
+          } );
 
           return seqPromise( rootNames, name => {
-            let rootsForName = rootsByName[ name ];
+            // safer to use the clone of array here
+            let rootsForName = rootsByName[ name ].slice(0);
+
+            let appendToName = findAppendToName( name );
+            if ( name && name != appendToName ) {
+              return Promise.resolve();
+            }
+
+            if ( appendToByName.has( name ) ) {
+              rootsForName.push( ...appendToByName.get( name ) );
+            }
+
+            if ( excludeByName.has( name ) ) {
+              let omitIds = excludeByName.get( name );
+              _.remove( rootsForName, r => _.includes( omitIds, r.id ) );
+            }
+
+            if ( rootsForName.length == 0 ) {
+              return Promise.resolve();
+            }
+
+            // the entries that comes from appendToByName may cause duplications
+            rootsForName = _.uniqBy( rootsForName, e => e.id );
+
             let mergeInto = rootsForName[ 0 ];
             let mergeFromList = rootsForName.slice( 1 );
 
