@@ -6,6 +6,8 @@ import { sanitizeNameForCmp } from '../util';
 const TYPE = 'entry';
 const NS_FIELD = 'namespace';
 const ORG_FIELD = 'organism';
+const ROOT_FIELD = 'root';
+const SYNONYMS_FIELD = 'synonyms';
 
 /**
  * @exports db
@@ -415,6 +417,98 @@ const db = {
     }
 
     return client.search(searchParam).then( processAndLoadMore );
+  },
+  /**
+   * Retrieve the entities matching the given properties and having and not having
+   * the fields that must and must not exists respectively.
+   * @param {string} [props={}] The name/value pairs that the entities must have.
+   * @param {string} [mustExists=[]] The fields that the entities must have.
+   * @param {string} [mustNotExists=[]] The fields that the entities must not have.
+   * @param {number} [size=0] Max amount of hits to be returned.
+   * @returns {Promise} Promise object represents the array of first matching entities.
+   */
+  searchByProps: function(props = {}, mustExists = [], mustNotExists = [], size = MAX_SEARCH_ES){
+    const processResult = res => res.hits.hits.map( entry => entry._source );
+
+    let client = this.connect();
+    let body = { size };
+    let index = INDEX;
+    let type = TYPE;
+
+    let i = 0;
+
+    let keys = Object.keys( props );
+    keys.forEach( key => {
+      let val = props[key];
+      let termStr = _.isArray( val ) ? 'terms' : 'term';
+      _.set( body, ['query', 'bool', 'filter', i, termStr, key], val );
+      i++;
+    } );
+
+    i = 0;
+
+    mustExists.forEach( field => {
+      _.set( body, ['query', 'bool', 'must', i, 'exists', 'field'], field );
+      i++;
+    } );
+
+    i = 0;
+
+    mustNotExists.forEach( field => {
+      _.set( body, ['query', 'bool', 'must_not', i, 'exists', 'field'], field );
+      i++;
+    } );
+
+    let searchParam = { index, type, body };
+    return client.search(searchParam).then( processResult );
+  },
+  /**
+   * Retrieve the entities having the given organism id/s.
+   * @param {string} [namespace=undefined] Namespace to seek the entities e.g. 'uniprot', 'chebi', ...
+   * @param {string} [orgId=undefined] The organism id that the entities must have.
+   * @param {number} [size=MAX_SEARCH_ES] Max amount of hits to be returned.
+   * @param {string} [scrollId] If set the next batch after scrollId is retrieved.
+   * @returns {Promise} Promise object represents the array of best matching entities.
+   */
+  scrollSingleSynonymRoots: function( namespace, orgId, size = MAX_SEARCH_ES, scrollId ) {
+    let client = this.connect();
+    let scroll = '10s';
+    let body = { size };
+    let index = INDEX;
+    let type = TYPE;
+
+    const processResult = res => {
+      let hits = res.hits.hits.map( entry => entry._source );
+      let scrollId = res._scroll_id;
+
+      return { hits, scrollId };
+    };
+
+    if ( scrollId ) {
+      return client.scroll( {
+        scrollId,
+        scroll
+      } ).then( processResult );
+    }
+
+    let i = 0;
+    if ( namespace ) {
+      _.set( body, ['query', 'bool', 'filter', i, 'term', NS_FIELD], namespace );
+      i++;
+    }
+
+    if ( orgId ) {
+      _.set( body, ['query', 'bool', 'filter', i, 'term', ORG_FIELD], orgId );
+      i++;
+    }
+
+    _.set( body, ['query', 'bool', 'filter', i, 'term', ROOT_FIELD], true );
+    i++;
+
+    _.set( body, ['query', 'bool', 'filter', i, 'script', 'script', 'source'], `doc['${SYNONYMS_FIELD}'].values.length == 1` );
+    i++;
+
+    return client.search( {index, type, body, scroll} ).then( processResult );
   }
 };
 

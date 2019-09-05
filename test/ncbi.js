@@ -113,6 +113,12 @@ const getSingleSynonym = entryLine => {
   return undefined;
 };
 
+const getSynonyms = entryLine => {
+  let synonymsText = nthStrNode( entryLine, NODE_DELIMITER, SYNONYMS_INDEX );
+  let synonyms = _.uniq( safeSplit( synonymsText ).map( t => t.toLowerCase() ) );
+  return synonyms;
+};
+
 const numberOfMergedEntities = entities => {
   let count = 0;
 
@@ -126,68 +132,28 @@ const numberOfMergedEntities = entities => {
 
     let rootsByName = _.groupBy( roots, e => getEntryName( e ) );
     let descendantsByName = _.groupBy( descendants, e => getEntryName( e ) );
-    let rootsBySingleSynonym = _.groupBy( roots, e => getSingleSynonym( e ) );
+
 
     let descendantNames = Object.keys( descendantsByName );
     let rootNames = Object.keys( rootsByName );
-    let singleSynonyms = Object.keys( rootsBySingleSynonym );
-    let appendToByName = new Map();
-    let singleSynonymMergeRefs = new Map();
-
-    const findAppendToName = synonym => {
-      let appendToName = synonym;
-      if ( singleSynonymMergeRefs.has( appendToName ) ) {
-        appendToName = singleSynonymMergeRefs.get( appendToName )
-      }
-      return appendToName;
-    };
-
-    singleSynonyms.forEach( synonym => {
-      let appendToName = findAppendToName( synonym );
-
-      if ( rootsByName[ appendToName ] ) {
-        if ( !appendToByName.has( appendToName ) ) {
-          appendToByName.set( appendToName, [] );
-        }
-
-        let matchingEnts = rootsBySingleSynonym[ synonym ];
-        appendToByName.get( appendToName ).push( ...matchingEnts );
-
-        let matchingNames = _.uniq( matchingEnts.map( e => getEntryName( e ) ) );
-
-        matchingNames.forEach( entryName => {
-          // handle circular single synonym references
-          if ( entryName == appendToName ) {
-            return;
-          }
-
-          singleSynonymMergeRefs.set( entryName, appendToName );
-
-          if ( appendToByName.has( entryName ) ) {
-            let matchingAppendTo = appendToByName.get( entryName );
-            appendToByName.get( appendToName ).push( ...matchingAppendTo );
-            appendToByName.delete( entryName );
-            matchingAppendTo.forEach( e => {
-              singleSynonymMergeRefs.set( getEntryName( e ), appendToName );
-            } );
-          }
-        } );
-      }
-    } );
-
-    let nameSet = new Set();
-    [ ...appendToByName.keys() ].forEach( name => {
-      let ents = appendToByName.get( name );
-      let groupsByEntName = _.groupBy( ents, e => getEntryName( e ) );
-      Object.keys( groupsByEntName ).forEach( n => nameSet.add( n ) );
-    } );
-
-    count += nameSet.size;
 
     // if there are multiple roots with the same name and organism
     // they will be merged into a single root
     rootNames.forEach( name => {
       count += ( rootsByName[ name ].length - 1 );
+    } );
+
+    rootNames.forEach( name => {
+      let roots = rootsByName[ name ];
+      let allSynonymsArr = roots.map( e => getSynonyms( e ) );
+      let uniqSynonyms = _.uniq( _.concat( ...allSynonymsArr ) );
+
+      if ( uniqSynonyms.length == 1 && uniqSynonyms[0] != name ) {
+        let uniqSynonym = uniqSynonyms[ 0 ];
+        if ( uniqSynonym != name && rootsByName[ uniqSynonym ] ) {
+          count++;
+        }
+      }
     } );
 
     descendantNames.forEach( name => {
@@ -326,7 +292,7 @@ describe(`merge strains ${namespace}`, function(){
       'organism': '562',
       'name': 'd',
       'synonyms': [
-        'B'
+        // 'B'
       ]
     }
   ];
