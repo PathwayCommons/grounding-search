@@ -207,6 +207,10 @@ const db = {
       // remove the main name from the synonym list (if it exists) for the same reason
       _.remove(entry.synonyms, syn => syn.toLowerCase() === entry.name.toLowerCase());
 
+      if ( entry.synonyms.length == 1 ) {
+        entry.singleSynonym = entry.synonyms[ 0 ];
+      }
+
       body.push( { index: { _index: INDEX, _type: TYPE, _id: (entry.namespace + ':' + entry.id).toUpperCase() } } );
       body.push( entry );
     } );

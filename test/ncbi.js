@@ -119,65 +119,14 @@ const getSynonyms = entryLine => {
   return synonyms;
 };
 
-const numberOfMergedEntities = entities => {
-  let count = 0;
-
-  Object.keys(ROOT_STRAINS).forEach( rootName => {
-    let rootOrgId = ROOT_STRAINS[ rootName ];
-    let rootOrg = getOrganismById( rootOrgId );
-    let roots = _.filter( entities, e => getEntryOrg( e ) === '' + rootOrgId );
-
-    let descendantOrgIds = rootOrg.descendantIds;
-    let descendants = _.filter( entities, e => _.includes( descendantOrgIds, getEntryOrg( e ) ) );
-
-    let rootsByName = _.groupBy( roots, e => getEntryName( e ) );
-    let descendantsByName = _.groupBy( descendants, e => getEntryName( e ) );
-
-
-    let descendantNames = Object.keys( descendantsByName );
-    let rootNames = Object.keys( rootsByName );
-
-    // if there are multiple roots with the same name and organism
-    // they will be merged into a single root
-    rootNames.forEach( name => {
-      count += ( rootsByName[ name ].length - 1 );
-    } );
-
-    rootNames.forEach( name => {
-      let roots = rootsByName[ name ];
-      let allSynonymsArr = roots.map( e => getSynonyms( e ) );
-      let uniqSynonyms = _.uniq( _.concat( ...allSynonymsArr ) );
-
-      if ( uniqSynonyms.length == 1 && uniqSynonyms[0] != name ) {
-        let uniqSynonym = uniqSynonyms[ 0 ];
-        if ( uniqSynonym != name && rootsByName[ uniqSynonym ] ) {
-          count++;
-        }
-      }
-    } );
-
-    descendantNames.forEach( name => {
-      count += descendantsByName[ name ].length;
-
-      // if no root one of the descendants will be the root
-      // so decrease the count by 1 in that case
-      if ( rootsByName[ name ] === undefined ){
-        count--;
-      }
-    } );
-  } );
-
-  return count;
-};
-
 const namespace = 'ncbi';
 const entryLines = buildIndex ? readEntryLines() : [];
 const sampleEntityId = buildIndex ? getEntryId( entryLines[ 0 ] ) : '7157';
-const entryCount = entryLines.length - numberOfMergedEntities(entryLines);
+const maxEntryCount = entryLines.length;
 const sampleEntityNames = [ 'p53' ];
 const datasource = ncbi;
 
-let opts = { namespace, sampleEntityNames, sampleEntityId, entryCount, datasource, buildIndex };
+let opts = { namespace, sampleEntityNames, sampleEntityId, maxEntryCount, datasource, buildIndex };
 DatasourceTest( opts );
 
 // Test merge strains algorithm as specific to ncbi
@@ -265,35 +214,6 @@ describe(`merge strains ${namespace}`, function(){
       'name': 'B',
       'synonyms': [
       ]
-    },
-    {
-      'namespace': 'ncbi',
-      'type': 'protein',
-      'id': '4',
-      'organism': '562',
-      'name': 'C',
-      'synonyms': [
-        'D'
-      ]
-    },
-    {
-      'namespace': 'ncbi',
-      'type': 'protein',
-      'id': '5',
-      'organism': '562',
-      'name': 'D',
-      'synonyms': [
-      ]
-    },
-    {
-      'namespace': 'ncbi',
-      'type': 'protein',
-      'id': '6',
-      'organism': '562',
-      'name': 'd',
-      'synonyms': [
-        // 'B'
-      ]
     }
   ];
   let uniqEntries = _.uniqBy( testEntries, e => e.name + '' + e.organism );
@@ -313,7 +233,8 @@ describe(`merge strains ${namespace}`, function(){
         .then( mergeStrains )
         .then( refreshIndex );
       const removeTestIndex = () => db.deleteIndex();
-      const mergeStrains = () => ncbi.mergeStrains();
+      let chunkSize = 2;
+      const mergeStrains = () => ncbi.mergeStrains( chunkSize );
       const insertEntries = () => db.insertEntries( entries, true );
       const searchByOrg = () => db.searchByOrg( rootOrgId, namespace );
       const refreshIndex = () => db.refreshIndex();
@@ -338,18 +259,19 @@ describe(`merge strains ${namespace}`, function(){
       } );
 
       it(`merge strains ${namespace} ${message}`, function( done ){
-        let synonyms = _.uniq( _.concat( ...entries.map( e => e.synonyms ) ) );
+        let synonyms = _.uniq( _.concat( ...entries.map( e => e.synonyms.concat( e.name ) ) ) );
         let ids = _.uniq( _.concat( entries.map( e => e.id ) ) );
         let organisms = _.uniq( _.concat( entries.map( e => e.organism ), '' + rootOrgId ) );
 
         searchByOrg().should.be.fulfilled.
           then( res => {
             let root = res[0];
-            expect(root.synonyms, 'Synonyms of strains are merged correctly to root').to.deep.equalInAnyOrder(synonyms);
+            expect(_.uniq( root.synonyms.concat( root.name ) ), 'Synonyms of strains are merged correctly to root').to.deep.equalInAnyOrder(synonyms);
             expect(root.ids, 'Ids of strains are merged correctly to root').to.deep.equalInAnyOrder(ids);
             expect(root.organisms, 'Organisms of strains are merged correctly to root').to.deep.equalInAnyOrder(organisms);
           } )
-          .then( () => getEntryCount().should.eventually.be.equal( 1, 'All descendants are removed after being merged to root' ) )
+          .
+          then( () => getEntryCount().should.eventually.be.equal( 1, 'All descendants are removed after being merged to root' ) )
           .then( () => done(), error => done(error) );
       });
     } );

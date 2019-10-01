@@ -3,9 +3,9 @@
 import path from 'path';
 import _ from 'lodash';
 
-import { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL, MAX_SEARCH_ES } from '../config';
+import { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL } from '../config';
 import { db } from '../db';
-import { seqPromise } from '../util';
+import { seqPromise, seqOrFunctions } from '../util';
 import DelimitedParser from '../parser/delimited-parser';
 import downloadFile from './download';
 import { updateEntriesFromFile } from './processing';
@@ -103,11 +103,11 @@ const update = function(){
   const refreshIndex = () => db.refreshIndex();
   return download()
     .then(index)
-    .then(mergeStrains)
+    .then( () => mergeStrains() )
     .then(refreshIndex);
 };
 
-const mergeStrains = function(){
+const mergeStrains = function(chunkSize = 500){
   const getEntryName = e => e && e.name.toLowerCase();
   let rootOrgIds = Object.values( ROOT_STRAINS );
 
@@ -124,47 +124,41 @@ const mergeStrains = function(){
       return db.searchByProps( props, mustExists, mustNotExists, size );
     };
 
-    const searchRoot = name => {
-      let bookedRootId = markAsRootMap.get( 'name' ) || promoteToRootMap.get( 'name' );
-      if ( !_.isNil( bookedRootId ) ) {
-        return db.get( bookedRootId, ENTRY_NS );
+    const searchRoot = entity => {
+      let name = getEntryName( entity );
+      let singleSynonym = getSingleSynonym( entity );
+      let props = [name, singleSynonym].filter( p => !_.isNil( p ) );
+
+      for ( let i = 0; i < props.length; i++ ) {
+        let prop = props[ i ];
+        let bookedRootId = prop && ( rootIdMap.get( prop ) );
+
+        if ( !_.isNil( bookedRootId ) ) {
+          return db.get( bookedRootId, ENTRY_NS );
+        }
       }
 
-      return getFirstByProps( { name, [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId } );
-    };
+      let fcns = [
+        () => getFirstByProps( { names: name, [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId } ),
+        () => getFirstByProps( { singleSynonym: name, [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId } )
+      ];
 
-    const updateField = ( ids, field, val ) => {
-      if ( !_.isArray( ids ) ) {
-        ids = [ids];
+      if ( singleSynonym ) {
+        fcns.push(
+          () => getFirstByProps( { names: singleSynonym, [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId } ),
+          () => getFirstByProps( { singleSynonym, [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId } )
+        );
       }
 
-      let updates = ids.map( id => {
-        return { id, updates: { [ field ]: val } };
-      } );
-
-      if ( updates.length == 0 ) {
-        return Promise.resolve();
-      }
-
-      let refresh = false;
-      return db.updateEntries( updates, ENTRY_NS, refresh );
-    };
-
-    const bookRootMarking = entry => {
-      markAsRootMap.set( getEntryName( entry ), entry.id );
+      return seqOrFunctions( fcns );
     };
 
     const bookRootPromotion = entry => {
       let name = getEntryName( entry );
-      originalOrgMap.set( entry.id, entry.organism );
-      promoteToRootMap.set( name, entry.id );
-    };
+      let singleSynonym = getSingleSynonym( entry );
 
-    const markAsRoot = ids => {
-      if ( !_.isArray( ids ) ){
-        ids = [ids];
-      }
-      return updateField( ids, ROOT_FIELD, true );
+      let props = [name, singleSynonym].filter( p => !_.isNil( p ) );
+      props.forEach( p => rootIdMap.set( p, entry.id ) );
     };
 
     const promoteToRoot = ids => {
@@ -194,11 +188,8 @@ const mergeStrains = function(){
     let descendantOrgIds = rootOrg.descendantIds;
     let updateMap = new Map();
     let ancestorById = new Map();
-    let markAsRootMap = new Map();
-    let promoteToRootMap = new Map();
-    let originalOrgMap = new Map();
+    let rootIdMap = new Map();
     let toRemoveIds = [];
-    let singleSynonymMergeRefs = new Map();
 
     const updateDb = function(){
       const handleUpdate = () => {
@@ -210,14 +201,17 @@ const mergeStrains = function(){
 
         updateMap.forEach( ( updates, id ) => {
           let ancestor = ancestorById.get( id );
-          let originalOrg = originalOrgMap.has( id ) ? '' + originalOrgMap.get( id ) : [];
 
           let ancestorIds = ancestor.ids || [];
+          let ancestorNames = ancestor.names || [ ancestor.name ];
+          let ancestorOrganisms = ancestor.organisms || [ '' + ancestor.organism ];
+
+          let names = _.uniq( _.concat( ancestorNames, ...updates.names ) );
           let synonyms = _.uniq( _.concat( ancestor.synonyms, ...updates.synonyms ) );
           let ids = _.uniq( _.concat( '' + id, ancestorIds, ...updates.ids ) );
-          let organisms = _.uniq( _.concat( '' + ancestor.organism, originalOrg, updates.organisms ) );
+          let organisms = _.uniq( _.concat( '' + rootOrgId, ancestorOrganisms, updates.organisms ) );
 
-          let mergedUpdates = { synonyms, ids, organisms };
+          let mergedUpdates = { synonyms, ids, organisms, names };
 
           chunk.push( { id, ENTRY_NS, updates: mergedUpdates } );
         } );
@@ -231,25 +225,18 @@ const mergeStrains = function(){
 
         updateMap = new Map();
         ancestorById = new Map();
-        originalOrgMap = new Map();
         return updateChunk().then( removeMergedDescendants );
       };
 
-      const handleRootMarking = () => {
-        let ids = [ ...markAsRootMap.values() ];
-        markAsRootMap = new Map();
-        return markAsRoot( ids );
-      };
-
       const handleRootPromotion = () => {
-        let ids = [ ...promoteToRootMap.values() ];
-        promoteToRootMap = new Map();
+        let ids = [ ...rootIdMap.values() ];
+        rootIdMap = new Map();
         return promoteToRoot( ids );
       };
 
       const refreshIndex = () => db.refreshIndex();
 
-      return handleRootMarking().then( handleRootPromotion ).then( handleUpdate ).then( refreshIndex );
+      return handleRootPromotion().then( handleUpdate ).then( refreshIndex );
     };
 
     const registerUpdate = function( root, mergeFrom ){
@@ -259,158 +246,51 @@ const mergeStrains = function(){
       }
 
       let updates = updateMap.has( root.id ) ? updateMap.get( root.id )
-        : { synonyms: [], ids: [], organisms: [] };
+        : { synonyms: [], ids: [], organisms: [], names: [] };
 
-      updates.synonyms.push( mergeFrom.synonyms );
+      updates.names.push( mergeFrom.name );
+      updates.synonyms.push( mergeFrom.synonyms.concat( mergeFrom.name ) );
       updates.ids.push( [ mergeFrom.id ], mergeFrom.ids || [] );
       updates.organisms.push( mergeFrom.organism );
       toRemoveIds.push( mergeFrom.id );
 
+      rootIdMap.set( mergeFrom.name, root.id );
       ancestorById.set( root.id, root );
+
       updateMap.set( root.id, updates );
     };
 
-    const findMergeIntoName = entryName => {
-      let mergeIntoName = entryName;
-
-      while ( singleSynonymMergeRefs.has( mergeIntoName ) ) {
-        mergeIntoName = singleSynonymMergeRefs.get( mergeIntoName );
-      }
-
-      return mergeIntoName;
-    };
-
     const getSingleSynonym = e => {
-      if ( e && e.synonyms && e.synonyms.length == 1 ) {
-        return e.synonyms[ 0 ].toLowerCase();
-      }
-
-      return undefined;
+      return e && e.singleSynonym && e.singleSynonym.toLowerCase();
     };
 
-    const mergeRoots = () => {
-      return mergeRootsByName().then( mergeRootsBySingleSynonym );
-      // return mergeRootsByName().then( () => db.refreshIndex() ).then( mergeRootsBySingleSynonym );
-    };
+    const mergeEntities = () => {
+      let props = { [ORG_FIELD]: [ rootOrgId, ...descendantOrgIds ] };
 
-    const mergeRootsBySingleSynonym = () => {
-      let size = MAX_SEARCH_ES;
-      const search = scrollId => db.scrollSingleSynonymRoots( ENTRY_NS, rootOrgId, size, scrollId );
-      const performMerge = () => {
-        let chunkSize = 500;
-        // names of the root entries who has single synonym
-        let ssEntryNames = [ ...singleSynonymMergeRefs.keys() ];
-        let chunks = _.chunk( ssEntryNames, chunkSize );
-
-        return seqPromise( chunks, chunk => {
-          return seqPromise( chunk, entryName => {
-            let mergeIntoName = findMergeIntoName( entryName );
-            let mergeIntoPromise = searchRoot( mergeIntoName );
-            let entryPromise = searchRoot( entryName );
-
-            return Promise.all( [ entryPromise, mergeIntoPromise ] )
-              .then( ( [ entry, mergeInto ] ) => {
-                return registerUpdate( mergeInto, entry );
-              } );
-          } ).then( updateDb );
-        } );
-      };
-
-      const fillSingleSynonymMergeRefs = () => {
-        return search()
-          .then( res => {
-            let rootEntries = res.hits;
-            let scrollId = res.scrollId;
-
-            if ( rootEntries.length == 0 ) {
-              return Promise.resolve();
-            }
-
-            return seqPromise( rootEntries, entry => {
-              let name = getEntryName( entry );
-              let singleSynonym = getSingleSynonym( entry );
-              // Actually the entries that is returned by search() must
-              // be expected to have single synonym field. However, I suspect
-              // that there would be unexpected cases related to elasticsearch
-              // internal logic. Therefore, it is safer to make this check here.
-              if ( _.isNil( singleSynonym ) ) {
-                return Promise.resolve();
-              }
-              return searchRoot( singleSynonym ).then( ssRoot => {
-                // pass the entries whose single synonym does not represented by an entry
-                if ( ssRoot == null ) {
-                  return Promise.resolve();
-                }
-
-                singleSynonymMergeRefs.set( name, singleSynonym );
-                return Promise.resolve();
-              } );
-            } ).then( () => search( scrollId ) );
-          } );
-      };
-
-      return fillSingleSynonymMergeRefs().then( performMerge );
-    };
-
-    const mergeRootsByName = () => {
-      let chunkSize = 500;
-      let props = { [ORG_FIELD]: rootOrgId };
       let mustNotExists = [ ROOT_FIELD ];
       let mustExists = [];
       const search = () => searchByProps( props, mustExists, mustNotExists, chunkSize );
 
       return search()
-        .then( rootEntries => {
-          if ( rootEntries.length == 0 ) {
+        .then( entries => {
+          if ( entries.length == 0 ) {
             return Promise.resolve();
           }
 
-          return seqPromise( rootEntries, entry => {
-            let name = getEntryName( entry );
-            return searchRoot( name ).then( root => {
+          return seqPromise( entries, entry => {
+            return searchRoot( entry ).then( root => {
               if ( root == null ) {
-                return bookRootMarking( entry );
+                return bookRootPromotion( entry );
               }
               else {
                 return registerUpdate( root, entry );
               }
-            } );
-          } ).then( () => updateDb().then( mergeRootsByName ) );
+            });
+          } ).then( () => updateDb().then( mergeEntities ) );
         } );
     };
 
-    const mergeDescendants = () => {
-      let chunkSize = 500;
-      let props = { [ORG_FIELD]: descendantOrgIds };
-      let mustNotExists = [ ROOT_FIELD ];
-      let mustExists = [];
-      const search = () => searchByProps( props, mustExists, mustNotExists, chunkSize );
-      return search()
-        .then( descendantEntries => {
-          if ( descendantEntries.length == 0 ) {
-            return Promise.resolve();
-          }
-
-          return seqPromise( descendantEntries, entry => {
-            let name = getEntryName( entry );
-            // find and use the eventual root name
-            let mergeIntoName = findMergeIntoName( name );
-            return searchRoot( mergeIntoName ).then( root => {
-              if ( root == null ) {
-                return bookRootPromotion( entry );
-              }
-
-              return registerUpdate( root, entry );
-            } );
-          } ).then( () => updateDb().then( mergeDescendants ) );
-        } );
-    };
-
-    const merge = () => {
-      return mergeRoots().then( mergeDescendants );
-    };
-
-    return merge();
+    return mergeEntities();
   } );
 };
 

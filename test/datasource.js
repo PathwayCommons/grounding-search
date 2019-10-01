@@ -4,7 +4,7 @@ import { db } from '../src/server/db';
 import { forceDownload, maxSearchSize } from './util/param';
 
 function DatasourceTest( opts ) {
-  const { sampleEntityNames, sampleEntityId, datasource, namespace, entryCount, buildIndex } = opts;
+  const { sampleEntityNames, sampleEntityId, datasource, namespace, entryCount, minEntryCount, maxEntryCount, buildIndex } = opts;
 
   const updateTestData = () => datasource.update(forceDownload);
   const clearTestData = () => datasource.clear();
@@ -32,7 +32,19 @@ function DatasourceTest( opts ) {
 
       updateTestData().should.be.fulfilled
         .then( () => indexExists().should.eventually.be.equal( true, 'index is created to load data' ) )
-        .then( () => getEntryCount().should.eventually.equal( entryCount, 'number of entries saved to database is as expected' ) )
+        .then( () => {
+          getEntryCount().then( dbEntryCount => {
+            if ( !_.isNil( entryCount ) ) {
+              dbEntryCount.should.be.equal( entryCount, 'number of entries saved to database is as expected' );
+            }
+            if ( !_.isNil( minEntryCount ) ) {
+              dbEntryCount.should.be.least( minEntryCount, 'number of entries saved to database is at least the minimun expectation' );
+            }
+            if ( !_.isNil( maxEntryCount ) ) {
+              dbEntryCount.should.be.most( maxEntryCount, 'number of entries saved to database is at most the maximum expectation' );
+            }
+          } )
+        } )
         .then( () => done(), error => done(error) );
     });
   });
