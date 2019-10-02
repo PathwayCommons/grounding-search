@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 import { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL } from '../config';
 import { db } from '../db';
-import { seqPromise, seqOrFunctions } from '../util';
+import { seqPromise, seqOrFunctions, normalizeName } from '../util';
 import DelimitedParser from '../parser/delimited-parser';
 import downloadFile from './download';
 import { updateEntriesFromFile } from './processing';
@@ -108,7 +108,9 @@ const update = function(){
 };
 
 const mergeStrains = function(chunkSize = 500){
-  const getEntryName = e => e && e.name.toLowerCase();
+  const getNormalizedName = e => e && normalizeName( e.name );
+  const getNormalizedNames = e => e && ( e.names || [ getNormalizedName( e ), getSingleSynonym( e ) ] );
+  const getSingleSynonym = e => e && e.singleSynonym;
   let rootOrgIds = Object.values( ROOT_STRAINS );
 
   return seqPromise( rootOrgIds, rootOrgId => {
@@ -125,7 +127,7 @@ const mergeStrains = function(chunkSize = 500){
     };
 
     const searchRoot = entity => {
-      let name = getEntryName( entity );
+      let name = getNormalizedName( entity );
       let singleSynonym = getSingleSynonym( entity );
       let props = [name, singleSynonym].filter( p => !_.isNil( p ) );
 
@@ -154,7 +156,7 @@ const mergeStrains = function(chunkSize = 500){
     };
 
     const bookRootPromotion = entry => {
-      let name = getEntryName( entry );
+      let name = getNormalizedName( entry );
       let singleSynonym = getSingleSynonym( entry );
 
       let props = [name, singleSynonym].filter( p => !_.isNil( p ) );
@@ -203,11 +205,11 @@ const mergeStrains = function(chunkSize = 500){
           let ancestor = ancestorById.get( id );
 
           let ancestorIds = ancestor.ids || [];
-          let ancestorNames = ancestor.names || [ ancestor.name ];
+          let ancestorNames = getNormalizedNames( ancestor );
           let ancestorOrganisms = ancestor.organisms || [ '' + ancestor.organism ];
 
           let names = _.uniq( _.concat( ancestorNames, ...updates.names ) );
-          let synonyms = _.uniq( _.concat( ancestor.synonyms, ...updates.synonyms ) );
+          let synonyms = _.uniqBy( _.concat( ancestor.synonyms, ...updates.synonyms ), normalizeName );
           let ids = _.uniq( _.concat( '' + id, ancestorIds, ...updates.ids ) );
           let organisms = _.uniq( _.concat( '' + rootOrgId, ancestorOrganisms, updates.organisms ) );
 
@@ -248,20 +250,21 @@ const mergeStrains = function(chunkSize = 500){
       let updates = updateMap.has( root.id ) ? updateMap.get( root.id )
         : { synonyms: [], ids: [], organisms: [], names: [] };
 
-      updates.names.push( mergeFrom.name );
       updates.synonyms.push( mergeFrom.synonyms.concat( mergeFrom.name ) );
       updates.ids.push( [ mergeFrom.id ], mergeFrom.ids || [] );
       updates.organisms.push( mergeFrom.organism );
       toRemoveIds.push( mergeFrom.id );
-
-      rootIdMap.set( mergeFrom.name, root.id );
       ancestorById.set( root.id, root );
-
       updateMap.set( root.id, updates );
-    };
 
-    const getSingleSynonym = e => {
-      return e && e.singleSynonym && e.singleSynonym.toLowerCase();
+      let mergeFromNN = getNormalizedName( mergeFrom );
+      let mergeFromSS = getSingleSynonym( mergeFrom );
+      let mergeFromNames = [ mergeFromNN, mergeFromSS ].filter( n => !_.isNil( n ) );
+      
+      mergeFromNames.forEach( n => {
+        rootIdMap.set( n, root.id );
+        updates.names.push( n );
+      } );
     };
 
     const mergeEntities = () => {

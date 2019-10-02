@@ -10,3 +10,5 @@ export const sanitizeNameForCmp = name => {
     .replace(/[\s-]/g, '')
   );
 };
+
+export const normalizeName = name => name.toLowerCase();

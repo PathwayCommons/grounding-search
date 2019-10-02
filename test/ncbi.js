@@ -7,6 +7,7 @@ import _ from 'lodash';
 import { StringDecoder } from 'string_decoder';
 
 import { NCBI_FILE_NAME, INPUT_PATH  } from '../src/server/config';
+import { normalizeName } from '../src/server/util';
 import { db } from '../src/server/db';
 import { getOrganismById } from '../src/server/datasource/organisms';
 import { isSupportedOrganism } from '../src/server/datasource/organisms';
@@ -86,7 +87,7 @@ const getEntryOrg = entryLine => {
 
 const getEntryName = entryLine => {
   let name = nthStrNode( entryLine, NODE_DELIMITER, NAME_INDEX );
-  return name.toLowerCase();
+  return normalizeName( name );
 };
 
 const safeSplit = ( val, delimiter = '|' ) => {
@@ -101,7 +102,7 @@ const isValidValue = val => val != EMPTY_VALUE && !_.isNil( val );
 
 const getSingleSynonym = entryLine => {
   let synonymsText = nthStrNode( entryLine, NODE_DELIMITER, SYNONYMS_INDEX );
-  let synonyms = _.uniq( safeSplit( synonymsText ).map( t => t.toLowerCase() ) );
+  let synonyms = _.uniq( safeSplit( synonymsText ).map( normalizeName ) );
   if ( synonyms.length == 1 ) {
     let synonym = synonyms[ 0 ];
 
@@ -115,7 +116,7 @@ const getSingleSynonym = entryLine => {
 
 const getSynonyms = entryLine => {
   let synonymsText = nthStrNode( entryLine, NODE_DELIMITER, SYNONYMS_INDEX );
-  let synonyms = _.uniq( safeSplit( synonymsText ).map( t => t.toLowerCase() ) );
+  let synonyms = _.uniq( safeSplit( synonymsText ).map( normalizeName ) );
   return synonyms;
 };
 
@@ -214,7 +215,36 @@ describe(`merge strains ${namespace}`, function(){
       'name': 'B',
       'synonyms': [
       ]
-    }
+    },
+    // {
+    //   'namespace': 'ncbi',
+    //   'type': 'protein',
+    //   'id': '4',
+    //   'organism': '562',
+    //   'name': 'C',
+    //   'synonyms': [
+    //     'D'
+    //   ]
+    // },
+    // {
+    //   'namespace': 'ncbi',
+    //   'type': 'protein',
+    //   'id': '5',
+    //   'organism': '562',
+    //   'name': 'D',
+    //   'synonyms': [
+    //   ]
+    // },
+    // {
+    //   'namespace': 'ncbi',
+    //   'type': 'protein',
+    //   'id': '6',
+    //   'organism': '562',
+    //   'name': 'd',
+    //   'synonyms': [
+    //     // 'B'
+    //   ]
+    // }
   ];
   let uniqEntries = _.uniqBy( testEntries, e => e.name + '' + e.organism );
   let rootEntry = _.find( uniqEntries, { 'organism': '' + rootOrgId } );
@@ -259,14 +289,15 @@ describe(`merge strains ${namespace}`, function(){
       } );
 
       it(`merge strains ${namespace} ${message}`, function( done ){
-        let synonyms = _.uniq( _.concat( ...entries.map( e => e.synonyms.concat( e.name ) ) ) );
+        let synonyms = _.uniq( _.concat( ...entries.map( e => e.synonyms.concat( e.name ) ) ).map( normalizeName ) );
         let ids = _.uniq( _.concat( entries.map( e => e.id ) ) );
         let organisms = _.uniq( _.concat( entries.map( e => e.organism ), '' + rootOrgId ) );
 
         searchByOrg().should.be.fulfilled.
           then( res => {
             let root = res[0];
-            expect(_.uniq( root.synonyms.concat( root.name ) ), 'Synonyms of strains are merged correctly to root').to.deep.equalInAnyOrder(synonyms);
+            let rootSynonyms = _.uniq( root.synonyms.concat( root.name ).map( normalizeName ) );
+            expect(rootSynonyms, 'Synonyms of strains are merged correctly to root').to.deep.equalInAnyOrder(synonyms);
             expect(root.ids, 'Ids of strains are merged correctly to root').to.deep.equalInAnyOrder(ids);
             expect(root.organisms, 'Organisms of strains are merged correctly to root').to.deep.equalInAnyOrder(organisms);
           } )

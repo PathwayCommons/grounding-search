@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import elasticsearch from 'elasticsearch';
 import { INDEX, MAX_SEARCH_ES, ELASTICSEARCH_HOST, MAX_FUZZ_ES } from '../config';
-import { sanitizeNameForCmp } from '../util';
+import { sanitizeNameForCmp, normalizeName } from '../util';
 
 const TYPE = 'entry';
 const NS_FIELD = 'namespace';
@@ -202,13 +202,13 @@ const db = {
     entries.forEach( entry => {
 
       // remove duplicate synonyms to avoid noisy elasticsearch results
-      entry.synonyms = _.uniqBy(entry.synonyms, str => str.toLowerCase());
+      entry.synonyms = _.uniqBy(entry.synonyms, normalizeName);
 
       // remove the main name from the synonym list (if it exists) for the same reason
-      _.remove(entry.synonyms, syn => syn.toLowerCase() === entry.name.toLowerCase());
+      _.remove(entry.synonyms, syn => normalizeName( syn ) === normalizeName( entry.name ));
 
       if ( entry.synonyms.length == 1 ) {
-        entry.singleSynonym = entry.synonyms[ 0 ];
+        entry.singleSynonym = normalizeName( entry.synonyms[ 0 ] );
       }
 
       body.push( { index: { _index: INDEX, _type: TYPE, _id: (entry.namespace + ':' + entry.id).toUpperCase() } } );
