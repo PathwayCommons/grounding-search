@@ -143,7 +143,7 @@ const mergeStrains = function(chunkSize = 500){
       }
 
       let must = { [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId };
-      let should = { names, singleSynonym: names };
+      let should = { names, singleSynonym: names, name: names };
 
       return getFirstByProps( must, should );
     };
