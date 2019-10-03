@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 import { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL } from '../config';
 import { db } from '../db';
-import { seqPromise, seqOrFunctions, normalizeName } from '../util';
+import { seqPromise, normalizeName } from '../util';
 import DelimitedParser from '../parser/delimited-parser';
 import downloadFile from './download';
 import { updateEntriesFromFile } from './processing';
@@ -108,59 +108,49 @@ const update = function(){
 };
 
 const mergeStrains = function(chunkSize = 500){
+  let mergePerformed = false;
+
   const getNormalizedName = e => e && normalizeName( e.name );
-  const getNormalizedNames = e => e && ( e.names || [ getNormalizedName( e ), getSingleSynonym( e ) ] );
+  const getNormalizedNames = e => {
+    return e && ( e.names || [ getNormalizedName( e ), getSingleSynonym( e ) ].filter( p => !_.isNil( p ) ) );
+  };
   const getSingleSynonym = e => e && e.singleSynonym;
   let rootOrgIds = Object.values( ROOT_STRAINS );
 
-  return seqPromise( rootOrgIds, rootOrgId => {
+  const handleRootOrg = rootOrgId => {
 
-    const getFirstByProps = (props, mustExists, mustNotExists) => {
+    const getFirstByProps = (must, should, mustExists, mustNotExists) => {
       const getFirst = res => res.length > 0 ? Promise.resolve(res[0]) : Promise.resolve(null);
       const size = 1;
-      return searchByProps( props, mustExists, mustNotExists, size ).then( getFirst );
+      return searchByProps( must, should, mustExists, mustNotExists, size ).then( getFirst );
     };
 
-    const searchByProps = (props, mustExists, mustNotExists, size) => {
-      props[ NS_FIELD ] = ENTRY_NS;
-      return db.searchByProps( props, mustExists, mustNotExists, size );
+    const searchByProps = (must, should, mustExists, mustNotExists, size) => {
+      must[ NS_FIELD ] = ENTRY_NS;
+      return db.searchByProps( must, should, mustExists, mustNotExists, size );
     };
 
     const searchRoot = entity => {
-      let name = getNormalizedName( entity );
-      let singleSynonym = getSingleSynonym( entity );
-      let props = [name, singleSynonym].filter( p => !_.isNil( p ) );
+      let names = getNormalizedNames( entity );
 
-      for ( let i = 0; i < props.length; i++ ) {
-        let prop = props[ i ];
-        let bookedRootId = prop && ( rootIdMap.get( prop ) );
+      for ( let i = 0; i < names.length; i++ ) {
+        let name = names[ i ];
+        let bookedRootId = name && ( rootIdMap.get( name ) );
 
         if ( !_.isNil( bookedRootId ) ) {
           return db.get( bookedRootId, ENTRY_NS );
         }
       }
 
-      let fcns = [
-        () => getFirstByProps( { names: name, [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId } ),
-        () => getFirstByProps( { singleSynonym: name, [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId } )
-      ];
+      let must = { [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId };
+      let should = { names, singleSynonym: names };
 
-      if ( singleSynonym ) {
-        fcns.push(
-          () => getFirstByProps( { names: singleSynonym, [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId } ),
-          () => getFirstByProps( { singleSynonym, [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId } )
-        );
-      }
-
-      return seqOrFunctions( fcns );
+      return getFirstByProps( must, should );
     };
 
     const bookRootPromotion = entry => {
-      let name = getNormalizedName( entry );
-      let singleSynonym = getSingleSynonym( entry );
-
-      let props = [name, singleSynonym].filter( p => !_.isNil( p ) );
-      props.forEach( p => rootIdMap.set( p, entry.id ) );
+      let names = getNormalizedNames( entry );
+      names.forEach( n => rootIdMap.set( n, entry.id ) );
     };
 
     const promoteToRoot = ids => {
@@ -247,6 +237,8 @@ const mergeStrains = function(chunkSize = 500){
         throw error;
       }
 
+      mergePerformed = true;
+
       let updates = updateMap.has( root.id ) ? updateMap.get( root.id )
         : { synonyms: [], ids: [], organisms: [], names: [] };
 
@@ -257,10 +249,8 @@ const mergeStrains = function(chunkSize = 500){
       ancestorById.set( root.id, root );
       updateMap.set( root.id, updates );
 
-      let mergeFromNN = getNormalizedName( mergeFrom );
-      let mergeFromSS = getSingleSynonym( mergeFrom );
-      let mergeFromNames = [ mergeFromNN, mergeFromSS ].filter( n => !_.isNil( n ) );
-      
+      let mergeFromNames = getNormalizedNames( mergeFrom );
+
       mergeFromNames.forEach( n => {
         rootIdMap.set( n, root.id );
         updates.names.push( n );
@@ -268,11 +258,11 @@ const mergeStrains = function(chunkSize = 500){
     };
 
     const mergeEntities = () => {
-      let props = { [ORG_FIELD]: [ rootOrgId, ...descendantOrgIds ] };
-
+      let must = { [ORG_FIELD]: [ rootOrgId, ...descendantOrgIds ] };
+      let should = {};
       let mustNotExists = [ ROOT_FIELD ];
       let mustExists = [];
-      const search = () => searchByProps( props, mustExists, mustNotExists, chunkSize );
+      const search = () => searchByProps( must, should, mustExists, mustNotExists, chunkSize );
 
       return search()
         .then( entries => {
@@ -294,7 +284,21 @@ const mergeStrains = function(chunkSize = 500){
     };
 
     return mergeEntities();
-  } );
+  };
+
+  return seqPromise( rootOrgIds, handleRootOrg )
+    .then( () => {
+      if ( !mergePerformed ) {
+        return Promise.resolve();
+      }
+      // return Promise.resolve();
+      const clearRoots = () => db.clearField( ROOT_FIELD, ENTRY_NS );
+      const remerge = () => mergeStrains( chunkSize );
+
+      // return clearRoots();
+      // clearRoots() is giving error
+      return clearRoots().then( remerge );
+    } );
 };
 
 /**

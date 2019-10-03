@@ -216,35 +216,35 @@ describe(`merge strains ${namespace}`, function(){
       'synonyms': [
       ]
     },
-    // {
-    //   'namespace': 'ncbi',
-    //   'type': 'protein',
-    //   'id': '4',
-    //   'organism': '562',
-    //   'name': 'C',
-    //   'synonyms': [
-    //     'D'
-    //   ]
-    // },
-    // {
-    //   'namespace': 'ncbi',
-    //   'type': 'protein',
-    //   'id': '5',
-    //   'organism': '562',
-    //   'name': 'D',
-    //   'synonyms': [
-    //   ]
-    // },
-    // {
-    //   'namespace': 'ncbi',
-    //   'type': 'protein',
-    //   'id': '6',
-    //   'organism': '562',
-    //   'name': 'd',
-    //   'synonyms': [
-    //     // 'B'
-    //   ]
-    // }
+    {
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '4',
+      'organism': '562',
+      'name': 'C',
+      'synonyms': [
+        'D'
+      ]
+    },
+    {
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '5',
+      'organism': '562',
+      'name': 'D',
+      'synonyms': [
+      ]
+    },
+    {
+      'namespace': 'ncbi',
+      'type': 'protein',
+      'id': '6',
+      'organism': '562',
+      'name': 'd',
+      'synonyms': [
+        // 'B'
+      ]
+    }
   ];
   let uniqEntries = _.uniqBy( testEntries, e => e.name + '' + e.organism );
   let rootEntry = _.find( uniqEntries, { 'organism': '' + rootOrgId } );
