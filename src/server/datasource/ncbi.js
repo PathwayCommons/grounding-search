@@ -291,12 +291,10 @@ const mergeStrains = function(chunkSize = 500){
       if ( !mergePerformed ) {
         return Promise.resolve();
       }
-      // return Promise.resolve();
+
       const clearRoots = () => db.clearField( ROOT_FIELD, ENTRY_NS );
       const remerge = () => mergeStrains( chunkSize );
 
-      // return clearRoots();
-      // clearRoots() is giving error
       return clearRoots().then( remerge );
     } );
 };
