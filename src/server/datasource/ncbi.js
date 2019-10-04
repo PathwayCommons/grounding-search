@@ -252,7 +252,10 @@ const mergeStrains = function(chunkSize = 500){
       let mergeFromNames = getNormalizedNames( mergeFrom );
 
       mergeFromNames.forEach( n => {
-        rootIdMap.set( n, root.id );
+        if ( !rootIdMap.has( n ) ) {
+          rootIdMap.set( n, root.id );
+        }
+
         updates.names.push( n );
       } );
     };
@@ -292,7 +295,9 @@ const mergeStrains = function(chunkSize = 500){
         return Promise.resolve();
       }
 
-      const clearRoots = () => db.clearField( ROOT_FIELD, ENTRY_NS );
+      let refresh = true;
+      let entryIds = null;
+      const clearRoots = () => db.clearField( ROOT_FIELD, ENTRY_NS, entryIds, refresh );
       const remerge = () => mergeStrains( chunkSize );
 
       return clearRoots().then( remerge );
