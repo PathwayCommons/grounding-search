@@ -33,7 +33,7 @@ function DatasourceTest( opts ) {
       updateTestData().should.be.fulfilled
         .then( () => indexExists().should.eventually.be.equal( true, 'index is created to load data' ) )
         .then( () => {
-          getEntryCount().then( dbEntryCount => {
+          return getEntryCount().then( dbEntryCount => {
             if ( !_.isNil( entryCount ) ) {
               dbEntryCount.should.be.equal( entryCount, 'number of entries saved to database is as expected' );
             }
