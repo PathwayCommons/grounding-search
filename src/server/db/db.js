@@ -271,6 +271,17 @@ const db = {
 
     return client.deleteByQuery( { index: INDEX, body, refresh } );
   },
+  /**
+   * Clear a field of desired entries.
+   * @param {string} fieldName The fieldName to clear.
+   * @param {string} [namespace] Namespace whose entries will be affected e.g. 'uniprot', 'chebi', ...
+   * @param {array} [entryIds] Array of entry ids that will be affected.
+   * @param {boolean} [refresh=false] Whether to refresh the index after the operation is completed.
+   * This parameter should be used carefully because refreshing after every insert would decrease
+   * the performance.
+   * See: https://www.elastic.co/guide/en/elasticsearch/guide/current/near-real-time.html#refresh-api
+   * @returns {Promise}
+   */
   clearField: function( fieldName, namespace, entryIds, refresh = false ){
     let client = this.connect();
 
@@ -517,7 +528,8 @@ const db = {
     }
 
     let searchParam = { index, type, body };
-    return client.search(searchParam).then( processResult );
+
+    return client.search(searchParam).then(processResult);
   }
 };
 

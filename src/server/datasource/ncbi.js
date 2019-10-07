@@ -107,17 +107,84 @@ const update = function(){
     .then(refreshIndex);
 };
 
-const mergeStrains = function(chunkSize = 500){
-  let mergePerformed = false;
-
+const mergeStrains = function(chunkSize = 1000){
+  const MARKED_FIELD = 'marked';
   const getNormalizedName = e => e && normalizeName( e.name );
-  const getNormalizedNames = e => {
-    return e && ( e.names || [ getNormalizedName( e ), getSingleSynonym( e ) ].filter( p => !_.isNil( p ) ) );
-  };
+
   const getSingleSynonym = e => e && e.singleSynonym;
   let rootOrgIds = Object.values( ROOT_STRAINS );
 
   const handleRootOrg = rootOrgId => {
+
+    let relatedNameSets = [];
+    const findRelatedNameSet = n => _.find( relatedNameSets, set => set.has( n ) );
+    const getRelatedNames = entry => {
+      let name = getNormalizedName( entry );
+      let set = findRelatedNameSet( name );
+
+      if ( set ) {
+        return [ ...set ];
+      }
+
+      return [ name ];
+    };
+
+    const fillRelatedNames = () => {
+      let must = { [ORG_FIELD]: [ rootOrgId, ...descendantOrgIds ] };
+      let should = {};
+      let mustNotExists = [MARKED_FIELD];
+      let mustExists = [];
+      const search = () => searchByProps( must, should, mustExists, mustNotExists, chunkSize );
+
+      return search()
+        .then( entries => {
+          if ( entries.length == 0 ) {
+            return Promise.resolve();
+          }
+
+          entries.forEach( entry => {
+            let singleSynonym = getSingleSynonym( entry );
+            let name = getNormalizedName( entry );
+
+            if ( singleSynonym && name != singleSynonym ) {
+              let ssSet = findRelatedNameSet( singleSynonym );
+
+              // if name and singleSynonym are already marked as related just return
+              if ( ssSet && ssSet.has( name ) ) {
+                return;
+              }
+
+              let nameSet = findRelatedNameSet( name );
+
+              if ( !nameSet && !ssSet ) {
+                relatedNameSets.push( new Set( [ name, singleSynonym ] ) );
+              }
+              else if ( nameSet && ssSet ) {
+                ssSet.forEach( ss => nameSet.add( ss ) );
+                _.remove( relatedNameSets, set => set == ssSet );
+              }
+              else if ( nameSet ) {
+                nameSet.add( singleSynonym );
+              }
+              else {
+                ssSet.add( name );
+              }
+            }
+          } );
+
+          let updates = entries.map( entry => {
+            return {
+              id: entry.id,
+              updates: {
+                [MARKED_FIELD]: true
+              }
+            };
+          } );
+
+          let refresh = true;
+          return db.updateEntries( updates, ENTRY_NS, refresh ).then( fillRelatedNames );
+        });
+    };
 
     const getFirstByProps = (must, should, mustExists, mustNotExists) => {
       const getFirst = res => res.length > 0 ? Promise.resolve(res[0]) : Promise.resolve(null);
@@ -131,7 +198,7 @@ const mergeStrains = function(chunkSize = 500){
     };
 
     const searchRoot = entity => {
-      let names = getNormalizedNames( entity );
+      let names = getRelatedNames( entity );
 
       for ( let i = 0; i < names.length; i++ ) {
         let name = names[ i ];
@@ -143,13 +210,13 @@ const mergeStrains = function(chunkSize = 500){
       }
 
       let must = { [ROOT_FIELD]: true, [ORG_FIELD]: rootOrgId };
-      let should = { names, singleSynonym: names, name: names };
+      let should = { singleSynonym: names, name: names };
 
       return getFirstByProps( must, should );
     };
 
     const bookRootPromotion = entry => {
-      let names = getNormalizedNames( entry );
+      let names = getRelatedNames( entry );
       names.forEach( n => rootIdMap.set( n, entry.id ) );
     };
 
@@ -195,15 +262,13 @@ const mergeStrains = function(chunkSize = 500){
           let ancestor = ancestorById.get( id );
 
           let ancestorIds = ancestor.ids || [];
-          let ancestorNames = getNormalizedNames( ancestor );
           let ancestorOrganisms = ancestor.organisms || [ '' + ancestor.organism ];
 
-          let names = _.uniq( _.concat( ancestorNames, ...updates.names ) );
           let synonyms = _.uniqBy( _.concat( ancestor.synonyms, ...updates.synonyms ), normalizeName );
           let ids = _.uniq( _.concat( '' + id, ancestorIds, ...updates.ids ) );
           let organisms = _.uniq( _.concat( '' + rootOrgId, ancestorOrganisms, updates.organisms ) );
 
-          let mergedUpdates = { synonyms, ids, organisms, names };
+          let mergedUpdates = { synonyms, ids, organisms };
 
           chunk.push( { id, ENTRY_NS, updates: mergedUpdates } );
         } );
@@ -237,10 +302,8 @@ const mergeStrains = function(chunkSize = 500){
         throw error;
       }
 
-      mergePerformed = true;
-
       let updates = updateMap.has( root.id ) ? updateMap.get( root.id )
-        : { synonyms: [], ids: [], organisms: [], names: [] };
+        : { synonyms: [], ids: [], organisms: [] };
 
       updates.synonyms.push( mergeFrom.synonyms.concat( mergeFrom.name ) );
       updates.ids.push( [ mergeFrom.id ], mergeFrom.ids || [] );
@@ -248,16 +311,6 @@ const mergeStrains = function(chunkSize = 500){
       toRemoveIds.push( mergeFrom.id );
       ancestorById.set( root.id, root );
       updateMap.set( root.id, updates );
-
-      let mergeFromNames = getNormalizedNames( mergeFrom );
-
-      mergeFromNames.forEach( n => {
-        if ( !rootIdMap.has( n ) ) {
-          rootIdMap.set( n, root.id );
-        }
-
-        updates.names.push( n );
-      } );
     };
 
     const mergeEntities = () => {
@@ -286,22 +339,10 @@ const mergeStrains = function(chunkSize = 500){
         } );
     };
 
-    return mergeEntities();
+    return fillRelatedNames().then(mergeEntities);
   };
 
-  return seqPromise( rootOrgIds, handleRootOrg )
-    .then( () => {
-      if ( !mergePerformed ) {
-        return Promise.resolve();
-      }
-
-      let refresh = true;
-      let entryIds = null;
-      const clearRoots = () => db.clearField( ROOT_FIELD, ENTRY_NS, entryIds, refresh );
-      const remerge = () => mergeStrains( chunkSize );
-
-      return clearRoots().then( remerge );
-    } );
+  return seqPromise( rootOrgIds, handleRootOrg );
 };
 
 /**

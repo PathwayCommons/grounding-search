@@ -7,7 +7,7 @@ import _ from 'lodash';
 import { StringDecoder } from 'string_decoder';
 
 import { NCBI_FILE_NAME, INPUT_PATH  } from '../src/server/config';
-import { normalizeName } from '../src/server/util';
+import { normalizeName, seqPromise } from '../src/server/util';
 import { db } from '../src/server/db';
 import { getOrganismById } from '../src/server/datasource/organisms';
 import { isSupportedOrganism } from '../src/server/datasource/organisms';
@@ -114,6 +114,121 @@ const getSingleSynonym = entryLine => {
   return undefined;
 };
 
+const getMergeGroups = (entities, rootName) => {
+  let rootOrgId = ROOT_STRAINS[ rootName ];
+  let rootOrg = getOrganismById( rootOrgId );
+
+  let descendantOrgIds = rootOrg.descendantIds;
+  let allOrgIds = rootOrg.descendantIds.concat( '' + rootOrgId );
+  let orgIdsSet = new Set( allOrgIds );
+
+  let filteredEntities = _.filter( entities, e => orgIdsSet.has( getEntryOrg( e ) ) );
+  let relatedNameSets = [];
+  const findRelatedNameSet = n => _.find( relatedNameSets, set => set.has( n ) );
+
+  filteredEntities.forEach( entry => {
+    let singleSynonym = getSingleSynonym( entry );
+    let name = getEntryName( entry );
+
+    let nameSet = findRelatedNameSet( name );
+
+    if ( singleSynonym && name != singleSynonym ) {
+      let ssSet = findRelatedNameSet( singleSynonym );
+
+      // if name and singleSynonym are already marked as related just return
+      if ( ssSet && ssSet.has( name ) ) {
+        return;
+      }
+
+      if ( !nameSet && !ssSet ) {
+        relatedNameSets.push( new Set( [ name, singleSynonym ] ) );
+      }
+      else if ( nameSet && ssSet ) {
+        ssSet.forEach( ss => nameSet.add( ss ) );
+        _.remove( relatedNameSets, set => set == ssSet );
+      }
+      else if ( nameSet ) {
+        nameSet.add( singleSynonym );
+      }
+      else {
+        ssSet.add( name );
+      }
+    }
+    else if ( !nameSet ){
+      relatedNameSets.push( new Set( [ name ] ) );
+    }
+  } );
+
+  let entitiesByRelatedNameSet = _.groupBy( filteredEntities, e => {
+    let set = findRelatedNameSet( getEntryName( e ) );
+    return _.indexOf( relatedNameSets, set );
+  } );
+
+  return Object.values(entitiesByRelatedNameSet);
+};
+
+const findRelatedNames = (entities, rootName) => {
+  let rootOrgId = ROOT_STRAINS[ rootName ];
+  let rootOrg = getOrganismById( rootOrgId );
+
+  let descendantOrgIds = rootOrg.descendantIds;
+  let allOrgIds = rootOrg.descendantIds.concat( '' + rootOrgId );
+  let orgIdsSet = new Set( allOrgIds );
+
+  let filteredEntities = _.filter( entities, e => orgIdsSet.has( getEntryOrg( e ) ) );
+  let relatedNameSets = [];
+  const findRelatedNameSet = n => _.find( relatedNameSets, set => set.has( n ) );
+
+  filteredEntities.forEach( entry => {
+    let singleSynonym = getSingleSynonym( entry );
+    let name = getEntryName( entry );
+
+    if ( singleSynonym && name != singleSynonym ) {
+      let ssSet = findRelatedNameSet( singleSynonym );
+
+      // if name and singleSynonym are already marked as related just return
+      if ( ssSet && ssSet.has( name ) ) {
+        return;
+      }
+
+      let nameSet = findRelatedNameSet( name );
+
+      if ( !nameSet && !ssSet ) {
+        relatedNameSets.push( new Set( [ name, singleSynonym ] ) );
+      }
+      else if ( nameSet && ssSet ) {
+        ssSet.forEach( ss => nameSet.add( ss ) );
+        _.remove( relatedNameSets, set => set == ssSet );
+      }
+      else if ( nameSet ) {
+        nameSet.add( singleSynonym );
+      }
+      else {
+        ssSet.add( name );
+      }
+    }
+    else {
+      relatedNameSets.push( new Set( [ name ] ) );
+    }
+  } );
+
+  return relatedNameSets;
+};
+
+const numberOfMergedEntities = entities => {
+  let count = 0;
+
+  Object.keys(ROOT_STRAINS).forEach( rootName => {
+    let entitiesByRelatedNameSet = getMergeGroups( entities, rootName );
+
+    Object.values( entitiesByRelatedNameSet ).forEach( group => {
+      count += ( group.length - 1 );
+    } );
+  } );
+
+  return count;
+};
+
 const getSynonyms = entryLine => {
   let synonymsText = nthStrNode( entryLine, NODE_DELIMITER, SYNONYMS_INDEX );
   let synonyms = _.uniq( safeSplit( synonymsText ).map( normalizeName ) );
@@ -123,11 +238,31 @@ const getSynonyms = entryLine => {
 const namespace = 'ncbi';
 const entryLines = buildIndex ? readEntryLines() : [];
 const sampleEntityId = buildIndex ? getEntryId( entryLines[ 0 ] ) : '7157';
-const maxEntryCount = entryLines.length;
+const entryCount = entryLines.length - numberOfMergedEntities(entryLines);
 const sampleEntityNames = [ 'p53' ];
 const datasource = ncbi;
+const afterUpdate = () => {
+  return seqPromise( Object.keys(ROOT_STRAINS), rootName => {
+    let mergeGroups = getMergeGroups( entryLines, rootName );
+    let rootOrgId = ROOT_STRAINS[ rootName ];
+    let rootOrg = getOrganismById( rootOrgId );
+    let orgIds = rootOrg.ids;
+    let name = null;
+    let from = null;
+    let size = null;
+    let scroll = '10s';
+    const searchByOrg = () => db.searchByOrg( orgIds, namespace, name, from, size, scroll );
 
-let opts = { namespace, sampleEntityNames, sampleEntityId, maxEntryCount, datasource, buildIndex };
+    return searchByOrg().should.be.fulfilled.
+      then( res => {
+        let dbIdGroups = res.map( e => e.ids || [ e.id ] );
+        let inputIdGroups = mergeGroups.map( group => group.map( e => getEntryId( e ) ) );
+        expect(dbIdGroups, `names field of remaining strains does not intersect for root id ${rootOrgId}`).to.deep.equalInAnyOrder(inputIdGroups);
+      });
+  } );
+};
+
+let opts = { namespace, sampleEntityNames, sampleEntityId, entryCount, datasource, buildIndex, afterUpdate };
 DatasourceTest( opts );
 
 // Test merge strains algorithm as specific to ncbi
@@ -301,8 +436,7 @@ describe(`merge strains ${namespace}`, function(){
             expect(root.ids, 'Ids of strains are merged correctly to root').to.deep.equalInAnyOrder(ids);
             expect(root.organisms, 'Organisms of strains are merged correctly to root').to.deep.equalInAnyOrder(organisms);
           } )
-          .
-          then( () => getEntryCount().should.eventually.be.equal( 1, 'All descendants are removed after being merged to root' ) )
+          .then( () => getEntryCount().should.eventually.be.equal( 1, 'All descendants are removed after being merged to root' ) )
           .then( () => done(), error => done(error) );
       });
     } );

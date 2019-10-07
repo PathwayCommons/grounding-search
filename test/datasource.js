@@ -4,7 +4,7 @@ import { db } from '../src/server/db';
 import { forceDownload, maxSearchSize } from './util/param';
 
 function DatasourceTest( opts ) {
-  const { sampleEntityNames, sampleEntityId, datasource, namespace, entryCount, minEntryCount, maxEntryCount, buildIndex } = opts;
+  const { sampleEntityNames, sampleEntityId, datasource, namespace, entryCount, minEntryCount, maxEntryCount, buildIndex, afterUpdate } = opts;
 
   const updateTestData = () => datasource.update(forceDownload);
   const clearTestData = () => datasource.clear();
@@ -44,6 +44,12 @@ function DatasourceTest( opts ) {
               dbEntryCount.should.be.most( maxEntryCount, 'number of entries saved to database is at most the maximum expectation' );
             }
           } )
+        } )
+        .then( () => {
+          if ( afterUpdate ) {
+            return afterUpdate();
+          }
+          return Promise.resolve();
         } )
         .then( () => done(), error => done(error) );
     });
