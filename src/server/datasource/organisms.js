@@ -53,7 +53,7 @@ const SORTED_MAIN_ORGANISMS = [
   new Organism(7955, 'Danio rerio')
 ];
 
-const OTHER = new Organism(-1, 'Other');
+export const OTHER = new Organism(-1, 'Other');
 
 const DEFAULT_ORGANISM_ORDERING = [];
 

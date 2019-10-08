@@ -3,8 +3,11 @@ import { db } from '../db';
 import { rankInThread } from './rank';
 import _ from 'lodash';
 import ROOT_STRAINS from './strains/root';
-import { getOrganismById } from './organisms';
+import { getOrganismById, OTHER } from './organisms';
 import { MAX_SEARCH_WS, MAX_FUZZ_ES } from '../config';
+
+const ROOT_STRAIN_ORGS = Object.values(ROOT_STRAINS).map(getOrganismById);
+const isRootStrainOrgId = id => ROOT_STRAIN_ORGS.some(org => org.is(id));
 
 const filterSearchString = function(searchString){
   const rnaMatch = searchString.match(/(.*) (.*){0,2}rna/i);
@@ -33,18 +36,13 @@ const search = function(searchString, namespace, organismOrdering){
 
   if ( organismOrdering ) {
     organismOrdering = organismOrdering.map( orgId => {
-      let rootNames = Object.keys( ROOT_STRAINS );
-      for ( let i = 0; i < rootNames.length; i++ ) {
-        let rootOrgId = ROOT_STRAINS[ rootNames[ i ] ];
-        let rootOrg = getOrganismById( rootOrgId );
-        let descendantOrgIds = rootOrg.descendantIds;
+      const org = getOrganismById(orgId);
 
-        if ( _.includes( descendantOrgIds, '' + orgId ) ) {
-          return rootOrgId;
-        }
+      if( org.is(OTHER.id) ){ // not included in model organism set
+        return orgId;
+      } else { // may have been specified as strain, so use root id
+        return org.id;
       }
-
-      return orgId;
     } );
 
     organismOrdering = _.uniq( organismOrdering );
@@ -54,16 +52,41 @@ const search = function(searchString, namespace, organismOrdering){
   const doRank = ents => rankInThread(ents, searchString, organismOrdering);
   const shortenList = ents => ents.slice(0, MAX_SEARCH_WS);
 
+  const doStrainFilter = ents => { // TODO process in thread
+    const sanitize = name => name.toLowerCase();
+
+    return _.uniqWith(ents, (ent1, ent2) => {
+      const org1 = getOrganismById(ent1.organism);
+      const org2 = getOrganismById(ent2.organism);
+      const n1 = sanitize(ent1.name);
+      const n2 = sanitize(ent2.name);
+      const getSynonym = ent => ent.synonyms.length === 1 ? sanitize(ent.synonyms[0]) : null;
+      const s1 = getSynonym(ent1) || '--nosynonym1';
+      const s2 = getSynonym(ent2) || '--nosynonym2';
+      
+      return isRootStrainOrgId(org1.id) && org1.id === org2.id && (n1 === n2 || s1 === s2 || n1 === s2 || s1 === n2);
+    });
+  };
+
+  const filterOtherOrganisms = ents => { // TODO do in thread
+    const isOther = ent => getOrganismById(ent.organism).is(OTHER.id);
+    const isKnown = ent => !isOther(ent);
+
+    return ents.filter(isKnown);
+  };
+
   const doSearches = () => {
     return (
       Promise.all([ doSearch(0), doSearch(MAX_FUZZ_ES) ]) // exact search to make sure we always include exact matches
-        .then(ress => _.uniqBy(_.concat(...ress), ent => `${ent.namespace}:${ent.id}`))
+        .then(ress => _.uniqBy(_.concat(...ress), ent => `${ent.namespace}:${ent.id}`)) // join & unique -- TODO process in thread
     );
   };
 
   return (
     Promise.resolve()
       .then(doSearches)
+      .then(filterOtherOrganisms)
+      .then(doStrainFilter)
       .then(doRank)
       .then(shortenList)
   );
