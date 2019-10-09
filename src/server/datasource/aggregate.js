@@ -5,6 +5,7 @@ import _ from 'lodash';
 import ROOT_STRAINS from './strains/root';
 import { getOrganismById } from './organisms';
 import { MAX_SEARCH_WS, MAX_FUZZ_ES } from '../config';
+import Future from 'fibers/future';
 
 const ROOT_STRAIN_ORGS = Object.values(ROOT_STRAINS).map(getOrganismById);
 const isRootStrainOrgId = id => ROOT_STRAIN_ORGS.some(org => org.is(id));
@@ -38,7 +39,7 @@ const search = function(searchString, namespace, organismOrdering){
   const doRank = ents => rankInThread(ents, searchString, organismOrdering);
   const shortenList = ents => ents.slice(0, MAX_SEARCH_WS);
 
-  const doStrainFilter = ents => { // TODO process in thread
+  const filterStrains = ents => {
     const sanitize = name => name.toLowerCase();
 
     return _.uniqWith(ents, (ent1, ent2) => {
@@ -57,10 +58,36 @@ const search = function(searchString, namespace, organismOrdering){
     });
   };
 
+  const doStrainFilter = ents => {
+    let task = Future.wrap(function(args, next){ // code in this block runs in its own thread
+      let res = filterStrains(args.ents);
+      let err = null;
+  
+      next( err, res );
+    });
+  
+    return task({ ents }).promise();
+  };
+  
   const doSearches = () => {
+    const join = ress => _.uniqWith(_.concat(...ress), (ent1, ent2) => {
+      return ent1.namespace === ent2.namespace && ent1.id === ent2.id;
+    });
+
+    const doJoin = ress => {
+      let task = Future.wrap(function(args, next){ // code in this block runs in its own thread
+        let res = join(args.ress);
+        let err = null;
+    
+        next( err, res );
+      });
+    
+      return task({ ress }).promise();
+    };
+
     return (
       Promise.all([ doSearch(0), doSearch(MAX_FUZZ_ES) ]) // exact search to make sure we always include exact matches
-        .then(ress => _.uniqBy(_.concat(...ress), ent => `${ent.namespace}:${ent.id}`)) // join & unique -- TODO process in thread
+        .then(doJoin)
     );
   };
 
