@@ -80,8 +80,8 @@ export const getOrganismById = id => {
  * results.
  * @param {string} id The organism taxon ID
  */
-export const isSupportedOrganism = id => { // eslint-disable-line no-unused-vars
-  return true; // all organisms are supported
+export const isSupportedOrganism = id => {
+  return !getOrganismById(id).is(OTHER.id);
 };
 
 /**

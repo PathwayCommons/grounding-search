@@ -9,7 +9,7 @@ import { seqPromise } from '../util';
 import DelimitedParser from '../parser/delimited-parser';
 import downloadFile from './download';
 import { updateEntriesFromFile } from './processing';
-import { getOrganismById } from './organisms';
+import { getOrganismById, isSupportedOrganism } from './organisms';
 import ROOT_STRAINS from './strains/root';
 
 const FILE_PATH = path.join(INPUT_PATH, NCBI_FILE_NAME);
@@ -67,7 +67,14 @@ const processEntry = entryLine => {
   return { namespace, type, id, organism, organismName, name, synonyms };
 };
 
-const includeEntry = () => true;
+const includeEntry = entryLine => {
+  // assume org is first tab-delimited entry
+  const i = 0;
+  const j = entryLine.indexOf(NODE_DELIMITER);
+  const orgId = entryLine.substring(i, j);
+
+  return isSupportedOrganism(orgId);
+};
 
 const parseFile = (filePath, onData, onEnd) => {
   let hasHeaderLine = true;

@@ -3,7 +3,7 @@ import { db } from '../db';
 import { rankInThread } from './rank';
 import _ from 'lodash';
 import ROOT_STRAINS from './strains/root';
-import { getOrganismById, OTHER } from './organisms';
+import { getOrganismById } from './organisms';
 import { MAX_SEARCH_WS, MAX_FUZZ_ES } from '../config';
 
 const ROOT_STRAIN_ORGS = Object.values(ROOT_STRAINS).map(getOrganismById);
@@ -34,20 +34,6 @@ const filterSearchString = function(searchString){
 const search = function(searchString, namespace, organismOrdering){
   searchString = filterSearchString(searchString);
 
-  if ( organismOrdering ) {
-    organismOrdering = organismOrdering.map( orgId => {
-      const org = getOrganismById(orgId);
-
-      if( org.is(OTHER.id) ){ // not included in model organism set
-        return orgId;
-      } else { // may have been specified as strain, so use root id
-        return org.id;
-      }
-    } );
-
-    organismOrdering = _.uniq( organismOrdering );
-  }
-
   const doSearch = fuzziness => db.search(searchString, namespace, fuzziness);
   const doRank = ents => rankInThread(ents, searchString, organismOrdering);
   const shortenList = ents => ents.slice(0, MAX_SEARCH_WS);
@@ -56,6 +42,9 @@ const search = function(searchString, namespace, organismOrdering){
     const sanitize = name => name.toLowerCase();
 
     return _.uniqWith(ents, (ent1, ent2) => {
+      // only apply to org-specific ents
+      if( ent1.organism == null || ent2.organism == null ){ return false; }
+
       const org1 = getOrganismById(ent1.organism);
       const org2 = getOrganismById(ent2.organism);
       const n1 = sanitize(ent1.name);
@@ -68,13 +57,6 @@ const search = function(searchString, namespace, organismOrdering){
     });
   };
 
-  const filterOtherOrganisms = ents => { // TODO do in thread
-    const isOther = ent => getOrganismById(ent.organism).is(OTHER.id);
-    const isKnown = ent => !isOther(ent);
-
-    return ents.filter(isKnown);
-  };
-
   const doSearches = () => {
     return (
       Promise.all([ doSearch(0), doSearch(MAX_FUZZ_ES) ]) // exact search to make sure we always include exact matches
@@ -85,10 +67,9 @@ const search = function(searchString, namespace, organismOrdering){
   return (
     Promise.resolve()
       .then(doSearches)
-      .then(filterOtherOrganisms)
       .then(doRank)
-      .then(doStrainFilter)
       .then(shortenList)
+      .then(doStrainFilter)
   );
 };
 
