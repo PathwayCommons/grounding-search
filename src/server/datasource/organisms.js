@@ -53,7 +53,7 @@ const SORTED_MAIN_ORGANISMS = [
   new Organism(7955, 'Danio rerio')
 ];
 
-const OTHER = new Organism(-1, 'Other');
+export const OTHER = new Organism(-1, 'Other');
 
 const DEFAULT_ORGANISM_ORDERING = [];
 
@@ -80,8 +80,8 @@ export const getOrganismById = id => {
  * results.
  * @param {string} id The organism taxon ID
  */
-export const isSupportedOrganism = id => { // eslint-disable-line no-unused-vars
-  return true; // all organisms are supported
+export const isSupportedOrganism = id => {
+  return !getOrganismById(id).is(OTHER.id);
 };
 
 /**

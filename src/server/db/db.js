@@ -154,7 +154,11 @@ const db = {
    */
   deleteIndex: function(){
     let client = this.connect();
-    return client.indices.delete( { index: INDEX } );
+    return client.indices.delete( { index: INDEX } ).catch(err => {
+      if( err.status === 404 ){ // index not found => already deleted
+        return Promise.resolve();
+      }
+    });
   },
   /**
    * Delete the entries of given namespace.
@@ -167,7 +171,11 @@ const db = {
     let body = {};
     _.set( body, [ 'query', 'bool', 'filter', 'term', NS_FIELD ], namespace );
 
-    return client.deleteByQuery( { index: INDEX, body } );
+    return client.deleteByQuery( { index: INDEX, body } ).catch(err => {
+      if( err.status === 404 ){ // entire index deleted, so nothing to remove
+        return Promise.resolve();
+      }
+    });
   },
   /**
    * Recreate the elasticsearch index dedicated for the app. Deletes the index first if

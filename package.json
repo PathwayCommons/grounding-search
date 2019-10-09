@@ -19,6 +19,7 @@
     "test": "mocha -r esm --exclude test/uniprot.js",
     "test:sample": "cross-env TESTS_BUILD_INDEX=true INPUT_PATH=test/input/ INDEX=graundingsearch-test run-s test",
     "test:quality": "mocha -r esm test/aggregate-quality.js",
+    "test:quality:exit0": "mocha -r esm test/aggregate-quality.js || echo Some quality tests failed",
     "test:quality:csv": "mocha -r esm test/aggregate-quality.js --reporter test/util/quality-reporter.js",
     "test:inputgen": "run-s test:inputgen:chebi test:inputgen:ncbi",
     "test:inputgen:uniprot": "node -r esm test/input-generator/uniprot",
@@ -45,13 +46,14 @@
     "clear:uniprot": "node -r esm src/server/datasource/cli clear uniprot",
     "clear:chebi": "node -r esm src/server/datasource/cli clear chebi",
     "clear:ncbi": "node -r esm src/server/datasource/cli clear ncbi",
-    "ci": "run-s test:sample lint"
+    "ci": "run-s lint"
   },
   "dependencies": {
     "benchmark": "^2.1.4",
     "binary-split": "^1.0.5",
     "body-parser": "^1.15.1",
     "cookie-parser": "^1.4.3",
+    "date-fns": "^2.4.1",
     "deep-equal-in-any-order": "^1.0.13",
     "dice-coefficient": "^1.0.3",
     "download": "^7.1.0",

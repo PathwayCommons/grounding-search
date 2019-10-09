@@ -6,5 +6,5 @@ services:
   - elasticsearch
 before_script:
   - sleep 10
-sudo: false
+sudo: true
 script: npm run ci
