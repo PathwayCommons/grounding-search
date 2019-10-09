@@ -86,8 +86,8 @@ const search = function(searchString, namespace, organismOrdering){
     Promise.resolve()
       .then(doSearches)
       .then(filterOtherOrganisms)
-      .then(doStrainFilter)
       .then(doRank)
+      .then(doStrainFilter)
       .then(shortenList)
   );
 };
