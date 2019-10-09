@@ -154,7 +154,11 @@ const db = {
    */
   deleteIndex: function(){
     let client = this.connect();
-    return client.indices.delete( { index: INDEX } );
+    return client.indices.delete( { index: INDEX } ).catch(err => {
+      if( err.status === 404 ){ // index not found => already deleted
+        return Promise.resolve();
+      }
+    });
   },
   /**
    * Delete the entries of given namespace.
