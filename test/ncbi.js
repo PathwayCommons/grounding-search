@@ -219,7 +219,7 @@ describe(`merge strains ${namespace}`, function(){
   let testEntries = [
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '39537837',
       'organism': '562',
       'name': 'ccdB',
@@ -229,7 +229,7 @@ describe(`merge strains ${namespace}`, function(){
     },
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '39537837-2',
       'organism': '562',
       'name': 'ccdB',
@@ -239,7 +239,7 @@ describe(`merge strains ${namespace}`, function(){
     },
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '18252830',
       'organism': '1311757',
       'name': 'ccdB',
@@ -249,7 +249,7 @@ describe(`merge strains ${namespace}`, function(){
     },
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '8164769',
       'organism': '563770',
       'name': 'ccdB',
@@ -259,7 +259,7 @@ describe(`merge strains ${namespace}`, function(){
     },
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '9292836',
       'organism': '762608',
       'name': 'ccdB',
@@ -273,7 +273,7 @@ describe(`merge strains ${namespace}`, function(){
   let singleSynonymEntries = [
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '1',
       'organism': '562',
       'name': 'A',
@@ -283,7 +283,7 @@ describe(`merge strains ${namespace}`, function(){
     },
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '2',
       'organism': '562',
       'name': 'B',
@@ -293,7 +293,7 @@ describe(`merge strains ${namespace}`, function(){
     },
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '3',
       'organism': '562',
       'name': 'B',
@@ -302,7 +302,7 @@ describe(`merge strains ${namespace}`, function(){
     },
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '4',
       'organism': '562',
       'name': 'C',
@@ -312,7 +312,7 @@ describe(`merge strains ${namespace}`, function(){
     },
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '5',
       'organism': '562',
       'name': 'D',
@@ -321,7 +321,7 @@ describe(`merge strains ${namespace}`, function(){
     },
     {
       'namespace': 'ncbi',
-      'type': 'protein',
+      'type': 'ggp',
       'id': '6',
       'organism': '562',
       'name': 'd',

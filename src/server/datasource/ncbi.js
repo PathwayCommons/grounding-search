@@ -14,7 +14,7 @@ import ROOT_STRAINS from './strains/root';
 
 const FILE_PATH = path.join(INPUT_PATH, NCBI_FILE_NAME);
 const ENTRY_NS = 'ncbi';
-const ENTRY_TYPE = 'protein';
+const ENTRY_TYPE = 'ggp';
 const NODE_DELIMITER = '\t';
 const EMPTY_VALUE = '-';
 const DEFAULT_SCROLL = '10s';
