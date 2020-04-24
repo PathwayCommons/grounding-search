@@ -24,7 +24,9 @@ const NODE_INDICES = Object.freeze({
   ID: 1,
   SYMBOL: 2,
   SYNONYMS: 4,
+  DB_XREFS: 5,
   DESCRIPTION: 8,
+  TYPE_OF_GENE: 9,
   NA_SYMBOL: 10,
   NA_FULL_NAME: 11,
   OTHER_DESIGNATORS: 13
@@ -61,10 +63,17 @@ const processEntry = entryLine => {
     safeSplit( nodes[ NODE_INDICES.OTHER_DESIGNATORS ] )
   );
 
+  let dbXrefs = safeSplit( nodes[ NODE_INDICES.DB_XREFS ] ).map( xref => {
+    let [ db, id ] = xref.split( /:(.+)/ );
+    return { db, id };
+  });
+
+  let typeOfGene = nodes[ NODE_INDICES.TYPE_OF_GENE ];
+
   [ NODE_INDICES.DESCRIPTION, NODE_INDICES.NA_SYMBOL, NODE_INDICES.NA_FULL_NAME ]
     .forEach( i => pushIfValid( synonyms, nodes[ i ] ) );
 
-  return { namespace, type, id, organism, organismName, name, synonyms };
+  return { namespace, type, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
 };
 
 const includeEntry = entryLine => {
