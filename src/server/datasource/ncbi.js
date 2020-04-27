@@ -63,6 +63,8 @@ const processEntry = entryLine => {
     safeSplit( nodes[ NODE_INDICES.OTHER_DESIGNATORS ] )
   );
 
+  // Format: db:id | ... | db:id
+  // NB: IDs may contain colons
   let dbXrefs = safeSplit( nodes[ NODE_INDICES.DB_XREFS ] ).map( xref => {
     let [ db, id ] = xref.split( /:(.+)/ );
     return { db, id };
