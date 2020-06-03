@@ -79,7 +79,7 @@ const processEntry = entry => {
 };
 
 const includeEntry = entry => {
-  return !isDeprecated( entry );
+  return !isDeprecated( entry ) && entry.children.length && _.isString( findChild( entry, XML_TAGS.ID ) );
 };
 
 const parseXml = (filePath, onData, onEnd) => {
