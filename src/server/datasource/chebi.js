@@ -33,7 +33,8 @@ const XML_TAGS = Object.freeze( {
   ONTOLOGY: 'owl:Ontology',
   ANNOTATION_PROPERTY: 'owl:AnnotationProperty',
   OBJECT_PROPERTY: 'owl:ObjectProperty',
-  AXIOM: 'owl:Axiom'
+  AXIOM: 'owl:Axiom',
+  SUMMARY: 'obo:IAO_0000115'
 } );
 
 const safeParseFloat = n => n != null ? parseFloat(n) : null;
@@ -73,9 +74,10 @@ const processEntry = entry => {
   let mass = safeGetAsFloat( entry, XML_TAGS.MASS );
   let monoisotopicMass = safeGetAsFloat( entry, XML_TAGS.MONOISOTOPIC_MASS );
   let formulae = filterChildren( entry, XML_TAGS.FORMULA );
+  let summary = findChild( entry, XML_TAGS.SUMMARY );
 
   return { namespace, type, id, name, inchi, inchiKey, synonyms,
-    charge, mass, monoisotopicMass, formulae };
+    charge, mass, monoisotopicMass, formulae, summary };
 };
 
 const includeEntry = entry => {
