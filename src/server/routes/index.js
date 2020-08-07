@@ -1,5 +1,6 @@
 import express from 'express';
 import { aggregate } from '../datasource/aggregate';
+import { eSearch, eSummary, eSearchSummaries } from '../datasource/eutils';
 
 const router = express.Router();
 
@@ -47,6 +48,28 @@ router.post('/get', function(req, res){
   const { namespace, id } = req.body;
 
   aggregate.get(namespace, id).then(searchRes => res.json(searchRes));
+});
+
+// DEBUG
+router.post('/esearch', function(req, res, next){
+  const { term } = req.body;
+  eSearch({ term })
+    .then( data => res.json( data ) )
+    .catch( next );
+});
+
+router.post('/esummary', function(req, res, next){
+  const opts = req.body;
+  eSummary(opts)
+    .then( data => res.json( data ) )
+    .catch( next );
+});
+
+router.post('/esearchsummaries', function(req, res, next){
+  const opts = req.body;
+  eSearchSummaries(opts)
+    .then( data => res.json( data ) )
+    .catch( next );
 });
 
 export default router;

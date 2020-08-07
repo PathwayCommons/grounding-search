@@ -127,4 +127,26 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
   } );
 };
 
-export { updateEntriesFromFile };
+/**
+ * Update entries of a namespace directly
+ * @param {string} ns The namespace whose entries will be updated.
+ * @param {object} entries The entries to insert
+ * @param {function} processEntry A function that will be called to process entry data
+ * before inserting it to database.
+ * @param {function} [includeEntry = () => true] A function called to decide whether to include or omit an entry.
+ */
+const updateEntriesFromSource = function( ns, entries ){
+  const manualRefresh = () => db.refreshIndex();
+  return db.insertEntries( entries, false ).then( res => {
+    if( res.errors ){
+      let err = new Error('Entries failed to be inserted');
+      err.response = res;
+      throw err;
+    }
+    return res;
+  })
+    .then( () => logger.info(`Finished updating ${ns} data from source`) )
+    .then( manualRefresh );
+};
+
+export { updateEntriesFromFile, updateEntriesFromSource };

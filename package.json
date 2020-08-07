@@ -64,6 +64,7 @@
     "ftp": "^0.3.10",
     "lodash": "^4.17.11",
     "morgan": "^1.7.0",
+    "node-fetch": "^2.6.0",
     "saxes": "^3.1.9",
     "serve-favicon": "^2.3.0",
     "split": "^1.0.1",
