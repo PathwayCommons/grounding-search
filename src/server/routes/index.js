@@ -50,26 +50,4 @@ router.post('/get', function(req, res){
   aggregate.get(namespace, id).then(searchRes => res.json(searchRes));
 });
 
-// DEBUG
-router.post('/esearch', function(req, res, next){
-  const { term } = req.body;
-  eSearch({ term })
-    .then( data => res.json( data ) )
-    .catch( next );
-});
-
-router.post('/esummary', function(req, res, next){
-  const opts = req.body;
-  eSummary(opts)
-    .then( data => res.json( data ) )
-    .catch( next );
-});
-
-router.post('/esearchsummaries', function(req, res, next){
-  const opts = req.body;
-  eSearchSummaries(opts)
-    .then( data => res.json( data ) )
-    .catch( next );
-});
-
 export default router;
