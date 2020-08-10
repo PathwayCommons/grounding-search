@@ -1,6 +1,5 @@
 import express from 'express';
 import { aggregate } from '../datasource/aggregate';
-import { eSearch, eSummary, eSearchSummaries } from '../datasource/eutils';
 
 const router = express.Router();
 
