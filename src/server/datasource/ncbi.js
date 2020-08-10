@@ -97,39 +97,46 @@ const parseFile = (filePath, onData, onEnd) => {
 
 const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseFile, processEntry, includeEntry);
 
-const getProteinsByTaxon = tax_id => {
+const updateOrganismProteins = tax_id => {
+  const lastProtRegex = /\sprotein$/i;
+  const dropNameOrg = name => _.head( name.split(' [') );
+  const dropNameStop = name => name.replace( lastProtRegex, '' );
+
   const opts = {
     term: `txid${tax_id}[Organism:noexp] AND refseq[filter]`
   };
 
-  const processProteinEntry = entry => {
+  // Records from db=protein don't have synonyms per se
+  // Can recreate via title w/ cleanup
+  const getSynonyms = entry => {
+    const title = _.get( entry, 'title', '' );
+    const nameNoOrg = dropNameOrg( title );
+    const nameNoStop = dropNameStop( nameNoOrg );
+    return [ nameNoStop ];
+  };
+
+  const processEntry = entry => {
     const namespace = ENTRY_NS;
     const type = 'protein';
     const id = _.get( entry, 'uid' );
     const organism = _.get( entry, 'taxid' );
     const organismName = getOrganismById( organism ).name;
     const name = _.get( entry, 'title' );
-    const synonyms = name.split(' '); // ?
+    const synonyms = getSynonyms( entry );
     const dbXrefs = [];
     const typeOfGene = 'protein-coding';
     return { namespace, type, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
   };
 
-
-  const summary2Record = eSummaryResponse => {
+  const parse = eSummaryResponse => {
     const result = _.get( eSummaryResponse, ['result'] );
     const uids = _.get( result, ['uids'] );
-    return uids.map( uid => {
-      const entry = _.get( result, uid );
-      return processProteinEntry( entry );
-    });
+    return uids.map( uid => _.get( result, uid ) );
   };
 
   return eSearchSummaries( opts )
-    .then( summary2Record );
+    .then( data => updateEntriesFromSource( ENTRY_NS, data, parse, processEntry ) );
 };
-
-const updateOrganismProteins = tax_id => getProteinsByTaxon( tax_id ).then( entries => updateEntriesFromSource( ENTRY_NS, entries ) );
 
 /**
  * Downloads the 'ncbi' entities and stores them in the input file.
