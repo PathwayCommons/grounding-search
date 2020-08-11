@@ -38,3 +38,6 @@ export const CHEBI_URL = env('CHEBI_URL', 'ftp://ftp.ebi.ac.uk/pub/databases/che
 
 export const NCBI_FILE_NAME = env('NCBI_FILE_NAME', 'ncbi');
 export const NCBI_URL = env('NCBI_URL', 'ftp://ftp.ncbi.nih.gov/gene/DATA/gene_info.gz');
+export const NCBI_EUTILS_BASE_URL = env('NCBI_EUTILS_BASE_URL', 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/');
+export const NCBI_EUTILS_API_KEY = env('NCBI_EUTILS_API_KEY', 'b99e10ebe0f90d815a7a99f18403aab08008');
+

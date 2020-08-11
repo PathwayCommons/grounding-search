@@ -127,4 +127,33 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
   } );
 };
 
-export { updateEntriesFromFile };
+/**
+ * Update entries of a namespace directly
+ * Usage restricted to tiny datasets (order of CHUNK_SIZE)
+ *
+ * @param {string} ns The namespace whose entries will be updated.
+ * @param {object} data The raw data to parse
+ * @param {object} parse The function to parse data into an array of entries
+ * @param {function} processEntry A function that will be called to process entry data
+ * before inserting it to database.
+ * @param {function} [includeEntry = () => true] A function called to decide whether to include or omit an entry.
+ */
+const updateEntriesFromSource = async ( ns, data, parse, processEntry, includeEntry = () => true ) => {
+
+  const insertEntries = async entries => {
+    const insertResponse = await db.insertEntries( entries, false );
+    if( insertResponse.errors ){
+      let err = new Error('Failed to insert entries from source');
+      err.response = insertResponse;
+      throw err;
+    }
+    return insertResponse;
+  };
+
+  const entries = parse( data ).filter( includeEntry ).map( processEntry );
+  await insertEntries( entries );
+  await db.refreshIndex();
+  logger.info(`Finished updating ${ns} data from source`);
+};
+
+export { updateEntriesFromFile, updateEntriesFromSource };

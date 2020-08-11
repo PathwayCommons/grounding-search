@@ -50,7 +50,8 @@ const SORTED_MAIN_ORGANISMS = [
   new Organism(6239, 'Caenorhabditis elegans'),
   new Organism(3702, 'Arabidopsis thaliana'),
   new Organism(10116, 'Rattus norvegicus'),
-  new Organism(7955, 'Danio rerio')
+  new Organism(7955, 'Danio rerio'),
+  new Organism(2697049, 'SARS-CoV-2'),
 ];
 
 export const OTHER = new Organism(-1, 'Other');

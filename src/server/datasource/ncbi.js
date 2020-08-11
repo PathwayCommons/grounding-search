@@ -8,9 +8,10 @@ import { db } from '../db';
 import { seqPromise } from '../util';
 import DelimitedParser from '../parser/delimited-parser';
 import downloadFile from './download';
-import { updateEntriesFromFile } from './processing';
+import { updateEntriesFromFile, updateEntriesFromSource } from './processing';
 import { getOrganismById, isSupportedOrganism } from './organisms';
 import ROOT_STRAINS from './strains/root';
+import { eSearchSummaries } from './eutils';
 
 const FILE_PATH = path.join(INPUT_PATH, NCBI_FILE_NAME);
 const ENTRY_NS = 'ncbi';
@@ -18,6 +19,7 @@ const ENTRY_TYPE = 'ggp';
 const NODE_DELIMITER = '\t';
 const EMPTY_VALUE = '-';
 const DEFAULT_SCROLL = '10s';
+const TAX_ID_SARSCOV2 = 2697049;
 
 const NODE_INDICES = Object.freeze({
   ORGANISM: 0,
@@ -95,6 +97,47 @@ const parseFile = (filePath, onData, onEnd) => {
 
 const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseFile, processEntry, includeEntry);
 
+const updateOrganismProteins = tax_id => {
+  const lastProtRegex = /\sprotein$/i;
+  const dropNameOrg = name => _.head( name.split(' [') );
+  const dropNameStop = name => name.replace( lastProtRegex, '' );
+
+  const opts = {
+    term: `txid${tax_id}[Organism:noexp] AND refseq[filter]`
+  };
+
+  // Records from db=protein don't have synonyms per se
+  // Can recreate via title w/ cleanup
+  const getSynonyms = entry => {
+    const title = _.get( entry, 'title', '' );
+    const nameNoOrg = dropNameOrg( title );
+    const nameNoStop = dropNameStop( nameNoOrg );
+    return [ nameNoStop ];
+  };
+
+  const processEntry = entry => {
+    const namespace = ENTRY_NS;
+    const type = 'protein';
+    const id = _.get( entry, 'uid' );
+    const organism = _.get( entry, 'taxid' );
+    const organismName = getOrganismById( organism ).name;
+    const name = _.get( entry, 'title' );
+    const synonyms = getSynonyms( entry );
+    const dbXrefs = [];
+    const typeOfGene = 'protein-coding';
+    return { namespace, type, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
+  };
+
+  const parse = eSummaryResponse => {
+    const result = _.get( eSummaryResponse, ['result'] );
+    const uids = _.get( result, ['uids'] );
+    return uids.map( uid => _.get( result, uid ) );
+  };
+
+  return eSearchSummaries( opts )
+    .then( data => updateEntriesFromSource( ENTRY_NS, data, parse, processEntry ) );
+};
+
 /**
  * Downloads the 'ncbi' entities and stores them in the input file.
  * @returns {Promise} A promise that is resolved when the download is done.
@@ -104,11 +147,14 @@ const download = function(){
 };
 
 /**
- * Update the 'ncbi' entities in the index from the input file.
+ * Update the 'ncbi' entities
  * @returns {Promise} A promise that is resolved when the indexing is done.
  */
 const index = function(){
-  return updateFromFile();
+  return Promise.all([
+    updateFromFile(),
+    updateOrganismProteins( TAX_ID_SARSCOV2 )
+  ]);
 };
 
 /**
