@@ -37,6 +37,8 @@ The following environment variables can be used to configure the server:
 - `CHEBI_URL` : url to download chebi file from
 - `NCBI_FILE_NAME` : name of the file where ncbi data will be read from
 - `NCBI_URL` : url to download ncbi file from
+- `NCBI_EUTILS_BASE_URL` : url for NCBI EUTILS
+- `NCBI_EUTILS_API_KEY` : NCBI EUTILS API key
 
 ## Run targets
 
