@@ -3,7 +3,7 @@
 import path from 'path';
 import _ from 'lodash';
 
-import { INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL } from '../config';
+import { INPUT_PATH, UNIPROT_FILE_NAME, UNIPROT_URL, NS_UNIPROT_KNOWLEDGEBASE } from '../config';
 import { db } from '../db';
 import XmlParser from '../parser/xml-parser';
 import downloadFile from './download';
@@ -45,6 +45,7 @@ const getText = n => n && n.text;
 const processEntry = entry => {
   let namespace = ENTRY_NS;
   let type = ENTRY_TYPE;
+  const id_prefix = NS_UNIPROT_KNOWLEDGEBASE;
   let id = getText( _.find( entry.children, [ 'name', 'accession' ] ) );
   let name = getText( _.find( entry.children, [ 'name', 'name' ] ) );
   let organism = getOrganism( entry );
@@ -68,7 +69,7 @@ const processEntry = entry => {
   // since uniprot uses weird names, use the first "protein name" instead, if possible
   name = proteinNames[0] || name;
 
-  return { namespace, type, id, organism, name, geneNames, proteinNames, synonyms };
+  return { namespace, type, id_prefix, id, organism, name, geneNames, proteinNames, synonyms };
 };
 
 const includeEntry = entry => {
