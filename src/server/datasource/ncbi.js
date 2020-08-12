@@ -3,7 +3,7 @@
 import path from 'path';
 import _ from 'lodash';
 
-import { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL, ID_PREFIX_NCBI_PROTEIN, ID_PREFIX_NCBI_GENE, DB_NAME_NCBI_GENE, DB_NAME_NCBI_PROTEIN } from '../config';
+import { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL, DB_PREFIX_NCBI_PROTEIN, DB_PREFIX_NCBI_GENE, DB_NAME_NCBI_GENE, DB_NAME_NCBI_PROTEIN } from '../config';
 import { db } from '../db';
 import { seqPromise } from '../util';
 import DelimitedParser from '../parser/delimited-parser';
@@ -57,8 +57,8 @@ const processEntry = entryLine => {
 
   let organism = nodes[ NODE_INDICES.ORGANISM ];
   let organismName = getOrganismById(organism).name;
-  const db_name = DB_NAME_NCBI_GENE;
-  const id_prefix = ID_PREFIX_NCBI_GENE;
+  const dbName = DB_NAME_NCBI_GENE;
+  const dbPrefix = DB_PREFIX_NCBI_GENE;
   let id = nodes[ NODE_INDICES.ID ];
   let name = nodes[ NODE_INDICES.SYMBOL ];
 
@@ -79,7 +79,7 @@ const processEntry = entryLine => {
   [ NODE_INDICES.DESCRIPTION, NODE_INDICES.NA_SYMBOL, NODE_INDICES.NA_FULL_NAME ]
     .forEach( i => pushIfValid( synonyms, nodes[ i ] ) );
 
-  return { namespace, type, db_name, id_prefix, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
+  return { namespace, type, dbName, dbPrefix, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
 };
 
 const includeEntry = entryLine => {
@@ -120,8 +120,8 @@ const updateOrganismProteins = tax_id => {
   const processEntry = entry => {
     const namespace = ENTRY_NS;
     const type = 'protein';
-    const db_name = DB_NAME_NCBI_PROTEIN;
-    const id_prefix = ID_PREFIX_NCBI_PROTEIN;
+    const dbName = DB_NAME_NCBI_PROTEIN;
+    const dbPrefix = DB_PREFIX_NCBI_PROTEIN;
     const id = _.get( entry, 'uid' );
     const organism = _.get( entry, 'taxid' );
     const organismName = getOrganismById( organism ).name;
@@ -129,7 +129,7 @@ const updateOrganismProteins = tax_id => {
     const synonyms = getSynonyms( entry );
     const dbXrefs = [];
     const typeOfGene = 'protein-coding';
-    return { namespace, type, db_name, id_prefix, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
+    return { namespace, type, dbName, dbPrefix, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
   };
 
   const parse = eSummaryResponse => {
