@@ -42,6 +42,7 @@ class Organism {
  * This ordering determines the default sorting of results by organism.
  */
 const SORTED_MAIN_ORGANISMS = [
+  new Organism(2697049, 'SARS-CoV-2'),
   new Organism(9606, 'Homo sapiens'),
   new Organism(10090, 'Mus musculus'),
   new Organism(ROOT_STRAINS.SCERVISIAE, 'Saccharomyces cervisiae', SCERVISIAE_STRAIN_IDS),
@@ -50,8 +51,7 @@ const SORTED_MAIN_ORGANISMS = [
   new Organism(6239, 'Caenorhabditis elegans'),
   new Organism(3702, 'Arabidopsis thaliana'),
   new Organism(10116, 'Rattus norvegicus'),
-  new Organism(7955, 'Danio rerio'),
-  new Organism(2697049, 'SARS-CoV-2'),
+  new Organism(7955, 'Danio rerio')
 ];
 
 export const OTHER = new Organism(-1, 'Other');
