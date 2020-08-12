@@ -3,7 +3,7 @@
 import path from 'path';
 import _ from 'lodash';
 
-import { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL, NS_NCBI_PROTEIN, NS_NCBI_GENE } from '../config';
+import { INPUT_PATH, NCBI_FILE_NAME, NCBI_URL, ID_PREFIX_NCBI_PROTEIN, ID_PREFIX_NCBI_GENE } from '../config';
 import { db } from '../db';
 import { seqPromise } from '../util';
 import DelimitedParser from '../parser/delimited-parser';
@@ -57,7 +57,7 @@ const processEntry = entryLine => {
 
   let organism = nodes[ NODE_INDICES.ORGANISM ];
   let organismName = getOrganismById(organism).name;
-  const id_prefix = NS_NCBI_GENE;
+  const id_prefix = ID_PREFIX_NCBI_GENE;
   let id = nodes[ NODE_INDICES.ID ];
   let name = nodes[ NODE_INDICES.SYMBOL ];
 
@@ -119,7 +119,7 @@ const updateOrganismProteins = tax_id => {
   const processEntry = entry => {
     const namespace = ENTRY_NS;
     const type = 'protein';
-    const id_prefix = NS_NCBI_PROTEIN;
+    const id_prefix = ID_PREFIX_NCBI_PROTEIN;
     const id = _.get( entry, 'uid' );
     const organism = _.get( entry, 'taxid' );
     const organismName = getOrganismById( organism ).name;

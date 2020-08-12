@@ -3,7 +3,7 @@
 import path from 'path';
 import _ from 'lodash';
 
-import { INPUT_PATH, CHEBI_FILE_NAME, CHEBI_URL, NS_CHEBI } from '../config';
+import { INPUT_PATH, CHEBI_FILE_NAME, CHEBI_URL, ID_PREFIX_CHEBI } from '../config';
 import { db } from '../db';
 import XmlParser from '../parser/xml-parser';
 
@@ -62,7 +62,7 @@ const processEntry = entry => {
   let namespace = ENTRY_NS;
   let type = ENTRY_TYPE;
 
-  const id_prefix = NS_CHEBI;
+  const id_prefix = ID_PREFIX_CHEBI;
   let id = findChild( entry, XML_TAGS.ID ).replace('CHEBI:', '');
   let name = findChild( entry, XML_TAGS.NAME );
   let inchi = findChild( entry, XML_TAGS.INCHI );
