@@ -22,6 +22,7 @@ const ftpDownload = (url, outFileName) => {
         client.on('ready', () => {
           client.get(parsedUrl.pathname, function(err, fileStream){
             if( err ){
+              client.destroy();
               reject(err);
             } else {
               resolve(fileStream);

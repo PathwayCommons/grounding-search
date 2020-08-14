@@ -4,13 +4,13 @@ FROM node:10.15.3
 # Allow user configuration of variable at build-time using --build-arg flag
 ARG NODE_ENV
 
-# Initialize env variables and override with build-time flag, if set 
+# Initialize env variables and override with build-time flag, if set
 ENV NODE_ENV ${NODE_ENV:-production}
 
 # Create an unprivileged user w/ home directory
 RUN groupadd appuser \
   && useradd --gid appuser --shell /bin/bash --create-home appuser
-  
+
 # Create app directory
 RUN mkdir -p /home/appuser/app
 WORKDIR /home/appuser/app
@@ -29,5 +29,5 @@ EXPOSE 3000
 RUN chown appuser:appuser -R /home/appuser/app
 USER appuser
 
-# Run the command that starts the app
-CMD npm start
+# Run the command that indexes data and starts the app
+CMD npm run boot

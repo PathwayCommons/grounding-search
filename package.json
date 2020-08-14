@@ -46,7 +46,8 @@
     "clear:uniprot": "node -r esm src/server/datasource/cli clear uniprot",
     "clear:chebi": "node -r esm src/server/datasource/cli clear chebi",
     "clear:ncbi": "node -r esm src/server/datasource/cli clear ncbi",
-    "ci": "run-s lint"
+    "ci": "run-s lint",
+    "boot": "run-s refresh start"
   },
   "dependencies": {
     "benchmark": "^2.1.4",
