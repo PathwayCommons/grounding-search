@@ -34,8 +34,10 @@ if( op === 'clear' && passedSourceId === 'all' ){
     const duration = formatDistanceStrict(endTime, startTime);
 
     logger.info(`Successfully applied ${op} on source '${passedSourceId}' in ${duration}`);
+    process.exit(0);
   }).catch(err => {
     logger.error(`Failed to apply ${op} on source '${passedSourceId}'`);
     logger.error(err);
+    process.exit(1);
   });
 }
