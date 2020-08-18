@@ -5,6 +5,12 @@ export const patches = [
     addSynonyms: [
       'spike',
       'spike protein',
+      'S glycoprotein',
+      'Spike protein S1',
+      'Spike protein S2',
+      'Spike protein S2\'',
+      'E2',
+      'Peplomer protein',
       'surface glycoprotein'
     ]
   },
@@ -15,6 +21,12 @@ export const patches = [
       'S',
       'spike',
       'spike protein',
+      'S glycoprotein',
+      'Spike protein S1',
+      'Spike protein S2',
+      'Spike protein S2\'',
+      'E2',
+      'Peplomer protein',
       'surface glycoprotein'
     ]
   },
@@ -23,7 +35,8 @@ export const patches = [
     id: '43740570',
     addSynonyms: [
       'envelope',
-      'envelope protein'
+      'envelope protein',
+      'sM protein'
     ]
   },
   {
@@ -32,7 +45,8 @@ export const patches = [
     addSynonyms: [
       'E',
       'envelope',
-      'envelope protein'
+      'envelope protein',
+      'sM protein'
     ]
   },
   {
@@ -41,7 +55,9 @@ export const patches = [
     addSynonyms: [
       'membrane',
       'membrane protein',
-      'membrane glycoprotein'
+      'membrane glycoprotein',
+      'E1 glycoprotein',
+      'Matrix glycoprotein'
     ]
   },
   {
@@ -51,7 +67,9 @@ export const patches = [
       'M',
       'membrane',
       'membrane protein',
-      'membrane glycoprotein'
+      'membrane glycoprotein',
+      'E1 glycoprotein',
+      'Matrix glycoprotein'
     ]
   },
   {
@@ -89,7 +107,8 @@ export const patches = [
     addSynonyms: [
       'ORF1a',
       'ORF1a polyprotein',
-      'pp1a'
+      'pp1a',
+      'Replicase polyprotein 1a'
     ]
   },
   {
@@ -105,28 +124,34 @@ export const patches = [
     namespace: 'ncbi',
     id: '1826688918',
     addSynonyms: [
-      'NSP1'
+      'NSP1',
+      'Non-structural protein 1',
+      'leader protein',
+      'Host translation inhibitor nsp1'
     ]
   },
   {
     namespace: 'ncbi',
     id: '1826688919',
     addSynonyms: [
-      'NSP2'
+      'NSP2',
+      'Non-structural protein 2'
     ]
   },
   {
     namespace: 'ncbi',
     id: '1826688920',
     addSynonyms: [
-      'NSP3'
+      'NSP3',
+      'Non-structural protein 3'
     ]
   },
   {
     namespace: 'ncbi',
     id: '1826688921',
     addSynonyms: [
-      'NSP4'
+      'NSP4',
+      'Non-structural protein 4'
     ]
   },
   {
@@ -134,6 +159,8 @@ export const patches = [
     id: '1826688922',
     addSynonyms: [
       'NSP5',
+      '3C-like proteinase',
+      'Non-structural protein 5',
       'Mpro'
     ]
   },
@@ -141,49 +168,64 @@ export const patches = [
     namespace: 'ncbi',
     id: '1826688923',
     addSynonyms: [
-      'NSP6'
+      'NSP6',
+      'Non-structural protein 6'
     ]
   },
   {
     namespace: 'ncbi',
     id: '1826688924',
     addSynonyms: [
-      'NSP7'
+      'NSP7',
+      'Non-structural protein 7'
     ]
   },
   {
     namespace: 'ncbi',
     id: '1802476812',
     addSynonyms: [
-      'NSP8'
+      'NSP8',
+      'Non-structural protein 8'
     ]
   },
   {
     namespace: 'ncbi',
     id: '1826688926',
     addSynonyms: [
-      'NSP9'
+      'NSP9',
+      'Non-structural protein 9'
     ]
   },
   {
     namespace: 'ncbi',
     id: '1802476814',
     addSynonyms: [
-      'NSP10'
+      'NSP10',
+      'Non-structural protein 10'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1802476820',
+    addSynonyms: [
+      'NSP11',
+      'Non-structural protein 11'
     ]
   },
   {
     namespace: 'ncbi',
     id: '1802476815',
     addSynonyms: [
-      'NSP12'
+      'NSP12',
+      'Non-structural protein 12'
     ]
   },
   {
     namespace: 'ncbi',
     id: '1802476816',
     addSynonyms: [
-      'NSP13'
+      'NSP13',
+      'Non-structural protein 13'
     ]
   },
   {
@@ -191,7 +233,8 @@ export const patches = [
     id: '1802476817',
     addSynonyms: [
       'NSP14',
-      '3\'-to-5\' exonuclease'
+      '3\'-to-5\' exonuclease',
+      'Non-structural protein 14'
     ]
   },
   {
@@ -199,7 +242,8 @@ export const patches = [
     id: '1802476818',
     addSynonyms: [
       'NSP15',
-      'endoRNAse'
+      'endoRNAse',
+      'Non-structural protein 15'
     ]
   },
   {
@@ -207,7 +251,8 @@ export const patches = [
     id: '1802476819',
     addSynonyms: [
       'NSP16',
-      '2\'-O-ribose methyltransferase'
+      '2\'-O-ribose methyltransferase',
+      'Non-structural protein 16'
     ]
   },
   {
@@ -222,7 +267,70 @@ export const patches = [
     id: '1796318599',
     addSynonyms: [
       'ORF3a',
-      'ORF3a protein'
+      'ORF3a protein',
+      'Accessory protein 3a',
+      'Protein 3a',
+      'Protein U274',
+      'Protein X1'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '43740572',
+    addSynonyms: [
+      'ORF6 protein',
+      'Accessory protein 6',
+      'Non-structural protein 6 (ns6)',
+      'Protein X3'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1796318602',
+    addSynonyms: [
+      'ORF6',
+      'ORF6 protein',
+      'Accessory protein 6',
+      'Non-structural protein 6 (ns6)',
+      'Protein X3'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '43740573',
+    addSynonyms: [
+      'ORF7a protein',
+      'Accessory protein 7a',
+      'Protein U122',
+      'Protein X4'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1796318603',
+    addSynonyms: [
+      'ORF7a',
+      'ORF7a protein',
+      'Accessory protein 7a',
+      'Protein U122',
+      'Protein X4'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '43740574',
+    addSynonyms: [
+      'ORF7b protein',
+      'Accessory protein 7b'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1820616061',
+    addSynonyms: [
+      'ORF7b',
+      'ORF7b protein',
+      'Accessory protein 7b'
     ]
   },
   {
@@ -238,21 +346,6 @@ export const patches = [
     addSynonyms: [
       'ORF8',
       'ORF8 protein'
-    ]
-  },
-  {
-    namespace: 'ncbi',
-    id: '43740572',
-    addSynonyms: [
-      'ORF6 protein'
-    ]
-  },
-  {
-    namespace: 'ncbi',
-    id: '1796318602',
-    addSynonyms: [
-      'ORF6',
-      'ORF6 protein'
     ]
   },
   {
