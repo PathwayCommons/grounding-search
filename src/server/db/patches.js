@@ -362,18 +362,6 @@ export const patches = [
       'ORF10',
       'ORF10 protein'
     ]
-  },
-  {
-    namespace: 'ncbi',
-    id: '',
-    addSynonyms: [
-    ]
-  },
-  {
-    namespace: 'ncbi',
-    id: '',
-    addSynonyms: [
-    ]
   }
 ];
 
