@@ -100,21 +100,8 @@ const parseFile = (filePath, onData, onEnd) => {
 const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseFile, processEntry, includeEntry);
 
 const updateOrganismProteins = tax_id => {
-  const lastProtRegex = /\sprotein$/i;
-  const dropNameOrg = name => _.head( name.split(' [') );
-  const dropNameStop = name => name.replace( lastProtRegex, '' );
-
   const opts = {
     term: `txid${tax_id}[Organism:noexp] AND refseq[filter]`
-  };
-
-  // Records from db=protein don't have synonyms per se
-  // Can recreate via title w/ cleanup
-  const getSynonyms = entry => {
-    const title = _.get( entry, 'title', '' );
-    const nameNoOrg = dropNameOrg( title );
-    const nameNoStop = dropNameStop( nameNoOrg );
-    return [ nameNoStop ];
   };
 
   const processEntry = entry => {
@@ -126,7 +113,7 @@ const updateOrganismProteins = tax_id => {
     const organism = _.get( entry, 'taxid' );
     const organismName = getOrganismById( organism ).name;
     const name = _.get( entry, 'title' );
-    const synonyms = getSynonyms( entry );
+    const synonyms = [];
     const dbXrefs = [];
     const typeOfGene = 'protein-coding';
     return { namespace, type, dbName, dbPrefix, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
