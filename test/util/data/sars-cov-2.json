@@ -70,14 +70,8 @@
         "sentence": "The replicase–transcriptase complex consists of multiple enzymes, including the papain-like protease (NSP3), the main protease (NSP5), the NSP7–NSP8 primase complex, the primary RNA-dependent RNA polymerase (NSP12), a helicase–triphosphatase (NSP13), an exoribonuclease (NSP14), an endonuclease (NSP15) and N7- and 2′O-methyltransferases (NSP10 and NSP16)"
       },
       {
-        "text": "2'-O-ribose methyltransferase",
-        "xref_id": "1802476819",
-        "namespace": "ncbi",
-        "sentence": "The replicase–transcriptase complex consists of multiple enzymes, including the papain-like protease (NSP3), the main protease (NSP5), the NSP7–NSP8 primase complex, the primary RNA-dependent RNA polymerase (NSP12), a helicase–triphosphatase (NSP13), an exoribonuclease (NSP14), an endonuclease (NSP15) and N7- and 2′O-methyltransferases (NSP10 and NSP16)"
-      },
-      {
         "text": "NSP10",
-        "xref_id": "1802476819",
+        "xref_id": "1802476814",
         "namespace": "ncbi",
         "sentence": "The replicase–transcriptase complex consists of multiple enzymes, including the papain-like protease (NSP3), the main protease (NSP5), the NSP7–NSP8 primase complex, the primary RNA-dependent RNA polymerase (NSP12), a helicase–triphosphatase (NSP13), an exoribonuclease (NSP14), an endonuclease (NSP15) and N7- and 2′O-methyltransferases (NSP10 and NSP16)"
       },
@@ -138,18 +132,6 @@
       {
         "text": "M",
         "xref_id": "43740571",
-        "namespace": "ncbi",
-        "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
-      },
-      {
-        "text": "membrane",
-        "xref_id": "1796318601",
-        "namespace": "ncbi",
-        "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
-      },
-      {
-        "text": "M",
-        "xref_id": "1796318601",
         "namespace": "ncbi",
         "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
       },
@@ -364,18 +346,6 @@
         "sentence": "To enter host cells, the SARS-CoV-2 spike (S) protein binds to an ACE2 receptor on the target cell and is subsequently primed by a serine protease, TMPRSS2, that cleaves the S protein and allows fusion of viral and lysosomal membranes (Hoffmann et al., 2020)."
       },
       {
-        "text": "spike",
-        "xref_id": "1796318601",
-        "namespace": "ncbi",
-        "sentence": "To enter host cells, the SARS-CoV-2 spike (S) protein binds to an ACE2 receptor on the target cell and is subsequently primed by a serine protease, TMPRSS2, that cleaves the S protein and allows fusion of viral and lysosomal membranes (Hoffmann et al., 2020)."
-      },
-      {
-        "text": "S",
-        "xref_id": "1796318601",
-        "namespace": "ncbi",
-        "sentence": "To enter host cells, the SARS-CoV-2 spike (S) protein binds to an ACE2 receptor on the target cell and is subsequently primed by a serine protease, TMPRSS2, that cleaves the S protein and allows fusion of viral and lysosomal membranes (Hoffmann et al., 2020)."
-      },
-      {
         "text": "ORF1a",
         "xref_id": "1802476803",
         "namespace": "ncbi",
@@ -431,7 +401,7 @@
       },
       {
         "text": "Nsp9",
-        "xref_id": "1802476813",
+        "xref_id": "1826688926",
         "namespace": "ncbi",
         "sentence": "Although it is unlikely that all phosphorylation sites on viral proteins play important functional roles, several sites in membrane (M) protein, Nsp9, and nucleocapsid (N) protein (Figures 2D–2F) suggest potential functionality. "
       },
@@ -491,7 +461,7 @@
       },
       {
         "text": "Nsp2",
-        "xref_id": "1802476806",
+        "xref_id": "1826688919",
         "namespace": "ncbi",
         "sentence": "In addition to these kinase-mediated effects, the Nsp2 protein of SARS-CoV-2 also interacts directly with strumpellin (WASHC5), a subunit of the actin assembly-inducing WASH complex (Gordon et al., 2020), further implicating cytoskeleton regulation during infection."
       }

@@ -4,15 +4,18 @@ export const patches = [
     id: '43740568',
     addSynonyms: [
       'spike',
-      'spike protein'
+      'spike protein',
+      'surface glycoprotein'
     ]
   },
   {
     namespace: 'ncbi',
     id: '1796318598',
     addSynonyms: [
+      'S',
       'spike',
-      'spike protein'
+      'spike protein',
+      'surface glycoprotein'
     ]
   },
   {
@@ -27,6 +30,7 @@ export const patches = [
     namespace: 'ncbi',
     id: '1796318600',
     addSynonyms: [
+      'E',
       'envelope',
       'envelope protein'
     ]
@@ -44,6 +48,7 @@ export const patches = [
     namespace: 'ncbi',
     id: '1796318601',
     addSynonyms: [
+      'M',
       'membrane',
       'membrane protein',
       'membrane glycoprotein'
@@ -62,6 +67,7 @@ export const patches = [
     namespace: 'ncbi',
     id: '1798174255',
     addSynonyms: [
+      'N',
       'nucleocapsid',
       'nucleocapsid protein',
       'nucleocapsid phosphoprotein'
@@ -161,10 +167,9 @@ export const patches = [
   },
   {
     namespace: 'ncbi',
-    id: '1802476819',
+    id: '1802476814',
     addSynonyms: [
-      'NSP10',
-      '2\'-O-ribose methyltransferase'
+      'NSP10'
     ]
   },
   {
@@ -195,6 +200,14 @@ export const patches = [
     addSynonyms: [
       'NSP15',
       'endoRNAse'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1802476819',
+    addSynonyms: [
+      'NSP16',
+      '2\'-O-ribose methyltransferase'
     ]
   },
   {
