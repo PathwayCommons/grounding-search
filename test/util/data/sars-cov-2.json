@@ -5,7 +5,7 @@
     "entities": [
       {
       "text": "spike protein",
-      "xref_id": "1796318598",
+      "xref_id": "43740568",
       "namespace": "ncbi",
       "sentence": "As with all coronaviruses, SARS-CoV-2 cell entry is dependent on its 180-kDa spike (S) protein, which mediates two essential events: binding to ACE2 by the amino-terminal region, and fusion of viral and cellular membranes through the carboxyl-terminal region (2)."
       }
@@ -22,20 +22,14 @@
         "sentence": "ORF1a and ORF1ab encode polyproteins, which are auto-proteolytically processed into 16 non-structural proteins (NSP1–NSP16) that form the replicase–transcriptase complex (Fig. 1a)."
       },
       {
-        "text": "ORF1ab",
-        "xref_id": "1796318597",
-        "namespace": "ncbi",
-        "sentence": "ORF1a and ORF1ab encode polyproteins, which are auto-proteolytically processed into 16 non-structural proteins (NSP1–NSP16) that form the replicase–transcriptase complex (Fig. 1a)."
-      },
-      {
         "text": "NSP3",
-        "xref_id": "1826688920",
+        "xref_id": "1802476807",
         "namespace": "ncbi",
         "sentence": "The replicase–transcriptase complex consists of multiple enzymes, including the papain-like protease (NSP3), the main protease (NSP5), the NSP7–NSP8 primase complex, the primary RNA-dependent RNA polymerase (NSP12), a helicase–triphosphatase (NSP13), an exoribonuclease (NSP14), an endonuclease (NSP15) and N7- and 2′O-methyltransferases (NSP10 and NSP16)"
       },
       {
         "text": "NSP5",
-        "xref_id": "1826688922",
+        "xref_id": "1802476809",
         "namespace": "ncbi",
         "sentence": "The replicase–transcriptase complex consists of multiple enzymes, including the papain-like protease (NSP3), the main protease (NSP5), the NSP7–NSP8 primase complex, the primary RNA-dependent RNA polymerase (NSP12), a helicase–triphosphatase (NSP13), an exoribonuclease (NSP14), an endonuclease (NSP15) and N7- and 2′O-methyltransferases (NSP10 and NSP16)"
       },
@@ -88,18 +82,6 @@
         "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
       },
       {
-        "text": "spike",
-        "xref_id": "1796318598",
-        "namespace": "ncbi",
-        "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
-      },
-      {
-        "text": "S",
-        "xref_id": "1796318598",
-        "namespace": "ncbi",
-        "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
-      },
-      {
         "text": "envelope",
         "xref_id": "43740570",
         "namespace": "ncbi",
@@ -108,18 +90,6 @@
       {
         "text": "E",
         "xref_id": "43740570",
-        "namespace": "ncbi",
-        "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
-      },
-      {
-        "text": "envelope",
-        "xref_id": "1796318600",
-        "namespace": "ncbi",
-        "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
-      },
-      {
-        "text": "E",
-        "xref_id": "1796318600",
         "namespace": "ncbi",
         "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
       },
@@ -148,38 +118,20 @@
         "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
       },
       {
-        "text": "nucleocapsid",
-        "xref_id": "1798174255",
-        "namespace": "ncbi",
-        "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
-      },
-      {
-        "text": "N",
-        "xref_id": "1798174255",
-        "namespace": "ncbi",
-        "sentence": "These include four structural proteins: spike (S), envelope (E), membrane (M) and nucleocapsid (N)13, and nine putative accessory factor"
-      },
-      {
         "text": "NSP4",
-        "xref_id": "1826688921",
+        "xref_id": "1802476808",
         "namespace": "ncbi",
         "sentence": "Despite the lack of detection by western blot, we detected expression of viral peptides NSP4, NSP6 and ORF3b in the proteomic analysis."
       },
       {
         "text": "NSP6",
-        "xref_id": "1826688923",
-        "namespace": "ncbi",
-        "sentence": "Despite the lack of detection by western blot, we detected expression of viral peptides NSP4, NSP6 and ORF3b in the proteomic analysis."
-      },
-      {
-        "text": "ORF3b",
-        "xref_id": null,
+        "xref_id": "1802476810",
         "namespace": "ncbi",
         "sentence": "Despite the lack of detection by western blot, we detected expression of viral peptides NSP4, NSP6 and ORF3b in the proteomic analysis."
       },
       {
         "text": "NSP7",
-        "xref_id": "1826688924",
+        "xref_id": "1802476811",
         "namespace": "ncbi",
         "sentence": "We analysed each viral protein for Gene Ontology enrichment (Fig. 2b and Extended Data Fig. 3) and identified the major cell processes of the interacting proteins, including lipoprotein metabolism (S), nuclear transport (NSP7) and ribonucleoprotein complex biogenesis (NSP8)."
       },
@@ -191,19 +143,13 @@
       },
       {
         "text": "NSP1",
-        "xref_id": "1826688918",
+        "xref_id": "1802476805",
         "namespace": "ncbi",
         "sentence": "or instance, DNA polymerase domains are enriched among proteins that interact with NSP1, and bromodomains and extra-terminal domain (BET) family domains are enriched among proteins that interact with E (Supplementary Discussion and Supplementary Methods)."
       },
       {
         "text": "NSP2",
-        "xref_id": "1826688919",
-        "namespace": "ncbi",
-        "sentence": "These included DNA replication (NSP1), epigenetic and gene-expression regulators (NSP5, NSP8, NSP13 and E), vesicle trafficking (NSP2, NSP6, NSP7, NSP10, NSP13, NSP15, ORF3a, E, M and ORF8), lipid modification (S), RNA processing and regulation (NSP8 and N), ubiquitin ligases (ORF10), signalling (NSP7, NSP8, NSP13, N and ORF9b), nuclear transport machinery (NSP9, NSP15 and ORF6), cytoskeleton (NSP1 and NSP13), mitochondria (NSP4, NSP8 and ORF9c) and the extracellular matrix (NSP9)."
-      },
-      {
-        "text": "ORF8",
-        "xref_id": "1796318604",
+        "xref_id": "1802476806",
         "namespace": "ncbi",
         "sentence": "These included DNA replication (NSP1), epigenetic and gene-expression regulators (NSP5, NSP8, NSP13 and E), vesicle trafficking (NSP2, NSP6, NSP7, NSP10, NSP13, NSP15, ORF3a, E, M and ORF8), lipid modification (S), RNA processing and regulation (NSP8 and N), ubiquitin ligases (ORF10), signalling (NSP7, NSP8, NSP13, N and ORF9b), nuclear transport machinery (NSP9, NSP15 and ORF6), cytoskeleton (NSP1 and NSP13), mitochondria (NSP4, NSP8 and ORF9c) and the extracellular matrix (NSP9)."
       },
@@ -214,22 +160,10 @@
         "sentence": "These included DNA replication (NSP1), epigenetic and gene-expression regulators (NSP5, NSP8, NSP13 and E), vesicle trafficking (NSP2, NSP6, NSP7, NSP10, NSP13, NSP15, ORF3a, E, M and ORF8), lipid modification (S), RNA processing and regulation (NSP8 and N), ubiquitin ligases (ORF10), signalling (NSP7, NSP8, NSP13, N and ORF9b), nuclear transport machinery (NSP9, NSP15 and ORF6), cytoskeleton (NSP1 and NSP13), mitochondria (NSP4, NSP8 and ORF9c) and the extracellular matrix (NSP9)."
       },
       {
-        "text": "ORF9c",
-        "xref_id": null,
-        "namespace": "ncbi",
-        "sentence": "These included DNA replication (NSP1), epigenetic and gene-expression regulators (NSP5, NSP8, NSP13 and E), vesicle trafficking (NSP2, NSP6, NSP7, NSP10, NSP13, NSP15, ORF3a, E, M and ORF8), lipid modification (S), RNA processing and regulation (NSP8 and N), ubiquitin ligases (ORF10), signalling (NSP7, NSP8, NSP13, N and ORF9b), nuclear transport machinery (NSP9, NSP15 and ORF6), cytoskeleton (NSP1 and NSP13), mitochondria (NSP4, NSP8 and ORF9c) and the extracellular matrix (NSP9)."
-      },
-      {
         "text": "NSP9",
-        "xref_id": "1826688926",
+        "xref_id": "1802476813",
         "namespace": "ncbi",
         "sentence": "These included DNA replication (NSP1), epigenetic and gene-expression regulators (NSP5, NSP8, NSP13 and E), vesicle trafficking (NSP2, NSP6, NSP7, NSP10, NSP13, NSP15, ORF3a, E, M and ORF8), lipid modification (S), RNA processing and regulation (NSP8 and N), ubiquitin ligases (ORF10), signalling (NSP7, NSP8, NSP13, N and ORF9b), nuclear transport machinery (NSP9, NSP15 and ORF6), cytoskeleton (NSP1 and NSP13), mitochondria (NSP4, NSP8 and ORF9c) and the extracellular matrix (NSP9)."
-      },
-      {
-        "text": "ORF3a",
-        "xref_id": "1796318599",
-        "namespace": "ncbi",
-        "sentence": "Host interactions with NSP8 (signal recognition particle (SRP)), ORF8 (protein quality control in the endoplasmic reticulum), M (morphology of the endoplasmic reticulum) and NSP13 (organization of the centrosome and Golgi) may facilitate the marked reconfiguration of endoplasmic reticulum and Golgi trafficking during coronavirus infection, and interactions in peripheral compartments with NSP2 (WASH), NSP6 and M (vacuolar ATPase), NSP7 (Rab proteins), NSP10 (AP2), E (AP3) and ORF3a (HOPS) may also modify endomembrane compartments to favour coronavirus replication."
       },
       {
         "text": "ORF3a",
@@ -242,18 +176,6 @@
         "xref_id": "43740572",
         "namespace": "ncbi",
         "sentence": "ORF6 of SARS-CoV antagonizes host interferon signalling by perturbing nuclear transport33, and the NUP98–RAE1 interaction with ORF6 may perform the same function for SARS-CoV-2."
-      },
-      {
-        "text": "ORF6",
-        "xref_id": "1796318602",
-        "namespace": "ncbi",
-        "sentence": "ORF6 of SARS-CoV antagonizes host interferon signalling by perturbing nuclear transport33, and the NUP98–RAE1 interaction with ORF6 may perform the same function for SARS-CoV-2."
-      },
-      {
-        "text": "ORF10",
-        "xref_id": "1798174256",
-        "namespace": "ncbi",
-        "sentence": "The ORF10 of SARS-CoV-2 interacts with members of a cullin-2 (CUL2) RING E3 ligase complex (Fig. 4i), specifically the CUL2ZYG11B complex. "
       },
       {
         "text": "ORF10",
@@ -311,19 +233,13 @@
       },
       {
         "text": "pp1ab",
-        "xref_id": "1796318597",
-        "namespace": "ncbi",
-        "sentence": "The SARS-CoV-2 genome comprises about 30,000 nucleotides: the replicase gene of SARS-CoV-2 encodes two overlapping polyproteins—pp1a and pp1ab—that are required for viral replication and transcription3,4."
-      },
-      {
-        "text": "pp1ab",
         "xref_id": "43740578",
         "namespace": "ncbi",
         "sentence": "The SARS-CoV-2 genome comprises about 30,000 nucleotides: the replicase gene of SARS-CoV-2 encodes two overlapping polyproteins—pp1a and pp1ab—that are required for viral replication and transcription3,4."
       },
       {
         "text": "Mpro",
-        "xref_id": "1826688922",
+        "xref_id": "1802476809",
         "namespace": "ncbi",
         "sentence": "The functional polypeptides are released from the polyproteins by extensive proteolytic processing, predominantly by the 33.8-kDa Mpro (also known as 3C-like protease)."
       }
@@ -353,19 +269,7 @@
       },
       {
         "text": "ORF1ab",
-        "xref_id": "1796318597",
-        "namespace": "ncbi",
-        "sentence": "Following entry, viral genomic RNA is translated to produce the polyproteins ORF1a and ORF1ab, which are subsequently cleaved by viral proteases into non-structural proteins that form the viral replication/transcription complex (RTC)."
-      },
-      {
-        "text": "ORF1a",
-        "xref_id": "43740578",
-        "namespace": "ncbi",
-        "sentence": "Following entry, viral genomic RNA is translated to produce the polyproteins ORF1a and ORF1ab, which are subsequently cleaved by viral proteases into non-structural proteins that form the viral replication/transcription complex (RTC)."
-      },
-      {
-        "text": "ORF1ab",
-        "xref_id": "43740578",
+        "xref_id": "1802476803",
         "namespace": "ncbi",
         "sentence": "Following entry, viral genomic RNA is translated to produce the polyproteins ORF1a and ORF1ab, which are subsequently cleaved by viral proteases into non-structural proteins that form the viral replication/transcription complex (RTC)."
       },
@@ -377,19 +281,7 @@
       },
       {
         "text": "membrane protein",
-        "xref_id": "1796318601",
-        "namespace": "ncbi",
-        "sentence": "Although it is unlikely that all phosphorylation sites on viral proteins play important functional roles, several sites in membrane (M) protein, Nsp9, and nucleocapsid (N) protein (Figures 2D–2F) suggest potential functionality. "
-      },
-      {
-        "text": "membrane protein",
         "xref_id": "43740571",
-        "namespace": "ncbi",
-        "sentence": "Although it is unlikely that all phosphorylation sites on viral proteins play important functional roles, several sites in membrane (M) protein, Nsp9, and nucleocapsid (N) protein (Figures 2D–2F) suggest potential functionality. "
-      },
-      {
-        "text": "M",
-        "xref_id": "1796318601",
         "namespace": "ncbi",
         "sentence": "Although it is unlikely that all phosphorylation sites on viral proteins play important functional roles, several sites in membrane (M) protein, Nsp9, and nucleocapsid (N) protein (Figures 2D–2F) suggest potential functionality. "
       },
@@ -401,7 +293,7 @@
       },
       {
         "text": "Nsp9",
-        "xref_id": "1826688926",
+        "xref_id": "1802476813",
         "namespace": "ncbi",
         "sentence": "Although it is unlikely that all phosphorylation sites on viral proteins play important functional roles, several sites in membrane (M) protein, Nsp9, and nucleocapsid (N) protein (Figures 2D–2F) suggest potential functionality. "
       },
@@ -412,32 +304,14 @@
         "sentence": "Although it is unlikely that all phosphorylation sites on viral proteins play important functional roles, several sites in membrane (M) protein, Nsp9, and nucleocapsid (N) protein (Figures 2D–2F) suggest potential functionality. "
       },
       {
-        "text": "nucleocapsid protein",
-        "xref_id": "1798174255",
-        "namespace": "ncbi",
-        "sentence": "Although it is unlikely that all phosphorylation sites on viral proteins play important functional roles, several sites in membrane (M) protein, Nsp9, and nucleocapsid (N) protein (Figures 2D–2F) suggest potential functionality. "
-      },
-      {
         "text": "N",
         "xref_id": "43740575",
-        "namespace": "ncbi",
-        "sentence": "Although it is unlikely that all phosphorylation sites on viral proteins play important functional roles, several sites in membrane (M) protein, Nsp9, and nucleocapsid (N) protein (Figures 2D–2F) suggest potential functionality. "
-      },
-      {
-        "text": "N",
-        "xref_id": "1798174255",
         "namespace": "ncbi",
         "sentence": "Although it is unlikely that all phosphorylation sites on viral proteins play important functional roles, several sites in membrane (M) protein, Nsp9, and nucleocapsid (N) protein (Figures 2D–2F) suggest potential functionality. "
       },
       {
         "text": "ORF6",
         "xref_id": "43740572",
-        "namespace": "ncbi",
-        "sentence": "In addition, ORF6 interacts with the NUP98/RAE complex, and NUP98 phosphorylation was observed to increase at S888, a site within its peptidase domain."
-      },
-      {
-        "text": "ORF6",
-        "xref_id": "1796318602",
         "namespace": "ncbi",
         "sentence": "In addition, ORF6 interacts with the NUP98/RAE complex, and NUP98 phosphorylation was observed to increase at S888, a site within its peptidase domain."
       },
@@ -455,13 +329,13 @@
       },
       {
         "text": "NSP7",
-        "xref_id": "1826688924",
+        "xref_id": "1802476811",
         "namespace": "ncbi",
         "sentence": "The interaction of Nsp7 with RHOA (Gordon et al., 2020) may contribute to this downregulation."
       },
       {
         "text": "Nsp2",
-        "xref_id": "1826688919",
+        "xref_id": "1802476806",
         "namespace": "ncbi",
         "sentence": "In addition to these kinase-mediated effects, the Nsp2 protein of SARS-CoV-2 also interacts directly with strumpellin (WASHC5), a subunit of the actin assembly-inducing WASH complex (Gordon et al., 2020), further implicating cytoskeleton regulation during infection."
       }
