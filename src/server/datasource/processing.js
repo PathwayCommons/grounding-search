@@ -138,7 +138,7 @@ const updateEntriesFromFile = function(ns, filePath, parse, processEntry, includ
  * before inserting it to database.
  * @param {function} [includeEntry = () => true] A function called to decide whether to include or omit an entry.
  */
-const updateEntriesFromSource = async ( ns, data, parse, processEntry, includeEntry = () => true ) => {
+const updateEntriesFromSource = async ( ns, data, parse, processEntry, includeEntry = () => true, includeEntryWrtOmissions = () => true ) => {
 
   const insertEntries = async entries => {
     const insertResponse = await db.insertEntries( entries, false );
@@ -150,7 +150,7 @@ const updateEntriesFromSource = async ( ns, data, parse, processEntry, includeEn
     return insertResponse;
   };
 
-  const entries = parse( data ).filter( includeEntry ).map( processEntry );
+  const entries = parse( data ).filter( includeEntry ).filter( includeEntryWrtOmissions ).map( processEntry );
   await insertEntries( entries );
   await db.refreshIndex();
   logger.info(`Finished updating ${ns} data from source`);

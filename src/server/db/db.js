@@ -2,6 +2,7 @@ import _ from 'lodash';
 import elasticsearch from 'elasticsearch';
 import { INDEX, MAX_SEARCH_ES, ELASTICSEARCH_HOST, MAX_FUZZ_ES } from '../config';
 import { sanitizeNameForCmp } from '../util';
+import { patches } from './patches';
 
 const TYPE = 'entry';
 const NS_FIELD = 'namespace';
@@ -209,6 +210,16 @@ const db = {
 
       // remove duplicate synonyms to avoid noisy elasticsearch results
       entry.synonyms = _.uniqBy(entry.synonyms, str => str.toLowerCase());
+
+      patches.forEach(patch => {
+        const { namespace, id, addSynonyms } = patch;
+        
+        if( namespace === entry.namespace && id === entry.id ){
+          if( addSynonyms ){
+            entry.synonyms.push(...addSynonyms);
+          }
+        }
+      });
 
       // remove the main name from the synonym list (if it exists) for the same reason
       _.remove(entry.synonyms, syn => syn.toLowerCase() === entry.name.toLowerCase());

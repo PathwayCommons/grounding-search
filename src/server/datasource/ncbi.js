@@ -12,6 +12,7 @@ import { updateEntriesFromFile, updateEntriesFromSource } from './processing';
 import { getOrganismById, isSupportedOrganism } from './organisms';
 import ROOT_STRAINS from './strains/root';
 import { eSearchSummaries } from './eutils';
+import { omissions } from '../db/patches';
 
 const FILE_PATH = path.join(INPUT_PATH, NCBI_FILE_NAME);
 const ENTRY_NS = 'ncbi';
@@ -19,7 +20,7 @@ const ENTRY_TYPE = 'ggp';
 const NODE_DELIMITER = '\t';
 const EMPTY_VALUE = '-';
 const DEFAULT_SCROLL = '10s';
-const TAX_ID_SARSCOV2 = 2697049;
+const TAX_ID_SARSCOV2 = '2697049';
 
 const NODE_INDICES = Object.freeze({
   ORGANISM: 0,
@@ -100,21 +101,8 @@ const parseFile = (filePath, onData, onEnd) => {
 const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, FILE_PATH, parseFile, processEntry, includeEntry);
 
 const updateOrganismProteins = tax_id => {
-  const lastProtRegex = /\sprotein$/i;
-  const dropNameOrg = name => _.head( name.split(' [') );
-  const dropNameStop = name => name.replace( lastProtRegex, '' );
-
   const opts = {
     term: `txid${tax_id}[Organism:noexp] AND refseq[filter]`
-  };
-
-  // Records from db=protein don't have synonyms per se
-  // Can recreate via title w/ cleanup
-  const getSynonyms = entry => {
-    const title = _.get( entry, 'title', '' );
-    const nameNoOrg = dropNameOrg( title );
-    const nameNoStop = dropNameStop( nameNoOrg );
-    return [ nameNoStop ];
   };
 
   const processEntry = entry => {
@@ -126,7 +114,7 @@ const updateOrganismProteins = tax_id => {
     const organism = _.get( entry, 'taxid' );
     const organismName = getOrganismById( organism ).name;
     const name = _.get( entry, 'title' );
-    const synonyms = getSynonyms( entry );
+    const synonyms = [];
     const dbXrefs = [];
     const typeOfGene = 'protein-coding';
     return { namespace, type, dbName, dbPrefix, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
@@ -138,8 +126,12 @@ const updateOrganismProteins = tax_id => {
     return uids.map( uid => _.get( result, uid ) );
   };
 
+  const includeEntry = () => true;
+  const omittedUids = _.get( _.find( omissions, [ 'tax_id', TAX_ID_SARSCOV2 ] ), 'uids' );
+  const includeEntryWrtOmissions = entry => !_.includes( omittedUids, entry.uid );
+
   return eSearchSummaries( opts )
-    .then( data => updateEntriesFromSource( ENTRY_NS, data, parse, processEntry ) );
+    .then( data => updateEntriesFromSource( ENTRY_NS, data, parse, processEntry, includeEntry, includeEntryWrtOmissions ) );
 };
 
 /**

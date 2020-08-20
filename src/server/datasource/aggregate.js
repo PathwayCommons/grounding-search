@@ -85,6 +85,10 @@ const search = function(searchString, namespace, organismOrdering){
       return task({ ress }).promise();
     };
 
+    if( searchString.length === 1 ){
+      return doSearch(0);
+    }
+
     return (
       Promise.all([ doSearch(0), doSearch(MAX_FUZZ_ES) ]) // exact search to make sure we always include exact matches
         .then(doJoin)
