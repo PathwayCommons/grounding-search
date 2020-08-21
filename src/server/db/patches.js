@@ -48,9 +48,7 @@ const patches = [
     id: '43740578',
     addSynonyms: [
       'ORF1a polyprotein',
-      'pp1a',
-      'ORF1ab polyprotein',
-      'pp1ab'
+      'ORF1ab polyprotein'
     ]
   },
   {
@@ -61,6 +59,17 @@ const patches = [
       'ORF1a polyprotein',
       'pp1a',
       'Replicase polyprotein 1a'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1796318597',
+    addSynonyms: [
+      'ORF1ab',
+      'ORF1ab polyprotein',
+      'pp1ab',
+      'Replicase polyprotein 1ab',
+      'ORF1b'
     ]
   },
   {
@@ -86,7 +95,9 @@ const patches = [
     id: '1802476807',
     addSynonyms: [
       'NSP3',
-      'Non-structural protein 3'
+      'Non-structural protein 3',
+      'PL2-PROPapain-like proteinase',
+      'PLpro'
     ]
   },
   {
@@ -104,7 +115,8 @@ const patches = [
       'NSP5',
       '3C-like proteinase',
       'Non-structural protein 5',
-      'Mpro'
+      'Mpro',
+      '3CLpro'
     ]
   },
   {
@@ -161,7 +173,8 @@ const patches = [
     addSynonyms: [
       'NSP12',
       'Non-structural protein 12',
-      'RNA-dependent RNA polymerase'
+      'RNA-dependent RNA polymerase',
+      'RdRp'
     ]
   },
   {
@@ -263,7 +276,6 @@ const omissions = [
       '1796318600', //E protein
       '1796318601', //M protein
       '1798174255', //N protein
-      '1796318597', //ORF1ab protein
       '1826688918', // NSP1 pp1a
       '1826688919', // NSP2 pp1a
       '1826688920', // NSP3 pp1a
