@@ -233,7 +233,7 @@
       },
       {
         "text": "pp1ab",
-        "xref_id": "43740578",
+        "xref_id": "1796318597",
         "namespace": "ncbi",
         "sentence": "The SARS-CoV-2 genome comprises about 30,000 nucleotides: the replicase gene of SARS-CoV-2 encodes two overlapping polyproteins—pp1a and pp1ab—that are required for viral replication and transcription3,4."
       },
@@ -338,6 +338,60 @@
         "xref_id": "1802476806",
         "namespace": "ncbi",
         "sentence": "In addition to these kinase-mediated effects, the Nsp2 protein of SARS-CoV-2 also interacts directly with strumpellin (WASHC5), a subunit of the actin assembly-inducing WASH complex (Gordon et al., 2020), further implicating cytoskeleton regulation during infection."
+      }
+    ]
+  },
+  {
+    "id": "https://doi.org/10.1126/scitranslmed.abc5332",
+    "organismOrdering": [2697049],
+    "entities": [
+      {
+        "text": "ORF1a",
+        "xref_id": "1802476803",
+        "namespace": "ncbi",
+        "sentence": "The coronavirus genome contains two overlapping open reading frames (ORF1a and ORF1b) at the 5′ end terminal, which encode polyproteins pp1a and pp1ab."
+      },
+      {
+        "text": "ORF1b",
+        "xref_id": "1796318597",
+        "namespace": "ncbi",
+        "sentence": "The coronavirus genome contains two overlapping open reading frames (ORF1a and ORF1b) at the 5′ end terminal, which encode polyproteins pp1a and pp1ab."
+      },
+      {
+        "text": "pp1a",
+        "xref_id": "1802476803",
+        "namespace": "ncbi",
+        "sentence": "The coronavirus genome contains two overlapping open reading frames (ORF1a and ORF1b) at the 5′ end terminal, which encode polyproteins pp1a and pp1ab."
+      },
+      {
+        "text": "pp1ab",
+        "xref_id": "1796318597",
+        "namespace": "ncbi",
+        "sentence": "The coronavirus genome contains two overlapping open reading frames (ORF1a and ORF1b) at the 5′ end terminal, which encode polyproteins pp1a and pp1ab."
+      },
+      {
+        "text": "3CLpro",
+        "xref_id": "1802476809",
+        "namespace": "ncbi",
+        "sentence": "The polyproteins are processed by a 3C-like protease [3CLpro or main protease (MPro)] (11 cleavage sites) and a papain-like protease (PLpro) (3 cleavage sites), resulting in 16 mature nonstructural proteins, including an RNA-dependent RNA polymerase (RdRp)."
+      },
+      {
+        "text": "MPro",
+        "xref_id": "1802476809",
+        "namespace": "ncbi",
+        "sentence": "The polyproteins are processed by a 3C-like protease [3CLpro or main protease (MPro)] (11 cleavage sites) and a papain-like protease (PLpro) (3 cleavage sites), resulting in 16 mature nonstructural proteins, including an RNA-dependent RNA polymerase (RdRp)."
+      },
+      {
+        "text": "PLpro",
+        "xref_id": "1802476807",
+        "namespace": "ncbi",
+        "sentence": "The polyproteins are processed by a 3C-like protease [3CLpro or main protease (MPro)] (11 cleavage sites) and a papain-like protease (PLpro) (3 cleavage sites), resulting in 16 mature nonstructural proteins, including an RNA-dependent RNA polymerase (RdRp)."
+      },
+      {
+        "text": "RdRp",
+        "xref_id": "1802476815",
+        "namespace": "ncbi",
+        "sentence": "The polyproteins are processed by a 3C-like protease [3CLpro or main protease (MPro)] (11 cleavage sites) and a papain-like protease (PLpro) (3 cleavage sites), resulting in 16 mature nonstructural proteins, including an RNA-dependent RNA polymerase (RdRp)."
       }
     ]
   }
