@@ -65,7 +65,7 @@ const processEntry = entry => {
   altProteinNames.forEach( name => pushIfNonNil( proteinNames, name ) );
   subProteinNames.forEach( name => pushIfNonNil( proteinNames, name ) );
 
-  let synonyms = proteinNames.concat(geneNames);
+  let synonyms = geneNames ? proteinNames.concat(geneNames) : proteinNames;
 
   // since uniprot uses weird names, use the first "protein name" instead, if possible
   name = proteinNames[0] || name;
