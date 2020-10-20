@@ -13,7 +13,7 @@ const MIN_SIZE_MB = 0 * 1024 * 1024;
 const checkFileSize = fileName => {
   const filePath = path.join( INPUT_PATH, fileName );
   const stats = fs.statSync( filePath );
-  if( stats.size <= MIN_SIZE_MB ) throw new Error( `Download file size less than MIN_SIZE` );
+  if( stats.size <= MIN_SIZE_MB ) throw new Error( 'Download file size less than MIN_SIZE' );
 };
 
 const ftpDownload = (url, outFileName) => {
@@ -72,7 +72,7 @@ const ftpDownload = (url, outFileName) => {
  * with the same name already exists.
  * @returns {Promise}
  */
-const dl = (url, outFileName, forceIfFileExists = false) => {
+const dl = async (url, outFileName, forceIfFileExists = false) => {
   const parsedUrl = new URL(url);
 
   if( !forceIfFileExists && fs.existsSync(path.join(INPUT_PATH, outFileName)) ){
