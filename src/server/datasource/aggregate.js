@@ -23,6 +23,7 @@ const filterSearchString = function(searchString){
 /**
  * Retrieve the entities matching best with the search string.
  * @param {string} searchString Key string for searching the best matching entities.
+ * @param {(string|string[])} [namespace] An array of namespaces to search or a single namespace string (default NCBI and CHEBI)
  * @param {object} [organismOrdering] An array of organism taxon IDs.
  * Example: `[ '9606', '10090' ]`
  * This sets a preference of organism ordering when there is a distance tie (e.g.
@@ -32,7 +33,7 @@ const filterSearchString = function(searchString){
  * is used based on the popularity of common model organisms.
  * @returns {Promise} Promise object represents the array of best matching entries.
  */
-const search = function(searchString, namespace, organismOrdering){
+const search = function(searchString, namespace = ['ncbi', 'chebi'], organismOrdering){
   searchString = filterSearchString(searchString);
 
   const doSearch = fuzziness => db.search(searchString, namespace, fuzziness);

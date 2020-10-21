@@ -289,8 +289,8 @@ const db = {
   /**
    * Retrieve the entities matching best with the search string within maximum search size.
    * @param {string} searchString Key string for searching the best matching entities.
-   * @param {string} [namespace=undefined] Namespace to seek the entities e.g. 'uniprot', 'chebi', ...
-   * @param {number} fuzziness The amount of fuzziness to use.  Higher values allow looser matches.
+   * @param {(string|string[])} [namespace] Namespaces to seek the entities e.g. 'uniprot', 'chebi', ...
+   * @param {number} [fuzziness] The amount of fuzziness to use.  Higher values allow looser matches.
    * @returns {Promise} Promise object represents the array of best matching entities.
    */
   search: function( searchString, namespace, fuzziness = MAX_FUZZ_ES, size = MAX_SEARCH_ES ){
@@ -313,14 +313,27 @@ const db = {
     };
 
     if( !_.isNil(namespace) ){
-      query = {
-        bool: {
-          must: {
-            term: { [NS_FIELD]: namespace }
-          },
-          should: query
-        }
-      };
+      if( _.isString(namespace) ){
+        query = {
+          bool: {
+            must: {
+              term: { [NS_FIELD]: namespace.toLowerCase() }
+            },
+            should: query
+          }
+        };
+      } else if( _.isArray(namespace) ){
+        query = {
+          bool: {
+            must: {
+              bool: {
+                should: namespace.map(ns => ({ term: { [NS_FIELD]: ns.toLowerCase() } }))
+              }
+            },
+            should: query
+          }
+        };
+      }
     }
 
     const body = {
