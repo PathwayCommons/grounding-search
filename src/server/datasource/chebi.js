@@ -88,7 +88,7 @@ const includeEntry = entry => {
 
 const parseXml = (filePath, onData, onEnd) => {
   let rootTag = XML_TAGS.CLASS;
-  let omitList = [ XML_TAGS.RDF, XML_TAGS.ONTOLOGY, XML_TAGS.ANNOTATION_PROPERTY,
+  let omitList = [ XML_TAGS.ONTOLOGY, XML_TAGS.ANNOTATION_PROPERTY,
     XML_TAGS.OBJECT_PROPERTY, XML_TAGS.AXIOM ];
 
   XmlParser( filePath, rootTag, omitList, { onEnd, onData } );
