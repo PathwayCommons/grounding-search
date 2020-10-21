@@ -42,6 +42,8 @@ const getAttributes = n => n && n.attributes;
 
 const getText = n => n && n.text;
 
+const getDbXref = ({ attributes: { type: db, id } }) => ({ db, id }); //required
+
 const processEntry = entry => {
   let namespace = ENTRY_NS;
   let type = ENTRY_TYPE;
@@ -58,6 +60,7 @@ const processEntry = entry => {
   let recShortProteinName = getShortName( recProtName );
   let altProteinNames = protein && _.filter( protein.children, ['name', 'alternativeName'] ).map( getShortOrFullName );
   let subProteinNames = protein && _.filter( protein.children, ['name', 'submittedName'] ).map( getShortOrFullName );
+  let dbXrefs = _.filter( entry.children, ['name', 'dbReference'] ).map( getDbXref );
 
   let proteinNames = [];
   pushIfNonNil( proteinNames, recShortProteinName );
@@ -70,7 +73,7 @@ const processEntry = entry => {
   // since uniprot uses weird names, use the first "protein name" instead, if possible
   name = proteinNames[0] || name;
 
-  return { namespace, type, dbName, dbPrefix, id, organism, name, geneNames, proteinNames, synonyms };
+  return { namespace, type, dbName, dbPrefix, id, organism, name, geneNames, proteinNames, synonyms, dbXrefs };
 };
 
 const includeEntry = entry => {
@@ -81,7 +84,7 @@ const includeEntry = entry => {
 
 const parseXml = (filePath, onData, onEnd) => {
   let rootTag = 'entry';
-  let omitList = ['uniprot' ,'lineage', 'reference', 'evidence'];
+  let omitList = ['lineage', 'reference', 'evidence', 'copyright', 'comment'];
 
   XmlParser( filePath, rootTag, omitList, { onEnd, onData } );
 };
