@@ -20,6 +20,7 @@ function XmlParser(filePath, rootTagName, omitList = [], events) {
 
   let tagStack = [];
   let getTopTag = () => tagStack[tagStack.length - 1];
+  let omitParent = null;
   let onData = events.onData || _.noop;
   let onEnd = events.onEnd || _.noop;
   let omitSet = new Set( omitList );
@@ -33,7 +34,7 @@ function XmlParser(filePath, rootTagName, omitList = [], events) {
     let hasParent = parent != null;
     let { attributes, name } = node;
 
-    if( shouldStoreNode(node) ){
+    if( shouldStoreNode(node) && omitParent == null ){
       let parsedNode = {
         name,
         attributes,
@@ -45,31 +46,47 @@ function XmlParser(filePath, rootTagName, omitList = [], events) {
       }
 
       tagStack.push(parsedNode);
+
+    } else if( !shouldStoreNode(node) && omitParent == null ) {
+      omitParent = node; //stash for ontext and onclosetag
     }
   };
 
   parser.ontext = text => {
-    let topTag = getTopTag();
-
-    if( topTag == null ){ // omit if unstored
+    if( omitParent != null ){
       return;
-    }
 
-    topTag.text = text;
+    } else {
+
+      let trimmed = text && text.trim();
+      if( trimmed ){
+        let topTag = getTopTag();
+        topTag.text = text;
+      }
+    }
   };
 
-  parser.onclosetag = () => {
-    let topTag = getTopTag();
+  parser.onclosetag = node => {
+    if( omitParent != null ){
 
-    if( topTag == null ){ // omit if unstored
+      if( node.name == omitParent.name ){
+        omitParent = null;
+      }
       return;
+
+    } else {
+      let topTag = getTopTag();
+      tagStack.pop();
+
+      if( topTag.name === rootTagName ){
+        onData(topTag, stream);
+
+        // processed, drop parent reference
+        let parent = getTopTag();
+        if( parent ) parent.children.pop();
+      }
     }
 
-    if( topTag.name === rootTagName ){
-      onData(topTag, stream);
-    }
-
-    tagStack.pop();
   };
 
   parser.onend = () => {
