@@ -9,7 +9,7 @@ import { URL } from 'url';
 import fs from 'fs';
 import zlib from 'zlib';
 
-const MIN_SIZE_MB = 0 * 1024 * 1024;
+const MIN_SIZE_MB = 1 * 1024 * 1024;
 const checkFileSize = fileName => {
   const filePath = path.join( INPUT_PATH, fileName );
   const stats = fs.statSync( filePath );
