@@ -117,12 +117,11 @@ const get = function(namespace, id){
 };
 
 /**
- * Map entities to a target namespace (dbto) from a given namespace and id.
- * @param {string} dbto dbPrefix of database to find records in
- * @param {string} dbfrom dbPrefix of database the provided id
- * @param {string} id The id of entity in the dbfrom database
- * @returns {Promise} Promise objects represents the entity with the given id from the given namespace,
- * if there is no such entity it represents null.
+ * Retrieve dbXrefs in another database, given a db and one or more ids
+ * @param {string} dbto MIRIAM prefix of target database
+ * @param {string} dbfrom MIRIAM prefix of source database
+ * @param {string | Object} id The identifier or list of identifiers in dbfrom
+ * @returns {Promise} Promise objects containing dbXrefs for each element of id
  */
 const map = function( dbfrom, id, dbto ){
   return db.map( dbfrom, id, dbto );

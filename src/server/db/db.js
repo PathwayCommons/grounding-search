@@ -383,7 +383,7 @@ const db = {
    * @returns {Promise} Promise objects containing dbXrefs for each element of id
    */
   map: function( dbfrom, id, dbto ){
-    const MAPPING_NAMESPACE = 'uniprot'; // make this more generic
+    const MAPPING_NAMESPACE = 'uniprot';
     const MSEARCH_DEFAULTS = { index: INDEX };
     const MIRIAM_2_UNIPROT_NAMES = new Map([
       ['ncbigene', 'GeneID'],
@@ -415,14 +415,15 @@ const db = {
       const header = {};
       const body = {};
       const filter = [
-        {
+        { // Look in MAPPING_NAMESPACE
           term: {
             [NS_FIELD]: MAPPING_NAMESPACE
           }
         }
       ];
 
-      if( dbfromName === MAPPING_NAMESPACE ){
+      if( dbfrom === MAPPING_NAMESPACE ){
+        // Starting from MAPPING_NAMESPACE, so just filter on the id and dbXrefs with dbtoName
         let byId = {
           term: {
             id
@@ -443,8 +444,7 @@ const db = {
         filter.push( byId, byDbto );
 
       } else {
-
-
+        // Filter on co-occurrence of dbXrefs with dbtoName and (dbfromName, id)
         let byDbfrom = {
           nested: {
             path: 'dbXrefs',
@@ -462,6 +462,7 @@ const db = {
             }
           }
         };
+
         let byDbto = {
           nested: {
             path: 'dbXrefs',
