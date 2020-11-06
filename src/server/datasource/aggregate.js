@@ -54,7 +54,7 @@ const search = function(searchString, namespace = ['ncbi', 'chebi'], organismOrd
       const getSynonym = ent => ent.synonyms.length === 1 ? sanitize(ent.synonyms[0]) : null;
       const s1 = getSynonym(ent1) || '--nosynonym1';
       const s2 = getSynonym(ent2) || '--nosynonym2';
-      
+
       return isRootStrainOrgId(org1.id) && org1.id === org2.id && (n1 === n2 || s1 === s2 || n1 === s2 || s1 === n2);
     });
   };
@@ -63,13 +63,13 @@ const search = function(searchString, namespace = ['ncbi', 'chebi'], organismOrd
     let task = Future.wrap(function(args, next){ // code in this block runs in its own thread
       let res = filterStrains(args.ents);
       let err = null;
-  
+
       next( err, res );
     });
-  
+
     return task({ ents }).promise();
   };
-  
+
   const doSearches = () => {
     const join = ress => _.uniqWith(_.concat(...ress), (ent1, ent2) => {
       return ent1.namespace === ent2.namespace && ent1.id === ent2.id;
@@ -79,10 +79,10 @@ const search = function(searchString, namespace = ['ncbi', 'chebi'], organismOrd
       let task = Future.wrap(function(args, next){ // code in this block runs in its own thread
         let res = join(args.ress);
         let err = null;
-    
+
         next( err, res );
       });
-    
+
       return task({ ress }).promise();
     };
 
@@ -116,4 +116,16 @@ const get = function(namespace, id){
   return db.get(id, namespace);
 };
 
-export const aggregate = { search, get };
+/**
+ * Map entities to a target namespace (dbto) from a given namespace and id.
+ * @param {string} dbto dbPrefix of database to find records in
+ * @param {string} dbfrom dbPrefix of database the provided id
+ * @param {string} id The id of entity in the dbfrom database
+ * @returns {Promise} Promise objects represents the entity with the given id from the given namespace,
+ * if there is no such entity it represents null.
+ */
+const map = function( dbfrom, id, dbto ){
+  return db.map( dbfrom, id, dbto );
+};
+
+export const aggregate = { search, get, map };
