@@ -423,7 +423,7 @@ const db = {
       ];
 
       if( dbfrom === MAPPING_NAMESPACE ){
-        // Starting from MAPPING_NAMESPACE, so just filter on the id and dbXrefs with dbtoName
+        // 'get' conditional on dbXrefs having the dbtoName
         let byId = {
           term: {
             id
@@ -444,7 +444,8 @@ const db = {
         filter.push( byId, byDbto );
 
       } else {
-        // Filter on co-occurrence of dbXrefs with dbtoName and (dbfromName, id)
+        // Filter dbXrefs for dbfrom + id
+        // Filter dbXrefs for dbto unless it is in the MAPPING_NAMESPACE
         let byDbfrom = {
           nested: {
             path: 'dbXrefs',
@@ -518,7 +519,7 @@ const db = {
       });
     };
 
-    const body = _.flatten( _.concat( [], id ).map( queryFactory ) );
+    const body = _.flatten( id.map( queryFactory ) );
     const searchQuery = _.defaults( { body }, MSEARCH_DEFAULTS );
 
     return client.msearch( searchQuery )
