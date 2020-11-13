@@ -81,6 +81,17 @@ const db = {
           synonyms: {
             type: 'keyword',
             normalizer: 'name_norm'
+          },
+          dbXrefs: {
+            type: 'nested',
+            properties: {
+              db: {
+                type: 'keyword'
+              },
+              id: {
+                type: 'keyword'
+              }
+            }
           }
         }
       }
@@ -213,7 +224,7 @@ const db = {
 
       patches.forEach(patch => {
         const { namespace, id, addSynonyms } = patch;
-        
+
         if( namespace === entry.namespace && id === entry.id ){
           if( addSynonyms ){
             entry.synonyms.push(...addSynonyms);
@@ -363,6 +374,157 @@ const db = {
       index: INDEX,
       type: TYPE
     }).then( res => res.hits.hits.map( e => e._source )[0] );
+  },
+  /**
+   * Retrieve dbXrefs in another database, given a db and one or more ids
+   * @param {string} dbto MIRIAM prefix of target database
+   * @param {string} dbfrom MIRIAM prefix of source database
+   * @param {string | Object} id The identifier or list of identifiers in dbfrom
+   * @returns {Promise} Promise objects containing dbXrefs for each element of id
+   */
+  map: function( dbfrom, id, dbto ){
+    const MAPPING_NAMESPACE = 'uniprot';
+    const MSEARCH_DEFAULTS = { index: INDEX };
+    const MIRIAM_2_UNIPROT_NAMES = new Map([
+      ['ncbigene', 'GeneID'],
+      ['refseq', 'RefSeq'],
+      ['chembl.target', 'ChEMBL'],
+      ['ensembl', 'Ensembl'],
+      ['genecards', 'GeneCards'],
+      ['hgnc', 'HGNC'],
+      ['reactome', 'Reactome'],
+      ['go', 'GO'],
+      ['interpro', 'InterPro'],
+      ['pfam', 'Pfam'],
+      ['supfam', 'SUPFAM'],
+      ['uniprot', 'uniprot']
+    ]);
+
+    id = _.concat( [], id ); // Accept string, array
+    const dbfromName = MIRIAM_2_UNIPROT_NAMES.get( dbfrom );
+    const dbtoName = MIRIAM_2_UNIPROT_NAMES.get( dbto );
+
+    if( !dbfromName || !dbtoName ) throw new Error('Unrecognized database name');
+
+    let client = this.connect();
+    const dbXrefsByDbto = entry => _.filter( _.get( entry, 'dbXrefs', [] ), [ 'db', dbtoName ] ).map( ({ id }) => ({ db: dbto, id }) );
+    let getDbXrefs = entries => _.flatten( entries.map( dbXrefsByDbto ) );
+    const getParentDbXrefs = entity => ({ db: _.get( entity, 'dbPrefix' ), id: _.get( entity, 'id' ) });
+
+    const queryFactory = id => {
+      const header = {};
+      const body = {};
+      const filter = [
+        { // Look in MAPPING_NAMESPACE
+          term: {
+            [NS_FIELD]: MAPPING_NAMESPACE
+          }
+        }
+      ];
+
+      if( dbfrom === MAPPING_NAMESPACE ){
+        // 'get' conditional on dbXrefs having the dbtoName
+        let byId = {
+          term: {
+            id
+          }
+        };
+        let byDbto = {
+          nested: {
+            path: 'dbXrefs',
+            query: {
+              bool: {
+                filter: {
+                  term: { 'dbXrefs.db': dbtoName }
+                }
+              }
+            }
+          }
+        };
+        filter.push( byId, byDbto );
+
+      } else {
+        // Filter dbXrefs for dbfrom + id
+        // Filter dbXrefs for dbto unless it is in the MAPPING_NAMESPACE
+        let byDbfrom = {
+          nested: {
+            path: 'dbXrefs',
+            query: {
+              bool: {
+                filter: [
+                  {
+                    term: { 'dbXrefs.db': dbfromName }
+                  },
+                  {
+                    term: { 'dbXrefs.id': id }
+                  }
+                ]
+              }
+            }
+          }
+        };
+
+        let byDbto = {
+          nested: {
+            path: 'dbXrefs',
+            query: {
+              bool: {
+                filter: [
+                  {
+                    term: { 'dbXrefs.db': dbtoName }
+                  }
+                ]
+              }
+            }
+          }
+        };
+
+        filter.push( byDbfrom );
+
+        if ( dbto === MAPPING_NAMESPACE ){
+          getDbXrefs = entities => entities.map( getParentDbXrefs );
+
+        } else {
+          filter.push( byDbto );
+        }
+      }
+
+      _.set( body, ['query', 'bool', 'filter'], filter );
+
+      return [ header, body ];
+    };
+
+    const checkResponses = ({ responses }) => {
+      responses.forEach( response => {
+        const hasError = _.has( response, 'error' );
+        const ok = _.get( response, 'status' ) == 200;
+        if( hasError || !ok ){
+          throw new Error( `Response Error: ${JSON.stringify( response )}` );
+        } else {
+          return;
+        }
+      });
+      return responses;
+    };
+
+    const processResponses = responses => {
+      return responses.map( ( response, index ) => {
+        const entries = response.hits.hits.map( hit => hit._source );
+        const dbXrefs = getDbXrefs( entries );
+        return {
+          dbfrom,
+          id: id[index],
+          dbXrefs
+        };
+      });
+    };
+
+    const body = _.flatten( id.map( queryFactory ) );
+    const searchQuery = _.defaults( { body }, MSEARCH_DEFAULTS );
+
+    return client.msearch( searchQuery )
+      .then( checkResponses )
+      .then( processResponses );
   },
   /**
    * Check if the elasticsearch index dedicated for the app exists.

@@ -49,4 +49,9 @@ router.post('/get', function(req, res){
   aggregate.get(namespace, id).then(searchRes => res.json(searchRes));
 });
 
+router.post('/map', function(req, res){
+  const { dbfrom, id, dbto } = req.body;
+  aggregate.map( dbfrom, id, dbto  ).then( searchRes => res.json( searchRes ) );
+});
+
 export default router;
