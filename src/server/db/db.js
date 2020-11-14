@@ -397,7 +397,8 @@ const db = {
       ['interpro', 'InterPro'],
       ['pfam', 'Pfam'],
       ['supfam', 'SUPFAM'],
-      ['uniprot', 'uniprot']
+      ['uniprot', 'uniprot'],
+      ['mim', 'MIM']
     ]);
 
     id = _.concat( [], id ); // Accept string, array
