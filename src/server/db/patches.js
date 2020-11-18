@@ -293,6 +293,25 @@ const omissions = [
       '1796318604', //ORF8 protein
       '1798174256', //ORF10
     ]
+  },
+  {
+    tax_id: '227984',
+    uids: [
+      '1845982719', //S protein
+      '1845982722', //E protein
+      '1845982723', //M protein
+      '1845982729', //N protein
+      '1873624195', //ORF1ab protein
+      '1845982720', //ORF3a protein
+      '1845982721', //ORF3b protein
+      '1845982724', //ORF6  protein
+      '1845982725', //ORF7a protein
+      '1845982726', //ORF7b protein
+      '1845982727', //ORF8a protein
+      '1845982728', //ORF8b protein
+      '1845982731', //ORF9a protein
+      '1845982730', //ORF9b protein
+    ]
   }
 ];
 

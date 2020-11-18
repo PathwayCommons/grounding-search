@@ -43,6 +43,7 @@ class Organism {
  */
 const SORTED_MAIN_ORGANISMS = [
   new Organism(2697049, 'SARS-CoV-2'),
+  new Organism(227984, 'SARS-CoV'),
   new Organism(9606, 'Homo sapiens'),
   new Organism(10090, 'Mus musculus'),
   new Organism(ROOT_STRAINS.SCERVISIAE, 'Saccharomyces cervisiae', SCERVISIAE_STRAIN_IDS),
