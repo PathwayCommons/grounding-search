@@ -27,7 +27,7 @@ const EUTILS_ESUMMARY_URL = NCBI_EUTILS_BASE_URL + 'esummary.fcgi';
 const DEFAULT_ESUMMARY_PARAMS = {
   id: undefined,
   db: 'protein',
-  retstart: 1,
+  retstart: 0,
   retmode: 'json',
   retmax: 10000,
   query_key: undefined,
