@@ -21,6 +21,7 @@ const NODE_DELIMITER = '\t';
 const EMPTY_VALUE = '-';
 const DEFAULT_SCROLL = '10s';
 const TAX_ID_SARSCOV2 = '2697049';
+const TAX_ID_SARSCOV = '227984';
 
 const NODE_INDICES = Object.freeze({
   ORGANISM: 0,
@@ -127,7 +128,8 @@ const updateOrganismProteins = tax_id => {
   };
 
   const includeEntry = () => true;
-  const omittedUids = _.get( _.find( omissions, [ 'tax_id', TAX_ID_SARSCOV2 ] ), 'uids' );
+  const NCBI_omissions = omissions.filter( o => o.namespace == ENTRY_NS );
+  const omittedUids = _.flatten( NCBI_omissions.map( v => v.uids ) );
   const includeEntryWrtOmissions = entry => !_.includes( omittedUids, entry.uid );
 
   return eSearchSummaries( opts )
@@ -149,7 +151,8 @@ const download = function(){
 const index = function(){
   return Promise.all([
     updateFromFile(),
-    updateOrganismProteins( TAX_ID_SARSCOV2 )
+    updateOrganismProteins( TAX_ID_SARSCOV2 ),
+    updateOrganismProteins( TAX_ID_SARSCOV )
   ]);
 };
 

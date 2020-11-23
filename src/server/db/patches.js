@@ -1,4 +1,6 @@
-const patches = [
+import _ from 'lodash';
+
+const PATCHES_TAXID_2697049 = [
   {
     namespace: 'ncbi',
     id: '43740568',
@@ -268,8 +270,182 @@ const patches = [
   }
 ];
 
+const PATCHES_TAXID_227984 = [
+  {
+    namespace: 'ncbi',
+    id: '1489668',
+    addSynonyms: [
+      'spike',
+      'spike protein',
+      'S glycoprotein'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1489678',
+    addSynonyms: [
+      'ORF9a',
+      'ORF9a protein',
+      'nucleocapsid',
+      'nucleocapsid protein'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1489680',
+    addSynonyms: [
+      'ORF1ab polyprotein',
+      'pp1ab',
+      'polyprotein pp1ab',
+      'replicase 1AB'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1489671',
+    addSynonyms: [
+      'envelope protein',
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1489669',
+    addSynonyms: [
+      'sars3a'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1489679',
+    addSynonyms: [
+      'ORF9b'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '34555774',
+    addSynonyms: [
+      'NSP1',
+      'Non-structural protein 1',
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '34555775',
+    addSynonyms: [
+      'NSP2',
+      'Non-structural protein 2'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '34555776',
+    addSynonyms: [
+      'NSP3',
+      'Non-structural protein 3'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '34555778',
+    addSynonyms: [
+      'NSP4',
+      'Non-structural protein 4'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '29837498',
+    addSynonyms: [
+      'NSP5',
+      'Non-structural protein 5'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '29837499',
+    addSynonyms: [
+      'NSP6',
+      'Non-structural protein 6'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '29837500',
+    addSynonyms: [
+      'NSP7',
+      'Non-structural protein 7'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '29837501',
+    addSynonyms: [
+      'NSP8',
+      'Non-structural protein 8'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '29837502',
+    addSynonyms: [
+      'NSP9',
+      'Non-structural protein 9'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '29837503',
+    addSynonyms: [
+      'NSP10',
+      'Non-structural protein 10'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '1904811885',
+    addSynonyms: [
+      'NSP12',
+      'Non-structural protein 12'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '29837505',
+    addSynonyms: [
+      'NSP13',
+      'Non-structural protein 13'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '29837506',
+    addSynonyms: [
+      'NSP14',
+      'Non-structural protein 14'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '29837507',
+    addSynonyms: [
+      'NSP15',
+      'Non-structural protein 15'
+    ]
+  },
+  {
+    namespace: 'ncbi',
+    id: '30133975',
+    addSynonyms: [
+      'NSP16',
+      'Non-structural protein 16'
+    ]
+  }
+];
+
 const omissions = [
   {
+    namespace: 'ncbi',
     tax_id: '2697049',
     uids: [
       '1796318598', //S protein
@@ -293,7 +469,29 @@ const omissions = [
       '1796318604', //ORF8 protein
       '1798174256', //ORF10
     ]
+  },
+  {
+    namespace: 'ncbi',
+    tax_id: '227984',
+    uids: [
+      '1845982719', //S protein
+      '1845982722', //E protein
+      '1845982723', //M protein
+      '1845982729', //N protein
+      '1873624195', //ORF1ab protein
+      '1845982720', //ORF3a protein
+      '1845982721', //ORF3b protein
+      '1845982724', //ORF6  protein
+      '1845982725', //ORF7a protein
+      '1845982726', //ORF7b protein
+      '1845982727', //ORF8a protein
+      '1845982728', //ORF8b protein
+      '1845982731', //ORF9a protein
+      '1845982730', //ORF9b protein
+    ]
   }
 ];
+
+const patches = _.concat( [], PATCHES_TAXID_2697049, PATCHES_TAXID_227984 );
 
 export { patches, omissions };
