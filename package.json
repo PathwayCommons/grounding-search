@@ -49,7 +49,7 @@
     "ci": "run-s lint",
     "dump": "node -r esm src/server/datasource/cli dump",
     "restore": "node -r esm src/server/datasource/cli restore",
-    "boot": "run-s refresh start"
+    "boot": "run-s clear restore start"
   },
   "dependencies": {
     "benchmark": "^2.1.4",
