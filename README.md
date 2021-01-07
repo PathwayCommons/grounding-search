@@ -64,6 +64,9 @@ The following environment variables can be used to configure the server:
 - `npm run index:source` : index data for `source` (i.e. `ncbi`, `chebi`) in elasticsearch
 - `npm run test:inputgen` : generate input test file for each `source` (i.e. `uniprot`, ...)
 - `npm run test:inputgen` : generate input test file for `source` (i.e. `uniprot`, ...)
+- `npm run dump` : dump the information for `INDEX` to `ESDUMP_LOCATION`
+- `npm run restore` : restore the information for `INDEX` from `ESDUMP_LOCATION`
+- `npm run boot` : run `refresh` then `start`; exit on errors
 
 ## Running via Docker
 
