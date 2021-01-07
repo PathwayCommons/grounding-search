@@ -49,5 +49,5 @@ export const DB_NAME_NCBI_GENE  = env('DB_NAME_NCBI_GENE', 'NCBI Gene');
 export const DB_PREFIX_NCBI_PROTEIN = env('DB_PREFIX_NCBI_PROTEIN', 'ncbiprotein');
 export const DB_NAME_NCBI_PROTEIN = env('DB_NAME_NCBI_PROTEIN', 'NCBI Protein');
 
-export const ESDUMP_URL = env('ESDUMP_URL', 'https://probablyzenodo.com');
+export const ESDUMP_LOCATION = env('ESDUMP_LOCATION', './input/');
 

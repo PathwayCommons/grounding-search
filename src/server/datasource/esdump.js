@@ -3,8 +3,7 @@ import { exec } from 'child_process';
 import logger from '../logger';
 import {
   INDEX,
-  INPUT_PATH,
-  // ESDUMP_URL,
+  ESDUMP_LOCATION,
   ELASTICSEARCH_HOST
 } from '../config';
 
@@ -28,7 +27,8 @@ const dumpEs = async op => {
   for( let type of ES_TYPES ) {
     logger.info(`Performing elasticsearch ${op} for ${INDEX} ${type}...`);
 
-    const esdumpUrl = `./${INPUT_PATH}/${INDEX}_${type}.json`;
+    const esdumpFilename = `${INDEX}_${type}.json`;
+    const esdumpUrl = `${ESDUMP_LOCATION}${esdumpFilename}`;
     const input = op === 'dump' ? indexUrl : esdumpUrl;
     const output = op === 'dump' ? esdumpUrl : indexUrl;
 

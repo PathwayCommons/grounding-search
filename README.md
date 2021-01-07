@@ -39,6 +39,7 @@ The following environment variables can be used to configure the server:
 - `NCBI_URL` : url to download ncbi file from
 - `NCBI_EUTILS_BASE_URL` : url for NCBI EUTILS
 - `NCBI_EUTILS_API_KEY` : NCBI EUTILS API key
+- `ESDUMP_LOCATION` : The location (URL, file path) of elasticdump files (note: terminate with '/')
 
 ## Run targets
 
