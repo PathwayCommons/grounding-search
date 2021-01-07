@@ -47,6 +47,8 @@
     "clear:chebi": "node -r esm src/server/datasource/cli clear chebi",
     "clear:ncbi": "node -r esm src/server/datasource/cli clear ncbi",
     "ci": "run-s lint",
+    "dump": "node -r esm src/server/datasource/cli dump",
+    "restore": "node -r esm src/server/datasource/cli restore",
     "boot": "run-s refresh start"
   },
   "dependencies": {
@@ -58,6 +60,7 @@
     "deep-equal-in-any-order": "^1.0.13",
     "dice-coefficient": "^1.0.3",
     "download": "^7.1.0",
+    "elasticdump": "^6.62.1",
     "elasticsearch": "^15.4.1",
     "esm": "^3.2.22",
     "express": "^4.13.4",

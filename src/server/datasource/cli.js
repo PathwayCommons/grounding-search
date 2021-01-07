@@ -7,12 +7,13 @@ import { chebi } from './chebi';
 import { ncbi } from './ncbi';
 import { db } from '../db';
 import { formatDistanceStrict } from 'date-fns';
+import dumpEs from './esdump';
 
 const sources = { uniprot, chebi, ncbi };
 const op = process.argv[2];
 const passedSourceId = process.argv[3];
 const source = sources[passedSourceId];
-const validOps = ['update', 'clear', 'index', 'download'];
+const validOps = ['update', 'clear', 'index', 'download', 'dump', 'restore'];
 const startTime = new Date();
 
 if( !validOps.some(vo => vo === op) ){
@@ -22,8 +23,22 @@ if( !validOps.some(vo => vo === op) ){
 if( op === 'clear' && passedSourceId === 'all' ){
   logger.info('Clearing entire index');
   db.deleteIndex().then(() => logger.info('Successfully cleared entire index'));
+
+} else if( op === 'dump' || op === 'restore' ){
+  logger.info(`Performing elasticsearch ${op}...`);
+
+  dumpEs( op ).then(() => {
+    logger.info(`Successful elasticsearch ${op}`);
+    process.exit(0);
+  }).catch(err => {
+    logger.error(`Error in elasticsearch ${op}`);
+    logger.error(err);
+    process.exit(1);
+  });
+
 } else if( source == null ){
   logger.error(`No source '${passedSourceId}' found`);
+
 } else {
   logger.info(`Applying ${op} on source '${passedSourceId}'...`);
 
