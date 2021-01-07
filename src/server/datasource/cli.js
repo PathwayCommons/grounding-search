@@ -25,8 +25,6 @@ if( op === 'clear' && passedSourceId === 'all' ){
   db.deleteIndex().then(() => logger.info('Successfully cleared entire index'));
 
 } else if( op === 'dump' || op === 'restore' ){
-  logger.info(`Performing elasticsearch ${op}...`);
-
   dumpEs( op ).then(() => {
     logger.info(`Successful elasticsearch ${op}`);
     process.exit(0);

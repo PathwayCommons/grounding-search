@@ -49,7 +49,5 @@ export const DB_NAME_NCBI_GENE  = env('DB_NAME_NCBI_GENE', 'NCBI Gene');
 export const DB_PREFIX_NCBI_PROTEIN = env('DB_PREFIX_NCBI_PROTEIN', 'ncbiprotein');
 export const DB_NAME_NCBI_PROTEIN = env('DB_NAME_NCBI_PROTEIN', 'NCBI Protein');
 
-export const ESDUMP_OUTPUT = env('ESDUMP_OUTPUT', 'groundingsearch_data.json');
-export const ESDUMP_TYPE = env('ESDUMP_TYPE', 'data');
-export const ESDUMP_LIMIT = env('ESDUMP_LIMIT', 100);
+export const ESDUMP_URL = env('ESDUMP_URL', 'https://probablyzenodo.com');
 
