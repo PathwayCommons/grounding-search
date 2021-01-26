@@ -1,9 +1,4 @@
-import _ from 'lodash';
-// import {
-//   promises as fsPromise
-// } from 'fs';
 import { createWriteStream } from 'fs';
-// import ndjson from 'ndjson';
 import { pipeline } from 'stream';
 import { promisify } from 'util';
 import path from 'path';
@@ -23,20 +18,12 @@ import {
 const execute = util.promisify( exec );
 const streamPipeline = promisify( pipeline );
 
-const checkHTTPStatus = response => {
-  const { statusText, status, ok } = response;
-  if ( !ok ) {
-    throw new Error( `${statusText} (${status})`, status, statusText );
-  }
-  return response;
-};
-
 /**
- * Helper class to wrap the Zenodo REST API {@link https://developers.zenodo.org/#quickstart-upload}
+ * Wrap the Zenodo REST API {@link https://developers.zenodo.org/#quickstart-upload}
  */
 class Zenodo {
   /**
-   * Create an Zenodo.
+   * Create a Zenodo.
    * @param {String} access_token The access_token
    * @param {String} bucket_id The bucket_id
    * @param {String} dumpDirectory The dumpDirectory
@@ -56,7 +43,7 @@ class Zenodo {
    * @param {String} filename
    * @returns
    */
-  upload( filename ){
+  upload( ){
   }
 
   /**
@@ -75,53 +62,96 @@ class Zenodo {
   }
 }
 
-const zenodo = new Zenodo( ZENODO_ACCESS_TOKEN, ZENODO_BUCKET_ID, ESDUMP_LOCATION );
-
 /**
- * dumpEs
- * A light wrapper around elasticsearch-dump {@link https://github.com/elasticsearch-dump/elasticsearch-dump}
+ * Class ElasticDump
+ *
+ * Wrap the ElasticDump module {@link https://www.npmjs.com/package/elasticdump}
  * Here, separate files for each Elasticsearch type (analyzer, mapping, data) in the index (env `INDEX`)
  * will be created in the dump or expected in the restore, named accordingly: '<INDEX>_<type>.json'.
  * Env `ESDUMP_LOCATION` can be a file path or URL, terminated with a slash (e.g. './input/').
- *
- * @param {String} op Enum 'dump' or 'restore'
  */
-const dumpEs = async op => {
+class ElasticDump {
+  /**
+   * Create an ElasticDump.
+   * @param {String} host
+   * @param {String} index
+   * @param {String} directory
+   */
+  constructor( host, index, dumpDirectory, limit = 10000, overwrite = true ){
+    this.indexUrl = `http://${host}/${index}`;
+    this.dumpDirectory = dumpDirectory;
+    this.ES_TYPES = new Set([
+      'analyzer',
+      'mapping',
+      'data'
+    ]);
+    this.limit = limit;
+    this.overwrite = overwrite;
+    this.zenodo = new Zenodo( ZENODO_ACCESS_TOKEN, ZENODO_BUCKET_ID, ESDUMP_LOCATION );
+  }
 
-  // const ES_TYPES = new Set(['analyzer', 'mapping', 'data']); // note order
-  const ES_TYPES = new Set([
-    'analyzer',
-    'mapping',
-    'data'
-  ]); // note order
-  const esdump_limit = 10000;
-  const esdump_overwrite = true;
-  const indexUrl = `http://${ELASTICSEARCH_HOST}/${INDEX}`;
-
-  for( let type of ES_TYPES ) {
-    logger.info(`Performing elasticsearch ${op} for ${INDEX} ${type}...`);
-
-    const esdumpFilename = `${INDEX}_${type}.json`;
-    const esdumpPath = `${ESDUMP_LOCATION}${esdumpFilename}`;
-    const input = op === 'dump' ? indexUrl : esdumpPath;
-    const output = op === 'dump' ? esdumpPath : indexUrl;
-
-    const cmd = [
-      'elasticdump',
-      `--input=${input}`,
-      `--output=${output}`,
-      `--type=${type}`,
-      `--limit=${esdump_limit}`,
-      `--overwrite=${esdump_overwrite}`
-    ].join(' ');
-
-    await zenodo.download( esdumpFilename );
-
-    logger.info( cmd );
-    const opts = {};
-    const { stdout, stderr } = await execute( cmd, opts );
+  async run( cmd ) {
+    logger.info(`Running ${cmd}...`);
+    const { stdout, stderr } = await execute( cmd );
     logger.info( stdout );
     logger.error( stderr );
+  }
+
+  /**
+   * dump
+   * @param {}
+   * @returns
+   */
+  async dump(){
+    for( let type of this.ES_TYPES ) {
+      const esdumpFilename = `${INDEX}_${type}.json`;
+      const input = `${this.indexUrl}`;
+      const output = `${this.dumpDirectory}${esdumpFilename}`;
+      const cmd = [
+        'elasticdump',
+        `--input=${input}`,
+        `--output=${output}`,
+        `--type=${type}`,
+        `--limit=${this.limit}`,
+        `--overwrite=${this.overwrite}`
+      ].join(' ');
+
+      await this.zenodo.upload( esdumpFilename );
+      await this.run( cmd );
+    }
+  }
+
+  /**
+   * restore
+   * @param {}
+   * @returns
+   */
+  async restore(){
+    for( let type of this.ES_TYPES ) {
+      const esdumpFilename = `${INDEX}_${type}.json`;
+      const input = `${this.dumpDirectory}${esdumpFilename}`;
+      const output = `${this.indexUrl}`;
+      const cmd = [
+        'elasticdump',
+        `--input=${input}`,
+        `--output=${output}`,
+        `--type=${type}`,
+        `--limit=${this.limit}`
+      ].join(' ');
+
+      await this.zenodo.download( esdumpFilename );
+      await this.run( cmd );
+    }
+  }
+}
+
+
+const elasticDump = new ElasticDump( ELASTICSEARCH_HOST, INDEX, ESDUMP_LOCATION );
+
+const dumpEs = async op => {
+
+  if( op == 'restore' ){
+    await elasticDump.restore();
   }
 };
 

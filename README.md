@@ -40,6 +40,9 @@ The following environment variables can be used to configure the server:
 - `NCBI_EUTILS_BASE_URL` : url for NCBI EUTILS
 - `NCBI_EUTILS_API_KEY` : NCBI EUTILS API key
 - `ESDUMP_LOCATION` : The location (URL, file path) of elasticdump files (note: terminate with '/')
+- `ZENODO_API_URL`: base url for Zenodo
+- `ZENODO_ACCESS_TOKEN`: access token for Zenodo REST API (Scope: `deposit:actions`, `deposit:write`)
+- `ZENODO_BUCKET_ID`: id for Zenodo deposition 'bucket' (Files API)
 
 ## Run targets
 
