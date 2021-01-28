@@ -73,11 +73,12 @@ class Zenodo {
 class ElasticDump {
   /**
    * Create an ElasticDump.
+   * @param {Object} datastore
    * @param {String} host
    * @param {String} index
    * @param {String} directory
    */
-  constructor( host, index, dumpDirectory, limit = 10000, overwrite = true ){
+  constructor( host, index, dumpDirectory, datastore, limit = 10000, overwrite = true ){
     this.indexUrl = `http://${host}/${index}`;
     this.dumpDirectory = dumpDirectory;
     this.ES_TYPES = new Set([
@@ -87,7 +88,7 @@ class ElasticDump {
     ]);
     this.limit = limit;
     this.overwrite = overwrite;
-    this.zenodo = new Zenodo( ZENODO_ACCESS_TOKEN, ZENODO_BUCKET_ID, ESDUMP_LOCATION );
+    this.datastore = datastore;
   }
 
   async run( cmd ) {
@@ -116,7 +117,7 @@ class ElasticDump {
         `--overwrite=${this.overwrite}`
       ].join(' ');
 
-      await this.zenodo.upload( esdumpFilename );
+      await this.datastore.upload( esdumpFilename );
       await this.run( cmd );
     }
   }
@@ -139,14 +140,14 @@ class ElasticDump {
         `--limit=${this.limit}`
       ].join(' ');
 
-      await this.zenodo.download( esdumpFilename );
+      await this.datastore.download( esdumpFilename );
       await this.run( cmd );
     }
   }
 }
 
-
-const elasticDump = new ElasticDump( ELASTICSEARCH_HOST, INDEX, ESDUMP_LOCATION );
+const datastore = new Zenodo( ZENODO_ACCESS_TOKEN, ZENODO_BUCKET_ID, ESDUMP_LOCATION );
+const elasticDump = new ElasticDump( datastore, ELASTICSEARCH_HOST, INDEX, ESDUMP_LOCATION );
 
 const dumpEs = async op => {
 
