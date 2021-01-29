@@ -117,8 +117,8 @@ class ElasticDump {
         `--overwrite=${this.overwrite}`
       ].join(' ');
 
-      await this.datastore.upload( esdumpFilename );
       await this.run( cmd );
+      // await this.datastore.upload( esdumpFilename );
     }
   }
 
@@ -147,12 +147,19 @@ class ElasticDump {
 }
 
 const datastore = new Zenodo( ZENODO_ACCESS_TOKEN, ZENODO_BUCKET_ID, ESDUMP_LOCATION );
-const elasticDump = new ElasticDump( datastore, ELASTICSEARCH_HOST, INDEX, ESDUMP_LOCATION );
+const elasticDump = new ElasticDump( ELASTICSEARCH_HOST, INDEX, ESDUMP_LOCATION, datastore );
 
 const dumpEs = async op => {
 
-  if( op == 'restore' ){
-    await elasticDump.restore();
+  switch( op ) {
+    case 'restore':
+      await elasticDump.restore();
+      break;
+    case 'dump':
+      await elasticDump.dump();
+      break;
+    default:
+      return;
   }
 };
 
