@@ -102,12 +102,12 @@ Notes:
 
 ### Zenodo setup
 
-[Zenodo](https://zenodo.org/) lets you you to store and retrieve digital artefacts related to a scientific project or publication. Here, we use Zenodo to store Elasticsearch index information needed to recreate the index. Briefly, using their [RESTful web service API](https://developers.zenodo.org/), you can create a 'Deposition' that has a 'bucket' referenced by a `ZENODO_BUCKET_ID` which you can use to upload and download 'files' (i.e. `<ZENODO_API_URL>api/files/<ZENODO_BUCKET_ID>/<filename>`; list them with `https://zenodo.org/api/deposit/depositions/<deposition id>/files`). In particular, there are three files, corresponding to the elasticsearch types: `data`; `mapping` and `analyzer`.
+[Zenodo](https://zenodo.org/) lets you you to store and retrieve digital artefacts related to a scientific project or publication. Here, we use Zenodo to store Elasticsearch index information needed to recreate the index. Briefly, using their [RESTful web service API](https://developers.zenodo.org/), you can create a 'Deposition' that has a 'bucket' referenced by a `ZENODO_BUCKET_ID` to which you can upload and download 'files' (i.e. `<ZENODO_API_URL>api/files/<ZENODO_BUCKET_ID>/<filename>`; list them with `https://zenodo.org/api/deposit/depositions/<deposition id>/files`). In particular, there are three files required to recreate an index, corresponding to the elasticsearch types: `data`; `mapping` and `analyzer`.
 
-To access this API (and to use our module), you'll need to supply a `ZENODO_ACCESS_TOKEN` which is provided once upon creating a 'Personal access token' ([see docs for details](https://sandbox.zenodo.org/account/settings/applications/)). Be sure to add the `deposit:actions` and `deposit:write` scopes.
+To setup follow these steps:
 
-When you have a `ZENODO_ACCESS_TOKEN` then you need to create a 'Deposition'. POST to `https://zenodo.org/api/deposit/depositions` with at least  the following information, keeping in mind to set the header `Authorization = Bearer <ZENODO_ACCESS_TOKEN>`:
-
+1. Get a `ZENODO_ACCESS_TOKEN` by creating a 'Personal access token' ([see docs for details](https://sandbox.zenodo.org/account/settings/applications/)). Be sure to add the `deposit:actions` and `deposit:write` scopes.
+2. Create a 'Deposition' by POSTing to `https://zenodo.org/api/deposit/depositions` with at least  the following information, keeping in mind to set the header `Authorization = Bearer <ZENODO_ACCESS_TOKEN>`:
 ```json
 {
 	"metadata": {
@@ -125,8 +125,7 @@ When you have a `ZENODO_ACCESS_TOKEN` then you need to create a 'Deposition'. PO
 	}
 }
 ```
-
-In the response, you should be able to see a `bucket` value (e.g. `"bucket": "https://zenodo.org/api/files/<uuid>"` ) within the `links` object. Set the `ZENODO_BUCKET_ID` to the value `<uuid>`.
+3. The POST response should have a 'bucket' (e.g. `"bucket": "https://zenodo.org/api/files/<uuid>"` ) within the `links` object. The variable `ZENODO_BUCKET_ID` is the value `<uuid>` in the example URL.
 
 
 ## Running via Docker
