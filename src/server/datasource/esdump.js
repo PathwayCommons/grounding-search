@@ -21,13 +21,16 @@ const streamPipeline = promisify( pipeline );
 
 /**
  * Wrap the Zenodo REST API {@link https://developers.zenodo.org/#quickstart-upload}
+ * Enabling one to upload to or download files from Zenodo using the Files API.
+ * Assumption is that there exists a Deposition (e.g. https://zenodo.org/api/deposit/depositions/<deposition_id>)
+ * and that valid API authentication token and bucket uuid are in hand.
  */
 class Zenodo {
   /**
    * Create a Zenodo.
-   * @param {String} access_token The access_token
-   * @param {String} bucket_id The bucket_id
-   * @param {String} dumpDirectory The dumpDirectory
+   * @param {String} access_token Zenodo authentication token
+   * @param {String} bucket_id Deposition bucket uuid
+   * @param {String} dumpDirectory Local directory where files will be downloaded/uploaded from
    */
   constructor( access_token, bucket_id, dumpDirectory ){
     this.files_base_url = `${ZENODO_BASE_URL}api/files/${bucket_id}/`;
@@ -41,7 +44,8 @@ class Zenodo {
 
   /**
    * Upload
-   * @param {String} filename the file to upload to the bucket
+   * PUT a file located in this.dumpDirectory in a Depositions bucket
+   * @param {String} filename the name of the file to upload
    */
   async upload( filename ){
     const url = this.files_base_url + filename;
@@ -65,6 +69,7 @@ class Zenodo {
 
   /**
    * download
+   * GET a file from a Depositions bucket and save locally to this.dumpDirectory
    * @param {String} filename the file to download from bucket
    */
   async download( filename ){
@@ -81,18 +86,18 @@ class Zenodo {
 /**
  * Class ElasticDump
  *
- * Wrap the ElasticDump module {@link https://www.npmjs.com/package/elasticdump}
- * Here, separate files for each Elasticsearch type (analyzer, mapping, data) in the index (env `INDEX`)
- * will be created in the dump or expected in the restore, named accordingly: '<INDEX>_<type>.json'.
- * Env `ESDUMP_LOCATION` can be a file path or URL, terminated with a slash (e.g. './input/').
+ * Wrap the elasticdump module {@link https://www.npmjs.com/package/elasticdump} and augment with
+ * ability to upload to or download from a datastore. For each Elasticsearch type ('analyzer', 'mapping', 'data')
+ * in the provided `index`, information is exported (imported) to (from) files located in `directory` ('<index>_<type>.json').
+ * Files will be uploaded (downloaded) to (from) the datastore after (before) dump (restore).
  */
 class ElasticDump {
   /**
    * Create an ElasticDump.
-   * @param {String} host
-   * @param {String} index
-   * @param {String} directory
-   * @param {Object} datastore
+   * @param {String} host Elasticsearch instance host name
+   * @param {String} index Elastissearch index name
+   * @param {String} directory Local folder where files should be created or read from
+   * @param {Object} datastore A datastore instance (i.e. Zenodo) with functions to upload(filename) / download( filename )
    */
   constructor( host, index, dumpDirectory, datastore, limit = 10000, overwrite = true ){
     this.indexUrl = `http://${host}/${index}`;
@@ -115,7 +120,7 @@ class ElasticDump {
   }
 
   /**
-   * Sump the Elasticsearch index to files that correspond to ES_TYPES
+   * Export the Elasticsearch index ES_TYPES to individual files
    */
   async dump(){
     for( let type of this.ES_TYPES ) {
@@ -137,7 +142,7 @@ class ElasticDump {
   }
 
   /**
-   * Restore the Elasticsearch index from files that correspond to ES_TYPES
+   * Import the Elasticsearch index ES_TYPES from files
    */
   async restore(){
     for( let type of this.ES_TYPES ) {
