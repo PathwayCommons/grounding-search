@@ -1,4 +1,5 @@
-import { createWriteStream } from 'fs';
+import _ from 'lodash';
+import { createWriteStream, createReadStream, statSync } from 'fs';
 import { pipeline } from 'stream';
 import { promisify } from 'util';
 import path from 'path';
@@ -39,26 +40,41 @@ class Zenodo {
   }
 
   /**
-   * TODO
-   * @param {String} filename
-   * @returns
+   * Upload
+   * @param {String} filename the file to upload to the bucket
    */
-  upload( ){
+  async upload( filename ){
+    const url = this.files_base_url + filename;
+    const localPath = path.resolve( path.join( this.dumpDirectory, filename ) );
+    const stats = statSync( localPath );
+    const fileSizeInBytes = stats.size;
+    const readStream = createReadStream( localPath );
+
+    logger.info( `Uploading to ${url} from ${localPath}`);
+    logger.info( `Size: ${fileSizeInBytes}` );
+    const response = await fetch( url, {
+      method: 'PUT',
+      headers: _.defaults( {
+        'Content-length': fileSizeInBytes
+      }, this.default_headers ),
+      body: readStream
+    });
+    if ( !response.ok ) throw new Error(`Error in response ${response.statusText}`);
+    return response;
   }
 
   /**
    * download
    * @param {String} filename the file to download from bucket
-   * @returns a Promise
    */
   async download( filename ){
     const url = this.files_base_url + filename;
-    const downloadPath = path.resolve( path.join( this.dumpDirectory, filename ) );
+    const localPath = path.resolve( path.join( this.dumpDirectory, filename ) );
 
-    logger.info( `Downloading from ${url} to ${downloadPath}`);
+    logger.info( `Downloading from ${url} to ${localPath}`);
     const response = await fetch( url, { headers: this.default_headers });
     if ( !response.ok ) throw new Error(`Error in response ${response.statusText}`);
-    await streamPipeline( response.body, createWriteStream( downloadPath ) );
+    await streamPipeline( response.body, createWriteStream( localPath ) );
   }
 }
 
@@ -73,10 +89,10 @@ class Zenodo {
 class ElasticDump {
   /**
    * Create an ElasticDump.
-   * @param {Object} datastore
    * @param {String} host
    * @param {String} index
    * @param {String} directory
+   * @param {Object} datastore
    */
   constructor( host, index, dumpDirectory, datastore, limit = 10000, overwrite = true ){
     this.indexUrl = `http://${host}/${index}`;
@@ -99,9 +115,7 @@ class ElasticDump {
   }
 
   /**
-   * dump
-   * @param {}
-   * @returns
+   * Sump the Elasticsearch index to files that correspond to ES_TYPES
    */
   async dump(){
     for( let type of this.ES_TYPES ) {
@@ -118,14 +132,12 @@ class ElasticDump {
       ].join(' ');
 
       await this.run( cmd );
-      // await this.datastore.upload( esdumpFilename );
+      await this.datastore.upload( esdumpFilename );
     }
   }
 
   /**
-   * restore
-   * @param {}
-   * @returns
+   * Restore the Elasticsearch index from files that correspond to ES_TYPES
    */
   async restore(){
     for( let type of this.ES_TYPES ) {
@@ -152,14 +164,14 @@ const elasticDump = new ElasticDump( ELASTICSEARCH_HOST, INDEX, ESDUMP_LOCATION,
 const dumpEs = async op => {
 
   switch( op ) {
-    case 'restore':
-      await elasticDump.restore();
-      break;
-    case 'dump':
-      await elasticDump.dump();
-      break;
-    default:
-      return;
+  case 'restore':
+    await elasticDump.restore();
+    break;
+  case 'dump':
+    await elasticDump.dump();
+    break;
+  default:
+    return;
   }
 };
 
