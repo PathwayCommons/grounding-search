@@ -12,7 +12,7 @@ const updateTestData = () => {
 };
 
 const searchEnt = ( name, organismOrdering ) => {
-  return aggregate.search( name, null, organismOrdering );
+  return aggregate.search( name, ['ncbi', 'chebi'], organismOrdering );
 };
 
 const getEnt = ( ns, id ) => aggregate.get( ns, id );
@@ -43,7 +43,7 @@ describe('Search and Get Aggregate', function(){
         if( !id || !namespace ) return;
         const expected = _.assign( {}, { namespace, id } );
         const organismOrdering = entity.organismOrdering || testCase.organismOrdering || [];
-        
+
         it(`search ${text} ${organismOrdering}`, function(){
           return ( searchEnt(text, organismOrdering)
             .then( results => {
