@@ -51,5 +51,5 @@ export const DB_NAME_NCBI_PROTEIN = env('DB_NAME_NCBI_PROTEIN', 'NCBI Protein');
 
 export const ESDUMP_LOCATION = env('ESDUMP_LOCATION', './input/');
 export const ZENODO_ACCESS_TOKEN = env('ZENODO_ACCESS_TOKEN', '');
-export const ZENODO_BASE_URL = env('ZENODO_API_URL', 'https://zenodo.org/');
+export const ZENODO_BASE_URL = env('ZENODO_BASE_URL', 'https://zenodo.org/');
 export const ZENODO_BUCKET_ID = env('ZENODO_BUCKET_ID', '');
