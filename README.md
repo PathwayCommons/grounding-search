@@ -39,6 +39,10 @@ The following environment variables can be used to configure the server:
 - `NCBI_URL` : url to download ncbi file from
 - `NCBI_EUTILS_BASE_URL` : url for NCBI EUTILS
 - `NCBI_EUTILS_API_KEY` : NCBI EUTILS API key
+- `ESDUMP_LOCATION` : The location (URL, file path) of elasticdump files (note: terminate with '/')
+- `ZENODO_API_URL`: base url for Zenodo
+- `ZENODO_ACCESS_TOKEN`: access token for Zenodo REST API (Scope: `deposit:actions`, `deposit:write`)
+- `ZENODO_BUCKET_ID`: id for Zenodo deposition 'bucket' (Files API)
 
 ## Run targets
 
@@ -63,6 +67,66 @@ The following environment variables can be used to configure the server:
 - `npm run index:source` : index data for `source` (i.e. `ncbi`, `chebi`) in elasticsearch
 - `npm run test:inputgen` : generate input test file for each `source` (i.e. `uniprot`, ...)
 - `npm run test:inputgen` : generate input test file for `source` (i.e. `uniprot`, ...)
+- `npm run dump` : dump the information for `INDEX` to `ESDUMP_LOCATION`
+- `npm run restore` : restore the information for `INDEX` from `ESDUMP_LOCATION`
+- `npm run boot` : run `clear`, `restore` then `start`; exit on errors
+
+## Dump and restore
+
+To export the Elasticsearch instance index information and upload to datastore ([Zenodo](https://zenodo.org/)):
+
+```
+npm run dump
+```
+
+To download information from datastore and import to an Elasticsearch instance:
+
+```
+npm run restore
+```
+
+To start the server after a successful restore in one command:
+
+```
+npm run boot
+```
+
+Notes:
+
+- Related environment variables
+  - `ZENODO_API_URL`: You can play around with this in their sandbox site (`https://sandbox.zenodo.org/`)
+  - `ZENODO_ACCESS_TOKEN` and `ZENODO_BUCKET_ID`: These should have been created beforehand under the user `biofactoid` linked to the email `info@biofactoid.org` and password same as for [MailJet](https://app.mailjet.com/).
+- References:
+  - [Zenodo | Developers](https://developers.zenodo.org/#entities)
+  - [npm package for elasticdump](https://www.npmjs.com/package/elasticdump)
+
+### Zenodo setup
+
+[Zenodo](https://zenodo.org/) lets you you to store and retrieve digital artefacts related to a scientific project or publication. Here, we use Zenodo to store Elasticsearch index information needed to recreate the index. Briefly, using their [RESTful web service API](https://developers.zenodo.org/), you can create a 'Deposition' that has a 'bucket' referenced by a `ZENODO_BUCKET_ID` to which you can upload and download 'files' (i.e. `<ZENODO_API_URL>api/files/<ZENODO_BUCKET_ID>/<filename>`; list them with `https://zenodo.org/api/deposit/depositions/<deposition id>/files`). In particular, there are three files required to recreate an index, corresponding to the elasticsearch types: `data`; `mapping` and `analyzer`.
+
+To setup follow these steps:
+
+1. Get a `ZENODO_ACCESS_TOKEN` by creating a 'Personal access token' ([see docs for details](https://sandbox.zenodo.org/account/settings/applications/)). Be sure to add the `deposit:actions` and `deposit:write` scopes.
+2. Create a 'Deposition' by POSTing to `https://zenodo.org/api/deposit/depositions` with at least  the following information, keeping in mind to set the header `Authorization = Bearer <ZENODO_ACCESS_TOKEN>`:
+```json
+{
+	"metadata": {
+		"title": "Elasticsearch data for biofactoid.org grounding-search service",
+		"upload_type": "dataset",
+		"description": "This deposition contains files with data describing an Elasticsearch index (https://github.com/PathwayCommons/grounding-search). The files were generated from the elasticdump npm package (https://www.npmjs.com/package/elasticdump). The data are the neccessary and sufficient information to populate an Elasticsearch index.",
+		"creators": [
+			{
+				"name": "Biofactoid",
+				"affiliation": "biofactoid.org"
+			}
+		],
+		"access_right": "open",
+		"license": "cc-zero"
+	}
+}
+```
+3. The POST response should have a 'bucket' (e.g. `"bucket": "https://zenodo.org/api/files/<uuid>"` ) within the `links` object. The variable `ZENODO_BUCKET_ID` is the value `<uuid>` in the example URL.
+
 
 ## Running via Docker
 
