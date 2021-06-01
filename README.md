@@ -1,5 +1,6 @@
 # grounding-search
 
+[![DOI](https://zenodo.org/badge/170363308.svg)](https://zenodo.org/badge/latestdoi/170363308)
 [![Build Status](https://travis-ci.org/PathwayCommons/grounding-search.svg?branch=master)](https://travis-ci.org/PathwayCommons/grounding-search)
 
 ## Required software
