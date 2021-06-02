@@ -175,3 +175,4 @@ All files `/test` will be run by [Mocha](https://mochajs.org/).  You can `npm te
   1. For a breaking API change, run `npm version major.`
   1. For a specific version number (e.g. 1.2.3), run `npm version 1.2.3`.
 1. Push the release: `git push && git push --tags`
+1. [Publish a GitHub release](https://github.com/PathwayCommons/grounding-search/releases/new) so that Zenodo creates a DOI for this version.
