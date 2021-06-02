@@ -1,7 +1,7 @@
 # grounding-search
 
 [![DOI](https://zenodo.org/badge/170363308.svg)](https://zenodo.org/badge/latestdoi/170363308)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)]
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PathwayCommons/grounding-search/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/PathwayCommons/grounding-search.svg?branch=master)](https://travis-ci.org/PathwayCommons/grounding-search)
 
 ## Required software
