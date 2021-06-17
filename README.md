@@ -29,6 +29,10 @@ Alternatively, you can [start the service with Docker](#running-via-docker), obv
 
 Refer to our [Swagger documentation](https://grounding.baderlab.org) in order to form a query to the service.
 
+## Issues & feedback
+
+To let us know about an issue in the software or to provide feedback, please [file an issue on GitHub](https://github.com/PathwayCommons/grounding-search/issues/new).
+
 ## Supported data sources
 
 - NCBI gene (`ncbi`)
