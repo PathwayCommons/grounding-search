@@ -4,6 +4,10 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PathwayCommons/grounding-search/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/PathwayCommons/grounding-search.svg?branch=master)](https://travis-ci.org/PathwayCommons/grounding-search)
 
+## Description
+
+The identification of sub-cellular biological entities is an important consideration in the use and creation of bioinformatics analysis tools and accessible biological research apps.  When research information is uniquely and unambiguously identified, it enables data to be accurately retrieved, cross-referenced, and integrated.  In practice, biological entities are “identified” when they are associated with a matching record from a knowledge base that specialises in collecting and organising information of that type (e.g. gene sequences).  Our search service increases the efficiency and ease of use for identifying biological entities.  This identification may be used to power research apps and tools where colloquial entity names may be provided as input.
+
 ## Required software
 
 - [Node.js](https://nodejs.org/en/) >=8
