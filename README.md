@@ -13,6 +13,21 @@ The identification of sub-cellular biological entities is an important considera
 - [Node.js](https://nodejs.org/en/) >=8
 - [Elasticsearch](https://www.elastic.co/products/elasticsearch) ^6.6.0
 
+## Quick start
+
+With Node and Elasticsearch installed with default options, run the following in a cloned copy of the repository:
+
+- `npm install`: Install npm dependencies
+- `npm run update`: Download and index the data
+- `npm start`: Start the server (by default on port 3000)
+
+You can access the latest Swagger documentation for the service at [`http://localhost:3000`](http://localhost:3000) once the service is running locally.
+
+Alternatively, you can [start the service with Docker](#running-via-docker), obviating the need to install the dependencies.  
+
+## Service usage
+
+Refer to our [Swagger documentation](https://grounding.baderlab.org) in order to form a query to the service.
 
 ## Supported data sources
 
@@ -21,7 +36,6 @@ The identification of sub-cellular biological entities is an important considera
 - Uniprot (`uniprot`)
 
 The data sources included by default (e.g. `npm run update`) are `ncbi` and `chebi`.
-
 
 ## Configuration
 
