@@ -11,7 +11,7 @@ The identification of sub-cellular biological entities is an important considera
 ## Required software
 
 - [Node.js](https://nodejs.org/en/) >=8
-- [Elasticsearch](https://www.elastic.co/products/elasticsearch) ^6.6.0
+- [Elasticsearch](https://www.elastic.co/products/elasticsearch) >=6.6.0, <7
 
 ## Quick start
 
