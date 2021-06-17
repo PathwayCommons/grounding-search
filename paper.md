@@ -50,7 +50,7 @@ Our search service allows the user to identify an entity by name, as per his or 
 
 In the rare case where the service does not return the first result as expected, the user may manually indicate a correction — e.g. ‘I meant this IL6, not that one’.  In order to facilitate this, each identifier in the results list have included a corresponding set of descriptions and metadata that allow the user to manually specify the intended identifier.  To verify the accuracy of the service’s results, a test suite was created.  The tests included entity names selected from PubMed Central, Pathway Commons, and Biofactoid pilots.  Primarily, the test cases were prioritised based on popularity to ensure that commonly-researched entities would be correctly assigned by the service.  In all, there are currently over 765 test cases.  Of those test cases, 91% return the expected result as the first entry in the returned list.  In nearly 98% of cases, the expected result was within the top ten entries in the returned list.
 
-Modern research apps and tools motivate the need for robust, reusable grounding tools that allow for easily identifying biological entities from their common names.  These requirements enable an implementation of a grounding service that can be used to provide users with an easy-to-use experience in line with their mental model of biological entities.
+Modern research apps and tools motivate the need for robust, reusable grounding tools that allow for easily identifying biological entities from their common names.  Our grounding service can be used to provide users with an easy-to-use experience in line with their mental model of biological entities.
 
 # Citations
 
