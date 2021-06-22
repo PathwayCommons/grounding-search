@@ -13,7 +13,8 @@ import {
   ZENODO_BASE_URL,
   ZENODO_BUCKET_ID,
   ZENODO_ACCESS_TOKEN,
-  ELASTICSEARCH_HOST
+  ELASTICSEARCH_HOST,
+  ZENODO_DEPOSITION_ID
 } from '../config';
 
 const execute = util.promisify( exec );
@@ -28,15 +29,18 @@ const streamPipeline = promisify( pipeline );
 class Zenodo {
   /**
    * Create a Zenodo.
-   * @param {String} access_token Zenodo authentication token
-   * @param {String} bucket_id Deposition bucket uuid
-   * @param {String} dumpDirectory Local directory where files will be downloaded/uploaded from
+   * @param {object} opts options
+   * @param {String} opts.deposition_id Zenodo deposition id (restore)
+   * @param {String} opts.access_token Zenodo authentication token (dump)
+   * @param {String} opts.bucket_id Deposition bucket uuid (dump)
+   * @param {String} opts.dumpDirectory Local directory where files will be downloaded/uploaded from (default './input/')
    */
-  constructor( access_token, bucket_id, dumpDirectory ){
-    this.files_base_url = `${ZENODO_BASE_URL}api/files/${bucket_id}/`;
+  constructor( { deposition_id, access_token, bucket_id, dumpDirectory= './input/' } ){
+    this.deposition_id = deposition_id;
+    this.bucket_id = bucket_id;
+    this.access_token = access_token;
     this.default_headers = {
       'User-Agent': `${process.env.npm_package_name}/${process.env.npm_package_version}`,
-      'Authorization': `Bearer ${access_token}`,
       'Accept': 'application/json'
     };
     this.dumpDirectory = dumpDirectory;
@@ -48,23 +52,28 @@ class Zenodo {
    * @param {String} filename the name of the file to upload
    */
   async upload( filename ){
-    const url = this.files_base_url + filename;
-    const localPath = path.resolve( path.join( this.dumpDirectory, filename ) );
-    const stats = statSync( localPath );
-    const fileSizeInBytes = stats.size;
-    const readStream = createReadStream( localPath );
+    if( this.access_token && this.bucket_id ){
+      const url = `${ZENODO_BASE_URL}api/files/${this.bucket_id}/${filename}`;
+      const localPath = path.resolve( path.join( this.dumpDirectory, filename ) );
+      const stats = statSync( localPath );
+      const fileSizeInBytes = stats.size;
+      const readStream = createReadStream( localPath );
 
-    logger.info( `Uploading to ${url} from ${localPath}`);
-    logger.info( `Size: ${fileSizeInBytes}` );
-    const response = await fetch( url, {
-      method: 'PUT',
-      headers: _.defaults( {
-        'Content-length': fileSizeInBytes
-      }, this.default_headers ),
-      body: readStream
-    });
-    if ( !response.ok ) throw new Error(`Error in response ${response.statusText}`);
-    return response;
+      logger.info( `Uploading to ${url} from ${localPath}`);
+      logger.info( `Size: ${fileSizeInBytes}` );
+      const response = await fetch( url, {
+        method: 'PUT',
+        headers: _.defaults( {
+          'Content-length': fileSizeInBytes,
+          'Authorization': `Bearer ${this.access_token}`
+        }, this.default_headers ),
+        body: readStream
+      });
+      if ( !response.ok ) throw new Error(`Error in response ${response.statusText}`);
+      return response;
+    } else {
+      throw new Error( 'Cannot upload to Zenodo: API information not specified' );
+    }
   }
 
   /**
@@ -73,13 +82,17 @@ class Zenodo {
    * @param {String} filename the file to download from bucket
    */
   async download( filename ){
-    const url = this.files_base_url + filename;
-    const localPath = path.resolve( path.join( this.dumpDirectory, filename ) );
+    if( this.deposition_id ){
+      const url = `${ZENODO_BASE_URL}record/${this.deposition_id}/files/${filename}`;
+      const localPath = path.resolve( path.join( this.dumpDirectory, filename ) );
 
-    logger.info( `Downloading from ${url} to ${localPath}`);
-    const response = await fetch( url, { headers: this.default_headers });
-    if ( !response.ok ) throw new Error(`Error in response ${response.statusText}`);
-    await streamPipeline( response.body, createWriteStream( localPath ) );
+      logger.info( `Downloading from ${url} to ${localPath}`);
+      const response = await fetch( url, { headers: this.default_headers });
+      if ( !response.ok ) throw new Error(`Error in response ${response.statusText}`);
+      await streamPipeline( response.body, createWriteStream( localPath ) );
+    } else {
+      throw new Error( 'Cannot download from Zenodo: No record specified' );
+    }
   }
 }
 
@@ -163,7 +176,12 @@ class ElasticDump {
   }
 }
 
-const datastore = new Zenodo( ZENODO_ACCESS_TOKEN, ZENODO_BUCKET_ID, ESDUMP_LOCATION );
+const datastore = new Zenodo( {
+  deposition_id: ZENODO_DEPOSITION_ID,
+  access_token: ZENODO_ACCESS_TOKEN,
+  bucket_id: ZENODO_BUCKET_ID,
+  dumpDirectory: ESDUMP_LOCATION
+} );
 const elasticDump = new ElasticDump( ELASTICSEARCH_HOST, INDEX, ESDUMP_LOCATION, datastore );
 
 const dumpEs = async op => {
