@@ -8,11 +8,6 @@
 
 The identification of sub-cellular biological entities is an important consideration in the use and creation of bioinformatics analysis tools and accessible biological research apps.  When research information is uniquely and unambiguously identified, it enables data to be accurately retrieved, cross-referenced, and integrated.  In practice, biological entities are “identified” when they are associated with a matching record from a knowledge base that specialises in collecting and organising information of that type (e.g. gene sequences).  Our search service increases the efficiency and ease of use for identifying biological entities.  This identification may be used to power research apps and tools where colloquial entity names may be provided as input.
 
-## Required software
-
-- [Node.js](https://nodejs.org/en/) >=8
-- [Elasticsearch](https://www.elastic.co/products/elasticsearch) >=6.6.0, <7
-
 ## Quick start
 
 ### Run with Docker
@@ -33,7 +28,7 @@ docker-compose up --detach
 
 ### Run from source
 
-With Node and Elasticsearch installed with default options, run the following in a cloned copy of the repository:
+With [Node.js](https://nodejs.org/en/) (>=8) and [Elasticsearch](https://www.elastic.co/products/elasticsearch) (>=6.6.0, <7) installed with default options, run the following in a cloned copy of the repository:
 
 - `npm install`: Install npm dependencies
 - `npm run update`: Download and index the data
