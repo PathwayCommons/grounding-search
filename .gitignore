@@ -3,3 +3,4 @@ out.log
 /input/*
 !/input/datasource-inputs-go-here.txt
 .DS_Store
+.vscode

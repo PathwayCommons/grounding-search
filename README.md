@@ -23,7 +23,7 @@ With Node and Elasticsearch installed with default options, run the following in
 
 You can access the latest Swagger documentation for the service at [`http://localhost:3000`](http://localhost:3000) once the service is running locally.
 
-Alternatively, you can [start the service with Docker](#running-via-docker), obviating the need to install the dependencies.  
+Alternatively, you can [start the service with Docker](#running-via-docker), obviating the need to install the dependencies.
 
 ## Service usage
 
@@ -67,6 +67,7 @@ The following environment variables can be used to configure the server:
 - `ZENODO_API_URL`: base url for Zenodo
 - `ZENODO_ACCESS_TOKEN`: access token for Zenodo REST API (Scope: `deposit:actions`, `deposit:write`)
 - `ZENODO_BUCKET_ID`: id for Zenodo deposition 'bucket' (Files API)
+- `ZENODO_DEPOSITION_ID`: id for Zenodo deposition (for a published dataset)
 
 ## Run targets
 
@@ -119,19 +120,26 @@ Notes:
 
 - Related environment variables
   - `ZENODO_API_URL`: You can play around with this in their sandbox site (`https://sandbox.zenodo.org/`)
-  - `ZENODO_ACCESS_TOKEN` and `ZENODO_BUCKET_ID`: These should have been created beforehand under the user `biofactoid` linked to the email `info@biofactoid.org` and password same as for [MailJet](https://app.mailjet.com/).
+  - dump
+    - `ZENODO_ACCESS_TOKEN` and `ZENODO_BUCKET_ID`: These should have been created beforehand under the user `biofactoid` linked to the email `info@biofactoid.org` and password same as for [MailJet](https://app.mailjet.com/)
+  - restore
+    - `ZENODO_DEPOSITION_ID`: This is for published datasets (i.e. index files) only
 - References:
   - [Zenodo | Developers](https://developers.zenodo.org/#entities)
   - [npm package for elasticdump](https://www.npmjs.com/package/elasticdump)
 
-### Zenodo setup
+## Zenodo setup
 
-[Zenodo](https://zenodo.org/) lets you you to store and retrieve digital artefacts related to a scientific project or publication. Here, we use Zenodo to store Elasticsearch index information needed to recreate the index. Briefly, using their [RESTful web service API](https://developers.zenodo.org/), you can create a 'Deposition' that has a 'bucket' referenced by a `ZENODO_BUCKET_ID` to which you can upload and download 'files' (i.e. `<ZENODO_API_URL>api/files/<ZENODO_BUCKET_ID>/<filename>`; list them with `https://zenodo.org/api/deposit/depositions/<deposition id>/files`). In particular, there are three files required to recreate an index, corresponding to the elasticsearch types: `data`; `mapping` and `analyzer`.
+[Zenodo](https://zenodo.org/) lets you you to store and retrieve digital artefacts related to a scientific project or publication. Here, we use Zenodo to store Elasticsearch index information needed to recreate the index.
+
+### Create and publish a new record deposition
+
+Briefly, using their [RESTful web service API](https://developers.zenodo.org/), you can create a 'Deposition' for a record that has a 'bucket' referenced by a `ZENODO_BUCKET_ID` to which you can upload and download 'files' (i.e. `<ZENODO_API_URL>api/files/<ZENODO_BUCKET_ID>/<filename>`; list them with `https://zenodo.org/api/deposit/depositions/<deposition id>/files`). In particular, there are three files required to recreate an index, corresponding to the elasticsearch types: `data`; `mapping` and `analyzer`.
 
 To setup follow these steps:
 
 1. Get a `ZENODO_ACCESS_TOKEN` by creating a 'Personal access token' ([see docs for details](https://sandbox.zenodo.org/account/settings/applications/)). Be sure to add the `deposit:actions` and `deposit:write` scopes.
-2. Create a 'Deposition' by POSTing to `https://zenodo.org/api/deposit/depositions` with at least  the following information, keeping in mind to set the header `Authorization = Bearer <ZENODO_ACCESS_TOKEN>`:
+2. Create a recrod 'Deposition' by POSTing to `https://zenodo.org/api/deposit/depositions` with at least the following information, keeping in mind to set the header `Authorization = Bearer <ZENODO_ACCESS_TOKEN>`:
 ```json
 {
 	"metadata": {
@@ -150,7 +158,21 @@ To setup follow these steps:
 }
 ```
 3. The POST response should have a 'bucket' (e.g. `"bucket": "https://zenodo.org/api/files/<uuid>"` ) within the `links` object. The variable `ZENODO_BUCKET_ID` is the value `<uuid>` in the example URL.
+4. Publish. You'll want to dump the index and upload to Zenodo (`npm run dump`). You can publish this from the API by POSTing to `https://zenodo.org/api/deposit/depositions/<deposition id>/actions/publish`. Alternatively, log in to the Zenodo [web page](https://zenodo.org/deposit) and click 'Publish' to make the deposition public.
 
+Once published, a deposition cannot be updated or altered. However, you can create a new version of a record (below).
+
+### Create and publish a new version of a record
+
+In this case, you already have a record which points to a published deposition (i.e. elasticsearch index files) and wish to create a new version for that record. Here, you'll create a new deposition under the same record:
+
+1. Make a POST request to `https://zenodo.org/api/deposit/depositions/<deposition id>/actions/newversion` to create a new version. Alternatively, visit `https://zenodo.org/record/<deposition id>` where `deposition id` is that of the latest published version (default).
+2. Fetch `https://zenodo.org/api/deposit/depositions?all_versions` to list all your depositions and identify the new deposition bucket id.
+3. Proceed to upload (i.e. dump) your new files as described in "Create a new deposition", Step 3.
+
+- Notes:
+  - New version's files must differ from all previous versions
+  - See https://help.zenodo.org/#versioning and https://developers.zenodo.org/#new-version for more info
 
 ## Running via Docker
 
