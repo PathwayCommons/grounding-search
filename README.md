@@ -15,15 +15,29 @@ The identification of sub-cellular biological entities is an important considera
 
 ## Quick start
 
+### Run with Docker
+
+Ensure that you have installed [Docker](https://docs.docker.com/) (>=20.10.0) and [Docker Compose](https://docs.docker.com/compose/) (>=1.29.0).
+
+Clone this remote or simply download the `docker-compose.yml` file then run the following:
+
+```
+docker-compose up --detach
+```
+
+- Notes
+  - Swagger documentation can be accessed at [`http://localhost:3000`](http://localhost:3000) once the service is running locally.
+  - It will take some time, depending on your system and internet connection, for the grounding-search server to start since the Elasticsearch container must initialize and the index data must be restored.
+  - Check the initialization progress by viewing the logs with `docker-compose logs -ft`
+
+
+### Run from source
+
 With Node and Elasticsearch installed with default options, run the following in a cloned copy of the repository:
 
 - `npm install`: Install npm dependencies
 - `npm run update`: Download and index the data
 - `npm start`: Start the server (by default on port 3000)
-
-You can access the latest Swagger documentation for the service at [`http://localhost:3000`](http://localhost:3000) once the service is running locally.
-
-Alternatively, you can [start the service with Docker](#running-via-docker), obviating the need to install the dependencies.
 
 ## Service usage
 
@@ -173,33 +187,6 @@ In this case, you already have a record which points to a published deposition (
 - Notes:
   - New version's files must differ from all previous versions
   - See https://help.zenodo.org/#versioning and https://developers.zenodo.org/#new-version for more info
-
-## Running via Docker
-
-Build the container.  Here, `grounding-search` is used as the container name.
-
-```
-cd grounding-search
-docker build -t grounding-search .
-```
-
-Run the container:
-
-```
-docker run -it -p 12345:3000 -u "node" -e "NODE_ENV=production" --name "grounding-search" grounding-search
-```
-
-Notes:
-
-- The `-it` switches are necessary to make `node` respond to `ctrl+c` etc. in `docker`.
-- The `-p` switch indicates that port 3000 on the container is mapped to port 12345 on the host.  Without this switch, the server is inaccessible.
-- The `-u` switch is used so that a non-root user is used inside the container.
-- The `-e` switch is used to set environment variables.  Alternatively use `--env-file` to use a file with the environment variables.
-- References:
-  - [Dockerizing a Node.js web app](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
-  - [Documentation of docker-node](https://github.com/nodejs/docker-node)
-  - [Docker CLI docs](https://docs.docker.com/engine/reference/commandline/cli/)
-
 
 
 ## Testing
