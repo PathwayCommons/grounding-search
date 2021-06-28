@@ -17,7 +17,7 @@ Install [Docker](https://docs.docker.com/) (>=20.10.0) and [Docker Compose](http
 Clone this remote or at least the `docker-compose.yml` file then run:
 
 ```
-docker-compose up --detach
+docker-compose up
 ```
 
 Swagger documentation can be accessed at [`http://localhost:3000`](http://localhost:3000).
@@ -59,7 +59,7 @@ npm run update
 
 ### Restore index from Elasticsearch dump files
 
-Downloading and building the index from source ensures that the latest information is indexed. Alternatively, to quickly retrieve and recreate the index a dump of a previously indexed Elasticsearch instance has been published on (Zenodo)[https://zenodo.org/]. The index dump data is published under the following DOI:
+Downloading and building the index from source ensures that the latest information is indexed. Alternatively, to quickly retrieve and recreate the index a dump of a previously indexed Elasticsearch instance has been published on [Zenodo](https://zenodo.org/) under the following DOI:
 
 [![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.4495013.svg)](https://doi.org/10.5281/zenodo.4495013)
 
@@ -77,9 +77,7 @@ To both restore and start the grounding-search server run:
 npm run boot
 ```
 
-- Notes:
-  - Index dump published on Zenodo is offered as-is. We do not guarantee that this data will be up-to-date or that releases of `grounding-search` software are compatible with any particular version of this dump data
-  - To ensure you are using the latest data, follow instructions in "Build the index database from source database files"
+NB: Index dump published on Zenodo is offered for demonstration purposes only. We do not guarantee that this data will be up-to-date or that releases of grounding-search software will be compatible with any previously published version of the dump data. To ensure you are using the latest data compatible with grounding-search, follow instructions in "Build the index database from source database files".
 
 ## Issues & feedback
 
