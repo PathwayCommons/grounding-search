@@ -8,38 +8,80 @@
 
 The identification of sub-cellular biological entities is an important consideration in the use and creation of bioinformatics analysis tools and accessible biological research apps.  When research information is uniquely and unambiguously identified, it enables data to be accurately retrieved, cross-referenced, and integrated.  In practice, biological entities are “identified” when they are associated with a matching record from a knowledge base that specialises in collecting and organising information of that type (e.g. gene sequences).  Our search service increases the efficiency and ease of use for identifying biological entities.  This identification may be used to power research apps and tools where colloquial entity names may be provided as input.
 
-## Required software
-
-- [Node.js](https://nodejs.org/en/) >=8
-- [Elasticsearch](https://www.elastic.co/products/elasticsearch) >=6.6.0, <7
-
 ## Quick start
 
-With Node and Elasticsearch installed with default options, run the following in a cloned copy of the repository:
+### Via Docker
+
+Install [Docker](https://docs.docker.com/) (>=20.10.0) and [Docker Compose](https://docs.docker.com/compose/) (>=1.29.0).
+
+Clone this remote or at least the `docker-compose.yml` file then run:
+
+```
+docker-compose up
+```
+
+Swagger documentation can be accessed at [`http://localhost:3000`](http://localhost:3000).
+
+NB: Server start will take some time in order for Elasticsearch to initialize and for the grounding data to be retrieved and the index restored.
+
+### Via source
+
+With [Node.js](https://nodejs.org/en/) (>=8) and [Elasticsearch](https://www.elastic.co/products/elasticsearch) (>=6.6.0, <7) installed with default options, run the following in a cloned copy of the repository:
 
 - `npm install`: Install npm dependencies
 - `npm run update`: Download and index the data
 - `npm start`: Start the server (by default on port 3000)
 
-You can access the latest Swagger documentation for the service at [`http://localhost:3000`](http://localhost:3000) once the service is running locally.
+## Grounding data
 
-Alternatively, you can [start the service with Docker](#running-via-docker), obviating the need to install the dependencies.
+`grounding-search` uses data files provided by three public databases:
 
-## Service usage
+- [NCBI Gene](https://www.ncbi.nlm.nih.gov/gene)
+  - Information about genes
+  - Alias: `ncbi`
+  - Data file: [gene_info.gz](https://ftp.ncbi.nih.gov/gene/DATA/gene_info.gz)
+- [ChEBI](https://www.ebi.ac.uk/chebi/) (`chebi`)
+  - Information about small molecules of biological interest
+  - Alias: `chebi`
+  - Data file: [chebi.owl](https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.owl)
+- [UniProt](https://www.uniprot.org/) (`uniprot`)
+  - Information about proteins
+  - Alias: `uniprot`
+  - Data file: [uniprot_sprot.xml.gz](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz)
 
-Refer to our [Swagger documentation](https://grounding.baderlab.org) in order to form a query to the service.
+### Build index from source database files
+
+If you have followed the Quick Start ("Run from source"), you can download and index the data provided by the  source databases `ncbi`, `chebi` and `uniprot` by running:
+
+```
+npm run update
+```
+
+### Restore index from Elasticsearch dump files
+
+Downloading and building the index from source ensures that the latest information is indexed. Alternatively, to quickly retrieve and recreate the index a dump of a previously indexed Elasticsearch instance has been published on [Zenodo](https://zenodo.org/) under the following DOI:
+
+[![Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.4495013.svg)](https://doi.org/10.5281/zenodo.4495013)
+
+This data is published under the [Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/legalcode) license.
+
+To restore, create a running Elasticsearch instance and run:
+
+```
+npm run restore
+```
+
+To both restore and start the grounding-search server run:
+
+```
+npm run boot
+```
+
+NB: Index dump published on Zenodo is offered for demonstration purposes only. We do not guarantee that this data will be up-to-date or that releases of grounding-search software will be compatible with any previously published version of the dump data. To ensure you are using the latest data compatible with grounding-search, follow instructions in "Build the index database from source database files".
 
 ## Issues & feedback
 
 To let us know about an issue in the software or to provide feedback, please [file an issue on GitHub](https://github.com/PathwayCommons/grounding-search/issues/new).
-
-## Supported data sources
-
-- NCBI gene (`ncbi`)
-- Chebi (`chebi`)
-- Uniprot (`uniprot`)
-
-The data sources included by default (e.g. `npm run update`) are `ncbi` and `chebi`.
 
 ## Configuration
 
@@ -96,41 +138,9 @@ The following environment variables can be used to configure the server:
 - `npm run restore` : restore the information for `INDEX` from `ESDUMP_LOCATION`
 - `npm run boot` : run `clear`, `restore` then `start`; exit on errors
 
-## Dump and restore
+## Using Zenodo to store index dumps
 
-To export the Elasticsearch instance index information and upload to datastore ([Zenodo](https://zenodo.org/)):
-
-```
-npm run dump
-```
-
-To download information from datastore and import to an Elasticsearch instance:
-
-```
-npm run restore
-```
-
-To start the server after a successful restore in one command:
-
-```
-npm run boot
-```
-
-Notes:
-
-- Related environment variables
-  - `ZENODO_API_URL`: You can play around with this in their sandbox site (`https://sandbox.zenodo.org/`)
-  - dump
-    - `ZENODO_ACCESS_TOKEN` and `ZENODO_BUCKET_ID`: These should have been created beforehand under the user `biofactoid` linked to the email `info@biofactoid.org` and password same as for [MailJet](https://app.mailjet.com/)
-  - restore
-    - `ZENODO_DEPOSITION_ID`: This is for published datasets (i.e. index files) only
-- References:
-  - [Zenodo | Developers](https://developers.zenodo.org/#entities)
-  - [npm package for elasticdump](https://www.npmjs.com/package/elasticdump)
-
-## Zenodo setup
-
-[Zenodo](https://zenodo.org/) lets you you to store and retrieve digital artefacts related to a scientific project or publication. Here, we use Zenodo to store Elasticsearch index information needed to recreate the index.
+[Zenodo](https://zenodo.org/) lets you you to store and retrieve digital artefacts related to a scientific project or publication. Here, we use Zenodo to store Elasticsearch index dump data used to quickly recreate the index used by grounding-search.
 
 ### Create and publish a new record deposition
 
@@ -173,33 +183,6 @@ In this case, you already have a record which points to a published deposition (
 - Notes:
   - New version's files must differ from all previous versions
   - See https://help.zenodo.org/#versioning and https://developers.zenodo.org/#new-version for more info
-
-## Running via Docker
-
-Build the container.  Here, `grounding-search` is used as the container name.
-
-```
-cd grounding-search
-docker build -t grounding-search .
-```
-
-Run the container:
-
-```
-docker run -it -p 12345:3000 -u "node" -e "NODE_ENV=production" --name "grounding-search" grounding-search
-```
-
-Notes:
-
-- The `-it` switches are necessary to make `node` respond to `ctrl+c` etc. in `docker`.
-- The `-p` switch indicates that port 3000 on the container is mapped to port 12345 on the host.  Without this switch, the server is inaccessible.
-- The `-u` switch is used so that a non-root user is used inside the container.
-- The `-e` switch is used to set environment variables.  Alternatively use `--env-file` to use a file with the environment variables.
-- References:
-  - [Dockerizing a Node.js web app](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
-  - [Documentation of docker-node](https://github.com/nodejs/docker-node)
-  - [Docker CLI docs](https://docs.docker.com/engine/reference/commandline/cli/)
-
 
 
 ## Testing
