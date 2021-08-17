@@ -8,7 +8,7 @@ const router = express.Router();
 
 const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 
-export default function( port ) {
+export default function() {
   const options = {
     swaggerDefinition: {
       info: {
