@@ -8,6 +8,20 @@
 
 The identification of sub-cellular biological entities is an important consideration in the use and creation of bioinformatics analysis tools and accessible biological research apps.  When research information is uniquely and unambiguously identified, it enables data to be accurately retrieved, cross-referenced, and integrated.  In practice, biological entities are “identified” when they are associated with a matching record from a knowledge base that specialises in collecting and organising information of that type (e.g. gene sequences).  Our search service increases the efficiency and ease of use for identifying biological entities.  This identification may be used to power research apps and tools where colloquial entity names may be provided as input.
 
+## Maintenance
+
+The Pathway Commons Grounding Search Service is an academic project built and maintained by: 
+<a href="https://baderlab.org" target="_blank">Bader Lab at the University of Toronto</a>
+, 
+<a href="http://sanderlab.org" target="_blank">Sander Lab at Harvard</a>
+, and the 
+<a href="https://www.ohsu.edu/people/emek-demir/AFE06DC89ED9AAF1634F77D11CCA24C3" target="_blank">Pathway and Omics Lab at the Oregon Health &amp; Science University</a>
+.
+
+## Funding
+
+This project was funded by the US National Institutes of Health (NIH) [U41 HG006623, U41 HG003751, R01 HG009979 and P41 GM103504].
+
 ## Quick start
 
 ### Via Docker
@@ -205,16 +219,4 @@ All files `/test` will be run by [Mocha](https://mochajs.org/).  You can `npm te
 1. Push the release: `git push && git push --tags`
 1. [Publish a GitHub release](https://github.com/PathwayCommons/grounding-search/releases/new) so that Zenodo creates a DOI for this version.
 
-## Maintenance
 
-The Pathway Commons Grounding Search Service is an academic project built and maintained by: 
-<a href="https://baderlab.org" target="_blank">Bader Lab at the University of Toronto</a>
-, 
-<a href="http://sanderlab.org" target="_blank">Sander Lab at Harvard</a>
-, and the 
-<a href="https://www.ohsu.edu/people/emek-demir/AFE06DC89ED9AAF1634F77D11CCA24C3" target="_blank">Pathway and Omics Lab at the Oregon Health &amp; Science University</a>
-.
-
-## Funding
-
-This project was funded by the US National Institutes of Health (NIH) [U41 HG006623, U41 HG003751, R01 HG009979 and P41 GM103504].
