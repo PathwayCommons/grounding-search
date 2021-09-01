@@ -113,6 +113,6 @@ For a quick reference, the following citation commands can be used:
 
 # Acknowledgements
 
-TODO
+This project was funded by the US National Institutes of Health (NIH) [U41 HG006623, U41 HG003751, R01 HG009979 and P41 GM103504].
 
 # References
