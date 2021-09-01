@@ -69,11 +69,11 @@ The database is built using a dynamic indexing approach, with Elasticsearch.  Th
 
 The grounding service operates by making queries on the database, with the query string normalised -- i.e. the string has punctuation removed, the case is normalised, and embeddings are considered (e.g. “TNF-α” is considered the same as “tnf alpha”).  A fuzzy query and a precise query are made to the database to ensure that both exact matches and near matches are included in the initial results.  These initial results are processed with a multithreaded ranking approach.  The Sørensen–Dice coefficient is used to rank the initial results based on each entity's official name and synonyms, considering each entity's best-case score.  
 
-The Sørensen–Dice coefficient, $$s_i$$, for the $$i$$th synonym, is given as follows, where
+The Sørensen–Dice coefficient, $s_i$, for the $i$th synonym, is given as follows, where
 
-- $$b_t$$ is the total number of bigrams in both the $$i$$th synonym and the query string,
-- $$b_i$$ is the total number of bigrams in the $$i$$th synonym, and
-- $$b_q$$ is the total number of bigrams in the query string:
+- $b_t$ is the total number of bigrams in both the $i$th synonym and the query string,
+- $b_i$ is the total number of bigrams in the $i$th synonym, and
+- $b_q$ is the total number of bigrams in the query string:
 
 $$s_i = (\frac{2b_t}{b_i + b_q})$$
 
