@@ -94,23 +94,6 @@ Further, more natural search systems may emerge as a result of the approaches of
 Modern research apps and tools motivate the need for robust, fast, reusable grounding tools that allow for easily identifying biological entities from their common names.  Our grounding service can be used in apps to provide users with an easy-to-use experience in line with their mental model of biological entities.
 
 
-# Citations
-
-*This section will be deleted.  Keep it for now so it can be used as a reference.*
-
-Citations to entries in paper.bib should be in
-[rMarkdown](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
-format.
-
-If you want to cite a software repository URL (e.g. something on GitHub without a preferred
-citation) then you can do it with the example BibTeX entry below for @fidgit.
-
-For a quick reference, the following citation commands can be used:
-- `@author:2001`  ->  "Author et al. (2001)"
-- `[@author:2001]` -> "(Author et al., 2001)"
-- `[@author1:2001; @author2:2001]` -> "(Author1 et al., 2001; Author2 et al., 2002)"
-
-
 # Acknowledgements
 
 This project was funded by the US National Institutes of Health (NIH) [U41 HG006623, U41 HG003751, R01 HG009979 and P41 GM103504].
