@@ -97,6 +97,10 @@ NB: Index dump published on Zenodo is offered for demonstration purposes only. W
 
 To let us know about an issue in the software or to provide feedback, please [file an issue on GitHub](https://github.com/PathwayCommons/grounding-search/issues/new).
 
+## Contributing
+
+To make a contribution to this project, please start by please [filing an issue on GitHub that describes your proposal](https://github.com/PathwayCommons/grounding-search/issues/new).  Once your proposal is ready, you can make a [pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+
 ## Configuration
 
 The following environment variables can be used to configure the server:
