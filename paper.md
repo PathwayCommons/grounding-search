@@ -49,8 +49,6 @@ affiliations:
    index: 6
  - name: Broad Institute of MIT and Harvard, Boston, MA, 02142, USA
    index: 7
- - name: Laboratory of Systems Pharmacology, Harvard Medical School, Boston, MA, 02115, USA
-   index: 9
  - name: Department of Computer Science, University of Toronto, Ontario, M5S 2E4, Canada
    index: 8
  - name: Department of Molecular Genetics, University of Toronto, Ontario, M5S 1A8, Canada
@@ -59,7 +57,7 @@ affiliations:
    index: 10
  - name: Princess Margaret Cancer Centre, University Health Network, Toronto, Ontario, M5G 2C1, Canada
    index: 11
-date: 8 September 2021
+date: 9 September 2021
 bibliography: paper.bib
 ---
 
