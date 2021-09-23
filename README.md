@@ -47,6 +47,12 @@ With [Node.js](https://nodejs.org/en/) (>=8) and [Elasticsearch](https://www.ela
 - `npm run update`: Download and index the data
 - `npm start`: Start the server (by default on port 3000)
 
+## Documentation
+
+Swagger documentation is available on a publicly-hosted instance of the service at [https://grounding.baderlab.org](https://grounding.baderlab.org).  You can run queries to test the API on this instance.
+
+Please do not use `https://grounding.baderlab.org` for your production apps or scripts.
+
 ## Grounding data
 
 `grounding-search` uses data files provided by three public databases:
