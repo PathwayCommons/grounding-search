@@ -228,8 +228,8 @@
       },
       {
         "text": "Leptin",
-        "xref_id": "16846",
-        "namespace": "ncbi",
+        "xref_id": "81571",
+        "namespace": "chebi",
         "sentence": null,
         "loose": true
       },
@@ -1066,13 +1066,6 @@
       {
         "text": "AGT",
         "xref_id": "24179",
-        "namespace": "ncbi",
-        "sentence": null
-      },
-      {
-        "text": "leptin",
-        "xref_id": "25608",
-        "loose": true,
         "namespace": "ncbi",
         "sentence": null
       }
