@@ -1221,12 +1221,6 @@
       "sentence": "Phosphoglycerate Kinase 1 Phosphorylates Beclin1 to Induce Autophagy  Autophagy is crucial for maintaining cell homeostasis ."
      },
      {
-      "text": "Pgk1",
-      "xref_id": "5230",
-      "namespace": "ncbi",
-      "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-     },
-     {
       "text": "VPS34",
       "xref_id": "5289",
       "namespace": "ncbi",
