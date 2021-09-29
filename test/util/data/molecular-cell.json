@@ -1293,13 +1293,6 @@
       "sentence": "As expected , glutamine deprivation and mTOR inhibitor Torin1 treatment reduced mTOR mediated p70S6K T389 phosphorylation             ."
      },
      {
-      "text": "3-phosphoglycerate",
-      "xref_id": "17794",
-      "loose": true,
-      "namespace": "chebi",
-      "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
-     },
-     {
       "text": "EGF",
       "xref_id": "1950",
       "namespace": "ncbi",
