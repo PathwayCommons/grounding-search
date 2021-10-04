@@ -1137,13 +1137,6 @@
       "sentence": "Both calcium ( Ca2+ ) flux and Ca2 +-dependent signaling play a crucial role in this process , although the underlying mechanism has yet to be elucidated ."
      },
      {
-      "text": "CaM",
-      "xref_id": "801",
-      "loose": true,
-      "namespace": "ncbi",
-      "sentence": "DAPK1 is a 160-kDa Ca2 +-/calmodulin ( CaM )-dependent serine/threonine kinase , comprised of an N-terminal kinase domain followed by a regulatory CaM binding domain , eight Ankyrin repeats , a cytoskeleton associating ROC-COR domain and a C-terminal death domain ( schematic in Figure 4A , interaction network in Figure S1B ) ( Carlessi et al. , 2011 ) ."
-     },
-     {
       "text": "purpurin",
       "xref_id": "8645",
       "namespace": "chebi",
@@ -1228,19 +1221,6 @@
       "sentence": "Phosphoglycerate Kinase 1 Phosphorylates Beclin1 to Induce Autophagy  Autophagy is crucial for maintaining cell homeostasis ."
      },
      {
-      "text": "Pgk1",
-      "xref_id": "5230",
-      "namespace": "ncbi",
-      "sentence": "Analysis of gene expression in cells with hyperactive mTORC1 showed that knockdown of Foxk1 mirrored the knockdown of Hif-1alpha and significantly reduced the expression of the glucose transporter Glut1 , 9 glycolytic enzymes ( Hk2 , Pfkl , Aldoa , Tpi1 , Pgk1 , Pgm2 , Eno1 , and Ldh1 ) , the rate limiting enzyme for the pentose phosphate pathway ( G6pd ) , and 2 enzymes involved in one-carbon metabolism ( Shmt2 and Mthfd1l )                         ."
-     },
-     {
-      "text": "ARD1",
-      "xref_id": "8260",
-      "namespace": "ncbi",
-      "sentence": "Here , we demonstrate that glutamine deprivation and hypoxia result in inhibition of mTOR mediated acetyl-transferase ARD1 S228 phosphorylation , leading to ARD1 dependent phosphoglycerate kinase 1 ( PGK1 ) K388 acetylation and subsequent PGK1 mediated Beclin1 S30 phosphorylation .",
-      "loose": true
-    },
-     {
       "text": "VPS34",
       "xref_id": "5289",
       "namespace": "ncbi",
@@ -1311,13 +1291,6 @@
       "xref_id": "6198",
       "namespace": "ncbi",
       "sentence": "As expected , glutamine deprivation and mTOR inhibitor Torin1 treatment reduced mTOR mediated p70S6K T389 phosphorylation             ."
-     },
-     {
-      "text": "3-phosphoglycerate",
-      "xref_id": "17794",
-      "loose": true,
-      "namespace": "chebi",
-      "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
      {
       "text": "EGF",
@@ -1632,7 +1605,14 @@
       "xref_id": "15351",
       "namespace": "chebi",
       "sentence": "( B ) An in vitro acetylation assay was performed by mixing purified ARD1 and purified PGK1 in the presence or absence of acetyl-CoA ( Ac-CoA ) ."
-     }
+     },
+     {
+      "text": "ARD1",
+      "xref_id": "8260",
+      "namespace": "ncbi",
+      "sentence": "Here , we demonstrate that glutamine deprivation and hypoxia result in inhibition of mTOR mediated acetyl-transferase ARD1 S228 phosphorylation , leading to ARD1 dependent phosphoglycerate kinase 1 ( PGK1 ) K388 acetylation and subsequent PGK1 mediated Beclin1 S30 phosphorylation .",
+      "loose": true
+    }
    ]
   },
   {
@@ -2315,8 +2295,8 @@
     },
     {
       "text": "cytochrome b5",
-      "namespace": "ncbi",
-      "xref_id": "1528",
+      "namespace": "chebi",
+      "xref_id": "38553",
       "sentence": "TEX264-GFP showed a reticular pattern under nutrient rich conditions and colocalized with the ER marker cytochrome b5            .",
       "loose": true
     },
@@ -2509,8 +2489,8 @@
       },
       {
         "text":"eIF2alpha",
-        "xref_id":"1965",
-        "namespace":"ncbi",
+        "xref_id": null,
+        "namespace": null,
         "sentence":"Because eIF2alpha is the canonical downstream target of PERK , we next tested whether it mediates the increases in SCs caused by glucose deprivation .",
         "loose": true
       },
@@ -3307,8 +3287,8 @@
       },
       {
         "text": "insulin",
-        "namespace": "ncbi",
-        "xref_id": "3630",
+        "namespace": "chebi",
+        "xref_id": "145810",
         "sentence": "Hepatic lipogenesis is substantially regulated at the transcriptional level by the sterol regulatory element binding protein-1C ( SREBP-1C ) and ChREBP transcription factors , which have overlapping target genes and mediate the input from insulin and glucose , respectively ( Abdul Wahed et al. , 2017 , Agius , 2016b , Herman et al. , 2012 , Uyeda and Repa , 2006 , Wang et al. , 2015 , Yecies et al. , 2011 ) .",
         "loose": true
       },
