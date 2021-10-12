@@ -37,7 +37,7 @@ docker-compose up
 
 Swagger documentation can be accessed at [`http://localhost:3000`](http://localhost:3000).
 
-NB: Server start will take some time in order for Elasticsearch to initialize and for the grounding data to be retrieved and the index restored.
+NB: Server start will take some time in order for Elasticsearch to initialize and for the grounding data to be retrieved and the index restored. If it takes more than 10 minutes consider increasing the allocated memory for Docker: `Preferences` > `Resources` > `Memory` and remove this line in docker-compose.yml: `ES_JAVA_OPTS=-Xms2g -Xmx2g` 
 
 ### Via source
 
