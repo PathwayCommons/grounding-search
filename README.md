@@ -53,6 +53,63 @@ Swagger documentation is available on a publicly-hosted instance of the service 
 
 Please do not use `https://grounding.baderlab.org` for your production apps or scripts.
 
+## Example usage
+
+Here, we provide usage examples in common languages for the main search API.  For more details, please refer to the Swagger documentation at [https://grounding.baderlab.org](https://grounding.baderlab.org), which is also accessible when running a local instance.
+
+### Example search in JS
+
+```js
+const response = await fetch('http://hostname:port/search', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ // search options here
+    q: 'p53'
+  })
+});
+
+const responseJSON = await response.json();
+```
+
+### Example search in Python
+
+```python
+import requests
+
+url = 'http://hostname:port/search'
+body = {'q': 'p53'}
+
+response = requests.post(url, data = body)
+
+responseJSON = response.json()
+```
+
+### Example in shell script via curl
+
+```bash
+curl -X POST "http://hostname:port/search" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{  \"q\": \"p53\" }"
+```
+
+## Tool comparison
+
+Here, we summarise a set of tools that overlap to some degree with the main use case of the Pathway Commons Grounding Search Service, where a user searches for a biological entity grounding by providing only a commonly-used synonym.  This table was last updated on 25 October 2021 (2021-10-25).
+
+If you have developed a new tool in this space or your tool supports new features, let us know by making a pull request, and we'll add your revision to this table.
+
+|                                                  | PC Grounding Search | GProfiler | GNormPlus (PubTator) | Gilda                                                 | BridgeDB  |
+|--------------------------------------------------|---------------------|-----------|----------------------|-------------------------------------------------------|-----------|
+| Allows for searching by synonym                  | x                   |           | x                    | x                                                     |           |
+| Supports multiple organisms                      | x                   | x         | x                    | x                                                     | x         |
+| Accepts organism ranking preference              | x                   |           |                      |                                                       |           |
+| Multiple organisms per query                     | x                   |           | x                    | Partial support (only one organism returned)          |           |
+| Multiple results per query                       | x                   |           |                      | One per type (e.g. protein)                           | x         |
+| Multiple results are ranked based on relevance   | x                   |           |                      | x                                                     |           |
+| Speed/Throughput                                 | < 100 ms            | < 100 ms  | < 100ms              | < 100 ms                                              | < 1000 ms |
+| Allows querying for a particular grounding by ID | x                   | x         | x                    | x                                                     | x         |
+
+
 ## Grounding data
 
 `grounding-search` uses data files provided by three public databases:
