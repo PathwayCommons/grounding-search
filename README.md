@@ -7,7 +7,11 @@
 
 ## Description
 
-The identification of sub-cellular biological entities is an important consideration in the use and creation of bioinformatics analysis tools and accessible biological research apps.  When research information is uniquely and unambiguously identified, it enables data to be accurately retrieved, cross-referenced, and integrated.  In practice, biological entities are “identified” when they are associated with a matching record from a knowledge base that specialises in collecting and organising information of that type (e.g. gene sequences).  Our search service increases the efficiency and ease of use for identifying biological entities.  This identification may be used to power research apps and tools where colloquial entity names may be provided as input.
+The identification of sub-cellular biological entities is an important consideration in the use and creation of bioinformatics analysis tools and accessible biological research apps.  When research information is uniquely and unambiguously identified, it enables data to be accurately retrieved, cross-referenced, and integrated.  In practice, biological entities are “identified” when they are associated with a matching record from a knowledge base that specialises in collecting and organising information of that type (e.g. gene sequences).  Our search service increases the efficiency and ease of use for identifying biological entities.  This identification may be used to power research apps and tools where common entity synonyms may be provided as input.
+
+For instance, [Biofactoid](https://biofactoid.org) uses this grounding service to allow users to simply specify their preferred synonyms to identify biological entities (e.g. proteins):
+
+https://user-images.githubusercontent.com/989043/140164756-1fa22796-1c60-4f13-9a2a-d65393b89155.mp4
 
 ## Maintenance
 
@@ -100,14 +104,14 @@ If you have developed a new tool in this space or your tool supports new feature
 
 |                                                  | PC Grounding Search | GProfiler | GNormPlus (PubTator) | Gilda                                                 | BridgeDB  |
 |--------------------------------------------------|---------------------|-----------|----------------------|-------------------------------------------------------|-----------|
-| Allows for searching by synonym                  | x                   |           | x                    | x                                                     |           |
-| Supports multiple organisms                      | x                   | x         | x                    | x                                                     | x         |
-| Accepts organism ranking preference              | x                   |           |                      |                                                       |           |
-| Multiple organisms per query                     | x                   |           | x                    | Partial support (only one organism returned)          |           |
-| Multiple results per query                       | x                   |           |                      | One per type (e.g. protein)                           | x         |
-| Multiple results are ranked based on relevance   | x                   |           |                      | x                                                     |           |
+| Allows for searching by synonym                  | ●                   |           | ●                    | ●                                                     |           |
+| Supports multiple organisms                      | ●                   | ●         | ●                    | ●                                                     | ●         |
+| Accepts organism ranking preference              | ●                   |           |                      |                                                       |           |
+| Multiple organisms per query                     | ●                   |           | ●                    | Partial support (only one organism returned)          |           |
+| Multiple results per query                       | ●                   |           |                      | One per type (e.g. protein)                           | ●         |
+| Multiple results are ranked based on relevance   | ●                   |           |                      | ●                                                     |           |
 | Speed/Throughput                                 | < 100 ms            | < 100 ms  | < 100ms              | < 100 ms                                              | < 1000 ms |
-| Allows querying for a particular grounding by ID | x                   | x         | x                    | x                                                     | x         |
+| Allows querying for a particular grounding by ID | ●                   | ●         | ●                    | ●                                                     | ●         |
 
 
 ## Grounding data
