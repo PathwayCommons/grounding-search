@@ -13,6 +13,14 @@ For instance, [Biofactoid](https://biofactoid.org) uses this grounding service t
 
 https://user-images.githubusercontent.com/989043/140164756-1fa22796-1c60-4f13-9a2a-d65393b89155.mp4
 
+## Citation
+
+To cite the Pathway Commons Grounding Search Service in a paper, please cite the Journal of Open Source Software paper:
+
+Franz et al., (2021). A flexible search system for high-accuracy identification of biological entities and molecules. Journal of Open Source Software, 6(67), 3756, https://doi.org/10.21105/joss.03756
+
+[View the paper at JOSS](https://joss.theoj.org/papers/10.21105/joss.03756) or [view the PDF directly](https://www.theoj.org/joss-papers/joss.03756/10.21105.joss.03756.pdf).
+
 ## Maintenance
 
 The Pathway Commons Grounding Search Service is an academic project built and maintained by: 
