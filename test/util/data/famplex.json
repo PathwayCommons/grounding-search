@@ -1,0 +1,81 @@
+[
+  {
+    "id": "https://doi.org/10.1016/j.phymed.2016.12.017",
+    "organismOrdering": [9606],
+    "entities": [
+      {
+        "text": "ERK",
+        "xref_id": "ERK",
+        "namespace": "famplex",
+        "sentence": "Additionally, icariin treatment alone significantly induced the phosphorylation of Akt and ERK in a time dependent pattern in dopaminergic MES 23.5 cells."
+      },
+      {
+        "text": "PI3K",
+        "xref_id": "PI3K",
+        "namespace": "famplex",
+        "sentence": "Ovariectomized PD mice were treated with vehicle or icariin (3 days before MPTP injections) with or without the phosphatidylinositol 3-kinase (PI3K) inhibitor LY294002 or mitogen-activated protein kinase kinase (MEK) inhibitor PD98059."
+      },
+      {
+        "text": "MEK",
+        "xref_id": "MEK",
+        "namespace": "famplex",
+        "sentence": "Ovariectomized PD mice were treated with vehicle or icariin (3 days before MPTP injections) with or without the phosphatidylinositol 3-kinase (PI3K) inhibitor LY294002 or mitogen-activated protein kinase kinase (MEK) inhibitor PD98059."
+      },
+      {
+        "text": "Akt",
+        "xref_id": "AKT",
+        "namespace": "famplex",
+        "sentence": "Additionally, icariin treatment alone significantly induced the phosphorylation of Akt and ERK in a time dependent pattern in dopaminergic MES 23.5 cells."
+      }
+    ]
+  },
+  {
+    "id": "https://doi.org/10.1155/2012/307315",
+    "organismOrdering": [9606],
+    "entities": [
+      {
+        "text": "ERK1/2",
+        "xref_id": "ERK",
+        "namespace": "famplex",
+        "sentence": "The proposed mechanism for this involves AT1R signalling via ERK/p38 MAP [82] and/or by elevated ERK1/2 and JNK phosphorylation [85]."
+      }
+    ]
+  },
+  {
+    "id": "https://doi.org/10.1038/S41598-017-00094-Y",
+    "organismOrdering": [9606],
+    "entities": [
+      {
+        "text": "Erk1/2",
+        "xref_id": "ERK",
+        "namespace": "famplex",
+        "sentence": "Thus, we examined the phosphorylated Erk1/2 after the HX1 cells were incubated with growth factor of IGF2, IGF2:GFP and h-IGF2 respectively."
+      }
+    ]
+  },
+  {
+    "id": "https://doi.org/10.1093/CVR/CVS249",
+    "organismOrdering": [9606],
+    "entities": [
+      {
+        "text": "Erk",
+        "xref_id": "ERK",
+        "namespace": "famplex",
+        "sentence": "Erk activity was stimulated by both isoproterenol and the direct AC activator forskolin, but only isoproterenol induced Erk(Thr188) phosphorylation."
+      }
+    ]
+  },
+  {
+    "id": "https://doi.org/",
+    "organismOrdering": [9606],
+    "entities": [
+      {
+        "text": "",
+        "xref_id": "",
+        "namespace": "famplex",
+        "sentence": ""
+      }
+
+    ]
+  }
+]
