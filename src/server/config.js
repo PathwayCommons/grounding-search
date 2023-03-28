@@ -48,6 +48,9 @@ export const DB_PREFIX_NCBI_GENE = env('DB_PREFIX_NCBI_GENE', 'ncbigene');
 export const DB_NAME_NCBI_GENE  = env('DB_NAME_NCBI_GENE', 'NCBI Gene');
 export const DB_PREFIX_NCBI_PROTEIN = env('DB_PREFIX_NCBI_PROTEIN', 'ncbiprotein');
 export const DB_NAME_NCBI_PROTEIN = env('DB_NAME_NCBI_PROTEIN', 'NCBI Protein');
+export const FAMPLEX_URL = env('FAMPLEX_URL', 'https://github.com/sorgerlab/famplex/archive/refs/tags/0.0.4.zip');
+export const FAMPLEX_DIRNAME = env('FAMPLEX_DIRNAME', 'famplex-0.0.4');
+export const FAMPLEX_FILE_NAME = env('FAMPLEX_FILE_NAME', 'famplex.json');
 
 export const ESDUMP_LOCATION = env('ESDUMP_LOCATION', './input/');
 export const ZENODO_ACCESS_TOKEN = env('ZENODO_ACCESS_TOKEN', '');
