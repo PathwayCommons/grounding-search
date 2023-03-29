@@ -7,10 +7,11 @@ import fs from 'fs';
 
 import { INPUT_PATH, FAMPLEX_DIRNAME, FAMPLEX_URL, FAMPLEX_FILE_NAME } from '../config';
 import { db } from '../db';
-import DelimitedParser from '../parser/delimited-parser';
 import downloadFile from './download';
-import { updateEntriesFromFile } from './processing';
+import { updateEntriesFromSource } from './processing';
 // import { getOrganismById, isSupportedOrganism } from './organisms';
+
+const fsPromises = fs.promises;
 
 const DIR_PATH = path.join( INPUT_PATH, FAMPLEX_DIRNAME );
 const DATA_PATH = path.join( INPUT_PATH, FAMPLEX_FILE_NAME );
@@ -53,13 +54,9 @@ const processEntry = entryLine => {
   // return { namespace, type, dbName, dbPrefix, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
 };
 
-const parseFile = (filePath, onData, onEnd) => {
-  let hasHeaderLine = true;
+const parse = data => data;
 
-  DelimitedParser( DIR_PATH, { onData, onEnd }, hasHeaderLine );
-};
-
-const updateFromFile = () => updateEntriesFromFile(ENTRY_NS, DIR_PATH, parseFile, processEntry);
+const updateFromSource = data => updateEntriesFromSource(ENTRY_NS, data, parse, processEntry);
 
 const extractEntities = async () => {
   const fname = path.join( DIR_PATH, FAMPLEX_ENTITY_FILE );
@@ -138,7 +135,7 @@ const addXrefs = async entities => {
  *   - grounding_map.csv: synonyms (subset)
  *   - equivalences.csv: dbXrefs (subset)
  */
-const preProcess = async () => {
+const preProcess = async function() {
   let entities = await extractEntities();
   await addSynonyms( entities );
   await addXrefs( entities );
@@ -149,8 +146,8 @@ const preProcess = async () => {
  * Downloads the 'famplex' release (repository) and writes pre-processed JSON to file
  * @returns {Promise} A promise that is resolved when the download is done.
  */
-const download = function(){
-  const toJsonFile = entities => fs.writeFileSync( DATA_PATH, JSON.stringify( entities ) );
+const download = async function() {
+  const toJsonFile = entities => fsPromises.writeFile( DATA_PATH, JSON.stringify( entities ) );
   return downloadFile(FAMPLEX_URL, FAMPLEX_DIRNAME)
     .then( preProcess )
     .then( toJsonFile );
@@ -161,9 +158,9 @@ const download = function(){
  * @returns {Promise} A promise that is resolved when the indexing is done.
  */
 const index = function(){
-  return Promise.all([
-    updateFromFile()
-  ]);
+  const fromJsonFile = () => fsPromises.readFile( DATA_PATH, { encoding: 'utf-8' } );
+  return fromJsonFile()
+    .then( updateFromSource );
 };
 
 /**
