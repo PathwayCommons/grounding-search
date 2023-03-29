@@ -8,19 +8,19 @@
       {
         "text": "ERK",
         "xref_id": "ERK",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Additionally, icariin treatment alone significantly induced the phosphorylation of Akt and ERK in a time dependent pattern in dopaminergic MES 23.5 cells."
       },
       {
         "text": "PI3K",
         "xref_id": "PI3K",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Ovariectomized PD mice were treated with vehicle or icariin (3 days before MPTP injections) with or without the phosphatidylinositol 3-kinase (PI3K) inhibitor LY294002 or mitogen-activated protein kinase kinase (MEK) inhibitor PD98059."
       },
       {
         "text": "MEK",
         "xref_id": "MEK",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Ovariectomized PD mice were treated with vehicle or icariin (3 days before MPTP injections) with or without the phosphatidylinositol 3-kinase (PI3K) inhibitor LY294002 or mitogen-activated protein kinase kinase (MEK) inhibitor PD98059."
       }
     ]
@@ -34,7 +34,7 @@
       {
         "text": "ERK1/2",
         "xref_id": "ERK",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "The proposed mechanism for this involves AT1R signalling via ERK/p38 MAP [82] and/or by elevated ERK1/2 and JNK phosphorylation [85]."
       }
     ]
@@ -48,7 +48,7 @@
       {
         "text": "Erk1/2",
         "xref_id": "ERK",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Thus, we examined the phosphorylated Erk1/2 after the HX1 cells were incubated with growth factor of IGF2, IGF2:GFP and h-IGF2 respectively."
       }
     ]
@@ -62,7 +62,7 @@
       {
         "text": "Erk",
         "xref_id": "ERK",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Erk activity was stimulated by both isoproterenol and the direct AC activator forskolin, but only isoproterenol induced Erk(Thr188) phosphorylation."
       }
     ]
@@ -76,19 +76,19 @@
       {
         "text": "Akt",
         "xref_id": "AKT",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "This was accomplished by inhibiting phosphorylation of Akt and MAPKs which include JNK, ERK, p38, and decreased the phosphorylation of MAPK kinases 1/2, 3/6, and 4"
       },
       {
         "text": "JNK",
         "xref_id": "JNK",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "This was accomplished by inhibiting phosphorylation of Akt and MAPKs which include JNK, ERK, p38, and decreased the phosphorylation of MAPK kinases 1/2, 3/6, and 4"
       },
       {
         "text": "p38",
         "xref_id": "p38",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "This was accomplished by inhibiting phosphorylation of Akt and MAPKs which include JNK, ERK, p38, and decreased the phosphorylation of MAPK kinases 1/2, 3/6, and 4"
       }
     ]
@@ -102,7 +102,7 @@
       {
         "text": "AKT",
         "xref_id": "AKT",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "The membrane bound form of AKT then becomes phosphorylated on two regulatory residues, a threonine within the activation loop (Thr308 in AKT1,Thr309 in AKT2, Thr305 in AKT3) and a serine in the C-terminus of the enzyme (Ser473 in AKT1,Ser474 in AKT2, Ser472 in AKT3), and both phosphorylations are considered to be required for AKT to reach maximum kinase activity."
       }
     ]
@@ -116,7 +116,7 @@
       {
         "text": "NF-kappaB",
         "xref_id": "NFkappaB",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Syk enhances TNF-alpha induced NF-kappaB activation in MCF7 breast cancer cells and the overexpression of CAST alone also has a positive effect on TNF-alpha induced NF-kappaB activation."
       }
     ]
@@ -130,7 +130,7 @@
       {
         "text": "NF-κB",
         "xref_id": "NFkappaB",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "EMSA showed that thiocolchicoside inhibited TNF-activated NF-κB in all three cell types ( xref )."
       }
     ]
@@ -144,7 +144,7 @@
       {
         "text": "NFkappaB",
         "xref_id": "NFkappaB",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "In fact, a careful timecourse analysis of TNF induced NFkappaB DNA binding activity in HCMV infected cells showed a modest decrease by 8 h post infection, but not by 4 h [XREF_BIBR]."
       }
     ]
@@ -158,13 +158,13 @@
       {
         "text": "PI3K",
         "xref_id": "PI3K",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "In addition to activating several key metabolic pathways, such as those associated with the FGFR, PI3K-Akt, and ERK-MAPK, the LMP1 protein of EBV enhances the degradation of PHD1 and PHD3 to activate HIF-1α (103), which upregulates glycolysis through the upregulation of PKM2 and PDH2 (104, 105)."
       },
       {
         "text": "FGFR",
         "xref_id": "FGFR",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "In addition to activating several key metabolic pathways, such as those associated with the FGFR, PI3K-Akt, and ERK-MAPK, the LMP1 protein of EBV enhances the degradation of PHD1 and PHD3 to activate HIF-1α (103), which upregulates glycolysis through the upregulation of PKM2 and PDH2 (104, 105)."
       }
     ]
@@ -178,7 +178,7 @@
       {
         "text": "phosphatidylinositol 3-kinase",
         "xref_id": "PI3K",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Stable activation of phosphatidylinositol 3-kinase in the T cell immunological synapse stimulates Akt signaling to FoxO1 nuclear exclusion and cell growth control."
       }
     ]
@@ -192,7 +192,7 @@
       {
         "text": "TGF-beta",
         "xref_id": "TGFB",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "TGF-beta stimulation made a significant increase in the mRNA expression of Snail, while the transcription level of E-cadherin was significantly downregulated, suggesting that TGF-beta induced the EMT of LoVo cells through upregulating Snail transcription and downregulating E-cadherin transcription."
       }
     ]
@@ -206,7 +206,7 @@
       {
         "text": "TGFbeta",
         "xref_id": "TGFB",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Several signaling networks including hypoxia, TGFbeta, Wnt and Notch signaling may all activate EMT by wide-spread transcriptional changes via the activation of specific transcription factors [XREF_BIBR] which elicit their effects on gene transcription and the epigenetic landscape by recruiting epigenetic regulatory proteins to specific genes, including those associated with an epithelial or mesenchymal phenotype."
       }
     ]
@@ -220,7 +220,7 @@
       {
         "text": "TGFb",
         "xref_id": "TGFB",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "More recently, it was demonstrated that TGFb induced apoptosis is mediated by Gadd45b via p38 activation in primary hepatocytes from wild type mice, and was blocked in hepatocytes from Gadd45b-/- mice [XREF_BIBR]."
       }
     ]
@@ -234,7 +234,7 @@
       {
         "text": "TGF-β",
         "xref_id": "TGFB",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "TGF-β inhibits both the proliferation and cell cycle progression of B cells through Smad-dependent or Smad-independent pathways [160, 175–177]."
       }
     ]
@@ -248,7 +248,7 @@
       {
         "text": "JNK",
         "xref_id": "JNK",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Similarly, synergistic and sustained JNK phosphorylation was observed in all three systems."
       }
     ]
@@ -262,7 +262,7 @@
       {
         "text": "c-Jun N-terminal kinase",
         "xref_id": "JNK",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "UV treatment led to c-Jun N-terminal kinase (JNK) phosphorylation, Bim redistribution and subsequent Bax activation."
       }
     ]
@@ -276,7 +276,7 @@
       {
         "text": "VEGF",
         "xref_id": "VEGF",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "It is known that VEGF induces angiogenesis and markedly increases endothelial permeability [XREF_BIBR]."
       }
     ]
@@ -290,7 +290,7 @@
       {
         "text": "vascular endothelial growth factor",
         "xref_id": "VEGF",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Immunohistochemically, vascular endothelial growth factor (VEGF), which activates angiogenesis, appeared at the early stages of both the control group and the sintered bone implantation group."
       }
     ]
@@ -304,7 +304,7 @@
       {
         "text": "cyclin",
         "xref_id": "Cyclin",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Phosphorylation of Rb and E2F release is regulated by the formation and activation of cyclin and cyclin-dependent kinase (CDK) complexes  (Morgan, 1995) ."
       }
     ]
@@ -318,7 +318,7 @@
       {
         "text": "Wnt",
         "xref_id": "Wnt",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Prior to mesoderm specification, addition of exogenous canonical Wnt ligand enhanced cardiac differentiation while inhibition of endogenous canonical Wnt signaling reduced the efficiency of cardiac differentiation."
       }
     ]
@@ -332,7 +332,7 @@
       {
         "text": "integrins",
         "xref_id": "Integrins",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "When TG2 is secreted outside of the cell, interactions with integrins and fibronectin stabilize the extracellular matrix ( Facchiano  et al. , 2006; Yuan  et al. , 2007 )."
       }
     ]
@@ -346,7 +346,7 @@
       {
         "text": "Ras",
         "xref_id": "RAS",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Perhaps more relevant that GTP bound Ras on the Golgi or ER is the question of whether activated Ras so situated can signal to downstream effectors and, if so, are these signals qualitatively different than those emanating from the PM?"
       }
     ]
@@ -360,7 +360,7 @@
       {
         "text": "actin",
         "xref_id": "Actin",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "However, the nature of the conformational change in the actin and myosin complex that induces force generation in muscle is uncertain."
       }
     ]
@@ -374,7 +374,7 @@
       {
         "text": "PKC",
         "xref_id": "PKC",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "The four Ser to Ala mutations of the MARCKSp-SA4-mRFP construct eliminate all four PKC phosphorylation sites, and thus should block Ca 2+ -PKC regulation, but do not modify the CaM recognition sequence and thus should not disrupt Ca 2+ -CaM regulation [ xref ]."
       }
     ]
@@ -388,7 +388,7 @@
       {
         "text": "protein kinase C",
         "xref_id": "PKC",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "The process of exocytosis in several cell systems is mediated by a protein kinase C (PKC)-catalysed phosphorylation."
       }
     ]
@@ -402,7 +402,7 @@
       {
         "text": "PKA",
         "xref_id": "PKA",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Differential Regulation of cAMP Accumulation and PKA Phosphorylation for Contraction under Dose-Dependent β  1 AR Stimulation."
       }
     ]
@@ -416,7 +416,7 @@
       {
         "text": "protein kinase A",
         "xref_id": "PKA",
-        "namespace": "famplex",
+        "namespace": "fplx",
         "sentence": "Canonical beta agonist signaling is characterized by initiation of downstream signaling by a heterotrimeric G protein that couples to adenylate cyclase, resulting in the conversion of adenosine triphosphate (ATP) to cyclic adenosine monophosphate (cAMP), which in turn activates protein kinase A."
       }
     ]

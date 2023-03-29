@@ -9,7 +9,7 @@ import { INPUT_PATH, FAMPLEX_DIRNAME, FAMPLEX_URL, FAMPLEX_FILE_NAME } from '../
 import { db } from '../db';
 import downloadFile from './download';
 import { updateEntriesFromSource } from './processing';
-// import { getOrganismById, isSupportedOrganism } from './organisms';
+import { getOrganismById } from './organisms';
 
 const fsPromises = fs.promises;
 
@@ -18,44 +18,25 @@ const DATA_PATH = path.join( INPUT_PATH, FAMPLEX_FILE_NAME );
 const FAMPLEX_ENTITY_FILE = 'entities.csv';
 const FAMPLEX_SYNONYM_FILE = 'grounding_map.csv';
 const FAMPLEX_XREFS_FILE = 'equivalences.csv';
-const ENTRY_NS = 'FPLX';
-// const ENTRY_TYPE = 'ggp';
+const DB_NAME_FAMPLEX = 'FamPlex';
+const DB_PREFIX_FAMPLEX = 'fplx';
+const ENTRY_NS = 'fplx';
+const ENTRY_TYPE = 'ggp';
+const ENTRY_ORGANISM = '9606';
 
-const processEntry = entryLine => {
-  return {};
-  // let nodes = entryLine.split( NODE_DELIMITER );
-  // let namespace = ENTRY_NS;
-  // let type = ENTRY_TYPE;
+const processEntry = entry => {
+  const { id, name, synonyms, dbXrefs } = entry;
+  const namespace = ENTRY_NS;
+  const type = ENTRY_TYPE;
+  const organism = ENTRY_ORGANISM;
+  const organismName = getOrganismById(organism).name;
+  const dbName = DB_NAME_FAMPLEX;
+  const dbPrefix = DB_PREFIX_FAMPLEX;
 
-  // let organism = nodes[ NODE_INDICES.ORGANISM ];
-  // let organismName = getOrganismById(organism).name;
-  // const dbName = DB_NAME_NCBI_GENE;
-  // const dbPrefix = DB_PREFIX_NCBI_GENE;
-  // let id = nodes[ NODE_INDICES.ID ];
-  // let name = nodes[ NODE_INDICES.SYMBOL ];
-
-  // let synonyms = _.concat(
-  //   safeSplit( nodes[ NODE_INDICES.SYNONYMS ] ),
-  //   safeSplit( nodes[ NODE_INDICES.OTHER_DESIGNATORS ] )
-  // );
-
-  // // Format: db:id | ... | db:id
-  // // NB: IDs may contain colons
-  // let dbXrefs = safeSplit( nodes[ NODE_INDICES.DB_XREFS ] ).map( xref => {
-  //   let [ db, id ] = xref.split( /:(.+)/ );
-  //   return { db, id };
-  // });
-
-  // let typeOfGene = nodes[ NODE_INDICES.TYPE_OF_GENE ];
-
-  // [ NODE_INDICES.DESCRIPTION, NODE_INDICES.NA_SYMBOL, NODE_INDICES.NA_FULL_NAME ]
-  //   .forEach( i => pushIfValid( synonyms, nodes[ i ] ) );
-
-  // return { namespace, type, dbName, dbPrefix, id, organism, organismName, name, synonyms, dbXrefs, typeOfGene };
+  return { namespace, type, dbName, dbPrefix, id, organism, organismName, name, synonyms, dbXrefs };
 };
 
 const parse = data => data;
-
 const updateFromSource = data => updateEntriesFromSource(ENTRY_NS, data, parse, processEntry);
 
 const extractEntities = async () => {
@@ -159,7 +140,9 @@ const download = async function() {
  */
 const index = function(){
   const fromJsonFile = () => fsPromises.readFile( DATA_PATH, { encoding: 'utf-8' } );
+  const toObjects = d => JSON.parse(d);
   return fromJsonFile()
+    .then( toObjects )
     .then( updateFromSource );
 };
 

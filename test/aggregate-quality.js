@@ -12,7 +12,7 @@ const updateTestData = () => {
 };
 
 const searchEnt = ( name, organismOrdering ) => {
-  return aggregate.search( name, ['ncbi', 'chebi'], organismOrdering );
+  return aggregate.search( name, ['ncbi', 'chebi', 'fplx'], organismOrdering );
 };
 
 const getEnt = ( ns, id ) => aggregate.get( ns, id );
