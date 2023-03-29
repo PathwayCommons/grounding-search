@@ -22,12 +22,6 @@
         "sentence": null
       },
       {
-        "text": "VEGF",
-        "xref_id": "7422",
-        "namespace": "ncbi",
-        "sentence": null
-      },
-      {
         "text": "IL-6",
         "xref_id": "3569",
         "namespace": "ncbi",
@@ -296,12 +290,6 @@
       {
         "text": "Fas",
         "xref_id": "14102",
-        "namespace": "ncbi",
-        "sentence": null
-      },
-      {
-        "text": "VEGF",
-        "xref_id": "22339",
         "namespace": "ncbi",
         "sentence": null
       }
