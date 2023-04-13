@@ -74,7 +74,7 @@ const addSynonyms = async entities => {
       'column7': 'omit',
     }
   };
-  const byNS = o => o.dbPrefix == ENTRY_NS;
+  const byNS = o => o.dbPrefix.toLowerCase() == ENTRY_NS;
   const byId = o => o.id;
   const setSynonyms = ( values, id ) => {
     const entitySynonyms = values.map( o => o.synonym );
