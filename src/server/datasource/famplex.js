@@ -18,6 +18,7 @@ const DATA_PATH = path.join( INPUT_PATH, FAMPLEX_FILE_NAME );
 const FAMPLEX_ENTITY_FILE = 'entities.csv';
 const FAMPLEX_SYNONYM_FILE = 'grounding_map.csv';
 const FAMPLEX_XREFS_FILE = 'equivalences.csv';
+const FAMPLEX_SUMMARIES_FILE = 'descriptions.csv';
 const DB_NAME_FAMPLEX = 'FamPlex';
 const DB_PREFIX_FAMPLEX = 'fplx';
 const ENTRY_NS = 'fplx';
@@ -25,7 +26,7 @@ const ENTRY_TYPE = 'ggp';
 const ENTRY_ORGANISM = '9606';
 
 const processEntry = entry => {
-  const { id, name, synonyms, dbXrefs } = entry;
+  const { id, name, synonyms, dbXrefs, summary } = entry;
   const namespace = ENTRY_NS;
   const type = ENTRY_TYPE;
   const organism = ENTRY_ORGANISM;
@@ -33,7 +34,7 @@ const processEntry = entry => {
   const dbName = DB_NAME_FAMPLEX;
   const dbPrefix = DB_PREFIX_FAMPLEX;
 
-  return { namespace, type, dbName, dbPrefix, id, organism, organismName, name, synonyms, dbXrefs };
+  return { namespace, type, dbName, dbPrefix, id, organism, organismName, name, synonyms, dbXrefs, summary };
 };
 
 const parse = data => data;
@@ -110,6 +111,25 @@ const addXrefs = async entities => {
   _.forEach( xrefs, setXrefs );
 };
 
+const addSummaries = async entities => {
+  const fname = path.join(DIR_PATH, FAMPLEX_SUMMARIES_FILE);
+  const opts = {
+    noheader: true,
+    headers : [
+      'id',
+      'xref',
+      'summary'
+    ]
+  };
+  const setSummary = ({ id, summary }) => {
+    let entry = _.find( entities, [ 'id', id ] );
+    _.set( entry, 'summary', summary );
+  };
+
+  let summaries = await csv(opts).fromFile( fname );
+  summaries.forEach( setSummary );
+};
+
 /**
  * Aggregate the required information from the following:
  *   - entities.csv: (FamPlex) entity IDs
@@ -120,6 +140,7 @@ const preProcess = async function() {
   let entities = await extractEntities();
   await addSynonyms( entities );
   await addXrefs( entities );
+  await addSummaries( entities );
   return entities;
 };
 
