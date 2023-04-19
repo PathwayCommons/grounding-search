@@ -4,7 +4,6 @@ import { INDEX, MAX_SEARCH_ES, ELASTICSEARCH_HOST, MAX_FUZZ_ES } from '../config
 import { sanitizeNameForCmp } from '../util';
 import { patches } from './patches';
 
-const TYPE = 'entry';
 const NS_FIELD = 'namespace';
 const ORG_FIELD = 'organism';
 
@@ -62,39 +61,37 @@ const db = {
     const client = this.connect();
 
     // include mappings for all fields that we use for search
-    const mappings = {
-      [TYPE]: {
-        properties: {
-          id: {
-            type: 'keyword'
-          },
-          type: {
-            type: 'keyword'
-          },
-          organism: {
-            type: 'keyword'
-          },
-          name: {
-            type: 'keyword',
-            normalizer: 'name_norm'
-          },
-          synonyms: {
-            type: 'keyword',
-            normalizer: 'name_norm'
-          },
-          dbXrefs: {
-            type: 'nested',
-            properties: {
-              db: {
-                type: 'keyword'
-              },
-              id: {
-                type: 'keyword'
-              }
+    const mappings = {      
+      properties: {
+        id: {
+          type: 'keyword'
+        },
+        type: {
+          type: 'keyword'
+        },
+        organism: {
+          type: 'keyword'
+        },
+        name: {
+          type: 'keyword',
+          normalizer: 'name_norm'
+        },
+        synonyms: {
+          type: 'keyword',
+          normalizer: 'name_norm'
+        },
+        dbXrefs: {
+          type: 'nested',
+          properties: {
+            db: {
+              type: 'keyword'
+            },
+            id: {
+              type: 'keyword'
             }
           }
         }
-      }
+      }    
     };
 
     const settings = {
@@ -235,7 +232,7 @@ const db = {
       // remove the main name from the synonym list (if it exists) for the same reason
       _.remove(entry.synonyms, syn => syn.toLowerCase() === entry.name.toLowerCase());
 
-      body.push( { index: { _index: INDEX, _type: TYPE, _id: (entry.namespace + ':' + entry.id).toUpperCase() } } );
+      body.push( { index: { _index: INDEX, _id: (entry.namespace + ':' + entry.id).toUpperCase() } } );
       body.push( entry );
     } );
 
@@ -261,7 +258,7 @@ const db = {
     let body = [];
 
     updates.forEach( update => {
-      body.push( { update: { _index: INDEX, _type: TYPE, _id: (namespace + ':' + update.id).toUpperCase() } } );
+      body.push( { update: { _index: INDEX, _id: (namespace + ':' + update.id).toUpperCase() } } );
       body.push( { doc: update.updates } );
     } );
 
@@ -306,7 +303,6 @@ const db = {
    */
   search: function( searchString, namespace, fuzziness = MAX_FUZZ_ES, size = MAX_SEARCH_ES ){
     const index = INDEX;
-    const type = TYPE;
     const client = db.connect();
     const processResult = res => res.hits.hits.map( entry => {
       entry._source.esScore = entry._score;
@@ -352,7 +348,7 @@ const db = {
       query
     };
 
-    return client.search({ index, type, body }).then( processResult );
+    return client.search({ index, body }).then( processResult );
   },
   /**
    * Retrieve the entity that has the given id.
@@ -371,8 +367,7 @@ const db = {
 
     return client.search({
       body,
-      index: INDEX,
-      type: TYPE
+      index: INDEX
     }).then( res => res.hits.hits.map( e => e._source )[0] );
   },
   /**
@@ -566,8 +561,7 @@ const db = {
     let client = this.connect();
     let body = { size, from };
     let index = INDEX;
-    let type = TYPE;
-
+    
     if ( scroll ) {
       body = { size: MAX_SEARCH_ES };
     }
@@ -604,7 +598,7 @@ const db = {
       return Promise.resolve( allResults );
     };
 
-    let searchParam = { index, type, body };
+    let searchParam = { index, body };
     if ( scroll ) {
       searchParam.scroll = scroll;
     }
