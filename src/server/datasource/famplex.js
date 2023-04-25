@@ -22,7 +22,7 @@ const FAMPLEX_SUMMARIES_FILE = 'descriptions.csv';
 const DB_NAME_FAMPLEX = 'FamPlex';
 const DB_PREFIX_FAMPLEX = 'fplx';
 const ENTRY_NS = 'fplx';
-const ENTRY_TYPE = 'ggp';
+const ENTRY_TYPE = 'entity';
 const ENTRY_ORGANISM = '9606';
 
 const processEntry = entry => {
