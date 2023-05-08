@@ -19,16 +19,18 @@ const FAMPLEX_ENTITY_FILE = 'entities.csv';
 const FAMPLEX_SYNONYM_FILE = 'grounding_map.csv';
 const FAMPLEX_XREFS_FILE = 'equivalences.csv';
 const FAMPLEX_SUMMARIES_FILE = 'descriptions.csv';
+const FAMPLEX_RELATIONS_FILE = 'relations.csv';
 const DB_NAME_FAMPLEX = 'FamPlex';
 const DB_PREFIX_FAMPLEX = 'fplx';
 const ENTRY_NS = 'fplx';
-const ENTRY_TYPE = 'entity';
+const ENTRY_TYPE_COMPLEX = 'complex';
+const ENTRY_TYPE_FAMILY = 'family';
 const ENTRY_ORGANISM = '9606';
 
 const processEntry = entry => {
-  const { id, name, synonyms, dbXrefs, summary } = entry;
+  const { id, name, synonyms, dbXrefs, summary, type } = entry;
   const namespace = ENTRY_NS;
-  const type = ENTRY_TYPE;
+  // const type = ENTRY_TYPE;
   const organism = ENTRY_ORGANISM;
   const organismName = getOrganismById(organism).name;
   const dbName = DB_NAME_FAMPLEX;
@@ -130,6 +132,40 @@ const addSummaries = async entities => {
   summaries.forEach( setSummary );
 };
 
+const addType = async entities => {
+  const fname = path.join(DIR_PATH, FAMPLEX_RELATIONS_FILE);
+  const opts = {
+    noheader: true,
+    headers : [
+      'subjectNs',
+      'subject',
+      'predicate',
+      'fplxNs',
+      'id'
+    ]
+  };
+  const setType = ({ predicate, id }) => {
+    let typeMap = Object.freeze({
+      'isa': ENTRY_TYPE_FAMILY,
+      'partof': ENTRY_TYPE_COMPLEX
+    });
+
+    const entry = _.find( entities, [ 'id', id ] );
+    const entryType = _.get( entry, 'type' );
+
+    let type = typeMap[predicate];
+    const typeIsComplex = type === ENTRY_TYPE_COMPLEX;
+
+    // Only update when existing entry type not 'complex' and incoming type is 'complex'
+    if( _.isUndefined( entryType ) || ( typeIsComplex && entryType === ENTRY_TYPE_FAMILY ) ) {
+      _.set( entry, 'type', type );
+    }
+  };
+
+  let summaries = await csv(opts).fromFile( fname );
+  summaries.forEach( setType );
+};
+
 /**
  * Aggregate the required information from the following:
  *   - entities.csv: (FamPlex) entity IDs
@@ -141,6 +177,7 @@ const preProcess = async function() {
   await addSynonyms( entities );
   await addXrefs( entities );
   await addSummaries( entities );
+  await addType( entities );
   return entities;
 };
 
