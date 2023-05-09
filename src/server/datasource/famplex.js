@@ -5,7 +5,19 @@ import _ from 'lodash';
 import csv from 'csvtojson';
 import fs from 'fs';
 
-import { INPUT_PATH, FAMPLEX_DIRNAME, FAMPLEX_URL, FAMPLEX_FILE_NAME } from '../config';
+import {
+  INPUT_PATH,
+  FAMPLEX_DIRNAME,
+  DB_NAME_FAMPLEX,
+  DB_PREFIX_FAMPLEX,
+  FAMPLEX_URL,
+  FAMPLEX_FILE_NAME,
+  DB_PREFIX_UNIPROT_KNOWLEDGEBASE,
+  DB_NAME_HGNC_SYMBOL,
+  DB_PREFIX_HGNC_SYMBOL,
+  DB_NAME_UNIPROT_KNOWLEDGEBASE
+
+} from '../config';
 import { db } from '../db';
 import downloadFile from './download';
 import { updateEntriesFromSource } from './processing';
@@ -20,23 +32,30 @@ const FAMPLEX_SYNONYM_FILE = 'grounding_map.csv';
 const FAMPLEX_XREFS_FILE = 'equivalences.csv';
 const FAMPLEX_SUMMARIES_FILE = 'descriptions.csv';
 const FAMPLEX_RELATIONS_FILE = 'relations.csv';
-const DB_NAME_FAMPLEX = 'FamPlex';
-const DB_PREFIX_FAMPLEX = 'fplx';
-const ENTRY_NS = 'fplx';
+const ENTRY_NS = DB_PREFIX_FAMPLEX;
 const ENTRY_TYPE_COMPLEX = 'complex';
 const ENTRY_TYPE_FAMILY = 'family';
 const ENTRY_ORGANISM = '9606';
 
+const TYPE_MAP = Object.freeze({
+  'isa': ENTRY_TYPE_FAMILY,
+  'partof': ENTRY_TYPE_COMPLEX
+});
+
+const SOURCE_DB_MAP = Object.freeze({
+  'HGNC': { name: DB_NAME_HGNC_SYMBOL, dbPrefix: DB_PREFIX_HGNC_SYMBOL },
+  'FPLX': { name: DB_NAME_FAMPLEX, dbPrefix: DB_PREFIX_FAMPLEX },
+  'UP': { name: DB_NAME_UNIPROT_KNOWLEDGEBASE, dbPrefix: DB_PREFIX_UNIPROT_KNOWLEDGEBASE }
+});
+
 const processEntry = entry => {
-  const { id, name, synonyms, dbXrefs, summary, type } = entry;
   const namespace = ENTRY_NS;
-  // const type = ENTRY_TYPE;
   const organism = ENTRY_ORGANISM;
   const organismName = getOrganismById(organism).name;
   const dbName = DB_NAME_FAMPLEX;
   const dbPrefix = DB_PREFIX_FAMPLEX;
 
-  return { namespace, type, dbName, dbPrefix, id, organism, organismName, name, synonyms, dbXrefs, summary };
+  return { ...entry, namespace, dbName, dbPrefix, organism, organismName };
 };
 
 const parse = data => data;
@@ -132,7 +151,21 @@ const addSummaries = async entities => {
   summaries.forEach( setSummary );
 };
 
+/**
+ * Set the entity 'type' and related properties
+ *
+ * There are two (not neccessarily mutually exclusive) types: (a) complex and (b) family.
+ * Each type has related properties:
+ *   - complex
+ *     - components: A set of entities, possibly of type family
+ *   - family
+ *     - members: A set of entities, possibly of type complex
+ *
+ * @param {Object[]} entities  - The Famplex entities
+ */
 const addType = async entities => {
+
+  // Related to source file
   const fname = path.join(DIR_PATH, FAMPLEX_RELATIONS_FILE);
   const opts = {
     noheader: true,
@@ -144,26 +177,44 @@ const addType = async entities => {
       'id'
     ]
   };
-  const setType = ({ predicate, id }) => {
-    let typeMap = Object.freeze({
-      'isa': ENTRY_TYPE_FAMILY,
-      'partof': ENTRY_TYPE_COMPLEX
-    });
+  let relations = await csv(opts).fromFile( fname );
 
+  // Related to type
+  const setType = ({ subjectNs, subject, predicate, id }) => {
     const entry = _.find( entities, [ 'id', id ] );
-    const entryType = _.get( entry, 'type' );
+    const entryType = entry.type;
 
-    let type = typeMap[predicate];
-    const typeIsComplex = type === ENTRY_TYPE_COMPLEX;
+    let type = TYPE_MAP[predicate];
+    const isComplex = type === ENTRY_TYPE_COMPLEX;
 
-    // Only update when existing entry type not 'complex' and incoming type is 'complex'
-    if( _.isUndefined( entryType ) || ( typeIsComplex && entryType === ENTRY_TYPE_FAMILY ) ) {
+    if( isComplex ){
+      // Complex will have "componentXrefs"
+      if( !_.has( entry, 'componentXrefs' ) ) entry.componentXrefs = [];
+
+      // Always initialize or overwrite type
       _.set( entry, 'type', type );
+
+      entry.componentXrefs.push({
+        dbName: SOURCE_DB_MAP[subjectNs].name,
+        dbPrefix: SOURCE_DB_MAP[subjectNs].dbPrefix,
+        id: subject
+      });
+
+    } else {
+      if( _.isUndefined( entryType ) ) _.set( entry, 'type', type );
+      // Family, will have "memberXrefs"
+      if( !_.has( entry, 'memberXrefs' ) ) entry.memberXrefs = [];
+
+      entry.memberXrefs.push({
+        dbName: SOURCE_DB_MAP[subjectNs].name,
+        dbPrefix: SOURCE_DB_MAP[subjectNs].dbPrefix,
+        id: subject
+      });
     }
+
   };
 
-  let summaries = await csv(opts).fromFile( fname );
-  summaries.forEach( setType );
+  relations.forEach( setType );
 };
 
 /**
@@ -171,6 +222,7 @@ const addType = async entities => {
  *   - entities.csv: (FamPlex) entity IDs
  *   - grounding_map.csv: synonyms (subset)
  *   - equivalences.csv: dbXrefs (subset)
+ *   - relations.csv: family members and complex components
  */
 const preProcess = async function() {
   let entities = await extractEntities();
