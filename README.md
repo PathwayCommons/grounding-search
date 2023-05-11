@@ -23,11 +23,11 @@ Franz et al., (2021). A flexible search system for high-accuracy identification 
 
 ## Maintenance
 
-The Pathway Commons Grounding Search Service is an academic project built and maintained by: 
+The Pathway Commons Grounding Search Service is an academic project built and maintained by:
 <a href="https://baderlab.org" target="_blank">Bader Lab at the University of Toronto</a>
-, 
+,
 <a href="http://sanderlab.org" target="_blank">Sander Lab at Harvard</a>
-, and the 
+, and the
 <a href="https://www.ohsu.edu/people/emek-demir/AFE06DC89ED9AAF1634F77D11CCA24C3" target="_blank">Pathway and Omics Lab at the Oregon Health &amp; Science University</a>
 .
 
@@ -49,7 +49,7 @@ docker-compose up
 
 Swagger documentation can be accessed at [`http://localhost:3000`](http://localhost:3000).
 
-NB: Server start will take some time in order for Elasticsearch to initialize and for the grounding data to be retrieved and the index restored. If it takes more than 10 minutes consider increasing the allocated memory for Docker: `Preferences` > `Resources` > `Memory` and remove this line in docker-compose.yml: `ES_JAVA_OPTS=-Xms2g -Xmx2g` 
+NB: Server start will take some time in order for Elasticsearch to initialize and for the grounding data to be retrieved and the index restored. If it takes more than 10 minutes consider increasing the allocated memory for Docker: `Preferences` > `Resources` > `Memory` and remove this line in docker-compose.yml: `ES_JAVA_OPTS=-Xms2g -Xmx2g`
 
 ### Via source
 
@@ -199,6 +199,8 @@ The following environment variables can be used to configure the server:
 - `NCBI_URL` : url to download ncbi file from
 - `NCBI_EUTILS_BASE_URL` : url for NCBI EUTILS
 - `NCBI_EUTILS_API_KEY` : NCBI EUTILS API key
+- `FAMPLEX_URL`: url to download FamPlex remote from
+- `FAMPLEX_FILE_NAME`: name of the file where FamPlex data will be read from
 - `ESDUMP_LOCATION` : The location (URL, file path) of elasticdump files (note: terminate with '/')
 - `ZENODO_API_URL`: base url for Zenodo
 - `ZENODO_ACCESS_TOKEN`: access token for Zenodo REST API (Scope: `deposit:actions`, `deposit:write`)
