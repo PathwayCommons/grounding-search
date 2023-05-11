@@ -2,6 +2,7 @@
 
 import process from 'process';
 import logger from '../logger';
+import { famplex } from './famplex';
 import { uniprot } from './uniprot';
 import { chebi } from './chebi';
 import { ncbi } from './ncbi';
@@ -9,7 +10,7 @@ import { db } from '../db';
 import { formatDistanceStrict } from 'date-fns';
 import dumpEs from './esdump';
 
-const sources = { uniprot, chebi, ncbi };
+const sources = { famplex, uniprot, chebi, ncbi };
 const op = process.argv[2];
 const passedSourceId = process.argv[3];
 const source = sources[passedSourceId];
