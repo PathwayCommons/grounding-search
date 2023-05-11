@@ -1287,12 +1287,6 @@
       "sentence": "As expected , glutamine deprivation and mTOR inhibitor Torin1 treatment reduced mTOR mediated p70S6K T389 phosphorylation             ."
      },
      {
-      "text": "p70S6K",
-      "xref_id": "6198",
-      "namespace": "ncbi",
-      "sentence": "As expected , glutamine deprivation and mTOR inhibitor Torin1 treatment reduced mTOR mediated p70S6K T389 phosphorylation             ."
-     },
-     {
       "text": "EGF",
       "xref_id": "1950",
       "namespace": "ncbi",
@@ -1746,12 +1740,6 @@
       "xref_id": "3661",
       "namespace": "ncbi",
       "sentence": "Using unbiased kinome-wide RNAi screening followed by thorough validation , we identified 22 factors that regulate RIG-I and IRF3 signaling activity ."
-     },
-     {
-      "text": "interferon-beta",
-      "xref_id": "3456",
-      "namespace": "ncbi",
-      "sentence": "RIG-I signaling triggers DAPK1 kinase activation , and active DAPK1 potently inhibits RIG-I stimulated IRF3 activity and interferon-beta production ."
      },
      {
       "text": "MAVS",
@@ -3291,12 +3279,6 @@
         "namespace":null,
         "xref_id":null,
         "sentence": "However , the expression of other genes whose transcription is not glucose responsive , such as Chrebpalpha , Srebp-1C , and pyruvate dehydrogenase kinase ( Pdhk ) ( Stamatikos et al. , 2016 , Zhang et al. , 2015 ) , was comparable with WT hepatocytes stimulated with glucose            ."
-      },
-      {
-        "text": "Acc",
-        "namespace": "ncbi",
-        "xref_id": "31",
-        "sentence": "BAD dependent changes in lipogenic gene expression are associated with altered ChREBP activity , as evident from two complementary functional readouts ; luciferase reporters containing the carbohydrate response elements ( ChoREs ) of the L-Pk and Acc genes and chromatin immunoprecipitation ( ChIP ) assays examining promoter occupancy of ChREBP at target genes ."
       },
       {
         "text": "L-Pk",
