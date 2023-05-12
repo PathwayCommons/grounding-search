@@ -33,7 +33,7 @@ const filterSearchString = function(searchString){
  * is used based on the popularity of common model organisms.
  * @returns {Promise} Promise object represents the array of best matching entries.
  */
-const search = function(searchString, namespace = ['ncbi', 'chebi'], organismOrdering){
+const search = function(searchString, namespace = ['ncbi', 'chebi', 'fplx'], organismOrdering){
   searchString = filterSearchString(searchString);
 
   const doSearch = fuzziness => db.search(searchString, namespace, fuzziness);
