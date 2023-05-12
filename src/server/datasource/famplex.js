@@ -15,8 +15,8 @@ import {
   DB_PREFIX_UNIPROT_KNOWLEDGEBASE,
   DB_NAME_HGNC_SYMBOL,
   DB_PREFIX_HGNC_SYMBOL,
-  DB_NAME_UNIPROT_KNOWLEDGEBASE
-
+  DB_NAME_UNIPROT_KNOWLEDGEBASE,
+  FAMPLEX_TYPE_FILTER
 } from '../config';
 import { db } from '../db';
 import downloadFile from './download';
@@ -58,8 +58,16 @@ const processEntry = entry => {
   return { ...entry, namespace, dbName, dbPrefix, organism, organismName };
 };
 
+// Entity type inclusion is configurable (family, complex, all [default])
+const includeEntry = entry => {
+  if ( FAMPLEX_TYPE_FILTER === 'all' || entry.type === FAMPLEX_TYPE_FILTER ) {
+    return true;
+  } else {
+    return false;
+  }
+};
 const parse = data => data;
-const updateFromSource = data => updateEntriesFromSource(ENTRY_NS, data, parse, processEntry);
+const updateFromSource = data => updateEntriesFromSource(ENTRY_NS, data, parse, processEntry, includeEntry);
 
 const extractEntities = async () => {
   const fname = path.join( DIR_PATH, FAMPLEX_ENTITY_FILE );
