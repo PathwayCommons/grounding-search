@@ -34,7 +34,7 @@ const FAMPLEX_SUMMARIES_FILE = 'descriptions.csv';
 const FAMPLEX_RELATIONS_FILE = 'relations.csv';
 const ENTRY_NS = DB_PREFIX_FAMPLEX;
 const ENTRY_TYPE_COMPLEX = 'complex';
-const ENTRY_TYPE_FAMILY = 'family';
+const ENTRY_TYPE_FAMILY = 'protein';
 const ENTRY_ORGANISM = '9606';
 
 const TYPE_MAP = Object.freeze({
@@ -58,7 +58,7 @@ const processEntry = entry => {
   return { ...entry, namespace, dbName, dbPrefix, organism, organismName };
 };
 
-// Entity type inclusion is configurable (family, complex, all [default])
+// Entity type inclusion is configurable (protein [aka 'family'], 'complex', 'all' [default])
 const includeEntry = entry => {
   if ( FAMPLEX_TYPE_FILTER === 'all' || entry.type === FAMPLEX_TYPE_FILTER ) {
     return true;

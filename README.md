@@ -201,7 +201,7 @@ The following environment variables can be used to configure the server:
 - `NCBI_EUTILS_API_KEY` : NCBI EUTILS API key
 - `FAMPLEX_URL`: url to download FamPlex remote from
 - `FAMPLEX_FILE_NAME`: name of the file where FamPlex data will be read from
-- `FAMPLEX_TYPE_FILTER`: entity type to include ('family', 'complex', 'all' [default])
+- `FAMPLEX_TYPE_FILTER`: entity type to include ('protein', 'complex', 'all' [default])
 - `ESDUMP_LOCATION` : The location (URL, file path) of elasticdump files (note: terminate with '/')
 - `ZENODO_API_URL`: base url for Zenodo
 - `ZENODO_ACCESS_TOKEN`: access token for Zenodo REST API (Scope: `deposit:actions`, `deposit:write`)
