@@ -13,6 +13,7 @@ const MIN_SIZE_MB = 1 * 1024 * 1024;
 const checkFileSize = fileName => {
   const filePath = path.join( INPUT_PATH, fileName );
   const stats = fs.statSync( filePath );
+  if( stats.isDirectory() ) return;
   if( stats.size <= MIN_SIZE_MB ) throw new Error( 'Download file size less than MIN_SIZE' );
 };
 

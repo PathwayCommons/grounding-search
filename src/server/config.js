@@ -54,6 +54,7 @@ export const DB_PREFIX_FAMPLEX = env('DB_PREFIX_FAMPLEX', 'fplx');
 export const FAMPLEX_URL = env('FAMPLEX_URL', 'https://github.com/sorgerlab/famplex/archive/refs/heads/master.zip');
 export const FAMPLEX_DIRNAME = env('FAMPLEX_DIRNAME', 'famplex-master');
 export const FAMPLEX_FILE_NAME = env('FAMPLEX_FILE_NAME', 'famplex.json');
+export const FAMPLEX_TYPE_FILTER = env('FAMPLEX_TYPE_FILTER', 'protein');
 
 export const DB_NAME_HGNC_SYMBOL = env('DB_NAME_HGNC_SYMBOL', 'HGNC Symbol');
 export const DB_PREFIX_HGNC_SYMBOL = env('DB_PREFIX_HGNC_SYMBOL', 'hgnc.symbol');
