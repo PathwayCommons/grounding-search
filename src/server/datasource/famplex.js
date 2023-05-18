@@ -73,7 +73,8 @@ const extractEntities = async () => {
   const fname = path.join( DIR_PATH, FAMPLEX_ENTITY_FILE );
   const DEFAULT_ENTRY_FIELDS = {
     synonyms: [],
-    dbXrefs: []
+    dbXrefs: [],
+    type: ENTRY_TYPE_FAMILY
   };
   const assignDefaults = o => _.defaults( o, { name: o.id }, DEFAULT_ENTRY_FIELDS );
   return await csv({ noheader: true, headers: ['id'] })
