@@ -33,7 +33,7 @@ const FAMPLEX_XREFS_FILE = 'equivalences.csv';
 const FAMPLEX_SUMMARIES_FILE = 'descriptions.csv';
 const FAMPLEX_RELATIONS_FILE = 'relations.csv';
 const ENTRY_NS = DB_PREFIX_FAMPLEX;
-const ENTRY_TYPE_COMPLEX = 'complex';
+const ENTRY_TYPE_COMPLEX = 'namedComplex';
 const ENTRY_TYPE_FAMILY = 'protein';
 const ENTRY_ORGANISM = '9606';
 
