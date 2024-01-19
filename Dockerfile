@@ -1,5 +1,5 @@
 # v10 is the latest LTS
-FROM node:10.15.3
+FROM node:15.14
 
 # Allow user configuration of variable at build-time using --build-arg flag
 ARG NODE_ENV
