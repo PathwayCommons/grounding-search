@@ -1287,12 +1287,6 @@
       "sentence": "As expected , glutamine deprivation and mTOR inhibitor Torin1 treatment reduced mTOR mediated p70S6K T389 phosphorylation             ."
      },
      {
-      "text": "EGF",
-      "xref_id": "1950",
-      "namespace": "ncbi",
-      "sentence": "Meanwhile , during the cancer development , the microenvironment of tumor changes through the secretion of growth factors , cytokines , and chemokines , such as vascular endothelial growth factor ( VEGF ) , epidermal growth factor ( EGF ) , and interleukins ( interleukin-6 [ IL-6 ] and IL-8 ) in an autocrine and/or paracrine manner and thus promotes cancer cells angiogenesis , immune tolerance by polarizing infiltrated immune cell function , metastatic spread , and drug resistance ( Allinen et al. , 2004 , Moroishi et al. , 2016 ) ."
-     },
-     {
       "text": "BNIP3L",
       "xref_id": "665",
       "namespace": "ncbi",
@@ -1602,122 +1596,6 @@
       "loose": true
     }
    ]
-  },
-  {
-   "id": "https://doi.org/10.1016/j.molcel.2018.08.014",
-   "organismOrdering": [9606],
-   "entities": [
-      {
-        "text": "myc",
-        "xref_id": "4609",
-        "namespace": "ncbi",
-        "sentence": "Ectopic expression of catalytically inactive myc tagged PRMT5 in conjunction with FLAG tagged RUVBL1 or RUVBL2 confirmed our initial mass spectrometry findings            ."
-      },
-      {
-        "text": "E2f1",
-        "xref_id": "1869",
-        "namespace": "ncbi",
-        "sentence": "Viral mediated noisy gene expression reveals biphasic E2f1 response to MYC ."
-      },
-      {
-        "text": "p19Arf",
-        "xref_id": "1029",
-        "namespace": "ncbi",
-        "sentence": "This biphasic pattern was also reflected in other nodes in immediate network including the miR-17-92 micro RNA cluster and p19Arf ."
-      },
-      {
-        "text": "miR-17-92",
-        "xref_id": "407975",
-        "namespace": "ncbi",
-        "sentence": "This biphasic pattern was also reflected in other nodes in immediate network including the miR-17-92 micro RNA cluster and p19Arf ."
-      },
-      {
-        "text": "c-Myc",
-        "xref_id": "4609",
-        "namespace": "ncbi",
-        "sentence": "The broad control that mTORC1 exerts over metabolism has been largely attributed to the regulation of a small number of transcription factors , including c-Myc , Srebp1/2 , Hif-1alpha , Atf4 , and Tfeb , although in most cases the molecular mechanisms remain unclear ( Laplante and Sabatini , 2013 , Ben-Sahra and Manning , 2017 ) ."
-      },
-      {
-        "text": "p107",
-        "xref_id": "5933",
-        "namespace": "ncbi",
-        "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
-      },
-      {
-        "text": "p130",
-        "xref_id": "5934",
-        "loose": true,
-        "namespace": "ncbi",
-        "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
-      },
-      {
-        "text": "RB",
-        "xref_id": "5925",
-        "namespace": "ncbi",
-        "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
-      },
-      {
-        "text": "pocket proteins",
-        "xref_id": null,
-        "namespace": null,
-        "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
-      },
-      {
-        "text": "CYCD",
-        "xref_id": "595",
-        "namespace": "ncbi",
-        "sentence": "First , MYC regulates expression of Cyclin D ( CYCD ) which serves as the regulatory component of kinases that phosphorylate pocket proteins and disrupt their inhibitory activity ( Ewen et al. , 1993 ; Tedesco et al. , 2002 ) ."
-      },
-      {
-        "text": "CYCE",
-        "xref_id": "898",
-        "namespace": "ncbi",
-        "sentence": "Second , activator E2Fs transcriptionally upregulate CYCE which stimulates additional phosphorylation of pocket proteins and prevents them from sequestering activator E2Fs ( Weintraub et al. , 1992 ) ."
-      },
-      {
-        "text": "p53",
-        "xref_id": "7157",
-        "namespace": "ncbi",
-        "sentence": "In this study , we demonstrate that lincRNA-p21 ( large intergenic ncRNA , a subclass of lncRNAs ) , a previously identified p53 inducible lncRNA ( Huarte et al. , 2010 ) , plays an important role in the regulation of hypoxia enhanced glycolysis ."
-      },
-      {
-        "text": "PTEN",
-        "xref_id": "5728",
-        "namespace": "ncbi",
-        "sentence": "Transgenic analyses have demonstrated that miR-19a and miR-19b-1 are oncogenic components of miR-17-92 that downregulate PTEN and buffer apoptosis ( Mu et al. , 2009 ; Olive et al. , 2009 ) ."
-      },
-      {
-        "text": "miR-19b-1",
-        "xref_id": "406980",
-        "namespace": "ncbi",
-        "sentence": "Transgenic analyses have demonstrated that miR-19a and miR-19b-1 are oncogenic components of miR-17-92 that downregulate PTEN and buffer apoptosis ( Mu et al. , 2009 ; Olive et al. , 2009 ) ."
-      },
-      {
-        "text": "miR-19a",
-        "xref_id": "406979",
-        "namespace": "ncbi",
-        "sentence": "Transgenic analyses have demonstrated that miR-19a and miR-19b-1 are oncogenic components of miR-17-92 that downregulate PTEN and buffer apoptosis ( Mu et al. , 2009 ; Olive et al. , 2009 ) ."
-      },
-      {
-        "text": "CDK4",
-        "xref_id": "1019",
-        "namespace": "ncbi",
-        "sentence": "Unlike deregulated MYC , serum can stimulate RB phosphorylation via its more potent influence on CYCD and CDK4 ,6 activity ( Leone et al. , 1997 ) ."
-      },
-      {
-        "text": "Hoechst 33258",
-        "xref_id": "52082",
-        "namespace": "chebi",
-        "type": "simple-chemical",
-        "sentence": "( C ) Microscopy of cells infected as in ( A ) and stained with Hoechst 33258 ."
-      },
-      {
-        "text": "U6 snRNA",
-        "xref_id": "26827",
-        "namespace": "ncbi",
-        "sentence": "E2f1 and p19Arf were normalized to -Actin ; miRNA signals were normalized to U6 snRNA ."
-      }
-    ]
   },
   {
    "id": "http://dx.doi.org/10.1016/j.molcel.2016.12.021",
