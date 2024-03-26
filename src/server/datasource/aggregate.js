@@ -10,16 +10,6 @@ import Future from 'fibers/future';
 const ROOT_STRAIN_ORGS = Object.values(ROOT_STRAINS).map(getOrganismById);
 const isRootStrainOrgId = id => ROOT_STRAIN_ORGS.some(org => org.is(id));
 
-const filterSearchString = function(searchString){
-  const rnaMatch = searchString.match(/(.*) (.*){0,2}rna/i);
-
-  if( rnaMatch != null ){
-    return rnaMatch[1];
-  } else {
-    return searchString;
-  }
-};
-
 /**
  * Retrieve the entities matching best with the search string.
  * @param {string} searchString Key string for searching the best matching entities.
@@ -34,8 +24,6 @@ const filterSearchString = function(searchString){
  * @returns {Promise} Promise object represents the array of best matching entries.
  */
 const search = function(searchString, namespace = ['ncbi', 'chebi', 'fplx'], organismOrdering){
-  searchString = filterSearchString(searchString);
-
   const doSearch = fuzziness => db.search(searchString, namespace, fuzziness);
   const doRank = ents => rankInThread(ents, searchString, organismOrdering);
   const shortenList = ents => ents.slice(0, MAX_SEARCH_WS);
