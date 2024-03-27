@@ -273,8 +273,6 @@ const update = function(){
   const refreshIndex = () => db.refreshIndex();
   return download()
     .then(index)
-    // disable merging at index time for now and just clean up aggregate search results
-    // .then(mergeStrains)
     .then(refreshIndex);
 };
 
