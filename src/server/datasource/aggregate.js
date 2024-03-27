@@ -28,6 +28,22 @@ const search = function(searchString, namespace = ['ncbi', 'chebi', 'fplx'], org
   const doRank = ents => rankInThread(ents, searchString, organismOrdering);
   const shortenList = ents => ents.slice(0, MAX_SEARCH_WS);
 
+  /**
+   * De-duplicate those 'similar' records belonging to strains of the same species.
+   * The rationale is that this function effectively merges the same gene in different strains.
+   * E.g. Elasticsearch search for 'recA' returns two E. coli entries
+   * (ncbigene:914722; ncbigene:947170) for the same gene reported in K-12 substr. MG1655 and
+   * O157:H7 str. Sakai, respectively.
+   *
+   * Criteria for uniqueness among pairs:
+   *  - pair of entities are among the ROOT_STRAIN_ORGS (i.e. E. coli, S. cerevisae)
+   *  - At least one of the following are equal between the pair
+   *    - 'name'
+   *    - 'synonym' when there is only one for each
+   *
+   * @param {Array} ents The search hits consisting of bioentities
+   * @returns {Array} ents whereby search hits remove
+   */
   const filterStrains = ents => {
     const sanitize = name => name.toLowerCase();
 
