@@ -1,0 +1,228 @@
+[
+  {
+    "id": "https://doi.org/10.1007/s10735-018-9774-3",
+    "organismOrdering": [
+      10116
+    ],
+    "entities": [
+      {
+        "text": "Gamma-enolase",
+        "xref_id": "24334",
+        "namespace": "ncbi",
+        "sentence": "Gamma-enolase predicts lung damage in severe acute pancreatitis-induced acute lung injury."
+      },
+      {
+        "text": "ENO2",
+        "xref_id": "24334",
+        "namespace": "ncbi",
+        "sentence": "Herein, we evaluated the potential of gamma-enolase (ENO2), against its universal isoform alpha-enolase (ENO1), as a marker of SAP-ALI in a rat model."
+      },
+      {
+        "text": "ENO1",
+        "xref_id": "24333",
+        "namespace": "ncbi",
+        "sentence": "Herein, we evaluated the potential of gamma-enolase (ENO2), against its universal isoform alpha-enolase (ENO1), as a marker of SAP-ALI in a rat model."
+      },
+      {
+        "text": "alpha-enolase",
+        "xref_id": "24333",
+        "namespace": "ncbi",
+        "sentence": "Herein, we evaluated the potential of gamma-enolase (ENO2), against its universal isoform alpha-enolase (ENO1), as a marker of SAP-ALI in a rat model."
+      },
+      {
+        "text": "TNF-alpha",
+        "xref_id": "24835",
+        "namespace": "ncbi",
+        "sentence": "Elevated serum levels of alpha-amylase and TNF-alpha were observed in SAP rats but not in sham-operated rats."
+      }
+    ]
+  },
+  {
+    "id": "https://doi.org/10.1105/tpc.104.022400",
+    "organismOrdering": [
+      3702
+    ],
+    "entities": [
+      {
+        "text": "CDT1",
+        "xref_id": "2745823",
+        "namespace": "ncbi",
+        "sentence": "Here, we study Arabidopsis thaliana CDT1, its regulation, and the consequences of overriding licensing control."
+      },
+      {
+        "text": "CDC6",
+        "xref_id": "817518",
+        "namespace": "ncbi",
+        "sentence": "We also show that CDC6 and CDT1 are key targets for the coordination of cell proliferation, differentiation, and development."
+      }
+    ]
+  },
+  {
+    "id": " https://doi.org/10.1016/j.aquatox.2014.10.013",
+    "organismOrdering": [
+      7955
+    ],
+    "entities": [
+      {
+        "text": "gstm",
+        "xref_id": "324366",
+        "namespace": "ncbi",
+        "sentence": "Our data revealed ubiquitously high expression of gstp, gstm (except in liver), gstr1, mgst3a and mgst3b, high expression of gsto2 in gills and ovaries, gsta in intestine and testes, gstt1a in liver, and gstz1 in liver, kidney and brain."
+      },
+      {
+        "text": "gsto2",
+        "xref_id": "492500",
+        "namespace": "ncbi",
+        "sentence": "Our data revealed ubiquitously high expression of gstp, gstm (except in liver), gstr1, mgst3a and mgst3b, high expression of gsto2 in gills and ovaries, gsta in intestine and testes, gstt1a in liver, and gstz1 in liver, kidney and brain."
+      },
+      {
+        "text": "gstz1",
+        "xref_id": "436754",
+        "namespace": "ncbi",
+        "sentence": "Our data revealed ubiquitously high expression of gstp, gstm (except in liver), gstr1, mgst3a and mgst3b, high expression of gsto2 in gills and ovaries, gsta in intestine and testes, gstt1a in liver, and gstz1 in liver, kidney and brain."
+      },
+      {
+        "text": "gstp2",
+        "xref_id": "553169",
+        "namespace": "ncbi",
+        "sentence": "Affinity toward CDNB varied from 0.28 mM (Gstp2) to 3.69 mM (Gstm3), while affinity toward MCB was in the range of 5 muM (Gstt1a) to 250 muM (Gstp1)."
+      },
+      {
+        "text": "Gstm3",
+        "xref_id": "568744",
+        "namespace": "ncbi",
+        "sentence": "Affinity toward CDNB varied from 0.28 mM (Gstp2) to 3.69 mM (Gstm3), while affinity toward MCB was in the range of 5 muM (Gstt1a) to 250 muM (Gstp1)."
+      }
+    ]
+  },
+  {
+    "id": " https://doi.org/10.7554/eLife.14226",
+    "organismOrdering": [
+      7227
+    ],
+    "entities": [
+      {
+        "text": "Vps8",
+        "xref_id": "38735",
+        "namespace": "ncbi",
+        "sentence": "Here we show that Drosophila Vps8 is highly expressed in hemocytes and nephrocytes, and localizes to early endosomes despite the lack of a clear Vps3 homolog."
+      },
+      {
+        "text": "Dor",
+        "xref_id": "31118",
+        "namespace": "ncbi",
+        "sentence": "We find that Vps8 forms a complex and acts together with Vps16A, Dor/Vps18 and Car/Vps33A, and loss of any of these proteins leads to fragmentation of endosomes."
+      },
+      {
+        "text": "Vps18",
+        "xref_id": "31118",
+        "namespace": "ncbi",
+        "sentence": "We find that Vps8 forms a complex and acts together with Vps16A, Dor/Vps18 and Car/Vps33A, and loss of any of these proteins leads to fragmentation of endosomes."
+      },
+      {
+        "text": "Car",
+        "xref_id": "32947",
+        "namespace": "ncbi",
+        "sentence": "We find that Vps8 forms a complex and acts together with Vps16A, Dor/Vps18 and Car/Vps33A, and loss of any of these proteins leads to fragmentation of endosomes."
+      },
+      {
+        "text": "Vps33A",
+        "xref_id": "32947",
+        "namespace": "ncbi",
+        "sentence": "We find that Vps8 forms a complex and acts together with Vps16A, Dor/Vps18 and Car/Vps33A, and loss of any of these proteins leads to fragmentation of endosomes."
+      },
+      {
+        "text": "Vps11",
+        "xref_id": "317987",
+        "namespace": "ncbi",
+        "sentence": "Surprisingly, Vps11 deletion causes enlargement of endosomes, similar to loss of the HOPS-specific subunits Vps39 and Lt/Vps41."
+      },
+      {
+        "text": "Vps39",
+        "xref_id": "42192",
+        "namespace": "ncbi",
+        "sentence": "Surprisingly, Vps11 deletion causes enlargement of endosomes, similar to loss of the HOPS-specific subunits Vps39 and Lt/Vps41."
+      },
+      {
+        "text": "Vps41",
+        "xref_id": "3355130",
+        "namespace": "ncbi",
+        "sentence": "Surprisingly, Vps11 deletion causes enlargement of endosomes, similar to loss of the HOPS-specific subunits Vps39 and Lt/Vps41."
+      },
+      {
+        "text": "Lt",
+        "xref_id": "3355130",
+        "namespace": "ncbi",
+        "sentence": "Surprisingly, Vps11 deletion causes enlargement of endosomes, similar to loss of the HOPS-specific subunits Vps39 and Lt/Vps41."
+      }
+    ]
+  },
+  {
+    "id": "https://dx.doi.org/10.1126/scisignal.abf3535",
+    "organismOrdering": [
+      10090
+    ],
+    "entities": [
+      {
+        "text": "IKKbeta",
+        "xref_id": "16150",
+        "namespace": "ncbi",
+        "sentence": "IKKbeta-NF-kappaB signaling in adult chondrocytes promotes the onset of age-related osteoarthritis in mice."
+      },
+      {
+        "text": "NFKB1",
+        "xref_id": "18033",
+        "namespace": "ncbi",
+        "sentence": "Canonical nuclear factor kappaB (NF-kappaB) signaling mediated by homo- and heterodimers of the NF-kappaB subunits p65 (RELA) and p50 (NFKB1) is associated with age-related pathologies and with disease progression in posttraumatic models of osteoarthritis (OA)."
+      },
+      {
+        "text": "RELA",
+        "xref_id": "19697",
+        "namespace": "ncbi",
+        "sentence": "Canonical nuclear factor kappaB (NF-kappaB) signaling mediated by homo- and heterodimers of the NF-kappaB subunits p65 (RELA) and p50 (NFKB1) is associated with age-related pathologies and with disease progression in posttraumatic models of osteoarthritis (OA)."
+      }
+    ]
+  },
+  {
+    "id": "https://dx.doi.org/10.1016/j.molcel.2019.03.023",
+    "organismOrdering": [
+      10090
+    ],
+    "entities": [
+      {
+        "text": "REC114",
+        "xref_id": "73673",
+        "namespace": "ncbi",
+        "sentence": "REC114 Partner ANKRD31 Controls Number, Timing, and Location of Meiotic DNA Breaks"
+      },
+      {
+        "text": "ANKRD31",
+        "xref_id": "625662",
+        "namespace": "ncbi",
+        "sentence": "REC114 Partner ANKRD31 Controls Number, Timing, and Location of Meiotic DNA Breaks"
+      }
+    ],
+    "comment": "M. Musculus orthologues: ANKRD31, REC114"
+  },
+  {
+    "id": "https://dx.doi.org/10.1038/s41556-021-00642-9",
+    "organismOrdering": [
+      10090
+    ],
+    "entities": [
+      {
+        "text": "AIDA",
+        "xref_id": "108909",
+        "namespace": "ncbi",
+        "sentence": "AIDA directly connects sympathetic innervation to adaptive thermogenesis by UCP1"
+      },
+      {
+        "text": "UCP1",
+        "xref_id": "22227",
+        "namespace": "ncbi",
+        "sentence": "AIDA directly connects sympathetic innervation to adaptive thermogenesis by UCP1"
+      }
+    ],
+    "comment": "M. musculus orthologue: Aida, Ucp1"
+  }
+]

@@ -4,13 +4,15 @@ import TOP_NCBI_GENE from './data/top-ncbi-gene.json';
 import PC_BLACKLIST from './data/pc-blacklist.json';
 import SARS_COV_2 from './data/sars-cov-2.json';
 import FAMPLEX from './data/famplex.json';
+import ORG_HINTS from './data/org-hints.json';
 
 const SEARCH_OBJECTS = _.concat( [],
   MOLECULAR_CELL,
   TOP_NCBI_GENE,
   PC_BLACKLIST,
   SARS_COV_2,
-  FAMPLEX
+  FAMPLEX,
+  ORG_HINTS
 );
 
 export { SEARCH_OBJECTS };
