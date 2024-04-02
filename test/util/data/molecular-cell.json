@@ -1992,18 +1992,6 @@
     "organismOrdering": [10090],
     "entities": [
     {
-      "text": "ANKRD31",
-      "namespace": "ncbi",
-      "xref_id": "625662",
-      "sentence": "REC114 Partner ANKRD31 Controls Number , Timing , and Location of Meiotic DNA Breaks  Michiel Boekhout , Mehmet E. Karasu , Juncheng Wang , Laurent Acquaviva , Florencia Pratto , Kevin Brick , Diana Y. Eng , Jiaqi Xu , R. Daniel Camerini-Otero , Dinshaw J. Patel , Scott Keeney  DOI : https://doi.org/10.1016/j.molcel.2019.03.023  Summary Double-strand breaks ( DSBs ) initiate the homologous recombination that is crucial for meiotic chromosome pairing and segregation ."
-    },
-    {
-      "text": "REC114",
-      "namespace": "ncbi",
-      "xref_id": "73673",
-      "sentence": "REC114 Partner ANKRD31 Controls Number , Timing , and Location of Meiotic DNA Breaks  Michiel Boekhout , Mehmet E. Karasu , Juncheng Wang , Laurent Acquaviva , Florencia Pratto , Kevin Brick , Diana Y. Eng , Jiaqi Xu , R. Daniel Camerini-Otero , Dinshaw J. Patel , Scott Keeney  DOI : https://doi.org/10.1016/j.molcel.2019.03.023  Summary Double-strand breaks ( DSBs ) initiate the homologous recombination that is crucial for meiotic chromosome pairing and segregation ."
-    },
-    {
       "text": "MEI4",
       "namespace": "ncbi",
       "xref_id": "75033",
@@ -2548,12 +2536,6 @@
       },
       {
         "text":"programmed cell death protein 1",
-        "xref_id":"5133",
-        "namespace":"ncbi",
-        "sentence":"PD-L1 ( B7-H1 ) Competes with the RNA Exosome to Regulate the DNA Damage Response and Can Be Targeted to Sensitize to Radiation or Chemotherapy  Xinyi Tu , Bo Qin , Yong Zhang , Cheng Zhang , Mohamed Kahila , Somaira Nowsheen , Ping Yin , Jian Yuan , Huadong Pei , Hu Li , Jia Yu , Zhiwang Song , Qin Zhou , Fei Zhao , Jiaqi Liu , Chao Zhang , Haidong Dong , Robert W. Mutter , Zhenkun Lou  DOI : https://doi.org/10.1016/j.molcel.2019.04.005  Summary Programmed death ligand 1 ( PD-L1 , also called B7-H1 ) is an immune checkpoint protein that inhibits immune function through its binding of the programmed cell death protein 1 ( PD-1 ) receptor ."
-      },
-      {
-        "text":"PD-1",
         "xref_id":"5133",
         "namespace":"ncbi",
         "sentence":"PD-L1 ( B7-H1 ) Competes with the RNA Exosome to Regulate the DNA Damage Response and Can Be Targeted to Sensitize to Radiation or Chemotherapy  Xinyi Tu , Bo Qin , Yong Zhang , Cheng Zhang , Mohamed Kahila , Somaira Nowsheen , Ping Yin , Jian Yuan , Huadong Pei , Hu Li , Jia Yu , Zhiwang Song , Qin Zhou , Fei Zhao , Jiaqi Liu , Chao Zhang , Haidong Dong , Robert W. Mutter , Zhenkun Lou  DOI : https://doi.org/10.1016/j.molcel.2019.04.005  Summary Programmed death ligand 1 ( PD-L1 , also called B7-H1 ) is an immune checkpoint protein that inhibits immune function through its binding of the programmed cell death protein 1 ( PD-1 ) receptor ."
