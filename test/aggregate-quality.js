@@ -18,7 +18,7 @@ const searchEnt = ( name, organismOrdering ) => {
 const getEnt = ( ns, id ) => aggregate.get( ns, id );
 const removeTestIndex = () => db.deleteIndex();
 const pickRecord = ( o, idPref ) => {
-  let res = _.pick( o, [ 'namespace', 'id' ] );
+  let res = _.pick( o, [ 'namespace', 'id', 'esScore' ] );
   if ( idPref && res.id != idPref && _.includes( o.ids, idPref ) ) {
     _.set( res, 'id', idPref );
   }
@@ -41,16 +41,25 @@ describe('Search and Get Aggregate', function(){
       entities.forEach( entity => {
         const { text, xref_id: id, namespace } = entity;
         if( !id || !namespace ) return;
-        const expected = _.assign( {}, { namespace, id } );
+        const ground = _.assign( {}, { namespace, id } );
         const organismOrdering = entity.organismOrdering || testCase.organismOrdering || [];
 
         it(`search ${text} ${organismOrdering}`, function(){
           return ( searchEnt(text, organismOrdering)
             .then( results => {
-              const rank = _.findIndex( results,  _.matches( expected ) );
-              let topRes = _.head( results );
-              const actual =  pickRecord( topRes, expected.id );
-              const message = JSON.stringify({ text, organismOrdering, expected, actual, rank });
+              // Actual result is the first result
+              const topResult = _.first( results );
+              const actual = pickRecord( topResult, ground.id );
+
+              // Expected result is the first result that matches the ground truth
+              let expected = ground;
+              const rank = _.findIndex( results, _.matches( ground ) );
+              const expectedResultExists = rank >= 0;
+              if( expectedResultExists ) {
+                const expectedResult = results[rank];
+                expected = pickRecord( expectedResult );
+              }
+              const message = JSON.stringify({ text, organismOrdering, expected: expected, actual, rank });
               expect( actual, message ).to.eql( expected );
             })
           );
@@ -59,9 +68,9 @@ describe('Search and Get Aggregate', function(){
         it(`get ${text}`, function(){
           return ( getEnt( namespace, id )
             .then( result => {
-              const actual =  pickRecord( result, id );
-              const message = JSON.stringify({ text, expected, actual });
-              expect( actual, message ).to.eql( expected );
+              const actual = pickRecord( result, id );
+              const message = JSON.stringify({ text, ground, actual });
+              expect( actual, message ).to.eql( ground );
             } )
           );
         });
