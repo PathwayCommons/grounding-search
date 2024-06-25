@@ -1245,12 +1245,6 @@
       "sentence": "While our screen did not identify ( or not cover ) the same genes as theirs , functional annotation clustering did reveal a strong enrichment of candidate genes in phosphatidylinositol and inositolphosphate metabolism and signaling , including PI3K enzymes and ITPKC ( Data S2 , cluster 2 ) ."
      },
      {
-      "text": "glucose",
-      "xref_id": "17234",
-      "namespace": "chebi",
-      "sentence": "Importantly , we also demonstrate that Foxk1 regulates glucose , serine , and nucleotide metabolism directly or through induction of the Hif-1alpha transcription factor in response to mTORC1 signaling ."
-     },
-     {
       "text": "p62",
       "xref_id": "23636",
       "namespace": "ncbi",
