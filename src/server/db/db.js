@@ -61,7 +61,7 @@ const db = {
     const client = this.connect();
 
     // include mappings for all fields that we use for search
-    const mappings = {      
+    const mappings = {
       properties: {
         id: {
           type: 'keyword'
@@ -91,7 +91,7 @@ const db = {
             }
           }
         }
-      }    
+      }
     };
 
     const settings = {
@@ -323,8 +323,10 @@ const db = {
       if( _.isString(namespace) ){
         query = {
           bool: {
-            must: {
-              term: { [NS_FIELD]: namespace.toLowerCase() }
+            filter: {
+              term: {
+                [NS_FIELD]: namespace.toLowerCase()
+              }
             },
             should: query
           }
@@ -332,9 +334,9 @@ const db = {
       } else if( _.isArray(namespace) ){
         query = {
           bool: {
-            must: {
-              bool: {
-                should: namespace.map(ns => ({ term: { [NS_FIELD]: ns.toLowerCase() } }))
+            filter: {
+              terms: {
+                [NS_FIELD]: namespace.map(ns => ns.toLowerCase() )
               }
             },
             should: query
@@ -561,7 +563,7 @@ const db = {
     let client = this.connect();
     let body = { size, from };
     let index = INDEX;
-    
+
     if ( scroll ) {
       body = { size: MAX_SEARCH_ES };
     }
