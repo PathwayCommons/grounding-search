@@ -2,6 +2,7 @@ import mocha from 'mocha';
 import _ from 'lodash';
 import { Parser } from 'json2csv';
 import { appendFileSync } from 'fs';
+import logger from '../../src/server/logger';
 
 const isGet = s => /^get/.test( s );
 const isSearch = s => /^search/.test( s );
@@ -20,9 +21,16 @@ const DEFAULT_FIELDS = [
 
 // Yes, hackey, but good enough for this reporter
 const message2JSON = message => {
-  const MESSAGE_RE = /: expected/;
-  const str = _.head( message.split( MESSAGE_RE ) );
-  return JSON.parse(str);
+  try {
+    const MESSAGE_RE = /: expected/;
+    const str = _.head( message.split( MESSAGE_RE ) );
+    return JSON.parse(str);
+
+  } catch( e ) {
+    logger.error( 'Error parsing message' );
+    logger.error( e.message );
+    throw e;
+  }
 };
 
 function write2File( data ) {
