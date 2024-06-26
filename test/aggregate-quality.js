@@ -48,8 +48,12 @@ describe('Search and Get Aggregate', function(){
           return ( searchEnt(text, organismOrdering)
             .then( results => {
               // Actual result is the first result
-              const topResult = _.first( results );
-              const actual = pickRecord( topResult, ground.id );
+              let actual = {};
+              const hasResults = !_.isEmpty( results );
+              if( hasResults ){
+                const topResult = _.first( results );
+                actual = pickRecord( topResult, ground.id );
+              }
 
               // Expected result is the first result that matches the ground truth
               let expected = ground;
@@ -59,7 +63,7 @@ describe('Search and Get Aggregate', function(){
                 const expectedResult = results[rank];
                 expected = pickRecord( expectedResult );
               }
-              const message = JSON.stringify({ text, organismOrdering, expected: expected, actual, rank });
+              const message = JSON.stringify({ text, organismOrdering, expected, actual, rank });
 
               // Compare only namespace and id
               const actualXref = _.pick( actual, [ 'namespace', 'id' ] );
