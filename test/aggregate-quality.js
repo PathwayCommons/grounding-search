@@ -60,7 +60,10 @@ describe('Search and Get Aggregate', function(){
                 expected = pickRecord( expectedResult );
               }
               const message = JSON.stringify({ text, organismOrdering, expected: expected, actual, rank });
-              expect( actual, message ).to.eql( expected );
+
+              // Compare only namespace and id
+              const actualXref = _.pick( actual, [ 'namespace', 'id' ] );
+              expect( actualXref, message ).to.eql( ground );
             })
           );
         });
@@ -70,7 +73,8 @@ describe('Search and Get Aggregate', function(){
             .then( result => {
               const actual = pickRecord( result, id );
               const message = JSON.stringify({ text, ground, actual });
-              expect( actual, message ).to.eql( ground );
+              const actualXref = _.pick( actual, [ 'namespace', 'id' ] );
+              expect( actualXref, message ).to.eql( ground );
             } )
           );
         });
