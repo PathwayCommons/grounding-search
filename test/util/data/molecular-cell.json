@@ -71,8 +71,8 @@
     },
     {
      "text": "replication protein A",
-     "xref_id": null,
-     "namespace": null,
+     "xref_id": "RPA",
+     "namespace": "fplx",
      "sentence": "These structures are first coated by replication protein A ( RPA ) , which is later displaced by the RAD51 protein , the main facilitator of strand invasion and recombination ( Panier and Boulton , 2014 ) ."
     },
     {
@@ -270,12 +270,6 @@
       "sentence": "To examine the impact of PP2ACdc55 on the kinetics of Cdk substrate phosphorylation , we compared the electrophoretic mobility changes of three known Cdk targets , Ask1 , Sli15 , and Ndd1 ( Li and Elledge , 2003 , Pereira and Schiebel , 2003 , Reynolds et al. , 2003 ) , during synchronous cell-cycle progression of swe1Delta and swe1Delta cdc55Delta cells            ."
      },
      {
-      "text": "PP2A",
-      "xref_id": null,
-      "namespace": null,
-      "sentence": "An in vitro preference for threonine dephosphorylation has been noted during the early biochemical characterization of PP2A using peptide substrates ( Agostinis et al. , 1990 ) ."
-     },
-     {
       "text": "Cdc55",
       "xref_id": "852685",
       "namespace": "ncbi",
@@ -298,12 +292,6 @@
       "xref_id": "856236",
       "namespace": "ncbi",
       "sentence": "To differentiate between these scenarios , we aimed to compensate for increased Cdk activity in swe1Delta cells by removing Clb2 , one of the four mitotic cyclins ( Fitch et al. , 1992 ) ."
-     },
-     {
-      "text": "APC",
-      "xref_id": null,
-      "namespace": null,
-      "sentence": "In synchronized cultures , we monitored DNA content as a sign of S phase , spindle formation as a marker for G2 , and the beginning of spindle elongation as indicator for mitosis when the anaphase promoting complex ( APC ) is activated as Cdk activity reaches its peak           ."
      },
      {
       "text": "Sic1",
@@ -518,12 +506,6 @@
       "sentence": "Surprisingly , our results show that , while knockdown of Hif-1alpha has no effect on the expression of purine synthesis enzymes , knockdown of Foxk1 markedly reduced the levels of several of these enzymes ( Prps2 , Gart , Pfas , Atic , and Impdh1 ) ."
      },
      {
-      "text": "Sin3",
-      "xref_id": null,
-      "namespace": null,
-      "sentence": "Recently , Foxk1 has also been shown to cooperate with the Sin3 complex and transcriptionally regulate autophagy in myoblasts , in an mTORC1 dependent fashion ( Bowman et al. , 2014 ) ."
-     },
-     {
       "text": "mannose",
       "xref_id": "4208",
       "namespace": "chebi",
@@ -636,14 +618,14 @@
      },
      {
       "text": "RPA",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "RPA",
+      "namespace": "fplx",
       "sentence": "These structures are first coated by replication protein A ( RPA ) , which is later displaced by the RAD51 protein , the main facilitator of strand invasion and recombination ( Panier and Boulton , 2014 ) ."
      },
      {
       "text": "H4",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "Histone_H4",
+      "namespace": "fplx",
       "sentence": "53BP1 possesses a Tudor domain in tandem with a UDR domain that is specifically able to read H4K20me2 marks in combination with ubiquitylated histone H2A ( Fradet-Turcotte et al. , 2013 ) ."
      },
      {
@@ -667,8 +649,8 @@
      },
      {
       "text": "H2",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "Histone_H2A",
+      "namespace": "fplx",
       "sentence": "In addition to this , it has been shown that a combination of TIP60 mediated H2AK15 acetylation and recruitment of the TIP60 complex component MBTD1 to H4K20me2 facilitates 53BP1 mobilization from break ends ( Jacquet et al. , 2016 ) ."
      },
      {
@@ -684,9 +666,9 @@
       "sentence": "Protein arginine methyltransferases ( PRMTs ) catalyze mono- and dimethylation of the guanidino group of the arginine residue using S-adenosyl methionine ( SAM ) as a methyl donor ."
      },
      {
-      "text": "PRMTs",
-      "xref_id": null,
-      "namespace": null,
+      "text": "PRMT",
+      "xref_id": "PRMT",
+      "namespace": "fplx",
       "sentence": "Protein arginine methyltransferases ( PRMTs ) catalyze mono- and dimethylation of the guanidino group of the arginine residue using S-adenosyl methionine ( SAM ) as a methyl donor ."
      },
      {
@@ -818,8 +800,8 @@
      },
      {
       "text": "IkappaB kinase",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "IKK_complex",
+      "namespace": "fplx",
       "sentence": "A number of stimuli activate NF-kappaB , mostly through IkappaB kinase ( IKK )-dependent phosphorylation and subsequent degradation of the IkappaB inhibitory proteins ."
      },
      {
@@ -827,12 +809,6 @@
       "xref_id": "8517",
       "namespace": "ncbi",
       "sentence": "The IKK complex consists of two highly homologous kinase subunits ( IKKalpha and IKKbeta ) and a nonenzymatic regulatory component , IKKgamma and NEMO ( Ghosh and Karin , 2002 ) ."
-     },
-     {
-      "text": "RelB NF-kappaB",
-      "xref_id": null,
-      "namespace": null,
-      "sentence": "The alternative pathway leads to selective activation of p52 : RelB NF-kappaB dimers by inducing processing of the NF-kappaB2 and p100 precursor that binds to the RelB NF-kappaB subunit in the cytoplasm ( Ghosh and Karin , 2002 , Luo et al. , 2005 ) ."
      },
      {
       "text": "p52",
@@ -851,12 +827,6 @@
       "xref_id": "63959",
       "namespace": "chebi",
       "sentence": "We found that CRPC cells were much more sensitive than PPC cell to the treatment of inhibitors , BAY11-7082 or celastrol , which can inhibit IkappaBalpha or NF-kappaB                     ."
-     },
-     {
-      "text": "protein phosphatase 2b",
-      "xref_id": null,
-      "namespace": null,
-      "sentence": "We found that treatment with the phosphatase inhibitors , cypermethrin and deltamethrin , which inhibit serine/threonine protein phosphatase 2b ( PP2B ) , increased p-IkappaBalpha expression and p65 activity in PPC cells                          ."
      },
      {
       "text": "cypermethrin",
@@ -998,8 +968,8 @@
      },
      {
       "text": "AMPK",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "AMPK",
+      "namespace": "fplx",
       "sentence": "Autophagy can be enhanced by phosphorylating mouse Beclin1 at S91 and S94 ( S93 and S96 in humans ) by AMPK in response to glucose starvation and at S14 ( S15 in humans ) by ULK1 after amino acid deprivation ( Kim et al. , 2013 , Russell et al. , 2013 ) ."
      },
      {
@@ -1023,8 +993,8 @@
      },
      {
       "text": "mTORC1",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "mTORC1",
+      "namespace": "fplx",
       "sentence": "Summary  The mammalian Target of Rapamycin Complex 1 ( mTORC1 )-signaling system plays a critical role in the maintenance of cellular homeostasis by sensing and integrating multiple extracellular and intracellular cues ."
      },
      {
@@ -1144,14 +1114,14 @@
      },
      {
       "text": "HIF-1",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "HIF1",
+      "namespace": "fplx",
       "sentence": "A key mediator of hypoxic response is the hypoxia inducible factor-1 ( HIF-1 ) complex ( Iyer et al. , 1998 ) ."
      },
      {
       "text": "NF-kappaB",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "NFkappaB",
+      "namespace": "fplx",
       "sentence": "Activated RIG-I and MAVS complexes recruit the kinases TBK1 and IKKepsilon , which , in turn , recruit and activate the transcription factor IRF3 ( Liu et al. , 2015 , McNab et al. , 2015 ) , as well as the canonical IKKs ( alpha , beta , and gamma ) to activate nuclear factor kappaB ( NF-kappaB ) ."
      },
      {
@@ -1240,8 +1210,8 @@
      },
      {
       "text": "PI3K",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "PI3K",
+      "namespace": "fplx",
       "sentence": "While our screen did not identify ( or not cover ) the same genes as theirs , functional annotation clustering did reveal a strong enrichment of candidate genes in phosphatidylinositol and inositolphosphate metabolism and signaling , including PI3K enzymes and ITPKC ( Data S2 , cluster 2 ) ."
      },
      {
@@ -1267,12 +1237,6 @@
       "xref_id": "422",
       "namespace": "chebi",
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
-     },
-     {
-      "text": "glutathione S-transferase",
-      "xref_id": null,
-      "namespace": null,
-      "sentence": "As a control , the glutathione S-transferase ( GST ) protein did not bind to any region of CamK-A            ."
      },
      {
       "text": "Torin1",
@@ -1334,12 +1298,6 @@
    "id": "http://dx.doi.org/10.1016/j.molcel.2017.02.016",
    "organismOrdering": [3702],
    "entities": [
-    {
-      "text": "CBF",
-      "xref_id": null,
-      "namespace": null,
-      "sentence": "Plasma Membrane CRPK1 Mediated Phosphorylation of 14-3-3 Proteins Induces Their Nuclear Import to Fine-Tune CBF Signaling during Cold Response  Molecular Cell , VOLUME 66 , Issue 1 , 6 April , 2017 , pp117-128 Ziyan Liu , Yuxin Jia , Yanglin Ding , Yiting Shi , Zhen Li , Yan Guo , Zhizhong Gong , Shuhua Yang  In plant cells , changes in fluidity of the plasma mem- brane may serve as the primary sensor of cold stress ; however , the precise mechanism and how the cell transduces and fine-tunes cold signals remain elusive ."
-     },
      {
       "text": "CRPK1",
       "xref_id": "838236",
@@ -1522,12 +1480,6 @@
       "sentence": "This limited enhanced Beclin1 S15 phosphorylation may result from hypermethylation of ULK1/2 promoter and low expression of ULK1/2 in glioma cells ( Shukla et al. , 2014 ) ."
      },
      {
-      "text": "glutathione S-transferase",
-      "xref_id": null,
-      "namespace": null,
-      "sentence": "As a control , the glutathione S-transferase ( GST ) protein did not bind to any region of CamK-A            ."
-     },
-     {
       "text": "Torin1",
       "xref_id": "84327",
       "namespace": "chebi",
@@ -1639,8 +1591,8 @@
      },
      {
       "text": "PP1",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "PPP1",
+      "namespace": "fplx",
       "sentence": "For example , activity promoting ubiquitylation of RIG-I ( Gack et al. , 2007 ) is balanced by deubiquitylation ( Cui et al. , 2014 , Fan et al. , 2014 ) , and activating dephosphorylation of RIG-I by PP1 ( Wies et al. , 2013 ) is countered by inhibitory phosphorylation through PKC ( Maharaj et al. , 2012 ) ."
      },
      {
@@ -1804,8 +1756,8 @@
      },
      {
       "text": "pocket proteins",
-      "xref_id": null,
-      "namespace": null,
+      "xref_id": "Pocket_protein",
+      "namespace": "fplx",
       "sentence": "In quiescent cells , genes required for DNA synthesis are silenced by the Retinoblastoma ( RB ) family of pocket proteins ( RB , p107 , and p130 ) tethered to DNA via repressive E2F family members ( E2F4/5 ) ( Rayman et al. , 2002 ; Takahashi et al. , 2000 ) ."
      },
      {
@@ -2026,12 +1978,6 @@
       "namespace": "ncbi",
       "xref_id": "19361",
       "sentence": "To assess recombination , we immunostained chromosomes for RAD51 and DMC1                              ."
-    },
-    {
-      "text": "RPA",
-      "namespace": null,
-      "xref_id": null,
-      "sentence": "Earlier-stage cells also had fewer foci of the single stranded DNA ( ssDNA )-binding replication protein A ( RPA )                     ."
     },
     {
       "text": "histone H2AX",
@@ -2331,8 +2277,8 @@
       },
       {
         "text":"eIF2alpha",
-        "xref_id": null,
-        "namespace": null,
+        "xref_id": "1965",
+        "namespace": "ncbi",
         "sentence":"Because eIF2alpha is the canonical downstream target of PERK , we next tested whether it mediates the increases in SCs caused by glucose deprivation .",
         "loose": true
       },
@@ -3172,20 +3118,14 @@
       },
       {
         "text": "GFAT",
-        "namespace": null,
-        "xref_id": null,
+        "namespace": "9945",
+        "xref_id": "ncbi",
         "sentence": "To test this possibility , we used GlcNAc or glucosamine ( GlcN ) , which bypasses the rate limiting reaction catalyzed by glutamine-fructose-6-phosphate aminotransferase ( GFAT ) to enter the HBP upon direct phosphorylation ( Guinez et al. , 2011 ) and found that both were sufficient to restore HCF-1 O GlcNAcylation in Bad-/- hepatocytes                     ."
       },
       {
         "text": "glucosamine",
         "namespace": "chebi",
         "xref_id": "5417",
-        "sentence": "To test this possibility , we used GlcNAc or glucosamine ( GlcN ) , which bypasses the rate limiting reaction catalyzed by glutamine-fructose-6-phosphate aminotransferase ( GFAT ) to enter the HBP upon direct phosphorylation ( Guinez et al. , 2011 ) and found that both were sufficient to restore HCF-1 O GlcNAcylation in Bad-/- hepatocytes                     ."
-      },
-      {
-        "text": "glutamine-fructose-6-phosphate aminotransferase",
-        "namespace": null,
-        "xref_id": null,
         "sentence": "To test this possibility , we used GlcNAc or glucosamine ( GlcN ) , which bypasses the rate limiting reaction catalyzed by glutamine-fructose-6-phosphate aminotransferase ( GFAT ) to enter the HBP upon direct phosphorylation ( Guinez et al. , 2011 ) and found that both were sufficient to restore HCF-1 O GlcNAcylation in Bad-/- hepatocytes                     ."
       },
       {

@@ -192,18 +192,18 @@
       {
         "text": "zotatifin",
         "xref_id": null,
-        "namespace": "chebi",
+        "namespace": null,
         "sentence": "Two classes of molecules emerged as effectively reducing viral infectivity: protein biogenesis inhibitors (zotatifin, ternatin-4 and PS3061) (Fig. 6b and Extended Data Fig. 9) and ligands of the sigma-1 and sigma-2 receptors (haloperidol, PB28, PD-144418 and hydroxychloroquine, which is undergoing clinical trials in patients with COVID-19 (ClinicalTrials.gov, trial number NCT04332991))."
       },
       {
         "text": "ternatin-4",
-        "xref_id": null,
+        "xref_id": "189650",
         "namespace": "chebi",
         "sentence": "Two classes of molecules emerged as effectively reducing viral infectivity: protein biogenesis inhibitors (zotatifin, ternatin-4 and PS3061) (Fig. 6b and Extended Data Fig. 9) and ligands of the sigma-1 and sigma-2 receptors (haloperidol, PB28, PD-144418 and hydroxychloroquine, which is undergoing clinical trials in patients with COVID-19 (ClinicalTrials.gov, trial number NCT04332991))."
       },
       {
         "text": "PS3061",
-        "xref_id": null,
+        "xref_id": "189655",
         "namespace": "chebi",
         "sentence": "Two classes of molecules emerged as effectively reducing viral infectivity: protein biogenesis inhibitors (zotatifin, ternatin-4 and PS3061) (Fig. 6b and Extended Data Fig. 9) and ligands of the sigma-1 and sigma-2 receptors (haloperidol, PB28, PD-144418 and hydroxychloroquine, which is undergoing clinical trials in patients with COVID-19 (ClinicalTrials.gov, trial number NCT04332991))."
       },
@@ -215,7 +215,7 @@
       },
       {
         "text": "PB28",
-        "xref_id": null,
+        "xref_id": "189648",
         "namespace": "chebi",
         "sentence": "Two classes of molecules emerged as effectively reducing viral infectivity: protein biogenesis inhibitors (zotatifin, ternatin-4 and PS3061) (Fig. 6b and Extended Data Fig. 9) and ligands of the sigma-1 and sigma-2 receptors (haloperidol, PB28, PD-144418 and hydroxychloroquine, which is undergoing clinical trials in patients with COVID-19 (ClinicalTrials.gov, trial number NCT04332991))."
       }
