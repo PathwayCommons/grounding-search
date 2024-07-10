@@ -2203,12 +2203,6 @@
         "sentence":"Chloramphenicol , a specific inhibitor of mitochondrial protein translation , abolished SC levels when cells were grown in glucose ; however , SC levels were maintained in galactose media             ."
       },
       {
-        "text":"AMPK",
-        "xref_id":null,
-        "namespace":null,
-        "sentence":"AMP activated protein kinase ( AMPK ) is known to promote energy generating processes under conditions of nutrient stress ( Hardie et al. , 2012 ) ."
-      },
-      {
         "text":"AICAR",
         "xref_id":"18406",
         "namespace":"chebi",
@@ -2271,8 +2265,8 @@
       },
       {
         "text":"GSK2606414",
-        "xref_id":null,
-        "namespace":null,
+        "xref_id": null,
+        "namespace": null,
         "sentence":"Similar results were obtained when PERK activity was inhibited using GSK2606414                  ."
       },
       {
@@ -2284,8 +2278,8 @@
       },
       {
         "text":"ISRIB",
-        "xref_id":null,
-        "namespace":null,
+        "xref_id": null,
+        "namespace": null,
         "sentence":"A selective inhibitor , ISRIB ( Sidrauski et al. , 2015 ) , was used to block eIF2alpha phosphorylation in cells cultured in galactose             ."
       },
       {
@@ -2397,12 +2391,6 @@
         "sentence":"We then assessed the levels of fork resection in these cells after HU treatment by western blot to detect S4/8 phosphorylation of the RPA2 subunit of RPA , a marker of fork resection ( Higgs et al. , 2015 , Sartori et al. , 2007 ) ."
       },
       {
-        "text":"RPA",
-        "xref_id":null,
-        "namespace":null,
-        "sentence":"We then assessed the levels of fork resection in these cells after HU treatment by western blot to detect S4/8 phosphorylation of the RPA2 subunit of RPA , a marker of fork resection ( Higgs et al. , 2015 , Sartori et al. , 2007 ) ."
-      },
-      {
         "text":"thymidine",
         "xref_id":"17748",
         "namespace":"chebi",
@@ -2433,27 +2421,15 @@
         "sentence":"AMPK and Chk1 Phosphorylate Exo1 at S746 in Response to Replication Stress We next sought to identify the protein kinase ( s ) that phosphorylate Exo1 at S746 upon replication stress ."
       },
       {
-        "text":"AMPK1",
-        "xref_id":null,
-        "namespace":null,
-        "sentence":"Indeed , purified recombinant AMPK1 complex ( alpha1/beta1/gamma1 ) and Chk1 protein were both capable of phosphorylating Exo1 at S746 in vitro                ."
-      },
-      {
         "text":"AMPKalpha2",
         "xref_id":"5563",
         "namespace":"ncbi",
         "sentence":"Importantly , the aberrant fork resection phenotype observed in AMPKalpha-KO cells could be rescued by ectopic expression of Flag tagged AMPKalpha1 or AMPKalpha2                      ."
       },
       {
-        "text":"CaM",
-        "xref_id":null,
-        "namespace":null,
-        "sentence":"Replication Stress Induces an Elevated Level of [ Ca2+ ] i , which Is Both Necessary and Sufficient to Trigger AMPK Activation and Exo1 Phosphorylation Because CaMKK2 is activated by Ca2 +-bound CaM ( Marcelo et al. , 2016 ) , we speculated that replication stress induces an increase in [ Ca2+ ] i concentration , which in turn triggers the activation of the downstream CaMKK2-AMPK-Exo1 pathway for fork protection ."
-      },
-      {
         "text":"DNA polymerase delta",
-        "xref_id":null,
-        "namespace":null,
+        "xref_id": "DNA_polymerase_delta",
+        "namespace": "fplx",
         "sentence":"Furthermore , replication stress caused by siRNA mediated partial knockdown of a subunit of DNA polymerase delta also elevated [ Ca2+ ] i             ."
       },
       {
@@ -2548,8 +2524,8 @@
       },
       {
         "text":"atezolizumab",
-        "xref_id":null,
-        "namespace":null,
+        "xref_id": null,
+        "namespace": null,
         "sentence":"The clinically available PD-L1 antibodies durvalumab and atezolizumab bind PD-L1 extracellularly , abrogating the PD-L1 and PD-1 checkpoint ."
       },
       {
@@ -2610,12 +2586,6 @@
         "text":"Trichostatin A",
         "xref_id":"46024",
         "namespace":"chebi",
-        "sentence":"To further confirm the acetylation of PHF5A , we treated HEK293T cells with Trichostatin A ( TSA ) and Nicotinamide ( NAM ) , the inhibitors of HDAC class I and II or sirtuins , respectively ."
-      },
-      {
-        "text":"sirtuins",
-        "xref_id":null,
-        "namespace":null,
         "sentence":"To further confirm the acetylation of PHF5A , we treated HEK293T cells with Trichostatin A ( TSA ) and Nicotinamide ( NAM ) , the inhibitors of HDAC class I and II or sirtuins , respectively ."
       },
       {
@@ -2721,12 +2691,6 @@
     "id":"https://doi.org/10.1016/j.molcel.2019.05.006",
     "organismOrdering": [9606],
     "entities":[
-      {
-        "text":"RPA",
-        "xref_id":null,
-        "namespace":null,
-        "sentence":"Using single-molecule imaging of reconstituted human DNA repair factors , we identify phosphorylated RPA ( pRPA ) as a negative resection regulator ."
-      },
       {
         "text":"DNA2",
         "xref_id":"1763",
@@ -2891,12 +2855,6 @@
         "sentence":"Given the importance of ppnN in competitive fitness , we therefore tested the tolerance of E. coli WT and the DeltappnN strain toward multiple antibiotics , namely ampicillin ( targeting the cell wall ) , gentamicin ( targeting the small ribosomal subunit ) , and the fluoroquinolone antibiotics , ofloxacin and ciprofloxacin ( both targeting DNA gyrase and topoisomerase IV ) ."
       },
       {
-        "text":"topoisomerase IV",
-        "namespace":null,
-        "xref_id":null,
-        "sentence":"Given the importance of ppnN in competitive fitness , we therefore tested the tolerance of E. coli WT and the DeltappnN strain toward multiple antibiotics , namely ampicillin ( targeting the cell wall ) , gentamicin ( targeting the small ribosomal subunit ) , and the fluoroquinolone antibiotics , ofloxacin and ciprofloxacin ( both targeting DNA gyrase and topoisomerase IV ) ."
-      },
-      {
         "text":"ampicillin",
         "namespace":"chebi",
         "xref_id":"28971",
@@ -2963,28 +2921,10 @@
         "sentence":"However , when SIC1 was deleted in the background , the effect of the LxF mutation on the magnitude of nuclear accumulation of the sensor was prominent ."
       },
       {
-        "text":"anaphase-promoting complex",
-        "xref_id":null,
-        "namespace":null,
-        "sentence":"In addition to Sic1 and Cdc6 , a third negative regulator of Cdk1 in mitotic exit is the anaphase promoting complex ( APC ) , which is responsible for the destruction of cyclins ( Visintin et al. , 1997 , Calzada et al. , 2001 , Archambault et al. , 2003 ) ."
-      },
-      {
-        "text":"APC",
-        "xref_id":null,
-        "namespace":null,
-        "sentence":"In addition to Sic1 and Cdc6 , a third negative regulator of Cdk1 in mitotic exit is the anaphase promoting complex ( APC ) , which is responsible for the destruction of cyclins ( Visintin et al. , 1997 , Calzada et al. , 2001 , Archambault et al. , 2003 ) ."
-      },
-      {
         "text":"CDH1",
         "xref_id":"852881",
         "namespace":"ncbi",
         "sentence":"Deletion of CDH1 , the late mitotic activator of APC , caused a minor drop in G1 levels of the sensor , and the cdc6 ( lxf ) mutation did not lead to a further decrease ."
-      },
-      {
-        "text":"SCF",
-        "xref_id":null,
-        "namespace":null,
-        "sentence":"We analyzed the effect of mutations in the two SCF binding degrons on Cdc6-Citrine levels                            ."
       },
       {
         "text":"Swe1",
@@ -3075,12 +3015,6 @@
         "loose": true
       },
       {
-        "text": "Pdhk",
-        "namespace":null,
-        "xref_id":null,
-        "sentence": "However , the expression of other genes whose transcription is not glucose responsive , such as Chrebpalpha , Srebp-1C , and pyruvate dehydrogenase kinase ( Pdhk ) ( Stamatikos et al. , 2016 , Zhang et al. , 2015 ) , was comparable with WT hepatocytes stimulated with glucose            ."
-      },
-      {
         "text": "L-Pk",
         "namespace": "ncbi",
         "xref_id": "5313",
@@ -3118,8 +3052,8 @@
       },
       {
         "text": "GFAT",
-        "namespace": "9945",
-        "xref_id": "ncbi",
+        "namespace": "ncbi",
+        "xref_id": "9945",
         "sentence": "To test this possibility , we used GlcNAc or glucosamine ( GlcN ) , which bypasses the rate limiting reaction catalyzed by glutamine-fructose-6-phosphate aminotransferase ( GFAT ) to enter the HBP upon direct phosphorylation ( Guinez et al. , 2011 ) and found that both were sufficient to restore HCF-1 O GlcNAcylation in Bad-/- hepatocytes                     ."
       },
       {
@@ -3177,12 +3111,6 @@
         "sentence":"An Oxygen Dependent Interaction between FBXL5 and the CIA Targeting Complex Regulates Iron Homeostasis  Adarsh K. Mayank , Vijaya Pandey , Ajay A. Vashisht , William D. Barshop , Shima Rayatpisheh , Tanu Sharma , Tisha Haque , David N. Powers , James A. Wohlschlegel  DOI : https://doi.org/10.1016/j.molcel.2019.05.020  Summary The iron sensing protein FBXL5 is the substrate adaptor for a SKP1-CUL1-RBX1 E3 ubiquitin ligase complex that regulates the degradation of iron regulatory proteins ( IRPs ) ."
       },
       {
-        "text":"CIA",
-        "namespace":null,
-        "xref_id":null,
-        "sentence":"An Oxygen Dependent Interaction between FBXL5 and the CIA Targeting Complex Regulates Iron Homeostasis  Adarsh K. Mayank , Vijaya Pandey , Ajay A. Vashisht , William D. Barshop , Shima Rayatpisheh , Tanu Sharma , Tisha Haque , David N. Powers , James A. Wohlschlegel  DOI : https://doi.org/10.1016/j.molcel.2019.05.020  Summary The iron sensing protein FBXL5 is the substrate adaptor for a SKP1-CUL1-RBX1 E3 ubiquitin ligase complex that regulates the degradation of iron regulatory proteins ( IRPs ) ."
-      },
-      {
         "text":"MMS19",
         "namespace":"ncbi",
         "xref_id":"64210",
@@ -3205,12 +3133,6 @@
         "namespace":"ncbi",
         "xref_id":"6500",
         "sentence":"To validate this observation , we performed coimmunoprecipitation ( co-IP ) analyses in cells stably expressing either hemagglutinin ( HA )-FLAG-tagged wild-type ( WT ) FBXL5 or FBXL5-DeltaFbox , a dominant negative mutant of FBXL5 that is defective in Skp1 binding , rendering it unable to incorporate into an active SCFFBXL5 E3 ubiquitin ligase complex ."
-      },
-      {
-        "text":"Ubiquitin",
-        "namespace":null,
-        "xref_id":null,
-        "sentence":"CIA Targeting Complex Is Not a Substrate of the FBXL5-E3 Ubiquitin Ligase Complex To examine the functional relevance of the FBXL5 , CIA , and targeting complex interaction , we tested the hypothesis that the CIA targeting complex was targeted by FBXL5 for ubiquitin dependent degradation in a relationship analogous to the FBXL5-IRP2 interaction ."
       },
       {
         "text":"IRP2",
@@ -3257,8 +3179,8 @@
       },
       {
         "text":"alpha-tubulin",
-        "namespace":null,
-        "xref_id":null,
+        "namespace": "fplx",
+        "xref_id": "TUBA",
         "sentence":"HA immunoprecipitates ( IP : HA ) and whole-cell extracts ( WCE ) were resolved by SDS-PAGE and immunoblotted with antibodies against FLAG , MMS19 , CIAO1 , FAM96B , IRP2 , and alpha-tubulin ."
       }
     ]
