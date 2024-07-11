@@ -1060,13 +1060,13 @@
      },
      {
       "text": "malate",
-      "xref_id": "6650",
+      "xref_id": "25115",
       "namespace": "chebi",
       "sentence": "alpha-KG , but not other TCA intermediate metabolites , including succinate , malate , or fumarate , rescued the anoikis induced by GDH1 targeted downregulation            ."
      },
      {
       "text": "succinate",
-      "xref_id": "15741",
+      "xref_id": "26806",
       "namespace": "chebi",
       "sentence": "alpha-KG , but not other TCA intermediate metabolites , including succinate , malate , or fumarate , rescued the anoikis induced by GDH1 targeted downregulation            ."
      },
@@ -1078,7 +1078,7 @@
      },
      {
       "text": "citrate",
-      "xref_id": "30769",
+      "xref_id": "50744",
       "namespace": "chebi",
       "sentence": "Consistent with previous reports , detachment was accompanied by enhanced reductive carboxylation of glutamine , assessed by increased labeling at citrate m +5 , whereas glutamine oxidation reflected by the m +4 fraction of citrate was decreased upon detachment             ."
      },
@@ -1234,7 +1234,7 @@
      },
      {
       "text": "lactate",
-      "xref_id": "422",
+      "xref_id": "24996",
       "namespace": "chebi",
       "sentence": "This conclusion was further strengthened by glucose flux analysis , using 13C labeled glucose , where a similar decrease in labeled glucose-6-phosphate , 3-phosphoglycerate , and lactate was observed with the knockdown of Foxk1 or Hif-1alpha                ."
      },
