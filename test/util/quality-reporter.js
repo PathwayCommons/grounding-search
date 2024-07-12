@@ -17,12 +17,12 @@ const DEFAULT_FIELDS = [
   'title',
   'state',
   'text',
-  'expected.namespace',
-  'expected.id',
-  'expected.esScore',
   'actual.namespace',
   'actual.id',
-  'actual.esScore'
+  'actual.esScore',
+  'predicted.namespace',
+  'predicted.id',
+  'predicted.esScore'
 ];
 
 // Yes, hackey, but good enough for this reporter
@@ -54,20 +54,24 @@ function QualityReporter( runner ) {
     search: {
       type: 'search',
       passes: 0,
-      failures: 0,
-      tp: 0,
-      tn: 0,
-      fp: 0,
-      fn: 0
+      failures: 0
     },
     get: {
       type: 'get',
       passes: 0,
-      failures: 0,
-      tp: null,
-      tn: null,
-      fp: null,
-      fn: null
+      failures: 0
+    }
+  };
+  const confusion = {
+    actual_positive: {
+      actual: 'positive',
+      positive: 0,
+      negative: 0
+    },
+    actual_negative: {
+      actual: 'negative',
+      positive: 0,
+      negative: 0
     }
   };
   let getFailJSON = [];
@@ -78,9 +82,9 @@ function QualityReporter( runner ) {
       stats.search.passes++;
       const type = searchType( test.title );
       if( type === 'Positive' ){
-        stats.search.tp++;
-      } else if( type === 'Negative' ){
-        stats.search.tn++;
+        confusion.actual_positive.positive++;
+      } else {
+        confusion.actual_negative.negative++;
       }
     } else if ( isGet( test.title ) ){
       stats.get.passes++;
@@ -88,15 +92,17 @@ function QualityReporter( runner ) {
   });
 
   runner.on( 'fail', ( test, err ) => {
+    const isNullGround = ground => _.isNull( ground.namespace ) && _.isNull( ground.id );
     const messageData = message2JSON( err.message );
     if( isSearch( test.title ) ){
       searchFailJSON.push( _.assign( {}, test, messageData ) );
       stats.search.failures++;
       const type = searchType( test.title );
-      if( type === 'Positive' ){
-        stats.search.fn++;
-      } else if( type === 'Negative' ){
-        stats.search.fp++;
+      const predictedIsNull = isNullGround( messageData.predicted );
+      if( type === 'Positive' && predictedIsNull ){
+        confusion.actual_positive.negative++;
+      } else {
+        confusion.actual_negative.positive++;
       }
     } else if ( isGet( test.title ) ){
       getFailJSON.push( _.assign( {}, test, messageData ) );
@@ -107,8 +113,9 @@ function QualityReporter( runner ) {
   runner.on( 'end', () => {
     const searchFailures = parse( DEFAULT_FIELDS.concat([ 'organismOrdering', 'rank' ]), searchFailJSON );
     const getFailures = parse( DEFAULT_FIELDS, getFailJSON );
-    const summary = parse( [ 'type', 'passes', 'failures', 'tp', 'tn', 'fp', 'fn' ], [ stats.search, stats.get ] );
-    write2File([ searchFailures, getFailures, summary ]);
+    const summary = parse( [ 'type', 'passes', 'failures' ], [ stats.search, stats.get ] );
+    const confusion_matrix = parse( [ 'actual', 'positive', 'negative' ], [ confusion.actual_positive, confusion.actual_negative ] );
+    write2File([ searchFailures, getFailures, summary, confusion_matrix ]);
   });
 }
 

@@ -46,20 +46,20 @@ describe('Search and Get Aggregate', function(){
         it(`search ${type} ${text} ${organismOrdering}`, function(){
           return ( searchEnt(text, organismOrdering)
             .then( results => {
-              // Actual is the first result, when it exists
-              const actual = pickRecord( _.first( results ) );
+              // Predicted is the first result, when it exists
+              const predicted = pickRecord( _.first( results ) );
 
               // Expected is replaced with search hit, when it is returned
-              let expected = pickRecord( ground );
+              let actual = pickRecord( ground );
               const rank = _.findIndex( results, _.matches( ground ) );
               const found = rank >= 0;
-              if ( found ) expected = pickRecord( _.nth( results, rank ) );
+              if ( found ) actual = pickRecord( _.nth( results, rank ) );
 
-              const message = JSON.stringify({ text, organismOrdering, expected, actual, rank });
+              const message = JSON.stringify({ text, organismOrdering, actual, predicted, rank });
 
               // Compare only namespace and id
-              const actualXref = _.pick( actual, [ 'namespace', 'id' ] );
-              expect( actualXref, message ).to.eql( ground );
+              const predictedXref = _.pick( predicted, [ 'namespace', 'id' ] );
+              expect( predictedXref, message ).to.eql( ground );
             })
           );
         });
@@ -68,10 +68,10 @@ describe('Search and Get Aggregate', function(){
           if( nullGround ) return;
           return ( getEnt( namespace, id )
             .then( result => {
-              const actual = pickRecord( result );
-              const message = JSON.stringify({ text, ground, actual });
-              const actualXref = _.pick( actual, [ 'namespace', 'id' ] );
-              expect( actualXref, message ).to.eql( ground );
+              const predicted = pickRecord( result );
+              const message = JSON.stringify({ text, ground, predicted });
+              const predictedXref = _.pick( predicted, [ 'namespace', 'id' ] );
+              expect( predictedXref, message ).to.eql( ground );
             } )
           );
         });
