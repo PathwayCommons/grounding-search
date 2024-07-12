@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import elasticsearch from 'elasticsearch';
-import { INDEX, MAX_SEARCH_ES, ELASTICSEARCH_HOST, MAX_FUZZ_ES } from '../config';
+import { INDEX, MAX_SEARCH_ES, ELASTICSEARCH_HOST, MAX_FUZZ_ES, ES_MIN_SCORE } from '../config';
 import { sanitizeNameForCmp } from '../util';
 import { patches } from './patches';
 
@@ -347,7 +347,8 @@ const db = {
 
     const body = {
       size,
-      query
+      query,
+      min_score: ES_MIN_SCORE
     };
 
     return client.search({ index, body }).then( processResult );
