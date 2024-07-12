@@ -6,9 +6,9 @@ import logger from '../../src/server/logger';
 
 const isGet = s => /^get/.test( s );
 const isSearch = s => /^search/.test( s );
-const searchType = s => {
+const getType = s => {
   let type = null;
-  const match =   s.match( /^search\s(?<type>(Positive|Negative))/ );
+  const match =   s.match( /^(search|get)\s(?<type>(Positive|Negative))/ );
   if( match ) type = match.groups.type;
   return type;
 };
@@ -48,6 +48,8 @@ function write2File( data ) {
   }
 }
 
+const isNullGround = ground => _.isNull( ground.namespace ) && _.isNull( ground.id );
+
 function QualityReporter( runner ) {
   mocha.reporters.Base.call( this, runner );
   const stats = {
@@ -78,33 +80,33 @@ function QualityReporter( runner ) {
   let searchFailJSON = [];
 
   runner.on( 'pass', ( test ) => {
+    const type = getType( test.title );
     if( isSearch( test.title ) ){
       stats.search.passes++;
-      const type = searchType( test.title );
       if( type === 'Positive' ){
         confusion.actual_positive.positive++;
       } else {
         confusion.actual_negative.negative++;
       }
-    } else if ( isGet( test.title ) ){
+    } else if ( isGet( test.title ) && type === 'Positive' ){
       stats.get.passes++;
     }
   });
 
   runner.on( 'fail', ( test, err ) => {
-    const isNullGround = ground => _.isNull( ground.namespace ) && _.isNull( ground.id );
     const messageData = message2JSON( err.message );
+    const type = getType( test.title );
+
     if( isSearch( test.title ) ){
       searchFailJSON.push( _.assign( {}, test, messageData ) );
       stats.search.failures++;
-      const type = searchType( test.title );
       const predictedIsNull = isNullGround( messageData.predicted );
       if( type === 'Positive' && predictedIsNull ){
         confusion.actual_positive.negative++;
-      } else {
+      } else if( type === 'Negative' && !predictedIsNull ){
         confusion.actual_negative.positive++;
       }
-    } else if ( isGet( test.title ) ){
+    } else if ( isGet( test.title ) && type === 'Positive' ){
       getFailJSON.push( _.assign( {}, test, messageData ) );
       stats.get.failures++;
     }

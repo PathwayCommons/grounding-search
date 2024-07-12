@@ -39,7 +39,7 @@ describe('Search and Get Aggregate', function(){
       entities.forEach( entity => {
         const { text, xref_id: id, namespace } = entity;
         let ground = { namespace, id };
-        const nullGround =  isNullGround( ground );
+        const nullGround = isNullGround( ground );
         const type = nullGround ? 'Negative' : 'Positive';
         const organismOrdering = entity.organismOrdering || testCase.organismOrdering || [];
 
@@ -64,7 +64,7 @@ describe('Search and Get Aggregate', function(){
           );
         });
 
-        it(`get ${text}`, function(){
+        it(`get ${type} ${text}`, function(){
           if( nullGround ) return;
           return ( getEnt( namespace, id )
             .then( result => {
