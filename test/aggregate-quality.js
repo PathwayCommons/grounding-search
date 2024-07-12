@@ -17,13 +17,10 @@ const searchEnt = ( name, organismOrdering ) => {
 
 const getEnt = ( ns, id ) => aggregate.get( ns, id );
 const removeTestIndex = () => db.deleteIndex();
-const pickRecord = ( o, idPref ) => {
-  let res = _.pick( o, [ 'namespace', 'id', 'esScore' ] );
-  if ( idPref && res.id != idPref && _.includes( o.ids, idPref ) ) {
-    _.set( res, 'id', idPref );
-  }
-
-  return res;
+const pickRecord = o => {
+  const DEFAULT_FIELDS = { namespace: null, id: null, esScore: null };
+  const picked = _.pick( o, [ 'namespace', 'id', 'esScore' ] );
+  return _.defaults( picked, DEFAULT_FIELDS );
 };
 
 describe('Search and Get Aggregate', function(){
@@ -40,29 +37,21 @@ describe('Search and Get Aggregate', function(){
     describe(`Testing ${testID}`, () => {
       entities.forEach( entity => {
         const { text, xref_id: id, namespace } = entity;
-        if( !id || !namespace ) return;
-        const ground = _.assign( {}, { namespace, id } );
+        let ground = { namespace, id };
         const organismOrdering = entity.organismOrdering || testCase.organismOrdering || [];
 
         it(`search ${text} ${organismOrdering}`, function(){
           return ( searchEnt(text, organismOrdering)
             .then( results => {
-              // Actual result is the first result
-              let actual = {};
-              const hasResults = !_.isEmpty( results );
-              if( hasResults ){
-                const topResult = _.first( results );
-                actual = pickRecord( topResult, ground.id );
-              }
+              // Actual is the first result, when it exists
+              const actual = pickRecord( _.first( results ) );
 
-              // Expected result is the first result that matches the ground truth
-              let expected = ground;
+              // Expected is replaced with search hit, when it is returned
+              let expected = pickRecord( ground );
               const rank = _.findIndex( results, _.matches( ground ) );
-              const expectedResultExists = rank >= 0;
-              if( expectedResultExists ) {
-                const expectedResult = results[rank];
-                expected = pickRecord( expectedResult );
-              }
+              const found = rank >= 0;
+              if ( found ) expected = pickRecord( _.nth( results, rank ) );
+
               const message = JSON.stringify({ text, organismOrdering, expected, actual, rank });
 
               // Compare only namespace and id
@@ -73,9 +62,10 @@ describe('Search and Get Aggregate', function(){
         });
 
         it(`get ${text}`, function(){
+          if( namespace == null || id == null ) return;
           return ( getEnt( namespace, id )
             .then( result => {
-              const actual = pickRecord( result, id );
+              const actual = pickRecord( result );
               const message = JSON.stringify({ text, ground, actual });
               const actualXref = _.pick( actual, [ 'namespace', 'id' ] );
               expect( actualXref, message ).to.eql( ground );
