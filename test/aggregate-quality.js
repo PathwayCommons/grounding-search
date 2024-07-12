@@ -22,6 +22,7 @@ const pickRecord = o => {
   const picked = _.pick( o, [ 'namespace', 'id', 'esScore' ] );
   return _.defaults( picked, DEFAULT_FIELDS );
 };
+const isNullGround = ground => _.isNull( ground.namespace ) && _.isNull( ground.id );
 
 describe('Search and Get Aggregate', function(){
   this.timeout(10000);
@@ -38,9 +39,11 @@ describe('Search and Get Aggregate', function(){
       entities.forEach( entity => {
         const { text, xref_id: id, namespace } = entity;
         let ground = { namespace, id };
+        const nullGround =  isNullGround( ground );
+        const type = nullGround ? 'Negative' : 'Positive';
         const organismOrdering = entity.organismOrdering || testCase.organismOrdering || [];
 
-        it(`search ${text} ${organismOrdering}`, function(){
+        it(`search ${type} ${text} ${organismOrdering}`, function(){
           return ( searchEnt(text, organismOrdering)
             .then( results => {
               // Actual is the first result, when it exists
@@ -62,7 +65,7 @@ describe('Search and Get Aggregate', function(){
         });
 
         it(`get ${text}`, function(){
-          if( namespace == null || id == null ) return;
+          if( nullGround ) return;
           return ( getEnt( namespace, id )
             .then( result => {
               const actual = pickRecord( result );

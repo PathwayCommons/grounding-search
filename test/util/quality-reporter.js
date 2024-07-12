@@ -6,6 +6,12 @@ import logger from '../../src/server/logger';
 
 const isGet = s => /^get/.test( s );
 const isSearch = s => /^search/.test( s );
+const searchType = s => {
+  let type = null;
+  const match =   s.match( /^search\s(?<type>(Positive|Negative))/ );
+  if( match ) type = match.groups.type;
+  return type;
+};
 const parse = ( fields, json ) => new Parser({ fields }).parse( json );
 const DEFAULT_FIELDS = [
   'title',
@@ -48,12 +54,20 @@ function QualityReporter( runner ) {
     search: {
       type: 'search',
       passes: 0,
-      failures: 0
+      failures: 0,
+      tp: 0,
+      tn: 0,
+      fp: 0,
+      fn: 0
     },
     get: {
       type: 'get',
       passes: 0,
-      failures: 0
+      failures: 0,
+      tp: null,
+      tn: null,
+      fp: null,
+      fn: null
     }
   };
   let getFailJSON = [];
@@ -62,6 +76,12 @@ function QualityReporter( runner ) {
   runner.on( 'pass', ( test ) => {
     if( isSearch( test.title ) ){
       stats.search.passes++;
+      const type = searchType( test.title );
+      if( type === 'Positive' ){
+        stats.search.tp++;
+      } else if( type === 'Negative' ){
+        stats.search.tn++;
+      }
     } else if ( isGet( test.title ) ){
       stats.get.passes++;
     }
@@ -72,6 +92,12 @@ function QualityReporter( runner ) {
     if( isSearch( test.title ) ){
       searchFailJSON.push( _.assign( {}, test, messageData ) );
       stats.search.failures++;
+      const type = searchType( test.title );
+      if( type === 'Positive' ){
+        stats.search.fn++;
+      } else if( type === 'Negative' ){
+        stats.search.fp++;
+      }
     } else if ( isGet( test.title ) ){
       getFailJSON.push( _.assign( {}, test, messageData ) );
       stats.get.failures++;
@@ -81,7 +107,7 @@ function QualityReporter( runner ) {
   runner.on( 'end', () => {
     const searchFailures = parse( DEFAULT_FIELDS.concat([ 'organismOrdering', 'rank' ]), searchFailJSON );
     const getFailures = parse( DEFAULT_FIELDS, getFailJSON );
-    const summary = parse( [ 'type', 'passes', 'failures' ], [ stats.search, stats.get ] );
+    const summary = parse( [ 'type', 'passes', 'failures', 'tp', 'tn', 'fp', 'fn' ], [ stats.search, stats.get ] );
     write2File([ searchFailures, getFailures, summary ]);
   });
 }
