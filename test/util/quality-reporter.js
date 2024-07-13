@@ -48,8 +48,6 @@ function write2File( data ) {
   }
 }
 
-const isNullGround = ground => _.isNull( ground.namespace ) && _.isNull( ground.id );
-
 function QualityReporter( runner ) {
   mocha.reporters.Base.call( this, runner );
   const stats = {
@@ -64,18 +62,6 @@ function QualityReporter( runner ) {
       failures: 0
     }
   };
-  const confusion = {
-    actual_positive: {
-      actual: 'positive',
-      positive: 0,
-      negative: 0
-    },
-    actual_negative: {
-      actual: 'negative',
-      positive: 0,
-      negative: 0
-    }
-  };
   let getFailJSON = [];
   let searchFailJSON = [];
 
@@ -83,11 +69,6 @@ function QualityReporter( runner ) {
     const type = getType( test.title );
     if( isSearch( test.title ) ){
       stats.search.passes++;
-      if( type === 'Positive' ){
-        confusion.actual_positive.positive++;
-      } else {
-        confusion.actual_negative.negative++;
-      }
     } else if ( isGet( test.title ) && type === 'Positive' ){
       stats.get.passes++;
     }
@@ -96,16 +77,9 @@ function QualityReporter( runner ) {
   runner.on( 'fail', ( test, err ) => {
     const messageData = message2JSON( err.message );
     const type = getType( test.title );
-
     if( isSearch( test.title ) ){
       searchFailJSON.push( _.assign( {}, test, messageData ) );
       stats.search.failures++;
-      const predictedIsNull = isNullGround( messageData.predicted );
-      if( type === 'Positive' && predictedIsNull ){
-        confusion.actual_positive.negative++;
-      } else if( type === 'Negative' && !predictedIsNull ){
-        confusion.actual_negative.positive++;
-      }
     } else if ( isGet( test.title ) && type === 'Positive' ){
       getFailJSON.push( _.assign( {}, test, messageData ) );
       stats.get.failures++;
@@ -116,8 +90,7 @@ function QualityReporter( runner ) {
     const searchFailures = parse( DEFAULT_FIELDS.concat([ 'organismOrdering', 'rank' ]), searchFailJSON );
     const getFailures = parse( DEFAULT_FIELDS, getFailJSON );
     const summary = parse( [ 'type', 'passes', 'failures' ], [ stats.search, stats.get ] );
-    const confusion_matrix = parse( [ 'actual', 'positive', 'negative' ], [ confusion.actual_positive, confusion.actual_negative ] );
-    write2File([ searchFailures, getFailures, summary, confusion_matrix ]);
+    write2File([ searchFailures, getFailures, summary ]);
   });
 }
 
