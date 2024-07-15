@@ -1,0 +1,416 @@
+[
+  {
+    "id": "https://biofactoid.org/document/52aee1d1-1264-4f23-8d89-6c0fd5c12fd3",
+    "entities": [
+      {
+        "text": "GRP78 cell surface translocation",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "3) siRNA downregulation of its transport co-chaperone MTJ-1 to prevent GRP78 translocation to the cell surface"
+      },
+      {
+        "text": "Hyperglycemia",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": ""
+      },
+      {
+        "text": "↑ Extracellular Matrix Protein Overproduction/ Fibrosis",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Means of inhibiting csGRP78 signaling represent a novel approach to preventing fibrosis in DKD."
+      },
+      {
+        "text": "Latent TGFβ1 Complex",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "TGFβ1 is stored in the ECM in a latent form, requiring release for biological activity."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/579d3c4c-afd7-49c4-9351-1dd31909026f",
+    "entities": [
+      {
+        "text": "Plasma membrane",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Specific inhibitors of focal adhesion kinase (FAK) blocked phosphorylation of Tyr45, inhibited stimulated translocation of RIAM to the plasma membrane, and inhibited integrin-mediated cell adhesion in a Tyr45-dependent fashion. "
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/88a6830a-e9e2-4df1-b64e-71ed8274ceff",
+    "entities": [
+      {
+        "text": "Exercise",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Previous studies show that both TBC1D1 and TBC1D4 are phosphorylated at multiple serine/threonine residues by AKT and AMPK in vitro (7, 8) and in response to insulin stimulation and exercise in vivo (5, 9)."
+      },
+      {
+        "text": "GLUT4 Vesicle",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Phosphorylation of TBC1D4 has been linked to translocation of GLUT4 from storage vesicles (GSVs) to the cell surface."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/a646470f-a91a-40c2-8041-2f5e5a082df5",
+    "entities": [
+      {
+        "text": "Epicardial EMT",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Here, by using an in vitro model of epicardial EMT, we investigated the role of miRNAs as regulators of this process and their potential targets."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/02714f9b-926b-41b5-9999-99477deec935",
+    "entities": [
+      {
+        "text": "abnormal mitral valve",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "The representation in Fig. 6a shows how primary evidence from mouse knock-out experiments in genes ADAM9/17/19 led to a dcGO18, 19 link between a mitral valve phenotype and the reprolysin-like domain shared by these genes."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/37be6137-8e26-4c32-977c-8af9fcae3ccb",
+    "entities": [
+      {
+        "text": "neutrophil extracellular traps",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Neutrophil extracellular traps (NETs) participate in the rapid inhibition and clearance of pathogens during infection; however, the molecular regulation of NET formation remains poorly understood."
+      },
+      {
+        "text": "neutrophils",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "A Wip1 inhibitor significantly enhanced NET formation in mouse and human neutrophils in vitro. "
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/11d26818-d198-4fc5-bb82-59db73762b20",
+    "entities": [
+      {
+        "text": "ischemia",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "MicroRNA miR-448 mediates some of the effects of ischemia on arrhythmic risk. "
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/7ad7b201-be22-4390-b30b-9b126dc3cec5",
+    "entities": [
+      {
+        "text": "Golgi fragmentation",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Upon heat stress, the E3 ubiquitin ligase MARCH9 is promoted to ubiquitinate ATG9A in the form of K63 conjugation, and the nondegradable ubiquitinated ATG9A disperses from the Golgi apparatus to the cytoplasm more intensely, accompanied by inhibiting GRASP55 oligomerization, further resulting in Golgi fragmentation."
+      },
+      {
+        "text": "Heat stress",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Upon heat stress, the E3 ubiquitin ligase MARCH9 is promoted to ubiquitinate ATG9A in the form of K63 conjugation, and the nondegradable ubiquitinated ATG9A disperses from the Golgi apparatus to the cytoplasm more intensely, accompanied by inhibiting GRASP55 oligomerization, further resulting in Golgi fragmentation."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/8c26af6d-32a2-49cf-8c71-26ec0cde4d2aa",
+    "entities": [
+      {
+        "text": "Heart failure",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "MicroRNAs regulate cardiac hypertrophy development, which precedes and predicts the risk of heart failure. "
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/999205de-8768-483b-9203-6a775f533099",
+    "entities": [
+      {
+        "text": "Cirmtuzumab",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Cirmtuzumab reduces the NRF2 and mTORC1 signatures in CLL patients"
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/31909bbe-c871-4cdd-873e-591a718da550",
+    "entities": [
+      {
+        "text": "replisome",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "FANCJ DNA helicase is recruited to the replisome by AND-1 to ensure genome stability."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/726c4e0e-a844-4d1f-887c-9c354821d61e",
+    "entities": [
+      {
+        "text": "nuclear chromatin",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Chromatin-associated RNAs (caRNAs) form a relatively poorly recognized layer of the epigenome."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/742b3751-883e-4ff3-8475-b3c1c2a4ab90",
+    "entities": [
+      {
+        "text": "PI3K/AKT signal",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Here, utilizing human type2 papillary renal cell carcinoma (PRCC2) as a model, we show that fumarate accumulates in cells deficient in fumarate hydratase (FH) and inhibits PTEN to activate PI3K/AKT signaling."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/cc83f9b6-489f-4d88-9947-ec4c5d5a97da",
+    "entities": [
+      {
+        "text": "FAO dependent pathway ",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Inhibition of PKM2 leads to impaired EZH2 recruitment to SLC16A9, and in turn de-represses SLC16A9 expression to increase intracellular carnitine influx, programming TNBC cells to an FAO-dependent and luminal-like cell state."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/2efa50b6-b6a4-497f-911a-9be49cc6d60c",
+    "entities": [
+      {
+        "text": "BJG-05-039",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Here, we report the development of BJG-05-039, a PAK1-selective degrader consisting of NVS-PAK1-1 conjugated to lenalidomide, a recruiter of the E3 ubiquitin ligase substrate adaptor Cereblon."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/c11672e5-93bf-43fb-af9c-734ce5ea5bd2",
+    "entities": [
+      {
+        "text": "mitochondrial membrane potential",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Mechanistically, lack of UCP1 augments mitochondrial membrane potential and mitochondrial superoxide, leading to hyperactivation of the NLRP3-inflammasome and caspase-1–mediated maturation of interleukin-1β (IL-1β). "
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/52baaee1-d14d-442f-936e-072dc7b19f62",
+    "entities": [
+      {
+        "text": "Tumorigenesis",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "MRE11 liberates cGAS from nucleosome sequestration during tumorigenesis."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/d0e52e42-fff4-45b1-a630-aecfa9d56f45",
+    "entities": [
+      {
+        "text": "Particulate matter 2.5",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Epidemiological studies have demonstrated that fine particulate matter (PM2.5) is associated with adverse obstetric and postnatal metabolic health outcomes, but the mechanism remains unclear. "
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/a6068a85-beff-422c-b221-4d854528b0cf",
+    "entities": [
+      {
+        "text": "Cdu1 (Chlamydia trachomatis)",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "The obligate intracellular pathogen Chlamydia trachomatis secretes Cdu1 (ChlaDUB1), a dual deubiquitinase and Lys-acetyltransferase, that promotes Golgi remodeling and survival of infected host cells presumably by regulating the ubiquitination of host and bacterial proteins."
+      },
+      {
+        "text": "InaC (Chlamydia trachomatis)",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "We further identified three C. trachomatis proteins on the pathogen-containing vacuole (InaC, IpaM, and CTL0480) that required Cdu1‘s acetylase activity for protection from degradation and determined that Cdu1 and these Cdu1-protected proteins are required for optimal egress of Chlamydia from host cells."
+      },
+      {
+        "text": "IpaM (Chlamydia trachomatis)",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": ""
+      },
+      {
+        "text": "CTL0480 (Chlamydia trachomatis)",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": ""
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/71ac2f85-6e6c-47c3-a756-add2d7963285",
+    "entities": [
+      {
+        "text": "HBP1(Gallus gallus)",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "HMG-box protein 1 (HBP1) is an important transcription factor of cellular proliferation."
+      },
+      {
+        "text": "SOCS3 (Gallus gallus)",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Furthermore, the results of ChIP-qPCR, RT-qPCR, luciferase reporter assay and EMSA showed that HBP1 could inhibit the transcription of suppressor of cytokine signaling 3 (SOCS3) by binding to its promoter."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/7df07c27-0f7a-4223-b685-be33231e405a",
+    "entities": [
+      {
+        "text": "Protein kinase A (Trypanosoma, Leishmania)",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": ""
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/6b236e16-54e1-4714-b834-6a54b9ba6acd",
+    "entities": [
+      {
+        "text": "O-GlcNAcylation",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "We mapped the O-GlcNAc interactome in major brain regions of Drosophila and found that components of the translational machinery, particularly ribosomal subunits, were abundantly O-GlcNAcylated in the mushroom body of Drosophila brain."
+      },
+      {
+        "text": "Translation",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "We mapped the O-GlcNAc interactome in major brain regions of Drosophila and found that components of the translational machinery, particularly ribosomal subunits, were abundantly O-GlcNAcylated in the mushroom body of Drosophila brain."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/afb46e8b-7255-420a-9a5f-6aa21691579b",
+    "entities": [
+      {
+        "text": "Spiking Activity Change",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "GABAergic synaptic scaling is triggered by changes in spiking activity rather than AMPA receptor activation"
+      },
+      {
+        "text": "GluR Activation Change",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": ""
+      },
+      {
+        "text": "GABAergic Synaptic Scaling",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "GABAergic synaptic scaling is triggered by changes in spiking activity rather than AMPA receptor activation"
+      },
+      {
+        "text": "AMPAergic Synaptic Scaling",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "However, recent findings have forced us to reconsider this idea as several studies suggest AMPAergic scaling is not directly triggered by changes in spiking."
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/e6fe126a-460c-4138-b5b6-45b5bf5ece3d",
+    "entities": [
+      {
+        "text": "MT2_Mm",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": "Genome-wide profiling revealed that OBOX4 specifically binds and activates MERVL LTRs as well as a subset of murine endogenous retroviruses with lysine tRNA primer (MERVK) LTRs. "
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/047c96a4-1006-4052-aa97-9e42ed8e6a9e",
+    "entities": [
+      {
+        "text": "Ribosome",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": ""
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/27b91cfe-9c41-448d-b182-3fb7ae613bec",
+    "entities": [
+      {
+        "text": "cell cycle genes",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": ""
+      },
+      {
+        "text": "Cell cycle progression",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": ""
+      }
+    ],
+    "organismOrdering": []
+  },
+  {
+    "id": "https://biofactoid.org/document/7f77ddcc-bbc9-4c04-b416-d7775798f301",
+    "entities": [
+      {
+        "text": "Estrogen-responsive Enhancers",
+        "xref_id": null,
+        "namespace": null,
+        "sentence": ""
+      }
+    ],
+    "organismOrdering": []
+  }
+]

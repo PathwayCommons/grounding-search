@@ -40,7 +40,7 @@
     "index:uniprot": "node -r esm src/server/datasource/cli index uniprot",
     "index:chebi": "node -r esm src/server/datasource/cli index chebi",
     "index:ncbi": "node -r esm src/server/datasource/cli index ncbi",
-    "download": "run-s download:chebi download:ncbi download:famplex",
+    "download": "run-s download:chebi download:ncbi download:famplex download:uniprot",
     "download:famplex": "node -r esm src/server/datasource/cli download famplex",
     "download:uniprot": "node -r esm src/server/datasource/cli download uniprot",
     "download:chebi": "node -r esm src/server/datasource/cli download chebi",

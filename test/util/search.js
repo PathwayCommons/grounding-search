@@ -5,6 +5,7 @@ import PC_BLACKLIST from './data/pc-blacklist.json';
 import SARS_COV_2 from './data/sars-cov-2.json';
 import FAMPLEX from './data/famplex.json';
 import ORG_HINTS from './data/org-hints.json';
+import BIOFACTOID_QC from './data/biofactoid-qc.json';
 
 const SEARCH_OBJECTS = _.concat( [],
   MOLECULAR_CELL,
@@ -12,7 +13,8 @@ const SEARCH_OBJECTS = _.concat( [],
   PC_BLACKLIST,
   SARS_COV_2,
   FAMPLEX,
-  ORG_HINTS
+  ORG_HINTS,
+  BIOFACTOID_QC
 );
 
 export { SEARCH_OBJECTS };
