@@ -22,8 +22,8 @@ export const ELASTICSEARCH_HOST = env('ELASTICSEARCH_HOST', 'localhost:9200');
 
 export const MAX_SEARCH_ES = env('MAX_SEARCH_ES', 1000);
 export const MAX_SEARCH_WS = env('MAX_SEARCH_WS', 100);
-export const MAX_FUZZ_ES = env('MAX_FUZZ_ES', 2);
-export const ES_MIN_SCORE = env('ES_MIN_SCORE', 0);
+export const MAX_FUZZ_ES = env('MAX_FUZZ_ES', 1);
+export const ES_MIN_SCORE = env('ES_MIN_SCORE', 0.1);
 
 export const CHUNK_SIZE = env('ENTRIES_CHUNK_SIZE', 100);
 export const MAX_SIMULT_CHUNKS = env('MAX_SIM_CHUNKS', 10);
