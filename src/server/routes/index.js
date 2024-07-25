@@ -89,8 +89,8 @@ router.get('/search', function(req, res){
  *     responses:
  *       200:
  *         description: The metadata for the grounding
- *      404:
- *        description: The grounding was not found
+ *       404:
+ *         description: The grounding was not found
  */
 router.post('/get', function(req, res, next){
   const { namespace, id } = req.body;
