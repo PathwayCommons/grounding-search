@@ -87,4 +87,15 @@ describe('Search and Get Aggregate', function(){
 
   }); // SEARCH_OBJECTS
 
+  describe('GET', () => {
+    it('Should not throw when id does exist', function(){
+      const xref_ncbi_known = { namespace: 'ncbi', id: '1' };
+      return expect( getEnt( xref_ncbi_known.namespace, xref_ncbi_known.id ) ).not.to.be.rejected;
+    });
+    it('Should throw when id does not exist', function(){
+      const xref_ncbi_unknown = { namespace: 'ncbi', id: '0' };
+      return expect( getEnt( xref_ncbi_unknown.namespace, xref_ncbi_unknown.id ) ).to.be.rejected;
+    });
+  }); // GET
+
 }); // describe
