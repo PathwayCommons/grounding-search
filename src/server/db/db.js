@@ -7,6 +7,8 @@ import { patches } from './patches';
 const NS_FIELD = 'namespace';
 const ORG_FIELD = 'organism';
 
+const xref2id = (namespace, id) => `${namespace}:${id}`.toUpperCase();
+
 /**
  * @exports db
  */
@@ -232,7 +234,8 @@ const db = {
       // remove the main name from the synonym list (if it exists) for the same reason
       _.remove(entry.synonyms, syn => syn.toLowerCase() === entry.name.toLowerCase());
 
-      body.push( { index: { _index: INDEX, _id: (entry.namespace + ':' + entry.id).toUpperCase() } } );
+      const { namespace, id } = entry;
+      body.push( { index: { _index: INDEX, _id: xref2id( namespace, id ) } } );
       body.push( entry );
     } );
 
@@ -258,7 +261,8 @@ const db = {
     let body = [];
 
     updates.forEach( update => {
-      body.push( { update: { _index: INDEX, _id: (namespace + ':' + update.id).toUpperCase() } } );
+      const { id } = update;
+      body.push( { update: { _index: INDEX, _id: xref2id( namespace, id ) } } );
       body.push( { doc: update.updates } );
     } );
 
@@ -358,20 +362,23 @@ const db = {
    * @param {string} id The id of entity to search
    * @param {string} [namespace=undefined] Namespace to seek the entity e.g. 'uniprot', 'chebi', ...
    * @returns {Promise} Promise objects represents the entity with the given id from the given namespace,
-   * if there is no such entity it represents null.
+   * if there is no such entity it will reject with err (status (404) and message ("Not Found")).
    */
   get: function( id, namespace ){
     let client = this.connect();
-    let body = {};
+    const _id = xref2id( namespace, id );
 
-    _.set( body, ['query', 'bool', 'must', 'multi_match', 'fields'], ['id', 'ids'] );
-    _.set( body, ['query', 'bool', 'must', 'multi_match', 'query'], id );
-    _.set( body, ['query', 'bool', 'filter', 'term', NS_FIELD], namespace );
-
-    return client.search({
-      body,
-      index: INDEX
-    }).then( res => res.hits.hits.map( e => e._source )[0] );
+    return client.get({
+      index: INDEX,
+      type: '_doc',
+      id: _id
+    }).then( res => {
+      if( res.found ){
+        return res._source;
+      } else {
+        throw new Error('Not Found');
+      }
+    });
   },
   /**
    * Retrieve dbXrefs in another database, given a db and one or more ids
