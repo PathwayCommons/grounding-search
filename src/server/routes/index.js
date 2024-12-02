@@ -54,7 +54,9 @@ router.post('/search', function(req, res){
 
 // for internal use / quick testing, e.g. http://localhost:3000/search?q=pcna
 router.get('/search', function(req, res){
-  const { namespace, q, organismOrdering } = req.query;
+  let { namespace, q, organismOrdering } = req.query;
+
+  organismOrdering = organismOrdering || '';
 
   aggregate.search(q, namespace, organismOrdering.split(',')).then(ents => res.json(ents));
 });
