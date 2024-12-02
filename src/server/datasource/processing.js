@@ -1,5 +1,4 @@
 /** @module processing */
-import Future from 'fibers/future';
 import _ from 'lodash';
 
 import { db } from '../db';
@@ -7,14 +6,14 @@ import logger from '../logger';
 import { CHUNK_SIZE, MAX_SIMULT_CHUNKS } from '../config';
 
 const processChunk = (chunk, processEntry) => {
-  let task = Future.wrap(function(chunk, next){ // code in this block runs in its own thread
-    let processedEntries = chunk.map(processEntry);
-    let err = null;
-
-    next( err, processedEntries );
+  return new Promise((resolve, reject) => {
+    try {
+      const processedEntries = chunk.map(processEntry);
+      resolve(processedEntries);
+    } catch (err) {
+      reject(err);
+    }
   });
-
-  return task(chunk).promise();
 };
 
 /**

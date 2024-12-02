@@ -2,7 +2,6 @@
 import _ from 'lodash';
 import { getOrganismIndex, getDefaultOrganismIndex } from './organisms';
 import dice from 'dice-coefficient'; // sorensen dice coeff
-import Future from 'fibers/future';
 import { sanitizeNameForCmp as sanitize } from '../util';
 
 const DISTANCE_FIELDS = ['name', 'synonyms']; // TODO should share list with db.js
@@ -120,13 +119,14 @@ export const rank = (ents, searchTerm, organismOrdering) => {
 };
 
 export const rankInThread = (ents, searchTerm, organismOrdering) => {
-  let task = Future.wrap(function(args, next){ // code in this block runs in its own thread
-    let res = rank(args.ents, args.searchTerm, args.organismOrdering);
-    let err = null;
-
-    next( err, res );
+  // TODO put back in separate thread if necessary in future
+  return new Promise((resolve, reject) => {
+    try {
+      const res = rank(ents, searchTerm, organismOrdering);
+      resolve(res);
+    } catch (err) {
+      reject(err);
+    }
   });
-
-  return task({ ents, searchTerm, organismOrdering }).promise();
 };
 

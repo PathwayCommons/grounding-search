@@ -5,7 +5,6 @@ import _ from 'lodash';
 import ROOT_STRAINS from './strains/root';
 import { getOrganismById } from './organisms';
 import { MAX_SEARCH_WS, MAX_FUZZ_ES } from '../config';
-import Future from 'fibers/future';
 
 const ROOT_STRAIN_ORGS = Object.values(ROOT_STRAINS).map(getOrganismById);
 const isRootStrainOrgId = id => ROOT_STRAIN_ORGS.some(org => org.is(id));
@@ -63,15 +62,15 @@ const search = function(searchString, namespace = ['ncbi', 'chebi', 'fplx'], org
     });
   };
 
-  const doStrainFilter = ents => {
-    let task = Future.wrap(function(args, next){ // code in this block runs in its own thread
-      let res = filterStrains(args.ents);
-      let err = null;
-
-      next( err, res );
+  const doStrainFilter = (ents) => {
+    return new Promise((resolve, reject) => {
+      try {
+        const res = filterStrains(ents);
+        resolve(res);
+      } catch (err) {
+        reject(err);
+      }
     });
-
-    return task({ ents }).promise();
   };
 
   const doSearches = () => {
@@ -79,16 +78,17 @@ const search = function(searchString, namespace = ['ncbi', 'chebi', 'fplx'], org
       return ent1.namespace === ent2.namespace && ent1.id === ent2.id;
     });
 
-    const doJoin = ress => {
-      let task = Future.wrap(function(args, next){ // code in this block runs in its own thread
-        let res = join(args.ress);
-        let err = null;
-
-        next( err, res );
+    const doJoin = (ress) => {
+      return new Promise((resolve, reject) => {
+        try {
+          const res = join(ress);
+          resolve(res);
+        } catch (err) {
+          reject(err);
+        }
       });
-
-      return task({ ress }).promise();
     };
+    
 
     if( searchString.length === 1 ){
       return doSearch(0);
