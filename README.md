@@ -3,7 +3,6 @@
 [![DOI](https://zenodo.org/badge/170363308.svg)](https://zenodo.org/badge/latestdoi/170363308)
 [![status](https://joss.theoj.org/papers/dfad3b1bc874b0f813f6814723a646f5/status.svg)](https://joss.theoj.org/papers/dfad3b1bc874b0f813f6814723a646f5)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/PathwayCommons/grounding-search/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/PathwayCommons/grounding-search.svg?branch=master)](https://travis-ci.org/PathwayCommons/grounding-search)
 
 ## Description
 
