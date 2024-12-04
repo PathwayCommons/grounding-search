@@ -138,6 +138,10 @@ If you have developed a new tool in this space or your tool supports new feature
   - Information about proteins
   - Alias: `uniprot`
   - Data file: [uniprot_sprot.xml.gz](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz)
+- [Famplex](https://github.com/sorgerlab/famplex)
+  - Information about protein families
+  - Alias: `fplx`
+  - Data file:  [famplex-master.zip](https://github.com/sorgerlab/famplex/archive/refs/heads/master.zip)
 
 ### Build index from source database files
 
