@@ -124,7 +124,7 @@ If you have developed a new tool in this space or your tool supports new feature
 
 ## Grounding data
 
-`grounding-search` uses data files provided by three public databases:
+`grounding-search` uses data files provided by several public databases:
 
 - [NCBI Gene](https://www.ncbi.nlm.nih.gov/gene)
   - Information about genes
