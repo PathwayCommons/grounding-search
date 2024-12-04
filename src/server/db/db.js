@@ -108,30 +108,78 @@ const db = {
           },
           alpha_filter: {
             type: 'pattern_replace',
-            pattern: '(\\s|-|[0-9]|^)alpha(\\s|-|[0-9]|$)',
-            replacement: '$1a$2'
+            pattern: '(\\s|-|[0-9]|^)([aA]lpha|[αΑ])(\\s|-|[0-9]|$)',
+            replacement: '$1a$3'
           },
           alpha_filter2: {
             type: 'pattern_replace',
-            pattern: '(\\w)alpha',
+            pattern: '(\\w)([aA]lpha|[αΑ])',
             replacement: '$1a'
           },
           beta_filter: {
             type: 'pattern_replace',
-            pattern: '(\\s|-|[0-9]|^)beta(\\s|-|[0-9]|$)',
-            replacement: '$1b$2'
+            pattern: '(\\s|-|[0-9]|^)([bB]eta|[βΒ])(\\s|-|[0-9]|$)',
+            replacement: '$1b$3'
           },
           beta_filter2: {
             type: 'pattern_replace',
-            pattern: '(\\w)beta',
+            pattern: '(\\w)([bB]eta|[βΒ])',
             replacement: '$1b'
+          },
+          gamma_filter: {
+            type: 'pattern_replace',
+            pattern: '(\\s|-|[0-9]|^)([gG]amma|[γΓ])(\\s|-|[0-9]|$)',
+            replacement: '$1g$3'
+          },
+          gamma_filter2: {
+            type: 'pattern_replace',
+            pattern: '(\\w)([gG]amma|[γΓ])',
+            replacement: '$1g'
+          },
+          delta_filter: {
+            type: 'pattern_replace',
+            pattern: '(\\s|-|[0-9]|^)([dD]elta|[δΔ])(\\s|-|[0-9]|$)',
+            replacement: '$1d$3'
+          },
+          delta_filter2: {
+            type: 'pattern_replace',
+            pattern: '(\\w)([dD]elta|[δΔ])',
+            replacement: '$1d'
+          },
+          epsilon_filter: {
+            type: 'pattern_replace',
+            pattern: '(\\s|-|[0-9]|^)([eE]psilon|[εΕ])(\\s|-|[0-9]|$)',
+            replacement: '$1e$3'
+          },
+          epsilon_filter2: {
+            type: 'pattern_replace',
+            pattern: '(\\w)([eE]psilon|[εΕ])',
+            replacement: '$1e'
+          },
+          zeta_filter: {
+            type: 'pattern_replace',
+            pattern: '(\\s|-|[0-9]|^)([zZ]eta|[ζΖ])(\\s|-|[0-9]|$)',
+            replacement: '$1z$3'
+          },
+          zeta_filter2: {
+            type: 'pattern_replace',
+            pattern: '(\\w)([zZ]eta|[ζΖ])',
+            replacement: '$1z'
           }
         },
         normalizer: {
           name_norm: {
             type: 'custom',
             filter: ['lowercase', 'asciifolding'],
-            char_filter: ['alpha_filter', 'alpha_filter2', 'beta_filter', 'beta_filter2', 'name_word_filter']
+            char_filter: [
+              'alpha_filter', 'alpha_filter2', 
+              'beta_filter', 'beta_filter2', 
+              'gamma_filter', 'gamma_filter2', 
+              'delta_filter', 'delta_filter2', 
+              'epsilon_filter', 'epsilon_filter2', 
+              'zeta_filter', 'zeta_filter2', 
+              'name_word_filter'
+            ]
           }
         }
       }
