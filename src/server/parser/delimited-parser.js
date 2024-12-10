@@ -17,7 +17,7 @@ import _ from 'lodash';
  * @param {boolean} hasHeaderLine Whether the data file starts with a line that
  * represents its header.
  */
-function DelimitedParser( filePath, events, hasHeaderLine ){
+function DelimitedParser( filePath, events, hasHeaderLine, matcher ){
   let onData = events.onData || _.noop;
   let onEnd = events.onEnd || _.noop;
   let onHeader = events.onHeader || _.noop;
@@ -26,7 +26,7 @@ function DelimitedParser( filePath, events, hasHeaderLine ){
 
   (
     fileStream
-      .pipe(split())
+      .pipe(split(matcher))
       .on('data', function(line) {
         if ( firstLine ) {
           firstLine = false;

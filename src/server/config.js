@@ -41,6 +41,11 @@ export const CHEBI_URL = env('CHEBI_URL', 'ftp://ftp.ebi.ac.uk/pub/databases/che
 export const DB_PREFIX_CHEBI = env('DB_PREFIX_CHEBI', 'CHEBI');
 export const DB_NAME_CHEBI = env('DB_NAME_CHEBI', 'ChEBI');
 
+export const MEDLINE_FILE_NAME = env('MEDLINE_FILE_NAME', 'J_Medline.txt');
+export const MEDLINE_URL = env('MEDLINE_URL', 'https://ftp.ncbi.nih.gov/pubmed/J_Medline.txt');
+export const DB_PREFIX_MEDLINE = env('DB_PREFIX_MEDLINE', 'medline');
+export const DB_NAME_MEDLINE = env('DB_NAME_MEDLINE', 'MEDLINE');
+
 export const NCBI_FILE_NAME = env('NCBI_FILE_NAME', 'ncbi');
 export const NCBI_URL = env('NCBI_URL', 'ftp://ftp.ncbi.nih.gov/gene/DATA/gene_info.gz');
 export const NCBI_EUTILS_BASE_URL = env('NCBI_EUTILS_BASE_URL', 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/');

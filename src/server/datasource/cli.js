@@ -6,11 +6,12 @@ import { famplex } from './famplex';
 import { uniprot } from './uniprot';
 import { chebi } from './chebi';
 import { ncbi } from './ncbi';
+import { medline } from './medline';
 import { db } from '../db';
 import { formatDistanceStrict } from 'date-fns';
 import dumpEs from './esdump';
 
-const sources = { famplex, uniprot, chebi, ncbi };
+const sources = { famplex, uniprot, chebi, ncbi, medline };
 const op = process.argv[2];
 const passedSourceId = process.argv[3];
 const source = sources[passedSourceId];
