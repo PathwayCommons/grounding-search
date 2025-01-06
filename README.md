@@ -268,7 +268,8 @@ To setup follow these steps:
 }
 ```
 3. The POST response should have a 'bucket' (e.g. `"bucket": "https://zenodo.org/api/files/<uuid>"` ) within the `links` object. The variable `ZENODO_BUCKET_ID` is the value `<uuid>` in the example URL.
-4. Publish. You'll want to dump the index and upload to Zenodo (`npm run dump`). You can publish this from the API by POSTing to `https://zenodo.org/api/deposit/depositions/<deposition id>/actions/publish`. Alternatively, log in to the Zenodo [web page](https://zenodo.org/deposit) and click 'Publish' to make the deposition public.
+4. Publish. You'll want to dump the index and upload to Zenodo (`npm run dump`). Log in to the Zenodo [web page](https://zenodo.org/deposit) and click 'Publish' to make the deposition public. You may need to add a publication date (YYYY-MM-DD).
+5. Test. Delete any `data` files; clear the index (`npm run clear`); do a restore (`npm run restore`) being sure to update the `ZENODO_DEPOSITION_ID` and run the quality tests (`npm run test:quality:csv`)
 
 Once published, a deposition cannot be updated or altered. However, you can create a new version of a record (below).
 
